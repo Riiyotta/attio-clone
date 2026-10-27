@@ -1,0 +1,376 @@
+{
+  "pageSpecVersion": "1.1.0",
+  "mode": "generated",
+  "template": "careers",
+  "route": "/jobs",
+  "brand": {
+    "name": "Tarnwick",
+    "mark": {
+      "assetRole": "brand.placeholder-mark",
+      "assetRef": "generate:neutral rounded glyph plus the Tarnwick wordmark",
+      "alt": "Tarnwick"
+    },
+    "fictional": true
+  },
+  "meta": {
+    "title": "Jobs",
+    "description": "Generated sample careers page for a fictional scheduling product."
+  },
+  "nodes": [
+    {
+      "id": "header",
+      "type": "shell.site-header",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.placeholder-mark",
+          "assetRef": "generate:neutral rounded glyph plus the Tarnwick wordmark",
+          "alt": "Tarnwick"
+        },
+        "banner": {
+          "text": "Read what changed in the autumn update",
+          "href": "https://tarnwick.example/updates"
+        },
+        "menus": [
+          {
+            "label": "Product",
+            "groups": [
+              {
+                "label": "Plan",
+                "items": [
+                  {
+                    "title": "Crew calendar",
+                    "description": "Book jobs onto open crew time",
+                    "href": "https://tarnwick.example/calendar"
+                  },
+                  {
+                    "title": "Parts tracker",
+                    "description": "Know which van carries which spare",
+                    "href": "https://tarnwick.example/parts"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "Company",
+            "groups": [
+              {
+                "label": "About",
+                "items": [
+                  {
+                    "title": "Our crews",
+                    "description": "Who builds the scheduling board",
+                    "href": "https://tarnwick.example/about"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "signIn": {
+          "label": "Log in",
+          "href": "https://app.tarnwick.example/login"
+        },
+        "primaryCta": {
+          "label": "Book a walkthrough",
+          "href": "https://tarnwick.example/demo",
+          "variant": "primary"
+        }
+      },
+      "motion": {
+        "patterns": [
+          "header-theme-swap",
+          "dropdown-panel"
+        ],
+        "reducedMotionFallback": "instant-state-change"
+      }
+    },
+    {
+      "id": "intro",
+      "type": "hero.page-centered",
+      "variant": "contribution-grid",
+      "content": {
+        "badge": "Jobs",
+        "title": "Help crews plan better weeks",
+        "lead": "We are a small team building scheduling tools for people who work on site. Come and build them with us.",
+        "mediaRow": [
+          {
+            "assetRole": "illustration.generated-abstract",
+            "assetRef": "generate:small square of coloured dots 0",
+            "alt": "Abstract tile"
+          },
+          {
+            "assetRole": "illustration.generated-abstract",
+            "assetRef": "generate:small square of coloured dots 1",
+            "alt": "Abstract tile"
+          },
+          {
+            "assetRole": "illustration.generated-abstract",
+            "assetRef": "generate:small square of coloured dots 2",
+            "alt": "Abstract tile"
+          },
+          {
+            "assetRole": "illustration.generated-abstract",
+            "assetRef": "generate:small square of coloured dots 3",
+            "alt": "Abstract tile"
+          },
+          {
+            "assetRole": "illustration.generated-abstract",
+            "assetRef": "generate:small square of coloured dots 4",
+            "alt": "Abstract tile"
+          },
+          {
+            "assetRole": "illustration.generated-abstract",
+            "assetRef": "generate:small square of coloured dots 5",
+            "alt": "Abstract tile"
+          }
+        ]
+      },
+      "motion": {
+        "patterns": [
+          "page-hero-enter"
+        ],
+        "reducedMotionFallback": "paused-first-frame"
+      }
+    },
+    {
+      "id": "video",
+      "type": "media.interview-video",
+      "content": {
+        "poster": {
+          "assetRole": "media.video-placeholder",
+          "assetRef": "generate:muted placeholder frame for a team conversation",
+          "alt": "Placeholder video frame"
+        },
+        "title": "A conversation with the team"
+      },
+      "motion": {
+        "patterns": [
+          "static"
+        ],
+        "reducedMotionFallback": "none-needed"
+      }
+    },
+    {
+      "id": "team",
+      "type": "content.team-intro",
+      "content": {
+        "heading": "Who we are",
+        "body": "We are engineers, designers and former tradespeople. We meet in person each quarter and work from home the rest of the time.",
+        "art": {
+          "assetRole": "illustration.generated-abstract",
+          "assetRef": "generate:gentle abstract shapes in sand tones",
+          "alt": "Abstract artwork"
+        }
+      },
+      "motion": {
+        "patterns": [
+          "static"
+        ],
+        "reducedMotionFallback": "none-needed"
+      }
+    },
+    {
+      "id": "photos",
+      "type": "media.team-photos",
+      "content": {
+        "heading": "Around the workshop",
+        "body": "A few snapshots of how we work together.",
+        "photos": [
+          {
+            "assetRole": "illustration.generated-abstract",
+            "assetRef": "generate:illustrated workshop scene 0",
+            "alt": "Illustrated team scene"
+          },
+          {
+            "assetRole": "illustration.generated-abstract",
+            "assetRef": "generate:illustrated workshop scene 1",
+            "alt": "Illustrated team scene"
+          },
+          {
+            "assetRole": "illustration.generated-abstract",
+            "assetRef": "generate:illustrated workshop scene 2",
+            "alt": "Illustrated team scene"
+          },
+          {
+            "assetRole": "illustration.generated-abstract",
+            "assetRef": "generate:illustrated workshop scene 3",
+            "alt": "Illustrated team scene"
+          }
+        ]
+      },
+      "motion": {
+        "patterns": [
+          "static"
+        ],
+        "reducedMotionFallback": "none-needed"
+      }
+    },
+    {
+      "id": "values",
+      "type": "content.values",
+      "content": {
+        "heading": "How we work",
+        "values": [
+          {
+            "title": "Plain language",
+            "body": "We write the way we talk and expect the same from our tools."
+          },
+          {
+            "title": "Small steps",
+            "body": "We ship little and often, then listen to what happens."
+          },
+          {
+            "title": "Site first",
+            "body": "We test every idea with a crew before we call it done."
+          }
+        ]
+      },
+      "motion": {
+        "patterns": [
+          "static"
+        ],
+        "reducedMotionFallback": "none-needed"
+      }
+    },
+    {
+      "id": "roles",
+      "type": "listing.open-positions",
+      "content": {
+        "heading": "Open roles",
+        "filters": {
+          "departments": [
+            "Engineering",
+            "Design",
+            "Support"
+          ],
+          "locations": [
+            "Remote",
+            "Leeds"
+          ]
+        },
+        "roles": [
+          {
+            "department": "Engineering",
+            "title": "Backend engineer",
+            "location": "Remote",
+            "href": "/jobs/backend-engineer"
+          },
+          {
+            "department": "Design",
+            "title": "Interface designer",
+            "location": "Leeds",
+            "href": "/jobs/interface-designer"
+          },
+          {
+            "department": "Support",
+            "title": "Support specialist",
+            "location": "Remote",
+            "href": "/jobs/support-specialist"
+          }
+        ]
+      },
+      "motion": {
+        "patterns": [
+          "hover-micro"
+        ],
+        "reducedMotionFallback": "instant-state-change"
+      }
+    },
+    {
+      "id": "news",
+      "type": "conversion.newsletter-signup",
+      "content": {
+        "title": "Hear about new roles",
+        "lead": "A short note when we open a position that might suit you.",
+        "inputPlaceholder": "Your email",
+        "buttonLabel": "Notify me"
+      },
+      "motion": {
+        "patterns": [
+          "form-feedback"
+        ],
+        "reducedMotionFallback": "instant-state-change"
+      }
+    },
+    {
+      "id": "res",
+      "type": "content.resource-cards",
+      "content": {
+        "heading": "Keep reading",
+        "cards": [
+          {
+            "icon": "note",
+            "title": "Our handbook",
+            "description": "How we plan, decide and look after one another.",
+            "href": "/jobs/handbook"
+          },
+          {
+            "icon": "star",
+            "title": "Benefits",
+            "description": "What we offer to everyone on the team.",
+            "href": "/jobs/benefits"
+          },
+          {
+            "icon": "calendar",
+            "title": "Hiring process",
+            "description": "What to expect from first call to offer.",
+            "href": "/jobs/process"
+          }
+        ]
+      },
+      "motion": {
+        "patterns": [
+          "hover-micro"
+        ],
+        "reducedMotionFallback": "instant-state-change"
+      }
+    },
+    {
+      "id": "footer",
+      "type": "shell.site-footer",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.placeholder-mark",
+          "assetRef": "generate:neutral rounded glyph plus the Tarnwick wordmark",
+          "alt": "Tarnwick"
+        },
+        "columns": [
+          {
+            "heading": "Product",
+            "links": [
+              {
+                "label": "Crew calendar",
+                "href": "https://tarnwick.example/calendar"
+              },
+              {
+                "label": "Parts tracker",
+                "href": "https://tarnwick.example/parts"
+              }
+            ]
+          },
+          {
+            "heading": "Company",
+            "links": [
+              {
+                "label": "About us",
+                "href": "https://tarnwick.example/about"
+              },
+              {
+                "label": "Jobs board",
+                "href": "https://tarnwick.example/jobs"
+              }
+            ]
+          }
+        ],
+        "legal": "© 2026 Tarnwick, a fictional company. Placeholder legal line for a generated page."
+      },
+      "motion": {
+        "patterns": [
+          "hover-micro"
+        ],
+        "reducedMotionFallback": "instant-state-change"
+      }
+    }
+  ]
+}

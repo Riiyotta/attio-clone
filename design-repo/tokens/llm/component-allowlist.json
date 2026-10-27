@@ -1,6 +1,6 @@
 {
   "$description": "Closed allowlist of everything a generator may instantiate or set. verify_all.py checks parity with sections/, components/, primitives/, the PageSpec schema's node properties and the asset-role registry.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "sections": [
     {
       "id": "content.app-meta-sidebar",
@@ -18,7 +18,27 @@
       "retrievalEligible": true
     },
     {
+      "id": "content.chapter-header",
+      "category": "CONTENT",
+      "retrievalEligible": true
+    },
+    {
+      "id": "content.lit-statement",
+      "category": "CONTENT",
+      "retrievalEligible": true
+    },
+    {
+      "id": "content.prose-split",
+      "category": "CONTENT",
+      "retrievalEligible": true
+    },
+    {
       "id": "content.resource-cards",
+      "category": "CONTENT",
+      "retrievalEligible": true
+    },
+    {
+      "id": "content.scroll-scene",
       "category": "CONTENT",
       "retrievalEligible": true
     },
@@ -53,6 +73,16 @@
       "retrievalEligible": true
     },
     {
+      "id": "conversion.careers-heatmap",
+      "category": "CONVERSION",
+      "retrievalEligible": true
+    },
+    {
+      "id": "conversion.closing-stage",
+      "category": "CONVERSION",
+      "retrievalEligible": true
+    },
+    {
       "id": "conversion.demo-request-split",
       "category": "CONVERSION",
       "retrievalEligible": true
@@ -65,6 +95,16 @@
     {
       "id": "conversion.newsletter-signup",
       "category": "CONVERSION",
+      "retrievalEligible": true
+    },
+    {
+      "id": "editorial.article-index",
+      "category": "EDITORIAL",
+      "retrievalEligible": true
+    },
+    {
+      "id": "editorial.changelog-entries",
+      "category": "EDITORIAL",
       "retrievalEligible": true
     },
     {
@@ -108,6 +148,11 @@
       "retrievalEligible": true
     },
     {
+      "id": "features.launch-showcase",
+      "category": "FEATURES",
+      "retrievalEligible": true
+    },
+    {
       "id": "features.partner-tiers",
       "category": "FEATURES",
       "retrievalEligible": true
@@ -141,6 +186,30 @@
       "retrievalEligible": true
     },
     {
+      "id": "hero.changelog-intro",
+      "category": "HERO",
+      "retrievalEligible": true
+    },
+    {
+      "id": "hero.docs-page-header",
+      "category": "HERO",
+      "retrievalEligible": true
+    },
+    {
+      "id": "hero.editorial-featured",
+      "category": "HERO",
+      "retrievalEligible": true,
+      "variants": [
+        "featured-post",
+        "ascii-field"
+      ]
+    },
+    {
+      "id": "hero.help-search",
+      "category": "HERO",
+      "retrievalEligible": true
+    },
+    {
       "id": "hero.page-centered",
       "category": "HERO",
       "retrievalEligible": true,
@@ -165,6 +234,16 @@
       "retrievalEligible": true
     },
     {
+      "id": "hero.scroll-typewriter",
+      "category": "HERO",
+      "retrievalEligible": true
+    },
+    {
+      "id": "listing.course-grid",
+      "category": "LISTING",
+      "retrievalEligible": true
+    },
+    {
       "id": "listing.directory-category",
       "category": "LISTING",
       "retrievalEligible": true
@@ -173,6 +252,15 @@
       "id": "listing.directory-header",
       "category": "LISTING",
       "retrievalEligible": true
+    },
+    {
+      "id": "listing.lesson-list",
+      "category": "LISTING",
+      "retrievalEligible": true,
+      "variants": [
+        "numbered-preview",
+        "timeline"
+      ]
     },
     {
       "id": "listing.open-positions",
@@ -201,6 +289,11 @@
     },
     {
       "id": "navigation.breadcrumb-bar",
+      "category": "NAVIGATION",
+      "retrievalEligible": true
+    },
+    {
+      "id": "navigation.docs-sidebar",
       "category": "NAVIGATION",
       "retrievalEligible": true
     },
@@ -265,7 +358,8 @@
       "variants": [
         "band",
         "grid",
-        "headed"
+        "headed",
+        "dark-statement"
       ]
     },
     {
@@ -423,6 +517,10 @@
     "drawer-slide",
     "dialog-scale",
     "lightbox-fade",
+    "grid-reveal-in-view",
+    "scroll-typewriter",
+    "scroll-lit-words",
+    "canvas-field",
     "form-feedback"
   ]
 }

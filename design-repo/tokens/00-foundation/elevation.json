@@ -4,188 +4,172 @@
     "elevation.layer-1": {
       "value": "0 1px 3px 0 rgba(0,0,0,0.01)",
       "sourceKey": "boxShadow.attio-1",
-      "usageCount": 0,
-      "evidence": "tailwind.config.cjs:270-270"
+      "evidence": "tailwind.config.cjs:302-302"
     },
     "elevation.layer-2": {
       "value": "0 1px 3px 0 rgba(0,0,0,0.01), 0 2px 4px -1px rgba(0,0,0,0.02)",
       "sourceKey": "boxShadow.attio-2",
-      "usageCount": 1,
-      "evidence": "tailwind.config.cjs:271-271"
+      "evidence": "tailwind.config.cjs:303-303"
     },
     "elevation.layer-3": {
       "value": "0 1px 3px 0 rgba(0,0,0,0.01), 0 2px 4px -1px rgba(0,0,0,0.02), 0 4px 8px -2px rgba(0,0,0,0.03)",
       "sourceKey": "boxShadow.attio-3",
-      "usageCount": 2,
-      "evidence": "tailwind.config.cjs:272-272"
+      "evidence": "tailwind.config.cjs:304-304"
     },
     "elevation.layer-4": {
       "value": "0 1px 3px 0 rgba(0,0,0,0.01), 0 2px 4px -1px rgba(0,0,0,0.02), 0 4px 8px -2px rgba(0,0,0,0.03), 0 8px 16px -4px rgba(0,0,0,0.04)",
       "sourceKey": "boxShadow.attio-4",
-      "usageCount": 0,
-      "evidence": "tailwind.config.cjs:273-273"
+      "evidence": "tailwind.config.cjs:305-305"
     },
     "elevation.layer-5": {
       "value": "0 1px 3px 0 rgba(0,0,0,0.01), 0 2px 4px -1px rgba(0,0,0,0.02), 0 4px 8px -2px rgba(0,0,0,0.03), 0 8px 16px -4px rgba(0,0,0,0.04), 0 16px 32px -8px rgba(0,0,0,0.05)",
       "sourceKey": "boxShadow.attio-5",
-      "usageCount": 3,
-      "evidence": "tailwind.config.cjs:274-274"
+      "evidence": "tailwind.config.cjs:306-306"
     },
     "elevation.layer-6": {
       "value": "0 1px 3px 0 rgba(0,0,0,0.01), 0 2px 4px -1px rgba(0,0,0,0.02), 0 4px 8px -2px rgba(0,0,0,0.03), 0 8px 16px -4px rgba(0,0,0,0.04), 0 16px 32px -8px rgba(0,0,0,0.05), 0 32px 64px -16px rgba(0,0,0,0.06)",
       "sourceKey": "boxShadow.attio-6",
-      "usageCount": 0,
-      "evidence": "tailwind.config.cjs:275-275"
+      "evidence": "tailwind.config.cjs:307-307"
     },
     "elevation.layer-7": {
       "value": "0 1px 3px 0 rgba(0,0,0,0.01), 0 2px 4px -1px rgba(0,0,0,0.02), 0 4px 8px -2px rgba(0,0,0,0.03), 0 8px 16px -4px rgba(0,0,0,0.04), 0 16px 32px -8px rgba(0,0,0,0.05), 0 32px 64px -16px rgba(0,0,0,0.06), 0 64px 128px -32px rgba(0,0,0,0.07)",
       "sourceKey": "boxShadow.attio-7",
-      "usageCount": 0,
-      "evidence": "tailwind.config.cjs:276-276"
+      "evidence": "tailwind.config.cjs:308-308"
     },
     "elevation.dropdown": {
       "value": "0 0 0 1px rgba(26,26,26,0.08), 0 1px 3px 0 rgba(0,0,0,0.01), 0 2px 4px -1px rgba(0,0,0,0.02), 0 4px 8px -2px rgba(0,0,0,0.03), 0 8px 16px -4px rgba(0,0,0,0.04), 0 16px 32px -8px rgba(0,0,0,0.05)",
       "sourceKey": "boxShadow.dropdown",
-      "usageCount": 1,
-      "evidence": "tailwind.config.cjs:184-184"
+      "evidence": "tailwind.config.cjs:203-203"
     },
     "elevation.hero-window": {
       "value": "0 0 0 1px rgba(11,13,24,0.06), 0 1px 2px rgba(11,13,24,0.024), 0 3px 6px rgba(11,13,24,0.03), 0 8px 14px rgba(11,13,24,0.035), 0 16px 28px rgba(11,13,24,0.04)",
       "sourceKey": "boxShadow.hero-window",
-      "usageCount": 1,
-      "evidence": "tailwind.config.cjs:278-278"
+      "evidence": "tailwind.config.cjs:310-310"
     },
     "elevation.mock-card": {
       "value": "0 0 1px 1px rgba(0,0,85,0.01), 0 4px 12px -1px rgba(0,26,51,0.04), 0 1px 3px -1px rgba(0,22,61,0.18)",
       "sourceKey": "boxShadow.mock-card",
-      "usageCount": 16,
-      "evidence": "tailwind.config.cjs:280-280"
+      "evidence": "tailwind.config.cjs:312-312"
     },
     "elevation.mock-chip": {
       "value": "0 1px 3px 0 rgba(0,0,0,0.04), 0 0 2px 0 rgba(28,39,67,0.18)",
       "sourceKey": "boxShadow.mock-chip",
-      "usageCount": 8,
-      "evidence": "tailwind.config.cjs:282-282"
+      "evidence": "tailwind.config.cjs:314-314"
     },
     "elevation.integration-tile": {
       "value": "inset 0.2px 0.2px 2px 0 rgba(255,255,255,0.1), 0 1.5px 1.5px 0 rgba(0,0,0,0.25)",
       "sourceKey": "boxShadow.integration-tile",
-      "usageCount": 2,
-      "evidence": "tailwind.config.cjs:283-283"
+      "evidence": "tailwind.config.cjs:315-315"
     },
     "elevation.input-hover": {
       "value": "0 1px 4px rgba(56,62,71,0.1)",
       "sourceKey": "boxShadow.input-hover",
-      "usageCount": 2,
-      "evidence": "tailwind.config.cjs:286-286"
+      "evidence": "tailwind.config.cjs:318-318"
     },
     "elevation.focus-ring": {
       "value": "0 0 0 3px #94b9ff",
       "sourceKey": "boxShadow.focus-ring",
-      "usageCount": 2,
-      "evidence": "tailwind.config.cjs:287-287"
+      "evidence": "tailwind.config.cjs:319-319"
     },
     "elevation.select-ring": {
       "value": "0 0 0 3px rgba(36,109,238,0.3)",
       "sourceKey": "boxShadow.select-ring",
-      "usageCount": 1,
       "evidence": "tailwind.config.cjs:107-107"
     },
     "elevation.error-ring": {
       "value": "0 0 0 3px rgba(246,83,81,0.3)",
       "sourceKey": "boxShadow.error-ring",
-      "usageCount": 0,
       "evidence": "tailwind.config.cjs:108-108"
     },
     "elevation.select-popup": {
       "value": "0 4px 8px rgba(56,64,72,0.25)",
       "sourceKey": "boxShadow.select-popup",
-      "usageCount": 1,
-      "evidence": "tailwind.config.cjs:291-291"
+      "evidence": "tailwind.config.cjs:323-323"
     },
     "elevation.toggle-thumb": {
       "value": "0 4px 4px -2px rgba(17,34,68,0.06), 0 2px 4px -2px rgba(0,51,51,0.02), 0 0 2px #e0e0e0",
       "sourceKey": "boxShadow.toggle-thumb",
-      "usageCount": 1,
-      "evidence": "tailwind.config.cjs:292-292"
+      "evidence": "tailwind.config.cjs:324-324"
     },
     "elevation.tooltip": {
       "value": "0 4px 4px -2px rgba(17,34,68,0.06), 0 2px 4px -2px rgba(0,51,51,0.02), 0 0 2px #e0e0e0",
       "sourceKey": "boxShadow.tooltip",
-      "usageCount": 2,
-      "evidence": "tailwind.config.cjs:293-293"
+      "evidence": "tailwind.config.cjs:325-325"
     },
     "elevation.plan-card": {
       "value": "0 1px 2px -1px rgba(26,38,64,0.08), 0 2px 4px rgba(26,51,77,0.04)",
       "sourceKey": "boxShadow.plan-card",
-      "usageCount": 1,
-      "evidence": "tailwind.config.cjs:294-294"
+      "evidence": "tailwind.config.cjs:326-326"
     },
     "elevation.plan-card-featured": {
       "value": "0 0 0 4px rgba(78,137,245,0.1), 0 1px 2px -1px rgba(29,39,69,0.1), 0 2px 4px rgba(34,34,68,0.06)",
       "sourceKey": "boxShadow.plan-card-featured",
-      "usageCount": 1,
-      "evidence": "tailwind.config.cjs:295-295"
+      "evidence": "tailwind.config.cjs:327-327"
     },
     "elevation.story-frame": {
       "value": "0 6px 20px -2px rgba(26,38,64,0.08), 0 2px 6px rgba(34,34,68,0.06)",
       "sourceKey": "boxShadow.story-frame",
-      "usageCount": 1,
-      "evidence": "tailwind.config.cjs:296-296"
+      "evidence": "tailwind.config.cjs:328-328"
     },
     "elevation.segment-pill": {
       "value": "0 0 0 1px rgba(26,26,26,0.04), 0 1px 1px -0.5px rgba(26,26,26,0.04), 0 3px 3px -1.5px rgba(26,26,26,0.04)",
       "sourceKey": "boxShadow.segment-pill",
-      "usageCount": 1,
-      "evidence": "tailwind.config.cjs:297-297"
+      "evidence": "tailwind.config.cjs:329-329"
     },
     "elevation.media-ring": {
       "value": "inset 0 0 0 1px rgba(29,29,29,0.1)",
       "sourceKey": "boxShadow.media-ring",
-      "usageCount": 6,
       "evidence": "tailwind.config.cjs:111-111"
     },
     "elevation.quote-ring": {
       "value": "inset 0 0 0 1px rgba(0,0,0,0.15)",
       "sourceKey": "boxShadow.quote-ring",
-      "usageCount": 1,
       "evidence": "tailwind.config.cjs:113-113"
     },
     "elevation.app-tile": {
       "value": "0 0 0 4px rgba(166,179,191,0.08), 0 6px 20px -2px rgba(26,38,64,0.08), 0 2px 6px rgba(34,34,68,0.06)",
       "sourceKey": "boxShadow.app-tile",
-      "usageCount": 1,
-      "evidence": "tailwind.config.cjs:300-300"
+      "evidence": "tailwind.config.cjs:332-332"
     },
     "elevation.creator-slide": {
       "value": "0 0 0 1px rgba(28,29,31,0.05), 0 1px 1px -0.5px rgba(28,29,31,0.05), 0 3px 3px -1.5px rgba(28,29,31,0.05), 0 6px 6px -3px rgba(28,29,31,0.05), 0 0 0 4px rgba(164,173,186,0.08), 0 0 0 8px #fff",
       "sourceKey": "boxShadow.creator-slide",
-      "usageCount": 1,
-      "evidence": "tailwind.config.cjs:301-301"
+      "evidence": "tailwind.config.cjs:333-333"
     },
     "elevation.tier-card": {
       "value": "0 1px 3px 0 rgba(0,0,0,0.01), 0 2px 4px -1px rgba(0,0,0,0.02), 0 4px 8px -2px rgba(0,0,0,0.03), 0 8px 16px -4px rgba(0,0,0,0.04), 0 16px 32px -8px rgba(0,0,0,0.05), 0 0 0 1px rgba(28,29,31,0.05)",
       "sourceKey": "boxShadow.tier-card",
-      "usageCount": 1,
-      "evidence": "tailwind.config.cjs:303-303"
+      "evidence": "tailwind.config.cjs:335-335"
     },
     "elevation.app-icon": {
       "value": "0 1px 1px -0.5px rgba(34,34,68,0.06), 0 2px 2px -1px rgba(26,38,64,0.08), 0 4px 4px -2px rgba(34,34,68,0.06), 0 8px 8px -4px rgba(34,34,68,0.06)",
       "sourceKey": "boxShadow.app-icon",
-      "usageCount": 1,
-      "evidence": "tailwind.config.cjs:305-305"
+      "evidence": "tailwind.config.cjs:337-337"
     },
     "elevation.gallery": {
       "value": "0 1px 1px -0.5px rgba(29,39,69,0.1), 0 4px 4px -1px rgba(26,38,64,0.08), 0 4px 8px -2px rgba(34,34,68,0.06), 0 16px 16px -8px rgba(26,38,64,0.08)",
       "sourceKey": "boxShadow.gallery",
-      "usageCount": 2,
-      "evidence": "tailwind.config.cjs:306-306"
+      "evidence": "tailwind.config.cjs:338-338"
     },
     "elevation.number-badge": {
       "value": "0 2px 4px rgba(26,51,77,0.04), 0 1px 2px -1px rgba(26,38,64,0.08)",
       "sourceKey": "boxShadow.number-badge",
-      "usageCount": 2,
-      "evidence": "tailwind.config.cjs:307-307"
+      "evidence": "tailwind.config.cjs:339-339"
+    },
+    "elevation.agent-card": {
+      "value": "0 1px 2px rgba(0,0,0,0.05)",
+      "sourceKey": "boxShadow.agent-card",
+      "evidence": "tailwind.config.cjs:341-341"
+    },
+    "elevation.well-card": {
+      "value": "0 0 2px rgba(28,40,64,0.22), 0 1px 3px rgba(24,41,75,0.04), 0 2px 4px -2px rgba(24,39,75,0.02), 0 4px 4px -2px rgba(24,39,75,0.04)",
+      "sourceKey": "boxShadow.well-card",
+      "evidence": "tailwind.config.cjs:342-342"
+    },
+    "elevation.prompt-box": {
+      "value": "0 2px 8px rgba(0,0,0,0.05)",
+      "sourceKey": "boxShadow.prompt-box",
+      "evidence": "tailwind.config.cjs:343-343"
     }
   }
 }

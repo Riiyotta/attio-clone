@@ -1,0 +1,140 @@
+{
+  "id": "listing.course-grid",
+  "title": "Course grid",
+  "status": "measured",
+  "source": {
+    "id": "src:HelpAcademy#COURSES-map-c-i",
+    "file": "src/pages/help/HelpAcademy.jsx",
+    "tag": "{COURSES.map((c, i) => (",
+    "lines": "17-17",
+    "citation": "src/pages/help/HelpAcademy.jsx:17-17"
+  },
+  "semantic": {
+    "id": "listing.course-grid",
+    "category": "LISTING"
+  },
+  "retrievalEligible": true,
+  "purpose": "Video course catalogue: 2-up grid of course cards (5:3 art, title with animated underline, description, lessons and duration).",
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "courses": {
+        "type": "array",
+        "minItems": 2,
+        "maxItems": 8,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "title": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 5,
+              "x-maxWordsEvidence": "measured 4 words"
+            },
+            "description": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 27,
+              "x-maxWordsEvidence": "measured paragraphWordsMax=21 for listing.course-grid at 1440px"
+            },
+            "lessonsLabel": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 3,
+              "x-maxWordsEvidence": "measured 2 words"
+            },
+            "durationLabel": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 3,
+              "x-maxWordsEvidence": "measured 2 words"
+            },
+            "art": {
+              "$ref": "#/definitions/media",
+              "x-assetRoles": [
+                "illustration.reference-art",
+                "illustration.generated-abstract",
+                "illustration.decorative-pattern"
+              ]
+            },
+            "href": {
+              "$ref": "#/definitions/url"
+            }
+          },
+          "required": [
+            "title",
+            "description",
+            "lessonsLabel",
+            "durationLabel",
+            "art",
+            "href"
+          ]
+        },
+        "x-countEvidence": "5 courses measured"
+      }
+    },
+    "required": [
+      "courses"
+    ]
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "hover-micro"
+    ],
+    "reducedMotionFallback": "instant-state-change",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-md",
+        "change": "collapse-grid",
+        "detail": "one column."
+      }
+    ]
+  },
+  "assetSlots": [
+    {
+      "field": ".courses[].art",
+      "assetRoles": [
+        "illustration.reference-art",
+        "illustration.generated-abstract",
+        "illustration.decorative-pattern"
+      ]
+    }
+  ],
+  "generatedAssetRoles": [
+    "copy.original",
+    "illustration.decorative-pattern",
+    "illustration.generated-abstract",
+    "url.placeholder"
+  ],
+  "composes": [],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/help/academy",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 1285
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/help/academy",
+      "variant": null
+    }
+  ]
+}

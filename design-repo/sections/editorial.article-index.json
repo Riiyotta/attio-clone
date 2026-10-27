@@ -1,0 +1,173 @@
+{
+  "id": "editorial.article-index",
+  "title": "Article index",
+  "status": "measured",
+  "source": {
+    "id": "src:Listing#export-function-LatestArticles",
+    "file": "src/components/blog/Listing.jsx",
+    "tag": "export function LatestArticles(",
+    "lines": "147-206",
+    "citation": "src/components/blog/Listing.jsx:147-206"
+  },
+  "semantic": {
+    "id": "editorial.article-index",
+    "category": "EDITORIAL"
+  },
+  "retrievalEligible": true,
+  "purpose": "Blog post index: heading, category filter list (sticky column) and a uniform list of article rows (category, title, excerpt, author, date).",
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "heading": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 15,
+        "x-maxWordsEvidence": "measured headingWordsMax=12 for editorial.article-index at 1440px"
+      },
+      "filters": {
+        "type": "array",
+        "minItems": 2,
+        "maxItems": 8,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "label": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 4,
+              "x-maxWordsEvidence": "measured 3 words"
+            },
+            "count": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 2,
+              "x-maxWordsEvidence": "measured 1 words"
+            }
+          },
+          "required": [
+            "label"
+          ]
+        }
+      },
+      "rows": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 40,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "category": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 4,
+              "x-maxWordsEvidence": "measured 3 words"
+            },
+            "title": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 15,
+              "x-maxWordsEvidence": "measured headingWordsMax=12 for editorial.article-index at 1440px"
+            },
+            "excerpt": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 32,
+              "x-maxWordsEvidence": "measured paragraphWordsMax=25 for editorial.article-index at 1440px"
+            },
+            "author": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 5,
+              "x-maxWordsEvidence": "measured 4 words"
+            },
+            "date": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 4,
+              "x-maxWordsEvidence": "measured 3 words"
+            },
+            "href": {
+              "$ref": "#/definitions/url"
+            }
+          },
+          "required": [
+            "category",
+            "title",
+            "date",
+            "href"
+          ]
+        },
+        "x-countEvidence": "35 rows (/blog), 13 rows (/engineering/blog)"
+      }
+    },
+    "required": [
+      "heading",
+      "filters",
+      "rows"
+    ]
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "hover-micro"
+    ],
+    "reducedMotionFallback": "instant-state-change",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "scroll-row",
+        "detail": "filter column becomes a horizontal scroll row above the list."
+      }
+    ]
+  },
+  "assetSlots": [],
+  "generatedAssetRoles": [
+    "copy.original",
+    "url.placeholder"
+  ],
+  "composes": [
+    "component.hover-wash"
+  ],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/blog",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 4838
+      },
+      {
+        "route": "/engineering/blog",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 1924
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/blog",
+      "variant": null
+    },
+    {
+      "route": "/engineering/blog",
+      "variant": null
+    }
+  ],
+  "notes": "On /blog it is 66.0% of the page; that page has only two in-flow sections, so the R9 share gate skips it. It is one uniform list with no rendered sub-boundaries, so it is not split further (splitting would invent structure)."
+}

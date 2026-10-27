@@ -14,6 +14,12 @@
         "tag": "export function KeepUpToDate(",
         "lines": "343-363",
         "citation": "src/components/careers/Sections.jsx:343-363"
+      },
+      {
+        "file": "src/pages/help/HelpHome.jsx",
+        "tag": "const CARDS = [",
+        "lines": "8-12",
+        "citation": "src/pages/help/HelpHome.jsx:8-12"
       }
     ]
   },
@@ -53,6 +59,12 @@
             "icon": {
               "$ref": "#/definitions/icon"
             },
+            "iconMedia": {
+              "$ref": "#/definitions/media",
+              "x-assetRoles": [
+                "icon.generated-app"
+              ]
+            },
             "title": {
               "type": "string",
               "minLength": 1,
@@ -70,7 +82,6 @@
             }
           },
           "required": [
-            "icon",
             "title",
             "description",
             "href"
@@ -103,9 +114,17 @@
       }
     ]
   },
-  "assetSlots": [],
+  "assetSlots": [
+    {
+      "field": ".cards[].iconMedia",
+      "assetRoles": [
+        "icon.generated-app"
+      ]
+    }
+  ],
   "generatedAssetRoles": [
     "copy.original",
+    "icon.generated-app",
     "url.placeholder"
   ],
   "composes": [
@@ -125,6 +144,12 @@
         "variant": null,
         "instance": 0,
         "heightPx": 612
+      },
+      {
+        "route": "/help",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 174
       }
     ],
     "evidence": "extraction/measured-values.json#/sectionHeights"
@@ -136,6 +161,10 @@
     },
     {
       "route": "/careers",
+      "variant": null
+    },
+    {
+      "route": "/help",
       "variant": null
     }
   ]

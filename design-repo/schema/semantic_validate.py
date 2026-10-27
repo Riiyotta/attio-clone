@@ -18,6 +18,7 @@ Pins (independent of the JSON registries, so editing a registry alone cannot loo
 Standard library only, except the optional schema layer.
 """
 import json, os, re, sys
+sys.dont_write_bytecode = True
 from urllib.parse import urlparse
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -73,7 +74,8 @@ RETRIEVAL_INELIGIBLE = {"overlay.search-dialog", "overlay.gallery-lightbox", "ov
 
 GRAPH_RULE_IDS = ["SHELL_POSITION", "ONE_HERO", "HERO_FIRST", "HOME_ROUTE_ONLY", "ONE_PER_PAGE", "NO_CONSECUTIVE_SAME_SECTION",
                   "NO_ADJACENT_SAME_CATEGORY", "MUST_PRECEDE_FOOTER", "DARK_STACK_ORDER", "CURTAIN_NEEDS_DARK_STACK",
-                  "GROUP_NEEDS_HEADER", "OVERLAY_NOT_A_NODE", "MOTION_BUDGET"]
+                  "GROUP_NEEDS_HEADER", "CHAPTER_OPENS_BODY", "OVERLAY_NOT_A_NODE", "MOTION_BUDGET"]
+LONGFORM_BODY = {"content.prose-split", "content.lit-statement", "content.scroll-scene", "features.launch-showcase"}
 GENERATED_RULES = ["GENERATED_MODE_BRAND", "GENERATED_MODE_CTA", "GENERATED_MODE_COPY", "GENERATED_MODE_URL", "GENERATED_MODE_ASSET",
                    "GENERATED_MODE_PERSON", "GENERATED_MODE_RATING", "GENERATED_MODE_STORE"]
 CONTINUOUS_MOTION = {"badge-comet", "auto-cycle-tabs", "marquee-loop", "ambient-streaks", "decorative-loop"}
@@ -317,6 +319,20 @@ def check_generated(spec, errs):
             if " ".join(toks[i:i + SHINGLE]) in shingles:
                 add("GENERATED_MODE_COPY", f"{path}: reuses a {SHINGLE}-word run of reference copy: '{' '.join(toks[i:i + SHINGLE])}'")
                 break
+    # copy split across sibling fields (a headline typed as line1 + line2, label + sublabel, ...): test the
+    # joined text of each object's own prose fields too, so splitting a source sentence cannot dodge the 6-word rule
+    skip_keys = {"type", "variant", "mode", "template", "pageSpecVersion", "reducedMotionFallback", "assetRole", "assetRef", "kind", "theme",
+                 "surface", "paddingTop", "paddingBottom", "headingFont", "href", "route", "id", "region", "section"}
+    for path, o in walk_objects(spec):
+        parts = [v for k, v in o.items() if isinstance(v, str) and k not in skip_keys and not v.startswith("http")]
+        if len(parts) >= 2:
+            toks = _toks(" ".join(parts))
+            if 4 <= len(toks) < SHINGLE and " ".join(toks) in short:
+                add("GENERATED_MODE_COPY", f"{path}: sibling fields together reuse reference copy verbatim: '{' '.join(toks)[:60]}'")
+            for i in range(len(toks) - SHINGLE + 1):
+                if " ".join(toks[i:i + SHINGLE]) in shingles:
+                    add("GENERATED_MODE_COPY", f"{path}: sibling fields together reuse a {SHINGLE}-word run of reference copy: '{' '.join(toks[i:i + SHINGLE])}'")
+                    break
     for path, o in walk_objects(spec):
         if "assetRole" in o:
             r = o["assetRole"]
@@ -415,6 +431,13 @@ def validate(spec):
                 errs.append(("GROUP_NEEDS_HEADER", f"{grp} requires {head} before it"))
             if idx != list(range(idx[0], idx[0] + len(idx))):
                 errs.append(("GROUP_NEEDS_HEADER", f"{grp} nodes must be contiguous"))
+    seen_chapter = False
+    for nd in known_nodes:
+        if nd["type"] == "content.chapter-header":
+            seen_chapter = True
+        elif nd["type"] in LONGFORM_BODY and not seen_chapter:
+            errs.append(("CHAPTER_OPENS_BODY", f"'{nd['id']}' ({nd['type']}) appears before any content.chapter-header"))
+            break
     loops = [nd["id"] for nd in known_nodes if set(nd.get("motion", {}).get("patterns", [])) & CONTINUOUS_MOTION]
     if len(loops) > MOTION_BUDGET_MAX:
         warns.append(("MOTION_BUDGET", f"{len(loops)} nodes with continuous motion (max {MOTION_BUDGET_MAX}): {loops}"))

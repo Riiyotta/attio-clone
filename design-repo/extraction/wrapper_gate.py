@@ -13,6 +13,7 @@ routes that must be measured. Thresholds are pinned here in code (not read from 
 A whitelisted hit still warns. Exit 1 on any error.
 """
 import json, os, sys
+sys.dont_write_bytecode = True
 
 HERO_WARN_PX = 1800
 HERO_FAIL_PX = 3000

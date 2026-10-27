@@ -1,0 +1,336 @@
+{
+  "pageSpecVersion": "1.1.0",
+  "mode": "generated",
+  "template": "customer-hub",
+  "route": "/crews",
+  "brand": {
+    "name": "Tarnwick",
+    "mark": {
+      "assetRole": "brand.placeholder-mark",
+      "assetRef": "generate:neutral rounded glyph plus the Tarnwick wordmark",
+      "alt": "Tarnwick"
+    },
+    "fictional": true
+  },
+  "meta": {
+    "title": "Crews we work with",
+    "description": "Generated sample customer page for a fictional scheduling product."
+  },
+  "nodes": [
+    {
+      "id": "header",
+      "type": "shell.site-header",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.placeholder-mark",
+          "assetRef": "generate:neutral rounded glyph plus the Tarnwick wordmark",
+          "alt": "Tarnwick"
+        },
+        "banner": {
+          "text": "Read what changed in the autumn update",
+          "href": "https://tarnwick.example/updates"
+        },
+        "menus": [
+          {
+            "label": "Product",
+            "groups": [
+              {
+                "label": "Plan",
+                "items": [
+                  {
+                    "title": "Crew calendar",
+                    "description": "Book jobs onto open crew time",
+                    "href": "https://tarnwick.example/calendar"
+                  },
+                  {
+                    "title": "Parts tracker",
+                    "description": "Know which van carries which spare",
+                    "href": "https://tarnwick.example/parts"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "Company",
+            "groups": [
+              {
+                "label": "About",
+                "items": [
+                  {
+                    "title": "Our crews",
+                    "description": "Who builds the scheduling board",
+                    "href": "https://tarnwick.example/about"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "signIn": {
+          "label": "Log in",
+          "href": "https://app.tarnwick.example/login"
+        },
+        "primaryCta": {
+          "label": "Book a walkthrough",
+          "href": "https://tarnwick.example/demo",
+          "variant": "primary"
+        }
+      },
+      "motion": {
+        "patterns": [
+          "header-theme-swap",
+          "dropdown-panel"
+        ],
+        "reducedMotionFallback": "instant-state-change"
+      }
+    },
+    {
+      "id": "intro",
+      "type": "hero.page-centered",
+      "variant": "plain",
+      "content": {
+        "badge": "Our crews",
+        "title": "Crews that keep the week on track",
+        "lead": "Read how small firms replaced paper diaries with one shared board and gave their evenings back."
+      },
+      "motion": {
+        "patterns": [
+          "page-hero-enter"
+        ],
+        "reducedMotionFallback": "paused-first-frame"
+      }
+    },
+    {
+      "id": "logos",
+      "type": "social-proof.logo-wall",
+      "variant": "grid",
+      "content": {
+        "logos": [
+          {
+            "assetRole": "logo.fictional-company",
+            "assetRef": "generate:simple wordmark for a fictional firm called Alder Row",
+            "alt": "Alder Row logo"
+          },
+          {
+            "assetRole": "logo.fictional-company",
+            "assetRef": "generate:simple wordmark for a fictional firm called Brightwater",
+            "alt": "Brightwater logo"
+          },
+          {
+            "assetRole": "logo.fictional-company",
+            "assetRef": "generate:simple wordmark for a fictional firm called Copperleaf",
+            "alt": "Copperleaf logo"
+          },
+          {
+            "assetRole": "logo.fictional-company",
+            "assetRef": "generate:simple wordmark for a fictional firm called Dunmore",
+            "alt": "Dunmore logo"
+          },
+          {
+            "assetRole": "logo.fictional-company",
+            "assetRef": "generate:simple wordmark for a fictional firm called Eastgate",
+            "alt": "Eastgate logo"
+          },
+          {
+            "assetRole": "logo.fictional-company",
+            "assetRef": "generate:simple wordmark for a fictional firm called Fernhill",
+            "alt": "Fernhill logo"
+          }
+        ]
+      },
+      "motion": {
+        "patterns": [
+          "hover-micro"
+        ],
+        "reducedMotionFallback": "instant-state-change"
+      }
+    },
+    {
+      "id": "stories",
+      "type": "social-proof.customer-stories",
+      "variant": "grid",
+      "content": {
+        "heading": {
+          "lead": "Stories from the field",
+          "continuation": "told by the people who run them"
+        },
+        "stories": [
+          {
+            "company": "Alder Row",
+            "logo": {
+              "assetRole": "logo.fictional-company",
+              "assetRef": "generate:simple wordmark for a fictional firm called Alder Row",
+              "alt": "Alder Row logo"
+            },
+            "overline": "Roofing",
+            "title": "Alder Row halved its phone calls by sharing one board",
+            "linkLabel": "Read story",
+            "href": "/crews/alder-row",
+            "media": {
+              "assetRole": "illustration.generated-abstract",
+              "assetRef": "generate:pale green abstract pattern of overlapping tiles",
+              "alt": "Abstract artwork"
+            }
+          },
+          {
+            "company": "Brightwater",
+            "logo": {
+              "assetRole": "logo.fictional-company",
+              "assetRef": "generate:simple wordmark for a fictional firm called Brightwater",
+              "alt": "Brightwater logo"
+            },
+            "overline": "Plumbing",
+            "title": "Brightwater plans vans a week ahead without a spreadsheet",
+            "linkLabel": "Read story",
+            "href": "/crews/brightwater",
+            "media": {
+              "assetRole": "illustration.generated-abstract",
+              "assetRef": "generate:soft blue abstract pattern of flowing lines",
+              "alt": "Abstract artwork"
+            }
+          },
+          {
+            "company": "Copperleaf",
+            "logo": {
+              "assetRole": "logo.fictional-company",
+              "assetRef": "generate:simple wordmark for a fictional firm called Copperleaf",
+              "alt": "Copperleaf logo"
+            },
+            "overline": "Electrical",
+            "title": "Copperleaf invoices on the day the work is done",
+            "linkLabel": "Read story",
+            "href": "/crews/copperleaf",
+            "media": {
+              "assetRole": "illustration.generated-abstract",
+              "assetRef": "generate:warm orange abstract pattern of nested arcs",
+              "alt": "Abstract artwork"
+            }
+          },
+          {
+            "company": "Dunmore",
+            "logo": {
+              "assetRole": "logo.fictional-company",
+              "assetRef": "generate:simple wordmark for a fictional firm called Dunmore",
+              "alt": "Dunmore logo"
+            },
+            "overline": "Gardening",
+            "title": "Dunmore keeps seasonal rounds tidy across three crews",
+            "linkLabel": "Read story",
+            "href": "/crews/dunmore",
+            "media": {
+              "assetRole": "illustration.generated-abstract",
+              "assetRef": "generate:sage abstract pattern of scattered leaves",
+              "alt": "Abstract artwork"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "patterns": [
+          "auto-cycle-tabs"
+        ],
+        "reducedMotionFallback": "manual-advance-only"
+      }
+    },
+    {
+      "id": "quote",
+      "type": "testimonial.quote",
+      "variant": "portrait",
+      "content": {
+        "quote": "We stopped chasing people for updates. The board simply tells us where everyone is, and that has changed how our mornings feel.",
+        "person": {
+          "name": "Marlow Teague",
+          "role": "Operations lead at a fictional firm",
+          "fictional": true
+        },
+        "portrait": {
+          "assetRole": "person.fictional-portrait",
+          "assetRef": "generate:illustrated portrait of a fictional operations lead",
+          "alt": "Portrait of a fictional operations lead"
+        }
+      },
+      "motion": {
+        "patterns": [
+          "word-reveal-scroll"
+        ],
+        "reducedMotionFallback": "static-final-state"
+      }
+    },
+    {
+      "id": "cta",
+      "type": "conversion.avatar-wall-cta",
+      "content": {
+        "line1": "Join the crews",
+        "line2": "who plan with confidence",
+        "primaryCta": {
+          "label": "Book a walkthrough",
+          "href": "https://tarnwick.example/demo",
+          "variant": "primary"
+        },
+        "secondaryCta": {
+          "label": "See plans",
+          "href": "/plans",
+          "variant": "outline"
+        },
+        "avatars": {
+          "assetRole": "avatar.abstract",
+          "assetRef": "generate:wall of small abstract round avatars in muted colours",
+          "alt": "Abstract avatars"
+        }
+      },
+      "motion": {
+        "patterns": [
+          "avatar-wall-in-view"
+        ],
+        "reducedMotionFallback": "static-final-state"
+      }
+    },
+    {
+      "id": "footer",
+      "type": "shell.site-footer",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.placeholder-mark",
+          "assetRef": "generate:neutral rounded glyph plus the Tarnwick wordmark",
+          "alt": "Tarnwick"
+        },
+        "columns": [
+          {
+            "heading": "Product",
+            "links": [
+              {
+                "label": "Crew calendar",
+                "href": "https://tarnwick.example/calendar"
+              },
+              {
+                "label": "Parts tracker",
+                "href": "https://tarnwick.example/parts"
+              }
+            ]
+          },
+          {
+            "heading": "Company",
+            "links": [
+              {
+                "label": "About us",
+                "href": "https://tarnwick.example/about"
+              },
+              {
+                "label": "Jobs board",
+                "href": "https://tarnwick.example/jobs"
+              }
+            ]
+          }
+        ],
+        "legal": "© 2026 Tarnwick, a fictional company. Placeholder legal line for a generated page."
+      },
+      "motion": {
+        "patterns": [
+          "hover-micro"
+        ],
+        "reducedMotionFallback": "instant-state-change"
+      }
+    }
+  ]
+}

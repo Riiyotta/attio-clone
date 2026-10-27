@@ -1,0 +1,126 @@
+{
+  "id": "hero.scroll-typewriter",
+  "title": "Scroll typewriter hero",
+  "status": "measured",
+  "source": {
+    "id": "src:Sections#export-function-ArchHero",
+    "file": "src/components/architecture/Sections.jsx",
+    "tag": "export function ArchHero(",
+    "lines": "40-105",
+    "citation": "src/components/architecture/Sections.jsx:40-105"
+  },
+  "semantic": {
+    "id": "hero.scroll-typewriter",
+    "category": "HERO"
+  },
+  "retrievalEligible": true,
+  "purpose": "Long-form story opener: a pinned full-viewport stage where serif phrases type out as the reader scrolls a 300svh runway, over an animated dot field, with a scroll cue.",
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "phrases": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 6,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "line1": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 8,
+              "x-maxWordsEvidence": "measured 6 words"
+            },
+            "line2": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 8,
+              "x-maxWordsEvidence": "measured 6 words"
+            }
+          },
+          "required": [
+            "line1",
+            "line2"
+          ]
+        }
+      },
+      "field": {
+        "$ref": "#/definitions/media",
+        "x-assetRoles": [
+          "illustration.reference-art",
+          "illustration.generated-abstract",
+          "illustration.decorative-pattern"
+        ]
+      },
+      "scrollCue": {
+        "type": "boolean"
+      }
+    },
+    "required": [
+      "phrases",
+      "field"
+    ]
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "scroll-typewriter",
+      "canvas-field"
+    ],
+    "reducedMotionFallback": "paused-first-frame",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "resize-type",
+        "detail": "typewriter text scales down; stage stays one viewport."
+      }
+    ]
+  },
+  "assetSlots": [
+    {
+      "field": ".field",
+      "assetRoles": [
+        "illustration.reference-art",
+        "illustration.generated-abstract",
+        "illustration.decorative-pattern"
+      ]
+    }
+  ],
+  "generatedAssetRoles": [
+    "copy.original",
+    "illustration.decorative-pattern",
+    "illustration.generated-abstract",
+    "url.placeholder"
+  ],
+  "composes": [],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/architecture",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 4500
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/architecture",
+      "variant": null
+    }
+  ],
+  "notes": "Measured 4500px at 1440x900 (pinned 100svh stage + scroll runway); whitelisted in measured-values.json with an agent attestation. The visible composition is one viewport."
+}

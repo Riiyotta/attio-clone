@@ -4,8 +4,9 @@
   "sectionHeights": {
     "viewportWidth": 1440,
     "viewportHeight": 900,
-    "measuredAt": "2026-10-27T10:15:13.868Z",
-    "reducedMotion": true,
+    "measuredAt": "2026-10-27T11:01:45.587Z",
+    "reducedMotion": false,
+    "motionPreferenceNote": "measured with the default (no-preference) motion setting: the architecture page uses motion-safe scroll runways (hero 4500px vs 3150px under reduced motion)",
     "tool": "extraction/measure_sections.mjs (headless Chromium via Playwright)",
     "pages": [
       {
@@ -1232,6 +1233,515 @@
         ]
       },
       {
+        "route": "/blog",
+        "template": "editorial-listing",
+        "docHeightPx": 7334,
+        "shell": [
+          {
+            "section": "shell.site-header",
+            "heightPx": 116
+          },
+          {
+            "section": "shell.site-footer",
+            "heightPx": 685
+          }
+        ],
+        "sections": [
+          {
+            "section": "hero.editorial-featured",
+            "variant": "featured-post",
+            "instance": 0,
+            "heightPx": 1532.5,
+            "inFlow": true,
+            "selector": "main > :nth-child(1)",
+            "textStats": {
+              "headingWordsMax": 9,
+              "paragraphWordsMax": 22,
+              "actionWordsMax": 37
+            }
+          },
+          {
+            "section": "editorial.article-index",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 4838,
+            "inFlow": true,
+            "selector": "main > section",
+            "textStats": {
+              "headingWordsMax": 12,
+              "paragraphWordsMax": 25,
+              "actionWordsMax": 37
+            }
+          }
+        ]
+      },
+      {
+        "route": "/engineering/blog",
+        "template": "editorial-listing",
+        "docHeightPx": 4172,
+        "shell": [
+          {
+            "section": "shell.site-header",
+            "heightPx": 116
+          },
+          {
+            "section": "shell.site-footer",
+            "heightPx": 685
+          }
+        ],
+        "sections": [
+          {
+            "section": "hero.editorial-featured",
+            "variant": "ascii-field",
+            "instance": 0,
+            "heightPx": 800,
+            "inFlow": true,
+            "selector": "main > :nth-child(1)",
+            "textStats": {
+              "headingWordsMax": 9,
+              "paragraphWordsMax": 22,
+              "actionWordsMax": 32
+            }
+          },
+          {
+            "section": "editorial.article-index",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 1924,
+            "inFlow": true,
+            "selector": "main > :nth-child(2)",
+            "textStats": {
+              "headingWordsMax": 11,
+              "paragraphWordsMax": 22,
+              "actionWordsMax": 31
+            }
+          },
+          {
+            "section": "conversion.careers-heatmap",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 646.8,
+            "inFlow": true,
+            "selector": "main > :nth-child(3)",
+            "textStats": {
+              "headingWordsMax": 10,
+              "paragraphWordsMax": 9,
+              "actionWordsMax": 3
+            }
+          }
+        ]
+      },
+      {
+        "route": "/changelog/2026",
+        "template": "changelog-year",
+        "docHeightPx": 7643,
+        "shell": [
+          {
+            "section": "shell.site-header",
+            "heightPx": 116
+          },
+          {
+            "section": "shell.site-footer",
+            "heightPx": 685
+          }
+        ],
+        "sections": [
+          {
+            "section": "hero.changelog-intro",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 607,
+            "inFlow": true,
+            "selector": "main > section",
+            "textStats": {
+              "headingWordsMax": 2,
+              "paragraphWordsMax": 7,
+              "actionWordsMax": 1
+            }
+          },
+          {
+            "section": "editorial.changelog-entries",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 6235,
+            "inFlow": true,
+            "selector": "main > div",
+            "textStats": {
+              "headingWordsMax": 6,
+              "paragraphWordsMax": 24,
+              "actionWordsMax": 29
+            }
+          }
+        ]
+      },
+      {
+        "route": "/help",
+        "template": "help-docs",
+        "docHeightPx": 2168,
+        "shell": [
+          {
+            "section": "shell.site-header",
+            "heightPx": 116
+          },
+          {
+            "section": "shell.site-footer",
+            "heightPx": 685
+          }
+        ],
+        "sections": [
+          {
+            "section": "navigation.docs-sidebar",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 784,
+            "inFlow": false,
+            "selector": "main aside > div",
+            "textStats": {
+              "headingWordsMax": 0,
+              "paragraphWordsMax": 1,
+              "actionWordsMax": 9
+            }
+          },
+          {
+            "section": "hero.help-search",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 308,
+            "inFlow": true,
+            "selector": "union:main > div.container > div > div:last-child > div > :nth-child(1)||main > div.container > div > div:last-child > div > :nth-child(2)",
+            "textStats": {
+              "headingWordsMax": 4,
+              "paragraphWordsMax": 2,
+              "actionWordsMax": 8
+            }
+          },
+          {
+            "section": "content.resource-cards",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 174,
+            "inFlow": true,
+            "selector": "main > div.container > div > div:last-child > div > :nth-child(3)",
+            "textStats": {
+              "headingWordsMax": 1,
+              "paragraphWordsMax": 10,
+              "actionWordsMax": 10
+            }
+          },
+          {
+            "section": "listing.lesson-list",
+            "variant": "numbered-preview",
+            "instance": 0,
+            "heightPx": 349,
+            "inFlow": true,
+            "selector": "main > div.container > div > div:last-child > div > :nth-child(4)",
+            "textStats": {
+              "headingWordsMax": 0,
+              "paragraphWordsMax": 9,
+              "actionWordsMax": 11
+            }
+          }
+        ]
+      },
+      {
+        "route": "/help/academy",
+        "template": "help-docs",
+        "docHeightPx": 2514,
+        "shell": [
+          {
+            "section": "shell.site-header",
+            "heightPx": 116
+          },
+          {
+            "section": "shell.site-footer",
+            "heightPx": 685
+          }
+        ],
+        "sections": [
+          {
+            "section": "navigation.docs-sidebar",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 784,
+            "inFlow": false,
+            "selector": "main aside > div",
+            "textStats": {
+              "headingWordsMax": 0,
+              "paragraphWordsMax": 1,
+              "actionWordsMax": 9
+            }
+          },
+          {
+            "section": "hero.docs-page-header",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 200,
+            "inFlow": true,
+            "selector": "union:main > div.container > div > div:last-child > :nth-child(1)||main > div.container > div > div:last-child > :nth-child(3)",
+            "textStats": {
+              "headingWordsMax": 0,
+              "paragraphWordsMax": 1,
+              "actionWordsMax": 1
+            }
+          },
+          {
+            "section": "listing.course-grid",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 1285,
+            "inFlow": true,
+            "selector": "main > div.container > div > div:last-child > :nth-child(4)",
+            "textStats": {
+              "headingWordsMax": 4,
+              "paragraphWordsMax": 21,
+              "actionWordsMax": 29
+            }
+          }
+        ]
+      },
+      {
+        "route": "/help/reference/attio-101",
+        "template": "help-docs",
+        "docHeightPx": 3380,
+        "shell": [
+          {
+            "section": "shell.site-header",
+            "heightPx": 116
+          },
+          {
+            "section": "shell.site-footer",
+            "heightPx": 685
+          }
+        ],
+        "sections": [
+          {
+            "section": "navigation.docs-sidebar",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 784,
+            "inFlow": false,
+            "selector": "main aside > div",
+            "textStats": {
+              "headingWordsMax": 0,
+              "paragraphWordsMax": 1,
+              "actionWordsMax": 9
+            }
+          },
+          {
+            "section": "hero.docs-page-header",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 176,
+            "inFlow": true,
+            "selector": "union:main > div.container > div > div:last-child > :nth-child(1)||main > div.container > div > div:last-child > :nth-child(3)",
+            "textStats": {
+              "headingWordsMax": 0,
+              "paragraphWordsMax": 2,
+              "actionWordsMax": 1
+            }
+          },
+          {
+            "section": "listing.lesson-list",
+            "variant": "timeline",
+            "instance": 0,
+            "heightPx": 2195,
+            "inFlow": true,
+            "selector": "main > div.container > div > div:last-child > :nth-child(4)",
+            "textStats": {
+              "headingWordsMax": 0,
+              "paragraphWordsMax": 11,
+              "actionWordsMax": 14
+            }
+          }
+        ]
+      },
+      {
+        "route": "/architecture",
+        "template": "architecture",
+        "docHeightPx": 23956,
+        "shell": [
+          {
+            "section": "shell.site-header",
+            "heightPx": 68
+          },
+          {
+            "section": "shell.site-footer",
+            "heightPx": 685
+          }
+        ],
+        "sections": [
+          {
+            "section": "hero.scroll-typewriter",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 4500,
+            "inFlow": true,
+            "selector": "section.architecture-hero",
+            "textStats": {
+              "headingWordsMax": 21,
+              "paragraphWordsMax": 1,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "content.chapter-header",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 666.7,
+            "inFlow": true,
+            "selector": "#story > :nth-child(1), #architecture > :nth-child(1), #launch > :nth-child(1)",
+            "textStats": {
+              "headingWordsMax": 9,
+              "paragraphWordsMax": 2,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "content.chapter-header",
+            "variant": null,
+            "instance": 1,
+            "heightPx": 666.7,
+            "inFlow": true,
+            "selector": "#story > :nth-child(1), #architecture > :nth-child(1), #launch > :nth-child(1)",
+            "textStats": {
+              "headingWordsMax": 6,
+              "paragraphWordsMax": 2,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "content.chapter-header",
+            "variant": null,
+            "instance": 2,
+            "heightPx": 666.7,
+            "inFlow": true,
+            "selector": "#story > :nth-child(1), #architecture > :nth-child(1), #launch > :nth-child(1)",
+            "textStats": {
+              "headingWordsMax": 3,
+              "paragraphWordsMax": 2,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "content.prose-split",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 556.8,
+            "inFlow": true,
+            "selector": "#story > :nth-child(2), #story > :nth-child(3), #story > :nth-child(5), #architecture > :nth-child(2)",
+            "textStats": {
+              "headingWordsMax": 0,
+              "paragraphWordsMax": 43,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "content.prose-split",
+            "variant": null,
+            "instance": 1,
+            "heightPx": 2706.2,
+            "inFlow": true,
+            "selector": "#story > :nth-child(2), #story > :nth-child(3), #story > :nth-child(5), #architecture > :nth-child(2)",
+            "textStats": {
+              "headingWordsMax": 17,
+              "paragraphWordsMax": 67,
+              "actionWordsMax": 1
+            }
+          },
+          {
+            "section": "content.prose-split",
+            "variant": null,
+            "instance": 2,
+            "heightPx": 1055.8,
+            "inFlow": true,
+            "selector": "#story > :nth-child(2), #story > :nth-child(3), #story > :nth-child(5), #architecture > :nth-child(2)",
+            "textStats": {
+              "headingWordsMax": 12,
+              "paragraphWordsMax": 0,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "content.prose-split",
+            "variant": null,
+            "instance": 3,
+            "heightPx": 1005.6,
+            "inFlow": true,
+            "selector": "#story > :nth-child(2), #story > :nth-child(3), #story > :nth-child(5), #architecture > :nth-child(2)",
+            "textStats": {
+              "headingWordsMax": 4,
+              "paragraphWordsMax": 69,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "content.lit-statement",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 900,
+            "inFlow": true,
+            "selector": "#story > section.dark",
+            "textStats": {
+              "headingWordsMax": 0,
+              "paragraphWordsMax": 34,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "content.scroll-scene",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 4950,
+            "inFlow": true,
+            "selector": "#architecture > section.dark",
+            "textStats": {
+              "headingWordsMax": 8,
+              "paragraphWordsMax": 17,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "features.launch-showcase",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 3206.8,
+            "inFlow": true,
+            "selector": "#launch > :nth-child(2)",
+            "textStats": {
+              "headingWordsMax": 3,
+              "paragraphWordsMax": 42,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "social-proof.logo-wall",
+            "variant": "dark-statement",
+            "instance": 0,
+            "heightPx": 680,
+            "inFlow": true,
+            "selector": "#launch > section.dark",
+            "textStats": {
+              "headingWordsMax": 11,
+              "paragraphWordsMax": 0,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "conversion.closing-stage",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 2610,
+            "inFlow": true,
+            "selector": "main > section:last-child",
+            "textStats": {
+              "headingWordsMax": 0,
+              "paragraphWordsMax": 13,
+              "actionWordsMax": 7
+            }
+          }
+        ]
+      },
+      {
         "route": "/apps/chatgpt",
         "template": "app-detail",
         "docHeightPx": 3840,
@@ -1663,6 +2173,54 @@
       "desktopRegionsHiddenAtThisWidth": []
     },
     {
+      "route": "/blog",
+      "viewportWidth": 768,
+      "docHeightPx": 9448,
+      "desktopRegionsHiddenAtThisWidth": []
+    },
+    {
+      "route": "/engineering/blog",
+      "viewportWidth": 768,
+      "docHeightPx": 5528,
+      "desktopRegionsHiddenAtThisWidth": []
+    },
+    {
+      "route": "/changelog/2026",
+      "viewportWidth": 768,
+      "docHeightPx": 10103,
+      "desktopRegionsHiddenAtThisWidth": []
+    },
+    {
+      "route": "/help",
+      "viewportWidth": 768,
+      "docHeightPx": 3007,
+      "desktopRegionsHiddenAtThisWidth": [
+        "navigation.docs-sidebar"
+      ]
+    },
+    {
+      "route": "/help/academy",
+      "viewportWidth": 768,
+      "docHeightPx": 2554,
+      "desktopRegionsHiddenAtThisWidth": [
+        "navigation.docs-sidebar"
+      ]
+    },
+    {
+      "route": "/help/reference/attio-101",
+      "viewportWidth": 768,
+      "docHeightPx": 5631,
+      "desktopRegionsHiddenAtThisWidth": [
+        "navigation.docs-sidebar"
+      ]
+    },
+    {
+      "route": "/architecture",
+      "viewportWidth": 768,
+      "docHeightPx": 23620,
+      "desktopRegionsHiddenAtThisWidth": []
+    },
+    {
       "route": "/apps/chatgpt",
       "viewportWidth": 768,
       "docHeightPx": 4784,
@@ -1746,6 +2304,54 @@
       "desktopRegionsHiddenAtThisWidth": []
     },
     {
+      "route": "/blog",
+      "viewportWidth": 390,
+      "docHeightPx": 10025,
+      "desktopRegionsHiddenAtThisWidth": []
+    },
+    {
+      "route": "/engineering/blog",
+      "viewportWidth": 390,
+      "docHeightPx": 6038,
+      "desktopRegionsHiddenAtThisWidth": []
+    },
+    {
+      "route": "/changelog/2026",
+      "viewportWidth": 390,
+      "docHeightPx": 10185,
+      "desktopRegionsHiddenAtThisWidth": []
+    },
+    {
+      "route": "/help",
+      "viewportWidth": 390,
+      "docHeightPx": 2995,
+      "desktopRegionsHiddenAtThisWidth": [
+        "navigation.docs-sidebar"
+      ]
+    },
+    {
+      "route": "/help/academy",
+      "viewportWidth": 390,
+      "docHeightPx": 3521,
+      "desktopRegionsHiddenAtThisWidth": [
+        "navigation.docs-sidebar"
+      ]
+    },
+    {
+      "route": "/help/reference/attio-101",
+      "viewportWidth": 390,
+      "docHeightPx": 4771,
+      "desktopRegionsHiddenAtThisWidth": [
+        "navigation.docs-sidebar"
+      ]
+    },
+    {
+      "route": "/architecture",
+      "viewportWidth": 390,
+      "docHeightPx": 24399,
+      "desktopRegionsHiddenAtThisWidth": []
+    },
+    {
       "route": "/apps/chatgpt",
       "viewportWidth": 390,
       "docHeightPx": 5726,
@@ -1764,8 +2370,44 @@
       "desktopRegionsHiddenAtThisWidth": []
     }
   ],
-  "wrapperWhitelist": [],
-  "wrapperWhitelistNote": "Empty: after semantic decomposition no HERO exceeds 1800px and no in-flow section exceeds 50% of its page (contact-split is skipped: fewer than 3 in-flow sections).",
+  "wrapperWhitelist": [
+    {
+      "route": "/architecture",
+      "section": "hero.scroll-typewriter",
+      "maxHeightPx": 4600,
+      "reviewedBy": "design-repo extraction agent (agent attestation, not a human sign-off)",
+      "justification": "Scroll-driven typewriter opener: one pinned 100svh stage plus a 300svh scroll runway (Sections.jsx ArchHero). The visible composition is a single viewport; the height is scroll distance, not stacked content, and the source page measures the same (spec T8 docH 23972)."
+    },
+    {
+      "route": "/blog",
+      "section": "editorial.article-index",
+      "maxHeightPx": 5200,
+      "reviewedBy": "design-repo extraction agent (agent attestation, not a human sign-off)",
+      "justification": "One uniform index: the section heading, a filter rail and 35 identical article rows. The rows are repeated items of a single list, not separate content blocks; the page has only two in-flow sections (opener + index), so the share rule would skip it silently."
+    },
+    {
+      "route": "/changelog/2026",
+      "section": "editorial.changelog-entries",
+      "maxHeightPx": 6700,
+      "reviewedBy": "design-repo extraction agent (agent attestation, not a human sign-off)",
+      "justification": "One chronological list of 55 identical fixed-height (108px) entry rows. Entries are repeated items of a single list, not separate content blocks; the page has only two in-flow sections (intro + list), so the share rule would skip it silently."
+    },
+    {
+      "route": "/help/academy",
+      "section": "listing.course-grid",
+      "maxHeightPx": 1400,
+      "reviewedBy": "design-repo extraction agent (agent attestation, not a human sign-off)",
+      "justification": "A single 2-column grid of five course cards under the page header; the grid is the page body. Two in-flow sections, so the share rule would skip it silently."
+    },
+    {
+      "route": "/help/reference/attio-101",
+      "section": "listing.lesson-list",
+      "maxHeightPx": 2400,
+      "reviewedBy": "design-repo extraction agent (agent attestation, not a human sign-off)",
+      "justification": "A single timeline of ten numbered lessons under the page header; each lesson is a repeated row of one list. Two in-flow sections, so the share rule would skip it silently."
+    }
+  ],
+  "wrapperWhitelistNote": "Five reviewed entries, all agent attestation (no human has reviewed them). One is the architecture page's scroll-typewriter hero (a pinned stage plus scroll runway, still warns). Four are the dominant uniform lists of short pages (/blog, /changelog/2026, /help/academy, /help/reference/...): those pages have fewer than three in-flow sections so the share rule skips them, and the entries record that decision explicitly instead of leaving it implicit. Everything else passes after semantic decomposition.",
   "cloneParity": {
     "kind": "geometry parity (section wrapper box heights, live vs clone, same viewport), from the pixel-audit dumps; homepage only",
     "pixelParity": "NOT MEASURED: no live-site screenshots were captured for a pixel comparison, so no pixel-parity number is claimed",
@@ -2241,6 +2883,12 @@
       }
     ]
   },
+  "cloneBuild": {
+    "command": "npm ci --prefer-offline && vite build (isolated temp copy of src/, public/, index.html, configs, package-lock.json; node_modules and dist/ excluded)",
+    "npmCiExit": 0,
+    "buildExit": 0,
+    "note": "build succeeds with a >500kB chunk-size warning only"
+  },
   "groundworkChecks": [
     {
       "claim": "CLONE_SPEC M2: hero badge comet loop ~3.65s, ~300ms turns",
@@ -2261,7 +2909,7 @@
     {
       "claim": "Plan card radius 20px (spec text said 24)",
       "verdict": "holds",
-      "evidence": "tailwind.config.cjs:263-263"
+      "evidence": "tailwind.config.cjs:295-295"
     },
     {
       "claim": "Platform showcase scroll-spy at 45% of the viewport (spec M6 only said 'while in view')",
@@ -2292,9 +2940,9 @@
     },
     {
       "claim": "CLONE_SPEC_PAGES covers /blog, /engineering/blog, /changelog, /architecture, /help x3",
-      "verdict": "not mounted at extraction",
-      "current": "no route in src/App.jsx ROUTES; recorded in templates/pending-routes.json",
-      "evidence": "src/App.jsx:32-52"
+      "verdict": "mounted since the start-of-extraction snapshot",
+      "current": "all of them are mounted in src/App.jsx ROUTES ('/changelog' redirects to '/changelog/2026'); extracted as the templates editorial-listing, changelog-year, help-docs and architecture. The 12 /platform/* routes are still not mounted and stay in templates/pending-routes.json.",
+      "evidence": "src/App.jsx:44-51"
     },
     {
       "claim": "Homepage section wrapper geometry (CLONE_SPEC section heights 1207/194/6479/1097/4517/760/937/930/417/685)",

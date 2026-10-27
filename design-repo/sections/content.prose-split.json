@@ -1,0 +1,252 @@
+{
+  "id": "content.prose-split",
+  "title": "Prose split",
+  "status": "measured",
+  "source": {
+    "id": "src:Sections#export-function-Box",
+    "file": "src/components/architecture/Sections.jsx",
+    "tag": "export function Box(",
+    "lines": "17-23",
+    "citation": "src/components/architecture/Sections.jsx:17-23",
+    "alsoImplementedBy": [
+      {
+        "file": "src/components/architecture/FiveReasons.jsx",
+        "tag": "export default function FiveReasons(",
+        "lines": "10-78",
+        "citation": "src/components/architecture/FiveReasons.jsx:10-78"
+      }
+    ]
+  },
+  "semantic": {
+    "id": "content.prose-split",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
+  "purpose": "One body block of a long-form chapter: two-column grid with a label or serif heading on one side and paragraphs on the other, optionally a pull quote, a figure, a sticky statement, a bullet list or a numbered reasons list.",
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "label": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 5,
+        "x-maxWordsEvidence": "measured 4 words"
+      },
+      "heading": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 22,
+        "x-maxWordsEvidence": "measured headingWordsMax=17 for content.prose-split at 1440px"
+      },
+      "paragraphs": {
+        "type": "array",
+        "minItems": 0,
+        "maxItems": 6,
+        "items": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 87,
+          "x-maxWordsEvidence": "measured paragraphWordsMax=69 for content.prose-split at 1440px"
+        }
+      },
+      "pullQuote": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 38,
+        "x-maxWordsEvidence": "measured 30 words"
+      },
+      "bullets": {
+        "type": "array",
+        "minItems": 0,
+        "maxItems": 6,
+        "items": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 25,
+          "x-maxWordsEvidence": "measured 20 words"
+        }
+      },
+      "figure": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "media": {
+            "$ref": "#/definitions/media",
+            "x-assetRoles": [
+              "illustration.reference-art",
+              "illustration.generated-abstract",
+              "illustration.decorative-pattern",
+              "product.reference-mock",
+              "product.generated-visual"
+            ]
+          },
+          "caption": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 18,
+            "x-maxWordsEvidence": "measured 14 words"
+          }
+        },
+        "required": [
+          "media",
+          "caption"
+        ]
+      },
+      "statement": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "title": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 25,
+            "x-maxWordsEvidence": "measured 20 words"
+          },
+          "paragraphs": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 4,
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 87,
+              "x-maxWordsEvidence": "measured paragraphWordsMax=69 for content.prose-split at 1440px"
+            }
+          }
+        },
+        "required": [
+          "title",
+          "paragraphs"
+        ]
+      },
+      "reasons": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "label": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 5,
+            "x-maxWordsEvidence": "measured 4 words"
+          },
+          "items": {
+            "type": "array",
+            "minItems": 3,
+            "maxItems": 5,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "title": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxWords": 8,
+                  "x-maxWordsEvidence": "measured 6 words"
+                },
+                "body": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxWords": 38,
+                  "x-maxWordsEvidence": "measured 30 words"
+                }
+              },
+              "required": [
+                "title",
+                "body"
+              ]
+            }
+          }
+        },
+        "required": [
+          "label",
+          "items"
+        ]
+      }
+    },
+    "required": []
+  },
+  "constraints": {
+    "repeatable": true,
+    "maxPerPage": 12
+  },
+  "motion": {
+    "allowedPatterns": [
+      "static",
+      "hover-micro"
+    ],
+    "reducedMotionFallback": "instant-state-change",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "stack",
+        "detail": "two columns stack; sticky statement unpins."
+      }
+    ]
+  },
+  "assetSlots": [
+    {
+      "field": ".figure.media",
+      "assetRoles": [
+        "illustration.reference-art",
+        "illustration.generated-abstract",
+        "illustration.decorative-pattern",
+        "product.reference-mock",
+        "product.generated-visual"
+      ]
+    }
+  ],
+  "generatedAssetRoles": [
+    "copy.original",
+    "illustration.decorative-pattern",
+    "illustration.generated-abstract",
+    "product.generated-visual",
+    "url.placeholder"
+  ],
+  "composes": [
+    "component.mini-mock"
+  ],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/architecture",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 556.8
+      },
+      {
+        "route": "/architecture",
+        "variant": null,
+        "instance": 1,
+        "heightPx": 2706.2
+      },
+      {
+        "route": "/architecture",
+        "variant": null,
+        "instance": 2,
+        "heightPx": 1055.8
+      },
+      {
+        "route": "/architecture",
+        "variant": null,
+        "instance": 3,
+        "heightPx": 1005.6
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/architecture",
+      "variant": null
+    }
+  ]
+}

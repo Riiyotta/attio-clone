@@ -1,0 +1,94 @@
+{
+  "id": "content.lit-statement",
+  "title": "Lit statement (dark)",
+  "status": "measured",
+  "source": {
+    "id": "src:Architecture#PROBLEM-label-Bullet",
+    "file": "src/pages/Architecture.jsx",
+    "tag": "{PROBLEM.label}</Bullet>",
+    "lines": "57-57",
+    "citation": "src/pages/Architecture.jsx:57-57"
+  },
+  "semantic": {
+    "id": "content.lit-statement",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
+  "purpose": "Full-viewport dark statement band: label, a sans statement and a large serif line whose words light up as they scroll past.",
+  "themes": [
+    "dark"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "label": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 4,
+        "x-maxWordsEvidence": "measured 3 words"
+      },
+      "statement": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 43,
+        "x-maxWordsEvidence": "measured paragraphWordsMax=34 for content.lit-statement at 1440px"
+      },
+      "big": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 10,
+        "x-maxWordsEvidence": "measured 8 words"
+      }
+    },
+    "required": [
+      "label",
+      "statement",
+      "big"
+    ]
+  },
+  "constraints": {
+    "maxPerPage": 2
+  },
+  "motion": {
+    "allowedPatterns": [
+      "scroll-lit-words"
+    ],
+    "reducedMotionFallback": "static-final-state",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "resize-type",
+        "detail": "serif 80 -> 40."
+      }
+    ]
+  },
+  "assetSlots": [],
+  "generatedAssetRoles": [
+    "copy.original",
+    "url.placeholder"
+  ],
+  "composes": [],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/architecture",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 900
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/architecture",
+      "variant": null
+    }
+  ]
+}

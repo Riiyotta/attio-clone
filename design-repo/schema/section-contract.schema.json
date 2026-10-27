@@ -228,6 +228,10 @@
               "drawer-slide",
               "dialog-scale",
               "lightbox-fade",
+              "grid-reveal-in-view",
+              "scroll-typewriter",
+              "scroll-lit-words",
+              "canvas-field",
               "form-feedback"
             ]
           }

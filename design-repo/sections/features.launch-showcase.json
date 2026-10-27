@@ -1,0 +1,173 @@
+{
+  "id": "features.launch-showcase",
+  "title": "Launch showcase",
+  "status": "measured",
+  "source": {
+    "id": "src:Architecture#LAUNCH-features-map-f-i",
+    "file": "src/pages/Architecture.jsx",
+    "tag": "{LAUNCH.features.map((f, i) => (",
+    "lines": "124-124",
+    "citation": "src/pages/Architecture.jsx:124-124"
+  },
+  "semantic": {
+    "id": "features.launch-showcase",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "purpose": "What ships: alternating rows of a diagram and a serif feature title with mono overline and paragraphs, plus a beta row on a tinted band.",
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "features": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 4,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "title": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 4,
+              "x-maxWordsEvidence": "measured headingWordsMax=3 for features.launch-showcase at 1440px"
+            },
+            "overline": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 8,
+              "x-maxWordsEvidence": "measured 6 words"
+            },
+            "paragraphs": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 4,
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxWords": 53,
+                "x-maxWordsEvidence": "measured paragraphWordsMax=42 for features.launch-showcase at 1440px"
+              }
+            },
+            "diagram": {
+              "$ref": "#/definitions/media",
+              "x-assetRoles": [
+                "illustration.reference-art",
+                "illustration.generated-abstract",
+                "illustration.decorative-pattern",
+                "product.reference-mock",
+                "product.generated-visual"
+              ]
+            }
+          },
+          "required": [
+            "title",
+            "overline",
+            "paragraphs",
+            "diagram"
+          ]
+        },
+        "x-countEvidence": "3 feature rows"
+      },
+      "beta": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "title": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 5,
+            "x-maxWordsEvidence": "measured 4 words"
+          },
+          "overline": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 8,
+            "x-maxWordsEvidence": "measured 6 words"
+          },
+          "paragraphs": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 3,
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 53,
+              "x-maxWordsEvidence": "measured paragraphWordsMax=42 for features.launch-showcase at 1440px"
+            }
+          }
+        },
+        "required": [
+          "title",
+          "overline",
+          "paragraphs"
+        ]
+      }
+    },
+    "required": [
+      "features"
+    ]
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "static"
+    ],
+    "reducedMotionFallback": "none-needed",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "stack",
+        "detail": "diagram above text; alternation dropped."
+      }
+    ]
+  },
+  "assetSlots": [
+    {
+      "field": ".features[].diagram",
+      "assetRoles": [
+        "illustration.reference-art",
+        "illustration.generated-abstract",
+        "illustration.decorative-pattern",
+        "product.reference-mock",
+        "product.generated-visual"
+      ]
+    }
+  ],
+  "generatedAssetRoles": [
+    "copy.original",
+    "illustration.decorative-pattern",
+    "illustration.generated-abstract",
+    "product.generated-visual",
+    "url.placeholder"
+  ],
+  "composes": [],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/architecture",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 3206.8
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/architecture",
+      "variant": null
+    }
+  ]
+}

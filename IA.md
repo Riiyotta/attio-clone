@@ -1,7 +1,7 @@
 # Corvale (attio.com design clone): information architecture
 
 Source: Design-faithful clone of attio.com's nav-bar scope (React + Vite + Tailwind, react-router). Brand, copy and artwork are invented placeholders.
-Status: **mid-build: 16 of 32 routes (14 of 21 templates) mounted and rendering** · production approved: **false**
+Status: **mid-build: 20 of 32 routes (18 of 21 templates) mounted and rendering; the 12 /platform/* routes are not mounted** · production approved: **false**
 32 routes · 21 templates · 121 unique sections
 
 > Generated from `ia.json` by `build.mjs`. Edit the JSON, not this file.
@@ -88,8 +88,8 @@ component library or stays local to its page.
 | `features.uc-band` | FEATURES | 1 | 5 | _not yet built_ | Legacy platform template: ask and workflows. |
 | `features.ask-intelligence` | FEATURES | 1 | 5 | _not yet built_ | Legacy platform template: ask only. |
 | `features.agent-columns` | FEATURES | 1 | 5 | _not yet built_ | Legacy platform template: workflows only. |
-| `shell.docs-header` | SHELL | 3 | 3 | _not yet built_ | All three help routes. |
-| `shell.docs-sidebar` | SHELL | 3 | 3 | _not yet built_ | All three help routes. |
+| `shell.docs-header` | SHELL | 3 | 3 | `help/DocsShell.jsx (docs bar below lg)` | All three help routes. |
+| `shell.docs-sidebar` | SHELL | 3 | 3 | `help/DocsShell.jsx (aside + SidebarNav)` | All three help routes. |
 | `shell.site-footer-light` | SHELL | 3 | 3 | `SiteFooter.jsx (variant="light")` | All three help routes. |
 | `proof.quote-reveal` | PROOF | 3 | 3 | `marketing/Blocks.jsx > QuoteReveal` | Customers, app partners and creator partners. |
 | `wayfinding.partner-cross-links` | WAYFINDING | 3 | 3 | `marketing/Blocks.jsx > PartnerCrossLinks` | The three partner pages. |
@@ -99,10 +99,10 @@ component library or stays local to its page.
 | `listing.related-apps` | LISTING | 1 | 3 | `pages/AppDetail.jsx (inline) + apps/AppCard.jsx` | The app detail template (three app routes). |
 | `wayfinding.app-breadcrumb` | WAYFINDING | 1 | 3 | `pages/AppDetail.jsx (inline)` | The app detail template (three app routes). |
 | `shell.site-header-dark` | SHELL | 2 | 2 | `SiteHeader.jsx (forceDark, via PageShell headerDark)` | The engineering blog and the developers platform page only. |
-| `hero.docs-page-head` | HERO | 2 | 2 | _not yet built_ | Help academy and the help reference guide. |
+| `hero.docs-page-head` | HERO | 2 | 2 | `help/DocsShell.jsx > Crumbs + pages/help/HelpAcademy.jsx, HelpReference.jsx` | Help academy and the help reference guide. |
 | `proof.logo-wall` | PROOF | 2 | 2 | `marketing/Blocks.jsx > LogoGrid` | Pricing and customers. |
 | `listing.article-list` | LISTING | 2 | 2 | `blog/Listing.jsx > LatestArticles` | Blog (light) and engineering blog (dark). |
-| `shell.site-header-bannerless` | SHELL | 1 | 1 | _not yet built_ | The architecture page only. |
+| `shell.site-header-bannerless` | SHELL | 1 | 1 | `SiteHeader.jsx (via PageShell; renders 68px tall without the banner on /architecture)` | The architecture page only. |
 | `hero.home-scroll-scene` | HERO | 1 | 1 | `Hero.jsx` | Homepage only. |
 | `hero.pricing-plans` | HERO | 1 | 1 | `pricing/PricingHero.jsx` | Pricing only. |
 | `hero.page-hero` | HERO | 1 | 1 | `marketing/Blocks.jsx > PageHero` | Customers only (other long-form pages use their own hero variants). |
@@ -116,8 +116,8 @@ component library or stays local to its page.
 | `hero.blog-featured-post` | HERO | 1 | 1 | `blog/Listing.jsx > FeaturedPost` | The blog only. |
 | `hero.engineering-ascii-hero` | HERO | 1 | 1 | `blog/Engineering.jsx > EngHero` | The engineering blog only. |
 | `hero.changelog-hero` | HERO | 1 | 1 | `pages/ChangelogYear.jsx (inline) + forms/Fields.jsx > SubscribeForm` | Changelog only. |
-| `hero.architecture-typewriter` | HERO | 1 | 1 | _not yet built_ | Architecture only. |
-| `hero.help-landing` | HERO | 1 | 1 | _not yet built_ | Help landing only. |
+| `hero.architecture-typewriter` | HERO | 1 | 1 | `architecture/Sections.jsx > ArchHero` | Architecture only. |
+| `hero.help-landing` | HERO | 1 | 1 | `pages/help/HelpHome.jsx` | Help landing only. |
 | `hero.developer-blueprint` | HERO | 1 | 1 | _not yet built_ | Developers only. |
 | `proof.program-partners` | PROOF | 1 | 1 | `startups/Sections.jsx > ProgramPartners` | Startups only. |
 | `proof.quote-curtain` | PROOF | 1 | 1 | `UniversalContext.jsx > QuoteReveal (internal)` | Homepage only. |
@@ -147,19 +147,19 @@ component library or stays local to its page.
 | `content.values-grid` | CONTENT | 1 | 1 | `careers/Sections.jsx > Values` | Careers only. |
 | `content.engineering-heatmap` | CONTENT | 1 | 1 | `blog/Engineering.jsx > Heatmap` | The engineering blog only. |
 | `content.developer-heatmap` | CONTENT | 1 | 1 | _not yet built_ | Developers only. |
-| `content.architecture-chapter-band` | CONTENT | 1 | 1 | _not yet built_ | Architecture only (three instances introduce the page's three chapters). |
-| `content.architecture-story-body` | CONTENT | 1 | 1 | _not yet built_ | Architecture only. |
-| `content.five-reasons-index` | CONTENT | 1 | 1 | _not yet built_ | Architecture only. |
-| `content.problem-dark-scene` | CONTENT | 1 | 1 | _not yet built_ | Architecture only. |
-| `content.architecture-diagram-scene` | CONTENT | 1 | 1 | _not yet built_ | Architecture only. |
-| `content.launch-feature-blocks` | CONTENT | 1 | 1 | _not yet built_ | Architecture only. |
-| `content.help-get-started` | CONTENT | 1 | 1 | _not yet built_ | Help landing only. |
+| `content.architecture-chapter-band` | CONTENT | 1 | 1 | `architecture/Sections.jsx > Chapter` | Architecture only (three instances introduce the page's three chapters). |
+| `content.architecture-story-body` | CONTENT | 1 | 1 | `pages/Architecture.jsx (inline) + architecture/Diagrams.jsx > FlowFigure` | Architecture only. |
+| `content.five-reasons-index` | CONTENT | 1 | 1 | `architecture/FiveReasons.jsx` | Architecture only. |
+| `content.problem-dark-scene` | CONTENT | 1 | 1 | `architecture/Sections.jsx > LitWords (composed in pages/Architecture.jsx)` | Architecture only. |
+| `content.architecture-diagram-scene` | CONTENT | 1 | 1 | `architecture/Sections.jsx > DarkScene + architecture/Diagrams.jsx > RingRow` | Architecture only. |
+| `content.launch-feature-blocks` | CONTENT | 1 | 1 | `pages/Architecture.jsx (inline) + architecture/Diagrams.jsx > LaunchDiagram + architecture/Sections.jsx > CodeBand` | Architecture only. |
+| `content.help-get-started` | CONTENT | 1 | 1 | `pages/help/HelpHome.jsx (inline)` | Help landing only. |
 | `listing.changelog-preview` | LISTING | 1 | 1 | `Changelog.jsx` | Homepage only. |
 | `listing.open-positions` | LISTING | 1 | 1 | `careers/OpenPositions.jsx` | Careers only. |
 | `listing.app-directory` | LISTING | 1 | 1 | `apps/Sections.jsx > Directory` | App directory only. |
 | `listing.changelog-entries` | LISTING | 1 | 1 | `pages/ChangelogYear.jsx (inline)` | Changelog only. |
-| `listing.course-grid` | LISTING | 1 | 1 | _not yet built_ | Help academy only. |
-| `listing.lesson-list` | LISTING | 1 | 1 | _not yet built_ | Help reference guide only. |
+| `listing.course-grid` | LISTING | 1 | 1 | `pages/help/HelpAcademy.jsx (inline) + help/CourseArt.jsx` | Help academy only. |
+| `listing.lesson-list` | LISTING | 1 | 1 | `pages/help/HelpReference.jsx (inline) + help/CourseArt.jsx` | Help reference guide only. |
 | `conversion.plan-comparison-table` | CONVERSION | 1 | 1 | `pricing/ComparisonTable.jsx` | Pricing only. |
 | `conversion.avatar-wall-cta` | CONVERSION | 1 | 1 | `marketing/Blocks.jsx > CtaAvatarWall` | Customers only. |
 | `conversion.startup-apply-form` | CONVERSION | 1 | 1 | `startups/Sections.jsx > ApplyBlock` | Startups only. |
@@ -169,7 +169,7 @@ component library or stays local to its page.
 | `conversion.build-with-us` | CONVERSION | 1 | 1 | `apps/Sections.jsx > BuildWithUs` | App directory only. |
 | `conversion.home-final-cta` | CONVERSION | 1 | 1 | `FinalCta.jsx` | Homepage only. |
 | `conversion.developer-cta` | CONVERSION | 1 | 1 | _not yet built_ | Developers only. |
-| `conversion.architecture-closing-nav` | CONVERSION | 1 | 1 | _not yet built_ | Architecture only. |
+| `conversion.architecture-closing-nav` | CONVERSION | 1 | 1 | `architecture/Sections.jsx > Closing` | Architecture only. |
 | `wayfinding.year-timeline` | WAYFINDING | 1 | 1 | `pages/ChangelogYear.jsx > YearTimeline (page-local)` | Changelog only. |
 | `wayfinding.developer-apps` | WAYFINDING | 1 | 1 | _not yet built_ | Developers only. |
 
@@ -179,7 +179,7 @@ component library or stays local to its page.
 as "reusable" components up front would be speculative — keep them page-local
 until a second caller actually appears.
 
-**54 sections have no `implementedBy` yet** — not necessarily missing, just not linked to a component in this pass: `proof.quote-scroll-lit`, `features.card-marquee`, `features.integration-arc-strip`, `conversion.platform-final-cta`, `wayfinding.platform-link-grid`, `hero.platform-centered`, `hero.platform-horizon`, `hero.platform-radar`, `hero.platform-mcp-grid`, `proof.stat-headline`, `features.split-accordion`, `features.split-icons`, `features.media-grid-three`, `features.center-media`, `features.text-columns`, `features.orbit-illustration`, `features.icon-row`, `features.tagged-quad`, `features.bento-grid`, `hero.platform-ask-canvas`, `hero.platform-split-legacy`, `hero.platform-data-perspective`, `hero.platform-sequence-mock`, `features.split-accordion-legacy`, `features.legacy-card-grid-three`, `features.legacy-card-grid-quad`, `features.product-showcase-legacy`, `features.tabbed-showcase`, `features.ask-tab-carousel`, `features.uc-band`, `features.ask-intelligence`, `features.agent-columns`, `shell.docs-header`, `shell.docs-sidebar`, `hero.docs-page-head`, `shell.site-header-bannerless`, `hero.architecture-typewriter`, `hero.help-landing`, `hero.developer-blueprint`, `proof.developer-testimonial`, `features.developer-card-section`, `content.developer-heatmap`, `content.architecture-chapter-band`, `content.architecture-story-body`, `content.five-reasons-index`, `content.problem-dark-scene`, `content.architecture-diagram-scene`, `content.launch-feature-blocks`, `content.help-get-started`, `listing.course-grid`, `listing.lesson-list`, `conversion.developer-cta`, `conversion.architecture-closing-nav`, `wayfinding.developer-apps`.
+**38 sections have no `implementedBy` yet** — not necessarily missing, just not linked to a component in this pass: `proof.quote-scroll-lit`, `features.card-marquee`, `features.integration-arc-strip`, `conversion.platform-final-cta`, `wayfinding.platform-link-grid`, `hero.platform-centered`, `hero.platform-horizon`, `hero.platform-radar`, `hero.platform-mcp-grid`, `proof.stat-headline`, `features.split-accordion`, `features.split-icons`, `features.media-grid-three`, `features.center-media`, `features.text-columns`, `features.orbit-illustration`, `features.icon-row`, `features.tagged-quad`, `features.bento-grid`, `hero.platform-ask-canvas`, `hero.platform-split-legacy`, `hero.platform-data-perspective`, `hero.platform-sequence-mock`, `features.split-accordion-legacy`, `features.legacy-card-grid-three`, `features.legacy-card-grid-quad`, `features.product-showcase-legacy`, `features.tabbed-showcase`, `features.ask-tab-carousel`, `features.uc-band`, `features.ask-intelligence`, `features.agent-columns`, `hero.developer-blueprint`, `proof.developer-testimonial`, `features.developer-card-section`, `content.developer-heatmap`, `conversion.developer-cta`, `wayfinding.developer-apps`.
 
 ## Templates
 
@@ -526,15 +526,15 @@ _Page chrome outside <main>: site header variants, help docs bar/sidebar, footer
 
 **`shell.site-header-bannerless`** — Header with the announcement banner removed (nav row only), with the page hero pulled up underneath it; still toggles dark over dark scenes.
 
-· The architecture page only. · appears on 1 routes
+· The architecture page only. · appears on 1 routes · implemented by `SiteHeader.jsx (via PageShell; renders 68px tall without the banner on /architecture)`
 
 **`shell.docs-header`** — Marketing header plus, below 992px, an extra docs bar holding a breadcrumb/menu trigger for the help sidebar.
 
-· All three help routes. · appears on 3 routes
+· All three help routes. · appears on 3 routes · implemented by `help/DocsShell.jsx (docs bar below lg)`
 
 **`shell.docs-sidebar`** — Sticky left docs sidebar: compact command-K search trigger, then a masked scroll area with group headers and Radix accordion items whose carets rotate and whose nested links sit on a left guide line. Hidden below 992px.
 
-· All three help routes. · appears on 3 routes
+· All three help routes. · appears on 3 routes · implemented by `help/DocsShell.jsx (aside + SidebarNav)`
 
 **`shell.site-footer`** — Dark footer: 12-column link grid of grouped columns, then a bottom bar with legal links.
 
@@ -606,15 +606,15 @@ _The page-opening block: first thing under the header, carries the page's H1/dis
 
 **`hero.architecture-typewriter`** — Very tall scroll hero pulled up under the header: sticky full-viewport canvas field, centered serif headline typed progressively by scroll with a blinking caret, and a scroll-cue pill.
 
-· Architecture only. · appears on 1 routes
+· Architecture only. · appears on 1 routes · implemented by `architecture/Sections.jsx > ArchHero`
 
 **`hero.help-landing`** — Help landing head in the docs main column: animated conic-border announcement pill, H1, lead, large search trigger and a row of popular-topic tag buttons.
 
-· Help landing only. · appears on 1 routes
+· Help landing only. · appears on 1 routes · implemented by `pages/help/HelpHome.jsx`
 
 **`hero.docs-page-head`** — Docs page head: small slash breadcrumb, H1 and lead in the docs main column.
 
-· Help academy and the help reference guide. · appears on 2 routes
+· Help academy and the help reference guide. · appears on 2 routes · implemented by `help/DocsShell.jsx > Crumbs + pages/help/HelpAcademy.jsx, HelpReference.jsx`
 
 **`hero.platform-centered`** — Viewport-height centered platform hero: eyebrow pill, display headline, subhead, two CTAs, over route-specific original artwork (line grid with chips, agent canvas, or kanban board).
 
@@ -882,31 +882,31 @@ _Substantive editorial or company body content that is not a product pitch (deta
 
 **`content.architecture-chapter-band`** — Chapter divider band: tinted base with drifting radial-gradient blobs and a noise overlay, centered mono label and per-word serif title.
 
-· Architecture only (three instances introduce the page's three chapters). · appears on 1 routes
+· Architecture only (three instances introduce the page's three chapters). · appears on 1 routes · implemented by `architecture/Sections.jsx > Chapter`
 
 **`content.architecture-story-body`** — Two-column editorial body: mono/sans paragraphs with square bullets beside serif pull text, plus captioned chip diagrams.
 
-· Architecture only. · appears on 1 routes
+· Architecture only. · appears on 1 routes · implemented by `pages/Architecture.jsx (inline) + architecture/Diagrams.jsx > FlowFigure`
 
 **`content.five-reasons-index`** — Interactive index of five rows with oversized serif words, mono indices and hairlines that shift under the pointer.
 
-· Architecture only. · appears on 1 routes
+· Architecture only. · appears on 1 routes · implemented by `architecture/FiveReasons.jsx`
 
 **`content.problem-dark-scene`** — Dark full-height scene whose words brighten from faint to white as it scrolls.
 
-· Architecture only. · appears on 1 routes
+· Architecture only. · appears on 1 routes · implemented by `architecture/Sections.jsx > LitWords (composed in pages/Architecture.jsx)`
 
 **`content.architecture-diagram-scene`** — Ring-diagram row, then a tall sticky dark canvas stage with mono tags and pulsing dots, then numbered serif pillars with brightening words.
 
-· Architecture only. · appears on 1 routes
+· Architecture only. · appears on 1 routes · implemented by `architecture/Sections.jsx > DarkScene + architecture/Diagrams.jsx > RingRow`
 
 **`content.launch-feature-blocks`** — Four two-column feature blocks (serif heading, mono overline, paragraphs, SVG diagram), a tinted beta block and a dark code-art band.
 
-· Architecture only. · appears on 1 routes
+· Architecture only. · appears on 1 routes · implemented by `pages/Architecture.jsx (inline) + architecture/Diagrams.jsx > LaunchDiagram + architecture/Sections.jsx > CodeBand`
 
 **`content.help-get-started`** — Split block: multi-tone heading and short paragraphs on the left, numbered list of three steps with badge numbers on the right, see-all link.
 
-· Help landing only. · appears on 1 routes
+· Help landing only. · appears on 1 routes · implemented by `pages/help/HelpHome.jsx (inline)`
 
 ### LISTING
 
@@ -938,11 +938,11 @@ _Collections of many like items: directories, article/entry lists, job listings,
 
 **`listing.course-grid`** — Two-column grid of course cards: rounded media, underlined title, description, lesson/duration meta.
 
-· Help academy only. · appears on 1 routes
+· Help academy only. · appears on 1 routes · implemented by `pages/help/HelpAcademy.jsx (inline) + help/CourseArt.jsx`
 
 **`listing.lesson-list`** — Vertical list of numbered lesson rows: badge number, title/description/read-more, rounded media on the right.
 
-· Help reference guide only. · appears on 1 routes
+· Help reference guide only. · appears on 1 routes · implemented by `pages/help/HelpReference.jsx (inline) + help/CourseArt.jsx`
 
 ### CONVERSION
 
@@ -998,7 +998,7 @@ _Blocks whose job is to get the visitor to act: pricing tables, forms, CTA bands
 
 **`conversion.architecture-closing-nav`** — Sticky canvas closing stage with a serif line and a two-card mono nav linking to the sales contact page, with corner marks.
 
-· Architecture only. · appears on 1 routes
+· Architecture only. · appears on 1 routes · implemented by `architecture/Sections.jsx > Closing`
 
 ### WAYFINDING
 

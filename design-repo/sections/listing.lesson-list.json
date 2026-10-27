@@ -1,0 +1,193 @@
+{
+  "id": "listing.lesson-list",
+  "title": "Lesson list",
+  "status": "measured",
+  "source": {
+    "id": "src:HelpReference#LESSONS-map-t-d-i",
+    "file": "src/pages/help/HelpReference.jsx",
+    "tag": "{LESSONS.map(([t, d], i) => (",
+    "lines": "15-15",
+    "citation": "src/pages/help/HelpReference.jsx:15-15",
+    "variantSources": {
+      "numbered-preview": {
+        "file": "src/pages/help/HelpHome.jsx",
+        "tag": "{LESSONS.slice(0, 3).map(([t, d], i) => (",
+        "lines": "73-73",
+        "citation": "src/pages/help/HelpHome.jsx:73-73"
+      },
+      "timeline": {
+        "file": "src/pages/help/HelpReference.jsx",
+        "tag": "{LESSONS.map(([t, d], i) => (",
+        "lines": "15-15",
+        "citation": "src/pages/help/HelpReference.jsx:15-15"
+      }
+    }
+  },
+  "semantic": {
+    "id": "listing.lesson-list",
+    "category": "LISTING"
+  },
+  "retrievalEligible": true,
+  "purpose": "Ordered lessons: a three-item numbered preview with a heading and browse link (help home) or the full lesson timeline (reference).",
+  "themes": [
+    "light"
+  ],
+  "variants": [
+    "numbered-preview",
+    "timeline"
+  ],
+  "variantRequirements": {
+    "numbered-preview": [
+      "heading"
+    ]
+  },
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "heading": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "lead": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 4,
+            "x-maxWordsEvidence": "measured 3 words"
+          },
+          "continuation": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 5,
+            "x-maxWordsEvidence": "measured 4 words"
+          },
+          "intro": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 13,
+            "x-maxWordsEvidence": "measured 10 words"
+          }
+        },
+        "required": [
+          "lead",
+          "continuation",
+          "intro"
+        ]
+      },
+      "lessons": {
+        "type": "array",
+        "minItems": 3,
+        "maxItems": 12,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "title": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 8,
+              "x-maxWordsEvidence": "measured 6 words"
+            },
+            "description": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 14,
+              "x-maxWordsEvidence": "measured paragraphWordsMax=11 for listing.lesson-list at 1440px"
+            },
+            "href": {
+              "$ref": "#/definitions/url"
+            },
+            "art": {
+              "$ref": "#/definitions/media",
+              "x-assetRoles": [
+                "illustration.reference-art",
+                "illustration.generated-abstract",
+                "illustration.decorative-pattern"
+              ]
+            }
+          },
+          "required": [
+            "title",
+            "description",
+            "href"
+          ]
+        },
+        "x-countEvidence": "3 (preview) / 10 (reference)"
+      },
+      "browseLink": {
+        "$ref": "#/definitions/link"
+      }
+    },
+    "required": [
+      "lessons"
+    ]
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "hover-micro"
+    ],
+    "reducedMotionFallback": "instant-state-change",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "stack",
+        "detail": "heading above the list."
+      }
+    ]
+  },
+  "assetSlots": [
+    {
+      "field": ".lessons[].art",
+      "assetRoles": [
+        "illustration.reference-art",
+        "illustration.generated-abstract",
+        "illustration.decorative-pattern"
+      ]
+    }
+  ],
+  "generatedAssetRoles": [
+    "copy.original",
+    "illustration.decorative-pattern",
+    "illustration.generated-abstract",
+    "url.placeholder"
+  ],
+  "composes": [
+    "primitive.overline"
+  ],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/help",
+        "variant": "numbered-preview",
+        "instance": 0,
+        "heightPx": 349
+      },
+      {
+        "route": "/help/reference/attio-101",
+        "variant": "timeline",
+        "instance": 0,
+        "heightPx": 2195
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/help",
+      "variant": "numbered-preview"
+    },
+    {
+      "route": "/help/reference/attio-101",
+      "variant": "timeline"
+    }
+  ],
+  "notes": "The reference timeline is 64.9% of its page; that page has two in-flow sections (sidebar is out of flow), so the share gate skips it."
+}

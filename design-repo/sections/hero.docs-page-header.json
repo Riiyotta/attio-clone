@@ -1,0 +1,127 @@
+{
+  "id": "hero.docs-page-header",
+  "title": "Docs page header",
+  "status": "measured",
+  "source": {
+    "id": "src:DocsShell#export-function-Crumbs",
+    "file": "src/components/help/DocsShell.jsx",
+    "tag": "export function Crumbs(",
+    "lines": "80-97",
+    "citation": "src/components/help/DocsShell.jsx:80-97",
+    "alsoImplementedBy": [
+      {
+        "file": "src/pages/help/HelpAcademy.jsx",
+        "tag": "Video courses</h1>",
+        "lines": "12-12",
+        "citation": "src/pages/help/HelpAcademy.jsx:12-12"
+      },
+      {
+        "file": "src/pages/help/HelpReference.jsx",
+        "tag": "Basics 101</h1>",
+        "lines": "12-12",
+        "citation": "src/pages/help/HelpReference.jsx:12-12"
+      }
+    ]
+  },
+  "semantic": {
+    "id": "hero.docs-page-header",
+    "category": "HERO"
+  },
+  "retrievalEligible": true,
+  "purpose": "Docs page opener: breadcrumb trail, title and one-paragraph lead.",
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "crumbs": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 3,
+        "items": {
+          "$ref": "#/definitions/link"
+        }
+      },
+      "current": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 4,
+        "x-maxWordsEvidence": "measured 3 words"
+      },
+      "title": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 5,
+        "x-maxWordsEvidence": "titles c10-c13"
+      },
+      "lead": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 33,
+        "x-maxWordsEvidence": "leads c64-c140"
+      }
+    },
+    "required": [
+      "crumbs",
+      "current",
+      "title",
+      "lead"
+    ]
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "static"
+    ],
+    "reducedMotionFallback": "none-needed",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "resize-type",
+        "detail": "title 56/60 -> 40/44."
+      }
+    ]
+  },
+  "assetSlots": [],
+  "generatedAssetRoles": [
+    "copy.original",
+    "url.placeholder"
+  ],
+  "composes": [],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/help/academy",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 200
+      },
+      {
+        "route": "/help/reference/attio-101",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 176
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/help/academy",
+      "variant": null
+    },
+    {
+      "route": "/help/reference/attio-101",
+      "variant": null
+    }
+  ]
+}

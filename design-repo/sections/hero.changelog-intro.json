@@ -1,0 +1,153 @@
+{
+  "id": "hero.changelog-intro",
+  "title": "Changelog intro",
+  "status": "measured",
+  "source": {
+    "id": "src:ChangelogYear#Ship-notes-h1",
+    "file": "src/pages/ChangelogYear.jsx",
+    "tag": "Ship notes</h1>",
+    "lines": "63-63",
+    "citation": "src/pages/ChangelogYear.jsx:63-63"
+  },
+  "semantic": {
+    "id": "hero.changelog-intro",
+    "category": "HERO"
+  },
+  "retrievalEligible": true,
+  "purpose": "Changelog opener: breadcrumb with update count, centered title, lead, inline subscribe form and a year timeline ruler.",
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "breadcrumb": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "parent": {
+            "$ref": "#/definitions/link"
+          },
+          "current": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 2,
+            "x-maxWordsEvidence": "measured 1 words"
+          },
+          "countLabel": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 3,
+            "x-maxWordsEvidence": "measured 2 words"
+          }
+        },
+        "required": [
+          "parent",
+          "current",
+          "countLabel"
+        ]
+      },
+      "title": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 3,
+        "x-maxWordsEvidence": "measured headingWordsMax=2 for hero.changelog-intro at 1440px"
+      },
+      "lead": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 9,
+        "x-maxWordsEvidence": "measured paragraphWordsMax=7 for hero.changelog-intro at 1440px"
+      },
+      "subscribe": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "inputPlaceholder": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 5,
+            "x-maxWordsEvidence": "measured 4 words"
+          },
+          "buttonLabel": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 3,
+            "x-maxWordsEvidence": "measured 2 words"
+          }
+        },
+        "required": [
+          "inputPlaceholder",
+          "buttonLabel"
+        ]
+      },
+      "years": {
+        "type": "array",
+        "minItems": 2,
+        "maxItems": 8,
+        "items": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 2,
+          "x-maxWordsEvidence": "measured 1 words"
+        },
+        "x-countEvidence": "6 years on the ruler"
+      }
+    },
+    "required": [
+      "breadcrumb",
+      "title",
+      "lead",
+      "subscribe",
+      "years"
+    ]
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "form-feedback",
+      "hover-micro"
+    ],
+    "reducedMotionFallback": "instant-state-change",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "reflow",
+        "detail": "ruler centred and cropped; full-bleed column."
+      }
+    ]
+  },
+  "assetSlots": [],
+  "generatedAssetRoles": [
+    "copy.original",
+    "url.placeholder"
+  ],
+  "composes": [
+    "component.subscribe-form"
+  ],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/changelog/2026",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 607
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/changelog/2026",
+      "variant": null
+    }
+  ]
+}

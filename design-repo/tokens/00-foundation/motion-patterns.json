@@ -1,6 +1,6 @@
 {
   "$description": "Closed set of motion patterns observed in the clone (values measured on the source during the clone build; see CLONE_SPEC motion M1-M17 and the pages spec P1-P24, superseded where the code documents a measured correction). Every pattern carries its fixed reduced-motion fallback.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "fallbackEnum": [
     "none-needed",
     "static-final-state",
@@ -217,6 +217,38 @@
       "reducedMotionFallback": "instant-state-change",
       "evidence": [
         "src/index.css:1262-1262"
+      ]
+    },
+    {
+      "id": "grid-reveal-in-view",
+      "description": "Heatmap squares fade in when the grid enters the viewport (random 0-600ms stagger, 300ms).",
+      "reducedMotionFallback": "static-final-state",
+      "evidence": [
+        "src/components/blog/Engineering.jsx:150-150"
+      ]
+    },
+    {
+      "id": "scroll-typewriter",
+      "description": "Scroll-driven typewriter: phrases type out across a 300svh scroll runway under a pinned 100svh stage; caret blink and scroll cue loop (P26/P27).",
+      "reducedMotionFallback": "static-final-state",
+      "evidence": [
+        "src/components/architecture/Sections.jsx:56-56"
+      ]
+    },
+    {
+      "id": "scroll-lit-words",
+      "description": "P29 scroll-lit words: each word brightens (colour 500ms ease-out, pillars 300ms) as it passes the viewport line.",
+      "reducedMotionFallback": "static-final-state",
+      "evidence": [
+        "src/index.css:1494-1494"
+      ]
+    },
+    {
+      "id": "canvas-field",
+      "description": "Animated canvas fields (dots/network/rings) drawn at 30fps while in view; drifting chapter blobs (P28).",
+      "reducedMotionFallback": "paused-first-frame",
+      "evidence": [
+        "src/components/architecture/Canvases.jsx:10-10"
       ]
     },
     {

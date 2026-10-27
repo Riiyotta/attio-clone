@@ -1,0 +1,259 @@
+{
+  "pageSpecVersion": "1.1.0",
+  "mode": "generated",
+  "template": "editorial-listing",
+  "route": "/journal",
+  "brand": {
+    "name": "Tarnwick",
+    "mark": {
+      "assetRole": "brand.placeholder-mark",
+      "assetRef": "generate:neutral rounded glyph plus the Tarnwick wordmark",
+      "alt": "Tarnwick"
+    },
+    "fictional": true
+  },
+  "meta": {
+    "title": "Journal",
+    "description": "Generated sample journal page for a fictional scheduling product."
+  },
+  "nodes": [
+    {
+      "id": "header",
+      "type": "shell.site-header",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.placeholder-mark",
+          "assetRef": "generate:neutral rounded glyph plus the Tarnwick wordmark",
+          "alt": "Tarnwick"
+        },
+        "banner": {
+          "text": "Read what changed in the autumn update",
+          "href": "https://tarnwick.example/updates"
+        },
+        "menus": [
+          {
+            "label": "Product",
+            "groups": [
+              {
+                "label": "Plan",
+                "items": [
+                  {
+                    "title": "Crew calendar",
+                    "description": "Book jobs onto open crew time",
+                    "href": "https://tarnwick.example/calendar"
+                  },
+                  {
+                    "title": "Parts tracker",
+                    "description": "Know which van carries which spare",
+                    "href": "https://tarnwick.example/parts"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "Company",
+            "groups": [
+              {
+                "label": "About",
+                "items": [
+                  {
+                    "title": "Our crews",
+                    "description": "Who builds the scheduling board",
+                    "href": "https://tarnwick.example/about"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "signIn": {
+          "label": "Log in",
+          "href": "https://app.tarnwick.example/login"
+        },
+        "primaryCta": {
+          "label": "Book a walkthrough",
+          "href": "https://tarnwick.example/demo",
+          "variant": "primary"
+        }
+      },
+      "motion": {
+        "patterns": [
+          "header-theme-swap",
+          "dropdown-panel"
+        ],
+        "reducedMotionFallback": "instant-state-change"
+      }
+    },
+    {
+      "id": "opener",
+      "type": "hero.editorial-featured",
+      "variant": "featured-post",
+      "content": {
+        "featured": {
+          "category": "Field notes",
+          "date": "Oct 02",
+          "title": "How a small crew plans a busy week",
+          "author": {
+            "name": "Rowan Vale",
+            "role": "Operations writer",
+            "fictional": true
+          },
+          "art": {
+            "assetRole": "illustration.generated-abstract",
+            "assetRef": "generate:soft geometric landscape in sage and sand tones",
+            "alt": "Abstract landscape artwork"
+          },
+          "href": "/journal/small-crew-busy-week"
+        },
+        "secondary": [
+          {
+            "category": "Guides",
+            "date": "Sep 30",
+            "title": "Reading your utilisation report",
+            "href": "/journal/utilisation-report"
+          },
+          {
+            "category": "Company",
+            "date": "Sep 26",
+            "title": "Our autumn release in brief",
+            "href": "/journal/autumn-release"
+          },
+          {
+            "category": "Field notes",
+            "date": "Sep 22",
+            "title": "Keeping spares organised on the road",
+            "href": "/journal/organised-spares"
+          }
+        ]
+      },
+      "motion": {
+        "patterns": [
+          "hover-micro"
+        ],
+        "reducedMotionFallback": "paused-first-frame"
+      }
+    },
+    {
+      "id": "index",
+      "type": "editorial.article-index",
+      "content": {
+        "heading": "Latest from the journal",
+        "filters": [
+          {
+            "label": "All articles",
+            "count": "6"
+          },
+          {
+            "label": "Field notes",
+            "count": "2"
+          },
+          {
+            "label": "Guides",
+            "count": "2"
+          },
+          {
+            "label": "Company",
+            "count": "2"
+          }
+        ],
+        "rows": [
+          {
+            "category": "Field notes",
+            "title": "Why the crew calendar double-books on Mondays",
+            "excerpt": "We traced the clash to a rounding rule in how shift lengths were stored, and changed it.",
+            "date": "Sep 30",
+            "href": "/journal/why-0"
+          },
+          {
+            "category": "Field notes",
+            "title": "Three small changes that cut van restocking time",
+            "excerpt": "Counting spares at the depot instead of on the road saved a surprising amount of driving.",
+            "date": "Sep 24",
+            "href": "/journal/three-1"
+          },
+          {
+            "category": "Company",
+            "title": "Meet the people building the parts tracker",
+            "excerpt": "A short tour of the team, the workshop and the tools we reach for every day.",
+            "date": "Sep 17",
+            "href": "/journal/meet-2"
+          },
+          {
+            "category": "Guides",
+            "title": "A gentle guide to naming your job types",
+            "excerpt": "Clear names make reports readable. Here is a simple scheme that has held up for us.",
+            "date": "Sep 09",
+            "href": "/journal/a-3"
+          },
+          {
+            "category": "Guides",
+            "title": "Setting up your first week of bookings",
+            "excerpt": "Start with two crews, one calendar and a handful of recurring visits, then grow from there.",
+            "date": "Aug 28",
+            "href": "/journal/setting-4"
+          },
+          {
+            "category": "Company",
+            "title": "What we learned from a year of weekly releases",
+            "excerpt": "Shipping small and often changed how we plan, test and talk to the people who use the product.",
+            "date": "Aug 19",
+            "href": "/journal/what-5"
+          }
+        ]
+      },
+      "motion": {
+        "patterns": [
+          "hover-micro"
+        ],
+        "reducedMotionFallback": "instant-state-change"
+      }
+    },
+    {
+      "id": "footer",
+      "type": "shell.site-footer",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.placeholder-mark",
+          "assetRef": "generate:neutral rounded glyph plus the Tarnwick wordmark",
+          "alt": "Tarnwick"
+        },
+        "columns": [
+          {
+            "heading": "Product",
+            "links": [
+              {
+                "label": "Crew calendar",
+                "href": "https://tarnwick.example/calendar"
+              },
+              {
+                "label": "Parts tracker",
+                "href": "https://tarnwick.example/parts"
+              }
+            ]
+          },
+          {
+            "heading": "Company",
+            "links": [
+              {
+                "label": "About us",
+                "href": "https://tarnwick.example/about"
+              },
+              {
+                "label": "Jobs board",
+                "href": "https://tarnwick.example/jobs"
+              }
+            ]
+          }
+        ],
+        "legal": "© 2026 Tarnwick, a fictional company. Placeholder legal line for a generated page."
+      },
+      "motion": {
+        "patterns": [
+          "hover-micro"
+        ],
+        "reducedMotionFallback": "instant-state-change"
+      }
+    }
+  ]
+}

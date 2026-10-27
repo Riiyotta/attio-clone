@@ -3,177 +3,142 @@
   "tokens": {
     "space.0": {
       "value": "0px",
-      "usageCount": 28,
       "evidence": "histogram of spacing utilities across src/**/*.jsx (padding/margin/gap, arbitrary [Npx] and 4px-unit scale); count >= 5 kept"
     },
     "space.2": {
       "value": "2px",
-      "usageCount": 35,
       "evidence": "histogram of spacing utilities across src/**/*.jsx (padding/margin/gap, arbitrary [Npx] and 4px-unit scale); count >= 5 kept"
     },
     "space.3": {
       "value": "3px",
-      "usageCount": 9,
       "evidence": "histogram of spacing utilities across src/**/*.jsx (padding/margin/gap, arbitrary [Npx] and 4px-unit scale); count >= 5 kept"
     },
     "space.4": {
       "value": "4px",
-      "usageCount": 99,
       "evidence": "histogram of spacing utilities across src/**/*.jsx (padding/margin/gap, arbitrary [Npx] and 4px-unit scale); count >= 5 kept"
     },
     "space.5": {
       "value": "5px",
-      "usageCount": 5,
       "evidence": "histogram of spacing utilities across src/**/*.jsx (padding/margin/gap, arbitrary [Npx] and 4px-unit scale); count >= 5 kept"
     },
     "space.6": {
       "value": "6px",
-      "usageCount": 131,
       "evidence": "histogram of spacing utilities across src/**/*.jsx (padding/margin/gap, arbitrary [Npx] and 4px-unit scale); count >= 5 kept"
     },
     "space.7": {
       "value": "7px",
-      "usageCount": 8,
       "evidence": "histogram of spacing utilities across src/**/*.jsx (padding/margin/gap, arbitrary [Npx] and 4px-unit scale); count >= 5 kept"
     },
     "space.8": {
       "value": "8px",
-      "usageCount": 175,
       "evidence": "histogram of spacing utilities across src/**/*.jsx (padding/margin/gap, arbitrary [Npx] and 4px-unit scale); count >= 5 kept"
     },
     "space.9": {
       "value": "9px",
-      "usageCount": 11,
       "evidence": "histogram of spacing utilities across src/**/*.jsx (padding/margin/gap, arbitrary [Npx] and 4px-unit scale); count >= 5 kept"
     },
     "space.10": {
       "value": "10px",
-      "usageCount": 72,
       "evidence": "histogram of spacing utilities across src/**/*.jsx (padding/margin/gap, arbitrary [Npx] and 4px-unit scale); count >= 5 kept"
     },
     "space.12": {
       "value": "12px",
-      "usageCount": 116,
       "evidence": "histogram of spacing utilities across src/**/*.jsx (padding/margin/gap, arbitrary [Npx] and 4px-unit scale); count >= 5 kept"
     },
     "space.13": {
       "value": "13px",
-      "usageCount": 9,
       "evidence": "histogram of spacing utilities across src/**/*.jsx (padding/margin/gap, arbitrary [Npx] and 4px-unit scale); count >= 5 kept"
     },
     "space.14": {
       "value": "14px",
-      "usageCount": 11,
       "evidence": "histogram of spacing utilities across src/**/*.jsx (padding/margin/gap, arbitrary [Npx] and 4px-unit scale); count >= 5 kept"
     },
     "space.16": {
       "value": "16px",
-      "usageCount": 90,
       "evidence": "histogram of spacing utilities across src/**/*.jsx (padding/margin/gap, arbitrary [Npx] and 4px-unit scale); count >= 5 kept"
     },
     "space.18": {
       "value": "18px",
-      "usageCount": 7,
       "evidence": "histogram of spacing utilities across src/**/*.jsx (padding/margin/gap, arbitrary [Npx] and 4px-unit scale); count >= 5 kept"
     },
     "space.20": {
       "value": "20px",
-      "usageCount": 54,
       "evidence": "histogram of spacing utilities across src/**/*.jsx (padding/margin/gap, arbitrary [Npx] and 4px-unit scale); count >= 5 kept"
     },
     "space.24": {
       "value": "24px",
-      "usageCount": 88,
       "evidence": "histogram of spacing utilities across src/**/*.jsx (padding/margin/gap, arbitrary [Npx] and 4px-unit scale); count >= 5 kept"
     },
     "space.28": {
       "value": "28px",
-      "usageCount": 21,
       "evidence": "histogram of spacing utilities across src/**/*.jsx (padding/margin/gap, arbitrary [Npx] and 4px-unit scale); count >= 5 kept"
     },
     "space.32": {
       "value": "32px",
-      "usageCount": 66,
       "evidence": "histogram of spacing utilities across src/**/*.jsx (padding/margin/gap, arbitrary [Npx] and 4px-unit scale); count >= 5 kept"
     },
     "space.36": {
       "value": "36px",
-      "usageCount": 7,
       "evidence": "histogram of spacing utilities across src/**/*.jsx (padding/margin/gap, arbitrary [Npx] and 4px-unit scale); count >= 5 kept"
     },
     "space.40": {
       "value": "40px",
-      "usageCount": 50,
       "evidence": "histogram of spacing utilities across src/**/*.jsx (padding/margin/gap, arbitrary [Npx] and 4px-unit scale); count >= 5 kept"
     },
     "space.48": {
       "value": "48px",
-      "usageCount": 24,
       "evidence": "histogram of spacing utilities across src/**/*.jsx (padding/margin/gap, arbitrary [Npx] and 4px-unit scale); count >= 5 kept"
     },
     "space.56": {
       "value": "56px",
-      "usageCount": 12,
       "evidence": "histogram of spacing utilities across src/**/*.jsx (padding/margin/gap, arbitrary [Npx] and 4px-unit scale); count >= 5 kept"
     },
     "space.58": {
       "value": "58px",
-      "usageCount": 6,
       "evidence": "histogram of spacing utilities across src/**/*.jsx (padding/margin/gap, arbitrary [Npx] and 4px-unit scale); count >= 5 kept"
     },
     "space.60": {
       "value": "60px",
-      "usageCount": 22,
       "evidence": "histogram of spacing utilities across src/**/*.jsx (padding/margin/gap, arbitrary [Npx] and 4px-unit scale); count >= 5 kept"
     },
     "space.64": {
       "value": "64px",
-      "usageCount": 33,
       "evidence": "histogram of spacing utilities across src/**/*.jsx (padding/margin/gap, arbitrary [Npx] and 4px-unit scale); count >= 5 kept"
     },
     "space.80": {
       "value": "80px",
-      "usageCount": 54,
       "evidence": "histogram of spacing utilities across src/**/*.jsx (padding/margin/gap, arbitrary [Npx] and 4px-unit scale); count >= 5 kept"
     },
     "space.88": {
       "value": "88px",
-      "usageCount": 10,
       "evidence": "histogram of spacing utilities across src/**/*.jsx (padding/margin/gap, arbitrary [Npx] and 4px-unit scale); count >= 5 kept"
     },
     "space.96": {
       "value": "96px",
-      "usageCount": 10,
       "evidence": "histogram of spacing utilities across src/**/*.jsx (padding/margin/gap, arbitrary [Npx] and 4px-unit scale); count >= 5 kept"
     },
     "space.100": {
       "value": "100px",
-      "usageCount": 29,
       "evidence": "histogram of spacing utilities across src/**/*.jsx (padding/margin/gap, arbitrary [Npx] and 4px-unit scale); count >= 5 kept"
     },
     "space.112": {
       "value": "112px",
-      "usageCount": 6,
       "evidence": "histogram of spacing utilities across src/**/*.jsx (padding/margin/gap, arbitrary [Npx] and 4px-unit scale); count >= 5 kept"
     },
     "space.120": {
       "value": "120px",
-      "usageCount": 24,
       "evidence": "histogram of spacing utilities across src/**/*.jsx (padding/margin/gap, arbitrary [Npx] and 4px-unit scale); count >= 5 kept"
     },
     "space.128": {
       "value": "128px",
-      "usageCount": 6,
       "evidence": "histogram of spacing utilities across src/**/*.jsx (padding/margin/gap, arbitrary [Npx] and 4px-unit scale); count >= 5 kept"
     },
     "space.152": {
       "value": "152px",
-      "usageCount": 7,
       "evidence": "histogram of spacing utilities across src/**/*.jsx (padding/margin/gap, arbitrary [Npx] and 4px-unit scale); count >= 5 kept"
     },
     "space.160": {
       "value": "160px",
-      "usageCount": 19,
       "evidence": "histogram of spacing utilities across src/**/*.jsx (padding/margin/gap, arbitrary [Npx] and 4px-unit scale); count >= 5 kept"
     }
   }

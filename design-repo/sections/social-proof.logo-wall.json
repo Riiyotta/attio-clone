@@ -26,6 +26,12 @@
         "tag": "export function ProgramPartners(",
         "lines": "154-173",
         "citation": "src/components/startups/Sections.jsx:154-173"
+      },
+      "dark-statement": {
+        "file": "src/components/architecture/Sections.jsx",
+        "tag": "export function CodeBand(",
+        "lines": "224-242",
+        "citation": "src/components/architecture/Sections.jsx:224-242"
       }
     }
   },
@@ -34,18 +40,23 @@
     "category": "SOCIAL_PROOF"
   },
   "retrievalEligible": true,
-  "purpose": "Customer/partner logo proof: a single band (home), a 6x2 grid (pricing, customers) or a headed grid with a footnote (startups program partners).",
+  "purpose": "Customer/partner logo proof: a single band (home), a 6x2 grid (pricing, customers), a headed grid with a footnote (startups program partners) or a dark statement band with four logos (architecture).",
   "themes": [
-    "light"
+    "light",
+    "dark"
   ],
   "variants": [
     "band",
     "grid",
-    "headed"
+    "headed",
+    "dark-statement"
   ],
   "variantRequirements": {
     "headed": [
       "heading"
+    ],
+    "dark-statement": [
+      "statement"
     ]
   },
   "content": {
@@ -59,8 +70,8 @@
           "lead": {
             "type": "string",
             "minLength": 1,
-            "maxWords": 7,
-            "x-maxWordsEvidence": "measured headingWordsMax=5 for social-proof.logo-wall at 1440px"
+            "maxWords": 14,
+            "x-maxWordsEvidence": "measured headingWordsMax=11 for social-proof.logo-wall at 1440px"
           },
           "continuation": {
             "type": "string",
@@ -74,9 +85,15 @@
           "continuation"
         ]
       },
+      "statement": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 14,
+        "x-maxWordsEvidence": "measured headingWordsMax=11 for social-proof.logo-wall at 1440px"
+      },
       "logos": {
         "type": "array",
-        "minItems": 6,
+        "minItems": 4,
         "maxItems": 12,
         "items": {
           "$ref": "#/definitions/media",
@@ -85,7 +102,7 @@
             "logo.fictional-company"
           ]
         },
-        "x-countEvidence": "10 (band) / 12 (grid) measured"
+        "x-countEvidence": "10 (band) / 12 (grid) / 4 (dark statement) measured"
       },
       "footnote": {
         "type": "string",
@@ -163,6 +180,12 @@
         "variant": "headed",
         "instance": 0,
         "heightPx": 698
+      },
+      {
+        "route": "/architecture",
+        "variant": "dark-statement",
+        "instance": 0,
+        "heightPx": 680
       }
     ],
     "evidence": "extraction/measured-values.json#/sectionHeights"
@@ -183,6 +206,10 @@
     {
       "route": "/startups",
       "variant": "headed"
+    },
+    {
+      "route": "/architecture",
+      "variant": "dark-statement"
     }
   ]
 }

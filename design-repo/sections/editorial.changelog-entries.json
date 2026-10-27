@@ -1,0 +1,131 @@
+{
+  "id": "editorial.changelog-entries",
+  "title": "Changelog entries",
+  "status": "measured",
+  "source": {
+    "id": "src:ChangelogYear#entries-map-e",
+    "file": "src/pages/ChangelogYear.jsx",
+    "tag": "{entries.map((e) => (",
+    "lines": "79-79",
+    "citation": "src/pages/ChangelogYear.jsx:79-79"
+  },
+  "semantic": {
+    "id": "editorial.changelog-entries",
+    "category": "EDITORIAL"
+  },
+  "retrievalEligible": true,
+  "purpose": "Chronological list of release-note rows for one year: date, title, two-line excerpt, tags with coloured glyphs, hover arrow.",
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "entries": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 60,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "date": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 4,
+              "x-maxWordsEvidence": "measured 3 words"
+            },
+            "title": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 8,
+              "x-maxWordsEvidence": "measured headingWordsMax=6 for editorial.changelog-entries at 1440px"
+            },
+            "excerpt": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 30,
+              "x-maxWordsEvidence": "measured paragraphWordsMax=24 for editorial.changelog-entries at 1440px"
+            },
+            "tags": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 3,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "New feature",
+                  "Improvement",
+                  "Mobile",
+                  "Desktop"
+                ]
+              }
+            },
+            "href": {
+              "$ref": "#/definitions/url"
+            }
+          },
+          "required": [
+            "date",
+            "title",
+            "excerpt",
+            "tags",
+            "href"
+          ]
+        },
+        "x-countEvidence": "55 entries for the measured year"
+      }
+    },
+    "required": [
+      "entries"
+    ]
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "hover-micro"
+    ],
+    "reducedMotionFallback": "instant-state-change",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "stack",
+        "detail": "date, title, excerpt, tags stack in each row."
+      }
+    ]
+  },
+  "assetSlots": [],
+  "generatedAssetRoles": [
+    "copy.original",
+    "url.placeholder"
+  ],
+  "composes": [
+    "component.hover-wash"
+  ],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/changelog/2026",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 6235
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/changelog/2026",
+      "variant": null
+    }
+  ],
+  "notes": "81.6% of /changelog/2026; the page has two in-flow sections, so the share gate skips it. One uniform list; the clone renders no month boundaries, so none are invented."
+}

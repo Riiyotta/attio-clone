@@ -73,13 +73,13 @@ export const SECTION_MAP = {
     ['listing.directory-category', '#apps > div > div > div:last-child > div', null], ['conversion.build-with-us', M(7), null],
   ] },
   '/blog': { template: 'editorial-listing', sections: [
-    ['hero.editorial-featured', M(1), 'featured-post'], ['listing.article-index', 'main > section', null],
+    ['hero.editorial-featured', M(1), 'featured-post'], ['editorial.article-index', 'main > section', null],
   ] },
   '/engineering/blog': { template: 'editorial-listing', sections: [
-    ['hero.editorial-featured', M(1), 'ascii-field'], ['listing.article-index', M(2), null], ['conversion.careers-heatmap', M(3), null],
+    ['hero.editorial-featured', M(1), 'ascii-field'], ['editorial.article-index', M(2), null], ['conversion.careers-heatmap', M(3), null],
   ] },
   '/changelog/2026': { template: 'changelog-year', sections: [
-    ['hero.changelog-intro', 'main > section', null], ['listing.changelog-entries', 'main > div', null],
+    ['hero.changelog-intro', 'main > section', null], ['editorial.changelog-entries', 'main > div', null],
   ] },
   '/help': { template: 'help-docs', sections: [
     ['navigation.docs-sidebar', 'main aside > div', null, false],

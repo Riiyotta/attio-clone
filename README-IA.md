@@ -12,7 +12,7 @@ This covers the IA files only. They document the clone's nav-bar scope: 32 route
 | `validate.mjs`, `build.mjs` | copied unchanged from the ia-builder skill | checker and generator |
 
 Extra fields in `ia.json` that the scripts ignore:
-- `status` on every template: `built` means the route is mounted in `src/App.jsx` ROUTES and renders. `in-progress` means components exist but the route isn't mounted (no template is in this state as of this pass; changelog went from planned to built during it). `planned` means it exists only in the spec.
+- `status` on every template: `built` means the route is mounted in `src/App.jsx` ROUTES and renders. `in-progress` means components exist but the route isn't mounted (no template is in this state as of this pass; changelog, architecture and the three help templates went from planned to built). `planned` means it exists only in the spec.
 - `spec` and `page` say where the structure came from and which page file renders it.
 - `routeSections` appears on the platform templates. It gives the exact section order for each route (see the caveat below).
 - `routeNote`, `redirectsTo` and `sectionNote` are notes in prose.
@@ -32,8 +32,8 @@ When routes are mounted or sections get built:
 
 - **The 3 platform templates cover 12 of 32 routes (38%), and every one of them is still planned.** These templates use 43 section ids, and 38 of those appear only on platform pages. None of the 38 is built. Five sections can come from existing code: the site header, its dark-from-load variant, the footer, the bordered logo cell grid and the inline newsletter row.
 - **Built vs planned:**
-  - Built: 14 of 21 templates, covering 16 of 32 routes (50%). 67 of 121 sections are linked to a real component through `implementedBy`.
-  - Still planned: 16 routes, namely architecture, the three help pages and all 12 platform pages.
+  - Built: 18 of 21 templates, covering 20 of 32 routes (62.5%). 83 of 121 sections are linked to a real component through `implementedBy`.
+  - Still planned: 12 routes, namely all 12 platform pages (architecture and the three help pages were mounted after the first pass).
 - **Shared vs single-use:** 20 sections are used by more than one template and 101 by only one. That 101 overstates how much is page-local. 13 platform sections belong to only one template but are reused across 2–5 routes inside it, for example the modern split accordion (5 routes), modern three-up media grid (5), legacy three-up card grid (4) and centered media (4). Build these as shared components.
 - **Chrome partition:**
   - `full`: 26 routes

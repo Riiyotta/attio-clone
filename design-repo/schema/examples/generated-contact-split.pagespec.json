@@ -1,0 +1,191 @@
+{
+  "pageSpecVersion": "1.1.0",
+  "mode": "generated",
+  "template": "contact-split",
+  "route": "/walkthrough",
+  "brand": {
+    "name": "Tarnwick",
+    "mark": {
+      "assetRole": "brand.placeholder-mark",
+      "assetRef": "generate:neutral rounded glyph plus the Tarnwick wordmark",
+      "alt": "Tarnwick"
+    },
+    "fictional": true
+  },
+  "meta": {
+    "title": "Book a walkthrough",
+    "description": "Generated sample walkthrough request page for a fictional scheduling product."
+  },
+  "nodes": [
+    {
+      "id": "header",
+      "type": "shell.site-header",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.placeholder-mark",
+          "assetRef": "generate:neutral rounded glyph plus the Tarnwick wordmark",
+          "alt": "Tarnwick"
+        },
+        "banner": {
+          "text": "Read what changed in the autumn update",
+          "href": "https://tarnwick.example/updates"
+        },
+        "menus": [
+          {
+            "label": "Product",
+            "groups": [
+              {
+                "label": "Plan",
+                "items": [
+                  {
+                    "title": "Crew calendar",
+                    "description": "Book jobs onto open crew time",
+                    "href": "https://tarnwick.example/calendar"
+                  },
+                  {
+                    "title": "Parts tracker",
+                    "description": "Know which van carries which spare",
+                    "href": "https://tarnwick.example/parts"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "Company",
+            "groups": [
+              {
+                "label": "About",
+                "items": [
+                  {
+                    "title": "Our crews",
+                    "description": "Who builds the scheduling board",
+                    "href": "https://tarnwick.example/about"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "signIn": {
+          "label": "Log in",
+          "href": "https://app.tarnwick.example/login"
+        },
+        "primaryCta": {
+          "label": "Book a walkthrough",
+          "href": "https://tarnwick.example/demo",
+          "variant": "primary"
+        }
+      },
+      "motion": {
+        "patterns": [
+          "header-theme-swap",
+          "dropdown-panel"
+        ],
+        "reducedMotionFallback": "instant-state-change"
+      }
+    },
+    {
+      "id": "form",
+      "type": "conversion.demo-request-split",
+      "content": {
+        "badge": "Walkthrough",
+        "title": "See the board",
+        "lead": "Tell us about your crew and we will arrange a short live walkthrough.",
+        "fields": [
+          {
+            "name": "firstName",
+            "label": "First name",
+            "kind": "text",
+            "placeholder": "Your first name"
+          },
+          {
+            "name": "email",
+            "label": "Work email",
+            "kind": "email",
+            "placeholder": "you@yourfirm.example",
+            "errorMessage": "Enter a valid email"
+          },
+          {
+            "name": "company",
+            "label": "Company",
+            "kind": "text",
+            "placeholder": "Your company"
+          },
+          {
+            "name": "size",
+            "label": "Crew size",
+            "kind": "select",
+            "options": [
+              "1 to 5",
+              "6 to 20",
+              "21 to 50"
+            ]
+          }
+        ],
+        "submitLabel": "Request",
+        "smallPrint": "We use your details only to arrange the walkthrough and never share them with anyone else.",
+        "testimonial": {
+          "quote": "The walkthrough took twenty minutes and answered every question our office had.",
+          "person": {
+            "name": "Marlow Teague",
+            "role": "Operations lead at a fictional firm",
+            "fictional": true
+          }
+        }
+      },
+      "motion": {
+        "patterns": [
+          "form-feedback"
+        ],
+        "reducedMotionFallback": "instant-state-change"
+      }
+    },
+    {
+      "id": "footer",
+      "type": "shell.site-footer",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.placeholder-mark",
+          "assetRef": "generate:neutral rounded glyph plus the Tarnwick wordmark",
+          "alt": "Tarnwick"
+        },
+        "columns": [
+          {
+            "heading": "Product",
+            "links": [
+              {
+                "label": "Crew calendar",
+                "href": "https://tarnwick.example/calendar"
+              },
+              {
+                "label": "Parts tracker",
+                "href": "https://tarnwick.example/parts"
+              }
+            ]
+          },
+          {
+            "heading": "Company",
+            "links": [
+              {
+                "label": "About us",
+                "href": "https://tarnwick.example/about"
+              },
+              {
+                "label": "Jobs board",
+                "href": "https://tarnwick.example/jobs"
+              }
+            ]
+          }
+        ],
+        "legal": "© 2026 Tarnwick, a fictional company. Placeholder legal line for a generated page."
+      },
+      "motion": {
+        "patterns": [
+          "hover-micro"
+        ],
+        "reducedMotionFallback": "instant-state-change"
+      }
+    }
+  ]
+}

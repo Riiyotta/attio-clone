@@ -1,0 +1,141 @@
+{
+  "id": "content.scroll-scene",
+  "title": "Scroll scene (dark)",
+  "status": "measured",
+  "source": {
+    "id": "src:Sections#export-function-DarkScene",
+    "file": "src/components/architecture/Sections.jsx",
+    "tag": "export function DarkScene(",
+    "lines": "201-219",
+    "citation": "src/components/architecture/Sections.jsx:201-219"
+  },
+  "semantic": {
+    "id": "content.scroll-scene",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
+  "purpose": "Pinned dark scene: animated network canvas with mono tags while a centered statement and 3-4 numbered pillars scroll over it, their words lighting up.",
+  "themes": [
+    "dark"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "tags": {
+        "type": "array",
+        "minItems": 2,
+        "maxItems": 8,
+        "items": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 3,
+          "x-maxWordsEvidence": "measured 2 words"
+        }
+      },
+      "statement": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 18,
+        "x-maxWordsEvidence": "measured 14 words"
+      },
+      "pillars": {
+        "type": "array",
+        "minItems": 2,
+        "maxItems": 5,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 3,
+              "x-maxWordsEvidence": "measured 2 words"
+            },
+            "text": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 22,
+              "x-maxWordsEvidence": "measured paragraphWordsMax=17 for content.scroll-scene at 1440px"
+            }
+          },
+          "required": [
+            "name",
+            "text"
+          ]
+        }
+      },
+      "field": {
+        "$ref": "#/definitions/media",
+        "x-assetRoles": [
+          "illustration.reference-art",
+          "illustration.generated-abstract",
+          "illustration.decorative-pattern"
+        ]
+      }
+    },
+    "required": [
+      "tags",
+      "statement",
+      "pillars",
+      "field"
+    ]
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "scroll-lit-words",
+      "canvas-field"
+    ],
+    "reducedMotionFallback": "paused-first-frame",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "reflow",
+        "detail": "runway 719svh (550svh at lg); pillar names 40px."
+      }
+    ]
+  },
+  "assetSlots": [
+    {
+      "field": ".field",
+      "assetRoles": [
+        "illustration.reference-art",
+        "illustration.generated-abstract",
+        "illustration.decorative-pattern"
+      ]
+    }
+  ],
+  "generatedAssetRoles": [
+    "copy.original",
+    "illustration.decorative-pattern",
+    "illustration.generated-abstract",
+    "url.placeholder"
+  ],
+  "composes": [],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/architecture",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 4950
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/architecture",
+      "variant": null
+    }
+  ]
+}

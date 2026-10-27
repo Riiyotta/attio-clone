@@ -1,6 +1,6 @@
 {
   "$description": "Rhythm/position rules JSON Schema cannot express. Each rule id is implemented with the same id in schema/semantic_validate.py; verify_all.py checks the two lists are identical.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "categories": [
     "SHELL",
     "HERO",
@@ -36,7 +36,7 @@
       "severity": "error",
       "rule": "The HERO node is the first non-shell node.",
       "exceptions": [
-        "app-detail: navigation.breadcrumb-bar precedes hero.app-header (templates.json heroAfter)."
+        "app-detail: navigation.breadcrumb-bar precedes hero.app-header; help-docs: navigation.docs-sidebar precedes the opener (templates.json heroAfter)."
       ]
     },
     {
@@ -62,6 +62,7 @@
       "severity": "warn",
       "rule": "Two adjacent non-shell nodes should not share a category.",
       "exceptions": [
+        "CONTENT runs are normal inside long-form bodies (app overview chapters, story chapters/prose/statements).",
         "FEATURES runs are normal on this site (home, app-partners, expert-partners place 2-4 capability sections in a row, separated by hairlines).",
         "PRICING: comparison-header -> comparison-group and repeated groups.",
         "LISTING: directory-header -> directory-category and repeated categories.",
@@ -99,7 +100,8 @@
         ]
       ],
       "allowedCategories": [
-        "FEATURES"
+        "FEATURES",
+        "CONTENT"
       ]
     },
     {
@@ -121,6 +123,11 @@
       "id": "GROUP_NEEDS_HEADER",
       "severity": "error",
       "rule": "pricing.comparison-group requires pricing.comparison-header before it; listing.directory-category requires listing.directory-header before it; repeated groups/categories/chapters are contiguous."
+    },
+    {
+      "id": "CHAPTER_OPENS_BODY",
+      "severity": "error",
+      "rule": "Long-form body blocks (content.prose-split, content.lit-statement, content.scroll-scene, features.launch-showcase) need a content.chapter-header somewhere before them."
     },
     {
       "id": "OVERLAY_NOT_A_NODE",

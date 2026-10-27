@@ -4,80 +4,67 @@
     "radius.2": {
       "value": "2px",
       "sourceKey": "borderRadius.2",
-      "usageCount": 11,
-      "evidence": "tailwind.config.cjs:255-255"
+      "evidence": "tailwind.config.cjs:287-287"
     },
     "radius.4": {
       "value": "4px",
       "sourceKey": "borderRadius.4",
-      "usageCount": 18,
-      "evidence": "tailwind.config.cjs:256-256"
+      "evidence": "tailwind.config.cjs:288-288"
     },
     "radius.6": {
       "value": "6px",
       "sourceKey": "borderRadius.6",
-      "usageCount": 20,
-      "evidence": "tailwind.config.cjs:257-257"
+      "evidence": "tailwind.config.cjs:289-289"
     },
     "radius.8": {
       "value": "8px",
       "sourceKey": "borderRadius.8",
-      "usageCount": 49,
-      "evidence": "tailwind.config.cjs:258-258"
+      "evidence": "tailwind.config.cjs:290-290"
     },
     "radius.10": {
       "value": "10px",
       "sourceKey": "borderRadius.10",
-      "usageCount": 31,
-      "evidence": "tailwind.config.cjs:259-259"
+      "evidence": "tailwind.config.cjs:291-291"
     },
     "radius.12": {
       "value": "12px",
       "sourceKey": "borderRadius.12",
-      "usageCount": 51,
-      "evidence": "tailwind.config.cjs:260-260"
+      "evidence": "tailwind.config.cjs:292-292"
     },
     "radius.13": {
       "value": "13px",
       "sourceKey": "borderRadius.13",
-      "usageCount": 9,
-      "evidence": "tailwind.config.cjs:261-261"
+      "evidence": "tailwind.config.cjs:293-293"
     },
     "radius.16": {
       "value": "16px",
       "sourceKey": "borderRadius.16",
-      "usageCount": 14,
-      "evidence": "tailwind.config.cjs:262-262"
+      "evidence": "tailwind.config.cjs:294-294"
     },
     "radius.20": {
       "value": "20px",
       "sourceKey": "borderRadius.20",
-      "usageCount": 1,
-      "evidence": "tailwind.config.cjs:263-263"
+      "evidence": "tailwind.config.cjs:295-295"
     },
     "radius.23": {
       "value": "23px",
       "sourceKey": "borderRadius.23",
-      "usageCount": 1,
-      "evidence": "tailwind.config.cjs:264-264"
+      "evidence": "tailwind.config.cjs:296-296"
     },
     "radius.24": {
       "value": "24px",
       "sourceKey": "borderRadius.24",
-      "usageCount": 1,
-      "evidence": "tailwind.config.cjs:265-265"
+      "evidence": "tailwind.config.cjs:297-297"
     },
     "radius.none": {
       "value": "0px",
       "sourceKey": "borderRadius.none",
-      "usageCount": 3,
-      "evidence": "tailwind.config.cjs:254-254"
+      "evidence": "tailwind.config.cjs:286-286"
     },
     "radius.full": {
       "value": "9999px",
       "sourceKey": "borderRadius.full",
-      "usageCount": 48,
-      "evidence": "tailwind.config.cjs:266-266"
+      "evidence": "tailwind.config.cjs:298-298"
     }
   }
 }

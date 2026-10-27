@@ -73,6 +73,70 @@
         "/apps/slack"
       ],
       "note": "Parameterised route; 272 generated slugs exist in src/data/apps.js. The three measured instances keep slugs crawled from the source (they name real third-party products) while showing invented app names; generated pages must never reuse those slugs (GENERATED_MODE_URL)."
+    },
+    {
+      "route": "/blog",
+      "template": "editorial-listing",
+      "status": "mounted",
+      "evidence": "src/App.jsx:44-44",
+      "addedMidExtraction": "mounted by a concurrent build after the start-of-extraction snapshot (11 routes); caught by verify_all route-drift check and extracted"
+    },
+    {
+      "route": "/engineering/blog",
+      "template": "editorial-listing",
+      "status": "mounted",
+      "evidence": "src/App.jsx:45-45",
+      "addedMidExtraction": "mounted by a concurrent build after the start-of-extraction snapshot (11 routes); caught by verify_all route-drift check and extracted"
+    },
+    {
+      "route": "/changelog",
+      "template": "changelog-year",
+      "status": "mounted",
+      "evidence": "src/App.jsx:46-46",
+      "addedMidExtraction": "mounted by a concurrent build after the start-of-extraction snapshot (11 routes); caught by verify_all route-drift check and extracted",
+      "measuredInstances": [
+        "/changelog/2026"
+      ],
+      "redirectTo": "/changelog/2026"
+    },
+    {
+      "route": "/changelog/:year",
+      "template": "changelog-year",
+      "status": "mounted",
+      "evidence": "src/App.jsx:47-47",
+      "addedMidExtraction": "mounted by a concurrent build after the start-of-extraction snapshot (11 routes); caught by verify_all route-drift check and extracted",
+      "measuredInstances": [
+        "/changelog/2026"
+      ]
+    },
+    {
+      "route": "/help",
+      "template": "help-docs",
+      "status": "mounted",
+      "evidence": "src/App.jsx:48-48",
+      "addedMidExtraction": "mounted by a concurrent build after the start-of-extraction snapshot (11 routes); caught by verify_all route-drift check and extracted"
+    },
+    {
+      "route": "/help/academy",
+      "template": "help-docs",
+      "status": "mounted",
+      "evidence": "src/App.jsx:49-49",
+      "addedMidExtraction": "mounted by a concurrent build after the start-of-extraction snapshot (11 routes); caught by verify_all route-drift check and extracted"
+    },
+    {
+      "route": "/help/reference/attio-101",
+      "template": "help-docs",
+      "status": "mounted",
+      "evidence": "src/App.jsx:50-50",
+      "addedMidExtraction": "mounted by a concurrent build after the start-of-extraction snapshot (11 routes); caught by verify_all route-drift check and extracted",
+      "note": "The clone keeps the source's slug, which contains the original brand name; generated pages may never reuse it (GENERATED_MODE_URL)."
+    },
+    {
+      "route": "/architecture",
+      "template": "architecture",
+      "status": "mounted",
+      "evidence": "src/App.jsx:51-51",
+      "addedMidExtraction": "mounted by a concurrent build after the start-of-extraction snapshot (11 routes); caught by verify_all route-drift check and extracted"
     }
   ]
 }

@@ -3,7 +3,7 @@
   "meta": {
     "title": "Corvale (attio.com design clone): information architecture",
     "source": "Design-faithful clone of attio.com's nav-bar scope (React + Vite + Tailwind, react-router). Brand, copy and artwork are invented placeholders.",
-    "status": "mid-build: 16 of 32 routes (14 of 21 templates) mounted and rendering",
+    "status": "mid-build: 20 of 32 routes (18 of 21 templates) mounted and rendering; the 12 /platform/* routes are not mounted",
     "productionApproved": false,
     "totalRoutes": 32,
     "totalTemplates": 21,
@@ -37,17 +37,20 @@
     "shell.site-header-bannerless": {
       "category": "SHELL",
       "description": "Header with the announcement banner removed (nav row only), with the page hero pulled up underneath it; still toggles dark over dark scenes.",
-      "scope": "The architecture page only."
+      "scope": "The architecture page only.",
+      "implementedBy": "SiteHeader.jsx (via PageShell; renders 68px tall without the banner on /architecture)"
     },
     "shell.docs-header": {
       "category": "SHELL",
       "description": "Marketing header plus, below 992px, an extra docs bar holding a breadcrumb/menu trigger for the help sidebar.",
-      "scope": "All three help routes."
+      "scope": "All three help routes.",
+      "implementedBy": "help/DocsShell.jsx (docs bar below lg)"
     },
     "shell.docs-sidebar": {
       "category": "SHELL",
       "description": "Sticky left docs sidebar: compact command-K search trigger, then a masked scroll area with group headers and Radix accordion items whose carets rotate and whose nested links sit on a left guide line. Hidden below 992px.",
-      "scope": "All three help routes."
+      "scope": "All three help routes.",
+      "implementedBy": "help/DocsShell.jsx (aside + SidebarNav)"
     },
     "shell.site-footer": {
       "category": "SHELL",
@@ -148,17 +151,20 @@
     "hero.architecture-typewriter": {
       "category": "HERO",
       "description": "Very tall scroll hero pulled up under the header: sticky full-viewport canvas field, centered serif headline typed progressively by scroll with a blinking caret, and a scroll-cue pill.",
-      "scope": "Architecture only."
+      "scope": "Architecture only.",
+      "implementedBy": "architecture/Sections.jsx > ArchHero"
     },
     "hero.help-landing": {
       "category": "HERO",
       "description": "Help landing head in the docs main column: animated conic-border announcement pill, H1, lead, large search trigger and a row of popular-topic tag buttons.",
-      "scope": "Help landing only."
+      "scope": "Help landing only.",
+      "implementedBy": "pages/help/HelpHome.jsx"
     },
     "hero.docs-page-head": {
       "category": "HERO",
       "description": "Docs page head: small slash breadcrumb, H1 and lead in the docs main column.",
-      "scope": "Help academy and the help reference guide."
+      "scope": "Help academy and the help reference guide.",
+      "implementedBy": "help/DocsShell.jsx > Crumbs + pages/help/HelpAcademy.jsx, HelpReference.jsx"
     },
     "hero.platform-centered": {
       "category": "HERO",
@@ -507,37 +513,44 @@
     "content.architecture-chapter-band": {
       "category": "CONTENT",
       "description": "Chapter divider band: tinted base with drifting radial-gradient blobs and a noise overlay, centered mono label and per-word serif title.",
-      "scope": "Architecture only (three instances introduce the page's three chapters)."
+      "scope": "Architecture only (three instances introduce the page's three chapters).",
+      "implementedBy": "architecture/Sections.jsx > Chapter"
     },
     "content.architecture-story-body": {
       "category": "CONTENT",
       "description": "Two-column editorial body: mono/sans paragraphs with square bullets beside serif pull text, plus captioned chip diagrams.",
-      "scope": "Architecture only."
+      "scope": "Architecture only.",
+      "implementedBy": "pages/Architecture.jsx (inline) + architecture/Diagrams.jsx > FlowFigure"
     },
     "content.five-reasons-index": {
       "category": "CONTENT",
       "description": "Interactive index of five rows with oversized serif words, mono indices and hairlines that shift under the pointer.",
-      "scope": "Architecture only."
+      "scope": "Architecture only.",
+      "implementedBy": "architecture/FiveReasons.jsx"
     },
     "content.problem-dark-scene": {
       "category": "CONTENT",
       "description": "Dark full-height scene whose words brighten from faint to white as it scrolls.",
-      "scope": "Architecture only."
+      "scope": "Architecture only.",
+      "implementedBy": "architecture/Sections.jsx > LitWords (composed in pages/Architecture.jsx)"
     },
     "content.architecture-diagram-scene": {
       "category": "CONTENT",
       "description": "Ring-diagram row, then a tall sticky dark canvas stage with mono tags and pulsing dots, then numbered serif pillars with brightening words.",
-      "scope": "Architecture only."
+      "scope": "Architecture only.",
+      "implementedBy": "architecture/Sections.jsx > DarkScene + architecture/Diagrams.jsx > RingRow"
     },
     "content.launch-feature-blocks": {
       "category": "CONTENT",
       "description": "Four two-column feature blocks (serif heading, mono overline, paragraphs, SVG diagram), a tinted beta block and a dark code-art band.",
-      "scope": "Architecture only."
+      "scope": "Architecture only.",
+      "implementedBy": "pages/Architecture.jsx (inline) + architecture/Diagrams.jsx > LaunchDiagram + architecture/Sections.jsx > CodeBand"
     },
     "content.help-get-started": {
       "category": "CONTENT",
       "description": "Split block: multi-tone heading and short paragraphs on the left, numbered list of three steps with badge numbers on the right, see-all link.",
-      "scope": "Help landing only."
+      "scope": "Help landing only.",
+      "implementedBy": "pages/help/HelpHome.jsx (inline)"
     },
     "listing.changelog-preview": {
       "category": "LISTING",
@@ -578,12 +591,14 @@
     "listing.course-grid": {
       "category": "LISTING",
       "description": "Two-column grid of course cards: rounded media, underlined title, description, lesson/duration meta.",
-      "scope": "Help academy only."
+      "scope": "Help academy only.",
+      "implementedBy": "pages/help/HelpAcademy.jsx (inline) + help/CourseArt.jsx"
     },
     "listing.lesson-list": {
       "category": "LISTING",
       "description": "Vertical list of numbered lesson rows: badge number, title/description/read-more, rounded media on the right.",
-      "scope": "Help reference guide only."
+      "scope": "Help reference guide only.",
+      "implementedBy": "pages/help/HelpReference.jsx (inline) + help/CourseArt.jsx"
     },
     "conversion.plan-comparison-table": {
       "category": "CONVERSION",
@@ -658,7 +673,8 @@
     "conversion.architecture-closing-nav": {
       "category": "CONVERSION",
       "description": "Sticky canvas closing stage with a serif line and a two-card mono nav linking to the sales contact page, with corner marks.",
-      "scope": "Architecture only."
+      "scope": "Architecture only.",
+      "implementedBy": "architecture/Sections.jsx > Closing"
     },
     "wayfinding.partner-cross-links": {
       "category": "WAYFINDING",
@@ -1007,7 +1023,7 @@
         "/architecture"
       ],
       "chrome": "reduced",
-      "status": "planned",
+      "status": "built",
       "spec": "CLONE_SPEC_PAGES.md T8",
       "sectionNote": "content.architecture-chapter-band appears three times (before the story body, the diagram scene and the launch blocks); listed once at its first position.",
       "sections": [
@@ -1031,7 +1047,7 @@
         "/help"
       ],
       "chrome": "docs",
-      "status": "planned",
+      "status": "built",
       "spec": "CLONE_SPEC_PAGES.md T9-a",
       "sections": [
         "shell.docs-header",
@@ -1050,7 +1066,7 @@
         "/help/academy"
       ],
       "chrome": "docs",
-      "status": "planned",
+      "status": "built",
       "spec": "CLONE_SPEC_PAGES.md T9-b",
       "sections": [
         "shell.docs-header",
@@ -1068,7 +1084,7 @@
         "/help/reference/attio-101"
       ],
       "chrome": "docs",
-      "status": "planned",
+      "status": "built",
       "spec": "CLONE_SPEC_PAGES.md T9-c",
       "sections": [
         "shell.docs-header",

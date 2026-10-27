@@ -1,0 +1,115 @@
+{
+  "id": "conversion.careers-heatmap",
+  "title": "Careers heatmap CTA (dark)",
+  "status": "measured",
+  "source": {
+    "id": "src:Engineering#export-function-Heatmap",
+    "file": "src/components/blog/Engineering.jsx",
+    "tag": "export function Heatmap(",
+    "lines": "141-202",
+    "citation": "src/components/blog/Engineering.jsx:141-202"
+  },
+  "semantic": {
+    "id": "conversion.careers-heatmap",
+    "category": "CONVERSION"
+  },
+  "retrievalEligible": true,
+  "purpose": "Recruiting close of the engineering log: contribution heatmap art, heading and a careers CTA.",
+  "themes": [
+    "dark"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "heading": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 13,
+        "x-maxWordsEvidence": "measured headingWordsMax=10 for conversion.careers-heatmap at 1440px"
+      },
+      "body": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 12,
+        "x-maxWordsEvidence": "measured paragraphWordsMax=9 for conversion.careers-heatmap at 1440px"
+      },
+      "cta": {
+        "$ref": "#/definitions/cta"
+      },
+      "heatmap": {
+        "$ref": "#/definitions/media",
+        "x-assetRoles": [
+          "illustration.reference-art",
+          "illustration.generated-abstract",
+          "illustration.decorative-pattern",
+          "chart.illustrative"
+        ]
+      }
+    },
+    "required": [
+      "heading",
+      "cta",
+      "heatmap"
+    ]
+  },
+  "constraints": {
+    "maxPerPage": 1,
+    "mustPrecedeFooter": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "grid-reveal-in-view",
+      "hover-micro"
+    ],
+    "reducedMotionFallback": "static-final-state",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "stack",
+        "detail": "heatmap crops; CTA below."
+      }
+    ]
+  },
+  "assetSlots": [
+    {
+      "field": ".heatmap",
+      "assetRoles": [
+        "illustration.reference-art",
+        "illustration.generated-abstract",
+        "illustration.decorative-pattern",
+        "chart.illustrative"
+      ]
+    }
+  ],
+  "generatedAssetRoles": [
+    "chart.illustrative",
+    "copy.original",
+    "illustration.decorative-pattern",
+    "illustration.generated-abstract",
+    "url.placeholder"
+  ],
+  "composes": [],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/engineering/blog",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 646.8
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/engineering/blog",
+      "variant": null
+    }
+  ]
+}

@@ -1,0 +1,398 @@
+{
+  "pageSpecVersion": "1.1.0",
+  "mode": "generated",
+  "template": "app-directory",
+  "route": "/integrations",
+  "brand": {
+    "name": "Tarnwick",
+    "mark": {
+      "assetRole": "brand.placeholder-mark",
+      "assetRef": "generate:neutral rounded glyph plus the Tarnwick wordmark",
+      "alt": "Tarnwick"
+    },
+    "fictional": true
+  },
+  "meta": {
+    "title": "Integrations",
+    "description": "Generated sample integrations page for a fictional scheduling product."
+  },
+  "nodes": [
+    {
+      "id": "header",
+      "type": "shell.site-header",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.placeholder-mark",
+          "assetRef": "generate:neutral rounded glyph plus the Tarnwick wordmark",
+          "alt": "Tarnwick"
+        },
+        "banner": {
+          "text": "Read what changed in the autumn update",
+          "href": "https://tarnwick.example/updates"
+        },
+        "menus": [
+          {
+            "label": "Product",
+            "groups": [
+              {
+                "label": "Plan",
+                "items": [
+                  {
+                    "title": "Crew calendar",
+                    "description": "Book jobs onto open crew time",
+                    "href": "https://tarnwick.example/calendar"
+                  },
+                  {
+                    "title": "Parts tracker",
+                    "description": "Know which van carries which spare",
+                    "href": "https://tarnwick.example/parts"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "Company",
+            "groups": [
+              {
+                "label": "About",
+                "items": [
+                  {
+                    "title": "Our crews",
+                    "description": "Who builds the scheduling board",
+                    "href": "https://tarnwick.example/about"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "signIn": {
+          "label": "Log in",
+          "href": "https://app.tarnwick.example/login"
+        },
+        "primaryCta": {
+          "label": "Book a walkthrough",
+          "href": "https://tarnwick.example/demo",
+          "variant": "primary"
+        }
+      },
+      "motion": {
+        "patterns": [
+          "header-theme-swap",
+          "dropdown-panel"
+        ],
+        "reducedMotionFallback": "instant-state-change"
+      }
+    },
+    {
+      "id": "intro",
+      "type": "hero.page-centered",
+      "variant": "icon-band",
+      "content": {
+        "badge": "Integrations",
+        "title": "Connect the tools you already use",
+        "lead": "Browse add-ons that bring billing, messaging and maps into your board.",
+        "mediaRow": [
+          {
+            "assetRole": "icon.generated-app",
+            "assetRef": "generate:abstract glyph on a rounded coloured tile 0",
+            "alt": "App icon"
+          },
+          {
+            "assetRole": "icon.generated-app",
+            "assetRef": "generate:abstract glyph on a rounded coloured tile 1",
+            "alt": "App icon"
+          },
+          {
+            "assetRole": "icon.generated-app",
+            "assetRef": "generate:abstract glyph on a rounded coloured tile 2",
+            "alt": "App icon"
+          },
+          {
+            "assetRole": "icon.generated-app",
+            "assetRef": "generate:abstract glyph on a rounded coloured tile 3",
+            "alt": "App icon"
+          },
+          {
+            "assetRole": "icon.generated-app",
+            "assetRef": "generate:abstract glyph on a rounded coloured tile 4",
+            "alt": "App icon"
+          },
+          {
+            "assetRole": "icon.generated-app",
+            "assetRef": "generate:abstract glyph on a rounded coloured tile 5",
+            "alt": "App icon"
+          },
+          {
+            "assetRole": "icon.generated-app",
+            "assetRef": "generate:abstract glyph on a rounded coloured tile 6",
+            "alt": "App icon"
+          },
+          {
+            "assetRole": "icon.generated-app",
+            "assetRef": "generate:abstract glyph on a rounded coloured tile 7",
+            "alt": "App icon"
+          }
+        ]
+      },
+      "motion": {
+        "patterns": [
+          "page-hero-enter"
+        ],
+        "reducedMotionFallback": "paused-first-frame"
+      }
+    },
+    {
+      "id": "featured",
+      "type": "features.featured-apps",
+      "content": {
+        "heading": "Featured",
+        "tabs": [
+          {
+            "label": "Billing",
+            "appName": "Tidecalc",
+            "description": "Turn finished jobs into invoices.",
+            "icon": {
+              "assetRole": "icon.generated-app",
+              "assetRef": "generate:wave glyph on a teal tile",
+              "alt": "Tidecalc icon"
+            },
+            "visual": {
+              "assetRole": "product.generated-visual",
+              "assetRef": "generate:simple illustrated invoice card",
+              "alt": "Illustrated invoice"
+            }
+          },
+          {
+            "label": "Maps",
+            "appName": "Routewise",
+            "description": "Plan the day's drive in one view.",
+            "icon": {
+              "assetRole": "icon.generated-app",
+              "assetRef": "generate:pin glyph on a sand tile",
+              "alt": "Routewise icon"
+            },
+            "visual": {
+              "assetRole": "product.generated-visual",
+              "assetRef": "generate:simple illustrated map card",
+              "alt": "Illustrated map"
+            }
+          },
+          {
+            "label": "Chat",
+            "appName": "Noteloop",
+            "description": "Share job notes with the whole crew.",
+            "icon": {
+              "assetRole": "icon.generated-app",
+              "assetRef": "generate:bubble glyph on a slate tile",
+              "alt": "Noteloop icon"
+            },
+            "visual": {
+              "assetRole": "product.generated-visual",
+              "assetRef": "generate:simple illustrated message list",
+              "alt": "Illustrated messages"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "patterns": [
+          "featured-tab-enter"
+        ],
+        "reducedMotionFallback": "instant-state-change"
+      }
+    },
+    {
+      "id": "dirhead",
+      "type": "listing.directory-header",
+      "content": {
+        "title": "All add-ons",
+        "lead": "Every add-on works with every plan unless noted.",
+        "searchPlaceholder": "Search add-ons"
+      },
+      "motion": {
+        "patterns": [
+          "dialog-scale"
+        ],
+        "reducedMotionFallback": "instant-state-change"
+      }
+    },
+    {
+      "id": "cat1",
+      "type": "listing.directory-category",
+      "content": {
+        "name": "Billing",
+        "anchor": "Billing",
+        "apps": [
+          {
+            "name": "Tidecalc",
+            "developer": "Fictional Labs",
+            "description": "A sample add-on for a fictional scheduling product.",
+            "icon": {
+              "assetRole": "icon.generated-app",
+              "assetRef": "generate:abstract glyph on a rounded coloured tile",
+              "alt": "App icon"
+            },
+            "verified": false,
+            "href": "/integrations/sample-0"
+          },
+          {
+            "name": "Parcelboard",
+            "developer": "Fictional Labs",
+            "description": "A sample add-on for a fictional scheduling product.",
+            "icon": {
+              "assetRole": "icon.generated-app",
+              "assetRef": "generate:abstract glyph on a rounded coloured tile",
+              "alt": "App icon"
+            },
+            "verified": true,
+            "href": "/integrations/sample-1"
+          },
+          {
+            "name": "Sparkline Pay",
+            "developer": "Fictional Labs",
+            "description": "A sample add-on for a fictional scheduling product.",
+            "icon": {
+              "assetRole": "icon.generated-app",
+              "assetRef": "generate:abstract glyph on a rounded coloured tile",
+              "alt": "App icon"
+            },
+            "verified": false,
+            "href": "/integrations/sample-2"
+          }
+        ]
+      },
+      "motion": {
+        "patterns": [
+          "scroll-spy-nav"
+        ],
+        "reducedMotionFallback": "instant-state-change"
+      }
+    },
+    {
+      "id": "cat2",
+      "type": "listing.directory-category",
+      "content": {
+        "name": "Messaging",
+        "anchor": "Messaging",
+        "apps": [
+          {
+            "name": "Leafmail",
+            "developer": "Fictional Labs",
+            "description": "A sample add-on for a fictional scheduling product.",
+            "icon": {
+              "assetRole": "icon.generated-app",
+              "assetRef": "generate:abstract glyph on a rounded coloured tile",
+              "alt": "App icon"
+            },
+            "verified": false,
+            "href": "/integrations/sample-3"
+          },
+          {
+            "name": "Ledgerly",
+            "developer": "Fictional Labs",
+            "description": "A sample add-on for a fictional scheduling product.",
+            "icon": {
+              "assetRole": "icon.generated-app",
+              "assetRef": "generate:abstract glyph on a rounded coloured tile",
+              "alt": "App icon"
+            },
+            "verified": true,
+            "href": "/integrations/sample-4"
+          },
+          {
+            "name": "Routewise",
+            "developer": "Fictional Labs",
+            "description": "A sample add-on for a fictional scheduling product.",
+            "icon": {
+              "assetRole": "icon.generated-app",
+              "assetRef": "generate:abstract glyph on a rounded coloured tile",
+              "alt": "App icon"
+            },
+            "verified": false,
+            "href": "/integrations/sample-5"
+          }
+        ]
+      },
+      "motion": {
+        "patterns": [
+          "scroll-spy-nav"
+        ],
+        "reducedMotionFallback": "instant-state-change"
+      }
+    },
+    {
+      "id": "build",
+      "type": "conversion.build-with-us",
+      "content": {
+        "heading": "Build your own",
+        "body": "Use the open interface to publish an add-on for crews everywhere.",
+        "ctas": [
+          {
+            "label": "Read the docs",
+            "href": "https://tarnwick.example/docs",
+            "variant": "primary"
+          },
+          {
+            "label": "Contact us",
+            "href": "https://tarnwick.example/contact",
+            "variant": "outline"
+          }
+        ]
+      },
+      "motion": {
+        "patterns": [
+          "hover-micro"
+        ],
+        "reducedMotionFallback": "instant-state-change"
+      }
+    },
+    {
+      "id": "footer",
+      "type": "shell.site-footer",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.placeholder-mark",
+          "assetRef": "generate:neutral rounded glyph plus the Tarnwick wordmark",
+          "alt": "Tarnwick"
+        },
+        "columns": [
+          {
+            "heading": "Product",
+            "links": [
+              {
+                "label": "Crew calendar",
+                "href": "https://tarnwick.example/calendar"
+              },
+              {
+                "label": "Parts tracker",
+                "href": "https://tarnwick.example/parts"
+              }
+            ]
+          },
+          {
+            "heading": "Company",
+            "links": [
+              {
+                "label": "About us",
+                "href": "https://tarnwick.example/about"
+              },
+              {
+                "label": "Jobs board",
+                "href": "https://tarnwick.example/jobs"
+              }
+            ]
+          }
+        ],
+        "legal": "© 2026 Tarnwick, a fictional company. Placeholder legal line for a generated page."
+      },
+      "motion": {
+        "patterns": [
+          "hover-micro"
+        ],
+        "reducedMotionFallback": "instant-state-change"
+      }
+    }
+  ]
+}

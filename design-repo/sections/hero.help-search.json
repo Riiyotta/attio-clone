@@ -1,0 +1,128 @@
+{
+  "id": "hero.help-search",
+  "title": "Help search opener",
+  "status": "measured",
+  "source": {
+    "id": "src:HelpHome#How-can-we-help-h1",
+    "file": "src/pages/help/HelpHome.jsx",
+    "tag": "How can we help?</h1>",
+    "lines": "29-29",
+    "citation": "src/pages/help/HelpHome.jsx:29-29"
+  },
+  "semantic": {
+    "id": "hero.help-search",
+    "category": "HERO"
+  },
+  "retrievalEligible": true,
+  "purpose": "Help-centre opener: announcement pill, title, lead, large search trigger and popular-search tags.",
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "pill": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "label": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 10,
+            "x-maxWordsEvidence": "pill c45"
+          },
+          "href": {
+            "$ref": "#/definitions/url"
+          }
+        },
+        "required": [
+          "label",
+          "href"
+        ]
+      },
+      "title": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 5,
+        "x-maxWordsEvidence": "measured headingWordsMax=4 for hero.help-search at 1440px"
+      },
+      "lead": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 13,
+        "x-maxWordsEvidence": "lead c55"
+      },
+      "searchPlaceholder": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 3,
+        "x-maxWordsEvidence": "measured 2 words"
+      },
+      "popularTags": {
+        "type": "array",
+        "minItems": 0,
+        "maxItems": 5,
+        "items": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 3,
+          "x-maxWordsEvidence": "measured 2 words"
+        }
+      }
+    },
+    "required": [
+      "title",
+      "lead",
+      "searchPlaceholder",
+      "popularTags"
+    ]
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "hover-micro",
+      "dialog-scale"
+    ],
+    "reducedMotionFallback": "instant-state-change",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "stack",
+        "detail": "tags stack under the label."
+      }
+    ]
+  },
+  "assetSlots": [],
+  "generatedAssetRoles": [
+    "copy.original",
+    "url.placeholder"
+  ],
+  "composes": [
+    "component.search-trigger"
+  ],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/help",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 308
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/help",
+      "variant": null
+    }
+  ]
+}

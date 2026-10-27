@@ -1,0 +1,122 @@
+{
+  "id": "content.chapter-header",
+  "title": "Chapter header",
+  "status": "measured",
+  "source": {
+    "id": "src:Sections#export-function-Chapter",
+    "file": "src/components/architecture/Sections.jsx",
+    "tag": "export function Chapter(",
+    "lines": "121-148",
+    "citation": "src/components/architecture/Sections.jsx:121-148"
+  },
+  "semantic": {
+    "id": "content.chapter-header",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
+  "purpose": "Chapter divider of a long-form story: 666px band with chapter label, serif chapter title and drifting colour blobs.",
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "label": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 4,
+        "x-maxWordsEvidence": "measured 3 words"
+      },
+      "title": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 12,
+        "x-maxWordsEvidence": "measured headingWordsMax=9 for content.chapter-header at 1440px"
+      },
+      "art": {
+        "$ref": "#/definitions/media",
+        "x-assetRoles": [
+          "illustration.reference-art",
+          "illustration.generated-abstract",
+          "illustration.decorative-pattern"
+        ]
+      }
+    },
+    "required": [
+      "label",
+      "title"
+    ]
+  },
+  "constraints": {
+    "repeatable": true,
+    "maxPerPage": 6
+  },
+  "motion": {
+    "allowedPatterns": [
+      "canvas-field",
+      "static"
+    ],
+    "reducedMotionFallback": "paused-first-frame",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "resize-type",
+        "detail": "serif chapter 58 -> 28."
+      }
+    ]
+  },
+  "assetSlots": [
+    {
+      "field": ".art",
+      "assetRoles": [
+        "illustration.reference-art",
+        "illustration.generated-abstract",
+        "illustration.decorative-pattern"
+      ]
+    }
+  ],
+  "generatedAssetRoles": [
+    "copy.original",
+    "illustration.decorative-pattern",
+    "illustration.generated-abstract",
+    "url.placeholder"
+  ],
+  "composes": [
+    "primitive.overline"
+  ],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/architecture",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 666.7
+      },
+      {
+        "route": "/architecture",
+        "variant": null,
+        "instance": 1,
+        "heightPx": 666.7
+      },
+      {
+        "route": "/architecture",
+        "variant": null,
+        "instance": 2,
+        "heightPx": 666.7
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/architecture",
+      "variant": null
+    }
+  ]
+}

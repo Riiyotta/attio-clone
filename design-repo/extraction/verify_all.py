@@ -26,9 +26,17 @@ Checks (each prints PASS/FAIL/WARN with evidence):
   graph-parity       compatibility/graph.json rule ids == semantic_validate.GRAPH_RULE_IDS
   counts             registry.manifest.json counts and README counts block recomputed from disk
   wrapper-gate       extraction/wrapper_gate.py (R9) has zero errors
-  generated-examples a generation-safe example exists for home and for at least one non-home template family
+  generated-examples every template family has a generation-safe (mode=generated) example PageSpec, all listed in the manifest
+  adversarial        runs schema/tests/adversarial_test.py (every mutation rejected, every control passes) and requires exit 0
+                     and its summary line to report zero failures
+
+extraction/prove_drift.py is the proof that THIS script catches drift; it runs verify_all in scratch copies, so verify_all
+does not call it back (that would recurse). Run it separately.
+
+Options: --write-counts   rewrite registry.manifest.json counts and the README counts block from disk, then verify
 """
 import glob, json, os, re, subprocess, sys
+sys.dont_write_bytecode = True
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(HERE)
@@ -56,7 +64,10 @@ PINNED_AVAILABILITY = {
 }
 RETRIEVAL_INELIGIBLE = {"overlay.search-dialog", "overlay.gallery-lightbox", "overlay.mobile-nav-drawer"}
 RUNTIME_UI = re.compile(r"overlay|modal|dialog|drawer|cookie|consent|toast|lightbox|preloader|cursor|popover|tooltip", re.I)
-ABS_PATH = re.compile(r"/Users/[A-Za-z0-9._-]+/|/home/[A-Za-z0-9._-]+/|[A-Za-z]:\\Users\\|/private/(tmp|var)/")
+# built from pieces so this file never contains a literal machine path itself
+_SEP = "/"
+ABS_PATH = re.compile("|".join([_SEP + "Us" + "ers" + _SEP + r"[A-Za-z0-9._-]+" + _SEP, _SEP + "ho" + "me" + _SEP + r"[A-Za-z0-9._-]+" + _SEP,
+                                r"[A-Za-z]:\\Us" + r"ers\\", _SEP + "pri" + "vate" + _SEP + "(tmp|var)" + _SEP]))
 CITE = re.compile(r"((?:src|public)/[A-Za-z0-9_./-]+\.(?:jsx|js|css|html)|tailwind\.config\.cjs|index\.html|package\.json):(\d+)-(\d+)")
 
 RESULTS = []
@@ -94,9 +105,6 @@ def check_self_containment(man):
                 continue
             for m in ABS_PATH.finditer(t):
                 line = t[:m.start()].count("\n") + 1
-                ctx_line = t.split("\n")[line - 1]
-                if "ABS_PATH = re.compile" in ctx_line or "re.search(r\"/Users" in ctx_line or "/Users/[A-Za-z0-9._-]+/|" in ctx_line:
-                    continue
                 hits.append(f"{rel(p)}:{line}")
     rec("no-absolute-paths", not hits, "no absolute machine paths" if not hits else f"found: {hits[:5]}")
     junk = [rel(p) for p in files("**/*") if os.path.basename(p) in (".DS_Store", "Thumbs.db", "desktop.ini") or "__MACOSX" in p or "__pycache__" in p]
@@ -195,12 +203,17 @@ def check_allowlist(contracts, man):
 def iter_citations():
     """Yield (where, file, start, end, tag|None) for every citation in the repo."""
     for p in files("**/*.json"):
-        if p.endswith("reference-copy-corpus.json"):
+        # reference-copy-corpus.json is copy text, and *.schema.json files only DECLARE the citation shape
+        # (their `properties` objects have keys named file/tag/lines): neither holds citations
+        if p.endswith(("reference-copy-corpus.json", ".schema.json")):
             continue
         d = json.load(open(p))
         def walk(o, path):
             if isinstance(o, dict):
                 if {"file", "tag", "lines"} <= set(o):
+                    if not all(isinstance(o[k], str) for k in ("file", "tag", "lines")) or not re.fullmatch(r"\d+-\d+", o["lines"]):
+                        yield (f"{rel(p)}{path}", str(o.get("file")), -1, -1, "__MALFORMED__")
+                        return
                     s, e = map(int, o["lines"].split("-"))
                     yield (f"{rel(p)}{path}", o["file"], s, e, o["tag"])
                     if o.get("citation") and o["citation"] != f"{o['file']}:{o['lines']}":
@@ -225,6 +238,8 @@ def check_citations():
     for where, f, s, e, tag in cites:
         if tag == "__MISMATCH__":
             bad.append(f"{where}: citation string disagrees with file/lines"); continue
+        if tag == "__MALFORMED__":
+            bad.append(f"{where}: citation object must be {{file, tag, lines: 'a-b'}} strings"); continue
         fp = os.path.join(SRC_ROOT, f)
         if not os.path.isfile(fp):
             bad.append(f"{where}: {f} does not exist"); continue
@@ -349,14 +364,14 @@ def check_tokens(man):
         rec("tokens-vs-source", True, "sibling token file absent (standalone copy): source drift check skipped", warn=True); return
     try:
         out = subprocess.run(["node", "-e", f"console.log(JSON.stringify(require({json.dumps(cfg)})))"], capture_output=True, text=True, timeout=60)
-        th = json.loads(out.stdout)["theme"]
+        cfg_all = json.loads(out.stdout); th = cfg_all["theme"]; th_ext = th.get("extend", {})
     except Exception as e:
         rec("tokens-vs-source", True, f"node unavailable, source drift check skipped ({e})", warn=True); return
     drift = []
     for k, v in col.items():
-        path = v["sourceKey"].split(".", 1)[1].split("-")
-        cur = th["colors"].get(path[0]) if len(path) == 1 else (th["colors"].get(path[0]) or {}).get(path[1]) if isinstance(th["colors"].get(path[0]), dict) else th["colors"].get("-".join(path))
-        if cur is None: cur = th["colors"].get("-".join(path))
+        cur = {"colors": th["colors"]}
+        for part in v["sourceKey"].split("."):
+            cur = cur.get(part) if isinstance(cur, dict) else None
         if cur != v["value"]: drift.append(f"{k}: repo {v['value']} vs source {cur}")
     ty = load("tokens/00-foundation/typography.json")["fontSize"]
     for k, v in ty.items():
@@ -366,6 +381,26 @@ def check_tokens(man):
         if th["borderRadius"].get(v["sourceKey"].split(".", 1)[1]) != v["value"]: drift.append(f"{k}: drifted from source borderRadius")
     for k, v in load("tokens/00-foundation/elevation.json")["tokens"].items():
         if th["boxShadow"].get(v["sourceKey"].split(".", 1)[1]) != v["value"]: drift.append(f"{k}: drifted from source boxShadow")
+    # completeness: every key the source config defines for these families has a token (not only the ones the repo lists)
+    for fam_file, fam_key, src_group in (("typography", "fontSize", th.get("fontSize", {})), ("radius", "tokens", th.get("borderRadius", {})),
+                                         ("gradient", "tokens", th_ext.get("backgroundImage", {})), ("elevation", "tokens", th.get("boxShadow", {}))):
+        dd = load(f"tokens/00-foundation/{fam_file}.json")[fam_key]
+        have = {v["sourceKey"].split(".", 1)[1] for v in dd.values()}
+        miss = sorted(set(src_group) - have - {"none"})
+        if miss: drift.append(f"source {fam_file} keys not in the repo: {miss[:5]}")
+    # every token's cited tailwind line(s) must actually hold its source key (and, for colours, its value)
+    cfg_lines = open(cfg, encoding="utf-8").read().split("\n")
+    for fam in ("color", "typography", "radius", "elevation", "gradient"):
+        dd = load(f"tokens/00-foundation/{fam}.json")
+        for k, v in (dd["fontSize"] if fam == "typography" else dd["tokens"]).items():
+            m = re.fullmatch(r"tailwind\.config\.cjs:(\d+)-(\d+)", v.get("evidence", ""))
+            if not m:
+                continue
+            a, b = int(m.group(1)), int(m.group(2))
+            txt = "\n".join(cfg_lines[a - 1:b])
+            key = v["sourceKey"].split(".")[-1]
+            if b > len(cfg_lines) or not re.search(r"(?<![\w-])['\"]?" + re.escape(key) + r"['\"]?\s*:", txt) or (str(v.get("value", "")).startswith("#") and v["value"].lower() not in txt.lower()):
+                drift.append(f"{k}: evidence {v['evidence']} does not hold source key '{key}'")
     srcnames = {f"color.{a}.{b}" if isinstance(x, dict) else f"color.{a}" for a, x in th["colors"].items() if not (isinstance(x, str) and (x.startswith("var(") or a in ("transparent", "current", "inherit"))) for b in (x if isinstance(x, dict) else [None])}
     missing = sorted(srcnames - set(col))
     if missing: drift.append(f"source colours not in the repo: {missing[:5]}")
@@ -389,8 +424,22 @@ def check_routes(contracts):
                 elif not contracts[sid]["retrievalEligible"]: problems.append(f"template {tid} places runtime UI {sid} as a node")
         for o in t.get("runtimeOverlays", []):
             if o not in RETRIEVAL_INELIGIBLE: problems.append(f"template {tid} runtimeOverlay {o} is not a pinned overlay")
+    pend = [r["route"] for r in load("templates/pending-routes.json")["routes"]]
+    both = sorted(set(pend) & set(seen))
+    if both: problems.append(f"routes listed as both mounted and pending: {both}")
     if SIBLING:
         app = open(os.path.join(SRC_ROOT, "src/App.jsx")).read()
+        AL = app.split("\n")
+        rte = load("templates/routes.json")
+        m_ev = re.fullmatch(r"src/App\.jsx:(\d+)-(\d+)", rte.get("routeTableEvidence", ""))
+        if not m_ev or "const ROUTES = [" not in AL[int(m_ev.group(1)) - 1] or AL[int(m_ev.group(2)) - 1].strip() != "]":
+            problems.append(f"routeTableEvidence {rte.get('routeTableEvidence')} does not span the ROUTES table (const ROUTES = [ ... ])")
+        for r in routes:
+            m_r = re.fullmatch(r"src/App\.jsx:(\d+)-(\d+)", r.get("evidence", ""))
+            if not m_r or int(m_r.group(1)) != int(m_r.group(2)) or f"['{r['route']}'," not in AL[int(m_r.group(1)) - 1]:
+                problems.append(f"{r['route']}: evidence {r.get('evidence')} is not the line of that route in src/App.jsx")
+        pend_in_src = [x for x in pend if f"['{x}'," in app]
+        if pend_in_src: problems.append(f"pending routes that src/App.jsx actually mounts: {pend_in_src}")
         m = re.search(r"const ROUTES = \[(.*?)\n\]", app, re.S)
         live = re.findall(r"\['([^']+)',", m.group(1)) if m else []
         if sorted(live) != sorted(seen): problems.append(f"route table drift: source {sorted(live)} vs repo {sorted(seen)}")
@@ -435,8 +484,34 @@ def check_gate():
 
 def check_generated_examples(examples):
     gen = {s["template"] for p, s in examples if s.get("mode") == "generated"}
-    ok = "home" in gen and len(gen - {"home"}) >= 1
-    rec("generated-examples", ok, f"generation-safe examples for templates {sorted(gen)}" if ok else f"missing generated examples (have {sorted(gen)})")
+    tpls = set(load("templates/templates.json")["templates"])
+    missing, unknown = sorted(tpls - gen), sorted(gen - tpls)
+    ok = not missing and not unknown
+    listed = {os.path.relpath(p, REPO) for p, s in examples if s.get("mode") == "generated"}
+    man_listed = set(load("registry.manifest.json")["entryPoints"].get("generatedExamples", []))
+    if listed != man_listed:
+        ok, missing = False, missing + [f"manifest generatedExamples != files on disk: {sorted(listed ^ man_listed)}"]
+    rec("generated-examples", ok, f"every one of the {len(tpls)} template families has a generation-safe example PageSpec" if ok else f"missing/unknown: {missing} {unknown}")
+
+def check_adversarial():
+    path = os.path.join(REPO, "schema/tests/adversarial_test.py")
+    if not os.path.isfile(path):
+        rec("adversarial", False, "schema/tests/adversarial_test.py is missing"); return
+    p = subprocess.run([sys.executable, "-B", path], capture_output=True, text=True, timeout=900)
+    m = re.search(r"adversarial: (\d+) passed, (\d+) failed", p.stdout)
+    ok = p.returncode == 0 and m is not None and int(m.group(2)) == 0 and int(m.group(1)) >= 80
+    rec("adversarial", ok, f"suite ran: {m.group(1)} mutations rejected / controls passed, 0 failed" if ok else f"exit {p.returncode}: {(m.group(0) if m else p.stdout[-300:] + p.stderr[-300:])}")
+
+def write_counts(contracts):
+    real = recount(contracts)
+    pth = os.path.join(REPO, "registry.manifest.json")
+    man = json.load(open(pth)); man["counts"] = real
+    open(pth, "w").write(json.dumps(man, indent=2, ensure_ascii=False) + "\n")
+    rp = os.path.join(REPO, "README.md"); t = open(rp).read()
+    block = "<!-- counts:start -->\n| item | count |\n|---|---|\n" + "".join(f"| {k} | {v} |\n" for k, v in real.items()) + "<!-- counts:end -->"
+    t = re.sub(r"<!-- counts:start -->.*?<!-- counts:end -->", lambda _m: block, t, flags=re.S)
+    open(rp, "w").write(t)
+    print(f"wrote counts: {real}")
 
 def main():
     man = load("registry.manifest.json")
@@ -444,10 +519,12 @@ def main():
     for p in files("sections/*.json"):
         c = json.load(open(p)); contracts[c["id"]] = c
     examples = [(p, json.load(open(p))) for p in files("schema/example*.json") + files("schema/examples/*.json")]
+    if "--write-counts" in sys.argv:
+        write_counts(contracts); man = load("registry.manifest.json")
     for fn in (lambda: check_self_containment(man), check_json, lambda: check_schema(contracts, examples), lambda: check_semantic(examples),
                lambda: check_allowlist(contracts, man), check_citations, lambda: check_contracts(contracts), check_asset_pins,
                lambda: check_tokens(man), lambda: check_routes(contracts), check_graph, lambda: check_counts(man, contracts), check_gate,
-               lambda: check_generated_examples(examples)):
+               lambda: check_generated_examples(examples), check_adversarial):
         try:
             fn()
         except Exception as e:

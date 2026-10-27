@@ -1,6 +1,6 @@
 {
   "$description": "One template per distinct page purpose. nodes are ordered; each is either a section node {section, required, repeatable, variants?} or a region {region, allowedSections, minItems, maxItems} whose members may appear in any order. schema/semantic_validate.py matches every PageSpec's nodes against its declared template's real node list (TEMPLATE_* rules).",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "templates": {
     "home": {
       "id": "home",
@@ -492,6 +492,197 @@
       "layoutNotes": "content.app-meta-sidebar is a sticky left column (cols 1-3) beside the gallery and chapters (cols 4-12) at >= lg; stacked below lg.",
       "routes": [
         "/apps/:slug"
+      ]
+    },
+    "editorial-listing": {
+      "id": "editorial-listing",
+      "title": "Editorial listing",
+      "purpose": "Blog index (light) or engineering log (dark): featured opener, filterable article index, optional recruiting close.",
+      "evidence": "src/pages/Blog.jsx:7-21",
+      "nodes": [
+        {
+          "section": "shell.site-header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.editorial-featured",
+          "required": true,
+          "repeatable": false,
+          "variants": [
+            "featured-post",
+            "ascii-field"
+          ]
+        },
+        {
+          "section": "editorial.article-index",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "conversion.careers-heatmap",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "shell.site-footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeOverlays": [
+        "overlay.mobile-nav-drawer"
+      ],
+      "layoutNotes": "The dark variant renders every section dark and the header dark from load; a 100-160px guide row closes the light variant (template chrome).",
+      "routes": [
+        "/blog",
+        "/engineering/blog"
+      ]
+    },
+    "changelog-year": {
+      "id": "changelog-year",
+      "title": "Changelog year",
+      "purpose": "One year of release notes: intro with subscribe and year ruler, then the chronological entry list.",
+      "evidence": "src/pages/ChangelogYear.jsx:39-107",
+      "nodes": [
+        {
+          "section": "shell.site-header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.changelog-intro",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "editorial.changelog-entries",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.site-footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeOverlays": [
+        "overlay.mobile-nav-drawer"
+      ],
+      "routes": [
+        "/changelog",
+        "/changelog/:year"
+      ]
+    },
+    "help-docs": {
+      "id": "help-docs",
+      "title": "Help docs",
+      "purpose": "Help centre pages inside the docs shell: sidebar navigation, one opener (search or page header), then one to three docs blocks; light footer.",
+      "evidence": "src/components/help/DocsShell.jsx:99-138",
+      "nodes": [
+        {
+          "section": "shell.site-header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "navigation.docs-sidebar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "region": "docs-opener",
+          "required": true,
+          "minItems": 1,
+          "maxItems": 1,
+          "allowedSections": [
+            "hero.help-search",
+            "hero.docs-page-header"
+          ]
+        },
+        {
+          "region": "docs-body",
+          "required": true,
+          "minItems": 1,
+          "maxItems": 3,
+          "allowedSections": [
+            "content.resource-cards",
+            "listing.lesson-list",
+            "listing.course-grid"
+          ]
+        },
+        {
+          "section": "shell.site-footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "heroAfter": [
+        "navigation.docs-sidebar"
+      ],
+      "runtimeOverlays": [
+        "overlay.mobile-nav-drawer",
+        "overlay.search-dialog"
+      ],
+      "layoutNotes": "Footer uses the light variant.",
+      "routes": [
+        "/help",
+        "/help/academy",
+        "/help/reference/attio-101"
+      ]
+    },
+    "architecture": {
+      "id": "architecture",
+      "title": "Long-form story",
+      "purpose": "Scrollytelling long-form page: typewriter hero, chapters of prose, figures, dark lit statements and a pinned scene, a launch showcase, a logo statement band and a closing stage.",
+      "evidence": "src/pages/Architecture.jsx:13-158",
+      "nodes": [
+        {
+          "section": "shell.site-header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.scroll-typewriter",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "region": "article-body",
+          "required": true,
+          "minItems": 3,
+          "maxItems": 16,
+          "allowedSections": [
+            "content.chapter-header",
+            "content.prose-split",
+            "content.lit-statement",
+            "content.scroll-scene",
+            "features.launch-showcase",
+            "social-proof.logo-wall"
+          ],
+          "allowedVariants": {
+            "social-proof.logo-wall": [
+              "dark-statement"
+            ]
+          }
+        },
+        {
+          "section": "conversion.closing-stage",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.site-footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeOverlays": [
+        "overlay.mobile-nav-drawer"
+      ],
+      "layoutNotes": "Header renders without the announcement banner; the hero is pulled up under it. Chapters are grouped in wrapper sections (story / architecture / launch) that are template chrome.",
+      "routes": [
+        "/architecture"
       ]
     }
   }

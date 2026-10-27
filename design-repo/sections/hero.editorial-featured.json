@@ -1,0 +1,231 @@
+{
+  "id": "hero.editorial-featured",
+  "title": "Editorial featured opener",
+  "status": "measured",
+  "source": {
+    "id": "src:Listing#export-function-FeaturedPost",
+    "file": "src/components/blog/Listing.jsx",
+    "tag": "export function FeaturedPost(",
+    "lines": "90-142",
+    "citation": "src/components/blog/Listing.jsx:90-142",
+    "variantSources": {
+      "featured-post": {
+        "file": "src/components/blog/Listing.jsx",
+        "tag": "export function FeaturedPost(",
+        "lines": "90-142",
+        "citation": "src/components/blog/Listing.jsx:90-142"
+      },
+      "ascii-field": {
+        "file": "src/components/blog/Engineering.jsx",
+        "tag": "export function EngHero(",
+        "lines": "104-134",
+        "citation": "src/components/blog/Engineering.jsx:104-134"
+      }
+    }
+  },
+  "semantic": {
+    "id": "hero.editorial-featured",
+    "category": "HERO"
+  },
+  "retrievalEligible": true,
+  "purpose": "Blog opener: a featured post (category, date, large title, author, 16:9 art) over three secondary post cards (light), or a mono title over an animated ASCII field with three post cards (dark engineering log).",
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "variants": [
+    "featured-post",
+    "ascii-field"
+  ],
+  "variantRequirements": {
+    "featured-post": [
+      "featured"
+    ],
+    "ascii-field": [
+      "title",
+      "art"
+    ]
+  },
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "title": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 12,
+        "x-maxWordsEvidence": "measured headingWordsMax=9 for hero.editorial-featured at 1440px"
+      },
+      "featured": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "category": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 4,
+            "x-maxWordsEvidence": "measured 3 words"
+          },
+          "date": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 4,
+            "x-maxWordsEvidence": "measured 3 words"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 12,
+            "x-maxWordsEvidence": "measured headingWordsMax=9 for hero.editorial-featured at 1440px"
+          },
+          "author": {
+            "$ref": "#/definitions/person"
+          },
+          "art": {
+            "$ref": "#/definitions/media",
+            "x-assetRoles": [
+              "illustration.reference-art",
+              "illustration.generated-abstract",
+              "illustration.decorative-pattern"
+            ]
+          },
+          "href": {
+            "$ref": "#/definitions/url"
+          }
+        },
+        "required": [
+          "category",
+          "date",
+          "title",
+          "author",
+          "art",
+          "href"
+        ]
+      },
+      "art": {
+        "$ref": "#/definitions/media",
+        "x-assetRoles": [
+          "illustration.reference-art",
+          "illustration.generated-abstract",
+          "illustration.decorative-pattern"
+        ]
+      },
+      "secondary": {
+        "type": "array",
+        "minItems": 2,
+        "maxItems": 3,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "category": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 4,
+              "x-maxWordsEvidence": "measured 3 words"
+            },
+            "date": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 4,
+              "x-maxWordsEvidence": "measured 3 words"
+            },
+            "title": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 12,
+              "x-maxWordsEvidence": "measured headingWordsMax=9 for hero.editorial-featured at 1440px"
+            },
+            "href": {
+              "$ref": "#/definitions/url"
+            }
+          },
+          "required": [
+            "category",
+            "date",
+            "title",
+            "href"
+          ]
+        }
+      }
+    },
+    "required": [
+      "secondary"
+    ]
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "hover-micro",
+      "canvas-field",
+      "static"
+    ],
+    "reducedMotionFallback": "paused-first-frame",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "stack",
+        "detail": "art above the featured text; secondary cards stack; ASCII field 62svh."
+      }
+    ]
+  },
+  "assetSlots": [
+    {
+      "field": ".featured.art",
+      "assetRoles": [
+        "illustration.reference-art",
+        "illustration.generated-abstract",
+        "illustration.decorative-pattern"
+      ]
+    },
+    {
+      "field": ".art",
+      "assetRoles": [
+        "illustration.reference-art",
+        "illustration.generated-abstract",
+        "illustration.decorative-pattern"
+      ]
+    }
+  ],
+  "generatedAssetRoles": [
+    "copy.original",
+    "illustration.decorative-pattern",
+    "illustration.generated-abstract",
+    "url.placeholder"
+  ],
+  "composes": [],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/blog",
+        "variant": "featured-post",
+        "instance": 0,
+        "heightPx": 1532.5
+      },
+      {
+        "route": "/engineering/blog",
+        "variant": "ascii-field",
+        "instance": 0,
+        "heightPx": 800
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/blog",
+      "variant": "featured-post"
+    },
+    {
+      "route": "/engineering/blog",
+      "variant": "ascii-field"
+    }
+  ]
+}

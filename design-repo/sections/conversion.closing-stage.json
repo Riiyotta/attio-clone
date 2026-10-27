@@ -1,0 +1,134 @@
+{
+  "id": "conversion.closing-stage",
+  "title": "Closing stage",
+  "status": "measured",
+  "source": {
+    "id": "src:Sections#export-function-Closing",
+    "file": "src/components/architecture/Sections.jsx",
+    "tag": "export function Closing(",
+    "lines": "247-270",
+    "citation": "src/components/architecture/Sections.jsx:247-270"
+  },
+  "semantic": {
+    "id": "conversion.closing-stage",
+    "category": "CONVERSION"
+  },
+  "retrievalEligible": true,
+  "purpose": "Long-form close: pinned stage with animated rings, a serif closing line and a two-cell next-steps nav linking to sales.",
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "line": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 17,
+        "x-maxWordsEvidence": "measured paragraphWordsMax=13 for conversion.closing-stage at 1440px"
+      },
+      "links": {
+        "type": "array",
+        "minItems": 2,
+        "maxItems": 2,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "label": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 4,
+              "x-maxWordsEvidence": "measured 3 words"
+            },
+            "sublabel": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 7,
+              "x-maxWordsEvidence": "measured 5 words"
+            },
+            "href": {
+              "$ref": "#/definitions/url"
+            }
+          },
+          "required": [
+            "label",
+            "sublabel",
+            "href"
+          ]
+        }
+      },
+      "field": {
+        "$ref": "#/definitions/media",
+        "x-assetRoles": [
+          "illustration.reference-art",
+          "illustration.generated-abstract",
+          "illustration.decorative-pattern"
+        ]
+      }
+    },
+    "required": [
+      "line",
+      "links",
+      "field"
+    ]
+  },
+  "constraints": {
+    "onePerPage": true,
+    "mustPrecedeFooter": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "canvas-field",
+      "hover-micro"
+    ],
+    "reducedMotionFallback": "paused-first-frame",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "reflow",
+        "detail": "nav cells keep two columns, text shrinks."
+      }
+    ]
+  },
+  "assetSlots": [
+    {
+      "field": ".field",
+      "assetRoles": [
+        "illustration.reference-art",
+        "illustration.generated-abstract",
+        "illustration.decorative-pattern"
+      ]
+    }
+  ],
+  "generatedAssetRoles": [
+    "copy.original",
+    "illustration.decorative-pattern",
+    "illustration.generated-abstract",
+    "url.placeholder"
+  ],
+  "composes": [],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/architecture",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 2610
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/architecture",
+      "variant": null
+    }
+  ]
+}
