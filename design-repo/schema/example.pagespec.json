@@ -1,0 +1,766 @@
+{
+  "pageSpecVersion": "1.0.0",
+  "mode": "reference",
+  "template": "home",
+  "route": "/",
+  "brand": {
+    "name": "Corvale",
+    "mark": {
+      "assetRole": "brand.reference-wordmark",
+      "assetRef": "ref:src/components/ui.jsx#BrandMark",
+      "alt": "Corvale"
+    },
+    "fictional": true
+  },
+  "meta": {
+    "title": "Homepage clone",
+    "description": "Reference reconstruction of the clone homepage with its invented copy and original artwork."
+  },
+  "nodes": [
+    {
+      "id": "header",
+      "type": "shell.site-header",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.reference-wordmark",
+          "assetRef": "ref:src/components/ui.jsx#BrandMark",
+          "alt": "Corvale"
+        },
+        "banner": {
+          "text": "Explore the latest release notes from our spring",
+          "href": "#"
+        },
+        "menus": [
+          {
+            "label": "Products",
+            "groups": [
+              {
+                "label": "Core UI",
+                "items": [
+                  {
+                    "title": "Custom data model",
+                    "description": "Store details safely",
+                    "href": "#"
+                  },
+                  {
+                    "title": "List views",
+                    "description": "Organize work into pipelines",
+                    "href": "#"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "Solutions",
+            "groups": [
+              {
+                "label": "By team",
+                "items": [
+                  {
+                    "title": "Sales teams",
+                    "description": "Close more of the pipeline",
+                    "href": "#"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "Support",
+            "groups": [
+              {
+                "label": "Learn",
+                "items": [
+                  {
+                    "title": "Academy",
+                    "description": "Short lessons for new users",
+                    "href": "#"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "signIn": {
+          "label": "Sign in",
+          "href": "#"
+        },
+        "primaryCta": {
+          "label": "Start it today",
+          "href": "#",
+          "variant": "primary"
+        }
+      },
+      "motion": {
+        "patterns": [
+          "header-theme-swap",
+          "dropdown-panel",
+          "hover-micro"
+        ],
+        "reducedMotionFallback": "instant-state-change"
+      }
+    },
+    {
+      "id": "hero",
+      "type": "hero.product-window",
+      "content": {
+        "badge": {
+          "label": "See what shipped with the new release",
+          "href": "#"
+        },
+        "headline": "Organize the whole workflow",
+        "subhead": "A flexible workspace for modern teams to organize records, automate busy work, see what matters.",
+        "primaryCta": {
+          "label": "Start it today",
+          "href": "#",
+          "variant": "primary"
+        },
+        "secondaryCta": {
+          "label": "Take the tour",
+          "href": "#",
+          "variant": "outline"
+        },
+        "productVisual": {
+          "assetRole": "product.reference-mock",
+          "assetRef": "ref:src/components/Hero.jsx#main-window",
+          "alt": "Workspace with records and lists"
+        },
+        "sideWindows": [
+          {
+            "assetRole": "product.reference-mock",
+            "assetRef": "ref:src/components/Hero.jsx#terminal-window",
+            "alt": "Terminal session"
+          },
+          {
+            "assetRole": "product.reference-mock",
+            "assetRef": "ref:src/components/Hero.jsx#chat-window",
+            "alt": "Chat notification"
+          },
+          {
+            "assetRole": "product.reference-mock",
+            "assetRef": "ref:src/components/Hero.jsx#call-window",
+            "alt": "Call notes"
+          }
+        ]
+      },
+      "motion": {
+        "patterns": [
+          "hero-intro-stagger",
+          "hero-scroll-state",
+          "badge-comet",
+          "decorative-loop"
+        ],
+        "reducedMotionFallback": "paused-first-frame"
+      }
+    },
+    {
+      "id": "logos",
+      "type": "social-proof.logo-wall",
+      "variant": "band",
+      "content": {
+        "logos": [
+          {
+            "assetRole": "logo.reference-company",
+            "assetRef": "ref:src/components/logos.jsx#CUSTOMER_LOGOS[0]",
+            "alt": "Pellora"
+          },
+          {
+            "assetRole": "logo.reference-company",
+            "assetRef": "ref:src/components/logos.jsx#CUSTOMER_LOGOS[1]",
+            "alt": "Brindlecove"
+          },
+          {
+            "assetRole": "logo.reference-company",
+            "assetRef": "ref:src/components/logos.jsx#CUSTOMER_LOGOS[2]",
+            "alt": "Oxmere"
+          },
+          {
+            "assetRole": "logo.reference-company",
+            "assetRef": "ref:src/components/logos.jsx#CUSTOMER_LOGOS[3]",
+            "alt": "Quillfold"
+          },
+          {
+            "assetRole": "logo.reference-company",
+            "assetRef": "ref:src/components/logos.jsx#CUSTOMER_LOGOS[4]",
+            "alt": "Varnstead"
+          },
+          {
+            "assetRole": "logo.reference-company",
+            "assetRef": "ref:src/components/logos.jsx#CUSTOMER_LOGOS[5]",
+            "alt": "Tesselio"
+          },
+          {
+            "assetRole": "logo.reference-company",
+            "assetRef": "ref:src/components/logos.jsx#CUSTOMER_LOGOS[6]",
+            "alt": "Lumiqa"
+          },
+          {
+            "assetRole": "logo.reference-company",
+            "assetRef": "ref:src/components/logos.jsx#CUSTOMER_LOGOS[7]",
+            "alt": "Halverstone"
+          },
+          {
+            "assetRole": "logo.reference-company",
+            "assetRef": "ref:src/components/logos.jsx#CUSTOMER_LOGOS[8]",
+            "alt": "Ostra"
+          },
+          {
+            "assetRole": "logo.reference-company",
+            "assetRef": "ref:src/components/logos.jsx#CUSTOMER_LOGOS[9]",
+            "alt": "Arkwoven"
+          }
+        ]
+      },
+      "motion": {
+        "patterns": [
+          "hover-micro"
+        ],
+        "reducedMotionFallback": "instant-state-change"
+      }
+    },
+    {
+      "id": "showcase",
+      "type": "features.platform-showcase",
+      "content": {
+        "intro": {
+          "lead": "A single workspace across every pipeline.",
+          "continuation": "Keep records, tasks and notes together in one place so each teammate works off a shared view."
+        },
+        "articles": [
+          {
+            "navLabel": "Spark interest",
+            "title": "Find new demand early. Spot promising accounts as they appear, enrich them on arrival and route them to the right owner.",
+            "visual": {
+              "assetRole": "product.reference-mock",
+              "assetRef": "ref:src/components/PlatformShowcase.jsx#article-1",
+              "alt": "Routing rules"
+            },
+            "subCards": [
+              {
+                "title": "Leads enriched promptly",
+                "body": "New companies and people are filled in with helpful details the moment they arrive.",
+                "visual": {
+                  "assetRole": "product.reference-mock",
+                  "assetRef": "ref:src/components/PlatformShowcase.jsx#sub-1a",
+                  "alt": "Enrichment card"
+                }
+              },
+              {
+                "title": "Route to the right rep",
+                "body": "Simple rules send every new account to the one person best placed to help.",
+                "visual": {
+                  "assetRole": "product.reference-mock",
+                  "assetRef": "ref:src/components/PlatformShowcase.jsx#sub-1b",
+                  "alt": "Assignment rule"
+                }
+              }
+            ]
+          },
+          {
+            "navLabel": "Qualify leads",
+            "title": "Qualify every lead quickly. Score new interest, check fit against your own rules and hand off the best leads fast.",
+            "visual": {
+              "assetRole": "product.reference-mock",
+              "assetRef": "ref:src/components/PlatformShowcase.jsx#article-2",
+              "alt": "Lead scoring"
+            }
+          },
+          {
+            "navLabel": "Run your playbook",
+            "title": "Run a repeatable plan daily. Turn your best habits into shared sequences that guide each rep through the next steps.",
+            "visual": {
+              "assetRole": "product.reference-mock",
+              "assetRef": "ref:src/components/PlatformShowcase.jsx#article-3",
+              "alt": "Sequence editor"
+            }
+          },
+          {
+            "navLabel": "Forecast results",
+            "title": "Forecast the quarter with certainty Roll up pipeline by stage, owner and segment, then compare commits against targets as weeks go past.",
+            "visual": {
+              "assetRole": "product.reference-mock",
+              "assetRef": "ref:src/components/PlatformShowcase.jsx#article-4",
+              "alt": "Forecast view"
+            }
+          },
+          {
+            "navLabel": "Grow the accounts",
+            "title": "Keep and grow accounts. Track usage and health signals to step in early and expand the right accounts.",
+            "visual": {
+              "assetRole": "product.reference-mock",
+              "assetRef": "ref:src/components/PlatformShowcase.jsx#article-5",
+              "alt": "Health scores"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "patterns": [
+          "scroll-spy-nav",
+          "marquee-loop",
+          "decorative-loop"
+        ],
+        "reducedMotionFallback": "paused-first-frame"
+      }
+    },
+    {
+      "id": "customize",
+      "type": "features.customizable-workspace",
+      "content": {
+        "heading": {
+          "lead": "Shape it your way.",
+          "continuation": "Design objects, fields and views that match how your team works, then tune them in minutes whenever your process changes or expands."
+        },
+        "cta": {
+          "label": "Try the editor",
+          "href": "#",
+          "variant": "outline"
+        },
+        "visual": {
+          "assetRole": "product.reference-mock",
+          "assetRef": "ref:src/components/SelfBuilding.jsx#record-card",
+          "alt": "Record detail"
+        }
+      },
+      "motion": {
+        "patterns": [
+          "static"
+        ],
+        "reducedMotionFallback": "paused-first-frame"
+      }
+    },
+    {
+      "id": "horizon",
+      "type": "features.context-horizon",
+      "content": {
+        "eyebrow": "All tools share a",
+        "megaTitle": "Unlimited Insights*",
+        "tabsHeading": {
+          "lead": "Signals",
+          "continuation": "All the apps read from one live record in every new run"
+        },
+        "tabs": [
+          {
+            "title": "Logs on its own",
+            "body": "Calls, meetings, product events and invoices, all saved."
+          },
+          {
+            "title": "Every tool stays in sync",
+            "body": "Docs, chat and your other apps, kept up to date"
+          },
+          {
+            "title": "Learns your style",
+            "body": "So each next step fits a little better"
+          },
+          {
+            "title": "Ask and get answers.",
+            "body": "Any record, any question, instantly."
+          }
+        ],
+        "visual": {
+          "assetRole": "illustration.reference-art",
+          "assetRef": "ref:src/components/UniversalContext.jsx#Wireframe",
+          "alt": "Wireframe globe"
+        },
+        "integrations": {
+          "title": "Connected to everything else",
+          "tiles": [
+            {
+              "assetRole": "icon.generated-app",
+              "assetRef": "ref:src/components/UniversalContext.jsx#tile-0",
+              "alt": "Integration 1"
+            },
+            {
+              "assetRole": "icon.generated-app",
+              "assetRef": "ref:src/components/UniversalContext.jsx#tile-1",
+              "alt": "Integration 2"
+            },
+            {
+              "assetRole": "icon.generated-app",
+              "assetRef": "ref:src/components/UniversalContext.jsx#tile-2",
+              "alt": "Integration 3"
+            },
+            {
+              "assetRole": "icon.generated-app",
+              "assetRef": "ref:src/components/UniversalContext.jsx#tile-3",
+              "alt": "Integration 4"
+            },
+            {
+              "assetRole": "icon.generated-app",
+              "assetRef": "ref:src/components/UniversalContext.jsx#tile-4",
+              "alt": "Integration 5"
+            },
+            {
+              "assetRole": "icon.generated-app",
+              "assetRef": "ref:src/components/UniversalContext.jsx#tile-5",
+              "alt": "Integration 6"
+            },
+            {
+              "assetRole": "icon.generated-app",
+              "assetRef": "ref:src/components/UniversalContext.jsx#tile-6",
+              "alt": "Integration 7"
+            },
+            {
+              "assetRole": "icon.generated-app",
+              "assetRef": "ref:src/components/UniversalContext.jsx#tile-7",
+              "alt": "Integration 8"
+            },
+            {
+              "assetRole": "icon.generated-app",
+              "assetRef": "ref:src/components/UniversalContext.jsx#tile-8",
+              "alt": "Integration 9"
+            },
+            {
+              "assetRole": "icon.generated-app",
+              "assetRef": "ref:src/components/UniversalContext.jsx#tile-9",
+              "alt": "Integration 10"
+            },
+            {
+              "assetRole": "icon.generated-app",
+              "assetRef": "ref:src/components/UniversalContext.jsx#tile-10",
+              "alt": "Integration 11"
+            },
+            {
+              "assetRole": "icon.generated-app",
+              "assetRef": "ref:src/components/UniversalContext.jsx#tile-11",
+              "alt": "Integration 12"
+            }
+          ]
+        },
+        "cta": {
+          "label": "Browse all connectors",
+          "href": "#",
+          "variant": "outline"
+        }
+      },
+      "motion": {
+        "patterns": [
+          "title-in-view",
+          "auto-cycle-tabs",
+          "marquee-loop"
+        ],
+        "reducedMotionFallback": "manual-advance-only"
+      },
+      "style": {
+        "theme": "dark",
+        "surface": "color.black.50"
+      }
+    },
+    {
+      "id": "developers",
+      "type": "features.developer-platform",
+      "content": {
+        "heading": {
+          "lead": "APIs and hooks",
+          "continuation": "Build it into your stack"
+        },
+        "links": [
+          {
+            "label": "Read docs",
+            "href": "#"
+          }
+        ],
+        "visual": {
+          "assetRole": "illustration.reference-art",
+          "assetRef": "ref:src/components/UniversalContext.jsx#SdkIllustration",
+          "alt": "Line illustration"
+        }
+      },
+      "motion": {
+        "patterns": [
+          "static"
+        ],
+        "reducedMotionFallback": "none-needed"
+      },
+      "style": {
+        "theme": "dark",
+        "surface": "color.semantic.primary-background"
+      }
+    },
+    {
+      "id": "quote",
+      "type": "testimonial.quote",
+      "variant": "scroll-curtain",
+      "content": {
+        "quote": "Our team now plans, sells and reports from one shared source, and the results speak for us.",
+        "person": {
+          "name": "Casey Morales",
+          "role": "VP of Revenue Systems, Example Corp",
+          "fictional": true
+        }
+      },
+      "motion": {
+        "patterns": [
+          "word-reveal-scroll",
+          "curtain-overlap"
+        ],
+        "reducedMotionFallback": "static-final-state"
+      }
+    },
+    {
+      "id": "scale",
+      "type": "social-proof.scale-stats",
+      "content": {
+        "heading": {
+          "lead": "Fast at any size.",
+          "continuation": "Dependable systems for people and agents."
+        },
+        "chart": {
+          "assetRole": "chart.illustrative",
+          "assetRef": "ref:src/components/ScaleStats.jsx#chart",
+          "alt": "Growth curve"
+        },
+        "stats": [
+          {
+            "value": "12M",
+            "label": "tool calls per month"
+          },
+          {
+            "value": "4.8B",
+            "label": "requests per month"
+          },
+          {
+            "value": "65k",
+            "label": "active agents deployed"
+          },
+          {
+            "value": "20M",
+            "label": "messages each day"
+          }
+        ]
+      },
+      "motion": {
+        "patterns": [
+          "chart-draw-in-view"
+        ],
+        "reducedMotionFallback": "static-final-state"
+      }
+    },
+    {
+      "id": "stories",
+      "type": "social-proof.customer-stories",
+      "variant": "carousel",
+      "content": {
+        "heading": {
+          "lead": "Picked by 25,000+ businesses.",
+          "continuation": "From first hire to global operations."
+        },
+        "stories": [
+          {
+            "company": "Mendora",
+            "logo": {
+              "assetRole": "logo.reference-company",
+              "assetRef": "ref:src/components/logos.jsx#STORY_LOGOS[0]",
+              "alt": "Mendora"
+            },
+            "overline": "Health tech",
+            "title": "2x faster deal reviews. How a clinic network turned usage into steady new growth.",
+            "linkLabel": "Read more",
+            "href": "#",
+            "media": {
+              "assetRole": "illustration.reference-art",
+              "assetRef": "ref:src/components/StoryArt.jsx#variant-0",
+              "alt": "Abstract story art"
+            }
+          },
+          {
+            "company": "Cartlane",
+            "logo": {
+              "assetRole": "logo.reference-company",
+              "assetRef": "ref:src/components/logos.jsx#STORY_LOGOS[1]",
+              "alt": "Cartlane"
+            },
+            "overline": "Retail apps",
+            "title": "3x more qualified leads. How a storefront builder found its top buyers far sooner.",
+            "linkLabel": "Read more",
+            "href": "#",
+            "media": {
+              "assetRole": "illustration.reference-art",
+              "assetRef": "ref:src/components/StoryArt.jsx#variant-1",
+              "alt": "Abstract story art"
+            }
+          },
+          {
+            "company": "Hostrine",
+            "logo": {
+              "assetRole": "logo.reference-company",
+              "assetRef": "ref:src/components/logos.jsx#STORY_LOGOS[2]",
+              "alt": "Hostrine"
+            },
+            "overline": "Cloud infra",
+            "title": "40% shorter sales cycle. How a hosting startup kept each handoff in one tidy place.",
+            "linkLabel": "Read more",
+            "href": "#",
+            "media": {
+              "assetRole": "illustration.reference-art",
+              "assetRef": "ref:src/components/StoryArt.jsx#variant-2",
+              "alt": "Abstract story art"
+            }
+          },
+          {
+            "company": "Innsway",
+            "logo": {
+              "assetRole": "logo.reference-company",
+              "assetRef": "ref:src/components/logos.jsx#STORY_LOGOS[3]",
+              "alt": "Innsway"
+            },
+            "overline": "Hospitality",
+            "title": "5x larger team adoption. How a booking service gave every region one shared plan.",
+            "linkLabel": "Read more",
+            "href": "#",
+            "media": {
+              "assetRole": "illustration.reference-art",
+              "assetRef": "ref:src/components/StoryArt.jsx#variant-3",
+              "alt": "Abstract story art"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "patterns": [
+          "auto-cycle-tabs",
+          "hover-micro"
+        ],
+        "reducedMotionFallback": "manual-advance-only"
+      }
+    },
+    {
+      "id": "changelog",
+      "type": "editorial.changelog-preview",
+      "content": {
+        "heading": {
+          "lead": "We ship every week.",
+          "continuation": "New upgrades land often so you can keep moving."
+        },
+        "entries": [
+          {
+            "date": "September 29, 2026",
+            "title": "Workflow run history, with logs",
+            "href": "#"
+          },
+          {
+            "date": "September 22, 2026",
+            "title": "Fresh steps for any flow",
+            "href": "#"
+          },
+          {
+            "date": "September 15, 2026",
+            "title": "New actions",
+            "href": "#"
+          },
+          {
+            "date": "September 10, 2026",
+            "title": "Smarter search for records",
+            "href": "#"
+          }
+        ],
+        "viewAll": {
+          "label": "View all",
+          "href": "#"
+        },
+        "newsletter": {
+          "title": "Keep up with news.",
+          "inputPlaceholder": "you@yourcompany.co",
+          "buttonLabel": "Subscribe"
+        }
+      },
+      "motion": {
+        "patterns": [
+          "hover-micro"
+        ],
+        "reducedMotionFallback": "instant-state-change"
+      }
+    },
+    {
+      "id": "final-cta",
+      "type": "conversion.final-cta",
+      "content": {
+        "heading": "Your next quarter starts here.",
+        "primaryCta": {
+          "label": "Start it today",
+          "href": "#",
+          "variant": "primary"
+        },
+        "secondaryCta": {
+          "label": "Get in touch.",
+          "href": "#",
+          "variant": "outline"
+        }
+      },
+      "motion": {
+        "patterns": [
+          "ambient-streaks"
+        ],
+        "reducedMotionFallback": "hidden"
+      },
+      "style": {
+        "theme": "dark",
+        "surface": "color.black.50"
+      }
+    },
+    {
+      "id": "footer",
+      "type": "shell.site-footer",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.reference-wordmark",
+          "assetRef": "ref:src/components/ui.jsx#BrandMark",
+          "alt": "Corvale"
+        },
+        "columns": [
+          {
+            "heading": "Products",
+            "links": [
+              {
+                "label": "Invite peers",
+                "href": "#"
+              },
+              {
+                "label": "Overviews",
+                "href": "#"
+              },
+              {
+                "label": "Browser plug-in",
+                "href": "#"
+              }
+            ]
+          },
+          {
+            "heading": "Company",
+            "links": [
+              {
+                "label": "Our story",
+                "href": "#"
+              },
+              {
+                "label": "Careers",
+                "href": "/careers"
+              }
+            ]
+          },
+          {
+            "heading": "Help desk",
+            "links": [
+              {
+                "label": "Guide index",
+                "href": "#"
+              },
+              {
+                "label": "Book an expert",
+                "href": "#"
+              }
+            ]
+          }
+        ],
+        "legal": "© 2026 Sample Co. All rights reserved."
+      },
+      "motion": {
+        "patterns": [
+          "hover-micro"
+        ],
+        "reducedMotionFallback": "instant-state-change"
+      }
+    }
+  ]
+}

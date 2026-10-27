@@ -1,0 +1,921 @@
+{
+  "$description": "Font families and the full type-role scale (size / line-height / letter-spacing / weight) from the clone's token file. Inter (text), Inter Display (headings), JetBrains Mono (terminal/labels) are SIL OFL; the quote serif is Source Serif 4 (OFL) standing in for a commercial face the source uses, which must not be self-hosted.",
+  "fontFamily": {
+    "font.sans": {
+      "value": [
+        "Inter",
+        "\"inter Fallback\"",
+        "sans-serif"
+      ],
+      "sourceKey": "fontFamily.sans",
+      "usageCount": 8,
+      "evidence": "tailwind.config.cjs:145-145"
+    },
+    "font.display": {
+      "value": [
+        "InterDisplay",
+        "\"interDisplay Fallback\"",
+        "sans-serif"
+      ],
+      "sourceKey": "fontFamily.display",
+      "usageCount": 21,
+      "evidence": "tailwind.config.cjs:146-146"
+    },
+    "font.mono": {
+      "value": [
+        "\"JetBrains Mono\"",
+        "\"JetBrains Mono Fallback\"",
+        "monospace"
+      ],
+      "sourceKey": "fontFamily.mono",
+      "usageCount": 11,
+      "evidence": "tailwind.config.cjs:147-147"
+    },
+    "font.serif": {
+      "value": [
+        "\"Source Serif 4\"",
+        "\"tiemposText Fallback\"",
+        "serif"
+      ],
+      "sourceKey": "fontFamily.serif",
+      "usageCount": 9,
+      "evidence": "tailwind.config.cjs:148-148"
+    },
+    "font.quote-serif": {
+      "value": [
+        "Quote Serif",
+        "tiemposText Fallback",
+        "serif"
+      ],
+      "sourceKey": "@font-face Quote Serif (Source Serif 4, size-adjust 98%)",
+      "usageCount": 8,
+      "evidence": "src/index.css:43-43"
+    }
+  },
+  "fontSize": {
+    "type.xs": {
+      "fontSize": "12px",
+      "lineHeight": "18px",
+      "letterSpacing": "0px",
+      "fontWeight": "500",
+      "sourceKey": "fontSize.xs",
+      "usageCount": 25,
+      "evidence": "tailwind.config.cjs:152-152"
+    },
+    "type.sm": {
+      "fontSize": "14px",
+      "lineHeight": "20px",
+      "letterSpacing": "-0.07px",
+      "fontWeight": "500",
+      "sourceKey": "fontSize.sm",
+      "usageCount": 80,
+      "evidence": "tailwind.config.cjs:153-153"
+    },
+    "type.base": {
+      "fontSize": "16px",
+      "lineHeight": "22px",
+      "letterSpacing": "-0.16px",
+      "fontWeight": "500",
+      "sourceKey": "fontSize.base",
+      "usageCount": 44,
+      "evidence": "tailwind.config.cjs:154-154"
+    },
+    "type.lg": {
+      "fontSize": "18px",
+      "lineHeight": "24px",
+      "letterSpacing": "-0.18px",
+      "fontWeight": "500",
+      "sourceKey": "fontSize.lg",
+      "usageCount": 27,
+      "evidence": "tailwind.config.cjs:155-155"
+    },
+    "type.xl": {
+      "fontSize": "20px",
+      "lineHeight": "26px",
+      "letterSpacing": "-0.2px",
+      "fontWeight": "500",
+      "sourceKey": "fontSize.xl",
+      "usageCount": 22,
+      "evidence": "tailwind.config.cjs:156-156"
+    },
+    "type.2xl": {
+      "fontSize": "24px",
+      "lineHeight": "30px",
+      "letterSpacing": "-0.24px",
+      "fontWeight": "500",
+      "sourceKey": "fontSize.2xl",
+      "usageCount": 6,
+      "evidence": "tailwind.config.cjs:157-157"
+    },
+    "type.hero": {
+      "fontSize": "64px",
+      "lineHeight": "60.8px",
+      "letterSpacing": "-1.28px",
+      "fontWeight": "600",
+      "sourceKey": "fontSize.hero",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:159-159"
+    },
+    "type.hero-md": {
+      "fontSize": "70.61px",
+      "lineHeight": "67.08px",
+      "letterSpacing": "-1.743px",
+      "fontWeight": "600",
+      "sourceKey": "fontSize.hero-md",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:160-160"
+    },
+    "type.hero-sm": {
+      "fontSize": "40px",
+      "lineHeight": "38px",
+      "letterSpacing": "-0.4px",
+      "fontWeight": "600",
+      "sourceKey": "fontSize.hero-sm",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:161-161"
+    },
+    "type.mega": {
+      "fontSize": "96px",
+      "lineHeight": "96px",
+      "letterSpacing": "-2.304px",
+      "fontWeight": "600",
+      "sourceKey": "fontSize.mega",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:162-162"
+    },
+    "type.section": {
+      "fontSize": "40px",
+      "lineHeight": "44px",
+      "letterSpacing": "-0.4px",
+      "fontWeight": "500",
+      "sourceKey": "fontSize.section",
+      "usageCount": 8,
+      "evidence": "tailwind.config.cjs:163-163"
+    },
+    "type.section-sm": {
+      "fontSize": "32px",
+      "lineHeight": "36px",
+      "letterSpacing": "-0.32px",
+      "fontWeight": "500",
+      "sourceKey": "fontSize.section-sm",
+      "usageCount": 8,
+      "evidence": "tailwind.config.cjs:164-164"
+    },
+    "type.final-cta": {
+      "fontSize": "56px",
+      "lineHeight": "56px",
+      "letterSpacing": "-0.84px",
+      "fontWeight": "500",
+      "sourceKey": "fontSize.final-cta",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:165-165"
+    },
+    "type.showcase-h3": {
+      "fontSize": "24px",
+      "lineHeight": "27.6px",
+      "letterSpacing": "-0.24px",
+      "fontWeight": "500",
+      "sourceKey": "fontSize.showcase-h3",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:166-166"
+    },
+    "type.story": {
+      "fontSize": "32px",
+      "lineHeight": "36.8px",
+      "letterSpacing": "-0.8px",
+      "fontWeight": "500",
+      "sourceKey": "fontSize.story",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:167-167"
+    },
+    "type.stat": {
+      "fontSize": "32px",
+      "lineHeight": "32px",
+      "letterSpacing": "-0.32px",
+      "fontWeight": "500",
+      "sourceKey": "fontSize.stat",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:168-168"
+    },
+    "type.newsletter": {
+      "fontSize": "24px",
+      "lineHeight": "30px",
+      "letterSpacing": "-0.24px",
+      "fontWeight": "500",
+      "sourceKey": "fontSize.newsletter",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:169-169"
+    },
+    "type.overline": {
+      "fontSize": "12px",
+      "lineHeight": "14px",
+      "letterSpacing": "0.72px",
+      "fontWeight": "600",
+      "sourceKey": "fontSize.overline",
+      "usageCount": 32,
+      "evidence": "tailwind.config.cjs:170-170"
+    },
+    "type.subhead": {
+      "fontSize": "18px",
+      "lineHeight": "23.4px",
+      "letterSpacing": "-0.18px",
+      "fontWeight": "500",
+      "sourceKey": "fontSize.subhead",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:171-171"
+    },
+    "type.subhead-sm": {
+      "fontSize": "15px",
+      "lineHeight": "19.5px",
+      "letterSpacing": "-0.17px",
+      "fontWeight": "500",
+      "sourceKey": "fontSize.subhead-sm",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:172-172"
+    },
+    "type.card-title": {
+      "fontSize": "18px",
+      "lineHeight": "22px",
+      "letterSpacing": "-0.18px",
+      "fontWeight": "500",
+      "sourceKey": "fontSize.card-title",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:173-173"
+    },
+    "type.changelog-title": {
+      "fontSize": "18px",
+      "lineHeight": "24px",
+      "letterSpacing": "-0.18px",
+      "fontWeight": "500",
+      "sourceKey": "fontSize.changelog-title",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:174-174"
+    },
+    "type.body": {
+      "fontSize": "16px",
+      "lineHeight": "22px",
+      "letterSpacing": "-0.16px",
+      "fontWeight": "500",
+      "sourceKey": "fontSize.body",
+      "usageCount": 3,
+      "evidence": "tailwind.config.cjs:175-175"
+    },
+    "type.stat-label": {
+      "fontSize": "16px",
+      "lineHeight": "16px",
+      "letterSpacing": "-0.16px",
+      "fontWeight": "500",
+      "sourceKey": "fontSize.stat-label",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:176-176"
+    },
+    "type.showcase-nav": {
+      "fontSize": "18px",
+      "lineHeight": "21.6px",
+      "letterSpacing": "-0.16px",
+      "fontWeight": "500",
+      "sourceKey": "fontSize.showcase-nav",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:177-177"
+    },
+    "type.nav": {
+      "fontSize": "15px",
+      "lineHeight": "22px",
+      "letterSpacing": "-0.16px",
+      "fontWeight": "500",
+      "sourceKey": "fontSize.nav",
+      "usageCount": 2,
+      "evidence": "tailwind.config.cjs:178-178"
+    },
+    "type.button": {
+      "fontSize": "14px",
+      "lineHeight": "20px",
+      "letterSpacing": "-0.07px",
+      "fontWeight": "500",
+      "sourceKey": "fontSize.button",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:179-179"
+    },
+    "type.eyebrow": {
+      "fontSize": "14px",
+      "lineHeight": "20px",
+      "letterSpacing": "-0.14px",
+      "fontWeight": "500",
+      "sourceKey": "fontSize.eyebrow",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:180-180"
+    },
+    "type.small-button": {
+      "fontSize": "12px",
+      "lineHeight": "18px",
+      "letterSpacing": "0px",
+      "fontWeight": "500",
+      "sourceKey": "fontSize.small-button",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:181-181"
+    },
+    "type.banner": {
+      "fontSize": "13px",
+      "lineHeight": "20px",
+      "letterSpacing": "-0.16px",
+      "fontWeight": "500",
+      "sourceKey": "fontSize.banner",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:182-182"
+    },
+    "type.badge": {
+      "fontSize": "13px",
+      "lineHeight": "18px",
+      "letterSpacing": "-0.16px",
+      "fontWeight": "500",
+      "sourceKey": "fontSize.badge",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:183-183"
+    },
+    "type.dropdown": {
+      "fontSize": "14px",
+      "lineHeight": "20px",
+      "letterSpacing": "-0.07px",
+      "fontWeight": "500",
+      "sourceKey": "fontSize.dropdown",
+      "usageCount": 3,
+      "evidence": "tailwind.config.cjs:184-184"
+    },
+    "type.dropdown-label": {
+      "fontSize": "12px",
+      "lineHeight": "18px",
+      "letterSpacing": "0px",
+      "fontWeight": "500",
+      "sourceKey": "fontSize.dropdown-label",
+      "usageCount": 2,
+      "evidence": "tailwind.config.cjs:185-185"
+    },
+    "type.time": {
+      "fontSize": "12px",
+      "lineHeight": "14px",
+      "letterSpacing": "0px",
+      "fontWeight": "500",
+      "sourceKey": "fontSize.time",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:186-186"
+    },
+    "type.quote": {
+      "fontSize": "48px",
+      "lineHeight": "52px",
+      "letterSpacing": "-0.72px",
+      "fontWeight": "400",
+      "sourceKey": "fontSize.quote",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:187-187"
+    },
+    "type.quote-sm": {
+      "fontSize": "32px",
+      "lineHeight": "36px",
+      "letterSpacing": "-0.48px",
+      "fontWeight": "400",
+      "sourceKey": "fontSize.quote-sm",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:188-188"
+    },
+    "type.mega-md": {
+      "fontSize": "56px",
+      "lineHeight": "56px",
+      "letterSpacing": "-1.344px",
+      "fontWeight": "600",
+      "sourceKey": "fontSize.mega-md",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:189-189"
+    },
+    "type.mega-sm": {
+      "fontSize": "40px",
+      "lineHeight": "40px",
+      "letterSpacing": "-0.96px",
+      "fontWeight": "600",
+      "sourceKey": "fontSize.mega-sm",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:190-190"
+    },
+    "type.final-cta-md": {
+      "fontSize": "45.2px",
+      "lineHeight": "45.2px",
+      "letterSpacing": "-0.5808px",
+      "fontWeight": "500",
+      "sourceKey": "fontSize.final-cta-md",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:191-191"
+    },
+    "type.final-cta-sm": {
+      "fontSize": "36px",
+      "lineHeight": "36px",
+      "letterSpacing": "-0.36px",
+      "fontWeight": "500",
+      "sourceKey": "fontSize.final-cta-sm",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:192-192"
+    },
+    "type.story-sm": {
+      "fontSize": "28px",
+      "lineHeight": "32.2px",
+      "letterSpacing": "-0.7px",
+      "fontWeight": "500",
+      "sourceKey": "fontSize.story-sm",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:193-193"
+    },
+    "type.stat-sm": {
+      "fontSize": "28px",
+      "lineHeight": "28px",
+      "letterSpacing": "-0.32px",
+      "fontWeight": "500",
+      "sourceKey": "fontSize.stat-sm",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:194-194"
+    },
+    "type.uc-tab": {
+      "fontSize": "18px",
+      "lineHeight": "25.2px",
+      "letterSpacing": "-0.18px",
+      "fontWeight": "500",
+      "sourceKey": "fontSize.uc-tab",
+      "usageCount": 2,
+      "evidence": "tailwind.config.cjs:195-195"
+    },
+    "type.uc-body": {
+      "fontSize": "16px",
+      "lineHeight": "22.4px",
+      "letterSpacing": "-0.16px",
+      "fontWeight": "500",
+      "sourceKey": "fontSize.uc-body",
+      "usageCount": 2,
+      "evidence": "tailwind.config.cjs:196-196"
+    },
+    "type.uc-feature": {
+      "fontSize": "16px",
+      "lineHeight": "22.4px",
+      "letterSpacing": "-0.16px",
+      "fontWeight": "500",
+      "sourceKey": "fontSize.uc-feature",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:197-197"
+    },
+    "type.uc-feature-desc": {
+      "fontSize": "14px",
+      "lineHeight": "20.3px",
+      "letterSpacing": "-0.14px",
+      "fontWeight": "500",
+      "sourceKey": "fontSize.uc-feature-desc",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:198-198"
+    },
+    "type.connect-body": {
+      "fontSize": "16px",
+      "lineHeight": "20px",
+      "letterSpacing": "-0.16px",
+      "fontWeight": "500",
+      "sourceKey": "fontSize.connect-body",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:199-199"
+    },
+    "type.footer-link": {
+      "fontSize": "14px",
+      "lineHeight": "20px",
+      "letterSpacing": "-0.07px",
+      "fontWeight": "400",
+      "sourceKey": "fontSize.footer-link",
+      "usageCount": 2,
+      "evidence": "tailwind.config.cjs:200-200"
+    },
+    "type.legal": {
+      "fontSize": "12px",
+      "lineHeight": "18px",
+      "letterSpacing": "0px",
+      "fontWeight": "400",
+      "sourceKey": "fontSize.legal",
+      "usageCount": 4,
+      "evidence": "tailwind.config.cjs:201-201"
+    },
+    "type.badge-new": {
+      "fontSize": "10px",
+      "lineHeight": "7px",
+      "letterSpacing": "0px",
+      "fontWeight": "400",
+      "sourceKey": "fontSize.badge-new",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:202-202"
+    },
+    "type.page-hero": {
+      "fontSize": "56px",
+      "lineHeight": "60px",
+      "letterSpacing": "-0.84px",
+      "fontWeight": "600",
+      "sourceKey": "fontSize.page-hero",
+      "usageCount": 13,
+      "evidence": "tailwind.config.cjs:204-204"
+    },
+    "type.page-hero-sm": {
+      "fontSize": "40px",
+      "lineHeight": "44px",
+      "letterSpacing": "-0.4px",
+      "fontWeight": "600",
+      "sourceKey": "fontSize.page-hero-sm",
+      "usageCount": 13,
+      "evidence": "tailwind.config.cjs:205-205"
+    },
+    "type.hero-badge": {
+      "fontSize": "13px",
+      "lineHeight": "18.2px",
+      "letterSpacing": "-0.16px",
+      "fontWeight": "500",
+      "sourceKey": "fontSize.hero-badge",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:206-206"
+    },
+    "type.heading-md": {
+      "fontSize": "40px",
+      "lineHeight": "44px",
+      "letterSpacing": "-0.4px",
+      "fontWeight": "600",
+      "sourceKey": "fontSize.heading-md",
+      "usageCount": 8,
+      "evidence": "tailwind.config.cjs:207-207"
+    },
+    "type.heading-md-sm": {
+      "fontSize": "32px",
+      "lineHeight": "36px",
+      "letterSpacing": "-0.32px",
+      "fontWeight": "600",
+      "sourceKey": "fontSize.heading-md-sm",
+      "usageCount": 5,
+      "evidence": "tailwind.config.cjs:208-208"
+    },
+    "type.head-sm": {
+      "fontSize": "32px",
+      "lineHeight": "36px",
+      "letterSpacing": "-0.32px",
+      "fontWeight": "600",
+      "sourceKey": "fontSize.head-sm",
+      "usageCount": 8,
+      "evidence": "tailwind.config.cjs:209-209"
+    },
+    "type.head-sm-md": {
+      "fontSize": "28px",
+      "lineHeight": "34px",
+      "letterSpacing": "-0.28px",
+      "fontWeight": "600",
+      "sourceKey": "fontSize.head-sm-md",
+      "usageCount": 8,
+      "evidence": "tailwind.config.cjs:210-210"
+    },
+    "type.card-h3": {
+      "fontSize": "28px",
+      "lineHeight": "34px",
+      "letterSpacing": "-0.28px",
+      "fontWeight": "600",
+      "sourceKey": "fontSize.card-h3",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:211-211"
+    },
+    "type.serif-quote": {
+      "fontSize": "28px",
+      "lineHeight": "36.4px",
+      "letterSpacing": "-0.42px",
+      "fontWeight": "500",
+      "sourceKey": "fontSize.serif-quote",
+      "usageCount": 3,
+      "evidence": "tailwind.config.cjs:212-212"
+    },
+    "type.serif-quote-sm": {
+      "fontSize": "24px",
+      "lineHeight": "31.2px",
+      "letterSpacing": "-0.36px",
+      "fontWeight": "500",
+      "sourceKey": "fontSize.serif-quote-sm",
+      "usageCount": 2,
+      "evidence": "tailwind.config.cjs:213-213"
+    },
+    "type.serif-cta": {
+      "fontSize": "40px",
+      "lineHeight": "44px",
+      "letterSpacing": "-0.6px",
+      "fontWeight": "400",
+      "sourceKey": "fontSize.serif-cta",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:214-214"
+    },
+    "type.serif-sm": {
+      "fontSize": "16px",
+      "lineHeight": "22px",
+      "letterSpacing": "-0.16px",
+      "fontWeight": "500",
+      "sourceKey": "fontSize.serif-sm",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:215-215"
+    },
+    "type.input": {
+      "fontSize": "16px",
+      "lineHeight": "24px",
+      "letterSpacing": "-0.16px",
+      "fontWeight": "500",
+      "sourceKey": "fontSize.input",
+      "usageCount": 2,
+      "evidence": "tailwind.config.cjs:216-216"
+    },
+    "type.body-400": {
+      "fontSize": "16px",
+      "lineHeight": "22px",
+      "letterSpacing": "-0.16px",
+      "fontWeight": "400",
+      "sourceKey": "fontSize.body-400",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:217-217"
+    },
+    "type.error": {
+      "fontSize": "12px",
+      "lineHeight": "18px",
+      "letterSpacing": "0px",
+      "fontWeight": "400",
+      "sourceKey": "fontSize.error",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:218-218"
+    },
+    "type.terminal": {
+      "fontSize": "10px",
+      "lineHeight": "15px",
+      "letterSpacing": "-0.16px",
+      "fontWeight": "500",
+      "sourceKey": "fontSize.terminal",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:220-220"
+    },
+    "type.mock-2xs": {
+      "fontSize": "9px",
+      "lineHeight": "12px",
+      "letterSpacing": "0px",
+      "fontWeight": "500",
+      "sourceKey": "fontSize.mock-2xs",
+      "usageCount": 6,
+      "evidence": "tailwind.config.cjs:222-222"
+    },
+    "type.mock-xs": {
+      "fontSize": "10px",
+      "lineHeight": "14px",
+      "letterSpacing": "0px",
+      "fontWeight": "500",
+      "sourceKey": "fontSize.mock-xs",
+      "usageCount": 16,
+      "evidence": "tailwind.config.cjs:223-223"
+    },
+    "type.mock-sm": {
+      "fontSize": "11px",
+      "lineHeight": "15px",
+      "letterSpacing": "-0.04px",
+      "fontWeight": "500",
+      "sourceKey": "fontSize.mock-sm",
+      "usageCount": 59,
+      "evidence": "tailwind.config.cjs:224-224"
+    },
+    "type.mock-base": {
+      "fontSize": "12px",
+      "lineHeight": "16px",
+      "letterSpacing": "-0.06px",
+      "fontWeight": "500",
+      "sourceKey": "fontSize.mock-base",
+      "usageCount": 44,
+      "evidence": "tailwind.config.cjs:225-225"
+    },
+    "type.mock-md": {
+      "fontSize": "13px",
+      "lineHeight": "18px",
+      "letterSpacing": "-0.08px",
+      "fontWeight": "500",
+      "sourceKey": "fontSize.mock-md",
+      "usageCount": 19,
+      "evidence": "tailwind.config.cjs:226-226"
+    },
+    "type.mock-lg": {
+      "fontSize": "15px",
+      "lineHeight": "20px",
+      "letterSpacing": "-0.15px",
+      "fontWeight": "500",
+      "sourceKey": "fontSize.mock-lg",
+      "usageCount": 6,
+      "evidence": "tailwind.config.cjs:227-227"
+    },
+    "type.mock-xl": {
+      "fontSize": "20px",
+      "lineHeight": "24px",
+      "letterSpacing": "-0.3px",
+      "fontWeight": "600",
+      "sourceKey": "fontSize.mock-xl",
+      "usageCount": 5,
+      "evidence": "tailwind.config.cjs:228-228"
+    },
+    "type.mock-2xl": {
+      "fontSize": "28px",
+      "lineHeight": "32px",
+      "letterSpacing": "-0.56px",
+      "fontWeight": "600",
+      "sourceKey": "fontSize.mock-2xl",
+      "usageCount": 4,
+      "evidence": "tailwind.config.cjs:229-229"
+    },
+    "type.article": {
+      "fontSize": "16px",
+      "lineHeight": "26px",
+      "letterSpacing": "-0.16px",
+      "fontWeight": "400",
+      "sourceKey": "fontSize.article",
+      "usageCount": 2,
+      "evidence": "tailwind.config.cjs:231-231"
+    },
+    "type.list-400": {
+      "fontSize": "16px",
+      "lineHeight": "22px",
+      "letterSpacing": "-0.16px",
+      "fontWeight": "400",
+      "sourceKey": "fontSize.list-400",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:232-232"
+    },
+    "type.mono-label": {
+      "fontSize": "12px",
+      "lineHeight": "15.6px",
+      "letterSpacing": "0.6px",
+      "fontWeight": "500",
+      "sourceKey": "fontSize.mono-label",
+      "usageCount": 3,
+      "evidence": "tailwind.config.cjs:233-233"
+    },
+    "type.mono-chip": {
+      "fontSize": "15px",
+      "lineHeight": "19.5px",
+      "letterSpacing": "-0.16px",
+      "fontWeight": "500",
+      "sourceKey": "fontSize.mono-chip",
+      "usageCount": 3,
+      "evidence": "tailwind.config.cjs:234-234"
+    },
+    "type.mono-tag": {
+      "fontSize": "11px",
+      "lineHeight": "16px",
+      "letterSpacing": "1px",
+      "fontWeight": "500",
+      "sourceKey": "fontSize.mono-tag",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:235-235"
+    },
+    "type.code-glyph": {
+      "fontSize": "16px",
+      "lineHeight": "20.8px",
+      "letterSpacing": "-0.16px",
+      "fontWeight": "400",
+      "sourceKey": "fontSize.code-glyph",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:236-236"
+    },
+    "type.arch-body": {
+      "fontSize": "16px",
+      "lineHeight": "22.4px",
+      "letterSpacing": "0px",
+      "fontWeight": "400",
+      "sourceKey": "fontSize.arch-body",
+      "usageCount": 4,
+      "evidence": "tailwind.config.cjs:237-237"
+    },
+    "type.statement": {
+      "fontSize": "28px",
+      "lineHeight": "32.2px",
+      "letterSpacing": "-0.56px",
+      "fontWeight": "600",
+      "sourceKey": "fontSize.statement",
+      "usageCount": 4,
+      "evidence": "tailwind.config.cjs:238-238"
+    },
+    "type.serif-chapter": {
+      "fontSize": "58px",
+      "lineHeight": "63.8px",
+      "letterSpacing": "-1.16px",
+      "fontWeight": "400",
+      "sourceKey": "fontSize.serif-chapter",
+      "usageCount": 2,
+      "evidence": "tailwind.config.cjs:239-239"
+    },
+    "type.serif-chapter-sm": {
+      "fontSize": "28px",
+      "lineHeight": "30.8px",
+      "letterSpacing": "-0.56px",
+      "fontWeight": "400",
+      "sourceKey": "fontSize.serif-chapter-sm",
+      "usageCount": 2,
+      "evidence": "tailwind.config.cjs:240-240"
+    },
+    "type.serif-pull": {
+      "fontSize": "38px",
+      "lineHeight": "45.6px",
+      "letterSpacing": "-0.76px",
+      "fontWeight": "400",
+      "sourceKey": "fontSize.serif-pull",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:241-241"
+    },
+    "type.serif-pull-sm": {
+      "fontSize": "20px",
+      "lineHeight": "24px",
+      "letterSpacing": "-0.4px",
+      "fontWeight": "400",
+      "sourceKey": "fontSize.serif-pull-sm",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:242-242"
+    },
+    "type.serif-h3": {
+      "fontSize": "48px",
+      "lineHeight": "52.8px",
+      "letterSpacing": "-0.96px",
+      "fontWeight": "400",
+      "sourceKey": "fontSize.serif-h3",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:243-243"
+    },
+    "type.serif-h3-sm": {
+      "fontSize": "24px",
+      "lineHeight": "26.4px",
+      "letterSpacing": "-0.48px",
+      "fontWeight": "400",
+      "sourceKey": "fontSize.serif-h3-sm",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:244-244"
+    },
+    "type.serif-problem": {
+      "fontSize": "80px",
+      "lineHeight": "80px",
+      "letterSpacing": "-2.4px",
+      "fontWeight": "400",
+      "sourceKey": "fontSize.serif-problem",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:245-245"
+    },
+    "type.serif-problem-sm": {
+      "fontSize": "40px",
+      "lineHeight": "40px",
+      "letterSpacing": "-1.2px",
+      "fontWeight": "400",
+      "sourceKey": "fontSize.serif-problem-sm",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:246-246"
+    },
+    "type.serif-statement": {
+      "fontSize": "49.76px",
+      "lineHeight": "22px",
+      "letterSpacing": "-0.995px",
+      "fontWeight": "400",
+      "sourceKey": "fontSize.serif-statement",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:247-247"
+    },
+    "type.serif-pillar": {
+      "fontSize": "96.09px",
+      "lineHeight": "22px",
+      "letterSpacing": "-2.883px",
+      "fontWeight": "400",
+      "sourceKey": "fontSize.serif-pillar",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:248-248"
+    },
+    "type.ascii": {
+      "fontSize": "18.18px",
+      "lineHeight": "18.18px",
+      "letterSpacing": "-1px",
+      "fontWeight": "500",
+      "sourceKey": "fontSize.ascii",
+      "usageCount": 2,
+      "evidence": "tailwind.config.cjs:249-249"
+    },
+    "type.help-pill": {
+      "fontSize": "13px",
+      "lineHeight": "18px",
+      "letterSpacing": "-0.16px",
+      "fontWeight": "500",
+      "sourceKey": "fontSize.help-pill",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:250-250"
+    },
+    "type.search-hint": {
+      "fontSize": "12px",
+      "lineHeight": "18px",
+      "letterSpacing": "0.6px",
+      "fontWeight": "500",
+      "sourceKey": "fontSize.search-hint",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:251-251"
+    }
+  },
+  "bodyDefaults": {
+    "fontFamily": "font.sans",
+    "fontSize": "16px",
+    "fontWeight": "500",
+    "lineHeight": "22px",
+    "letterSpacing": "-0.16px",
+    "fontFeatureSettings": "ss03",
+    "evidence": "src/index.css:133-145"
+  }
+}

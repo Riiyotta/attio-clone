@@ -1,0 +1,116 @@
+{
+  "id": "media.screenshot-gallery",
+  "title": "Screenshot gallery",
+  "status": "measured",
+  "source": {
+    "id": "src:Gallery#export-default-function-Gallery",
+    "file": "src/components/apps/Gallery.jsx",
+    "tag": "export default function Gallery(",
+    "lines": "29-76",
+    "citation": "src/components/apps/Gallery.jsx:29-76"
+  },
+  "semantic": {
+    "id": "media.screenshot-gallery",
+    "category": "MEDIA"
+  },
+  "retrievalEligible": true,
+  "purpose": "App screenshots: large frame with thumbnails and prev/next, opening a lightbox.",
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "screenshots": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 8,
+        "items": {
+          "$ref": "#/definitions/media",
+          "x-assetRoles": [
+            "product.reference-mock",
+            "product.generated-visual"
+          ]
+        }
+      }
+    },
+    "required": [
+      "screenshots"
+    ]
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "hover-micro",
+      "lightbox-fade"
+    ],
+    "reducedMotionFallback": "instant-state-change",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "reflow",
+        "detail": "thumbnails scroll."
+      }
+    ]
+  },
+  "assetSlots": [
+    {
+      "field": ".screenshots[]",
+      "assetRoles": [
+        "product.reference-mock",
+        "product.generated-visual"
+      ]
+    }
+  ],
+  "generatedAssetRoles": [
+    "copy.original",
+    "product.generated-visual",
+    "url.placeholder"
+  ],
+  "composes": [],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/apps/chatgpt",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 434.4
+      },
+      {
+        "route": "/apps/claude",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 434.4
+      },
+      {
+        "route": "/apps/slack",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 434.4
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/apps/chatgpt",
+      "variant": null
+    },
+    {
+      "route": "/apps/claude",
+      "variant": null
+    },
+    {
+      "route": "/apps/slack",
+      "variant": null
+    }
+  ]
+}

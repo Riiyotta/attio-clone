@@ -1,0 +1,22 @@
+{
+  "id": "component.lead-form",
+  "kind": "component",
+  "title": "Lead form",
+  "purpose": "Validated multi-row form (text, email, select, textarea) with full-width submit and small print.",
+  "source": {
+    "file": "src/components/forms/Fields.jsx",
+    "tag": "export function LeadForm(",
+    "lines": "166-232",
+    "citation": "src/components/forms/Fields.jsx:166-232"
+  },
+  "composes": [
+    "primitive.text-field",
+    "primitive.select-field",
+    "primitive.button",
+    "primitive.spinner"
+  ],
+  "tokens": [
+    "input.height",
+    "radius.12"
+  ]
+}

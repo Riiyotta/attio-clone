@@ -1,0 +1,16 @@
+{
+  "id": "component.dot-pattern",
+  "kind": "component",
+  "title": "Dot pattern",
+  "purpose": "10px dot grid, optionally masked to fade upward (hero backgrounds).",
+  "source": {
+    "file": "src/components/marketing/primitives.jsx",
+    "tag": "export function DotPattern(",
+    "lines": "63-79",
+    "citation": "src/components/marketing/primitives.jsx:63-79"
+  },
+  "composes": [],
+  "tokens": [
+    "color.white.700"
+  ]
+}

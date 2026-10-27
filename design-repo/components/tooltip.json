@@ -1,0 +1,17 @@
+{
+  "id": "component.tooltip",
+  "kind": "component",
+  "title": "Tooltip",
+  "purpose": "Dark info tooltip (delayed open, fade 150ms).",
+  "source": {
+    "file": "src/components/marketing/Blocks.jsx",
+    "tag": "export function Tooltip(",
+    "lines": "437-471",
+    "citation": "src/components/marketing/Blocks.jsx:437-471"
+  },
+  "composes": [],
+  "tokens": [
+    "elevation.tooltip",
+    "radius.6"
+  ]
+}

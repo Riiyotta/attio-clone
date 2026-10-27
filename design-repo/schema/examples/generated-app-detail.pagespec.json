@@ -1,0 +1,316 @@
+{
+  "pageSpecVersion": "1.0.0",
+  "mode": "generated",
+  "template": "app-detail",
+  "route": "/integrations/tidecalc",
+  "brand": {
+    "name": "Tarnwick",
+    "mark": {
+      "assetRole": "brand.placeholder-mark",
+      "assetRef": "generate:neutral rounded glyph plus the Tarnwick wordmark",
+      "alt": "Tarnwick"
+    },
+    "fictional": true
+  },
+  "meta": {
+    "title": "Tidecalc integration",
+    "description": "Generated sample integration page for a fictional invoicing add-on."
+  },
+  "nodes": [
+    {
+      "id": "header",
+      "type": "shell.site-header",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.placeholder-mark",
+          "assetRef": "generate:neutral rounded glyph plus the Tarnwick wordmark",
+          "alt": "Tarnwick"
+        },
+        "banner": {
+          "text": "Read what changed in the autumn update",
+          "href": "https://tarnwick.example/updates"
+        },
+        "menus": [
+          {
+            "label": "Product",
+            "groups": [
+              {
+                "label": "Plan",
+                "items": [
+                  {
+                    "title": "Crew calendar",
+                    "description": "Book jobs onto open crew time",
+                    "href": "https://tarnwick.example/calendar"
+                  },
+                  {
+                    "title": "Parts tracker",
+                    "description": "Know which van carries which spare",
+                    "href": "https://tarnwick.example/parts"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "Company",
+            "groups": [
+              {
+                "label": "About",
+                "items": [
+                  {
+                    "title": "Our crews",
+                    "description": "Who builds the scheduling board",
+                    "href": "https://tarnwick.example/about"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "signIn": {
+          "label": "Log in",
+          "href": "https://app.tarnwick.example/login"
+        },
+        "primaryCta": {
+          "label": "Book a walkthrough",
+          "href": "https://tarnwick.example/demo",
+          "variant": "primary"
+        }
+      },
+      "motion": {
+        "patterns": [
+          "header-theme-swap",
+          "dropdown-panel"
+        ],
+        "reducedMotionFallback": "instant-state-change"
+      }
+    },
+    {
+      "id": "crumbs",
+      "type": "navigation.breadcrumb-bar",
+      "content": {
+        "parent": {
+          "label": "Integrations",
+          "href": "/integrations"
+        },
+        "current": "Tidecalc",
+        "position": "07"
+      },
+      "motion": {
+        "patterns": [
+          "static"
+        ],
+        "reducedMotionFallback": "none-needed"
+      }
+    },
+    {
+      "id": "app",
+      "type": "hero.app-header",
+      "content": {
+        "icon": {
+          "assetRole": "icon.generated-app",
+          "assetRef": "generate:abstract wave glyph on a teal tile",
+          "alt": "Tidecalc icon"
+        },
+        "appName": "Tidecalc",
+        "subtitle": "Turn finished jobs into invoices automatically.",
+        "installCta": {
+          "label": "Connect",
+          "href": "https://tarnwick.example/integrations/tidecalc/connect",
+          "variant": "primary"
+        }
+      },
+      "motion": {
+        "patterns": [
+          "static"
+        ],
+        "reducedMotionFallback": "none-needed"
+      }
+    },
+    {
+      "id": "meta",
+      "type": "content.app-meta-sidebar",
+      "content": {
+        "badgeLabel": "Verified add-on",
+        "developer": {
+          "name": "Tidecalc Labs (fictional)",
+          "icon": {
+            "assetRole": "icon.generated-app",
+            "assetRef": "generate:small developer glyph",
+            "alt": "Developer icon"
+          }
+        },
+        "category": {
+          "label": "Billing",
+          "href": "/integrations#billing"
+        },
+        "resources": [
+          {
+            "label": "Website",
+            "href": "https://tidecalc.example"
+          },
+          {
+            "label": "Support",
+            "href": "https://tidecalc.example/help"
+          }
+        ],
+        "docsCta": {
+          "label": "Setup guide",
+          "href": "https://tidecalc.example/docs",
+          "variant": "outline"
+        }
+      },
+      "motion": {
+        "patterns": [
+          "hover-micro"
+        ],
+        "reducedMotionFallback": "instant-state-change"
+      }
+    },
+    {
+      "id": "shots",
+      "type": "media.screenshot-gallery",
+      "content": {
+        "screenshots": [
+          {
+            "assetRole": "product.generated-visual",
+            "assetRef": "generate:invoice preview with fictional line items",
+            "alt": "Invoice preview"
+          },
+          {
+            "assetRole": "product.generated-visual",
+            "assetRef": "generate:sync settings panel",
+            "alt": "Sync settings"
+          }
+        ]
+      },
+      "motion": {
+        "patterns": [
+          "hover-micro",
+          "lightbox-fade"
+        ],
+        "reducedMotionFallback": "instant-state-change"
+      }
+    },
+    {
+      "id": "ch-overview",
+      "type": "content.article-chapter",
+      "content": {
+        "title": "Overview",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "When a technician marks a job complete, Tidecalc drafts the invoice from the job card, applies the customer's terms and sends it for approval."
+          }
+        ]
+      },
+      "motion": {
+        "patterns": [
+          "static"
+        ],
+        "reducedMotionFallback": "none-needed"
+      }
+    },
+    {
+      "id": "ch-features",
+      "type": "content.article-chapter",
+      "content": {
+        "title": "What it does",
+        "blocks": [
+          {
+            "kind": "list",
+            "items": [
+              {
+                "lead": "Line items",
+                "text": "pulled from parts used and hours logged"
+              },
+              {
+                "lead": "Approval step",
+                "text": "optional review before anything is sent"
+              }
+            ]
+          }
+        ]
+      },
+      "motion": {
+        "patterns": [
+          "static"
+        ],
+        "reducedMotionFallback": "none-needed"
+      }
+    },
+    {
+      "id": "related",
+      "type": "listing.related-apps",
+      "content": {
+        "title": "More billing add-ons",
+        "apps": [
+          {
+            "name": "Ledgerpine",
+            "developer": "Pine Desk (fictional)",
+            "description": "Match payments to invoices without spreadsheets.",
+            "icon": {
+              "assetRole": "icon.generated-app",
+              "assetRef": "generate:pine glyph",
+              "alt": "Ledgerpine icon"
+            },
+            "verified": true,
+            "href": "/integrations/ledgerpine"
+          }
+        ]
+      },
+      "motion": {
+        "patterns": [
+          "hover-micro"
+        ],
+        "reducedMotionFallback": "instant-state-change"
+      }
+    },
+    {
+      "id": "footer",
+      "type": "shell.site-footer",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.placeholder-mark",
+          "assetRef": "generate:neutral rounded glyph plus the Tarnwick wordmark",
+          "alt": "Tarnwick"
+        },
+        "columns": [
+          {
+            "heading": "Product",
+            "links": [
+              {
+                "label": "Crew calendar",
+                "href": "https://tarnwick.example/calendar"
+              },
+              {
+                "label": "Parts tracker",
+                "href": "https://tarnwick.example/parts"
+              }
+            ]
+          },
+          {
+            "heading": "Company",
+            "links": [
+              {
+                "label": "About us",
+                "href": "https://tarnwick.example/about"
+              },
+              {
+                "label": "Jobs board",
+                "href": "https://tarnwick.example/jobs"
+              }
+            ]
+          }
+        ],
+        "legal": "© 2026 Tarnwick, a fictional company. Placeholder legal line for a generated page."
+      },
+      "motion": {
+        "patterns": [
+          "hover-micro"
+        ],
+        "reducedMotionFallback": "instant-state-change"
+      }
+    }
+  ]
+}

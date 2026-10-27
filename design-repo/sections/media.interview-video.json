@@ -1,0 +1,94 @@
+{
+  "id": "media.interview-video",
+  "title": "Interview video",
+  "status": "measured",
+  "source": {
+    "id": "src:Sections#export-function-InterviewVideo",
+    "file": "src/components/careers/Sections.jsx",
+    "tag": "export function InterviewVideo(",
+    "lines": "20-100",
+    "citation": "src/components/careers/Sections.jsx:20-100"
+  },
+  "semantic": {
+    "id": "media.interview-video",
+    "category": "MEDIA"
+  },
+  "retrievalEligible": true,
+  "purpose": "Wide video player block (poster + player controls) introducing the team.",
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "poster": {
+        "$ref": "#/definitions/media",
+        "x-assetRoles": [
+          "media.video-placeholder"
+        ]
+      },
+      "title": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 8,
+        "x-maxWordsEvidence": "measured 6 words"
+      }
+    },
+    "required": [
+      "poster"
+    ]
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "static"
+    ],
+    "reducedMotionFallback": "none-needed",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "reflow",
+        "detail": "player keeps aspect, controls shrink."
+      }
+    ]
+  },
+  "assetSlots": [
+    {
+      "field": ".poster",
+      "assetRoles": [
+        "media.video-placeholder"
+      ]
+    }
+  ],
+  "generatedAssetRoles": [
+    "copy.original",
+    "media.video-placeholder",
+    "url.placeholder"
+  ],
+  "composes": [],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/careers",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 807
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/careers",
+      "variant": null
+    }
+  ]
+}

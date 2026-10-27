@@ -1,0 +1,18 @@
+{
+  "id": "primitive.stroke-icon",
+  "kind": "primitive",
+  "title": "Stroke icon",
+  "purpose": "Generic stroke UI icon from a closed name set.",
+  "source": {
+    "file": "src/components/mock.jsx",
+    "tag": "export function Icon(",
+    "lines": "221-238",
+    "citation": "src/components/mock.jsx:221-238"
+  },
+  "props": {
+    "name": "icon enum",
+    "size": "12-24px"
+  },
+  "tokens": [],
+  "states": []
+}

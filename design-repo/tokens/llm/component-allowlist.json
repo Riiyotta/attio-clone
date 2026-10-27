@@ -1,0 +1,428 @@
+{
+  "$description": "Closed allowlist of everything a generator may instantiate or set. verify_all.py checks parity with sections/, components/, primitives/, the PageSpec schema's node properties and the asset-role registry.",
+  "version": "1.0.0",
+  "sections": [
+    {
+      "id": "content.app-meta-sidebar",
+      "category": "CONTENT",
+      "retrievalEligible": true
+    },
+    {
+      "id": "content.article-chapter",
+      "category": "CONTENT",
+      "retrievalEligible": true
+    },
+    {
+      "id": "content.audience-profiles",
+      "category": "CONTENT",
+      "retrievalEligible": true
+    },
+    {
+      "id": "content.resource-cards",
+      "category": "CONTENT",
+      "retrievalEligible": true
+    },
+    {
+      "id": "content.team-intro",
+      "category": "CONTENT",
+      "retrievalEligible": true
+    },
+    {
+      "id": "content.values",
+      "category": "CONTENT",
+      "retrievalEligible": true
+    },
+    {
+      "id": "conversion.application-form",
+      "category": "CONVERSION",
+      "retrievalEligible": true
+    },
+    {
+      "id": "conversion.application-notice",
+      "category": "CONVERSION",
+      "retrievalEligible": true
+    },
+    {
+      "id": "conversion.avatar-wall-cta",
+      "category": "CONVERSION",
+      "retrievalEligible": true
+    },
+    {
+      "id": "conversion.build-with-us",
+      "category": "CONVERSION",
+      "retrievalEligible": true
+    },
+    {
+      "id": "conversion.demo-request-split",
+      "category": "CONVERSION",
+      "retrievalEligible": true
+    },
+    {
+      "id": "conversion.final-cta",
+      "category": "CONVERSION",
+      "retrievalEligible": true
+    },
+    {
+      "id": "conversion.newsletter-signup",
+      "category": "CONVERSION",
+      "retrievalEligible": true
+    },
+    {
+      "id": "editorial.changelog-preview",
+      "category": "EDITORIAL",
+      "retrievalEligible": true
+    },
+    {
+      "id": "faq.accordion",
+      "category": "FAQ",
+      "retrievalEligible": true
+    },
+    {
+      "id": "features.app-store-preview",
+      "category": "FEATURES",
+      "retrievalEligible": true
+    },
+    {
+      "id": "features.cell-grid",
+      "category": "FEATURES",
+      "retrievalEligible": true
+    },
+    {
+      "id": "features.context-horizon",
+      "category": "FEATURES",
+      "retrievalEligible": true
+    },
+    {
+      "id": "features.customizable-workspace",
+      "category": "FEATURES",
+      "retrievalEligible": true
+    },
+    {
+      "id": "features.developer-platform",
+      "category": "FEATURES",
+      "retrievalEligible": true
+    },
+    {
+      "id": "features.featured-apps",
+      "category": "FEATURES",
+      "retrievalEligible": true
+    },
+    {
+      "id": "features.partner-tiers",
+      "category": "FEATURES",
+      "retrievalEligible": true
+    },
+    {
+      "id": "features.perks",
+      "category": "FEATURES",
+      "retrievalEligible": true,
+      "variants": [
+        "band",
+        "grid"
+      ]
+    },
+    {
+      "id": "features.platform-showcase",
+      "category": "FEATURES",
+      "retrievalEligible": true
+    },
+    {
+      "id": "features.step-list",
+      "category": "FEATURES",
+      "retrievalEligible": true,
+      "variants": [
+        "tabbed",
+        "single"
+      ]
+    },
+    {
+      "id": "hero.app-header",
+      "category": "HERO",
+      "retrievalEligible": true
+    },
+    {
+      "id": "hero.page-centered",
+      "category": "HERO",
+      "retrievalEligible": true,
+      "variants": [
+        "plain",
+        "logo-strip",
+        "app-tiles",
+        "creator-carousel",
+        "expert-quotes",
+        "icon-band",
+        "contribution-grid"
+      ]
+    },
+    {
+      "id": "hero.pricing-intro",
+      "category": "HERO",
+      "retrievalEligible": true
+    },
+    {
+      "id": "hero.product-window",
+      "category": "HERO",
+      "retrievalEligible": true
+    },
+    {
+      "id": "listing.directory-category",
+      "category": "LISTING",
+      "retrievalEligible": true
+    },
+    {
+      "id": "listing.directory-header",
+      "category": "LISTING",
+      "retrievalEligible": true
+    },
+    {
+      "id": "listing.open-positions",
+      "category": "LISTING",
+      "retrievalEligible": true
+    },
+    {
+      "id": "listing.related-apps",
+      "category": "LISTING",
+      "retrievalEligible": true
+    },
+    {
+      "id": "media.interview-video",
+      "category": "MEDIA",
+      "retrievalEligible": true
+    },
+    {
+      "id": "media.screenshot-gallery",
+      "category": "MEDIA",
+      "retrievalEligible": true
+    },
+    {
+      "id": "media.team-photos",
+      "category": "MEDIA",
+      "retrievalEligible": true
+    },
+    {
+      "id": "navigation.breadcrumb-bar",
+      "category": "NAVIGATION",
+      "retrievalEligible": true
+    },
+    {
+      "id": "navigation.partner-cross-links",
+      "category": "NAVIGATION",
+      "retrievalEligible": true
+    },
+    {
+      "id": "overlay.gallery-lightbox",
+      "category": "UTILITY",
+      "retrievalEligible": false
+    },
+    {
+      "id": "overlay.mobile-nav-drawer",
+      "category": "UTILITY",
+      "retrievalEligible": false
+    },
+    {
+      "id": "overlay.search-dialog",
+      "category": "UTILITY",
+      "retrievalEligible": false
+    },
+    {
+      "id": "pricing.comparison-group",
+      "category": "PRICING",
+      "retrievalEligible": true
+    },
+    {
+      "id": "pricing.comparison-header",
+      "category": "PRICING",
+      "retrievalEligible": true
+    },
+    {
+      "id": "pricing.plan-cards",
+      "category": "PRICING",
+      "retrievalEligible": true
+    },
+    {
+      "id": "shell.site-footer",
+      "category": "SHELL",
+      "retrievalEligible": true
+    },
+    {
+      "id": "shell.site-header",
+      "category": "SHELL",
+      "retrievalEligible": true
+    },
+    {
+      "id": "social-proof.customer-stories",
+      "category": "SOCIAL_PROOF",
+      "retrievalEligible": true,
+      "variants": [
+        "carousel",
+        "grid"
+      ]
+    },
+    {
+      "id": "social-proof.logo-wall",
+      "category": "SOCIAL_PROOF",
+      "retrievalEligible": true,
+      "variants": [
+        "band",
+        "grid",
+        "headed"
+      ]
+    },
+    {
+      "id": "social-proof.scale-stats",
+      "category": "SOCIAL_PROOF",
+      "retrievalEligible": true
+    },
+    {
+      "id": "testimonial.quote",
+      "category": "TESTIMONIAL",
+      "retrievalEligible": true,
+      "variants": [
+        "scroll-curtain",
+        "portrait",
+        "portrait-features"
+      ]
+    }
+  ],
+  "components": [
+    "component.app-card",
+    "component.avatar-wall",
+    "component.billing-toggle",
+    "component.cell-grid",
+    "component.centered-head",
+    "component.dot-pattern",
+    "component.faq-item",
+    "component.guide-row",
+    "component.hatch-gutter",
+    "component.hover-wash",
+    "component.lead-form",
+    "component.logo-mark",
+    "component.mini-mock",
+    "component.plan-card",
+    "component.portrait",
+    "component.resource-card",
+    "component.reveal-quote",
+    "component.search-trigger",
+    "component.section-divider",
+    "component.section-head",
+    "component.section-shell",
+    "component.segmented-tabs",
+    "component.spacer-row",
+    "component.stat-block",
+    "component.step-list",
+    "component.story-card",
+    "component.streaks",
+    "component.subscribe-form",
+    "component.tooltip",
+    "component.two-tone-heading"
+  ],
+  "primitives": [
+    "primitive.app-icon",
+    "primitive.arrow-icon",
+    "primitive.asset-slot",
+    "primitive.avatar-abstract",
+    "primitive.brand-mark",
+    "primitive.button",
+    "primitive.check-icon",
+    "primitive.dashed-rule",
+    "primitive.eyebrow-pill",
+    "primitive.hairline",
+    "primitive.hero-badge",
+    "primitive.inline-link",
+    "primitive.overline",
+    "primitive.select-field",
+    "primitive.small-link-button",
+    "primitive.spinner",
+    "primitive.stroke-icon",
+    "primitive.text-field",
+    "primitive.verified-badge"
+  ],
+  "pageSpecProperties": [
+    "pageSpecVersion",
+    "mode",
+    "template",
+    "route",
+    "brand",
+    "meta",
+    "nodes"
+  ],
+  "nodeProperties": [
+    "id",
+    "type",
+    "variant",
+    "content",
+    "motion",
+    "style"
+  ],
+  "styleFields": [
+    "theme",
+    "surface",
+    "paddingTop",
+    "paddingBottom",
+    "headingFont"
+  ],
+  "motionProperties": [
+    "patterns",
+    "reducedMotionFallback"
+  ],
+  "assetRoles": [
+    "brand.source-wordmark",
+    "brand.reference-wordmark",
+    "brand.placeholder-mark",
+    "brand.user-supplied-mark",
+    "logo.source-customer",
+    "logo.reference-company",
+    "logo.fictional-company",
+    "logo.third-party-app",
+    "icon.generated-app",
+    "icon.stroke-ui",
+    "product.source-screenshot",
+    "product.reference-mock",
+    "product.generated-visual",
+    "person.source-photo",
+    "person.reference-portrait",
+    "person.fictional-portrait",
+    "avatar.abstract",
+    "illustration.reference-art",
+    "illustration.generated-abstract",
+    "illustration.decorative-pattern",
+    "media.source-video",
+    "media.video-placeholder",
+    "rating.source-review",
+    "rating.placeholder",
+    "store.source-badge",
+    "store.placeholder-badge",
+    "chart.illustrative",
+    "url.placeholder",
+    "copy.original"
+  ],
+  "motionPatterns": [
+    "static",
+    "hero-intro-stagger",
+    "hero-scroll-state",
+    "badge-comet",
+    "page-hero-enter",
+    "scroll-spy-nav",
+    "auto-cycle-tabs",
+    "marquee-loop",
+    "word-reveal-scroll",
+    "word-reveal-in-view",
+    "curtain-overlap",
+    "title-in-view",
+    "chart-draw-in-view",
+    "ambient-streaks",
+    "decorative-loop",
+    "avatar-wall-in-view",
+    "frame-line-sweep",
+    "count-roll",
+    "accordion-height",
+    "hover-micro",
+    "featured-tab-enter",
+    "header-theme-swap",
+    "dropdown-panel",
+    "drawer-slide",
+    "dialog-scale",
+    "lightbox-fade",
+    "form-feedback"
+  ]
+}

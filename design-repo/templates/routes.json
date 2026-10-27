@@ -1,0 +1,78 @@
+{
+  "$description": "Every route mounted in the clone's route table (src/App.jsx ROUTES) at extraction time, mapped exactly once to a template. verify_all.py re-reads the route table when the sibling source is present and fails on any unmapped or extra route.",
+  "routeTableEvidence": "src/App.jsx:32-52",
+  "routes": [
+    {
+      "route": "/",
+      "template": "home",
+      "status": "mounted",
+      "evidence": "src/App.jsx:33-33"
+    },
+    {
+      "route": "/pricing",
+      "template": "pricing",
+      "status": "mounted",
+      "evidence": "src/App.jsx:34-34"
+    },
+    {
+      "route": "/customers",
+      "template": "customer-hub",
+      "status": "mounted",
+      "evidence": "src/App.jsx:35-35"
+    },
+    {
+      "route": "/startups",
+      "template": "program-landing",
+      "status": "mounted",
+      "evidence": "src/App.jsx:36-36"
+    },
+    {
+      "route": "/careers",
+      "template": "careers",
+      "status": "mounted",
+      "evidence": "src/App.jsx:37-37"
+    },
+    {
+      "route": "/partners/app-partners",
+      "template": "program-landing",
+      "status": "mounted",
+      "evidence": "src/App.jsx:38-38"
+    },
+    {
+      "route": "/partners/creator-partners",
+      "template": "program-landing",
+      "status": "mounted",
+      "evidence": "src/App.jsx:39-39"
+    },
+    {
+      "route": "/partners/expert-partners",
+      "template": "program-landing",
+      "status": "mounted",
+      "evidence": "src/App.jsx:40-40"
+    },
+    {
+      "route": "/contact/sales",
+      "template": "contact-split",
+      "status": "mounted",
+      "evidence": "src/App.jsx:41-41"
+    },
+    {
+      "route": "/apps",
+      "template": "app-directory",
+      "status": "mounted",
+      "evidence": "src/App.jsx:42-42"
+    },
+    {
+      "route": "/apps/:slug",
+      "template": "app-detail",
+      "status": "mounted",
+      "evidence": "src/App.jsx:43-43",
+      "measuredInstances": [
+        "/apps/chatgpt",
+        "/apps/claude",
+        "/apps/slack"
+      ],
+      "note": "Parameterised route; 272 generated slugs exist in src/data/apps.js. The three measured instances keep slugs crawled from the source (they name real third-party products) while showing invented app names; generated pages must never reuse those slugs (GENERATED_MODE_URL)."
+    }
+  ]
+}

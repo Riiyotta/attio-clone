@@ -1,0 +1,17 @@
+{
+  "id": "primitive.spinner",
+  "kind": "primitive",
+  "title": "Spinner",
+  "purpose": "Submit-in-progress spinner (spin 1s linear).",
+  "source": {
+    "file": "src/components/ui.jsx",
+    "tag": "export function SpinnerIcon(",
+    "lines": "189-195",
+    "citation": "src/components/ui.jsx:189-195"
+  },
+  "props": {
+    "size": "px"
+  },
+  "tokens": [],
+  "states": []
+}

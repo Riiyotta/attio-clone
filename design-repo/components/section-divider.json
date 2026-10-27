@@ -1,0 +1,17 @@
+{
+  "id": "component.section-divider",
+  "kind": "component",
+  "title": "Section divider",
+  "purpose": "Full-width 1px svg divider (light/dark).",
+  "source": {
+    "file": "src/components/SectionDivider.jsx",
+    "tag": "export default function SectionDivider(",
+    "lines": "3-15",
+    "citation": "src/components/SectionDivider.jsx:3-15"
+  },
+  "composes": [],
+  "tokens": [
+    "hairline.color",
+    "hairline.color-dark"
+  ]
+}

@@ -1,0 +1,429 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "section-contract.schema.json",
+  "title": "Section contract",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "title",
+    "status",
+    "source",
+    "semantic",
+    "retrievalEligible",
+    "purpose",
+    "themes",
+    "content",
+    "constraints",
+    "motion",
+    "responsive",
+    "assetSlots",
+    "generatedAssetRoles",
+    "composes",
+    "measured",
+    "referenceRoutes"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z-]+\\.[a-z0-9-]+$"
+    },
+    "title": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "measured"
+      ]
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "file",
+        "tag",
+        "lines",
+        "citation"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^src:"
+        },
+        "file": {
+          "type": "string"
+        },
+        "tag": {
+          "type": "string"
+        },
+        "lines": {
+          "type": "string",
+          "pattern": "^\\d+-\\d+$"
+        },
+        "citation": {
+          "type": "string"
+        },
+        "alsoImplementedBy": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/cite"
+          }
+        },
+        "variantSources": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/definitions/cite"
+          }
+        }
+      }
+    },
+    "semantic": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "category"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "category": {
+          "enum": [
+            "SHELL",
+            "HERO",
+            "SOCIAL_PROOF",
+            "FEATURES",
+            "TESTIMONIAL",
+            "PRICING",
+            "FAQ",
+            "CONVERSION",
+            "CONTENT",
+            "EDITORIAL",
+            "MEDIA",
+            "LISTING",
+            "NAVIGATION",
+            "UTILITY"
+          ]
+        }
+      }
+    },
+    "retrievalEligible": {
+      "type": "boolean"
+    },
+    "retrievalIneligibleReason": {
+      "type": "string",
+      "minLength": 30
+    },
+    "purpose": {
+      "type": "string",
+      "minLength": 20
+    },
+    "themes": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "light",
+          "dark"
+        ]
+      },
+      "minItems": 1
+    },
+    "variants": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 2
+    },
+    "variantRequirements": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    "content": {
+      "type": "object",
+      "required": [
+        "type",
+        "properties",
+        "required",
+        "additionalProperties"
+      ],
+      "properties": {
+        "additionalProperties": {
+          "const": false
+        }
+      }
+    },
+    "constraints": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "onePerPage": {
+          "type": "boolean"
+        },
+        "maxPerPage": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "mustBeFirst": {
+          "type": "boolean"
+        },
+        "mustBeLast": {
+          "type": "boolean"
+        },
+        "mustPrecedeFooter": {
+          "type": "boolean"
+        },
+        "homeRouteOnly": {
+          "type": "boolean"
+        },
+        "repeatable": {
+          "type": "boolean"
+        }
+      }
+    },
+    "motion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "allowedPatterns",
+        "reducedMotionFallback",
+        "evidence"
+      ],
+      "properties": {
+        "allowedPatterns": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "enum": [
+              "static",
+              "hero-intro-stagger",
+              "hero-scroll-state",
+              "badge-comet",
+              "page-hero-enter",
+              "scroll-spy-nav",
+              "auto-cycle-tabs",
+              "marquee-loop",
+              "word-reveal-scroll",
+              "word-reveal-in-view",
+              "curtain-overlap",
+              "title-in-view",
+              "chart-draw-in-view",
+              "ambient-streaks",
+              "decorative-loop",
+              "avatar-wall-in-view",
+              "frame-line-sweep",
+              "count-roll",
+              "accordion-height",
+              "hover-micro",
+              "featured-tab-enter",
+              "header-theme-swap",
+              "dropdown-panel",
+              "drawer-slide",
+              "dialog-scale",
+              "lightbox-fade",
+              "form-feedback"
+            ]
+          }
+        },
+        "reducedMotionFallback": {
+          "enum": [
+            "none-needed",
+            "static-final-state",
+            "instant-state-change",
+            "paused-first-frame",
+            "manual-advance-only",
+            "hidden"
+          ]
+        },
+        "evidence": {
+          "type": "string"
+        }
+      }
+    },
+    "responsive": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "primaryBreakpoint",
+        "changes"
+      ],
+      "properties": {
+        "primaryBreakpoint": {
+          "type": "string",
+          "pattern": "^breakpoint\\."
+        },
+        "changes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "at",
+              "change",
+              "detail"
+            ],
+            "properties": {
+              "at": {
+                "enum": [
+                  "below-lg",
+                  "below-md"
+                ]
+              },
+              "change": {
+                "enum": [
+                  "stack",
+                  "collapse-grid",
+                  "hide",
+                  "show-alternate-tree",
+                  "scroll-row",
+                  "resize-type",
+                  "reflow"
+                ]
+              },
+              "detail": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "assetSlots": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "field",
+          "assetRoles"
+        ],
+        "properties": {
+          "field": {
+            "type": "string"
+          },
+          "assetRoles": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "brand.source-wordmark",
+                "brand.reference-wordmark",
+                "brand.placeholder-mark",
+                "brand.user-supplied-mark",
+                "logo.source-customer",
+                "logo.reference-company",
+                "logo.fictional-company",
+                "logo.third-party-app",
+                "icon.generated-app",
+                "icon.stroke-ui",
+                "product.source-screenshot",
+                "product.reference-mock",
+                "product.generated-visual",
+                "person.source-photo",
+                "person.reference-portrait",
+                "person.fictional-portrait",
+                "avatar.abstract",
+                "illustration.reference-art",
+                "illustration.generated-abstract",
+                "illustration.decorative-pattern",
+                "media.source-video",
+                "media.video-placeholder",
+                "rating.source-review",
+                "rating.placeholder",
+                "store.source-badge",
+                "store.placeholder-badge",
+                "chart.illustrative",
+                "url.placeholder",
+                "copy.original"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "generatedAssetRoles": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "brand.placeholder-mark",
+          "brand.user-supplied-mark",
+          "logo.fictional-company",
+          "icon.generated-app",
+          "icon.stroke-ui",
+          "product.generated-visual",
+          "person.fictional-portrait",
+          "avatar.abstract",
+          "illustration.generated-abstract",
+          "illustration.decorative-pattern",
+          "media.video-placeholder",
+          "rating.placeholder",
+          "store.placeholder-badge",
+          "chart.illustrative",
+          "url.placeholder",
+          "copy.original"
+        ]
+      }
+    },
+    "composes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^(primitive|component)\\."
+      }
+    },
+    "measured": {
+      "type": "object"
+    },
+    "referenceRoutes": {
+      "type": "array"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "if": {
+    "properties": {
+      "retrievalEligible": {
+        "const": false
+      }
+    }
+  },
+  "then": {
+    "required": [
+      "retrievalIneligibleReason"
+    ]
+  },
+  "definitions": {
+    "cite": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "file",
+        "tag",
+        "lines",
+        "citation"
+      ],
+      "properties": {
+        "file": {
+          "type": "string"
+        },
+        "tag": {
+          "type": "string"
+        },
+        "lines": {
+          "type": "string",
+          "pattern": "^\\d+-\\d+$"
+        },
+        "citation": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

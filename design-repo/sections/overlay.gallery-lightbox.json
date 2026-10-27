@@ -1,0 +1,61 @@
+{
+  "id": "overlay.gallery-lightbox",
+  "title": "Gallery lightbox",
+  "status": "measured",
+  "source": {
+    "id": "src:Gallery#function-Lightbox",
+    "file": "src/components/apps/Gallery.jsx",
+    "tag": "function Lightbox(",
+    "lines": "85-156",
+    "citation": "src/components/apps/Gallery.jsx:85-156"
+  },
+  "semantic": {
+    "id": "overlay.gallery-lightbox",
+    "category": "UTILITY"
+  },
+  "retrievalEligible": false,
+  "retrievalIneligibleReason": "Runtime modal overlay (lightbox) shown only after a thumbnail click; not page content, never a retrievable section.",
+  "purpose": "Full-screen screenshot viewer opened from the gallery.",
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "closeLabel": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 3,
+        "x-maxWordsEvidence": "measured 2 words"
+      }
+    },
+    "required": [
+      "closeLabel"
+    ]
+  },
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "lightbox-fade"
+    ],
+    "reducedMotionFallback": "instant-state-change",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": []
+  },
+  "assetSlots": [],
+  "generatedAssetRoles": [
+    "copy.original",
+    "url.placeholder"
+  ],
+  "composes": [],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": []
+}

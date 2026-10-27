@@ -1,0 +1,14 @@
+{
+  "id": "component.portrait",
+  "kind": "component",
+  "title": "Portrait",
+  "purpose": "240px illustrated portrait box beside quotes.",
+  "source": {
+    "file": "src/components/marketing/art.jsx",
+    "tag": "export function PortraitArt(",
+    "lines": "70-98",
+    "citation": "src/components/marketing/art.jsx:70-98"
+  },
+  "composes": [],
+  "tokens": []
+}

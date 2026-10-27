@@ -1,0 +1,16 @@
+{
+  "id": "component.logo-mark",
+  "kind": "component",
+  "title": "Logo cell",
+  "purpose": "Monochrome wordmark in a contain-fit cell.",
+  "source": {
+    "file": "src/components/marketing/art.jsx",
+    "tag": "export function LogoMark(",
+    "lines": "15-23",
+    "citation": "src/components/marketing/art.jsx:15-23"
+  },
+  "composes": [],
+  "tokens": [
+    "color.black.300"
+  ]
+}

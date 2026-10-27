@@ -1,0 +1,19 @@
+{
+  "id": "component.section-shell",
+  "kind": "component",
+  "title": "Section shell",
+  "purpose": "Container + bordered column (border-x subtle stroke) that frames almost every section.",
+  "source": {
+    "file": "src/components/marketing/primitives.jsx",
+    "tag": "export function Section(",
+    "lines": "6-12",
+    "citation": "src/components/marketing/primitives.jsx:6-12"
+  },
+  "composes": [
+    "primitive.hairline"
+  ],
+  "tokens": [
+    "container.max-lg",
+    "hairline.color"
+  ]
+}

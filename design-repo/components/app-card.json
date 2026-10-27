@@ -1,0 +1,21 @@
+{
+  "id": "component.app-card",
+  "kind": "component",
+  "title": "App card",
+  "purpose": "Directory card: app icon, name, developer, description, verified badge, hover arrow.",
+  "source": {
+    "file": "src/components/apps/AppCard.jsx",
+    "tag": "export default function AppCard(",
+    "lines": "28-55",
+    "citation": "src/components/apps/AppCard.jsx:28-55"
+  },
+  "composes": [
+    "primitive.app-icon",
+    "primitive.verified-badge",
+    "primitive.arrow-icon"
+  ],
+  "tokens": [
+    "card.border",
+    "radius.12"
+  ]
+}

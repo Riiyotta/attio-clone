@@ -1,0 +1,96 @@
+{
+  "id": "conversion.build-with-us",
+  "title": "Build with us",
+  "status": "measured",
+  "source": {
+    "id": "src:Sections#export-function-BuildWithUs",
+    "file": "src/components/apps/Sections.jsx",
+    "tag": "export function BuildWithUs(",
+    "lines": "263-302",
+    "citation": "src/components/apps/Sections.jsx:263-302"
+  },
+  "semantic": {
+    "id": "conversion.build-with-us",
+    "category": "CONVERSION"
+  },
+  "retrievalEligible": true,
+  "purpose": "Developer conversion block closing the app directory: heading, one line and CTAs beside a plus-cell pattern.",
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "heading": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 4,
+        "x-maxWordsEvidence": "measured headingWordsMax=3 for conversion.build-with-us at 1440px"
+      },
+      "body": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 13,
+        "x-maxWordsEvidence": "measured paragraphWordsMax=10 for conversion.build-with-us at 1440px"
+      },
+      "ctas": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 2,
+        "items": {
+          "$ref": "#/definitions/cta"
+        }
+      }
+    },
+    "required": [
+      "heading",
+      "body",
+      "ctas"
+    ]
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "hover-micro"
+    ],
+    "reducedMotionFallback": "instant-state-change",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "stack",
+        "detail": "pattern hidden; CTAs stack."
+      }
+    ]
+  },
+  "assetSlots": [],
+  "generatedAssetRoles": [
+    "copy.original",
+    "url.placeholder"
+  ],
+  "composes": [],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/apps",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 438
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/apps",
+      "variant": null
+    }
+  ]
+}

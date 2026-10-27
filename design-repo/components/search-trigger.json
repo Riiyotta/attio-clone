@@ -1,0 +1,19 @@
+{
+  "id": "component.search-trigger",
+  "kind": "component",
+  "title": "Search trigger",
+  "purpose": "Search field button with keyboard hint that opens the search dialog.",
+  "source": {
+    "file": "src/components/marketing/SearchDialog.jsx",
+    "tag": "export function SearchTrigger(",
+    "lines": "21-36",
+    "citation": "src/components/marketing/SearchDialog.jsx:21-36"
+  },
+  "composes": [
+    "primitive.stroke-icon"
+  ],
+  "tokens": [
+    "elevation.layer-3",
+    "type.search-hint"
+  ]
+}

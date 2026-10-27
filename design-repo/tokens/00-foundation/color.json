@@ -1,0 +1,467 @@
+{
+  "$description": "Foundation colour palette. Every value is read from the clone's token file (the default framework palette is replaced, not extended). usageCount = occurrences of the token in src/**/*.{js,jsx} + src/index.css at extraction time.",
+  "tokens": {
+    "color.black.0": {
+      "value": "#000000",
+      "sourceKey": "colors.black-0",
+      "usageCount": 5,
+      "evidence": "tailwind.config.cjs:41-41"
+    },
+    "color.black.50": {
+      "value": "#101010",
+      "sourceKey": "colors.black-50",
+      "usageCount": 32,
+      "evidence": "tailwind.config.cjs:42-42"
+    },
+    "color.black.100": {
+      "value": "#1c1d1f",
+      "sourceKey": "colors.black-100",
+      "usageCount": 151,
+      "evidence": "tailwind.config.cjs:43-43"
+    },
+    "color.black.200": {
+      "value": "#202124",
+      "sourceKey": "colors.black-200",
+      "usageCount": 9,
+      "evidence": "tailwind.config.cjs:44-44"
+    },
+    "color.black.300": {
+      "value": "#232529",
+      "sourceKey": "colors.black-300",
+      "usageCount": 102,
+      "evidence": "tailwind.config.cjs:45-45"
+    },
+    "color.black.400": {
+      "value": "#2e3238",
+      "sourceKey": "colors.black-400",
+      "usageCount": 48,
+      "evidence": "tailwind.config.cjs:46-46"
+    },
+    "color.black.500": {
+      "value": "#383e47",
+      "sourceKey": "colors.black-500",
+      "usageCount": 26,
+      "evidence": "tailwind.config.cjs:47-47"
+    },
+    "color.black.600": {
+      "value": "#505967",
+      "sourceKey": "colors.black-600",
+      "usageCount": 110,
+      "evidence": "tailwind.config.cjs:48-48"
+    },
+    "color.black.700": {
+      "value": "#6f7988",
+      "sourceKey": "colors.black-700",
+      "usageCount": 144,
+      "evidence": "tailwind.config.cjs:49-49"
+    },
+    "color.black.800": {
+      "value": "#8f99a8",
+      "sourceKey": "colors.black-800",
+      "usageCount": 68,
+      "evidence": "tailwind.config.cjs:50-50"
+    },
+    "color.black.900": {
+      "value": "#a4adba",
+      "sourceKey": "colors.black-900",
+      "usageCount": 57,
+      "evidence": "tailwind.config.cjs:51-51"
+    },
+    "color.white.100": {
+      "value": "#ffffff",
+      "sourceKey": "colors.white-100",
+      "usageCount": 189,
+      "evidence": "tailwind.config.cjs:54-54"
+    },
+    "color.white.200": {
+      "value": "#fafafb",
+      "sourceKey": "colors.white-200",
+      "usageCount": 83,
+      "evidence": "tailwind.config.cjs:55-55"
+    },
+    "color.white.300": {
+      "value": "#f3f4f6",
+      "sourceKey": "colors.white-300",
+      "usageCount": 44,
+      "evidence": "tailwind.config.cjs:56-56"
+    },
+    "color.white.400": {
+      "value": "#edeff3",
+      "sourceKey": "colors.white-400",
+      "usageCount": 40,
+      "evidence": "tailwind.config.cjs:57-57"
+    },
+    "color.white.500": {
+      "value": "#e4e7ec",
+      "sourceKey": "colors.white-500",
+      "usageCount": 165,
+      "evidence": "tailwind.config.cjs:58-58"
+    },
+    "color.white.600": {
+      "value": "#dee2e7",
+      "sourceKey": "colors.white-600",
+      "usageCount": 7,
+      "evidence": "tailwind.config.cjs:59-59"
+    },
+    "color.white.700": {
+      "value": "#d3d8df",
+      "sourceKey": "colors.white-700",
+      "usageCount": 30,
+      "evidence": "tailwind.config.cjs:60-60"
+    },
+    "color.white.800": {
+      "value": "#cad0d9",
+      "sourceKey": "colors.white-800",
+      "usageCount": 21,
+      "evidence": "tailwind.config.cjs:61-61"
+    },
+    "color.white.900": {
+      "value": "#b5bdc9",
+      "sourceKey": "colors.white-900",
+      "usageCount": 25,
+      "evidence": "tailwind.config.cjs:62-62"
+    },
+    "color.blue.100": {
+      "value": "#e8f0ff",
+      "sourceKey": "colors.blue-100",
+      "usageCount": 17,
+      "evidence": "tailwind.config.cjs:65-65"
+    },
+    "color.blue.200": {
+      "value": "#c8dcff",
+      "sourceKey": "colors.blue-200",
+      "usageCount": 10,
+      "evidence": "tailwind.config.cjs:66-66"
+    },
+    "color.blue.300": {
+      "value": "#94b9ff",
+      "sourceKey": "colors.blue-300",
+      "usageCount": 8,
+      "evidence": "tailwind.config.cjs:67-67"
+    },
+    "color.blue.400": {
+      "value": "#709ff5",
+      "sourceKey": "colors.blue-400",
+      "usageCount": 16,
+      "evidence": "tailwind.config.cjs:68-68"
+    },
+    "color.blue.450": {
+      "value": "#538bf3",
+      "sourceKey": "colors.blue-450",
+      "usageCount": 3,
+      "evidence": "tailwind.config.cjs:69-69"
+    },
+    "color.blue.500": {
+      "value": "#266df0",
+      "sourceKey": "colors.blue-500",
+      "usageCount": 30,
+      "evidence": "tailwind.config.cjs:70-70"
+    },
+    "color.blue.600": {
+      "value": "#245bc2",
+      "sourceKey": "colors.blue-600",
+      "usageCount": 12,
+      "evidence": "tailwind.config.cjs:71-71"
+    },
+    "color.blue.800": {
+      "value": "#1a2233",
+      "sourceKey": "colors.blue-800",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:72-72"
+    },
+    "color.traffic.red": {
+      "value": "#ff5b59",
+      "sourceKey": "colors.traffic-red",
+      "usageCount": 9,
+      "evidence": "tailwind.config.cjs:91-91"
+    },
+    "color.traffic.yellow": {
+      "value": "#f5b900",
+      "sourceKey": "colors.traffic-yellow",
+      "usageCount": 17,
+      "evidence": "tailwind.config.cjs:91-91"
+    },
+    "color.traffic.green": {
+      "value": "#0fc27b",
+      "sourceKey": "colors.traffic-green",
+      "usageCount": 22,
+      "evidence": "tailwind.config.cjs:91-91"
+    },
+    "color.header-glass": {
+      "value": "rgba(255,255,255,0.95)",
+      "sourceKey": "colors.header-glass",
+      "usageCount": 2,
+      "evidence": "tailwind.config.cjs:92-92"
+    },
+    "color.window-shell": {
+      "value": "rgba(243,244,246,0.8)",
+      "sourceKey": "colors.window-shell",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:93-93"
+    },
+    "color.window-shell-dark": {
+      "value": "rgba(0,0,0,0.8)",
+      "sourceKey": "colors.window-shell-dark",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:94-94"
+    },
+    "color.window-hairline": {
+      "value": "rgba(0,0,0,0.05)",
+      "sourceKey": "colors.window-hairline",
+      "usageCount": 3,
+      "evidence": "tailwind.config.cjs:95-95"
+    },
+    "color.frost": {
+      "value": "rgba(255,255,255,0.6)",
+      "sourceKey": "colors.frost",
+      "usageCount": 2,
+      "evidence": "tailwind.config.cjs:96-96"
+    },
+    "color.dark-primary-border": {
+      "value": "rgba(80,90,104,0.5)",
+      "sourceKey": "colors.dark-primary-border",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:97-97"
+    },
+    "color.mock.surface": {
+      "value": "#fbfbfb",
+      "sourceKey": "colors.mock-surface",
+      "usageCount": 10,
+      "evidence": "tailwind.config.cjs:98-98"
+    },
+    "color.mock.stroke": {
+      "value": "#eeeff1",
+      "sourceKey": "colors.mock-stroke",
+      "usageCount": 29,
+      "evidence": "tailwind.config.cjs:99-99"
+    },
+    "color.badge-hover": {
+      "value": "#fbfbfc",
+      "sourceKey": "colors.badge-hover",
+      "usageCount": 2,
+      "evidence": "tailwind.config.cjs:101-101"
+    },
+    "color.tick": {
+      "value": "rgba(230,231,234,0.85)",
+      "sourceKey": "colors.tick",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:102-102"
+    },
+    "color.red.500": {
+      "value": "#ff5b59",
+      "sourceKey": "colors.red-500",
+      "usageCount": 2,
+      "evidence": "tailwind.config.cjs:106-106"
+    },
+    "color.red.600": {
+      "value": "#f65351",
+      "sourceKey": "colors.red-600",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:106-106"
+    },
+    "color.red.700": {
+      "value": "#ce2e4b",
+      "sourceKey": "colors.red-700",
+      "usageCount": 2,
+      "evidence": "tailwind.config.cjs:106-106"
+    },
+    "color.select-ring": {
+      "value": "rgba(36,109,238,0.30)",
+      "sourceKey": "colors.select-ring",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:107-107"
+    },
+    "color.error-ring": {
+      "value": "rgba(246,83,81,0.30)",
+      "sourceKey": "colors.error-ring",
+      "usageCount": 0,
+      "evidence": "tailwind.config.cjs:108-108"
+    },
+    "color.name-pill": {
+      "value": "rgba(228,232,237,0.6)",
+      "sourceKey": "colors.name-pill",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:109-109"
+    },
+    "color.tile-ring": {
+      "value": "rgba(20,20,39,0.05)",
+      "sourceKey": "colors.tile-ring",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:110-110"
+    },
+    "color.media-ring": {
+      "value": "rgba(29,29,29,0.1)",
+      "sourceKey": "colors.media-ring",
+      "usageCount": 6,
+      "evidence": "tailwind.config.cjs:111-111"
+    },
+    "color.player-btn": {
+      "value": "rgba(0,0,0,0.12)",
+      "sourceKey": "colors.player-btn",
+      "usageCount": 3,
+      "evidence": "tailwind.config.cjs:112-112"
+    },
+    "color.quote-ring": {
+      "value": "rgba(0,0,0,0.15)",
+      "sourceKey": "colors.quote-ring",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:113-113"
+    },
+    "color.tag-pill": {
+      "value": "#f4f5f6",
+      "sourceKey": "colors.tag-pill",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:114-114"
+    },
+    "color.careers.violet": {
+      "value": "#9162f9",
+      "sourceKey": "colors.careers-violet",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:115-115"
+    },
+    "color.careers.orange": {
+      "value": "#fd9038",
+      "sourceKey": "colors.careers-orange",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:115-115"
+    },
+    "color.careers.plus": {
+      "value": "#75777c",
+      "sourceKey": "colors.careers-plus",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:115-115"
+    },
+    "color.careers.bubble": {
+      "value": "#fbfbfb",
+      "sourceKey": "colors.careers-bubble",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:115-115"
+    },
+    "color.art.haze": {
+      "value": "#e6ecff",
+      "sourceKey": "colors.art-haze",
+      "usageCount": 9,
+      "evidence": "tailwind.config.cjs:117-117"
+    },
+    "color.art.periwinkle": {
+      "value": "#bccbff",
+      "sourceKey": "colors.art-periwinkle",
+      "usageCount": 11,
+      "evidence": "tailwind.config.cjs:118-118"
+    },
+    "color.art.iris": {
+      "value": "#86a0ee",
+      "sourceKey": "colors.art-iris",
+      "usageCount": 14,
+      "evidence": "tailwind.config.cjs:119-119"
+    },
+    "color.art.mist": {
+      "value": "#eef1ea",
+      "sourceKey": "colors.art-mist",
+      "usageCount": 6,
+      "evidence": "tailwind.config.cjs:120-120"
+    },
+    "color.art.teal": {
+      "value": "#6cbdb0",
+      "sourceKey": "colors.art-teal",
+      "usageCount": 19,
+      "evidence": "tailwind.config.cjs:121-121"
+    },
+    "color.art.navy": {
+      "value": "#161e69",
+      "sourceKey": "colors.art-navy",
+      "usageCount": 10,
+      "evidence": "tailwind.config.cjs:122-122"
+    },
+    "color.art.ember": {
+      "value": "#bb2a1e",
+      "sourceKey": "colors.art-ember",
+      "usageCount": 9,
+      "evidence": "tailwind.config.cjs:123-123"
+    },
+    "color.art.citron": {
+      "value": "#ccc427",
+      "sourceKey": "colors.art-citron",
+      "usageCount": 8,
+      "evidence": "tailwind.config.cjs:124-124"
+    },
+    "color.green.600": {
+      "value": "#0db472",
+      "sourceKey": "colors.green-600",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:127-127"
+    },
+    "color.hover-row": {
+      "value": "#f5f6f8",
+      "sourceKey": "colors.hover-row",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:128-128"
+    },
+    "color.sidebar-text": {
+      "value": "#717a88",
+      "sourceKey": "colors.sidebar-text",
+      "usageCount": 2,
+      "evidence": "tailwind.config.cjs:129-129"
+    },
+    "color.help-muted": {
+      "value": "#727b84",
+      "sourceKey": "colors.help-muted",
+      "usageCount": 2,
+      "evidence": "tailwind.config.cjs:130-130"
+    },
+    "color.lightbox-overlay": {
+      "value": "rgba(202,207,217,0.4)",
+      "sourceKey": "colors.lightbox-overlay",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:131-131"
+    },
+    "color.dialog-overlay": {
+      "value": "rgba(110,120,135,0.4)",
+      "sourceKey": "colors.dialog-overlay",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:132-132"
+    },
+    "color.ascii": {
+      "value": "#cfd4dc",
+      "sourceKey": "colors.ascii",
+      "usageCount": 2,
+      "evidence": "tailwind.config.cjs:133-133"
+    },
+    "color.dim-white": {
+      "value": "rgba(255,255,255,0.2)",
+      "sourceKey": "colors.dim-white",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:134-134"
+    },
+    "color.tag-line": {
+      "value": "rgba(255,255,255,0.4)",
+      "sourceKey": "colors.tag-line",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:135-135"
+    },
+    "color.code-glyph": {
+      "value": "#3f4855",
+      "sourceKey": "colors.code-glyph",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:136-136"
+    },
+    "color.arch.story": {
+      "value": "#e0d9cc",
+      "sourceKey": "colors.arch-story",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:138-138"
+    },
+    "color.arch.architecture": {
+      "value": "#e4ebe4",
+      "sourceKey": "colors.arch-architecture",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:139-139"
+    },
+    "color.arch.launch": {
+      "value": "#e3d6c8",
+      "sourceKey": "colors.arch-launch",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:140-140"
+    }
+  }
+}

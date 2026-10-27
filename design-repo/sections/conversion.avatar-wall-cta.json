@@ -1,0 +1,112 @@
+{
+  "id": "conversion.avatar-wall-cta",
+  "title": "Avatar wall CTA",
+  "status": "measured",
+  "source": {
+    "id": "src:Blocks#export-function-CtaAvatarWall",
+    "file": "src/components/marketing/Blocks.jsx",
+    "tag": "export function CtaAvatarWall(",
+    "lines": "266-322",
+    "citation": "src/components/marketing/Blocks.jsx:266-322"
+  },
+  "semantic": {
+    "id": "conversion.avatar-wall-cta",
+    "category": "CONVERSION"
+  },
+  "retrievalEligible": true,
+  "purpose": "Community conversion close: avatar wall, two-line sans + serif heading, primary and outline CTAs.",
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "line1": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 5,
+        "x-maxWordsEvidence": "c14"
+      },
+      "line2": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 7,
+        "x-maxWordsEvidence": "c23"
+      },
+      "primaryCta": {
+        "$ref": "#/definitions/cta"
+      },
+      "secondaryCta": {
+        "$ref": "#/definitions/cta"
+      },
+      "avatars": {
+        "$ref": "#/definitions/media",
+        "x-assetRoles": [
+          "avatar.abstract"
+        ]
+      }
+    },
+    "required": [
+      "line1",
+      "line2",
+      "primaryCta",
+      "avatars"
+    ]
+  },
+  "constraints": {
+    "onePerPage": true,
+    "mustPrecedeFooter": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "avatar-wall-in-view"
+    ],
+    "reducedMotionFallback": "static-final-state",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "reflow",
+        "detail": "tiles 28px, 15 per row at 768, 11 at 390; buttons stack below md."
+      }
+    ]
+  },
+  "assetSlots": [
+    {
+      "field": ".avatars",
+      "assetRoles": [
+        "avatar.abstract"
+      ]
+    }
+  ],
+  "generatedAssetRoles": [
+    "avatar.abstract",
+    "copy.original",
+    "url.placeholder"
+  ],
+  "composes": [
+    "component.avatar-wall"
+  ],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/customers",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 719
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/customers",
+      "variant": null
+    }
+  ]
+}

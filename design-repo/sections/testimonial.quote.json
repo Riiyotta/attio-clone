@@ -1,0 +1,208 @@
+{
+  "id": "testimonial.quote",
+  "title": "Testimonial quote",
+  "status": "measured",
+  "source": {
+    "id": "src:Blocks#export-function-QuoteReveal",
+    "file": "src/components/marketing/Blocks.jsx",
+    "tag": "export function QuoteReveal(",
+    "lines": "148-205",
+    "citation": "src/components/marketing/Blocks.jsx:148-205",
+    "variantSources": {
+      "scroll-curtain": {
+        "file": "src/components/UniversalContext.jsx",
+        "tag": "function QuoteReveal()",
+        "lines": "757-791",
+        "citation": "src/components/UniversalContext.jsx:757-791"
+      },
+      "portrait": {
+        "file": "src/components/marketing/Blocks.jsx",
+        "tag": "export function QuoteReveal(",
+        "lines": "148-205",
+        "citation": "src/components/marketing/Blocks.jsx:148-205"
+      },
+      "portrait-features": {
+        "file": "src/components/marketing/Blocks.jsx",
+        "tag": "export function QuoteReveal(",
+        "lines": "148-205",
+        "citation": "src/components/marketing/Blocks.jsx:148-205"
+      }
+    }
+  },
+  "semantic": {
+    "id": "testimonial.quote",
+    "category": "TESTIMONIAL"
+  },
+  "retrievalEligible": true,
+  "purpose": "A single customer/partner quote: scroll-linked serif word reveal under the dark curtain (home), or a portrait + in-view word reveal (customers, partners) with optional favourite-feature chips.",
+  "themes": [
+    "light"
+  ],
+  "variants": [
+    "scroll-curtain",
+    "portrait",
+    "portrait-features"
+  ],
+  "variantRequirements": {
+    "portrait": [
+      "portrait"
+    ],
+    "portrait-features": [
+      "portrait",
+      "features"
+    ]
+  },
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "overline": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 5,
+        "x-maxWordsEvidence": "partner overline c18-c22"
+      },
+      "quote": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 40,
+        "x-maxWordsEvidence": "quote c<=170 (pages spec C5) / 17 words (home M12)"
+      },
+      "person": {
+        "$ref": "#/definitions/person"
+      },
+      "portrait": {
+        "$ref": "#/definitions/media",
+        "x-assetRoles": [
+          "person.reference-portrait",
+          "person.fictional-portrait",
+          "avatar.abstract"
+        ]
+      },
+      "featuresLabel": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 7,
+        "x-maxWordsEvidence": "measured 5 words"
+      },
+      "features": {
+        "type": "array",
+        "minItems": 3,
+        "maxItems": 3,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "icon": {
+              "$ref": "#/definitions/icon"
+            },
+            "label": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 3,
+              "x-maxWordsEvidence": "measured 2 words"
+            }
+          },
+          "required": [
+            "icon",
+            "label"
+          ]
+        }
+      }
+    },
+    "required": [
+      "quote",
+      "person"
+    ]
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "word-reveal-scroll",
+      "word-reveal-in-view",
+      "curtain-overlap"
+    ],
+    "reducedMotionFallback": "static-final-state",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "stack",
+        "detail": "portrait above quote; serif 28/36.4 -> 24/31.2 (home 48/52 -> 32/36)."
+      }
+    ]
+  },
+  "assetSlots": [
+    {
+      "field": ".portrait",
+      "assetRoles": [
+        "person.reference-portrait",
+        "person.fictional-portrait",
+        "avatar.abstract"
+      ]
+    }
+  ],
+  "generatedAssetRoles": [
+    "avatar.abstract",
+    "copy.original",
+    "person.fictional-portrait",
+    "url.placeholder"
+  ],
+  "composes": [
+    "component.reveal-quote",
+    "component.portrait"
+  ],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/",
+        "variant": "scroll-curtain",
+        "instance": 0,
+        "heightPx": 2250
+      },
+      {
+        "route": "/customers",
+        "variant": "portrait",
+        "instance": 0,
+        "heightPx": 496
+      },
+      {
+        "route": "/partners/app-partners",
+        "variant": "portrait-features",
+        "instance": 0,
+        "heightPx": 452
+      },
+      {
+        "route": "/partners/creator-partners",
+        "variant": "portrait-features",
+        "instance": 0,
+        "heightPx": 452
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/",
+      "variant": "scroll-curtain"
+    },
+    {
+      "route": "/customers",
+      "variant": "portrait"
+    },
+    {
+      "route": "/partners/app-partners",
+      "variant": "portrait-features"
+    },
+    {
+      "route": "/partners/creator-partners",
+      "variant": "portrait-features"
+    }
+  ]
+}

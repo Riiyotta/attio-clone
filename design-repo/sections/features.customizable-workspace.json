@@ -1,0 +1,117 @@
+{
+  "id": "features.customizable-workspace",
+  "title": "Customizable workspace",
+  "status": "measured",
+  "source": {
+    "id": "src:SelfBuilding#export-default-function-SelfBuilding",
+    "file": "src/components/SelfBuilding.jsx",
+    "tag": "export default function SelfBuilding(",
+    "lines": "37-113",
+    "citation": "src/components/SelfBuilding.jsx:37-113"
+  },
+  "semantic": {
+    "id": "features.customizable-workspace",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "purpose": "One capability statement: long two-tone heading, CTA, and a large framed record card on a tick-band surface.",
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "heading": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "lead": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 33,
+            "x-maxWordsEvidence": "measured headingWordsMax=26 for features.customizable-workspace at 1440px"
+          },
+          "continuation": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 33,
+            "x-maxWordsEvidence": "measured headingWordsMax=26 for features.customizable-workspace at 1440px"
+          }
+        },
+        "required": [
+          "lead",
+          "continuation"
+        ]
+      },
+      "cta": {
+        "$ref": "#/definitions/cta"
+      },
+      "visual": {
+        "$ref": "#/definitions/media",
+        "x-assetRoles": [
+          "product.reference-mock",
+          "product.generated-visual"
+        ]
+      }
+    },
+    "required": [
+      "heading",
+      "visual"
+    ]
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "decorative-loop",
+      "static"
+    ],
+    "reducedMotionFallback": "paused-first-frame",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "resize-type",
+        "detail": "section heading 40/44 -> 32/36."
+      }
+    ]
+  },
+  "assetSlots": [
+    {
+      "field": ".visual",
+      "assetRoles": [
+        "product.reference-mock",
+        "product.generated-visual"
+      ]
+    }
+  ],
+  "generatedAssetRoles": [
+    "copy.original",
+    "product.generated-visual",
+    "url.placeholder"
+  ],
+  "composes": [],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 1097
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/",
+      "variant": null
+    }
+  ]
+}

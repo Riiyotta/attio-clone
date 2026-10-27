@@ -1,0 +1,114 @@
+{
+  "id": "pricing.comparison-header",
+  "title": "Comparison header",
+  "status": "measured",
+  "source": {
+    "id": "src:ComparisonTable#sticky-top-var-site-header-height-z-2",
+    "file": "src/components/pricing/ComparisonTable.jsx",
+    "tag": "sticky top-[var(--site-header-height)] z-[2]",
+    "lines": "74-74",
+    "citation": "src/components/pricing/ComparisonTable.jsx:74-74"
+  },
+  "semantic": {
+    "id": "pricing.comparison-header",
+    "category": "PRICING"
+  },
+  "retrievalEligible": true,
+  "purpose": "Sticky header of the plan comparison table: billing caption + toggle and four plan heads with price and CTA.",
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "caption": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 7,
+        "x-maxWordsEvidence": "measured paragraphWordsMax=5 for pricing.comparison-header at 1440px"
+      },
+      "planHeads": {
+        "type": "array",
+        "minItems": 3,
+        "maxItems": 4,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 3,
+              "x-maxWordsEvidence": "measured 2 words"
+            },
+            "priceLabel": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 4,
+              "x-maxWordsEvidence": "measured 3 words"
+            },
+            "cta": {
+              "$ref": "#/definitions/cta"
+            }
+          },
+          "required": [
+            "name",
+            "priceLabel",
+            "cta"
+          ]
+        }
+      }
+    },
+    "required": [
+      "caption",
+      "planHeads"
+    ]
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "count-roll"
+    ],
+    "reducedMotionFallback": "instant-state-change",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "show-alternate-tree",
+        "detail": "desktop table hidden; mobile accordion table ('Compare plans.') renders instead."
+      }
+    ]
+  },
+  "assetSlots": [],
+  "generatedAssetRoles": [
+    "copy.original",
+    "url.placeholder"
+  ],
+  "composes": [
+    "component.billing-toggle"
+  ],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/pricing",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 199
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/pricing",
+      "variant": null
+    }
+  ]
+}

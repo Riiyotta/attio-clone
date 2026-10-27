@@ -1,0 +1,68 @@
+{
+  "id": "overlay.search-dialog",
+  "title": "Search dialog",
+  "status": "measured",
+  "source": {
+    "id": "src:SearchDialog#export-function-SearchDialog",
+    "file": "src/components/marketing/SearchDialog.jsx",
+    "tag": "export function SearchDialog(",
+    "lines": "57-189",
+    "citation": "src/components/marketing/SearchDialog.jsx:57-189"
+  },
+  "semantic": {
+    "id": "overlay.search-dialog",
+    "category": "UTILITY"
+  },
+  "retrievalEligible": false,
+  "retrievalIneligibleReason": "Runtime overlay opened on demand (dialog); it is not page content and must never be retrieved or placed as a page section.",
+  "purpose": "Command-palette style search overlay opened by the directory search trigger or keyboard shortcut.",
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "placeholder": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 4,
+        "x-maxWordsEvidence": "measured 3 words"
+      },
+      "emptyLabel": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 8,
+        "x-maxWordsEvidence": "measured 6 words"
+      }
+    },
+    "required": [
+      "placeholder",
+      "emptyLabel"
+    ]
+  },
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "dialog-scale"
+    ],
+    "reducedMotionFallback": "instant-state-change",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": []
+  },
+  "assetSlots": [],
+  "generatedAssetRoles": [
+    "copy.original",
+    "url.placeholder"
+  ],
+  "composes": [],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": []
+}

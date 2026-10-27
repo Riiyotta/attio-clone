@@ -1,0 +1,20 @@
+{
+  "id": "component.story-card",
+  "kind": "component",
+  "title": "Story card",
+  "purpose": "Customer story feature cell: logo, overline, two-tone title, read link, media.",
+  "source": {
+    "file": "src/components/customers/StoriesGrid.jsx",
+    "tag": "function Feature(",
+    "lines": "73-85",
+    "citation": "src/components/customers/StoriesGrid.jsx:73-85"
+  },
+  "composes": [
+    "component.two-tone-heading",
+    "primitive.asset-slot",
+    "component.hover-wash"
+  ],
+  "tokens": [
+    "elevation.story-frame"
+  ]
+}

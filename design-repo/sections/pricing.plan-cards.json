@@ -1,0 +1,167 @@
+{
+  "id": "pricing.plan-cards",
+  "title": "Plan cards",
+  "status": "measured",
+  "source": {
+    "id": "src:PricingHero#function-PlanCard",
+    "file": "src/components/pricing/PricingHero.jsx",
+    "tag": "function PlanCard(",
+    "lines": "25-90",
+    "citation": "src/components/pricing/PricingHero.jsx:25-90"
+  },
+  "semantic": {
+    "id": "pricing.plan-cards",
+    "category": "PRICING"
+  },
+  "retrievalEligible": true,
+  "purpose": "Four plan cards (one featured) with rolling price digits, short description, three features and a CTA, inside swept frame lines.",
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "plans": {
+        "type": "array",
+        "minItems": 3,
+        "maxItems": 4,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 3,
+              "x-maxWordsEvidence": "plan names c3-c10"
+            },
+            "price": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "monthly": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxWords": 2,
+                  "x-maxWordsEvidence": "measured 1 words"
+                },
+                "annual": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxWords": 2,
+                  "x-maxWordsEvidence": "measured 1 words"
+                }
+              },
+              "required": [
+                "monthly",
+                "annual"
+              ]
+            },
+            "customPrice": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 3,
+              "x-maxWordsEvidence": "measured 2 words"
+            },
+            "caption": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 10,
+              "x-maxWordsEvidence": "measured 8 words"
+            },
+            "saveLabel": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 4,
+              "x-maxWordsEvidence": "measured 3 words"
+            },
+            "description": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 13,
+              "x-maxWordsEvidence": "descriptions c41-c56"
+            },
+            "features": {
+              "type": "array",
+              "minItems": 3,
+              "maxItems": 4,
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxWords": 8,
+                "x-maxWordsEvidence": "measured 6 words"
+              }
+            },
+            "cta": {
+              "$ref": "#/definitions/cta"
+            },
+            "featured": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "name",
+            "caption",
+            "description",
+            "features",
+            "cta"
+          ]
+        },
+        "x-countEvidence": "4 plans measured"
+      }
+    },
+    "required": [
+      "plans"
+    ]
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "frame-line-sweep",
+      "count-roll",
+      "hover-micro"
+    ],
+    "reducedMotionFallback": "static-final-state",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "stack",
+        "detail": "cards stack to one column (1804 tall at 768); frame lines hidden."
+      }
+    ]
+  },
+  "assetSlots": [],
+  "generatedAssetRoles": [
+    "copy.original",
+    "url.placeholder"
+  ],
+  "composes": [
+    "component.plan-card",
+    "component.billing-toggle"
+  ],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/pricing",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 398
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/pricing",
+      "variant": null
+    }
+  ]
+}

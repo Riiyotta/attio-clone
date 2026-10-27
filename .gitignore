@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.DS_Store
+*.log
+
+# Saved copy of the original site (third-party content) — never commit
+Attio_*
+# Playwright MCP captures (live-site screenshots/dumps)
+.playwright-mcp/
+# Generated package of design-repo/
+design-repo.zip

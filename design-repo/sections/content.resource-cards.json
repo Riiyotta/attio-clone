@@ -1,0 +1,142 @@
+{
+  "id": "content.resource-cards",
+  "title": "Resource cards",
+  "status": "measured",
+  "source": {
+    "id": "src:Blocks#export-function-ResourceCards",
+    "file": "src/components/marketing/Blocks.jsx",
+    "tag": "export function ResourceCards(",
+    "lines": "327-346",
+    "citation": "src/components/marketing/Blocks.jsx:327-346",
+    "alsoImplementedBy": [
+      {
+        "file": "src/components/careers/Sections.jsx",
+        "tag": "export function KeepUpToDate(",
+        "lines": "343-363",
+        "citation": "src/components/careers/Sections.jsx:343-363"
+      }
+    ]
+  },
+  "semantic": {
+    "id": "content.resource-cards",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
+  "purpose": "Where to learn more: heading, lead and 3-4 bordered link cards (icon, title, description).",
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "heading": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 5,
+        "x-maxWordsEvidence": "measured headingWordsMax=4 for content.resource-cards at 1440px"
+      },
+      "lead": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 17,
+        "x-maxWordsEvidence": "measured paragraphWordsMax=13 for content.resource-cards at 1440px"
+      },
+      "cards": {
+        "type": "array",
+        "minItems": 3,
+        "maxItems": 4,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "icon": {
+              "$ref": "#/definitions/icon"
+            },
+            "title": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 4,
+              "x-maxWordsEvidence": "measured 3 words"
+            },
+            "description": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 17,
+              "x-maxWordsEvidence": "measured paragraphWordsMax=13 for content.resource-cards at 1440px"
+            },
+            "href": {
+              "$ref": "#/definitions/url"
+            }
+          },
+          "required": [
+            "icon",
+            "title",
+            "description",
+            "href"
+          ]
+        }
+      }
+    },
+    "required": [
+      "heading",
+      "cards"
+    ]
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "hover-micro"
+    ],
+    "reducedMotionFallback": "instant-state-change",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "stack",
+        "detail": "single column."
+      }
+    ]
+  },
+  "assetSlots": [],
+  "generatedAssetRoles": [
+    "copy.original",
+    "url.placeholder"
+  ],
+  "composes": [
+    "component.resource-card"
+  ],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/partners/expert-partners",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 616
+      },
+      {
+        "route": "/careers",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 612
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/partners/expert-partners",
+      "variant": null
+    },
+    {
+      "route": "/careers",
+      "variant": null
+    }
+  ]
+}

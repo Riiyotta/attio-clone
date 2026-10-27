@@ -1,0 +1,317 @@
+{
+  "$description": "Closed asset-role vocabulary used by every media field (PageSpec definitions.media.assetRole). availability is pinned in code (PINNED_AVAILABILITY in schema/semantic_validate.py and extraction/verify_all.py); editing this file alone cannot loosen it.",
+  "version": "1.0.0",
+  "availabilityEnum": [
+    "reference-only",
+    "generation-safe",
+    "blocked-for-generation"
+  ],
+  "generationPolicyEnum": [
+    "may-generate-new",
+    "must-reuse-exact",
+    "must-not-fabricate",
+    "reference-evidence-only"
+  ],
+  "licensing": {
+    "sourceIsRealCompany": true,
+    "rule": "The source design is a live commercial website. Its logos, wordmarks, product screenshots, customer logos, people's photos and names, videos and marketing copy are proprietary. They must never be reproduced, traced, imitated or paraphrased in generated output; the clone itself already replaced all of them with original artwork and invented copy, and those replacements are themselves reference-only (they identify the reference build).",
+    "noRasterAssetsInClone": "The clone ships no raster images: every media box is original SVG/CSS artwork (ui.jsx BrandMark/AssetSlot, mock.jsx, logos.jsx, StoryArt.jsx, marketing/art.jsx, apps/AppIcon.jsx).",
+    "fonts": "Inter, Inter Display, JetBrains Mono and Source Serif 4 are SIL OFL. The source's commercial serif must not be self-hosted.",
+    "generatedPages": "Use only availability=generation-safe roles; URLs only on reserved .example/.invalid domains; people only fictional (person.fictional = true); no ratings except rating.placeholder; no store marks."
+  },
+  "roles": [
+    {
+      "id": "brand.source-wordmark",
+      "availability": "blocked-for-generation",
+      "generationPolicy": "must-not-fabricate",
+      "description": "The original site's real logo/wordmark and product brand marks. Never reproduced, traced, recoloured or imitated, in any mode; the clone already substitutes it.",
+      "evidence": [
+        "src/assets.js:6-6"
+      ],
+      "generationSafeSubstitutes": [
+        "brand.placeholder-mark",
+        "brand.user-supplied-mark"
+      ]
+    },
+    {
+      "id": "brand.reference-wordmark",
+      "availability": "reference-only",
+      "generationPolicy": "reference-evidence-only",
+      "description": "The clone's own fictional prototype mark (orbit tile + lowercase wordmark). Identifies the reference build; a generated page must use its own mark.",
+      "evidence": [
+        "src/components/ui.jsx:126-126"
+      ],
+      "generationSafeSubstitutes": [
+        "brand.placeholder-mark",
+        "brand.user-supplied-mark"
+      ]
+    },
+    {
+      "id": "brand.placeholder-mark",
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "description": "Neutral generic wordmark shape (rounded glyph + bar) or a newly generated mark for a fictional brand. Must not resemble any real company's mark.",
+      "evidence": [
+        "src/index.css:384-384"
+      ]
+    },
+    {
+      "id": "brand.user-supplied-mark",
+      "availability": "generation-safe",
+      "generationPolicy": "must-reuse-exact",
+      "description": "A logo the requesting user supplies for their own brand. Used exactly as supplied; never altered or substituted with a real third party's mark.",
+      "evidence": [
+        "src/components/ui.jsx:96-96"
+      ]
+    },
+    {
+      "id": "logo.source-customer",
+      "availability": "blocked-for-generation",
+      "generationPolicy": "must-not-fabricate",
+      "description": "Real customer/partner logos shown on the original site. Never reproduced or imitated.",
+      "evidence": [
+        "src/assets.js:22-22"
+      ],
+      "generationSafeSubstitutes": [
+        "logo.fictional-company"
+      ]
+    },
+    {
+      "id": "logo.reference-company",
+      "availability": "reference-only",
+      "generationPolicy": "reference-evidence-only",
+      "description": "The clone's invented company wordmarks (fictional names and glyphs) used in logo walls and story cards.",
+      "evidence": [
+        "src/components/logos.jsx:147-147"
+      ],
+      "generationSafeSubstitutes": [
+        "logo.fictional-company"
+      ]
+    },
+    {
+      "id": "logo.fictional-company",
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "description": "Newly generated wordmark for a fictional company, monochrome, sized to the logo cell. Name must be invented and not a real company.",
+      "evidence": [
+        "src/components/marketing/art.jsx:15-15"
+      ]
+    },
+    {
+      "id": "logo.third-party-app",
+      "availability": "blocked-for-generation",
+      "generationPolicy": "must-not-fabricate",
+      "description": "Real third-party product/app logos (integration tiles, app icons of real services). Never reproduced.",
+      "evidence": [
+        "src/components/apps/AppIcon.jsx:72-72"
+      ],
+      "generationSafeSubstitutes": [
+        "icon.generated-app"
+      ]
+    },
+    {
+      "id": "icon.generated-app",
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "description": "Procedural abstract app icon (seeded shapes on a rounded tile), as the clone draws for every directory app.",
+      "evidence": [
+        "src/components/apps/AppIcon.jsx:72-72"
+      ]
+    },
+    {
+      "id": "icon.stroke-ui",
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "description": "Generic 12-24px stroke UI icon (arrow, chevron, check, close, search, category glyphs).",
+      "evidence": [
+        "src/components/mock.jsx:221-221"
+      ]
+    },
+    {
+      "id": "product.source-screenshot",
+      "availability": "blocked-for-generation",
+      "generationPolicy": "must-not-fabricate",
+      "description": "Screenshots or traced reproductions of the original product's UI. Never reproduced.",
+      "evidence": [
+        "src/assets.js:15-15"
+      ],
+      "generationSafeSubstitutes": [
+        "product.generated-visual"
+      ]
+    },
+    {
+      "id": "product.reference-mock",
+      "availability": "reference-only",
+      "generationPolicy": "reference-evidence-only",
+      "description": "The clone's original mock product UI (records, pipelines, terminal, chat windows, showcase illustrations) with fictional data.",
+      "evidence": [
+        "src/components/mock.jsx:159-159"
+      ],
+      "generationSafeSubstitutes": [
+        "product.generated-visual"
+      ]
+    },
+    {
+      "id": "product.generated-visual",
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "description": "Newly generated abstract product UI mock with fictional data, framed by the window/frame tokens (elevation.hero-window, radius.16).",
+      "evidence": [
+        "src/components/marketing/MiniMock.jsx:117-117"
+      ]
+    },
+    {
+      "id": "person.source-photo",
+      "availability": "blocked-for-generation",
+      "generationPolicy": "must-not-fabricate",
+      "description": "Photos, likenesses or names of real people (customers, employees, reviewers) from the original site. Never reproduced.",
+      "evidence": [
+        "src/components/marketing/Blocks.jsx:148-148"
+      ],
+      "generationSafeSubstitutes": [
+        "person.fictional-portrait",
+        "avatar.abstract"
+      ]
+    },
+    {
+      "id": "person.reference-portrait",
+      "availability": "reference-only",
+      "generationPolicy": "reference-evidence-only",
+      "description": "The clone's illustrated portraits of its fictional quote-givers.",
+      "evidence": [
+        "src/components/marketing/art.jsx:70-70"
+      ],
+      "generationSafeSubstitutes": [
+        "person.fictional-portrait"
+      ]
+    },
+    {
+      "id": "person.fictional-portrait",
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "description": "Newly generated non-photoreal illustrated portrait of a fictional person; must not depict or resemble a real individual.",
+      "evidence": [
+        "src/components/marketing/art.jsx:70-70"
+      ]
+    },
+    {
+      "id": "avatar.abstract",
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "description": "Abstract gradient avatar tile (no face), as used in avatar walls, rings and mock UIs.",
+      "evidence": [
+        "src/components/marketing/art.jsx:41-41"
+      ]
+    },
+    {
+      "id": "illustration.reference-art",
+      "availability": "reference-only",
+      "generationPolicy": "reference-evidence-only",
+      "description": "The clone's original abstract story artwork and perk/pixel art.",
+      "evidence": [
+        "src/components/StoryArt.jsx:14-14"
+      ],
+      "generationSafeSubstitutes": [
+        "illustration.generated-abstract"
+      ]
+    },
+    {
+      "id": "illustration.generated-abstract",
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "description": "Newly generated abstract illustration (gradients, geometric scenes) sized to the media box.",
+      "evidence": [
+        "src/components/StoryArt.jsx:14-14"
+      ]
+    },
+    {
+      "id": "illustration.decorative-pattern",
+      "availability": "generation-safe",
+      "generationPolicy": "must-reuse-exact",
+      "description": "Token-driven decorative layers (dot pattern, hatching, pinstripes, horizon glow, frame lines). Reused exactly from gradient tokens.",
+      "evidence": [
+        "src/components/marketing/primitives.jsx:63-63"
+      ]
+    },
+    {
+      "id": "media.source-video",
+      "availability": "blocked-for-generation",
+      "generationPolicy": "must-not-fabricate",
+      "description": "The original site's videos (interviews, product films). Never reproduced.",
+      "evidence": [
+        "src/components/careers/Sections.jsx:20-20"
+      ],
+      "generationSafeSubstitutes": [
+        "media.video-placeholder"
+      ]
+    },
+    {
+      "id": "media.video-placeholder",
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "description": "Poster frame + player controls for a placeholder or user-supplied video.",
+      "evidence": [
+        "src/components/careers/Sections.jsx:11-11"
+      ]
+    },
+    {
+      "id": "rating.source-review",
+      "availability": "blocked-for-generation",
+      "generationPolicy": "must-not-fabricate",
+      "description": "Real reviews, star ratings or review-platform badges. None appear in the clone; listed so a generator can never introduce them.",
+      "evidence": [],
+      "generationSafeSubstitutes": [
+        "rating.placeholder"
+      ]
+    },
+    {
+      "id": "rating.placeholder",
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "description": "Clearly fictional placeholder rating for a fictional product (no review-platform marks).",
+      "evidence": []
+    },
+    {
+      "id": "store.source-badge",
+      "availability": "blocked-for-generation",
+      "generationPolicy": "must-not-fabricate",
+      "description": "App store / TestFlight / Play marks and links. None appear in the clone; blocked so a generator cannot introduce platform marks.",
+      "evidence": [],
+      "generationSafeSubstitutes": [
+        "store.placeholder-badge"
+      ]
+    },
+    {
+      "id": "store.placeholder-badge",
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "description": "Neutral text button for a download action, no platform marks, placeholder URL.",
+      "evidence": [
+        "src/components/ui.jsx:64-64"
+      ]
+    },
+    {
+      "id": "chart.illustrative",
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "description": "Illustrative chart artwork (curve, grid, wash) with fictional values.",
+      "evidence": [
+        "src/components/ScaleStats.jsx:75-75"
+      ]
+    },
+    {
+      "id": "url.placeholder",
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "description": "Link target on a reserved domain only (*.example, *.invalid) or a relative path / in-page anchor.",
+      "evidence": []
+    },
+    {
+      "id": "copy.original",
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "description": "Original copy written for the generated page (never the source's or the reference clone's copy).",
+      "evidence": []
+    }
+  ]
+}

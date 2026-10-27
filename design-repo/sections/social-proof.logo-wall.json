@@ -1,0 +1,188 @@
+{
+  "id": "social-proof.logo-wall",
+  "title": "Logo wall",
+  "status": "measured",
+  "source": {
+    "id": "src:Blocks#export-function-LogoGrid",
+    "file": "src/components/marketing/Blocks.jsx",
+    "tag": "export function LogoGrid(",
+    "lines": "53-80",
+    "citation": "src/components/marketing/Blocks.jsx:53-80",
+    "variantSources": {
+      "band": {
+        "file": "src/components/CustomerLogos.jsx",
+        "tag": "export default function CustomerLogos(",
+        "lines": "38-82",
+        "citation": "src/components/CustomerLogos.jsx:38-82"
+      },
+      "grid": {
+        "file": "src/components/marketing/Blocks.jsx",
+        "tag": "export function LogoGrid(",
+        "lines": "53-80",
+        "citation": "src/components/marketing/Blocks.jsx:53-80"
+      },
+      "headed": {
+        "file": "src/components/startups/Sections.jsx",
+        "tag": "export function ProgramPartners(",
+        "lines": "154-173",
+        "citation": "src/components/startups/Sections.jsx:154-173"
+      }
+    }
+  },
+  "semantic": {
+    "id": "social-proof.logo-wall",
+    "category": "SOCIAL_PROOF"
+  },
+  "retrievalEligible": true,
+  "purpose": "Customer/partner logo proof: a single band (home), a 6x2 grid (pricing, customers) or a headed grid with a footnote (startups program partners).",
+  "themes": [
+    "light"
+  ],
+  "variants": [
+    "band",
+    "grid",
+    "headed"
+  ],
+  "variantRequirements": {
+    "headed": [
+      "heading"
+    ]
+  },
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "heading": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "lead": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 7,
+            "x-maxWordsEvidence": "measured headingWordsMax=5 for social-proof.logo-wall at 1440px"
+          },
+          "continuation": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 27,
+            "x-maxWordsEvidence": "measured paragraphWordsMax=21 for social-proof.logo-wall at 1440px"
+          }
+        },
+        "required": [
+          "lead",
+          "continuation"
+        ]
+      },
+      "logos": {
+        "type": "array",
+        "minItems": 6,
+        "maxItems": 12,
+        "items": {
+          "$ref": "#/definitions/media",
+          "x-assetRoles": [
+            "logo.reference-company",
+            "logo.fictional-company"
+          ]
+        },
+        "x-countEvidence": "10 (band) / 12 (grid) measured"
+      },
+      "footnote": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 28,
+        "x-maxWordsEvidence": "headed variant footnote c~100"
+      }
+    },
+    "required": [
+      "logos"
+    ]
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "hover-micro",
+      "static"
+    ],
+    "reducedMotionFallback": "instant-state-change",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "collapse-grid",
+        "detail": "6 cols -> 4 cols at 768 -> 3 cols at 390."
+      }
+    ]
+  },
+  "assetSlots": [
+    {
+      "field": ".logos[]",
+      "assetRoles": [
+        "logo.reference-company",
+        "logo.fictional-company"
+      ]
+    }
+  ],
+  "generatedAssetRoles": [
+    "copy.original",
+    "logo.fictional-company",
+    "url.placeholder"
+  ],
+  "composes": [
+    "component.logo-mark",
+    "component.section-head"
+  ],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/",
+        "variant": "band",
+        "instance": 0,
+        "heightPx": 194
+      },
+      {
+        "route": "/pricing",
+        "variant": "grid",
+        "instance": 0,
+        "heightPx": 314
+      },
+      {
+        "route": "/customers",
+        "variant": "grid",
+        "instance": 0,
+        "heightPx": 314
+      },
+      {
+        "route": "/startups",
+        "variant": "headed",
+        "instance": 0,
+        "heightPx": 698
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/",
+      "variant": "band"
+    },
+    {
+      "route": "/pricing",
+      "variant": "grid"
+    },
+    {
+      "route": "/customers",
+      "variant": "grid"
+    },
+    {
+      "route": "/startups",
+      "variant": "headed"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "component.subscribe-form",
+  "kind": "component",
+  "title": "Subscribe form",
+  "purpose": "Inline email + button form (270px + 106px).",
+  "source": {
+    "file": "src/components/forms/Fields.jsx",
+    "tag": "export function SubscribeForm(",
+    "lines": "235-270",
+    "citation": "src/components/forms/Fields.jsx:235-270"
+  },
+  "composes": [
+    "primitive.text-field",
+    "primitive.button",
+    "primitive.spinner"
+  ],
+  "tokens": [
+    "input.radius"
+  ]
+}

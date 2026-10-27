@@ -1,0 +1,78 @@
+{
+  "$description": "Layout tokens: container, grid, header geometry, section rhythm.",
+  "tokens": {
+    "container.padding-sm": {
+      "value": "16px",
+      "below": "breakpoint.xs",
+      "evidence": "src/index.css:197-219"
+    },
+    "container.padding": {
+      "value": "24px",
+      "evidence": "src/index.css:197-219"
+    },
+    "container.max-xs": {
+      "value": "448px",
+      "at": "breakpoint.xs",
+      "evidence": "src/index.css:197-219"
+    },
+    "container.max-md": {
+      "value": "624px",
+      "at": "breakpoint.md",
+      "evidence": "src/index.css:197-219"
+    },
+    "container.max-lg": {
+      "value": "1440px",
+      "at": "breakpoint.lg",
+      "evidence": "src/index.css:197-219"
+    },
+    "grid.columns": {
+      "value": 12,
+      "note": "12-column grid inside the bordered column; content sits in col 2/-2",
+      "evidence": "CLONE_SPEC_PAGES.md 0.3-0.4 (section shell, SectionHead, PageHero padding)"
+    },
+    "grid.columns-fine": {
+      "value": 24,
+      "note": "homepage uses a 24-column grid for some sections",
+      "evidence": "CLONE_SPEC_PAGES.md 0.3-0.4 (section shell, SectionHead, PageHero padding)"
+    },
+    "header.banner-height": {
+      "value": "48px",
+      "evidence": "src/index.css:88-97"
+    },
+    "header.nav-height": {
+      "value": "52px",
+      "lg": "68px",
+      "evidence": "src/index.css:88-97"
+    },
+    "header.total-height": {
+      "value": "100px",
+      "lg": "116px",
+      "evidence": "src/index.css:88-97"
+    },
+    "section.rhythm": {
+      "value": [
+        "space.56",
+        "space.60",
+        "space.64",
+        "space.80",
+        "space.88",
+        "space.100",
+        "space.112",
+        "space.120",
+        "space.128",
+        "space.152",
+        "space.160"
+      ],
+      "note": "section-level vertical padding values (pt/pb) observed in the source: SectionHead 160/120/100 top, 80/64/60 bottom; PageHero 120/128; guide rows 160/120/100.",
+      "evidence": "CLONE_SPEC_PAGES.md 0.3-0.4 (section shell, SectionHead, PageHero padding)"
+    },
+    "z.header": {
+      "ref": "z.header",
+      "evidence": "CLONE_SPEC_PAGES.md 0.3-0.4 (section shell, SectionHead, PageHero padding)"
+    },
+    "z.drawer": {
+      "ref": "z.drawer",
+      "evidence": "CLONE_SPEC_PAGES.md 0.3-0.4 (section shell, SectionHead, PageHero padding)"
+    }
+  }
+}

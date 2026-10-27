@@ -1,0 +1,17 @@
+{
+  "id": "component.centered-head",
+  "kind": "component",
+  "title": "Centered head",
+  "purpose": "Stacked centered H2 40/44 + lead 20/26 (directory, FAQ, cross-links).",
+  "source": {
+    "file": "src/components/marketing/primitives.jsx",
+    "tag": "export function CenteredHead(",
+    "lines": "130-137",
+    "citation": "src/components/marketing/primitives.jsx:130-137"
+  },
+  "composes": [],
+  "tokens": [
+    "type.heading-md",
+    "type.xl"
+  ]
+}

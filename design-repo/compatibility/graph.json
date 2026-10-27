@@ -1,0 +1,172 @@
+{
+  "$description": "Rhythm/position rules JSON Schema cannot express. Each rule id is implemented with the same id in schema/semantic_validate.py; verify_all.py checks the two lists are identical.",
+  "version": "1.0.0",
+  "categories": [
+    "SHELL",
+    "HERO",
+    "SOCIAL_PROOF",
+    "FEATURES",
+    "TESTIMONIAL",
+    "PRICING",
+    "FAQ",
+    "CONVERSION",
+    "CONTENT",
+    "EDITORIAL",
+    "MEDIA",
+    "LISTING",
+    "NAVIGATION",
+    "UTILITY"
+  ],
+  "rules": [
+    {
+      "id": "SHELL_POSITION",
+      "severity": "error",
+      "rule": "shell.site-header is the first node and shell.site-footer the last node of every page."
+    },
+    {
+      "id": "ONE_HERO",
+      "severity": "error",
+      "rule": "At most one HERO-category node per page.",
+      "exceptions": [
+        "Template contact-split is hero-less by design: conversion.demo-request-split opens the page (templates.json heroless=true)."
+      ]
+    },
+    {
+      "id": "HERO_FIRST",
+      "severity": "error",
+      "rule": "The HERO node is the first non-shell node.",
+      "exceptions": [
+        "app-detail: navigation.breadcrumb-bar precedes hero.app-header (templates.json heroAfter)."
+      ]
+    },
+    {
+      "id": "HOME_ROUTE_ONLY",
+      "severity": "error",
+      "rule": "Sections with constraints.homeRouteOnly (hero.product-window) only appear on route '/'."
+    },
+    {
+      "id": "ONE_PER_PAGE",
+      "severity": "error",
+      "rule": "constraints.onePerPage / maxPerPage from each section contract."
+    },
+    {
+      "id": "NO_CONSECUTIVE_SAME_SECTION",
+      "severity": "error",
+      "rule": "The same (section, variant) never appears twice in a row unless the template node is repeatable.",
+      "exceptions": [
+        "pricing.comparison-group, listing.directory-category, content.article-chapter are repeatable."
+      ]
+    },
+    {
+      "id": "NO_ADJACENT_SAME_CATEGORY",
+      "severity": "warn",
+      "rule": "Two adjacent non-shell nodes should not share a category.",
+      "exceptions": [
+        "FEATURES runs are normal on this site (home, app-partners, expert-partners place 2-4 capability sections in a row, separated by hairlines).",
+        "PRICING: comparison-header -> comparison-group and repeated groups.",
+        "LISTING: directory-header -> directory-category and repeated categories.",
+        "CONTENT: repeated article chapters; app-meta-sidebar -> article-chapter.",
+        "SOCIAL_PROOF pairs measured on real pages: scale-stats -> customer-stories (home), logo-wall -> customer-stories (customers)."
+      ],
+      "allowedPairs": [
+        [
+          "social-proof.scale-stats",
+          "social-proof.customer-stories"
+        ],
+        [
+          "social-proof.logo-wall",
+          "social-proof.customer-stories"
+        ],
+        [
+          "pricing.comparison-header",
+          "pricing.comparison-group"
+        ],
+        [
+          "pricing.comparison-group",
+          "pricing.comparison-group"
+        ],
+        [
+          "listing.directory-header",
+          "listing.directory-category"
+        ],
+        [
+          "listing.directory-category",
+          "listing.directory-category"
+        ],
+        [
+          "content.article-chapter",
+          "content.article-chapter"
+        ]
+      ],
+      "allowedCategories": [
+        "FEATURES"
+      ]
+    },
+    {
+      "id": "MUST_PRECEDE_FOOTER",
+      "severity": "warn",
+      "rule": "Sections with constraints.mustPrecedeFooter (conversion.final-cta, conversion.avatar-wall-cta, navigation.partner-cross-links) sit directly before the footer."
+    },
+    {
+      "id": "DARK_STACK_ORDER",
+      "severity": "error",
+      "rule": "features.developer-platform directly follows features.context-horizon (they form one dark curtain stack)."
+    },
+    {
+      "id": "CURTAIN_NEEDS_DARK_STACK",
+      "severity": "error",
+      "rule": "testimonial.quote variant scroll-curtain directly follows features.developer-platform or features.context-horizon (it slides under the dark stack)."
+    },
+    {
+      "id": "GROUP_NEEDS_HEADER",
+      "severity": "error",
+      "rule": "pricing.comparison-group requires pricing.comparison-header before it; listing.directory-category requires listing.directory-header before it; repeated groups/categories/chapters are contiguous."
+    },
+    {
+      "id": "OVERLAY_NOT_A_NODE",
+      "severity": "error",
+      "rule": "Sections with retrievalEligible=false (overlays) are never page nodes; templates list them under runtimeOverlays."
+    },
+    {
+      "id": "MOTION_BUDGET",
+      "severity": "warn",
+      "rule": "At most 5 nodes per page use continuous motion (badge-comet, auto-cycle-tabs, marquee-loop, ambient-streaks, decorative-loop). The measured home page uses 5."
+    }
+  ],
+  "recommendedAfter": {
+    "social-proof.logo-wall": [
+      "hero.product-window",
+      "hero.page-centered",
+      "pricing.plan-cards"
+    ],
+    "features.developer-platform": [
+      "features.context-horizon"
+    ],
+    "testimonial.quote": [
+      "features.developer-platform",
+      "features.app-store-preview",
+      "conversion.application-notice",
+      "social-proof.customer-stories"
+    ],
+    "faq.accordion": [
+      "testimonial.quote",
+      "features.perks",
+      "content.resource-cards",
+      "pricing.comparison-group",
+      "social-proof.logo-wall"
+    ],
+    "navigation.partner-cross-links": [
+      "faq.accordion"
+    ]
+  },
+  "notRecommendedWith": [
+    [
+      "hero.product-window",
+      "hero.page-centered"
+    ],
+    [
+      "conversion.final-cta",
+      "conversion.avatar-wall-cta"
+    ]
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "$description": "Component-scoped tokens: approved application of foundation/semantic tokens to specific components (buttons, inputs, cards, badges). Measured on the source (CLONE_SPEC 0.8, pages spec C1-C12) and implemented in the clone CSS.",
+  "tokens": {
+    "button.height": {
+      "value": "36px",
+      "evidence": "src/index.css:231-237"
+    },
+    "button.height-mobile": {
+      "value": "46px",
+      "evidence": "src/components/marketing/Blocks.jsx:42-80"
+    },
+    "button.radius": {
+      "ref": "radius.10",
+      "evidence": "src/index.css:231-232"
+    },
+    "button.primary.background": {
+      "ref": "color.black.200"
+    },
+    "button.primary.border": {
+      "ref": "color.black.600"
+    },
+    "button.primary.text": {
+      "ref": "color.white.300"
+    },
+    "button.outline.background": {
+      "ref": "color.white.100"
+    },
+    "button.outline.border": {
+      "ref": "color.white.800"
+    },
+    "button.outline.text": {
+      "ref": "color.black.400"
+    },
+    "button.transition": {
+      "value": "color, background-color, border-color 300ms",
+      "ref": "easing.in-out"
+    },
+    "eyebrow.background": {
+      "ref": "color.semantic.eyebrow-background"
+    },
+    "eyebrow.text": {
+      "ref": "color.semantic.eyebrow-foreground"
+    },
+    "eyebrow.radius": {
+      "ref": "radius.8"
+    },
+    "hero-badge.radius": {
+      "ref": "radius.13"
+    },
+    "hero-badge.border": {
+      "ref": "color.white.400"
+    },
+    "input.height": {
+      "value": "46px"
+    },
+    "input.radius": {
+      "ref": "radius.10"
+    },
+    "input.border": {
+      "ref": "color.white.700"
+    },
+    "input.focus-ring": {
+      "ref": "elevation.focus-ring"
+    },
+    "input.hover-shadow": {
+      "ref": "elevation.input-hover"
+    },
+    "input.error-border": {
+      "ref": "color.red.500"
+    },
+    "input.error-text": {
+      "ref": "color.red.600"
+    },
+    "card.radius": {
+      "ref": "radius.16"
+    },
+    "card.border": {
+      "ref": "color.white.500"
+    },
+    "card.hover-wash": {
+      "ref": "color.white.200"
+    },
+    "plan-card.radius": {
+      "ref": "radius.20"
+    },
+    "plan-card.shadow": {
+      "ref": "elevation.plan-card"
+    },
+    "plan-card.featured-shadow": {
+      "ref": "elevation.plan-card-featured"
+    },
+    "faq.divider": {
+      "ref": "color.white.400"
+    },
+    "faq.icon": {
+      "ref": "color.white.900"
+    },
+    "faq.icon-open": {
+      "ref": "color.black.800"
+    },
+    "hairline.color": {
+      "ref": "color.white.500"
+    },
+    "hairline.color-dark": {
+      "ref": "color.black.400"
+    },
+    "stat.rule": {
+      "value": "2px solid",
+      "ref": "color.blue.500",
+      "evidence": "src/components/ScaleStats.jsx:106-106"
+    },
+    "app-icon.radius": {
+      "value": "30%",
+      "ref": "elevation.app-icon"
+    }
+  }
+}

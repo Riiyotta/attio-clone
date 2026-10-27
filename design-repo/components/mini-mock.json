@@ -1,0 +1,16 @@
+{
+  "id": "component.mini-mock",
+  "kind": "component",
+  "title": "Mini mock",
+  "purpose": "Small framed mock-UI card used inside cells and heroes.",
+  "source": {
+    "file": "src/components/marketing/MiniMock.jsx",
+    "tag": "export default function MiniMock(",
+    "lines": "117-124",
+    "citation": "src/components/marketing/MiniMock.jsx:117-124"
+  },
+  "composes": [],
+  "tokens": [
+    "elevation.mock-card"
+  ]
+}

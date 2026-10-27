@@ -1,0 +1,40 @@
+{
+  "$description": "Breakpoints in use. lg (992px) is the main desktop switch.",
+  "tokens": {
+    "breakpoint.xs": {
+      "value": "375px",
+      "sourceKey": "screens.xs",
+      "evidence": "tailwind.config.cjs:27-27"
+    },
+    "breakpoint.sm": {
+      "value": "576px",
+      "sourceKey": "screens.sm",
+      "evidence": "tailwind.config.cjs:28-28"
+    },
+    "breakpoint.md": {
+      "value": "768px",
+      "sourceKey": "screens.md",
+      "evidence": "tailwind.config.cjs:29-29"
+    },
+    "breakpoint.lg": {
+      "value": "992px",
+      "sourceKey": "screens.lg",
+      "evidence": "tailwind.config.cjs:30-30"
+    },
+    "breakpoint.xl": {
+      "value": "1200px",
+      "sourceKey": "screens.xl",
+      "evidence": "tailwind.config.cjs:31-31"
+    },
+    "breakpoint.2xl": {
+      "value": "1400px",
+      "sourceKey": "screens.2xl",
+      "evidence": "tailwind.config.cjs:32-32"
+    },
+    "breakpoint.3xl": {
+      "value": "1536px",
+      "sourceKey": "screens.3xl",
+      "evidence": "tailwind.config.cjs:33-33"
+    }
+  }
+}

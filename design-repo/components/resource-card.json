@@ -1,0 +1,21 @@
+{
+  "id": "component.resource-card",
+  "kind": "component",
+  "title": "Resource card",
+  "purpose": "Bordered 16px-radius link card: icon, arrow, title, description.",
+  "source": {
+    "file": "src/components/marketing/Blocks.jsx",
+    "tag": "export function ResourceCards(",
+    "lines": "327-346",
+    "citation": "src/components/marketing/Blocks.jsx:327-346"
+  },
+  "composes": [
+    "primitive.stroke-icon",
+    "primitive.arrow-icon",
+    "component.hover-wash"
+  ],
+  "tokens": [
+    "card.radius",
+    "card.border"
+  ]
+}

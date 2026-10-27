@@ -1,0 +1,190 @@
+{
+  "id": "pricing.comparison-group",
+  "title": "Comparison group",
+  "status": "measured",
+  "source": {
+    "id": "src:ComparisonTable#GROUPS-map-g",
+    "file": "src/components/pricing/ComparisonTable.jsx",
+    "tag": "{GROUPS.map((g) => (",
+    "lines": "87-87",
+    "citation": "src/components/pricing/ComparisonTable.jsx:87-87"
+  },
+  "semantic": {
+    "id": "pricing.comparison-group",
+    "category": "PRICING"
+  },
+  "retrievalEligible": true,
+  "purpose": "One feature group of the comparison table: sticky group title and rows of per-plan values (check, text or price), with optional tooltips and sub-rows.",
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "title": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 4,
+        "x-maxWordsEvidence": "measured headingWordsMax=3 for pricing.comparison-group at 1440px"
+      },
+      "rows": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 24,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "label": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 8,
+              "x-maxWordsEvidence": "measured 6 words"
+            },
+            "tooltip": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 32,
+              "x-maxWordsEvidence": "tooltip c<=160"
+            },
+            "values": {
+              "type": "array",
+              "minItems": 3,
+              "maxItems": 4,
+              "items": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "included": {
+                        "type": "boolean"
+                      }
+                    },
+                    "required": [
+                      "included"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "text": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxWords": 4,
+                        "x-maxWordsEvidence": "measured 3 words"
+                      }
+                    },
+                    "required": [
+                      "text"
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          "required": [
+            "label",
+            "values"
+          ]
+        }
+      }
+    },
+    "required": [
+      "title",
+      "rows"
+    ]
+  },
+  "constraints": {
+    "repeatable": true,
+    "maxPerPage": 12
+  },
+  "motion": {
+    "allowedPatterns": [
+      "static"
+    ],
+    "reducedMotionFallback": "none-needed",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "show-alternate-tree",
+        "detail": "rendered as accordion items in the mobile table."
+      }
+    ]
+  },
+  "assetSlots": [],
+  "generatedAssetRoles": [
+    "copy.original",
+    "url.placeholder"
+  ],
+  "composes": [
+    "component.tooltip",
+    "primitive.check-icon"
+  ],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/pricing",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 408
+      },
+      {
+        "route": "/pricing",
+        "variant": null,
+        "instance": 1,
+        "heightPx": 933
+      },
+      {
+        "route": "/pricing",
+        "variant": null,
+        "instance": 2,
+        "heightPx": 228
+      },
+      {
+        "route": "/pricing",
+        "variant": null,
+        "instance": 3,
+        "heightPx": 687
+      },
+      {
+        "route": "/pricing",
+        "variant": null,
+        "instance": 4,
+        "heightPx": 1263
+      },
+      {
+        "route": "/pricing",
+        "variant": null,
+        "instance": 5,
+        "heightPx": 456
+      },
+      {
+        "route": "/pricing",
+        "variant": null,
+        "instance": 6,
+        "heightPx": 591
+      },
+      {
+        "route": "/pricing",
+        "variant": null,
+        "instance": 7,
+        "heightPx": 285
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/pricing",
+      "variant": null
+    }
+  ]
+}

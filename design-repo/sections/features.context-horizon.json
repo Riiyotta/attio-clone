@@ -1,0 +1,198 @@
+{
+  "id": "features.context-horizon",
+  "title": "Context horizon (dark)",
+  "status": "measured",
+  "source": {
+    "id": "src:UniversalContext#function-BrandSection",
+    "file": "src/components/UniversalContext.jsx",
+    "tag": "function BrandSection()",
+    "lines": "212-227",
+    "citation": "src/components/UniversalContext.jsx:212-227"
+  },
+  "semantic": {
+    "id": "features.context-horizon",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "purpose": "Dark brand moment: eyebrow + mega title over a planet-horizon glow, a 4-tab auto-advancing capability accordion with wireframe art, and an integrations marquee.",
+  "themes": [
+    "dark"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "eyebrow": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 18,
+        "x-maxWordsEvidence": "measured paragraphWordsMax=14 for features.context-horizon at 1440px"
+      },
+      "megaTitle": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 15,
+        "x-maxWordsEvidence": "measured headingWordsMax=12 for features.context-horizon at 1440px"
+      },
+      "tabsHeading": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "lead": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 15,
+            "x-maxWordsEvidence": "measured headingWordsMax=12 for features.context-horizon at 1440px"
+          },
+          "continuation": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 15,
+            "x-maxWordsEvidence": "measured headingWordsMax=12 for features.context-horizon at 1440px"
+          }
+        },
+        "required": [
+          "lead",
+          "continuation"
+        ]
+      },
+      "tabs": {
+        "type": "array",
+        "minItems": 3,
+        "maxItems": 4,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "title": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 5,
+              "x-maxWordsEvidence": "measured 4 words"
+            },
+            "body": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 18,
+              "x-maxWordsEvidence": "measured paragraphWordsMax=14 for features.context-horizon at 1440px"
+            }
+          },
+          "required": [
+            "title",
+            "body"
+          ]
+        }
+      },
+      "visual": {
+        "$ref": "#/definitions/media",
+        "x-assetRoles": [
+          "illustration.reference-art",
+          "illustration.generated-abstract",
+          "illustration.decorative-pattern"
+        ]
+      },
+      "integrations": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "title": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 15,
+            "x-maxWordsEvidence": "measured headingWordsMax=12 for features.context-horizon at 1440px"
+          },
+          "tiles": {
+            "type": "array",
+            "minItems": 6,
+            "maxItems": 12,
+            "items": {
+              "$ref": "#/definitions/media",
+              "x-assetRoles": [
+                "icon.generated-app"
+              ]
+            },
+            "x-countEvidence": "12 tiles x 128px per set"
+          }
+        },
+        "required": [
+          "title",
+          "tiles"
+        ]
+      },
+      "cta": {
+        "$ref": "#/definitions/cta"
+      }
+    },
+    "required": [
+      "eyebrow",
+      "megaTitle",
+      "tabsHeading",
+      "tabs",
+      "visual"
+    ]
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "title-in-view",
+      "auto-cycle-tabs",
+      "marquee-loop"
+    ],
+    "reducedMotionFallback": "manual-advance-only",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "stack",
+        "detail": "mega 96 -> 56 at 768 -> 40 at 390; accordion and wireframe stack."
+      }
+    ]
+  },
+  "assetSlots": [
+    {
+      "field": ".visual",
+      "assetRoles": [
+        "illustration.reference-art",
+        "illustration.generated-abstract",
+        "illustration.decorative-pattern"
+      ]
+    },
+    {
+      "field": ".integrations.tiles[]",
+      "assetRoles": [
+        "icon.generated-app"
+      ]
+    }
+  ],
+  "generatedAssetRoles": [
+    "copy.original",
+    "icon.generated-app",
+    "illustration.decorative-pattern",
+    "illustration.generated-abstract",
+    "url.placeholder"
+  ],
+  "composes": [],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 2573.9
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/",
+      "variant": null
+    }
+  ]
+}

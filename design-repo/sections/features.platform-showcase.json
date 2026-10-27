@@ -1,0 +1,192 @@
+{
+  "id": "features.platform-showcase",
+  "title": "Platform showcase",
+  "status": "measured",
+  "source": {
+    "id": "src:PlatformShowcase#export-default-function-PlatformShowcase",
+    "file": "src/components/PlatformShowcase.jsx",
+    "tag": "export default function PlatformShowcase(",
+    "lines": "75-208",
+    "citation": "src/components/PlatformShowcase.jsx:75-208"
+  },
+  "semantic": {
+    "id": "features.platform-showcase",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "purpose": "Long capability tour: intro heading, sticky scroll-spy nav, and 5-6 feature articles each with a two-tone H3, illustration panel and optional sub-cards.",
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "intro": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "lead": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 29,
+            "x-maxWordsEvidence": "measured headingWordsMax=23 for features.platform-showcase at 1440px"
+          },
+          "continuation": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 29,
+            "x-maxWordsEvidence": "measured headingWordsMax=23 for features.platform-showcase at 1440px"
+          }
+        },
+        "required": [
+          "lead",
+          "continuation"
+        ]
+      },
+      "articles": {
+        "type": "array",
+        "minItems": 3,
+        "maxItems": 6,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "navLabel": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 4,
+              "x-maxWordsEvidence": "measured 3 words"
+            },
+            "title": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 29,
+              "x-maxWordsEvidence": "measured headingWordsMax=23 for features.platform-showcase at 1440px"
+            },
+            "description": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 24,
+              "x-maxWordsEvidence": "measured paragraphWordsMax=19 for features.platform-showcase at 1440px"
+            },
+            "visual": {
+              "$ref": "#/definitions/media",
+              "x-assetRoles": [
+                "product.reference-mock",
+                "product.generated-visual"
+              ]
+            },
+            "subCards": {
+              "type": "array",
+              "minItems": 0,
+              "maxItems": 2,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "title": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxWords": 5,
+                    "x-maxWordsEvidence": "measured 4 words"
+                  },
+                  "body": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxWords": 24,
+                    "x-maxWordsEvidence": "measured paragraphWordsMax=19 for features.platform-showcase at 1440px"
+                  },
+                  "visual": {
+                    "$ref": "#/definitions/media",
+                    "x-assetRoles": [
+                      "product.reference-mock",
+                      "product.generated-visual"
+                    ]
+                  }
+                },
+                "required": [
+                  "title",
+                  "body",
+                  "visual"
+                ]
+              }
+            }
+          },
+          "required": [
+            "navLabel",
+            "title",
+            "visual"
+          ]
+        },
+        "x-countEvidence": "5 illustration panels + 3 sub-card pairs (src/assets.js)"
+      }
+    },
+    "required": [
+      "intro",
+      "articles"
+    ]
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "scroll-spy-nav",
+      "marquee-loop",
+      "decorative-loop"
+    ],
+    "reducedMotionFallback": "paused-first-frame",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "scroll-row",
+        "detail": "sticky side nav becomes a horizontal tab strip; panels 327px tall."
+      }
+    ]
+  },
+  "assetSlots": [
+    {
+      "field": ".articles[].visual",
+      "assetRoles": [
+        "product.reference-mock",
+        "product.generated-visual"
+      ]
+    },
+    {
+      "field": ".articles[].subCards[].visual",
+      "assetRoles": [
+        "product.reference-mock",
+        "product.generated-visual"
+      ]
+    }
+  ],
+  "generatedAssetRoles": [
+    "copy.original",
+    "product.generated-visual",
+    "url.placeholder"
+  ],
+  "composes": [],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 6479.4
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/",
+      "variant": null
+    }
+  ]
+}

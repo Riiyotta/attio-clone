@@ -1,0 +1,18 @@
+{
+  "id": "component.stat-block",
+  "kind": "component",
+  "title": "Stat block",
+  "purpose": "Number + label with a 2px blue left rule.",
+  "source": {
+    "file": "src/components/ScaleStats.jsx",
+    "tag": "data-motion=\"scale-stat\"",
+    "lines": "106-106",
+    "citation": "src/components/ScaleStats.jsx:106-106"
+  },
+  "composes": [],
+  "tokens": [
+    "stat.rule",
+    "type.stat",
+    "type.stat-label"
+  ]
+}

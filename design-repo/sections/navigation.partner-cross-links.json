@@ -1,0 +1,157 @@
+{
+  "id": "navigation.partner-cross-links",
+  "title": "Partner cross-links",
+  "status": "measured",
+  "source": {
+    "id": "src:Blocks#export-function-PartnerCrossLinks",
+    "file": "src/components/marketing/Blocks.jsx",
+    "tag": "export function PartnerCrossLinks(",
+    "lines": "375-422",
+    "citation": "src/components/marketing/Blocks.jsx:375-422"
+  },
+  "semantic": {
+    "id": "navigation.partner-cross-links",
+    "category": "NAVIGATION"
+  },
+  "retrievalEligible": true,
+  "purpose": "Links to the sibling partner programs: centered head and a 2-up cell grid of linked cards.",
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "title": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 12,
+        "x-maxWordsEvidence": "measured headingWordsMax=9 for navigation.partner-cross-links at 1440px"
+      },
+      "lead": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 20,
+        "x-maxWordsEvidence": "measured paragraphWordsMax=16 for navigation.partner-cross-links at 1440px"
+      },
+      "links": {
+        "type": "array",
+        "minItems": 2,
+        "maxItems": 2,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "overline": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 4,
+              "x-maxWordsEvidence": "measured 3 words"
+            },
+            "titleLead": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 8,
+              "x-maxWordsEvidence": "measured 6 words"
+            },
+            "titleContinuation": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 10,
+              "x-maxWordsEvidence": "measured 8 words"
+            },
+            "linkLabel": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 5,
+              "x-maxWordsEvidence": "measured 4 words"
+            },
+            "href": {
+              "$ref": "#/definitions/url"
+            }
+          },
+          "required": [
+            "overline",
+            "titleLead",
+            "titleContinuation",
+            "linkLabel",
+            "href"
+          ]
+        }
+      }
+    },
+    "required": [
+      "title",
+      "lead",
+      "links"
+    ]
+  },
+  "constraints": {
+    "onePerPage": true,
+    "mustPrecedeFooter": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "hover-micro"
+    ],
+    "reducedMotionFallback": "instant-state-change",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "stack",
+        "detail": "one column."
+      }
+    ]
+  },
+  "assetSlots": [],
+  "generatedAssetRoles": [
+    "copy.original",
+    "url.placeholder"
+  ],
+  "composes": [
+    "component.cell-grid",
+    "component.centered-head"
+  ],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/partners/app-partners",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 854
+      },
+      {
+        "route": "/partners/creator-partners",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 854
+      },
+      {
+        "route": "/partners/expert-partners",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 898
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/partners/app-partners",
+      "variant": null
+    },
+    {
+      "route": "/partners/creator-partners",
+      "variant": null
+    },
+    {
+      "route": "/partners/expert-partners",
+      "variant": null
+    }
+  ]
+}

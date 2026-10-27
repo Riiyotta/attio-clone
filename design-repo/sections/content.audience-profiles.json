@@ -1,0 +1,135 @@
+{
+  "id": "content.audience-profiles",
+  "title": "Audience profiles",
+  "status": "measured",
+  "source": {
+    "id": "src:Sections#export-function-WhoYouAre",
+    "file": "src/components/partners/Sections.jsx",
+    "tag": "export function WhoYouAre(",
+    "lines": "258-290",
+    "citation": "src/components/partners/Sections.jsx:258-290",
+    "alsoImplementedBy": [
+      {
+        "file": "src/components/partners/Sections.jsx",
+        "tag": "export function WhoWereLookingFor(",
+        "lines": "481-513",
+        "citation": "src/components/partners/Sections.jsx:481-513"
+      }
+    ]
+  },
+  "semantic": {
+    "id": "content.audience-profiles",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
+  "purpose": "Who the program is for: heading and 3-5 profile cells (overline, title, short body, icon).",
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "heading": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 9,
+        "x-maxWordsEvidence": "measured headingWordsMax=7 for content.audience-profiles at 1440px"
+      },
+      "profiles": {
+        "type": "array",
+        "minItems": 3,
+        "maxItems": 5,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "overline": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 4,
+              "x-maxWordsEvidence": "measured 3 words"
+            },
+            "title": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 7,
+              "x-maxWordsEvidence": "measured 5 words"
+            },
+            "body": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 17,
+              "x-maxWordsEvidence": "measured paragraphWordsMax=13 for content.audience-profiles at 1440px"
+            },
+            "icon": {
+              "$ref": "#/definitions/icon"
+            }
+          },
+          "required": [
+            "title",
+            "body"
+          ]
+        }
+      }
+    },
+    "required": [
+      "heading",
+      "profiles"
+    ]
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "static"
+    ],
+    "reducedMotionFallback": "none-needed",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "scroll-row",
+        "detail": "5-up row scrolls with edge fades; 3-up stacks."
+      }
+    ]
+  },
+  "assetSlots": [],
+  "generatedAssetRoles": [
+    "copy.original",
+    "url.placeholder"
+  ],
+  "composes": [],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/partners/creator-partners",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 672
+      },
+      {
+        "route": "/partners/expert-partners",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 728
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/partners/creator-partners",
+      "variant": null
+    },
+    {
+      "route": "/partners/expert-partners",
+      "variant": null
+    }
+  ]
+}

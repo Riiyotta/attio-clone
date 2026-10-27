@@ -1,0 +1,153 @@
+{
+  "id": "listing.open-positions",
+  "title": "Open positions",
+  "status": "measured",
+  "source": {
+    "id": "src:OpenPositions#export-default-function-OpenPositions",
+    "file": "src/components/careers/OpenPositions.jsx",
+    "tag": "export default function OpenPositions(",
+    "lines": "54-138",
+    "citation": "src/components/careers/OpenPositions.jsx:54-138"
+  },
+  "semantic": {
+    "id": "listing.open-positions",
+    "category": "LISTING"
+  },
+  "retrievalEligible": true,
+  "purpose": "Job listing: heading, department/location filters + search, and rows of roles (department, title, location).",
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "heading": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 5,
+        "x-maxWordsEvidence": "measured headingWordsMax=4 for listing.open-positions at 1440px"
+      },
+      "filters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "departments": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 12,
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 4,
+              "x-maxWordsEvidence": "measured 3 words"
+            }
+          },
+          "locations": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 12,
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 4,
+              "x-maxWordsEvidence": "measured 3 words"
+            }
+          }
+        },
+        "required": [
+          "departments",
+          "locations"
+        ]
+      },
+      "roles": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 40,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "department": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 4,
+              "x-maxWordsEvidence": "measured 3 words"
+            },
+            "title": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 5,
+              "x-maxWordsEvidence": "measured headingWordsMax=4 for listing.open-positions at 1440px"
+            },
+            "location": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 4,
+              "x-maxWordsEvidence": "measured 3 words"
+            },
+            "href": {
+              "$ref": "#/definitions/url"
+            }
+          },
+          "required": [
+            "department",
+            "title",
+            "location",
+            "href"
+          ]
+        },
+        "x-countEvidence": "role rows measured on /careers"
+      }
+    },
+    "required": [
+      "heading",
+      "filters",
+      "roles"
+    ]
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "hover-micro"
+    ],
+    "reducedMotionFallback": "instant-state-change",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "stack",
+        "detail": "rows stack department/title/location."
+      }
+    ]
+  },
+  "assetSlots": [],
+  "generatedAssetRoles": [
+    "copy.original",
+    "url.placeholder"
+  ],
+  "composes": [],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/careers",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 3187
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/careers",
+      "variant": null
+    }
+  ]
+}

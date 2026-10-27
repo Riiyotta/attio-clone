@@ -1,0 +1,23 @@
+{
+  "id": "primitive.inline-link",
+  "kind": "primitive",
+  "title": "Inline link",
+  "purpose": "Blue underlined inline link inside answers and long body.",
+  "source": {
+    "file": "src/components/marketing/Faq.jsx",
+    "tag": "export function InlineLink(",
+    "lines": "80-86",
+    "citation": "src/components/marketing/Faq.jsx:80-86"
+  },
+  "props": {
+    "label": "text",
+    "href": "url"
+  },
+  "tokens": [
+    "color.blue.500"
+  ],
+  "states": [
+    "idle",
+    "hover"
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "id": "features.app-store-preview",
+  "title": "App store preview",
+  "status": "measured",
+  "source": {
+    "id": "src:Sections#export-function-ExploreApps",
+    "file": "src/components/partners/Sections.jsx",
+    "tag": "export function ExploreApps(",
+    "lines": "174-199",
+    "citation": "src/components/partners/Sections.jsx:174-199"
+  },
+  "semantic": {
+    "id": "features.app-store-preview",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "purpose": "Integration ecosystem pitch: heading, text cell and a framed store mock with a discover link.",
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "heading": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 7,
+        "x-maxWordsEvidence": "measured headingWordsMax=5 for features.app-store-preview at 1440px"
+      },
+      "body": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 29,
+        "x-maxWordsEvidence": "measured paragraphWordsMax=23 for features.app-store-preview at 1440px"
+      },
+      "link": {
+        "$ref": "#/definitions/link"
+      },
+      "visual": {
+        "$ref": "#/definitions/media",
+        "x-assetRoles": [
+          "product.reference-mock",
+          "product.generated-visual"
+        ]
+      }
+    },
+    "required": [
+      "heading",
+      "body",
+      "link",
+      "visual"
+    ]
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "static"
+    ],
+    "reducedMotionFallback": "none-needed",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "stack",
+        "detail": "text cell above the mock."
+      }
+    ]
+  },
+  "assetSlots": [
+    {
+      "field": ".visual",
+      "assetRoles": [
+        "product.reference-mock",
+        "product.generated-visual"
+      ]
+    }
+  ],
+  "generatedAssetRoles": [
+    "copy.original",
+    "product.generated-visual",
+    "url.placeholder"
+  ],
+  "composes": [],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/partners/app-partners",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 1034
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/partners/app-partners",
+      "variant": null
+    }
+  ]
+}

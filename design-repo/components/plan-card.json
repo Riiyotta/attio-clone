@@ -1,0 +1,21 @@
+{
+  "id": "component.plan-card",
+  "kind": "component",
+  "title": "Plan card",
+  "purpose": "Pricing plan card with rolling price digits, features and CTA; featured variant ring.",
+  "source": {
+    "file": "src/components/pricing/PricingHero.jsx",
+    "tag": "function PlanCard(",
+    "lines": "25-90",
+    "citation": "src/components/pricing/PricingHero.jsx:25-90"
+  },
+  "composes": [
+    "primitive.button",
+    "primitive.check-icon"
+  ],
+  "tokens": [
+    "plan-card.radius",
+    "plan-card.shadow",
+    "plan-card.featured-shadow"
+  ]
+}

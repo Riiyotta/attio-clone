@@ -1,0 +1,19 @@
+{
+  "id": "primitive.verified-badge",
+  "kind": "primitive",
+  "title": "Verified badge",
+  "purpose": "Green verified mark for official apps.",
+  "source": {
+    "file": "src/components/apps/AppCard.jsx",
+    "tag": "export function VerifiedBadge(",
+    "lines": "6-25",
+    "citation": "src/components/apps/AppCard.jsx:6-25"
+  },
+  "props": {
+    "size": "px"
+  },
+  "tokens": [
+    "color.green.600"
+  ],
+  "states": []
+}

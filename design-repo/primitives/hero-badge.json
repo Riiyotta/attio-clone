@@ -1,0 +1,21 @@
+{
+  "id": "primitive.hero-badge",
+  "kind": "primitive",
+  "title": "Hero badge",
+  "purpose": "Rounded 13px bordered badge holding the page eyebrow (semantic h1 on marketing pages).",
+  "source": {
+    "file": "src/components/marketing/primitives.jsx",
+    "tag": "export function HeroBadge(",
+    "lines": "95-101",
+    "citation": "src/components/marketing/primitives.jsx:95-101"
+  },
+  "props": {
+    "label": "text <= 4 words"
+  },
+  "tokens": [
+    "hero-badge.radius",
+    "hero-badge.border",
+    "type.hero-badge"
+  ],
+  "states": []
+}

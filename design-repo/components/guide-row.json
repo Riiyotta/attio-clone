@@ -1,0 +1,20 @@
+{
+  "id": "component.guide-row",
+  "kind": "component",
+  "title": "Guide row",
+  "purpose": "Decorative spacer with dashed vertical guides (160/120/100 tall).",
+  "source": {
+    "file": "src/components/marketing/primitives.jsx",
+    "tag": "export function GuideRow(",
+    "lines": "45-55",
+    "citation": "src/components/marketing/primitives.jsx:45-55"
+  },
+  "composes": [
+    "primitive.dashed-rule"
+  ],
+  "tokens": [
+    "space.160",
+    "space.120",
+    "space.100"
+  ]
+}

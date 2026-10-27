@@ -1,0 +1,71 @@
+{
+  "$description": "What is enforced vs convention for token use in PageSpecs. Enforced by schema/semantic_validate.py (rules TOKEN_*).",
+  "version": "1.0.0",
+  "pageSpecStyleFields": {
+    "theme": "enum light|dark (must be one of the section contract's themes)",
+    "surface": "color token from themeSurfaces[theme]",
+    "paddingTop": "space token from sectionRhythm",
+    "paddingBottom": "space token from sectionRhythm",
+    "headingFont": "fontFamily token from approvedFonts"
+  },
+  "themeSurfaces": {
+    "light": [
+      "color.semantic.primary-background",
+      "color.semantic.secondary-background",
+      "color.semantic.surface-subtle",
+      "color.white.100",
+      "color.white.200"
+    ],
+    "dark": [
+      "color.semantic.primary-background",
+      "color.semantic.secondary-background",
+      "color.semantic.surface-subtle",
+      "color.black.50"
+    ]
+  },
+  "sectionRhythm": [
+    "space.56",
+    "space.60",
+    "space.64",
+    "space.80",
+    "space.88",
+    "space.100",
+    "space.112",
+    "space.120",
+    "space.128",
+    "space.152",
+    "space.160"
+  ],
+  "approvedFonts": [
+    "font.sans",
+    "font.display",
+    "font.quote-serif"
+  ],
+  "unsupportedFontsNote": "font.mono and font.serif are catalogued but reserved for terminal/label artwork and the serif fallback stack; a PageSpec may not select them. Any family not in the catalog is rejected.",
+  "rawValueRestrictions": {
+    "color": "no hex/rgb/hsl/oklch literals anywhere in a PageSpec (TOKEN_RAW_COLOR)",
+    "space": "no px/rem/em literals in style fields (TOKEN_ARBITRARY_SPACING)",
+    "fontFamily": "only approvedFonts (TOKEN_UNSUPPORTED_FONT)"
+  },
+  "enforced": [
+    "TOKEN_UNKNOWN",
+    "TOKEN_NOT_APPROVED",
+    "TOKEN_RAW_COLOR",
+    "TOKEN_ARBITRARY_SPACING",
+    "TOKEN_UNSUPPORTED_FONT",
+    "TOKEN_THEME_MISMATCH",
+    "THEME_NOT_ALLOWED_FOR_SECTION"
+  ],
+  "convention": [
+    "type roles, radii, elevations, gradients and easing are applied by the section/component contracts, not chosen per PageSpec"
+  ],
+  "resolutionOrder": [
+    "foundation",
+    "theme mode (tokens/themes)",
+    "semantic aliases",
+    "component tokens",
+    "permitted PageSpec style fields",
+    "responsive overrides (breakpoints)"
+  ],
+  "maxWordsRule": "Every text field's maxWords = ceil(1.25 x the largest word count measured for that role on the rendered clone at 1440px (extraction/measured-values.json -> sectionHeights[].textStats)), minimum 2. Recorded per field in the section contract."
+}

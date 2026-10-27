@@ -1,0 +1,91 @@
+{
+  "id": "listing.directory-header",
+  "title": "Directory header",
+  "status": "measured",
+  "source": {
+    "id": "src:Sections#header-className-grid-grid-cols-12-justi",
+    "file": "src/components/apps/Sections.jsx",
+    "tag": "<header className=\"grid grid-cols-12 justify-items-center",
+    "lines": "194-194",
+    "citation": "src/components/apps/Sections.jsx:194-194"
+  },
+  "semantic": {
+    "id": "listing.directory-header",
+    "category": "LISTING"
+  },
+  "retrievalEligible": true,
+  "purpose": "Catalog index header: centered H2 + lead and the search trigger (opens overlay.search-dialog).",
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "title": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 4,
+        "x-maxWordsEvidence": "measured headingWordsMax=3 for listing.directory-header at 1440px"
+      },
+      "lead": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 18,
+        "x-maxWordsEvidence": "measured paragraphWordsMax=14 for listing.directory-header at 1440px"
+      },
+      "searchPlaceholder": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 4,
+        "x-maxWordsEvidence": "measured 3 words"
+      }
+    },
+    "required": [
+      "title",
+      "lead",
+      "searchPlaceholder"
+    ]
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "dialog-scale"
+    ],
+    "reducedMotionFallback": "instant-state-change",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": []
+  },
+  "assetSlots": [],
+  "generatedAssetRoles": [
+    "copy.original",
+    "url.placeholder"
+  ],
+  "composes": [
+    "component.search-trigger",
+    "component.centered-head"
+  ],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/apps",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 438
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/apps",
+      "variant": null
+    }
+  ]
+}

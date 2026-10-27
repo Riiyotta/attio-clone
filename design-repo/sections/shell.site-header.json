@@ -1,0 +1,193 @@
+{
+  "id": "shell.site-header",
+  "title": "Site header",
+  "status": "measured",
+  "source": {
+    "id": "src:SiteHeader#export-default-function-SiteHeader",
+    "file": "src/components/SiteHeader.jsx",
+    "tag": "export default function SiteHeader(",
+    "lines": "122-333",
+    "citation": "src/components/SiteHeader.jsx:122-333"
+  },
+  "semantic": {
+    "id": "shell.site-header",
+    "category": "SHELL"
+  },
+  "retrievalEligible": true,
+  "purpose": "Global navigation: announcement banner, brand mark, five dropdown menus, sign-in and primary CTA; swaps to dark over dark sections.",
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "brandMark": {
+        "$ref": "#/definitions/media",
+        "x-assetRoles": [
+          "brand.reference-wordmark",
+          "brand.placeholder-mark",
+          "brand.user-supplied-mark"
+        ]
+      },
+      "banner": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "text": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 12,
+            "x-maxWordsEvidence": "banner c48, 1 line"
+          },
+          "href": {
+            "$ref": "#/definitions/url"
+          }
+        },
+        "required": [
+          "text",
+          "href"
+        ]
+      },
+      "menus": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 6,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "label": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 3,
+              "x-maxWordsEvidence": "menu triggers c7-c10"
+            },
+            "groups": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 3,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "label": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxWords": 4,
+                    "x-maxWordsEvidence": "group labels"
+                  },
+                  "items": {
+                    "type": "array",
+                    "minItems": 1,
+                    "maxItems": 6,
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "title": {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxWords": 5,
+                          "x-maxWordsEvidence": "measured 4 words"
+                        },
+                        "description": {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxWords": 8,
+                          "x-maxWordsEvidence": "item descriptions c18-c33"
+                        },
+                        "href": {
+                          "$ref": "#/definitions/url"
+                        }
+                      },
+                      "required": [
+                        "title",
+                        "description",
+                        "href"
+                      ]
+                    }
+                  }
+                },
+                "required": [
+                  "label",
+                  "items"
+                ]
+              }
+            }
+          },
+          "required": [
+            "label",
+            "groups"
+          ]
+        },
+        "x-countEvidence": "5 menus measured"
+      },
+      "signIn": {
+        "$ref": "#/definitions/link"
+      },
+      "primaryCta": {
+        "$ref": "#/definitions/cta"
+      }
+    },
+    "required": [
+      "brandMark",
+      "menus",
+      "signIn",
+      "primaryCta"
+    ]
+  },
+  "constraints": {
+    "onePerPage": true,
+    "mustBeFirst": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "header-theme-swap",
+      "dropdown-panel",
+      "drawer-slide",
+      "hover-micro"
+    ],
+    "reducedMotionFallback": "instant-state-change",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "show-alternate-tree",
+        "detail": "nav row 68px -> 52px; menus collapse into the mobile drawer (overlay.mobile-nav-drawer)."
+      }
+    ]
+  },
+  "assetSlots": [
+    {
+      "field": ".brandMark",
+      "assetRoles": [
+        "brand.reference-wordmark",
+        "brand.placeholder-mark",
+        "brand.user-supplied-mark"
+      ]
+    }
+  ],
+  "generatedAssetRoles": [
+    "brand.placeholder-mark",
+    "brand.user-supplied-mark",
+    "copy.original",
+    "url.placeholder"
+  ],
+  "composes": [
+    "primitive.brand-mark",
+    "primitive.button"
+  ],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": "see extraction/measured-values.json sectionHeights (shell rows)",
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    "all mounted routes"
+  ]
+}

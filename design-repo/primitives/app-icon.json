@@ -1,0 +1,21 @@
+{
+  "id": "primitive.app-icon",
+  "kind": "primitive",
+  "title": "App icon",
+  "purpose": "Procedural app icon on a 30%-radius tile.",
+  "source": {
+    "file": "src/components/apps/AppIcon.jsx",
+    "tag": "export default function AppIcon(",
+    "lines": "72-87",
+    "citation": "src/components/apps/AppIcon.jsx:72-87"
+  },
+  "props": {
+    "seed": "int",
+    "size": "px",
+    "assetRole": "icon.generated-app"
+  },
+  "tokens": [
+    "elevation.app-icon"
+  ],
+  "states": []
+}

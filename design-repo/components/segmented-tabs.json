@@ -1,0 +1,18 @@
+{
+  "id": "component.segmented-tabs",
+  "kind": "component",
+  "title": "Segmented tabs",
+  "purpose": "Two-option segmented control switching step sets.",
+  "source": {
+    "file": "src/components/partners/StepList.jsx",
+    "tag": "export function SegmentedTabs(",
+    "lines": "81-107",
+    "citation": "src/components/partners/StepList.jsx:81-107"
+  },
+  "composes": [
+    "primitive.stroke-icon"
+  ],
+  "tokens": [
+    "elevation.segment-pill"
+  ]
+}

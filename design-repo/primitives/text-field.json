@@ -1,0 +1,34 @@
+{
+  "id": "primitive.text-field",
+  "kind": "primitive",
+  "title": "Text field",
+  "purpose": "Labelled text input / textarea with hover shadow, focus ring and error state.",
+  "source": {
+    "file": "src/components/forms/Fields.jsx",
+    "tag": "export function TextField(",
+    "lines": "24-39",
+    "citation": "src/components/forms/Fields.jsx:24-39"
+  },
+  "props": {
+    "label": "text <= 3 words",
+    "placeholder": "text <= 7 words",
+    "kind": [
+      "text",
+      "email",
+      "textarea"
+    ]
+  },
+  "tokens": [
+    "input.height",
+    "input.radius",
+    "input.border",
+    "input.focus-ring",
+    "input.error-border"
+  ],
+  "states": [
+    "idle",
+    "hover",
+    "focus-visible",
+    "invalid"
+  ]
+}

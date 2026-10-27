@@ -1,0 +1,39 @@
+{
+  "id": "primitive.button",
+  "kind": "primitive",
+  "title": "Button",
+  "purpose": "Primary / outline / ghost / small-link actions, light and dark variants.",
+  "source": {
+    "file": "src/components/ui.jsx",
+    "tag": "export function Button(",
+    "lines": "64-73",
+    "citation": "src/components/ui.jsx:64-73"
+  },
+  "props": {
+    "variant": [
+      "primary",
+      "outline",
+      "ghost"
+    ],
+    "size": [
+      "md",
+      "sm"
+    ],
+    "label": "text <= 5 words",
+    "href": "url"
+  },
+  "tokens": [
+    "button.height",
+    "button.radius",
+    "button.primary.background",
+    "button.outline.border",
+    "easing.in-out"
+  ],
+  "states": [
+    "idle",
+    "hover",
+    "focus-visible",
+    "active",
+    "dark"
+  ]
+}

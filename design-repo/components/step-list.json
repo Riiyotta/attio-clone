@@ -1,0 +1,18 @@
+{
+  "id": "component.step-list",
+  "kind": "component",
+  "title": "Step list",
+  "purpose": "Numbered steps with title + body and a footer link.",
+  "source": {
+    "file": "src/components/partners/StepList.jsx",
+    "tag": "export function Steps(",
+    "lines": "26-78",
+    "citation": "src/components/partners/StepList.jsx:26-78"
+  },
+  "composes": [
+    "primitive.arrow-icon"
+  ],
+  "tokens": [
+    "elevation.number-badge"
+  ]
+}

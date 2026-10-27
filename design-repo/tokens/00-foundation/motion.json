@@ -1,0 +1,84 @@
+{
+  "$description": "Easing tokens (config + CSS custom properties) and the global reduced-motion rule.",
+  "easing": {
+    "easing.out": {
+      "value": "cubic-bezier(0,0,0,1)",
+      "sourceKey": "transitionTimingFunction.out",
+      "usageCount": 63,
+      "evidence": "tailwind.config.cjs:316-316"
+    },
+    "easing.in": {
+      "value": "cubic-bezier(.3,0,1,1)",
+      "sourceKey": "transitionTimingFunction.in",
+      "usageCount": 47,
+      "evidence": "tailwind.config.cjs:317-317"
+    },
+    "easing.in-out": {
+      "value": "cubic-bezier(.2,0,0,1)",
+      "sourceKey": "transitionTimingFunction.in-out",
+      "usageCount": 101,
+      "evidence": "tailwind.config.cjs:318-318"
+    },
+    "easing.emphasized": {
+      "value": "cubic-bezier(.2,0,0,1)",
+      "sourceKey": "transitionTimingFunction.emphasized",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:319-319"
+    },
+    "easing.reveal": {
+      "value": "cubic-bezier(0,0,.58,1)",
+      "sourceKey": "transitionTimingFunction.reveal",
+      "usageCount": 17,
+      "evidence": "tailwind.config.cjs:320-320"
+    },
+    "easing.out-cubic": {
+      "value": "cubic-bezier(.33,1,.68,1)",
+      "sourceKey": "transitionTimingFunction.out-cubic",
+      "usageCount": 16,
+      "evidence": "tailwind.config.cjs:321-321"
+    },
+    "easing.in-cubic": {
+      "value": "cubic-bezier(.32,0,.67,0)",
+      "sourceKey": "transitionTimingFunction.in-cubic",
+      "usageCount": 1,
+      "evidence": "tailwind.config.cjs:322-322"
+    },
+    "easing.in-out-cubic": {
+      "value": "cubic-bezier(.65,0,.35,1)",
+      "sourceKey": "transitionTimingFunction.in-out-cubic",
+      "usageCount": 16,
+      "evidence": "tailwind.config.cjs:323-323"
+    },
+    "easing.in-out-quad": {
+      "value": "cubic-bezier(.45,.05,.55,.95)",
+      "sourceKey": "transitionTimingFunction.in-out-quad",
+      "usageCount": 7,
+      "evidence": "tailwind.config.cjs:324-324"
+    },
+    "easing.header": {
+      "value": "cubic-bezier(.4,0,.2,1)",
+      "sourceKey": "transitionTimingFunction.header",
+      "usageCount": 5,
+      "evidence": "tailwind.config.cjs:325-325"
+    },
+    "easing.drawer": {
+      "value": "cubic-bezier(.32,.72,0,1)",
+      "sourceKey": "transitionTimingFunction.drawer",
+      "usageCount": 5,
+      "evidence": "tailwind.config.cjs:326-326"
+    },
+    "easing.hero-spring": {
+      "value": "linear(0, 0.0436 4.2%, ... 1 100%) (24-stop spring fit: mass 1, stiffness 120, damping 26, ~720ms)",
+      "sourceKey": "--ease-hero-spring",
+      "usageCount": 3,
+      "evidence": "src/index.css:492-492"
+    }
+  },
+  "reducedMotionRule": {
+    "rule": "Under prefers-reduced-motion: reduce, all transition durations are 0ms and keyframe animations are only declared inside prefers-reduced-motion: no-preference; JS loops check the reduce query before starting.",
+    "evidence": [
+      "src/index.css:171-177",
+      "src/motion/index.js:4-4"
+    ]
+  }
+}

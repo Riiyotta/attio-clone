@@ -1,0 +1,185 @@
+{
+  "id": "features.perks",
+  "title": "Perks",
+  "status": "measured",
+  "source": {
+    "id": "src:Sections#export-function-Perks",
+    "file": "src/components/partners/Sections.jsx",
+    "tag": "export function Perks(",
+    "lines": "322-364",
+    "citation": "src/components/partners/Sections.jsx:322-364",
+    "variantSources": {
+      "band": {
+        "file": "src/components/startups/Sections.jsx",
+        "tag": "export function PerksBand(",
+        "lines": "176-221",
+        "citation": "src/components/startups/Sections.jsx:176-221"
+      },
+      "grid": {
+        "file": "src/components/partners/Sections.jsx",
+        "tag": "export function Perks(",
+        "lines": "322-364",
+        "citation": "src/components/partners/Sections.jsx:322-364"
+      }
+    }
+  },
+  "semantic": {
+    "id": "features.perks",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "purpose": "Program benefits: a heading band with orbit art (startups) or a 2x3 grid of perks with art (creators).",
+  "themes": [
+    "light"
+  ],
+  "variants": [
+    "band",
+    "grid"
+  ],
+  "variantRequirements": {
+    "grid": [
+      "perks"
+    ]
+  },
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "heading": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 13,
+        "x-maxWordsEvidence": "measured headingWordsMax=10 for features.perks at 1440px"
+      },
+      "lead": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 24,
+        "x-maxWordsEvidence": "measured paragraphWordsMax=19 for features.perks at 1440px"
+      },
+      "perks": {
+        "type": "array",
+        "minItems": 3,
+        "maxItems": 6,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "title": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 8,
+              "x-maxWordsEvidence": "measured 6 words"
+            },
+            "body": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 24,
+              "x-maxWordsEvidence": "measured paragraphWordsMax=19 for features.perks at 1440px"
+            },
+            "art": {
+              "$ref": "#/definitions/media",
+              "x-assetRoles": [
+                "illustration.reference-art",
+                "illustration.generated-abstract",
+                "illustration.decorative-pattern"
+              ]
+            }
+          },
+          "required": [
+            "title",
+            "body"
+          ]
+        }
+      },
+      "art": {
+        "$ref": "#/definitions/media",
+        "x-assetRoles": [
+          "illustration.reference-art",
+          "illustration.generated-abstract",
+          "illustration.decorative-pattern",
+          "icon.generated-app"
+        ]
+      }
+    },
+    "required": [
+      "heading"
+    ]
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "static",
+      "hover-micro"
+    ],
+    "reducedMotionFallback": "instant-state-change",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "collapse-grid",
+        "detail": "grid -> one column; band orbit tokens hidden."
+      }
+    ]
+  },
+  "assetSlots": [
+    {
+      "field": ".perks[].art",
+      "assetRoles": [
+        "illustration.reference-art",
+        "illustration.generated-abstract",
+        "illustration.decorative-pattern"
+      ]
+    },
+    {
+      "field": ".art",
+      "assetRoles": [
+        "illustration.reference-art",
+        "illustration.generated-abstract",
+        "illustration.decorative-pattern",
+        "icon.generated-app"
+      ]
+    }
+  ],
+  "generatedAssetRoles": [
+    "copy.original",
+    "icon.generated-app",
+    "illustration.decorative-pattern",
+    "illustration.generated-abstract",
+    "url.placeholder"
+  ],
+  "composes": [],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/startups",
+        "variant": "band",
+        "instance": 0,
+        "heightPx": 382
+      },
+      {
+        "route": "/partners/creator-partners",
+        "variant": "grid",
+        "instance": 0,
+        "heightPx": 1157
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/startups",
+      "variant": "band"
+    },
+    {
+      "route": "/partners/creator-partners",
+      "variant": "grid"
+    }
+  ]
+}

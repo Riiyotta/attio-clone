@@ -1,0 +1,16 @@
+{
+  "id": "component.hover-wash",
+  "kind": "component",
+  "title": "Hover wash",
+  "purpose": "Clickable card hover layer (opacity .8 in 50ms, out 300ms).",
+  "source": {
+    "file": "src/components/marketing/primitives.jsx",
+    "tag": "export function HoverWash(",
+    "lines": "90-92",
+    "citation": "src/components/marketing/primitives.jsx:90-92"
+  },
+  "composes": [],
+  "tokens": [
+    "card.hover-wash"
+  ]
+}

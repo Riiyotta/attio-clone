@@ -1,0 +1,16 @@
+{
+  "id": "component.spacer-row",
+  "kind": "component",
+  "title": "Spacer row",
+  "purpose": "128px bordered spacer between homepage sections.",
+  "source": {
+    "file": "src/components/SpacerRow.jsx",
+    "tag": "export default function SpacerRow(",
+    "lines": "2-10",
+    "citation": "src/components/SpacerRow.jsx:2-10"
+  },
+  "composes": [],
+  "tokens": [
+    "space.128"
+  ]
+}

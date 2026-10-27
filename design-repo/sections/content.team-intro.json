@@ -1,0 +1,109 @@
+{
+  "id": "content.team-intro",
+  "title": "Team intro",
+  "status": "measured",
+  "source": {
+    "id": "src:Sections#export-function-TeamIntro",
+    "file": "src/components/careers/Sections.jsx",
+    "tag": "export function TeamIntro(",
+    "lines": "149-177",
+    "citation": "src/components/careers/Sections.jsx:149-177"
+  },
+  "semantic": {
+    "id": "content.team-intro",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
+  "purpose": "About the team: heading and a short paragraph beside a dot-matrix artwork.",
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "heading": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 5,
+        "x-maxWordsEvidence": "measured headingWordsMax=4 for content.team-intro at 1440px"
+      },
+      "body": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 29,
+        "x-maxWordsEvidence": "measured paragraphWordsMax=23 for content.team-intro at 1440px"
+      },
+      "art": {
+        "$ref": "#/definitions/media",
+        "x-assetRoles": [
+          "illustration.reference-art",
+          "illustration.generated-abstract",
+          "illustration.decorative-pattern",
+          "avatar.abstract"
+        ]
+      }
+    },
+    "required": [
+      "heading",
+      "body"
+    ]
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "static"
+    ],
+    "reducedMotionFallback": "none-needed",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "stack",
+        "detail": "art below copy."
+      }
+    ]
+  },
+  "assetSlots": [
+    {
+      "field": ".art",
+      "assetRoles": [
+        "illustration.reference-art",
+        "illustration.generated-abstract",
+        "illustration.decorative-pattern",
+        "avatar.abstract"
+      ]
+    }
+  ],
+  "generatedAssetRoles": [
+    "avatar.abstract",
+    "copy.original",
+    "illustration.decorative-pattern",
+    "illustration.generated-abstract",
+    "url.placeholder"
+  ],
+  "composes": [],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/careers",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 796
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/careers",
+      "variant": null
+    }
+  ]
+}

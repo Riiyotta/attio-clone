@@ -1,0 +1,160 @@
+{
+  "$description": "Single registry of source identity patterns used by the GENERATED_MODE_* rules. Two layers: (1) the ORIGINAL live site the clone reproduces (brand, domains, product terms and taglines named in the clone specs), (2) the REFERENCE clone's own invented identity (fictional brand, people, companies, copy) which also must not leak into a page generated for someone else. Patterns are case-insensitive regular expressions.",
+  "version": "1.0.0",
+  "patterns": {
+    "brand": [
+      "\\battio\\b",
+      "attio\\.com",
+      "\\bcorvale\\b",
+      "\\bchatgpt\\b",
+      "\\bclaude\\b",
+      "\\bslack\\b"
+    ],
+    "cta": [
+      "\\b(get|try|start with|download|join|use|book|switch to|sign up for)\\s+(attio|corvale)\\b",
+      "\\btry the crew plan\\b",
+      "\\bcontinue with max\\b"
+    ],
+    "copy": [
+      "universal context",
+      "agentic revenue",
+      "runs on attio",
+      "cue the agents",
+      "ready where you are",
+      "attio 101",
+      "unlimited insights"
+    ],
+    "url": {
+      "allowedHostSuffixes": [
+        ".example",
+        ".invalid"
+      ],
+      "allowedHosts": [
+        "example.com",
+        "example.org",
+        "example.net"
+      ],
+      "blockedPathTokens": [
+        "attio",
+        "corvale",
+        "chatgpt",
+        "claude",
+        "slack"
+      ],
+      "blockedHosts": [
+        "apps.apple.com",
+        "play.google.com",
+        "testflight.apple.com",
+        "twitter.com",
+        "x.com",
+        "linkedin.com",
+        "youtube.com",
+        "github.com"
+      ]
+    },
+    "person": [
+      "Ada Lindqvist",
+      "Ade Okafor",
+      "Ava Morales",
+      "Casey Morales",
+      "Engineering Manager",
+      "Hana Kowalski",
+      "Jonas Weber",
+      "Kenji Ito",
+      "Leah Brandt",
+      "Leo Brandt",
+      "Luis Ferreira",
+      "Mara Okonkwo",
+      "Maya Chen",
+      "New York",
+      "Omar Haddad",
+      "Platform Engineer",
+      "Priya Castell",
+      "Priya Nair",
+      "Product Designer",
+      "Product Engineer",
+      "Riya Desai",
+      "San Francisco",
+      "Tom Becker",
+      "Zoe Laurent"
+    ],
+    "company": [
+      "Arkwoven",
+      "Bramble Labs",
+      "Brightwater Labs",
+      "Brindlecove",
+      "Halcyon Freight",
+      "Halden Co",
+      "Halverstone",
+      "Hubbo",
+      "Lattice Works",
+      "Lumiqa",
+      "Lumiqa Robotics",
+      "Mailbridge",
+      "Marigold Studio",
+      "Mosaic Bit",
+      "Northgate Advisory",
+      "Northwind Apps",
+      "Ostra",
+      "Ostra Kitchens",
+      "Oxmere",
+      "Parlant",
+      "Pellora",
+      "Pinecrest Health",
+      "Pipeline Weekly",
+      "Plover Studio",
+      "Quarry Tools",
+      "Quilla",
+      "Quillfold",
+      "Ridgeline Ops",
+      "Tesselio",
+      "Tidewell Bank",
+      "Varnstead",
+      "Vesper Mobility"
+    ],
+    "rating": [
+      "\\b[0-5](\\.\\d)?\\s*(/\\s*5|out of 5|stars?)\\b",
+      "\\u2605",
+      "\\b\\d[\\d,]*\\+?\\s+(reviews|ratings)\\b",
+      "\\b(g2|capterra|trustpilot|product hunt)\\b"
+    ],
+    "store": [
+      "\\bapp store\\b",
+      "\\bgoogle play\\b",
+      "\\btestflight\\b",
+      "\\bplay store\\b",
+      "apps\\.apple\\.com",
+      "play\\.google\\.com"
+    ],
+    "assetRefPrefixesBlockedInGenerated": [
+      "ref:",
+      "src/",
+      "public/"
+    ]
+  },
+  "evidence": {
+    "originalBrand": [
+      "src/assets.js:6-6 (asset manifest warns against the original brand's logos)",
+      "CLONE_SPEC.md:1-3 (source + title)"
+    ],
+    "originalCopy": [
+      "CLONE_SPEC_PLATFORM.md:256 ('Powered by Universal Context')",
+      "CLONE_SPEC_PLATFORM.md:284 ('Agentic revenue / runs on ...')",
+      "CLONE_SPEC_PLATFORM.md:49 ('Cue the agents')",
+      "CLONE_SPEC_PLATFORM.md:51 ('Ready where you are')",
+      "CLONE_SPEC_PAGES.md:544 (help reference slug)"
+    ],
+    "thirdPartyMarks": [
+      "src/data/apps.js ROUTE_APPS (crawled slugs chatgpt / claude / slack kept in the clone's URLs)",
+      "src/pages/ExpertPartners.jsx:55 ('Slack-style' in tier copy)"
+    ],
+    "referenceClone": [
+      "src/components/ui.jsx BrandMark (fictional brand)",
+      "src/components/logos.jsx CUSTOMER_NAMES",
+      "people: name props, CREATORS, EXPERT_QUOTES, mock UI names across src/components"
+    ],
+    "ctaPlans": [
+      "src/components/pricing/data.js (fictional plan CTAs)"
+    ]
+  }
+}

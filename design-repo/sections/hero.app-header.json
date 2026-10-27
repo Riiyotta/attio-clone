@@ -1,0 +1,126 @@
+{
+  "id": "hero.app-header",
+  "title": "App header",
+  "status": "measured",
+  "source": {
+    "id": "src:AppDetail#2-AppHeader",
+    "file": "src/pages/AppDetail.jsx",
+    "tag": "{/* 2. AppHeader",
+    "lines": "54-54",
+    "citation": "src/pages/AppDetail.jsx:54-54"
+  },
+  "semantic": {
+    "id": "hero.app-header",
+    "category": "HERO"
+  },
+  "retrievalEligible": true,
+  "purpose": "App detail opener: 84px app icon, app name, subtitle and install CTA beside a diagonal-stripe strip.",
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "icon": {
+        "$ref": "#/definitions/media",
+        "x-assetRoles": [
+          "icon.generated-app"
+        ]
+      },
+      "appName": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 2,
+        "x-maxWordsEvidence": "measured headingWordsMax=1 for hero.app-header at 1440px; c5-c7"
+      },
+      "subtitle": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 10,
+        "x-maxWordsEvidence": "measured paragraphWordsMax=8 for hero.app-header at 1440px"
+      },
+      "installCta": {
+        "$ref": "#/definitions/cta"
+      }
+    },
+    "required": [
+      "icon",
+      "appName",
+      "subtitle",
+      "installCta"
+    ]
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "static"
+    ],
+    "reducedMotionFallback": "none-needed",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "stack",
+        "detail": "icon 64px; subtitle and CTA span the full column."
+      }
+    ]
+  },
+  "assetSlots": [
+    {
+      "field": ".icon",
+      "assetRoles": [
+        "icon.generated-app"
+      ]
+    }
+  ],
+  "generatedAssetRoles": [
+    "copy.original",
+    "icon.generated-app",
+    "url.placeholder"
+  ],
+  "composes": [],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/apps/chatgpt",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 282
+      },
+      {
+        "route": "/apps/claude",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 282
+      },
+      {
+        "route": "/apps/slack",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 282
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/apps/chatgpt",
+      "variant": null
+    },
+    {
+      "route": "/apps/claude",
+      "variant": null
+    },
+    {
+      "route": "/apps/slack",
+      "variant": null
+    }
+  ]
+}

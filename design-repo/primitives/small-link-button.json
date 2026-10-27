@@ -1,0 +1,24 @@
+{
+  "id": "primitive.small-link-button",
+  "kind": "primitive",
+  "title": "Small link button",
+  "purpose": "32px outline button with trailing 14px arrow.",
+  "source": {
+    "file": "src/components/ui.jsx",
+    "tag": "export function SmallLinkButton(",
+    "lines": "76-83",
+    "citation": "src/components/ui.jsx:76-83"
+  },
+  "props": {
+    "label": "text <= 4 words",
+    "href": "url"
+  },
+  "tokens": [
+    "type.small-button",
+    "radius.10"
+  ],
+  "states": [
+    "idle",
+    "hover"
+  ]
+}

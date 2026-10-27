@@ -1,0 +1,142 @@
+{
+  "id": "social-proof.scale-stats",
+  "title": "Scale stats",
+  "status": "measured",
+  "source": {
+    "id": "src:ScaleStats#export-default-function-ScaleStats",
+    "file": "src/components/ScaleStats.jsx",
+    "tag": "export default function ScaleStats(",
+    "lines": "75-122",
+    "citation": "src/components/ScaleStats.jsx:75-122"
+  },
+  "semantic": {
+    "id": "social-proof.scale-stats",
+    "category": "SOCIAL_PROOF"
+  },
+  "retrievalEligible": true,
+  "purpose": "Reliability proof: two-tone heading, an illustrative growth chart and four stat blocks with 2px blue rules.",
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "heading": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "lead": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 13,
+            "x-maxWordsEvidence": "measured headingWordsMax=10 for social-proof.scale-stats at 1440px"
+          },
+          "continuation": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 13,
+            "x-maxWordsEvidence": "measured headingWordsMax=10 for social-proof.scale-stats at 1440px"
+          }
+        },
+        "required": [
+          "lead",
+          "continuation"
+        ]
+      },
+      "chart": {
+        "$ref": "#/definitions/media",
+        "x-assetRoles": [
+          "chart.illustrative"
+        ]
+      },
+      "stats": {
+        "type": "array",
+        "minItems": 2,
+        "maxItems": 4,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "value": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 3,
+              "x-maxWordsEvidence": "measured 2 words"
+            },
+            "label": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 4,
+              "x-maxWordsEvidence": "measured paragraphWordsMax=3 for social-proof.scale-stats at 1440px"
+            }
+          },
+          "required": [
+            "value",
+            "label"
+          ]
+        },
+        "x-countEvidence": "4 stat blocks measured"
+      }
+    },
+    "required": [
+      "heading",
+      "chart",
+      "stats"
+    ]
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "chart-draw-in-view"
+    ],
+    "reducedMotionFallback": "static-final-state",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "stack",
+        "detail": "chart above stats; stat numbers 32 -> 28 at 390."
+      }
+    ]
+  },
+  "assetSlots": [
+    {
+      "field": ".chart",
+      "assetRoles": [
+        "chart.illustrative"
+      ]
+    }
+  ],
+  "generatedAssetRoles": [
+    "chart.illustrative",
+    "copy.original",
+    "url.placeholder"
+  ],
+  "composes": [
+    "component.stat-block"
+  ],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 760
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/",
+      "variant": null
+    }
+  ]
+}

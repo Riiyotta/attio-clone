@@ -1,0 +1,110 @@
+{
+  "id": "navigation.breadcrumb-bar",
+  "title": "Breadcrumb bar",
+  "status": "measured",
+  "source": {
+    "id": "src:AppDetail#1-Breadcrumb-bar",
+    "file": "src/pages/AppDetail.jsx",
+    "tag": "{/* 1. Breadcrumb bar",
+    "lines": "37-37",
+    "citation": "src/pages/AppDetail.jsx:37-37"
+  },
+  "semantic": {
+    "id": "navigation.breadcrumb-bar",
+    "category": "NAVIGATION"
+  },
+  "retrievalEligible": true,
+  "purpose": "112px breadcrumb row (parent / current) with a position counter, above the app header.",
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "parent": {
+        "$ref": "#/definitions/link"
+      },
+      "current": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 7,
+        "x-maxWordsEvidence": "measured 5 words"
+      },
+      "position": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 2,
+        "x-maxWordsEvidence": "measured 1 words"
+      }
+    },
+    "required": [
+      "parent",
+      "current"
+    ]
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "static"
+    ],
+    "reducedMotionFallback": "none-needed",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "hide",
+        "detail": "counter hidden."
+      }
+    ]
+  },
+  "assetSlots": [],
+  "generatedAssetRoles": [
+    "copy.original",
+    "url.placeholder"
+  ],
+  "composes": [],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/apps/chatgpt",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 112
+      },
+      {
+        "route": "/apps/claude",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 112
+      },
+      {
+        "route": "/apps/slack",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 112
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/apps/chatgpt",
+      "variant": null
+    },
+    {
+      "route": "/apps/claude",
+      "variant": null
+    },
+    {
+      "route": "/apps/slack",
+      "variant": null
+    }
+  ]
+}

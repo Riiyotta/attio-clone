@@ -1,0 +1,2315 @@
+{
+  "$description": "Measured evidence ledger. External citations (path:line-line) are relative to the clone project root (the folder that contains design-repo/); verify_all.py resolves them only when that sibling source tree is present and degrades to warnings when it is not.",
+  "sourceRoot": "..",
+  "sectionHeights": {
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "measuredAt": "2026-10-27T10:15:13.868Z",
+    "reducedMotion": true,
+    "tool": "extraction/measure_sections.mjs (headless Chromium via Playwright)",
+    "pages": [
+      {
+        "route": "/",
+        "template": "home",
+        "docHeightPx": 17599,
+        "shell": [
+          {
+            "section": "shell.site-header",
+            "heightPx": 116
+          },
+          {
+            "section": "shell.site-footer",
+            "heightPx": 685
+          }
+        ],
+        "sections": [
+          {
+            "section": "hero.product-window",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 1206.6,
+            "inFlow": true,
+            "selector": "main > :nth-child(1)",
+            "textStats": {
+              "headingWordsMax": 4,
+              "paragraphWordsMax": 15,
+              "actionWordsMax": 7
+            }
+          },
+          {
+            "section": "social-proof.logo-wall",
+            "variant": "band",
+            "instance": 0,
+            "heightPx": 194,
+            "inFlow": true,
+            "selector": "[data-section=\"customer-logos\"]",
+            "textStats": {
+              "headingWordsMax": 0,
+              "paragraphWordsMax": 0,
+              "actionWordsMax": 1
+            }
+          },
+          {
+            "section": "features.platform-showcase",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 6479.4,
+            "inFlow": true,
+            "selector": "[data-section=\"platform-showcase\"]",
+            "textStats": {
+              "headingWordsMax": 23,
+              "paragraphWordsMax": 19,
+              "actionWordsMax": 3
+            }
+          },
+          {
+            "section": "features.customizable-workspace",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 1097,
+            "inFlow": true,
+            "selector": "[data-section=\"self-building\"]",
+            "textStats": {
+              "headingWordsMax": 26,
+              "paragraphWordsMax": 1,
+              "actionWordsMax": 3
+            }
+          },
+          {
+            "section": "features.context-horizon",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 2573.9,
+            "inFlow": true,
+            "selector": "[data-section=\"universal-context-brand\"]",
+            "textStats": {
+              "headingWordsMax": 12,
+              "paragraphWordsMax": 14,
+              "actionWordsMax": 3
+            }
+          },
+          {
+            "section": "features.developer-platform",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 593.3,
+            "inFlow": true,
+            "selector": "[data-section=\"universal-context-sdk\"]",
+            "textStats": {
+              "headingWordsMax": 7,
+              "paragraphWordsMax": 0,
+              "actionWordsMax": 2
+            }
+          },
+          {
+            "section": "testimonial.quote",
+            "variant": "scroll-curtain",
+            "instance": 0,
+            "heightPx": 2250,
+            "inFlow": true,
+            "selector": "[data-section=\"quote-reveal\"]",
+            "textStats": {
+              "headingWordsMax": 0,
+              "paragraphWordsMax": 17,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "social-proof.scale-stats",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 760,
+            "inFlow": true,
+            "selector": "[data-section=\"scale-stats\"]",
+            "textStats": {
+              "headingWordsMax": 10,
+              "paragraphWordsMax": 3,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "social-proof.customer-stories",
+            "variant": "carousel",
+            "instance": 0,
+            "heightPx": 937,
+            "inFlow": true,
+            "selector": "main > [data-section=\"customer-stories\"]",
+            "textStats": {
+              "headingWordsMax": 9,
+              "paragraphWordsMax": 13,
+              "actionWordsMax": 14
+            }
+          },
+          {
+            "section": "editorial.changelog-preview",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 930,
+            "inFlow": true,
+            "selector": "[data-section=\"changelog\"]",
+            "textStats": {
+              "headingWordsMax": 13,
+              "paragraphWordsMax": 15,
+              "actionWordsMax": 18
+            }
+          },
+          {
+            "section": "conversion.final-cta",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 417,
+            "inFlow": true,
+            "selector": "[data-section=\"final-cta\"]",
+            "textStats": {
+              "headingWordsMax": 5,
+              "paragraphWordsMax": 0,
+              "actionWordsMax": 3
+            }
+          }
+        ]
+      },
+      {
+        "route": "/pricing",
+        "template": "pricing",
+        "docHeightPx": 8847,
+        "shell": [
+          {
+            "section": "shell.site-header",
+            "heightPx": 116
+          },
+          {
+            "section": "shell.site-footer",
+            "heightPx": 685
+          }
+        ],
+        "sections": [
+          {
+            "section": "hero.pricing-intro",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 316,
+            "inFlow": true,
+            "selector": "[data-section=\"pricing-hero\"] > :nth-child(1)",
+            "textStats": {
+              "headingWordsMax": 4,
+              "paragraphWordsMax": 16,
+              "actionWordsMax": 1
+            }
+          },
+          {
+            "section": "pricing.plan-cards",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 398,
+            "inFlow": true,
+            "selector": "[data-section=\"pricing-hero\"] > :nth-child(2)",
+            "textStats": {
+              "headingWordsMax": 0,
+              "paragraphWordsMax": 0,
+              "actionWordsMax": 4
+            }
+          },
+          {
+            "section": "social-proof.logo-wall",
+            "variant": "grid",
+            "instance": 0,
+            "heightPx": 314,
+            "inFlow": true,
+            "selector": "main > :nth-child(2)",
+            "textStats": {
+              "headingWordsMax": 0,
+              "paragraphWordsMax": 0,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "pricing.comparison-header",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 199,
+            "inFlow": true,
+            "selector": "[data-motion=\"comparison-desktop\"] > :nth-child(1)",
+            "textStats": {
+              "headingWordsMax": 1,
+              "paragraphWordsMax": 5,
+              "actionWordsMax": 4
+            }
+          },
+          {
+            "section": "pricing.comparison-group",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 408,
+            "inFlow": true,
+            "selector": "[data-motion=\"comparison-desktop\"] > :nth-child(2) > div",
+            "textStats": {
+              "headingWordsMax": 1,
+              "paragraphWordsMax": 0,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "pricing.comparison-group",
+            "variant": null,
+            "instance": 1,
+            "heightPx": 933,
+            "inFlow": true,
+            "selector": "[data-motion=\"comparison-desktop\"] > :nth-child(2) > div",
+            "textStats": {
+              "headingWordsMax": 2,
+              "paragraphWordsMax": 0,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "pricing.comparison-group",
+            "variant": null,
+            "instance": 2,
+            "heightPx": 228,
+            "inFlow": true,
+            "selector": "[data-motion=\"comparison-desktop\"] > :nth-child(2) > div",
+            "textStats": {
+              "headingWordsMax": 1,
+              "paragraphWordsMax": 0,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "pricing.comparison-group",
+            "variant": null,
+            "instance": 3,
+            "heightPx": 687,
+            "inFlow": true,
+            "selector": "[data-motion=\"comparison-desktop\"] > :nth-child(2) > div",
+            "textStats": {
+              "headingWordsMax": 3,
+              "paragraphWordsMax": 0,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "pricing.comparison-group",
+            "variant": null,
+            "instance": 4,
+            "heightPx": 1263,
+            "inFlow": true,
+            "selector": "[data-motion=\"comparison-desktop\"] > :nth-child(2) > div",
+            "textStats": {
+              "headingWordsMax": 1,
+              "paragraphWordsMax": 0,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "pricing.comparison-group",
+            "variant": null,
+            "instance": 5,
+            "heightPx": 456,
+            "inFlow": true,
+            "selector": "[data-motion=\"comparison-desktop\"] > :nth-child(2) > div",
+            "textStats": {
+              "headingWordsMax": 1,
+              "paragraphWordsMax": 0,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "pricing.comparison-group",
+            "variant": null,
+            "instance": 6,
+            "heightPx": 591,
+            "inFlow": true,
+            "selector": "[data-motion=\"comparison-desktop\"] > :nth-child(2) > div",
+            "textStats": {
+              "headingWordsMax": 3,
+              "paragraphWordsMax": 0,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "pricing.comparison-group",
+            "variant": null,
+            "instance": 7,
+            "heightPx": 285,
+            "inFlow": true,
+            "selector": "[data-motion=\"comparison-desktop\"] > :nth-child(2) > div",
+            "textStats": {
+              "headingWordsMax": 1,
+              "paragraphWordsMax": 0,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "faq.accordion",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 1320,
+            "inFlow": true,
+            "selector": "main > :nth-child(4)",
+            "textStats": {
+              "headingWordsMax": 9,
+              "paragraphWordsMax": 31,
+              "actionWordsMax": 9
+            }
+          }
+        ]
+      },
+      {
+        "route": "/customers",
+        "template": "customer-hub",
+        "docHeightPx": 5105,
+        "shell": [
+          {
+            "section": "shell.site-header",
+            "heightPx": 116
+          },
+          {
+            "section": "shell.site-footer",
+            "heightPx": 685
+          }
+        ],
+        "sections": [
+          {
+            "section": "hero.page-centered",
+            "variant": "plain",
+            "instance": 0,
+            "heightPx": 466.2,
+            "inFlow": true,
+            "selector": "main > :nth-child(1)",
+            "textStats": {
+              "headingWordsMax": 8,
+              "paragraphWordsMax": 11,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "social-proof.logo-wall",
+            "variant": "grid",
+            "instance": 0,
+            "heightPx": 314,
+            "inFlow": true,
+            "selector": "main > :nth-child(3)",
+            "textStats": {
+              "headingWordsMax": 0,
+              "paragraphWordsMax": 0,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "social-proof.customer-stories",
+            "variant": "grid",
+            "instance": 0,
+            "heightPx": 2305,
+            "inFlow": true,
+            "selector": "main > :nth-child(4)",
+            "textStats": {
+              "headingWordsMax": 0,
+              "paragraphWordsMax": 15,
+              "actionWordsMax": 19
+            }
+          },
+          {
+            "section": "testimonial.quote",
+            "variant": "portrait",
+            "instance": 0,
+            "heightPx": 496,
+            "inFlow": true,
+            "selector": "main > :nth-child(6)",
+            "textStats": {
+              "headingWordsMax": 0,
+              "paragraphWordsMax": 39,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "conversion.avatar-wall-cta",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 719,
+            "inFlow": true,
+            "selector": "main > :nth-child(8)",
+            "textStats": {
+              "headingWordsMax": 6,
+              "paragraphWordsMax": 0,
+              "actionWordsMax": 3
+            }
+          }
+        ]
+      },
+      {
+        "route": "/startups",
+        "template": "program-landing",
+        "docHeightPx": 6356,
+        "shell": [
+          {
+            "section": "shell.site-header",
+            "heightPx": 116
+          },
+          {
+            "section": "shell.site-footer",
+            "heightPx": 685
+          }
+        ],
+        "sections": [
+          {
+            "section": "hero.page-centered",
+            "variant": "logo-strip",
+            "instance": 0,
+            "heightPx": 582.2,
+            "inFlow": true,
+            "selector": "main > :nth-child(1)",
+            "textStats": {
+              "headingWordsMax": 4,
+              "paragraphWordsMax": 21,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "conversion.application-form",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 754,
+            "inFlow": true,
+            "selector": "main > :nth-child(3)",
+            "textStats": {
+              "headingWordsMax": 6,
+              "paragraphWordsMax": 10,
+              "actionWordsMax": 1
+            }
+          },
+          {
+            "section": "features.cell-grid",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 2034.8,
+            "inFlow": true,
+            "selector": "main > :nth-child(5)",
+            "textStats": {
+              "headingWordsMax": 6,
+              "paragraphWordsMax": 28,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "social-proof.logo-wall",
+            "variant": "headed",
+            "instance": 0,
+            "heightPx": 698,
+            "inFlow": true,
+            "selector": "main > :nth-child(7)",
+            "textStats": {
+              "headingWordsMax": 5,
+              "paragraphWordsMax": 21,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "features.perks",
+            "variant": "band",
+            "instance": 0,
+            "heightPx": 382,
+            "inFlow": true,
+            "selector": "main > :nth-child(9)",
+            "textStats": {
+              "headingWordsMax": 10,
+              "paragraphWordsMax": 19,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "faq.accordion",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 1099,
+            "inFlow": true,
+            "selector": "main > :nth-child(11)",
+            "textStats": {
+              "headingWordsMax": 9,
+              "paragraphWordsMax": 22,
+              "actionWordsMax": 9
+            }
+          }
+        ]
+      },
+      {
+        "route": "/partners/app-partners",
+        "template": "program-landing",
+        "docHeightPx": 6041,
+        "shell": [
+          {
+            "section": "shell.site-header",
+            "heightPx": 116
+          },
+          {
+            "section": "shell.site-footer",
+            "heightPx": 685
+          }
+        ],
+        "sections": [
+          {
+            "section": "hero.page-centered",
+            "variant": "app-tiles",
+            "instance": 0,
+            "heightPx": 661.2,
+            "inFlow": true,
+            "selector": "main > :nth-child(1)",
+            "textStats": {
+              "headingWordsMax": 5,
+              "paragraphWordsMax": 14,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "features.cell-grid",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 394.3,
+            "inFlow": true,
+            "selector": "main > :nth-child(3)",
+            "textStats": {
+              "headingWordsMax": 2,
+              "paragraphWordsMax": 14,
+              "actionWordsMax": 4
+            }
+          },
+          {
+            "section": "features.step-list",
+            "variant": "tabbed",
+            "instance": 0,
+            "heightPx": 1213,
+            "inFlow": true,
+            "selector": "main > :nth-child(5)",
+            "textStats": {
+              "headingWordsMax": 7,
+              "paragraphWordsMax": 19,
+              "actionWordsMax": 7
+            }
+          },
+          {
+            "section": "features.app-store-preview",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 1034,
+            "inFlow": true,
+            "selector": "main > :nth-child(7)",
+            "textStats": {
+              "headingWordsMax": 5,
+              "paragraphWordsMax": 23,
+              "actionWordsMax": 2
+            }
+          },
+          {
+            "section": "testimonial.quote",
+            "variant": "portrait-features",
+            "instance": 0,
+            "heightPx": 452,
+            "inFlow": true,
+            "selector": "main > :nth-child(9)",
+            "textStats": {
+              "headingWordsMax": 0,
+              "paragraphWordsMax": 41,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "faq.accordion",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 625,
+            "inFlow": true,
+            "selector": "main > :nth-child(11)",
+            "textStats": {
+              "headingWordsMax": 11,
+              "paragraphWordsMax": 18,
+              "actionWordsMax": 11
+            }
+          },
+          {
+            "section": "navigation.partner-cross-links",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 854,
+            "inFlow": true,
+            "selector": "main > :nth-child(13)",
+            "textStats": {
+              "headingWordsMax": 5,
+              "paragraphWordsMax": 16,
+              "actionWordsMax": 13
+            }
+          }
+        ]
+      },
+      {
+        "route": "/partners/creator-partners",
+        "template": "program-landing",
+        "docHeightPx": 6034,
+        "shell": [
+          {
+            "section": "shell.site-header",
+            "heightPx": 116
+          },
+          {
+            "section": "shell.site-footer",
+            "heightPx": 685
+          }
+        ],
+        "sections": [
+          {
+            "section": "hero.page-centered",
+            "variant": "creator-carousel",
+            "instance": 0,
+            "heightPx": 994.2,
+            "inFlow": true,
+            "selector": "main > :nth-child(1)",
+            "textStats": {
+              "headingWordsMax": 8,
+              "paragraphWordsMax": 19,
+              "actionWordsMax": 5
+            }
+          },
+          {
+            "section": "content.audience-profiles",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 672,
+            "inFlow": true,
+            "selector": "main > :nth-child(3)",
+            "textStats": {
+              "headingWordsMax": 7,
+              "paragraphWordsMax": 13,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "features.perks",
+            "variant": "grid",
+            "instance": 0,
+            "heightPx": 1157,
+            "inFlow": true,
+            "selector": "main > :nth-child(5)",
+            "textStats": {
+              "headingWordsMax": 6,
+              "paragraphWordsMax": 18,
+              "actionWordsMax": 5
+            }
+          },
+          {
+            "section": "conversion.application-notice",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 394,
+            "inFlow": true,
+            "selector": "main > :nth-child(7)",
+            "textStats": {
+              "headingWordsMax": 8,
+              "paragraphWordsMax": 0,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "testimonial.quote",
+            "variant": "portrait-features",
+            "instance": 0,
+            "heightPx": 452,
+            "inFlow": true,
+            "selector": "main > :nth-child(9)",
+            "textStats": {
+              "headingWordsMax": 0,
+              "paragraphWordsMax": 39,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "faq.accordion",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 704,
+            "inFlow": true,
+            "selector": "main > :nth-child(11)",
+            "textStats": {
+              "headingWordsMax": 6,
+              "paragraphWordsMax": 21,
+              "actionWordsMax": 6
+            }
+          },
+          {
+            "section": "navigation.partner-cross-links",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 854,
+            "inFlow": true,
+            "selector": "main > :nth-child(13)",
+            "textStats": {
+              "headingWordsMax": 5,
+              "paragraphWordsMax": 16,
+              "actionWordsMax": 14
+            }
+          }
+        ]
+      },
+      {
+        "route": "/partners/expert-partners",
+        "template": "program-landing",
+        "docHeightPx": 7659,
+        "shell": [
+          {
+            "section": "shell.site-header",
+            "heightPx": 116
+          },
+          {
+            "section": "shell.site-footer",
+            "heightPx": 685
+          }
+        ],
+        "sections": [
+          {
+            "section": "hero.page-centered",
+            "variant": "expert-quotes",
+            "instance": 0,
+            "heightPx": 920.2,
+            "inFlow": true,
+            "selector": "main > :nth-child(1)",
+            "textStats": {
+              "headingWordsMax": 4,
+              "paragraphWordsMax": 45,
+              "actionWordsMax": 5
+            }
+          },
+          {
+            "section": "content.audience-profiles",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 728,
+            "inFlow": true,
+            "selector": "main > :nth-child(3)",
+            "textStats": {
+              "headingWordsMax": 5,
+              "paragraphWordsMax": 8,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "features.partner-tiers",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 1134.5,
+            "inFlow": true,
+            "selector": "main > :nth-child(5)",
+            "textStats": {
+              "headingWordsMax": 4,
+              "paragraphWordsMax": 12,
+              "actionWordsMax": 3
+            }
+          },
+          {
+            "section": "features.step-list",
+            "variant": "single",
+            "instance": 0,
+            "heightPx": 1017,
+            "inFlow": true,
+            "selector": "main > :nth-child(7)",
+            "textStats": {
+              "headingWordsMax": 7,
+              "paragraphWordsMax": 13,
+              "actionWordsMax": 4
+            }
+          },
+          {
+            "section": "conversion.application-form",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 754,
+            "inFlow": true,
+            "selector": "main > :nth-child(9)",
+            "textStats": {
+              "headingWordsMax": 6,
+              "paragraphWordsMax": 6,
+              "actionWordsMax": 2
+            }
+          },
+          {
+            "section": "content.resource-cards",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 616,
+            "inFlow": true,
+            "selector": "main > :nth-child(11)",
+            "textStats": {
+              "headingWordsMax": 4,
+              "paragraphWordsMax": 13,
+              "actionWordsMax": 14
+            }
+          },
+          {
+            "section": "faq.accordion",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 783,
+            "inFlow": true,
+            "selector": "main > :nth-child(13)",
+            "textStats": {
+              "headingWordsMax": 8,
+              "paragraphWordsMax": 17,
+              "actionWordsMax": 8
+            }
+          },
+          {
+            "section": "navigation.partner-cross-links",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 898,
+            "inFlow": true,
+            "selector": "main > :nth-child(15)",
+            "textStats": {
+              "headingWordsMax": 9,
+              "paragraphWordsMax": 16,
+              "actionWordsMax": 14
+            }
+          }
+        ]
+      },
+      {
+        "route": "/careers",
+        "template": "careers",
+        "docHeightPx": 9666,
+        "shell": [
+          {
+            "section": "shell.site-header",
+            "heightPx": 116
+          },
+          {
+            "section": "shell.site-footer",
+            "heightPx": 685
+          }
+        ],
+        "sections": [
+          {
+            "section": "hero.page-centered",
+            "variant": "contribution-grid",
+            "instance": 0,
+            "heightPx": 756,
+            "inFlow": true,
+            "selector": "main > :nth-child(1)",
+            "textStats": {
+              "headingWordsMax": 8,
+              "paragraphWordsMax": 30,
+              "actionWordsMax": 3
+            }
+          },
+          {
+            "section": "media.interview-video",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 807,
+            "inFlow": true,
+            "selector": "main > :nth-child(3)",
+            "textStats": {
+              "headingWordsMax": 0,
+              "paragraphWordsMax": 0,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "content.team-intro",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 796,
+            "inFlow": true,
+            "selector": "main > :nth-child(5)",
+            "textStats": {
+              "headingWordsMax": 4,
+              "paragraphWordsMax": 23,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "media.team-photos",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 1291,
+            "inFlow": true,
+            "selector": "main > :nth-child(6)",
+            "textStats": {
+              "headingWordsMax": 4,
+              "paragraphWordsMax": 12,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "content.values",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 982,
+            "inFlow": true,
+            "selector": "main > :nth-child(8)",
+            "textStats": {
+              "headingWordsMax": 4,
+              "paragraphWordsMax": 27,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "listing.open-positions",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 3187,
+            "inFlow": true,
+            "selector": "main > :nth-child(10)",
+            "textStats": {
+              "headingWordsMax": 4,
+              "paragraphWordsMax": 21,
+              "actionWordsMax": 6
+            }
+          },
+          {
+            "section": "conversion.newsletter-signup",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 428,
+            "inFlow": true,
+            "selector": "main > :nth-child(12)",
+            "textStats": {
+              "headingWordsMax": 5,
+              "paragraphWordsMax": 11,
+              "actionWordsMax": 1
+            }
+          },
+          {
+            "section": "content.resource-cards",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 612,
+            "inFlow": true,
+            "selector": "main > :nth-child(14)",
+            "textStats": {
+              "headingWordsMax": 4,
+              "paragraphWordsMax": 9,
+              "actionWordsMax": 9
+            }
+          }
+        ]
+      },
+      {
+        "route": "/contact/sales",
+        "template": "contact-split",
+        "docHeightPx": 1651,
+        "shell": [
+          {
+            "section": "shell.site-header",
+            "heightPx": 116
+          },
+          {
+            "section": "shell.site-footer",
+            "heightPx": 685
+          }
+        ],
+        "sections": [
+          {
+            "section": "conversion.demo-request-split",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 850,
+            "inFlow": true,
+            "selector": "main > :nth-child(1)",
+            "textStats": {
+              "headingWordsMax": 4,
+              "paragraphWordsMax": 32,
+              "actionWordsMax": 3
+            }
+          }
+        ]
+      },
+      {
+        "route": "/apps",
+        "template": "app-directory",
+        "docHeightPx": 25377,
+        "shell": [
+          {
+            "section": "shell.site-header",
+            "heightPx": 116
+          },
+          {
+            "section": "shell.site-footer",
+            "heightPx": 685
+          }
+        ],
+        "sections": [
+          {
+            "section": "hero.page-centered",
+            "variant": "icon-band",
+            "instance": 0,
+            "heightPx": 839.9,
+            "inFlow": true,
+            "selector": "main > :nth-child(1)",
+            "textStats": {
+              "headingWordsMax": 7,
+              "paragraphWordsMax": 12,
+              "actionWordsMax": 4
+            }
+          },
+          {
+            "section": "features.featured-apps",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 1028.6,
+            "inFlow": true,
+            "selector": "main > :nth-child(3)",
+            "textStats": {
+              "headingWordsMax": 2,
+              "paragraphWordsMax": 11,
+              "actionWordsMax": 6
+            }
+          },
+          {
+            "section": "listing.directory-header",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 438,
+            "inFlow": true,
+            "selector": "#apps > div > header",
+            "textStats": {
+              "headingWordsMax": 3,
+              "paragraphWordsMax": 14,
+              "actionWordsMax": 2
+            }
+          },
+          {
+            "section": "listing.directory-category",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 1894,
+            "inFlow": true,
+            "selector": "#apps > div > div > div:last-child > div",
+            "textStats": {
+              "headingWordsMax": 2,
+              "paragraphWordsMax": 14,
+              "actionWordsMax": 18
+            }
+          },
+          {
+            "section": "listing.directory-category",
+            "variant": null,
+            "instance": 1,
+            "heightPx": 5471,
+            "inFlow": true,
+            "selector": "#apps > div > div > div:last-child > div",
+            "textStats": {
+              "headingWordsMax": 2,
+              "paragraphWordsMax": 14,
+              "actionWordsMax": 17
+            }
+          },
+          {
+            "section": "listing.directory-category",
+            "variant": null,
+            "instance": 2,
+            "heightPx": 1071,
+            "inFlow": true,
+            "selector": "#apps > div > div > div:last-child > div",
+            "textStats": {
+              "headingWordsMax": 2,
+              "paragraphWordsMax": 14,
+              "actionWordsMax": 16
+            }
+          },
+          {
+            "section": "listing.directory-category",
+            "variant": null,
+            "instance": 3,
+            "heightPx": 2605,
+            "inFlow": true,
+            "selector": "#apps > div > div > div:last-child > div",
+            "textStats": {
+              "headingWordsMax": 2,
+              "paragraphWordsMax": 14,
+              "actionWordsMax": 18
+            }
+          },
+          {
+            "section": "listing.directory-category",
+            "variant": null,
+            "instance": 4,
+            "heightPx": 1647,
+            "inFlow": true,
+            "selector": "#apps > div > div > div:last-child > div",
+            "textStats": {
+              "headingWordsMax": 2,
+              "paragraphWordsMax": 14,
+              "actionWordsMax": 17
+            }
+          },
+          {
+            "section": "listing.directory-category",
+            "variant": null,
+            "instance": 5,
+            "heightPx": 877,
+            "inFlow": true,
+            "selector": "#apps > div > div > div:last-child > div",
+            "textStats": {
+              "headingWordsMax": 2,
+              "paragraphWordsMax": 14,
+              "actionWordsMax": 16
+            }
+          },
+          {
+            "section": "listing.directory-category",
+            "variant": null,
+            "instance": 6,
+            "heightPx": 5103,
+            "inFlow": true,
+            "selector": "#apps > div > div > div:last-child > div",
+            "textStats": {
+              "headingWordsMax": 2,
+              "paragraphWordsMax": 14,
+              "actionWordsMax": 18
+            }
+          },
+          {
+            "section": "listing.directory-category",
+            "variant": null,
+            "instance": 7,
+            "heightPx": 703,
+            "inFlow": true,
+            "selector": "#apps > div > div > div:last-child > div",
+            "textStats": {
+              "headingWordsMax": 3,
+              "paragraphWordsMax": 12,
+              "actionWordsMax": 14
+            }
+          },
+          {
+            "section": "listing.directory-category",
+            "variant": null,
+            "instance": 8,
+            "heightPx": 857,
+            "inFlow": true,
+            "selector": "#apps > div > div > div:last-child > div",
+            "textStats": {
+              "headingWordsMax": 2,
+              "paragraphWordsMax": 13,
+              "actionWordsMax": 17
+            }
+          },
+          {
+            "section": "listing.directory-category",
+            "variant": null,
+            "instance": 9,
+            "heightPx": 1011,
+            "inFlow": true,
+            "selector": "#apps > div > div > div:last-child > div",
+            "textStats": {
+              "headingWordsMax": 2,
+              "paragraphWordsMax": 14,
+              "actionWordsMax": 18
+            }
+          },
+          {
+            "section": "listing.directory-category",
+            "variant": null,
+            "instance": 10,
+            "heightPx": 589,
+            "inFlow": true,
+            "selector": "#apps > div > div > div:last-child > div",
+            "textStats": {
+              "headingWordsMax": 2,
+              "paragraphWordsMax": 15,
+              "actionWordsMax": 17
+            }
+          },
+          {
+            "section": "conversion.build-with-us",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 438,
+            "inFlow": true,
+            "selector": "main > :nth-child(7)",
+            "textStats": {
+              "headingWordsMax": 3,
+              "paragraphWordsMax": 10,
+              "actionWordsMax": 4
+            }
+          }
+        ]
+      },
+      {
+        "route": "/apps/chatgpt",
+        "template": "app-detail",
+        "docHeightPx": 3840,
+        "shell": [
+          {
+            "section": "shell.site-header",
+            "heightPx": 116
+          },
+          {
+            "section": "shell.site-footer",
+            "heightPx": 685
+          }
+        ],
+        "sections": [
+          {
+            "section": "navigation.breadcrumb-bar",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 112,
+            "inFlow": true,
+            "selector": "main > div > div > aside:first-child",
+            "textStats": {
+              "headingWordsMax": 0,
+              "paragraphWordsMax": 1,
+              "actionWordsMax": 1
+            }
+          },
+          {
+            "section": "hero.app-header",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 282,
+            "inFlow": true,
+            "selector": "main > div > div > header",
+            "textStats": {
+              "headingWordsMax": 1,
+              "paragraphWordsMax": 5,
+              "actionWordsMax": 2
+            }
+          },
+          {
+            "section": "content.app-meta-sidebar",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 538,
+            "inFlow": false,
+            "selector": "main > div > div > div.relative.flex > aside > div",
+            "textStats": {
+              "headingWordsMax": 2,
+              "paragraphWordsMax": 1,
+              "actionWordsMax": 3
+            }
+          },
+          {
+            "section": "media.screenshot-gallery",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 434.4,
+            "inFlow": true,
+            "selector": "main > div > div > div.relative.flex > div > div > :first-child",
+            "textStats": {
+              "headingWordsMax": 0,
+              "paragraphWordsMax": 0,
+              "actionWordsMax": 6
+            }
+          },
+          {
+            "section": "content.article-chapter",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 336,
+            "inFlow": true,
+            "selector": "main article > section",
+            "textStats": {
+              "headingWordsMax": 1,
+              "paragraphWordsMax": 47,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "content.article-chapter",
+            "variant": null,
+            "instance": 1,
+            "heightPx": 462,
+            "inFlow": true,
+            "selector": "main article > section",
+            "textStats": {
+              "headingWordsMax": 2,
+              "paragraphWordsMax": 6,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "content.article-chapter",
+            "variant": null,
+            "instance": 2,
+            "heightPx": 547,
+            "inFlow": true,
+            "selector": "main article > section",
+            "textStats": {
+              "headingWordsMax": 2,
+              "paragraphWordsMax": 6,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "listing.related-apps",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 486,
+            "inFlow": true,
+            "selector": "main > div > div > div:last-child",
+            "textStats": {
+              "headingWordsMax": 4,
+              "paragraphWordsMax": 13,
+              "actionWordsMax": 15
+            }
+          }
+        ]
+      },
+      {
+        "route": "/apps/claude",
+        "template": "app-detail",
+        "docHeightPx": 3621,
+        "shell": [
+          {
+            "section": "shell.site-header",
+            "heightPx": 116
+          },
+          {
+            "section": "shell.site-footer",
+            "heightPx": 685
+          }
+        ],
+        "sections": [
+          {
+            "section": "navigation.breadcrumb-bar",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 112,
+            "inFlow": true,
+            "selector": "main > div > div > aside:first-child",
+            "textStats": {
+              "headingWordsMax": 0,
+              "paragraphWordsMax": 1,
+              "actionWordsMax": 1
+            }
+          },
+          {
+            "section": "hero.app-header",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 282,
+            "inFlow": true,
+            "selector": "main > div > div > header",
+            "textStats": {
+              "headingWordsMax": 1,
+              "paragraphWordsMax": 8,
+              "actionWordsMax": 2
+            }
+          },
+          {
+            "section": "content.app-meta-sidebar",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 538,
+            "inFlow": false,
+            "selector": "main > div > div > div.relative.flex > aside > div",
+            "textStats": {
+              "headingWordsMax": 2,
+              "paragraphWordsMax": 2,
+              "actionWordsMax": 3
+            }
+          },
+          {
+            "section": "media.screenshot-gallery",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 434.4,
+            "inFlow": true,
+            "selector": "main > div > div > div.relative.flex > div > div > :first-child",
+            "textStats": {
+              "headingWordsMax": 0,
+              "paragraphWordsMax": 0,
+              "actionWordsMax": 6
+            }
+          },
+          {
+            "section": "content.article-chapter",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 336,
+            "inFlow": true,
+            "selector": "main article > section",
+            "textStats": {
+              "headingWordsMax": 1,
+              "paragraphWordsMax": 50,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "content.article-chapter",
+            "variant": null,
+            "instance": 1,
+            "heightPx": 462,
+            "inFlow": true,
+            "selector": "main article > section",
+            "textStats": {
+              "headingWordsMax": 2,
+              "paragraphWordsMax": 5,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "content.article-chapter",
+            "variant": null,
+            "instance": 2,
+            "heightPx": 308,
+            "inFlow": true,
+            "selector": "main article > section",
+            "textStats": {
+              "headingWordsMax": 2,
+              "paragraphWordsMax": 6,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "listing.related-apps",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 506,
+            "inFlow": true,
+            "selector": "main > div > div > div:last-child",
+            "textStats": {
+              "headingWordsMax": 4,
+              "paragraphWordsMax": 14,
+              "actionWordsMax": 16
+            }
+          }
+        ]
+      },
+      {
+        "route": "/apps/slack",
+        "template": "app-detail",
+        "docHeightPx": 3352,
+        "shell": [
+          {
+            "section": "shell.site-header",
+            "heightPx": 116
+          },
+          {
+            "section": "shell.site-footer",
+            "heightPx": 685
+          }
+        ],
+        "sections": [
+          {
+            "section": "navigation.breadcrumb-bar",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 112,
+            "inFlow": true,
+            "selector": "main > div > div > aside:first-child",
+            "textStats": {
+              "headingWordsMax": 0,
+              "paragraphWordsMax": 1,
+              "actionWordsMax": 1
+            }
+          },
+          {
+            "section": "hero.app-header",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 282,
+            "inFlow": true,
+            "selector": "main > div > div > header",
+            "textStats": {
+              "headingWordsMax": 1,
+              "paragraphWordsMax": 8,
+              "actionWordsMax": 2
+            }
+          },
+          {
+            "section": "content.app-meta-sidebar",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 538,
+            "inFlow": false,
+            "selector": "main > div > div > div.relative.flex > aside > div",
+            "textStats": {
+              "headingWordsMax": 2,
+              "paragraphWordsMax": 2,
+              "actionWordsMax": 3
+            }
+          },
+          {
+            "section": "media.screenshot-gallery",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 434.4,
+            "inFlow": true,
+            "selector": "main > div > div > div.relative.flex > div > div > :first-child",
+            "textStats": {
+              "headingWordsMax": 0,
+              "paragraphWordsMax": 0,
+              "actionWordsMax": 6
+            }
+          },
+          {
+            "section": "content.article-chapter",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 180,
+            "inFlow": true,
+            "selector": "main article > section",
+            "textStats": {
+              "headingWordsMax": 1,
+              "paragraphWordsMax": 67,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "content.article-chapter",
+            "variant": null,
+            "instance": 1,
+            "heightPx": 399,
+            "inFlow": true,
+            "selector": "main article > section",
+            "textStats": {
+              "headingWordsMax": 2,
+              "paragraphWordsMax": 6,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "content.article-chapter",
+            "variant": null,
+            "instance": 2,
+            "heightPx": 258,
+            "inFlow": true,
+            "selector": "main article > section",
+            "textStats": {
+              "headingWordsMax": 2,
+              "paragraphWordsMax": 34,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "listing.related-apps",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 506,
+            "inFlow": true,
+            "selector": "main > div > div > div:last-child",
+            "textStats": {
+              "headingWordsMax": 4,
+              "paragraphWordsMax": 14,
+              "actionWordsMax": 16
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "responsiveDocHeights": [
+    {
+      "route": "/",
+      "viewportWidth": 768,
+      "docHeightPx": 17050,
+      "desktopRegionsHiddenAtThisWidth": []
+    },
+    {
+      "route": "/pricing",
+      "viewportWidth": 768,
+      "docHeightPx": 16433,
+      "desktopRegionsHiddenAtThisWidth": [
+        "pricing.comparison-group",
+        "pricing.comparison-header"
+      ]
+    },
+    {
+      "route": "/customers",
+      "viewportWidth": 768,
+      "docHeightPx": 5691,
+      "desktopRegionsHiddenAtThisWidth": []
+    },
+    {
+      "route": "/startups",
+      "viewportWidth": 768,
+      "docHeightPx": 7634,
+      "desktopRegionsHiddenAtThisWidth": []
+    },
+    {
+      "route": "/partners/app-partners",
+      "viewportWidth": 768,
+      "docHeightPx": 6757,
+      "desktopRegionsHiddenAtThisWidth": []
+    },
+    {
+      "route": "/partners/creator-partners",
+      "viewportWidth": 768,
+      "docHeightPx": 6893,
+      "desktopRegionsHiddenAtThisWidth": []
+    },
+    {
+      "route": "/partners/expert-partners",
+      "viewportWidth": 768,
+      "docHeightPx": 8048,
+      "desktopRegionsHiddenAtThisWidth": []
+    },
+    {
+      "route": "/careers",
+      "viewportWidth": 768,
+      "docHeightPx": 10815,
+      "desktopRegionsHiddenAtThisWidth": []
+    },
+    {
+      "route": "/contact/sales",
+      "viewportWidth": 768,
+      "docHeightPx": 2477,
+      "desktopRegionsHiddenAtThisWidth": [
+        "conversion.demo-request-split"
+      ]
+    },
+    {
+      "route": "/apps",
+      "viewportWidth": 768,
+      "docHeightPx": 24121,
+      "desktopRegionsHiddenAtThisWidth": []
+    },
+    {
+      "route": "/apps/chatgpt",
+      "viewportWidth": 768,
+      "docHeightPx": 4784,
+      "desktopRegionsHiddenAtThisWidth": []
+    },
+    {
+      "route": "/apps/claude",
+      "viewportWidth": 768,
+      "docHeightPx": 4571,
+      "desktopRegionsHiddenAtThisWidth": []
+    },
+    {
+      "route": "/apps/slack",
+      "viewportWidth": 768,
+      "docHeightPx": 4236,
+      "desktopRegionsHiddenAtThisWidth": []
+    },
+    {
+      "route": "/",
+      "viewportWidth": 390,
+      "docHeightPx": 16273,
+      "desktopRegionsHiddenAtThisWidth": []
+    },
+    {
+      "route": "/pricing",
+      "viewportWidth": 390,
+      "docHeightPx": 16749,
+      "desktopRegionsHiddenAtThisWidth": [
+        "pricing.comparison-group",
+        "pricing.comparison-header"
+      ]
+    },
+    {
+      "route": "/customers",
+      "viewportWidth": 390,
+      "docHeightPx": 6342,
+      "desktopRegionsHiddenAtThisWidth": []
+    },
+    {
+      "route": "/startups",
+      "viewportWidth": 390,
+      "docHeightPx": 8349,
+      "desktopRegionsHiddenAtThisWidth": []
+    },
+    {
+      "route": "/partners/app-partners",
+      "viewportWidth": 390,
+      "docHeightPx": 7427,
+      "desktopRegionsHiddenAtThisWidth": []
+    },
+    {
+      "route": "/partners/creator-partners",
+      "viewportWidth": 390,
+      "docHeightPx": 7623,
+      "desktopRegionsHiddenAtThisWidth": []
+    },
+    {
+      "route": "/partners/expert-partners",
+      "viewportWidth": 390,
+      "docHeightPx": 9084,
+      "desktopRegionsHiddenAtThisWidth": []
+    },
+    {
+      "route": "/careers",
+      "viewportWidth": 390,
+      "docHeightPx": 11652,
+      "desktopRegionsHiddenAtThisWidth": []
+    },
+    {
+      "route": "/contact/sales",
+      "viewportWidth": 390,
+      "docHeightPx": 2767,
+      "desktopRegionsHiddenAtThisWidth": [
+        "conversion.demo-request-split"
+      ]
+    },
+    {
+      "route": "/apps",
+      "viewportWidth": 390,
+      "docHeightPx": 42064,
+      "desktopRegionsHiddenAtThisWidth": []
+    },
+    {
+      "route": "/apps/chatgpt",
+      "viewportWidth": 390,
+      "docHeightPx": 5726,
+      "desktopRegionsHiddenAtThisWidth": []
+    },
+    {
+      "route": "/apps/claude",
+      "viewportWidth": 390,
+      "docHeightPx": 5491,
+      "desktopRegionsHiddenAtThisWidth": []
+    },
+    {
+      "route": "/apps/slack",
+      "viewportWidth": 390,
+      "docHeightPx": 4982,
+      "desktopRegionsHiddenAtThisWidth": []
+    }
+  ],
+  "wrapperWhitelist": [],
+  "wrapperWhitelistNote": "Empty: after semantic decomposition no HERO exceeds 1800px and no in-flow section exceeds 50% of its page (contact-split is skipped: fewer than 3 in-flow sections).",
+  "cloneParity": {
+    "kind": "geometry parity (section wrapper box heights, live vs clone, same viewport), from the pixel-audit dumps; homepage only",
+    "pixelParity": "NOT MEASURED: no live-site screenshots were captured for a pixel comparison, so no pixel-parity number is claimed",
+    "gatePerSectionPct": 80,
+    "results": [
+      {
+        "viewportWidth": 1440,
+        "liveDump": ".playwright-mcp/audit/live1440.json",
+        "cloneDump": ".playwright-mcp/audit/clone1440b.json",
+        "wrappers": [
+          {
+            "index": 0,
+            "tag": "div",
+            "liveHeightPx": 116,
+            "cloneHeightPx": 116,
+            "liveTopPx": 0,
+            "cloneTopPx": 0,
+            "heightAgreementPct": 100.0
+          },
+          {
+            "index": 1,
+            "tag": "section",
+            "liveHeightPx": 1207,
+            "cloneHeightPx": 1207,
+            "liveTopPx": 116,
+            "cloneTopPx": 116,
+            "heightAgreementPct": 100.0
+          },
+          {
+            "index": 2,
+            "tag": "section",
+            "liveHeightPx": 194,
+            "cloneHeightPx": 194,
+            "liveTopPx": 1323,
+            "cloneTopPx": 1323,
+            "heightAgreementPct": 100.0
+          },
+          {
+            "index": 3,
+            "tag": "section",
+            "liveHeightPx": 6479,
+            "cloneHeightPx": 6480,
+            "liveTopPx": 1517,
+            "cloneTopPx": 1517,
+            "heightAgreementPct": 99.98
+          },
+          {
+            "index": 5,
+            "tag": "section",
+            "liveHeightPx": 1097,
+            "cloneHeightPx": 1097,
+            "liveTopPx": 7997,
+            "cloneTopPx": 7997,
+            "heightAgreementPct": 100.0
+          },
+          {
+            "index": 7,
+            "tag": "div",
+            "liveHeightPx": 4517,
+            "cloneHeightPx": 4517,
+            "liveTopPx": 9095,
+            "cloneTopPx": 9095,
+            "heightAgreementPct": 100.0
+          },
+          {
+            "index": 9,
+            "tag": "section",
+            "liveHeightPx": 760,
+            "cloneHeightPx": 760,
+            "liveTopPx": 13613,
+            "cloneTopPx": 13613,
+            "heightAgreementPct": 100.0
+          },
+          {
+            "index": 10,
+            "tag": "section",
+            "liveHeightPx": 937,
+            "cloneHeightPx": 937,
+            "liveTopPx": 14373,
+            "cloneTopPx": 14373,
+            "heightAgreementPct": 100.0
+          },
+          {
+            "index": 11,
+            "tag": "div",
+            "liveHeightPx": 128,
+            "cloneHeightPx": 128,
+            "liveTopPx": 15310,
+            "cloneTopPx": 15310,
+            "heightAgreementPct": 100.0
+          },
+          {
+            "index": 13,
+            "tag": "section",
+            "liveHeightPx": 930,
+            "cloneHeightPx": 930,
+            "liveTopPx": 15439,
+            "cloneTopPx": 15439,
+            "heightAgreementPct": 100.0
+          },
+          {
+            "index": 14,
+            "tag": "div",
+            "liveHeightPx": 128,
+            "cloneHeightPx": 128,
+            "liveTopPx": 16369,
+            "cloneTopPx": 16369,
+            "heightAgreementPct": 100.0
+          },
+          {
+            "index": 15,
+            "tag": "section",
+            "liveHeightPx": 417,
+            "cloneHeightPx": 417,
+            "liveTopPx": 16497,
+            "cloneTopPx": 16497,
+            "heightAgreementPct": 100.0
+          },
+          {
+            "index": 16,
+            "tag": "footer",
+            "liveHeightPx": 685,
+            "cloneHeightPx": 685,
+            "liveTopPx": 16914,
+            "cloneTopPx": 16914,
+            "heightAgreementPct": 100.0
+          }
+        ],
+        "minAgreementPct": 99.98,
+        "avgAgreementPct": 100.0
+      },
+      {
+        "viewportWidth": 1280,
+        "liveDump": ".playwright-mcp/audit/live1280.json",
+        "cloneDump": ".playwright-mcp/audit/clone1280.json",
+        "wrappers": [
+          {
+            "index": 0,
+            "tag": "div",
+            "liveHeightPx": 116,
+            "cloneHeightPx": 116,
+            "liveTopPx": 0,
+            "cloneTopPx": 0,
+            "heightAgreementPct": 100.0
+          },
+          {
+            "index": 1,
+            "tag": "section",
+            "liveHeightPx": 1156,
+            "cloneHeightPx": 1156,
+            "liveTopPx": 116,
+            "cloneTopPx": 116,
+            "heightAgreementPct": 100.0
+          },
+          {
+            "index": 2,
+            "tag": "section",
+            "liveHeightPx": 194,
+            "cloneHeightPx": 194,
+            "liveTopPx": 1272,
+            "cloneTopPx": 1272,
+            "heightAgreementPct": 100.0
+          },
+          {
+            "index": 3,
+            "tag": "section",
+            "liveHeightPx": 6329,
+            "cloneHeightPx": 6329,
+            "liveTopPx": 1466,
+            "cloneTopPx": 1466,
+            "heightAgreementPct": 100.0
+          },
+          {
+            "index": 5,
+            "tag": "section",
+            "liveHeightPx": 1097,
+            "cloneHeightPx": 1097,
+            "liveTopPx": 7796,
+            "cloneTopPx": 7796,
+            "heightAgreementPct": 100.0
+          },
+          {
+            "index": 7,
+            "tag": "div",
+            "liveHeightPx": 4274,
+            "cloneHeightPx": 4274,
+            "liveTopPx": 8894,
+            "cloneTopPx": 8894,
+            "heightAgreementPct": 100.0
+          },
+          {
+            "index": 9,
+            "tag": "section",
+            "liveHeightPx": 760,
+            "cloneHeightPx": 760,
+            "liveTopPx": 13169,
+            "cloneTopPx": 13169,
+            "heightAgreementPct": 100.0
+          },
+          {
+            "index": 10,
+            "tag": "section",
+            "liveHeightPx": 937,
+            "cloneHeightPx": 937,
+            "liveTopPx": 13929,
+            "cloneTopPx": 13929,
+            "heightAgreementPct": 100.0
+          },
+          {
+            "index": 11,
+            "tag": "div",
+            "liveHeightPx": 128,
+            "cloneHeightPx": 128,
+            "liveTopPx": 14866,
+            "cloneTopPx": 14866,
+            "heightAgreementPct": 100.0
+          },
+          {
+            "index": 13,
+            "tag": "section",
+            "liveHeightPx": 930,
+            "cloneHeightPx": 930,
+            "liveTopPx": 14995,
+            "cloneTopPx": 14995,
+            "heightAgreementPct": 100.0
+          },
+          {
+            "index": 14,
+            "tag": "div",
+            "liveHeightPx": 128,
+            "cloneHeightPx": 128,
+            "liveTopPx": 15925,
+            "cloneTopPx": 15925,
+            "heightAgreementPct": 100.0
+          },
+          {
+            "index": 15,
+            "tag": "section",
+            "liveHeightPx": 417,
+            "cloneHeightPx": 417,
+            "liveTopPx": 16053,
+            "cloneTopPx": 16053,
+            "heightAgreementPct": 100.0
+          },
+          {
+            "index": 16,
+            "tag": "footer",
+            "liveHeightPx": 685,
+            "cloneHeightPx": 685,
+            "liveTopPx": 16470,
+            "cloneTopPx": 16470,
+            "heightAgreementPct": 100.0
+          }
+        ],
+        "minAgreementPct": 100.0,
+        "avgAgreementPct": 100.0
+      },
+      {
+        "viewportWidth": 768,
+        "liveDump": ".playwright-mcp/audit/live768.json",
+        "cloneDump": ".playwright-mcp/audit/clone768b.json",
+        "wrappers": [
+          {
+            "index": 0,
+            "tag": "div",
+            "liveHeightPx": 100,
+            "cloneHeightPx": 100,
+            "liveTopPx": 0,
+            "cloneTopPx": 0,
+            "heightAgreementPct": 100.0
+          },
+          {
+            "index": 1,
+            "tag": "section",
+            "liveHeightPx": 1258,
+            "cloneHeightPx": 1258,
+            "liveTopPx": 100,
+            "cloneTopPx": 100,
+            "heightAgreementPct": 100.0
+          },
+          {
+            "index": 2,
+            "tag": "section",
+            "liveHeightPx": 194,
+            "cloneHeightPx": 194,
+            "liveTopPx": 1358,
+            "cloneTopPx": 1358,
+            "heightAgreementPct": 100.0
+          },
+          {
+            "index": 3,
+            "tag": "section",
+            "liveHeightPx": 5439,
+            "cloneHeightPx": 5439,
+            "liveTopPx": 1552,
+            "cloneTopPx": 1552,
+            "heightAgreementPct": 100.0
+          },
+          {
+            "index": 5,
+            "tag": "section",
+            "liveHeightPx": 1045,
+            "cloneHeightPx": 1045,
+            "liveTopPx": 6991,
+            "cloneTopPx": 6991,
+            "heightAgreementPct": 100.0
+          },
+          {
+            "index": 7,
+            "tag": "div",
+            "liveHeightPx": 5368,
+            "cloneHeightPx": 5368,
+            "liveTopPx": 8037,
+            "cloneTopPx": 8037,
+            "heightAgreementPct": 100.0
+          },
+          {
+            "index": 9,
+            "tag": "section",
+            "liveHeightPx": 668,
+            "cloneHeightPx": 668,
+            "liveTopPx": 13407,
+            "cloneTopPx": 13406,
+            "heightAgreementPct": 100.0
+          },
+          {
+            "index": 10,
+            "tag": "section",
+            "liveHeightPx": 1068,
+            "cloneHeightPx": 1036,
+            "liveTopPx": 14075,
+            "cloneTopPx": 14074,
+            "heightAgreementPct": 97.0
+          },
+          {
+            "index": 13,
+            "tag": "section",
+            "liveHeightPx": 883,
+            "cloneHeightPx": 883,
+            "liveTopPx": 15144,
+            "cloneTopPx": 15111,
+            "heightAgreementPct": 100.0
+          },
+          {
+            "index": 15,
+            "tag": "section",
+            "liveHeightPx": 315,
+            "cloneHeightPx": 315,
+            "liveTopPx": 16027,
+            "cloneTopPx": 15994,
+            "heightAgreementPct": 100.0
+          },
+          {
+            "index": 16,
+            "tag": "footer",
+            "liveHeightPx": 1039,
+            "cloneHeightPx": 1039,
+            "liveTopPx": 16342,
+            "cloneTopPx": 16309,
+            "heightAgreementPct": 100.0
+          }
+        ],
+        "minAgreementPct": 97.0,
+        "avgAgreementPct": 99.73
+      },
+      {
+        "viewportWidth": 390,
+        "liveDump": ".playwright-mcp/audit/live390.json",
+        "cloneDump": ".playwright-mcp/audit/clone390b.json",
+        "wrappers": [
+          {
+            "index": 0,
+            "tag": "div",
+            "liveHeightPx": 100,
+            "cloneHeightPx": 100,
+            "liveTopPx": 0,
+            "cloneTopPx": 0,
+            "heightAgreementPct": 100.0
+          },
+          {
+            "index": 1,
+            "tag": "section",
+            "liveHeightPx": 825,
+            "cloneHeightPx": 825,
+            "liveTopPx": 100,
+            "cloneTopPx": 100,
+            "heightAgreementPct": 100.0
+          },
+          {
+            "index": 2,
+            "tag": "section",
+            "liveHeightPx": 291,
+            "cloneHeightPx": 291,
+            "liveTopPx": 925,
+            "cloneTopPx": 925,
+            "heightAgreementPct": 100.0
+          },
+          {
+            "index": 3,
+            "tag": "section",
+            "liveHeightPx": 5266,
+            "cloneHeightPx": 5266,
+            "liveTopPx": 1216,
+            "cloneTopPx": 1216,
+            "heightAgreementPct": 100.0
+          },
+          {
+            "index": 5,
+            "tag": "section",
+            "liveHeightPx": 1149,
+            "cloneHeightPx": 1149,
+            "liveTopPx": 6483,
+            "cloneTopPx": 6483,
+            "heightAgreementPct": 100.0
+          },
+          {
+            "index": 7,
+            "tag": "div",
+            "liveHeightPx": 4491,
+            "cloneHeightPx": 4491,
+            "liveTopPx": 7633,
+            "cloneTopPx": 7633,
+            "heightAgreementPct": 100.0
+          },
+          {
+            "index": 9,
+            "tag": "section",
+            "liveHeightPx": 708,
+            "cloneHeightPx": 708,
+            "liveTopPx": 12125,
+            "cloneTopPx": 12125,
+            "heightAgreementPct": 100.0
+          },
+          {
+            "index": 10,
+            "tag": "section",
+            "liveHeightPx": 903,
+            "cloneHeightPx": 903,
+            "liveTopPx": 12833,
+            "cloneTopPx": 12833,
+            "heightAgreementPct": 100.0
+          },
+          {
+            "index": 13,
+            "tag": "section",
+            "liveHeightPx": 979,
+            "cloneHeightPx": 979,
+            "liveTopPx": 13737,
+            "cloneTopPx": 13737,
+            "heightAgreementPct": 100.0
+          },
+          {
+            "index": 15,
+            "tag": "section",
+            "liveHeightPx": 401,
+            "cloneHeightPx": 401,
+            "liveTopPx": 14716,
+            "cloneTopPx": 14716,
+            "heightAgreementPct": 100.0
+          },
+          {
+            "index": 16,
+            "tag": "footer",
+            "liveHeightPx": 1073,
+            "cloneHeightPx": 1073,
+            "liveTopPx": 15117,
+            "cloneTopPx": 15117,
+            "heightAgreementPct": 100.0
+          }
+        ],
+        "minAgreementPct": 100.0,
+        "avgAgreementPct": 100.0
+      }
+    ]
+  },
+  "groundworkChecks": [
+    {
+      "claim": "CLONE_SPEC M2: hero badge comet loop ~3.65s, ~300ms turns",
+      "verdict": "superseded",
+      "current": "src/components/Hero.jsx documents a re-sampled ~4.0s loop at 150px/s with 320ms turns",
+      "evidence": "src/components/Hero.jsx:102-102"
+    },
+    {
+      "claim": "Stat rule 2px #266df0 (pixel-audit correction)",
+      "verdict": "holds",
+      "evidence": "src/components/ScaleStats.jsx:106-106"
+    },
+    {
+      "claim": "Changelog cards carry 21 ticks",
+      "verdict": "holds",
+      "evidence": "src/components/Changelog.jsx:24-24"
+    },
+    {
+      "claim": "Plan card radius 20px (spec text said 24)",
+      "verdict": "holds",
+      "evidence": "tailwind.config.cjs:263-263"
+    },
+    {
+      "claim": "Platform showcase scroll-spy at 45% of the viewport (spec M6 only said 'while in view')",
+      "verdict": "holds (spec under-specified)",
+      "evidence": "src/components/PlatformShowcase.jsx:86-86"
+    },
+    {
+      "claim": "Customer stories cycle 6000ms; context accordion fills 5000ms",
+      "verdict": "holds",
+      "evidence": [
+        "src/components/CustomerStories.jsx:45-45",
+        "src/components/UniversalContext.jsx:319-319"
+      ]
+    },
+    {
+      "claim": "Integration marquee 30px/s = 51.2s per set; signal roller 24s",
+      "verdict": "holds",
+      "evidence": [
+        "src/index.css:673-673",
+        "src/index.css:659-659"
+      ]
+    },
+    {
+      "claim": "CLONE_SPEC_PAGES T5 detail routes /apps/chatgpt, /apps/claude, /apps/slack",
+      "verdict": "holds structurally, flagged",
+      "current": "the clone keeps those crawled slugs (real third-party product names) in its URLs while rendering invented app names; generated pages may never reuse them",
+      "evidence": "src/data/apps.js:26-26"
+    },
+    {
+      "claim": "CLONE_SPEC_PAGES covers /blog, /engineering/blog, /changelog, /architecture, /help x3",
+      "verdict": "not mounted at extraction",
+      "current": "no route in src/App.jsx ROUTES; recorded in templates/pending-routes.json",
+      "evidence": "src/App.jsx:32-52"
+    },
+    {
+      "claim": "Homepage section wrapper geometry (CLONE_SPEC section heights 1207/194/6479/1097/4517/760/937/930/417/685)",
+      "verdict": "holds",
+      "current": "re-measured on the running clone at 1440x900: hero 1206.6, logos 194, showcase 6479.4, self-building 1097, context group 2573.9+593.3+2250 (overlapping curtain), scale 760, stories 937, changelog 930, final CTA 417, footer 685"
+    }
+  ],
+  "excludedEvidence": [
+    "saved HTML copy of the live homepage and its _files folder (the original company's copyrighted page)",
+    "dist/ (build output)"
+  ],
+  "externalSpecs": [
+    "CLONE_SPEC.md",
+    "CLONE_SPEC_PAGES.md",
+    "CLONE_SPEC_PLATFORM.md",
+    ".playwright-mcp/audit/*.json"
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "id": "shell.site-footer",
+  "title": "Site footer",
+  "status": "measured",
+  "source": {
+    "id": "src:SiteFooter#export-default-function-SiteFooter",
+    "file": "src/components/SiteFooter.jsx",
+    "tag": "export default function SiteFooter(",
+    "lines": "78-154",
+    "citation": "src/components/SiteFooter.jsx:78-154"
+  },
+  "semantic": {
+    "id": "shell.site-footer",
+    "category": "SHELL"
+  },
+  "retrievalEligible": true,
+  "purpose": "Dark footer: brand mark, link columns, legal line and social links (min-height 40svh).",
+  "themes": [
+    "dark",
+    "light"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "brandMark": {
+        "$ref": "#/definitions/media",
+        "x-assetRoles": [
+          "brand.reference-wordmark",
+          "brand.placeholder-mark",
+          "brand.user-supplied-mark"
+        ]
+      },
+      "columns": {
+        "type": "array",
+        "minItems": 2,
+        "maxItems": 6,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "heading": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 4,
+              "x-maxWordsEvidence": "measured 3 words"
+            },
+            "links": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 12,
+              "items": {
+                "$ref": "#/definitions/link"
+              }
+            }
+          },
+          "required": [
+            "heading",
+            "links"
+          ]
+        },
+        "x-countEvidence": "43 footer links measured"
+      },
+      "legal": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 18,
+        "x-maxWordsEvidence": "legal 12/18 line"
+      },
+      "socialLinks": {
+        "type": "array",
+        "minItems": 0,
+        "maxItems": 6,
+        "items": {
+          "$ref": "#/definitions/link"
+        }
+      }
+    },
+    "required": [
+      "brandMark",
+      "columns",
+      "legal"
+    ]
+  },
+  "constraints": {
+    "onePerPage": true,
+    "mustBeLast": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "hover-micro"
+    ],
+    "reducedMotionFallback": "instant-state-change",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "collapse-grid",
+        "detail": "link columns wrap to 2 columns; legal row stacks."
+      }
+    ]
+  },
+  "assetSlots": [
+    {
+      "field": ".brandMark",
+      "assetRoles": [
+        "brand.reference-wordmark",
+        "brand.placeholder-mark",
+        "brand.user-supplied-mark"
+      ]
+    }
+  ],
+  "generatedAssetRoles": [
+    "brand.placeholder-mark",
+    "brand.user-supplied-mark",
+    "copy.original",
+    "url.placeholder"
+  ],
+  "composes": [
+    "primitive.brand-mark"
+  ],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": "see extraction/measured-values.json sectionHeights (shell rows)",
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    "all mounted routes"
+  ],
+  "notes": "Light variant exists in code (footerVariant='light') for the not-yet-mounted help pages."
+}

@@ -1,0 +1,164 @@
+{
+  "id": "hero.product-window",
+  "title": "Product-window hero",
+  "status": "measured",
+  "source": {
+    "id": "src:Hero#export-default-function-Hero",
+    "file": "src/components/Hero.jsx",
+    "tag": "export default function Hero()",
+    "lines": "13-82",
+    "citation": "src/components/Hero.jsx:13-82"
+  },
+  "semantic": {
+    "id": "hero.product-window",
+    "category": "HERO"
+  },
+  "retrievalEligible": true,
+  "purpose": "Homepage opener: badge, headline, subhead, two CTAs over a sticky glow background, with a framed product window and three floating side windows.",
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "badge": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "label": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 9,
+            "x-maxWordsEvidence": "measured actionWordsMax=7 for hero.product-window at 1440px; badge text c<=40"
+          },
+          "href": {
+            "$ref": "#/definitions/url"
+          }
+        },
+        "required": [
+          "label",
+          "href"
+        ]
+      },
+      "headline": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 5,
+        "x-maxWordsEvidence": "measured headingWordsMax=4 for hero.product-window at 1440px"
+      },
+      "subhead": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 19,
+        "x-maxWordsEvidence": "measured paragraphWordsMax=15 for hero.product-window at 1440px"
+      },
+      "primaryCta": {
+        "$ref": "#/definitions/cta"
+      },
+      "secondaryCta": {
+        "$ref": "#/definitions/cta"
+      },
+      "productVisual": {
+        "$ref": "#/definitions/media",
+        "x-assetRoles": [
+          "product.reference-mock",
+          "product.generated-visual"
+        ]
+      },
+      "sideWindows": {
+        "type": "array",
+        "minItems": 0,
+        "maxItems": 3,
+        "items": {
+          "$ref": "#/definitions/media",
+          "x-assetRoles": [
+            "product.reference-mock",
+            "product.generated-visual"
+          ]
+        },
+        "x-countEvidence": "terminal, chat and call windows"
+      }
+    },
+    "required": [
+      "badge",
+      "headline",
+      "subhead",
+      "primaryCta",
+      "productVisual"
+    ]
+  },
+  "constraints": {
+    "onePerPage": true,
+    "homeRouteOnly": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "hero-intro-stagger",
+      "hero-scroll-state",
+      "badge-comet",
+      "decorative-loop"
+    ],
+    "reducedMotionFallback": "paused-first-frame",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-md",
+        "change": "show-alternate-tree",
+        "detail": "sticky desktop tree replaced by a stacked mobile tree; single product screenshot (504x379 at 768)."
+      },
+      {
+        "at": "below-lg",
+        "change": "resize-type",
+        "detail": "H1 64/60.8 -> 70.61 at 768 -> 40/38 at 390 (CLONE_SPEC 0.3)."
+      }
+    ]
+  },
+  "assetSlots": [
+    {
+      "field": ".productVisual",
+      "assetRoles": [
+        "product.reference-mock",
+        "product.generated-visual"
+      ]
+    },
+    {
+      "field": ".sideWindows[]",
+      "assetRoles": [
+        "product.reference-mock",
+        "product.generated-visual"
+      ]
+    }
+  ],
+  "generatedAssetRoles": [
+    "copy.original",
+    "product.generated-visual",
+    "url.placeholder"
+  ],
+  "composes": [
+    "primitive.hero-badge",
+    "primitive.button",
+    "primitive.asset-slot"
+  ],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 1206.6
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/",
+      "variant": null
+    }
+  ]
+}

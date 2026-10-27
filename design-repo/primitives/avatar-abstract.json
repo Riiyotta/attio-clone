@@ -1,0 +1,20 @@
+{
+  "id": "primitive.avatar-abstract",
+  "kind": "primitive",
+  "title": "Abstract avatar",
+  "purpose": "Gradient avatar tile (no face).",
+  "source": {
+    "file": "src/components/marketing/art.jsx",
+    "tag": "export function AbstractAvatar(",
+    "lines": "41-64",
+    "citation": "src/components/marketing/art.jsx:41-64"
+  },
+  "props": {
+    "size": "px",
+    "assetRole": "avatar.abstract"
+  },
+  "tokens": [
+    "elevation.media-ring"
+  ],
+  "states": []
+}

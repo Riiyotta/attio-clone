@@ -1,0 +1,91 @@
+{
+  "id": "conversion.final-cta",
+  "title": "Final CTA (dark)",
+  "status": "measured",
+  "source": {
+    "id": "src:FinalCta#export-default-function-FinalCta",
+    "file": "src/components/FinalCta.jsx",
+    "tag": "export default function FinalCta(",
+    "lines": "18-54",
+    "citation": "src/components/FinalCta.jsx:18-54"
+  },
+  "semantic": {
+    "id": "conversion.final-cta",
+    "category": "CONVERSION"
+  },
+  "retrievalEligible": true,
+  "purpose": "Closing conversion band: large heading and two CTAs over dark stripes with falling streaks.",
+  "themes": [
+    "dark"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "heading": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 7,
+        "x-maxWordsEvidence": "measured headingWordsMax=5 for conversion.final-cta at 1440px"
+      },
+      "primaryCta": {
+        "$ref": "#/definitions/cta"
+      },
+      "secondaryCta": {
+        "$ref": "#/definitions/cta"
+      }
+    },
+    "required": [
+      "heading",
+      "primaryCta"
+    ]
+  },
+  "constraints": {
+    "onePerPage": true,
+    "mustPrecedeFooter": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "ambient-streaks"
+    ],
+    "reducedMotionFallback": "hidden",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "resize-type",
+        "detail": "56 -> 45.2 at 768 -> 36 at 390; buttons stack."
+      }
+    ]
+  },
+  "assetSlots": [],
+  "generatedAssetRoles": [
+    "copy.original",
+    "url.placeholder"
+  ],
+  "composes": [
+    "component.streaks",
+    "primitive.button"
+  ],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 417
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/",
+      "variant": null
+    }
+  ]
+}

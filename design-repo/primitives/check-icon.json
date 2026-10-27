@@ -1,0 +1,17 @@
+{
+  "id": "primitive.check-icon",
+  "kind": "primitive",
+  "title": "Check icon",
+  "purpose": "Inclusion check mark (pricing table, tiers).",
+  "source": {
+    "file": "src/components/marketing/primitives.jsx",
+    "tag": "export function Check(",
+    "lines": "149-155",
+    "citation": "src/components/marketing/primitives.jsx:149-155"
+  },
+  "props": {
+    "size": "px"
+  },
+  "tokens": [],
+  "states": []
+}

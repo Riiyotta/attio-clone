@@ -1,0 +1,210 @@
+{
+  "id": "listing.directory-category",
+  "title": "Directory category",
+  "status": "measured",
+  "source": {
+    "id": "src:Sections#groups-map-g-gi",
+    "file": "src/components/apps/Sections.jsx",
+    "tag": "{groups.map((g, gi) => (",
+    "lines": "236-236",
+    "citation": "src/components/apps/Sections.jsx:236-236"
+  },
+  "semantic": {
+    "id": "listing.directory-category",
+    "category": "LISTING"
+  },
+  "retrievalEligible": true,
+  "purpose": "One catalog category: overline name and its grid of app cards; the sticky category sidebar/chip row tracks it (scroll-spy).",
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "name": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 4,
+        "x-maxWordsEvidence": "measured headingWordsMax=3 for listing.directory-category at 1440px"
+      },
+      "anchor": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 4,
+        "x-maxWordsEvidence": "measured 3 words"
+      },
+      "apps": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 80,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 7,
+              "x-maxWordsEvidence": "app name c3-c32 (CLONE_SPEC_PAGES T4.3 / data/apps.js CARD_METRICS)"
+            },
+            "developer": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 5,
+              "x-maxWordsEvidence": "developer c5-c27"
+            },
+            "description": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 15,
+              "x-maxWordsEvidence": "description c16-c61, 1-2 lines"
+            },
+            "icon": {
+              "$ref": "#/definitions/media",
+              "x-assetRoles": [
+                "icon.generated-app"
+              ]
+            },
+            "verified": {
+              "type": "boolean"
+            },
+            "href": {
+              "$ref": "#/definitions/url"
+            }
+          },
+          "required": [
+            "name",
+            "developer",
+            "description",
+            "icon",
+            "href"
+          ]
+        },
+        "x-countEvidence": "5-72 cards per category, 272 total"
+      }
+    },
+    "required": [
+      "name",
+      "anchor",
+      "apps"
+    ]
+  },
+  "constraints": {
+    "repeatable": true,
+    "maxPerPage": 16
+  },
+  "motion": {
+    "allowedPatterns": [
+      "scroll-spy-nav",
+      "hover-micro"
+    ],
+    "reducedMotionFallback": "instant-state-change",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "scroll-row",
+        "detail": "sidebar becomes a sticky horizontal chip row; cards 2 -> 1 column below md."
+      }
+    ]
+  },
+  "assetSlots": [
+    {
+      "field": ".apps[].icon",
+      "assetRoles": [
+        "icon.generated-app"
+      ]
+    }
+  ],
+  "generatedAssetRoles": [
+    "copy.original",
+    "icon.generated-app",
+    "url.placeholder"
+  ],
+  "composes": [
+    "component.app-card"
+  ],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/apps",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 1894
+      },
+      {
+        "route": "/apps",
+        "variant": null,
+        "instance": 1,
+        "heightPx": 5471
+      },
+      {
+        "route": "/apps",
+        "variant": null,
+        "instance": 2,
+        "heightPx": 1071
+      },
+      {
+        "route": "/apps",
+        "variant": null,
+        "instance": 3,
+        "heightPx": 2605
+      },
+      {
+        "route": "/apps",
+        "variant": null,
+        "instance": 4,
+        "heightPx": 1647
+      },
+      {
+        "route": "/apps",
+        "variant": null,
+        "instance": 5,
+        "heightPx": 877
+      },
+      {
+        "route": "/apps",
+        "variant": null,
+        "instance": 6,
+        "heightPx": 5103
+      },
+      {
+        "route": "/apps",
+        "variant": null,
+        "instance": 7,
+        "heightPx": 703
+      },
+      {
+        "route": "/apps",
+        "variant": null,
+        "instance": 8,
+        "heightPx": 857
+      },
+      {
+        "route": "/apps",
+        "variant": null,
+        "instance": 9,
+        "heightPx": 1011
+      },
+      {
+        "route": "/apps",
+        "variant": null,
+        "instance": 10,
+        "heightPx": 589
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/apps",
+      "variant": null
+    }
+  ],
+  "notes": "Decomposes the 22,266px directory wrapper (87.7% of /apps) into its header + 11 category groups; the largest group is 21.6% of the page."
+}

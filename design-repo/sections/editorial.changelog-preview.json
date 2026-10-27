@@ -1,0 +1,187 @@
+{
+  "id": "editorial.changelog-preview",
+  "title": "Changelog preview",
+  "status": "measured",
+  "source": {
+    "id": "src:Changelog#export-default-function-Changelog",
+    "file": "src/components/Changelog.jsx",
+    "tag": "export default function Changelog(",
+    "lines": "68-149",
+    "citation": "src/components/Changelog.jsx:68-149"
+  },
+  "semantic": {
+    "id": "editorial.changelog-preview",
+    "category": "EDITORIAL"
+  },
+  "retrievalEligible": true,
+  "purpose": "Recent release notes: two-tone heading, 3-4 dated changelog cards with tick strips, view-all link and a newsletter subscribe row.",
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "heading": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "lead": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 17,
+            "x-maxWordsEvidence": "measured headingWordsMax=13 for editorial.changelog-preview at 1440px"
+          },
+          "continuation": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 17,
+            "x-maxWordsEvidence": "measured headingWordsMax=13 for editorial.changelog-preview at 1440px"
+          }
+        },
+        "required": [
+          "lead",
+          "continuation"
+        ]
+      },
+      "entries": {
+        "type": "array",
+        "minItems": 3,
+        "maxItems": 4,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "date": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 4,
+              "x-maxWordsEvidence": "measured 3 words"
+            },
+            "title": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 17,
+              "x-maxWordsEvidence": "measured headingWordsMax=13 for editorial.changelog-preview at 1440px"
+            },
+            "visual": {
+              "$ref": "#/definitions/media",
+              "x-assetRoles": [
+                "product.reference-mock",
+                "product.generated-visual",
+                "illustration.reference-art",
+                "illustration.generated-abstract",
+                "illustration.decorative-pattern"
+              ]
+            },
+            "href": {
+              "$ref": "#/definitions/url"
+            }
+          },
+          "required": [
+            "date",
+            "title",
+            "href"
+          ]
+        }
+      },
+      "viewAll": {
+        "$ref": "#/definitions/link"
+      },
+      "newsletter": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "title": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 17,
+            "x-maxWordsEvidence": "measured headingWordsMax=13 for editorial.changelog-preview at 1440px"
+          },
+          "inputPlaceholder": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 5,
+            "x-maxWordsEvidence": "measured 4 words"
+          },
+          "buttonLabel": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 3,
+            "x-maxWordsEvidence": "measured 2 words"
+          }
+        },
+        "required": [
+          "title",
+          "inputPlaceholder",
+          "buttonLabel"
+        ]
+      }
+    },
+    "required": [
+      "heading",
+      "entries"
+    ]
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "hover-micro"
+    ],
+    "reducedMotionFallback": "instant-state-change",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "scroll-row",
+        "detail": "cards become a horizontal scroll row with edge fades."
+      }
+    ]
+  },
+  "assetSlots": [
+    {
+      "field": ".entries[].visual",
+      "assetRoles": [
+        "product.reference-mock",
+        "product.generated-visual",
+        "illustration.reference-art",
+        "illustration.generated-abstract",
+        "illustration.decorative-pattern"
+      ]
+    }
+  ],
+  "generatedAssetRoles": [
+    "copy.original",
+    "illustration.decorative-pattern",
+    "illustration.generated-abstract",
+    "product.generated-visual",
+    "url.placeholder"
+  ],
+  "composes": [
+    "component.subscribe-form"
+  ],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 930
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/",
+      "variant": null
+    }
+  ],
+  "notes": "Editorial (news) block, never FEATURES. The embedded newsletter row is a sub-part, kept because it shares the section shell."
+}

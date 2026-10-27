@@ -1,0 +1,19 @@
+{
+  "id": "component.avatar-wall",
+  "kind": "component",
+  "title": "Avatar wall",
+  "purpose": "10x50 grid of 24px avatar tiles with edge fade.",
+  "source": {
+    "file": "src/components/marketing/Blocks.jsx",
+    "tag": "function Wall(",
+    "lines": "241-264",
+    "citation": "src/components/marketing/Blocks.jsx:241-264"
+  },
+  "composes": [
+    "primitive.avatar-abstract"
+  ],
+  "tokens": [
+    "gradient.avatar-tile",
+    "gradient.wall-fade"
+  ]
+}

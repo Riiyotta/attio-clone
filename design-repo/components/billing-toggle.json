@@ -1,0 +1,17 @@
+{
+  "id": "component.billing-toggle",
+  "kind": "component",
+  "title": "Billing toggle",
+  "purpose": "Monthly/annual segmented toggle with thumb shadow.",
+  "source": {
+    "file": "src/components/pricing/BillingToggle.jsx",
+    "tag": "export default function BillingToggle(",
+    "lines": "6-41",
+    "citation": "src/components/pricing/BillingToggle.jsx:6-41"
+  },
+  "composes": [],
+  "tokens": [
+    "elevation.toggle-thumb",
+    "elevation.segment-pill"
+  ]
+}

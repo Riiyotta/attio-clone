@@ -1,0 +1,331 @@
+{
+  "id": "hero.page-centered",
+  "title": "Centered marketing hero",
+  "status": "measured",
+  "source": {
+    "id": "src:Blocks#export-function-PageHero",
+    "file": "src/components/marketing/Blocks.jsx",
+    "tag": "export function PageHero(",
+    "lines": "16-39",
+    "citation": "src/components/marketing/Blocks.jsx:16-39",
+    "variantSources": {
+      "plain": {
+        "file": "src/pages/Customers.jsx",
+        "tag": "<PageHero",
+        "lines": "12-12",
+        "citation": "src/pages/Customers.jsx:12-12"
+      },
+      "logo-strip": {
+        "file": "src/components/startups/Sections.jsx",
+        "tag": "export function StartupsHero(",
+        "lines": "10-34",
+        "citation": "src/components/startups/Sections.jsx:10-34"
+      },
+      "app-tiles": {
+        "file": "src/components/partners/Sections.jsx",
+        "tag": "export function AppPartnersHero(",
+        "lines": "58-86",
+        "citation": "src/components/partners/Sections.jsx:58-86"
+      },
+      "creator-carousel": {
+        "file": "src/components/partners/Sections.jsx",
+        "tag": "export function CreatorHero(",
+        "lines": "223-256",
+        "citation": "src/components/partners/Sections.jsx:223-256"
+      },
+      "expert-quotes": {
+        "file": "src/components/partners/Sections.jsx",
+        "tag": "export function ExpertHero(",
+        "lines": "411-479",
+        "citation": "src/components/partners/Sections.jsx:411-479"
+      },
+      "icon-band": {
+        "file": "src/components/apps/Sections.jsx",
+        "tag": "export function AppsHero(",
+        "lines": "16-72",
+        "citation": "src/components/apps/Sections.jsx:16-72"
+      },
+      "contribution-grid": {
+        "file": "src/components/careers/Hero.jsx",
+        "tag": "export default function CareersHero(",
+        "lines": "37-87",
+        "citation": "src/components/careers/Hero.jsx:37-87"
+      }
+    }
+  },
+  "semantic": {
+    "id": "hero.page-centered",
+    "category": "HERO"
+  },
+  "retrievalEligible": true,
+  "purpose": "Marketing page opener: badge, two-line title, lead, optional CTAs, plus a variant-specific media row (logos, app tiles, creator carousel, expert quotes, icon band or contribution grid).",
+  "themes": [
+    "light"
+  ],
+  "variants": [
+    "plain",
+    "logo-strip",
+    "app-tiles",
+    "creator-carousel",
+    "expert-quotes",
+    "icon-band",
+    "contribution-grid"
+  ],
+  "variantRequirements": {
+    "logo-strip": [
+      "logos"
+    ],
+    "app-tiles": [
+      "mediaRow"
+    ],
+    "creator-carousel": [
+      "mediaRow"
+    ],
+    "expert-quotes": [
+      "quotes"
+    ],
+    "icon-band": [
+      "mediaRow"
+    ],
+    "contribution-grid": [
+      "mediaRow"
+    ]
+  },
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "badge": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 5,
+        "x-maxWordsEvidence": "badge c7-c19 (pages spec C1)"
+      },
+      "title": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 10,
+        "x-maxWordsEvidence": "measured headingWordsMax=8 for hero.page-centered at 1440px"
+      },
+      "lead": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 57,
+        "x-maxWordsEvidence": "measured paragraphWordsMax=45 for hero.page-centered at 1440px"
+      },
+      "ctas": {
+        "type": "array",
+        "minItems": 0,
+        "maxItems": 2,
+        "items": {
+          "$ref": "#/definitions/cta"
+        }
+      },
+      "logos": {
+        "type": "array",
+        "minItems": 4,
+        "maxItems": 12,
+        "items": {
+          "$ref": "#/definitions/media",
+          "x-assetRoles": [
+            "logo.reference-company",
+            "logo.fictional-company"
+          ]
+        }
+      },
+      "mediaRow": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 60,
+        "items": {
+          "$ref": "#/definitions/media",
+          "x-assetRoles": [
+            "icon.generated-app",
+            "avatar.abstract",
+            "illustration.reference-art",
+            "illustration.generated-abstract",
+            "illustration.decorative-pattern",
+            "product.reference-mock",
+            "product.generated-visual"
+          ]
+        }
+      },
+      "quotes": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 3,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "quote": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 57,
+              "x-maxWordsEvidence": "expert hero quotes measured paragraphWordsMax 45"
+            },
+            "person": {
+              "$ref": "#/definitions/person"
+            }
+          },
+          "required": [
+            "quote",
+            "person"
+          ]
+        }
+      },
+      "caption": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 12,
+        "x-maxWordsEvidence": "contribution-grid caption c47"
+      }
+    },
+    "required": [
+      "badge",
+      "title",
+      "lead"
+    ]
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "page-hero-enter",
+      "marquee-loop",
+      "static"
+    ],
+    "reducedMotionFallback": "paused-first-frame",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "resize-type",
+        "detail": "title 56/60 -> 40/44, lead 20/26 -> 18/24; CTAs stack below md."
+      },
+      {
+        "at": "below-lg",
+        "change": "hide",
+        "detail": "contribution grid and app-tile rows hide or crop below lg."
+      }
+    ]
+  },
+  "assetSlots": [
+    {
+      "field": ".logos[]",
+      "assetRoles": [
+        "logo.reference-company",
+        "logo.fictional-company"
+      ]
+    },
+    {
+      "field": ".mediaRow[]",
+      "assetRoles": [
+        "icon.generated-app",
+        "avatar.abstract",
+        "illustration.reference-art",
+        "illustration.generated-abstract",
+        "illustration.decorative-pattern",
+        "product.reference-mock",
+        "product.generated-visual"
+      ]
+    }
+  ],
+  "generatedAssetRoles": [
+    "avatar.abstract",
+    "copy.original",
+    "icon.generated-app",
+    "illustration.decorative-pattern",
+    "illustration.generated-abstract",
+    "logo.fictional-company",
+    "product.generated-visual",
+    "url.placeholder"
+  ],
+  "composes": [
+    "primitive.hero-badge",
+    "primitive.button",
+    "component.dot-pattern"
+  ],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/customers",
+        "variant": "plain",
+        "instance": 0,
+        "heightPx": 466.2
+      },
+      {
+        "route": "/startups",
+        "variant": "logo-strip",
+        "instance": 0,
+        "heightPx": 582.2
+      },
+      {
+        "route": "/partners/app-partners",
+        "variant": "app-tiles",
+        "instance": 0,
+        "heightPx": 661.2
+      },
+      {
+        "route": "/partners/creator-partners",
+        "variant": "creator-carousel",
+        "instance": 0,
+        "heightPx": 994.2
+      },
+      {
+        "route": "/partners/expert-partners",
+        "variant": "expert-quotes",
+        "instance": 0,
+        "heightPx": 920.2
+      },
+      {
+        "route": "/careers",
+        "variant": "contribution-grid",
+        "instance": 0,
+        "heightPx": 756
+      },
+      {
+        "route": "/apps",
+        "variant": "icon-band",
+        "instance": 0,
+        "heightPx": 839.9
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/customers",
+      "variant": "plain"
+    },
+    {
+      "route": "/startups",
+      "variant": "logo-strip"
+    },
+    {
+      "route": "/partners/app-partners",
+      "variant": "app-tiles"
+    },
+    {
+      "route": "/partners/creator-partners",
+      "variant": "creator-carousel"
+    },
+    {
+      "route": "/partners/expert-partners",
+      "variant": "expert-quotes"
+    },
+    {
+      "route": "/careers",
+      "variant": "contribution-grid"
+    },
+    {
+      "route": "/apps",
+      "variant": "icon-band"
+    }
+  ]
+}

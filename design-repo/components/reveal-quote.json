@@ -1,0 +1,17 @@
+{
+  "id": "component.reveal-quote",
+  "kind": "component",
+  "title": "Reveal quote",
+  "purpose": "Serif quote split into word spans for the in-view word reveal.",
+  "source": {
+    "file": "src/components/marketing/Blocks.jsx",
+    "tag": "export function RevealQuote(",
+    "lines": "111-134",
+    "citation": "src/components/marketing/Blocks.jsx:111-134"
+  },
+  "composes": [],
+  "tokens": [
+    "type.serif-quote",
+    "font.quote-serif"
+  ]
+}

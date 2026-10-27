@@ -1,0 +1,343 @@
+{
+  "pageSpecVersion": "1.0.0",
+  "mode": "generated",
+  "template": "program-landing",
+  "route": "/partners/installers",
+  "brand": {
+    "name": "Tarnwick",
+    "mark": {
+      "assetRole": "brand.placeholder-mark",
+      "assetRef": "generate:neutral rounded glyph plus the Tarnwick wordmark",
+      "alt": "Tarnwick"
+    },
+    "fictional": true
+  },
+  "meta": {
+    "title": "Installer partner program",
+    "description": "Generated sample program page inviting fictional installation firms to partner with Tarnwick."
+  },
+  "nodes": [
+    {
+      "id": "header",
+      "type": "shell.site-header",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.placeholder-mark",
+          "assetRef": "generate:neutral rounded glyph plus the Tarnwick wordmark",
+          "alt": "Tarnwick"
+        },
+        "banner": {
+          "text": "Read what changed in the autumn update",
+          "href": "https://tarnwick.example/updates"
+        },
+        "menus": [
+          {
+            "label": "Product",
+            "groups": [
+              {
+                "label": "Plan",
+                "items": [
+                  {
+                    "title": "Crew calendar",
+                    "description": "Book jobs onto open crew time",
+                    "href": "https://tarnwick.example/calendar"
+                  },
+                  {
+                    "title": "Parts tracker",
+                    "description": "Know which van carries which spare",
+                    "href": "https://tarnwick.example/parts"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "Company",
+            "groups": [
+              {
+                "label": "About",
+                "items": [
+                  {
+                    "title": "Our crews",
+                    "description": "Who builds the scheduling board",
+                    "href": "https://tarnwick.example/about"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "signIn": {
+          "label": "Log in",
+          "href": "https://app.tarnwick.example/login"
+        },
+        "primaryCta": {
+          "label": "Book a walkthrough",
+          "href": "https://tarnwick.example/demo",
+          "variant": "primary"
+        }
+      },
+      "motion": {
+        "patterns": [
+          "header-theme-swap",
+          "dropdown-panel"
+        ],
+        "reducedMotionFallback": "instant-state-change"
+      }
+    },
+    {
+      "id": "hero",
+      "type": "hero.page-centered",
+      "variant": "expert-quotes",
+      "content": {
+        "badge": "Installer partners",
+        "title": "Grow your installation business with steady referrals",
+        "lead": "Certified installers receive matched jobs in their area, shared scheduling and a named contact on our side.",
+        "ctas": [
+          {
+            "label": "Apply now",
+            "href": "https://tarnwick.example/partners/apply",
+            "variant": "primary"
+          }
+        ],
+        "quotes": [
+          {
+            "quote": "Referrals arrive with the address, the asset and a clear brief, so our first visit is usually the only visit.",
+            "person": {
+              "name": "Odile Branchu",
+              "role": "Owner, fictional heating firm",
+              "fictional": true
+            }
+          }
+        ]
+      },
+      "motion": {
+        "patterns": [
+          "page-hero-enter"
+        ],
+        "reducedMotionFallback": "paused-first-frame"
+      }
+    },
+    {
+      "id": "benefits",
+      "type": "features.cell-grid",
+      "content": {
+        "heading": {
+          "lead": "What partners get.",
+          "continuation": "Practical support for small installation teams."
+        },
+        "cells": [
+          {
+            "title": "Matched local jobs",
+            "body": "Requests near your depot are offered to you first, with photos and access notes attached."
+          },
+          {
+            "title": "Shared crew calendar",
+            "body": "Accept work straight onto your own calendar and see travel time before you commit."
+          },
+          {
+            "title": "Fast payouts",
+            "body": "Completed jobs are settled every Friday with a clear statement for each visit."
+          }
+        ]
+      },
+      "motion": {
+        "patterns": [
+          "static"
+        ],
+        "reducedMotionFallback": "instant-state-change"
+      }
+    },
+    {
+      "id": "steps",
+      "type": "features.step-list",
+      "variant": "single",
+      "content": {
+        "heading": {
+          "lead": "Four steps to your first referral.",
+          "continuation": "Most firms finish within two weeks."
+        },
+        "stepSets": [
+          [
+            {
+              "title": "Send an application",
+              "body": "Tell us about your team, region and the equipment you service."
+            },
+            {
+              "title": "Pass a short review",
+              "body": "We check insurance and certificates and call two recent clients."
+            },
+            {
+              "title": "Join onboarding",
+              "body": "A one-hour session covers the board, job cards and payouts."
+            },
+            {
+              "title": "Take your first job",
+              "body": "Accept a matched request and complete it with our support line on hand."
+            }
+          ]
+        ],
+        "footerLink": {
+          "label": "Read the partner guide",
+          "href": "https://tarnwick.example/partners/guide"
+        }
+      },
+      "motion": {
+        "patterns": [
+          "static"
+        ],
+        "reducedMotionFallback": "instant-state-change"
+      }
+    },
+    {
+      "id": "apply",
+      "type": "conversion.application-form",
+      "content": {
+        "heading": "Apply to become a partner",
+        "lead": "We reply to every application within five working days.",
+        "fields": [
+          {
+            "name": "firstName",
+            "label": "First name",
+            "kind": "text",
+            "placeholder": "First"
+          },
+          {
+            "name": "email",
+            "label": "Work email",
+            "kind": "email",
+            "placeholder": "name@yourfirm.example"
+          },
+          {
+            "name": "region",
+            "label": "Region",
+            "kind": "select",
+            "placeholder": "Select",
+            "options": [
+              "North",
+              "South",
+              "East",
+              "West"
+            ]
+          },
+          {
+            "name": "details",
+            "label": "About your firm",
+            "kind": "textarea",
+            "placeholder": "Team size and services"
+          }
+        ],
+        "submitLabel": "Send application"
+      },
+      "motion": {
+        "patterns": [
+          "form-feedback"
+        ],
+        "reducedMotionFallback": "instant-state-change"
+      }
+    },
+    {
+      "id": "faq",
+      "type": "faq.accordion",
+      "content": {
+        "title": "Questions from installers.",
+        "items": [
+          {
+            "question": "Is there a joining fee?",
+            "answer": "No. The program is free; we take a small share of each referred job."
+          },
+          {
+            "question": "Can I decline a job?",
+            "answer": "Yes. Declining has no effect on how many requests you receive."
+          },
+          {
+            "question": "Which regions are open?",
+            "answer": "All four pilot regions accept applications this season."
+          }
+        ]
+      },
+      "motion": {
+        "patterns": [
+          "accordion-height"
+        ],
+        "reducedMotionFallback": "instant-state-change"
+      }
+    },
+    {
+      "id": "more",
+      "type": "navigation.partner-cross-links",
+      "content": {
+        "title": "Other ways to work with us.",
+        "lead": "Pick the arrangement that suits how your firm operates.",
+        "links": [
+          {
+            "overline": "Suppliers",
+            "titleLead": "Stock the vans.",
+            "titleContinuation": "List your parts in the tracker.",
+            "linkLabel": "Become a supplier",
+            "href": "https://tarnwick.example/partners/suppliers"
+          },
+          {
+            "overline": "Trainers",
+            "titleLead": "Teach the trade.",
+            "titleContinuation": "Run certified courses for crews.",
+            "linkLabel": "Become a trainer",
+            "href": "https://tarnwick.example/partners/trainers"
+          }
+        ]
+      },
+      "motion": {
+        "patterns": [
+          "hover-micro"
+        ],
+        "reducedMotionFallback": "instant-state-change"
+      }
+    },
+    {
+      "id": "footer",
+      "type": "shell.site-footer",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.placeholder-mark",
+          "assetRef": "generate:neutral rounded glyph plus the Tarnwick wordmark",
+          "alt": "Tarnwick"
+        },
+        "columns": [
+          {
+            "heading": "Product",
+            "links": [
+              {
+                "label": "Crew calendar",
+                "href": "https://tarnwick.example/calendar"
+              },
+              {
+                "label": "Parts tracker",
+                "href": "https://tarnwick.example/parts"
+              }
+            ]
+          },
+          {
+            "heading": "Company",
+            "links": [
+              {
+                "label": "About us",
+                "href": "https://tarnwick.example/about"
+              },
+              {
+                "label": "Jobs board",
+                "href": "https://tarnwick.example/jobs"
+              }
+            ]
+          }
+        ],
+        "legal": "© 2026 Tarnwick, a fictional company. Placeholder legal line for a generated page."
+      },
+      "motion": {
+        "patterns": [
+          "hover-micro"
+        ],
+        "reducedMotionFallback": "instant-state-change"
+      }
+    }
+  ]
+}

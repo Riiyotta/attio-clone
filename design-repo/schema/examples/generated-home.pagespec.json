@@ -1,0 +1,339 @@
+{
+  "pageSpecVersion": "1.0.0",
+  "mode": "generated",
+  "template": "home",
+  "route": "/",
+  "brand": {
+    "name": "Tarnwick",
+    "mark": {
+      "assetRole": "brand.placeholder-mark",
+      "assetRef": "generate:neutral rounded glyph plus the Tarnwick wordmark",
+      "alt": "Tarnwick"
+    },
+    "fictional": true
+  },
+  "meta": {
+    "title": "Tarnwick: crew scheduling for field teams",
+    "description": "Generated sample homepage for a fictional field-service scheduling product."
+  },
+  "nodes": [
+    {
+      "id": "header",
+      "type": "shell.site-header",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.placeholder-mark",
+          "assetRef": "generate:neutral rounded glyph plus the Tarnwick wordmark",
+          "alt": "Tarnwick"
+        },
+        "banner": {
+          "text": "Read what changed in the autumn update",
+          "href": "https://tarnwick.example/updates"
+        },
+        "menus": [
+          {
+            "label": "Product",
+            "groups": [
+              {
+                "label": "Plan",
+                "items": [
+                  {
+                    "title": "Crew calendar",
+                    "description": "Book jobs onto open crew time",
+                    "href": "https://tarnwick.example/calendar"
+                  },
+                  {
+                    "title": "Parts tracker",
+                    "description": "Know which van carries which spare",
+                    "href": "https://tarnwick.example/parts"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "Company",
+            "groups": [
+              {
+                "label": "About",
+                "items": [
+                  {
+                    "title": "Our crews",
+                    "description": "Who builds the scheduling board",
+                    "href": "https://tarnwick.example/about"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "signIn": {
+          "label": "Log in",
+          "href": "https://app.tarnwick.example/login"
+        },
+        "primaryCta": {
+          "label": "Book a walkthrough",
+          "href": "https://tarnwick.example/demo",
+          "variant": "primary"
+        }
+      },
+      "motion": {
+        "patterns": [
+          "header-theme-swap",
+          "dropdown-panel"
+        ],
+        "reducedMotionFallback": "instant-state-change"
+      }
+    },
+    {
+      "id": "hero",
+      "type": "hero.product-window",
+      "content": {
+        "badge": {
+          "label": "New: winter route planning",
+          "href": "https://tarnwick.example/updates/winter"
+        },
+        "headline": "Every crew, one board",
+        "subhead": "Plan visits, assign technicians and keep customers posted without juggling three different tools.",
+        "primaryCta": {
+          "label": "Book a walkthrough",
+          "href": "https://tarnwick.example/demo",
+          "variant": "primary"
+        },
+        "secondaryCta": {
+          "label": "See the board",
+          "href": "https://tarnwick.example/tour",
+          "variant": "outline"
+        },
+        "productVisual": {
+          "assetRole": "product.generated-visual",
+          "assetRef": "generate:scheduling board with fictional crews and job cards",
+          "alt": "Scheduling board"
+        },
+        "sideWindows": [
+          {
+            "assetRole": "product.generated-visual",
+            "assetRef": "generate:job reminder notification card",
+            "alt": "Job reminder"
+          }
+        ]
+      },
+      "motion": {
+        "patterns": [
+          "hero-intro-stagger",
+          "hero-scroll-state"
+        ],
+        "reducedMotionFallback": "paused-first-frame"
+      }
+    },
+    {
+      "id": "logos",
+      "type": "social-proof.logo-wall",
+      "variant": "band",
+      "content": {
+        "logos": [
+          {
+            "assetRole": "logo.fictional-company",
+            "assetRef": "generate:invented monochrome wordmark 1",
+            "alt": "Fictional company 1"
+          },
+          {
+            "assetRole": "logo.fictional-company",
+            "assetRef": "generate:invented monochrome wordmark 2",
+            "alt": "Fictional company 2"
+          },
+          {
+            "assetRole": "logo.fictional-company",
+            "assetRef": "generate:invented monochrome wordmark 3",
+            "alt": "Fictional company 3"
+          },
+          {
+            "assetRole": "logo.fictional-company",
+            "assetRef": "generate:invented monochrome wordmark 4",
+            "alt": "Fictional company 4"
+          },
+          {
+            "assetRole": "logo.fictional-company",
+            "assetRef": "generate:invented monochrome wordmark 5",
+            "alt": "Fictional company 5"
+          },
+          {
+            "assetRole": "logo.fictional-company",
+            "assetRef": "generate:invented monochrome wordmark 6",
+            "alt": "Fictional company 6"
+          }
+        ]
+      },
+      "motion": {
+        "patterns": [
+          "static"
+        ],
+        "reducedMotionFallback": "instant-state-change"
+      }
+    },
+    {
+      "id": "tour",
+      "type": "features.platform-showcase",
+      "content": {
+        "intro": {
+          "lead": "Dispatch without the guesswork.",
+          "continuation": "Jobs, crews and parts sit on the same board, so the office and the field follow one plan."
+        },
+        "articles": [
+          {
+            "navLabel": "Intake",
+            "title": "Capture each request once. Calls, web forms and emails become tidy job cards with the address, the asset and the urgency already filled in.",
+            "visual": {
+              "assetRole": "product.generated-visual",
+              "assetRef": "generate:job intake form with fictional request",
+              "alt": "Job intake"
+            }
+          },
+          {
+            "navLabel": "Dispatch",
+            "title": "Put the nearest qualified crew on it. Skills, van stock and drive time decide who goes, and the board explains why.",
+            "visual": {
+              "assetRole": "product.generated-visual",
+              "assetRef": "generate:map with three fictional crews",
+              "alt": "Dispatch map"
+            }
+          },
+          {
+            "navLabel": "Follow-up",
+            "title": "Close the loop on site. Technicians attach photos and sign-off, and the customer gets a short summary before the van leaves.",
+            "visual": {
+              "assetRole": "product.generated-visual",
+              "assetRef": "generate:completed job summary card",
+              "alt": "Job summary"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "patterns": [
+          "scroll-spy-nav"
+        ],
+        "reducedMotionFallback": "paused-first-frame"
+      }
+    },
+    {
+      "id": "stats",
+      "type": "social-proof.scale-stats",
+      "content": {
+        "heading": {
+          "lead": "Built for busy seasons.",
+          "continuation": "The board stays quick when every crew is out."
+        },
+        "chart": {
+          "assetRole": "chart.illustrative",
+          "assetRef": "generate:rising curve with fictional weekly volumes",
+          "alt": "Illustrative growth curve"
+        },
+        "stats": [
+          {
+            "value": "1,200",
+            "label": "crews planned weekly"
+          },
+          {
+            "value": "38k",
+            "label": "jobs booked monthly"
+          },
+          {
+            "value": "9 min",
+            "label": "average dispatch time"
+          },
+          {
+            "value": "14",
+            "label": "regions in pilot"
+          }
+        ]
+      },
+      "motion": {
+        "patterns": [
+          "chart-draw-in-view"
+        ],
+        "reducedMotionFallback": "static-final-state"
+      },
+      "style": {
+        "theme": "light",
+        "surface": "color.semantic.secondary-background",
+        "paddingTop": "space.120",
+        "paddingBottom": "space.120",
+        "headingFont": "font.display"
+      }
+    },
+    {
+      "id": "close",
+      "type": "conversion.final-cta",
+      "content": {
+        "heading": "Plan next week this afternoon.",
+        "primaryCta": {
+          "label": "Book a walkthrough",
+          "href": "https://tarnwick.example/demo",
+          "variant": "primary"
+        },
+        "secondaryCta": {
+          "label": "Ask a question",
+          "href": "https://tarnwick.example/contact",
+          "variant": "outline"
+        }
+      },
+      "motion": {
+        "patterns": [
+          "ambient-streaks"
+        ],
+        "reducedMotionFallback": "hidden"
+      },
+      "style": {
+        "theme": "dark",
+        "surface": "color.black.50"
+      }
+    },
+    {
+      "id": "footer",
+      "type": "shell.site-footer",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.placeholder-mark",
+          "assetRef": "generate:neutral rounded glyph plus the Tarnwick wordmark",
+          "alt": "Tarnwick"
+        },
+        "columns": [
+          {
+            "heading": "Product",
+            "links": [
+              {
+                "label": "Crew calendar",
+                "href": "https://tarnwick.example/calendar"
+              },
+              {
+                "label": "Parts tracker",
+                "href": "https://tarnwick.example/parts"
+              }
+            ]
+          },
+          {
+            "heading": "Company",
+            "links": [
+              {
+                "label": "About us",
+                "href": "https://tarnwick.example/about"
+              },
+              {
+                "label": "Jobs board",
+                "href": "https://tarnwick.example/jobs"
+              }
+            ]
+          }
+        ],
+        "legal": "© 2026 Tarnwick, a fictional company. Placeholder legal line for a generated page."
+      },
+      "motion": {
+        "patterns": [
+          "hover-micro"
+        ],
+        "reducedMotionFallback": "instant-state-change"
+      }
+    }
+  ]
+}

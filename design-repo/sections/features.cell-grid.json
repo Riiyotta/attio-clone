@@ -1,0 +1,179 @@
+{
+  "id": "features.cell-grid",
+  "title": "Feature cell grid",
+  "status": "measured",
+  "source": {
+    "id": "src:Sections#export-function-FeatureCells",
+    "file": "src/components/startups/Sections.jsx",
+    "tag": "export function FeatureCells(",
+    "lines": "114-151",
+    "citation": "src/components/startups/Sections.jsx:114-151",
+    "alsoImplementedBy": [
+      {
+        "file": "src/components/partners/Sections.jsx",
+        "tag": "export function TwoPaths(",
+        "lines": "89-120",
+        "citation": "src/components/partners/Sections.jsx:89-120"
+      }
+    ]
+  },
+  "semantic": {
+    "id": "features.cell-grid",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "purpose": "Capabilities/benefits in a hairline cell grid: optional two-tone head, 2-6 cells with title, body, optional link and mini visual.",
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "heading": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "lead": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 8,
+            "x-maxWordsEvidence": "measured headingWordsMax=6 for features.cell-grid at 1440px"
+          },
+          "continuation": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 8,
+            "x-maxWordsEvidence": "measured headingWordsMax=6 for features.cell-grid at 1440px"
+          }
+        },
+        "required": [
+          "lead",
+          "continuation"
+        ]
+      },
+      "cells": {
+        "type": "array",
+        "minItems": 2,
+        "maxItems": 6,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "title": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 8,
+              "x-maxWordsEvidence": "measured headingWordsMax=6 for features.cell-grid at 1440px"
+            },
+            "body": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 35,
+              "x-maxWordsEvidence": "measured paragraphWordsMax=28 for features.cell-grid at 1440px"
+            },
+            "linkLabel": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 5,
+              "x-maxWordsEvidence": "measured 4 words"
+            },
+            "href": {
+              "$ref": "#/definitions/url"
+            },
+            "visual": {
+              "$ref": "#/definitions/media",
+              "x-assetRoles": [
+                "product.reference-mock",
+                "product.generated-visual",
+                "illustration.reference-art",
+                "illustration.generated-abstract",
+                "illustration.decorative-pattern"
+              ]
+            }
+          },
+          "required": [
+            "title",
+            "body"
+          ]
+        }
+      }
+    },
+    "required": [
+      "cells"
+    ]
+  },
+  "constraints": {
+    "maxPerPage": 2
+  },
+  "motion": {
+    "allowedPatterns": [
+      "hover-micro",
+      "static"
+    ],
+    "reducedMotionFallback": "instant-state-change",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "collapse-grid",
+        "detail": "cells stack to one column."
+      }
+    ]
+  },
+  "assetSlots": [
+    {
+      "field": ".cells[].visual",
+      "assetRoles": [
+        "product.reference-mock",
+        "product.generated-visual",
+        "illustration.reference-art",
+        "illustration.generated-abstract",
+        "illustration.decorative-pattern"
+      ]
+    }
+  ],
+  "generatedAssetRoles": [
+    "copy.original",
+    "illustration.decorative-pattern",
+    "illustration.generated-abstract",
+    "product.generated-visual",
+    "url.placeholder"
+  ],
+  "composes": [
+    "component.cell-grid",
+    "component.hover-wash",
+    "component.mini-mock"
+  ],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/startups",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 2034.8
+      },
+      {
+        "route": "/partners/app-partners",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 394.3
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/startups",
+      "variant": null
+    },
+    {
+      "route": "/partners/app-partners",
+      "variant": null
+    }
+  ]
+}

@@ -1,0 +1,231 @@
+{
+  "$description": "Closed set of motion patterns observed in the clone (values measured on the source during the clone build; see CLONE_SPEC motion M1-M17 and the pages spec P1-P24, superseded where the code documents a measured correction). Every pattern carries its fixed reduced-motion fallback.",
+  "version": "1.0.0",
+  "fallbackEnum": [
+    "none-needed",
+    "static-final-state",
+    "instant-state-change",
+    "paused-first-frame",
+    "manual-advance-only",
+    "hidden"
+  ],
+  "patterns": [
+    {
+      "id": "static",
+      "description": "No motion; content renders in its final state.",
+      "reducedMotionFallback": "none-needed",
+      "evidence": []
+    },
+    {
+      "id": "hero-intro-stagger",
+      "description": "M1 page-load intro: badge/H1/subhead/CTAs opacity 0 + blur 1.5px to rest, 600ms ease-reveal, 100ms stagger; main window opacity + scale .98 to 1, 900ms from 450ms; side windows fade 900ms at 1200/1350/1500ms.",
+      "reducedMotionFallback": "static-final-state",
+      "evidence": [
+        "src/index.css:611-611"
+      ]
+    },
+    {
+      "id": "hero-scroll-state",
+      "description": "M3 threshold scroll state (>= md): text fades and blurs 500ms out-cubic; windows scale to .95 with the hero spring (720ms).",
+      "reducedMotionFallback": "static-final-state",
+      "evidence": [
+        "src/index.css:647-647"
+      ]
+    },
+    {
+      "id": "badge-comet",
+      "description": "M2 conic-gradient origin travels 150px/s along the badge, 320ms turns at each end, ~4.0s loop at a 283px badge.",
+      "reducedMotionFallback": "paused-first-frame",
+      "evidence": [
+        "src/components/Hero.jsx:108-108"
+      ]
+    },
+    {
+      "id": "page-hero-enter",
+      "description": "P1/P2 marketing hero entrance: badge/title/lead opacity 0 + y 4px to rest, 1s ease-in-out at 100/200/300ms; dot pattern 1s ease-out at 900ms.",
+      "reducedMotionFallback": "static-final-state",
+      "evidence": [
+        "src/index.css:1051-1051"
+      ]
+    },
+    {
+      "id": "scroll-spy-nav",
+      "description": "Scroll-spy: the active item follows the article/category whose top crossed 45% (showcase) or 30% (app directory) of the viewport; label colour 320ms out-cubic.",
+      "reducedMotionFallback": "instant-state-change",
+      "evidence": [
+        "src/components/PlatformShowcase.jsx:86-86",
+        "src/components/apps/Sections.jsx:166-166"
+      ]
+    },
+    {
+      "id": "auto-cycle-tabs",
+      "description": "Timed tab cycling with a linear progress fill: stories 6000ms (M7), context accordion 5000ms (M10); text/image cross-fade with blur ~500ms.",
+      "reducedMotionFallback": "manual-advance-only",
+      "evidence": [
+        "src/components/CustomerStories.jsx:45-45",
+        "src/components/UniversalContext.jsx:319-319"
+      ]
+    },
+    {
+      "id": "marquee-loop",
+      "description": "Continuous linear loops: integration marquee 30px/s (51.2s per set), signal roller 24s, creator carousel duration set inline.",
+      "reducedMotionFallback": "paused-first-frame",
+      "evidence": [
+        "src/index.css:673-673",
+        "src/index.css:659-659"
+      ]
+    },
+    {
+      "id": "word-reveal-scroll",
+      "description": "M12 scroll-linked quote: words recolour from caption grey to ink as the sticky panel scrolls (~1 word per 70px), each 500ms ease-out.",
+      "reducedMotionFallback": "static-final-state",
+      "evidence": [
+        "src/index.css:412-412"
+      ]
+    },
+    {
+      "id": "word-reveal-in-view",
+      "description": "C5 in-view quote: each word rises from 36px with opacity, 500ms ease-reveal, ~10ms stagger, once.",
+      "reducedMotionFallback": "static-final-state",
+      "evidence": [
+        "src/index.css:956-956"
+      ]
+    },
+    {
+      "id": "curtain-overlap",
+      "description": "M13 layout-only curtain: the light quote section is pulled under the dark stack (negative top margin of one viewport) with a sticky inner panel. No animation code.",
+      "reducedMotionFallback": "none-needed",
+      "evidence": [
+        "src/components/UniversalContext.jsx:763-763"
+      ]
+    },
+    {
+      "id": "title-in-view",
+      "description": "M9 eyebrow + mega title reveal (opacity, blur, y 4px) and horizon glow scale .84 to 1 as the section reaches the viewport top.",
+      "reducedMotionFallback": "static-final-state",
+      "evidence": [
+        "src/components/UniversalContext.jsx:22-22"
+      ]
+    },
+    {
+      "id": "chart-draw-in-view",
+      "description": "M14 chart: curve clip-path reveal 1.2s ease-reveal, grid fade 1.1s, wash fade .6s at 1.3s; stat blocks 600ms at 150/250/350/450ms.",
+      "reducedMotionFallback": "static-final-state",
+      "evidence": [
+        "src/index.css:689-689"
+      ]
+    },
+    {
+      "id": "ambient-streaks",
+      "description": "M16 falling streaks: thin gradient lines on the stripe columns, random timing (approx. 2-4s each).",
+      "reducedMotionFallback": "hidden",
+      "evidence": [
+        "src/components/ui.jsx:215-215"
+      ]
+    },
+    {
+      "id": "decorative-loop",
+      "description": "M15 decorative loops inside product artwork: radar ring opacity pulses 3600ms, node bob 3800ms+, caret blink 550ms.",
+      "reducedMotionFallback": "paused-first-frame",
+      "evidence": [
+        "src/index.css:662-662"
+      ]
+    },
+    {
+      "id": "avatar-wall-in-view",
+      "description": "P11-P13 avatar wall: tiles fade 300ms with pseudo-random delays .23-.83s; heading lines rise 600ms at 600/750ms; buttons 700ms at 1s.",
+      "reducedMotionFallback": "static-final-state",
+      "evidence": [
+        "src/index.css:1087-1087"
+      ]
+    },
+    {
+      "id": "frame-line-sweep",
+      "description": "P3/P4 pricing frame lines sweep in 1.5s ease-out with staggered delays; corner marks fade 1s at 1s.",
+      "reducedMotionFallback": "static-final-state",
+      "evidence": [
+        "src/index.css:1040-1040"
+      ]
+    },
+    {
+      "id": "count-roll",
+      "description": "Pricing digits roll between monthly and annual values when the billing toggle changes.",
+      "reducedMotionFallback": "instant-state-change",
+      "evidence": [
+        "src/components/pricing/PricingHero.jsx:11-11"
+      ]
+    },
+    {
+      "id": "accordion-height",
+      "description": "Accordion panel height 0 <-> auto, 300ms in-out-cubic; plus/minus icon 400ms.",
+      "reducedMotionFallback": "instant-state-change",
+      "evidence": [
+        "src/index.css:1115-1115"
+      ]
+    },
+    {
+      "id": "hover-micro",
+      "description": "M17 micro-interactions: button colours 300ms, hover wash .8 in 50ms / out 300ms, trailing arrow x+2px, story image saturate .55 to 1.",
+      "reducedMotionFallback": "instant-state-change",
+      "evidence": [
+        "src/index.css:864-864"
+      ]
+    },
+    {
+      "id": "featured-tab-enter",
+      "description": "T4.2 featured tab content: blur and opacity to rest, 300ms ease-in-out.",
+      "reducedMotionFallback": "instant-state-change",
+      "evidence": [
+        "src/index.css:1240-1240"
+      ]
+    },
+    {
+      "id": "header-theme-swap",
+      "description": "M4 header colours/background/border transition 250ms when it crosses dark sections.",
+      "reducedMotionFallback": "instant-state-change",
+      "evidence": [
+        "src/components/SiteHeader.jsx:222-222"
+      ]
+    },
+    {
+      "id": "dropdown-panel",
+      "description": "M5 navigation dropdown: 150ms in-out-cubic open/close; panel content slides with blur 8px over 200ms.",
+      "reducedMotionFallback": "instant-state-change",
+      "evidence": [
+        "src/index.css:710-710"
+      ]
+    },
+    {
+      "id": "drawer-slide",
+      "description": "Mobile navigation drawer: slide from top + overlay fade, 500ms drawer ease.",
+      "reducedMotionFallback": "instant-state-change",
+      "evidence": [
+        "src/index.css:725-725"
+      ]
+    },
+    {
+      "id": "dialog-scale",
+      "description": "P18 search dialog: overlay fade + content scale .96 to 1, 200ms in-out-quad (exit reverses).",
+      "reducedMotionFallback": "instant-state-change",
+      "evidence": [
+        "src/index.css:1195-1195"
+      ]
+    },
+    {
+      "id": "lightbox-fade",
+      "description": "P24 gallery lightbox overlay + prev/next fade, 200ms in-out-quad.",
+      "reducedMotionFallback": "instant-state-change",
+      "evidence": [
+        "src/index.css:1262-1262"
+      ]
+    },
+    {
+      "id": "form-feedback",
+      "description": "Form feedback: select popup fade + 4px slide 150ms (P16); error message fade 300ms ease-out (P19); submit spinner.",
+      "reducedMotionFallback": "instant-state-change",
+      "evidence": [
+        "src/index.css:1082-1082"
+      ]
+    }
+  ]
+}

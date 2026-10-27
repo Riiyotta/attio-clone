@@ -1,0 +1,152 @@
+{
+  "id": "faq.accordion",
+  "title": "FAQ accordion",
+  "status": "measured",
+  "source": {
+    "id": "src:Faq#export-default-function-Faq",
+    "file": "src/components/marketing/Faq.jsx",
+    "tag": "export default function Faq(",
+    "lines": "60-77",
+    "citation": "src/components/marketing/Faq.jsx:60-77"
+  },
+  "semantic": {
+    "id": "faq.accordion",
+    "category": "FAQ"
+  },
+  "retrievalEligible": true,
+  "purpose": "Centered FAQ: H2 and 3-12 accordion items with bracketed plus icons; answers may contain inline links.",
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "title": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 14,
+        "x-maxWordsEvidence": "measured headingWordsMax=11 for faq.accordion at 1440px"
+      },
+      "items": {
+        "type": "array",
+        "minItems": 3,
+        "maxItems": 12,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "question": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 14,
+              "x-maxWordsEvidence": "measured headingWordsMax=11 for faq.accordion at 1440px"
+            },
+            "answer": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 39,
+              "x-maxWordsEvidence": "measured paragraphWordsMax=31 for faq.accordion at 1440px"
+            }
+          },
+          "required": [
+            "question",
+            "answer"
+          ]
+        },
+        "x-countEvidence": "12 / 9 / 3 / 4 / 5 items measured"
+      }
+    },
+    "required": [
+      "title",
+      "items"
+    ]
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "accordion-height",
+      "hover-micro"
+    ],
+    "reducedMotionFallback": "instant-state-change",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "resize-type",
+        "detail": "H2 40/44 -> 32/36; column becomes col 2/-2."
+      }
+    ]
+  },
+  "assetSlots": [],
+  "generatedAssetRoles": [
+    "copy.original",
+    "url.placeholder"
+  ],
+  "composes": [
+    "component.faq-item"
+  ],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/pricing",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 1320
+      },
+      {
+        "route": "/startups",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 1099
+      },
+      {
+        "route": "/partners/app-partners",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 625
+      },
+      {
+        "route": "/partners/creator-partners",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 704
+      },
+      {
+        "route": "/partners/expert-partners",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 783
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/pricing",
+      "variant": null
+    },
+    {
+      "route": "/startups",
+      "variant": null
+    },
+    {
+      "route": "/partners/app-partners",
+      "variant": null
+    },
+    {
+      "route": "/partners/creator-partners",
+      "variant": null
+    },
+    {
+      "route": "/partners/expert-partners",
+      "variant": null
+    }
+  ]
+}

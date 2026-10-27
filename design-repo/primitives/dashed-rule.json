@@ -1,0 +1,22 @@
+{
+  "id": "primitive.dashed-rule",
+  "kind": "primitive",
+  "title": "Dashed rule",
+  "purpose": "Vertical/horizontal dashed guide line (dasharray 4 6).",
+  "source": {
+    "file": "src/components/marketing/primitives.jsx",
+    "tag": "export function DashedV(",
+    "lines": "24-30",
+    "citation": "src/components/marketing/primitives.jsx:24-30"
+  },
+  "props": {
+    "orientation": [
+      "vertical",
+      "horizontal"
+    ]
+  },
+  "tokens": [
+    "color.white.500"
+  ],
+  "states": []
+}

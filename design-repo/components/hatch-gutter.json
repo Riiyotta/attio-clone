@@ -1,0 +1,17 @@
+{
+  "id": "component.hatch-gutter",
+  "kind": "component",
+  "title": "Hatched gutter",
+  "purpose": "125deg hatched fill for gutters beside card grids (light/dark).",
+  "source": {
+    "file": "src/components/marketing/primitives.jsx",
+    "tag": "export function Hatch(",
+    "lines": "58-60",
+    "citation": "src/components/marketing/primitives.jsx:58-60"
+  },
+  "composes": [],
+  "tokens": [
+    "gradient.hatch",
+    "gradient.hatch-dark"
+  ]
+}

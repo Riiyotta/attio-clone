@@ -1,0 +1,103 @@
+{
+  "id": "conversion.newsletter-signup",
+  "title": "Newsletter signup",
+  "status": "measured",
+  "source": {
+    "id": "src:Sections#export-function-NewsletterBand",
+    "file": "src/components/careers/Sections.jsx",
+    "tag": "export function NewsletterBand(",
+    "lines": "293-341",
+    "citation": "src/components/careers/Sections.jsx:293-341"
+  },
+  "semantic": {
+    "id": "conversion.newsletter-signup",
+    "category": "CONVERSION"
+  },
+  "retrievalEligible": true,
+  "purpose": "Email signup band: title, lead and inline subscribe form.",
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "title": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 7,
+        "x-maxWordsEvidence": "measured headingWordsMax=5 for conversion.newsletter-signup at 1440px"
+      },
+      "lead": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 14,
+        "x-maxWordsEvidence": "measured paragraphWordsMax=11 for conversion.newsletter-signup at 1440px"
+      },
+      "inputPlaceholder": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 5,
+        "x-maxWordsEvidence": "measured 4 words"
+      },
+      "buttonLabel": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 3,
+        "x-maxWordsEvidence": "measured 2 words"
+      }
+    },
+    "required": [
+      "title",
+      "lead",
+      "inputPlaceholder",
+      "buttonLabel"
+    ]
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "form-feedback"
+    ],
+    "reducedMotionFallback": "instant-state-change",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-md",
+        "change": "stack",
+        "detail": "input and button stack."
+      }
+    ]
+  },
+  "assetSlots": [],
+  "generatedAssetRoles": [
+    "copy.original",
+    "url.placeholder"
+  ],
+  "composes": [
+    "component.subscribe-form"
+  ],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/careers",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 428
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/careers",
+      "variant": null
+    }
+  ]
+}

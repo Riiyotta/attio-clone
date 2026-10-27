@@ -1,0 +1,147 @@
+{
+  "$description": "Semantic colour roles (CSS custom properties). light = page default; dark = inside dark sections and the dark footer. Values are references to foundation tokens.",
+  "tokens": {
+    "color.semantic.primary-background": {
+      "light": {
+        "ref": "color.white.100",
+        "evidence": "src/index.css:60-60"
+      },
+      "dark": {
+        "ref": "color.black.50",
+        "evidence": "src/index.css:103-103"
+      }
+    },
+    "color.semantic.secondary-background": {
+      "light": {
+        "ref": "color.white.200",
+        "evidence": "src/index.css:61-61"
+      },
+      "dark": {
+        "ref": "color.black.50",
+        "evidence": "src/index.css:104-104"
+      }
+    },
+    "color.semantic.surface-subtle": {
+      "light": {
+        "ref": "color.white.300",
+        "evidence": "src/index.css:62-62"
+      },
+      "dark": {
+        "ref": "color.black.300",
+        "evidence": "src/index.css:105-105"
+      }
+    },
+    "color.semantic.subtle-stroke": {
+      "light": {
+        "ref": "color.white.500",
+        "evidence": "src/index.css:63-63"
+      },
+      "dark": {
+        "ref": "color.black.400",
+        "evidence": "src/index.css:106-106"
+      }
+    },
+    "color.semantic.default-stroke": {
+      "light": {
+        "ref": "color.white.700",
+        "evidence": "src/index.css:64-64"
+      },
+      "dark": {
+        "ref": "color.black.700",
+        "evidence": "src/index.css:107-107"
+      }
+    },
+    "color.semantic.strong-stroke": {
+      "light": {
+        "ref": "color.white.800",
+        "evidence": "src/index.css:65-65"
+      },
+      "dark": {
+        "ref": "color.black.400",
+        "evidence": "src/index.css:108-108"
+      }
+    },
+    "color.semantic.accent-stroke": {
+      "light": {
+        "ref": "color.blue.400",
+        "evidence": "src/index.css:66-66"
+      }
+    },
+    "color.semantic.primary-foreground": {
+      "light": {
+        "ref": "color.black.100",
+        "evidence": "src/index.css:67-67"
+      },
+      "dark": {
+        "ref": "color.white.200",
+        "evidence": "src/index.css:109-109"
+      }
+    },
+    "color.semantic.secondary-foreground": {
+      "light": {
+        "ref": "color.black.300",
+        "evidence": "src/index.css:68-68"
+      },
+      "dark": {
+        "ref": "color.white.400",
+        "evidence": "src/index.css:110-110"
+      }
+    },
+    "color.semantic.tertiary-foreground": {
+      "light": {
+        "ref": "color.black.600",
+        "evidence": "src/index.css:69-69"
+      },
+      "dark": {
+        "ref": "color.white.900",
+        "evidence": "src/index.css:111-111"
+      }
+    },
+    "color.semantic.accent-foreground": {
+      "light": {
+        "ref": "color.black.700",
+        "evidence": "src/index.css:70-70"
+      },
+      "dark": {
+        "ref": "color.black.800",
+        "evidence": "src/index.css:112-112"
+      }
+    },
+    "color.semantic.caption-foreground": {
+      "light": {
+        "ref": "color.black.900",
+        "evidence": "src/index.css:71-71"
+      },
+      "dark": {
+        "ref": "color.black.600",
+        "evidence": "src/index.css:113-113"
+      }
+    },
+    "color.semantic.disabled-foreground": {
+      "light": {
+        "ref": "color.white.700",
+        "evidence": "src/index.css:72-72"
+      }
+    },
+    "color.semantic.eyebrow-foreground": {
+      "light": {
+        "ref": "color.blue.600",
+        "evidence": "src/index.css:73-73"
+      },
+      "dark": {
+        "ref": "color.blue.200",
+        "evidence": "src/index.css:114-114"
+      }
+    },
+    "color.semantic.eyebrow-background": {
+      "light": {
+        "ref": "color.blue.100",
+        "evidence": "src/index.css:74-74"
+      },
+      "dark": {
+        "ref": "color.blue.800",
+        "evidence": "src/index.css:115-115"
+      }
+    }
+  }
+}

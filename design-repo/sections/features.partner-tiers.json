@@ -1,0 +1,124 @@
+{
+  "id": "features.partner-tiers",
+  "title": "Partner tiers",
+  "status": "measured",
+  "source": {
+    "id": "src:Sections#export-function-Tiers",
+    "file": "src/components/partners/Sections.jsx",
+    "tag": "export function Tiers(",
+    "lines": "527-599",
+    "citation": "src/components/partners/Sections.jsx:527-599"
+  },
+  "semantic": {
+    "id": "features.partner-tiers",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "purpose": "Benefits by program tier: heading, lead and three tier cards with emblem and five items each.",
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "heading": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 5,
+        "x-maxWordsEvidence": "measured headingWordsMax=4 for features.partner-tiers at 1440px"
+      },
+      "lead": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 15,
+        "x-maxWordsEvidence": "measured paragraphWordsMax=12 for features.partner-tiers at 1440px"
+      },
+      "tiers": {
+        "type": "array",
+        "minItems": 2,
+        "maxItems": 4,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 3,
+              "x-maxWordsEvidence": "measured 2 words"
+            },
+            "items": {
+              "type": "array",
+              "minItems": 3,
+              "maxItems": 6,
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxWords": 7,
+                "x-maxWordsEvidence": "measured 5 words"
+              }
+            }
+          },
+          "required": [
+            "name",
+            "items"
+          ]
+        },
+        "x-countEvidence": "3 tiers x 5 items"
+      },
+      "cta": {
+        "$ref": "#/definitions/cta"
+      }
+    },
+    "required": [
+      "heading",
+      "lead",
+      "tiers"
+    ]
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "static"
+    ],
+    "reducedMotionFallback": "none-needed",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "stack",
+        "detail": "tier cards stack."
+      }
+    ]
+  },
+  "assetSlots": [],
+  "generatedAssetRoles": [
+    "copy.original",
+    "url.placeholder"
+  ],
+  "composes": [],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/partners/expert-partners",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 1134.5
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/partners/expert-partners",
+      "variant": null
+    }
+  ]
+}

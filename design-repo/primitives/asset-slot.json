@@ -1,0 +1,22 @@
+{
+  "id": "primitive.asset-slot",
+  "kind": "primitive",
+  "title": "Asset slot",
+  "purpose": "Media box at an exact measured size; renders a neutral placeholder when no asset is supplied.",
+  "source": {
+    "file": "src/components/ui.jsx",
+    "tag": "export function AssetSlot(",
+    "lines": "94-119",
+    "citation": "src/components/ui.jsx:94-119"
+  },
+  "props": {
+    "assetRole": "closed enum",
+    "width": "px",
+    "height": "px",
+    "alt": "text"
+  },
+  "tokens": [
+    "color.white.300"
+  ],
+  "states": []
+}

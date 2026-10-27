@@ -1,0 +1,26 @@
+{
+  "id": "primitive.select-field",
+  "kind": "primitive",
+  "title": "Select field",
+  "purpose": "Labelled select trigger + popup list.",
+  "source": {
+    "file": "src/components/forms/Fields.jsx",
+    "tag": "export function SelectField(",
+    "lines": "54-156",
+    "citation": "src/components/forms/Fields.jsx:54-156"
+  },
+  "props": {
+    "label": "text <= 3 words",
+    "options": "2-6 short labels"
+  },
+  "tokens": [
+    "elevation.select-popup",
+    "elevation.select-ring"
+  ],
+  "states": [
+    "idle",
+    "open",
+    "focus",
+    "invalid"
+  ]
+}

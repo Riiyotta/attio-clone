@@ -1,0 +1,17 @@
+{
+  "id": "component.section-head",
+  "kind": "component",
+  "title": "Section head (two-tone)",
+  "purpose": "Lead (600) + continuation (500 grey) heading in one inline block, max 20em.",
+  "source": {
+    "file": "src/components/marketing/primitives.jsx",
+    "tag": "export function SectionHead(",
+    "lines": "107-118",
+    "citation": "src/components/marketing/primitives.jsx:107-118"
+  },
+  "composes": [],
+  "tokens": [
+    "type.head-sm",
+    "color.black.800"
+  ]
+}

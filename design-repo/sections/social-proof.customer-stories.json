@@ -1,0 +1,215 @@
+{
+  "id": "social-proof.customer-stories",
+  "title": "Customer stories",
+  "status": "measured",
+  "source": {
+    "id": "src:CustomerStories#export-default-function-CustomerStories",
+    "file": "src/components/CustomerStories.jsx",
+    "tag": "export default function CustomerStories(",
+    "lines": "75-197",
+    "citation": "src/components/CustomerStories.jsx:75-197",
+    "variantSources": {
+      "carousel": {
+        "file": "src/components/CustomerStories.jsx",
+        "tag": "export default function CustomerStories(",
+        "lines": "75-197",
+        "citation": "src/components/CustomerStories.jsx:75-197"
+      },
+      "grid": {
+        "file": "src/components/customers/StoriesGrid.jsx",
+        "tag": "export default function StoriesGrid(",
+        "lines": "102-115",
+        "citation": "src/components/customers/StoriesGrid.jsx:102-115"
+      }
+    }
+  },
+  "semantic": {
+    "id": "social-proof.customer-stories",
+    "category": "SOCIAL_PROOF"
+  },
+  "retrievalEligible": true,
+  "purpose": "Customer story proof: an auto-cycling 4-tab carousel (home) or a grid of story feature cells (customers).",
+  "themes": [
+    "light"
+  ],
+  "variants": [
+    "carousel",
+    "grid"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "heading": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "lead": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 12,
+            "x-maxWordsEvidence": "measured headingWordsMax=9 for social-proof.customer-stories at 1440px"
+          },
+          "continuation": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 12,
+            "x-maxWordsEvidence": "measured headingWordsMax=9 for social-proof.customer-stories at 1440px"
+          }
+        },
+        "required": [
+          "lead",
+          "continuation"
+        ]
+      },
+      "stories": {
+        "type": "array",
+        "minItems": 2,
+        "maxItems": 8,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "company": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 4,
+              "x-maxWordsEvidence": "measured 3 words"
+            },
+            "logo": {
+              "$ref": "#/definitions/media",
+              "x-assetRoles": [
+                "logo.reference-company",
+                "logo.fictional-company"
+              ]
+            },
+            "overline": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 8,
+              "x-maxWordsEvidence": "story overline c22-c42"
+            },
+            "title": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 19,
+              "x-maxWordsEvidence": "measured paragraphWordsMax=15 for social-proof.customer-stories at 1440px"
+            },
+            "linkLabel": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 4,
+              "x-maxWordsEvidence": "c15 'read the story' label"
+            },
+            "href": {
+              "$ref": "#/definitions/url"
+            },
+            "media": {
+              "$ref": "#/definitions/media",
+              "x-assetRoles": [
+                "illustration.reference-art",
+                "illustration.generated-abstract",
+                "illustration.decorative-pattern",
+                "product.reference-mock",
+                "product.generated-visual"
+              ]
+            }
+          },
+          "required": [
+            "company",
+            "logo",
+            "title",
+            "linkLabel",
+            "href",
+            "media"
+          ]
+        },
+        "x-countEvidence": "4 (carousel), 7 cells (grid)"
+      }
+    },
+    "required": [
+      "stories"
+    ]
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "auto-cycle-tabs",
+      "hover-micro",
+      "static"
+    ],
+    "reducedMotionFallback": "manual-advance-only",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "stack",
+        "detail": "carousel tabs become a scroll row; grid cells stack to one column."
+      }
+    ]
+  },
+  "assetSlots": [
+    {
+      "field": ".stories[].logo",
+      "assetRoles": [
+        "logo.reference-company",
+        "logo.fictional-company"
+      ]
+    },
+    {
+      "field": ".stories[].media",
+      "assetRoles": [
+        "illustration.reference-art",
+        "illustration.generated-abstract",
+        "illustration.decorative-pattern",
+        "product.reference-mock",
+        "product.generated-visual"
+      ]
+    }
+  ],
+  "generatedAssetRoles": [
+    "copy.original",
+    "illustration.decorative-pattern",
+    "illustration.generated-abstract",
+    "logo.fictional-company",
+    "product.generated-visual",
+    "url.placeholder"
+  ],
+  "composes": [
+    "component.story-card"
+  ],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/",
+        "variant": "carousel",
+        "instance": 0,
+        "heightPx": 937
+      },
+      {
+        "route": "/customers",
+        "variant": "grid",
+        "instance": 0,
+        "heightPx": 2305
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/",
+      "variant": "carousel"
+    },
+    {
+      "route": "/customers",
+      "variant": "grid"
+    }
+  ],
+  "notes": "Observed gap: the carousel's 6000ms auto-cycle does not consult the reduced-motion query in the clone; the contract's fallback (manual-advance-only) is the required behaviour for generated pages."
+}

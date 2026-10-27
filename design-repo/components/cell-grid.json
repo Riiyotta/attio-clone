@@ -1,0 +1,16 @@
+{
+  "id": "component.cell-grid",
+  "kind": "component",
+  "title": "Cell grid",
+  "purpose": "1px-gap grid on a hairline background drawing internal dividers.",
+  "source": {
+    "file": "src/components/marketing/primitives.jsx",
+    "tag": "export function CellGrid(",
+    "lines": "82-88",
+    "citation": "src/components/marketing/primitives.jsx:82-88"
+  },
+  "composes": [],
+  "tokens": [
+    "color.white.500"
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "id": "features.featured-apps",
+  "title": "Featured apps",
+  "status": "measured",
+  "source": {
+    "id": "src:Sections#export-function-FeaturedApps",
+    "file": "src/components/apps/Sections.jsx",
+    "tag": "export function FeaturedApps(",
+    "lines": "77-137",
+    "citation": "src/components/apps/Sections.jsx:77-137"
+  },
+  "semantic": {
+    "id": "features.featured-apps",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "purpose": "Five highlighted integrations behind chip tabs, each with name, one-line description and preview art.",
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "heading": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 3,
+        "x-maxWordsEvidence": "measured headingWordsMax=2 for features.featured-apps at 1440px"
+      },
+      "tabs": {
+        "type": "array",
+        "minItems": 3,
+        "maxItems": 5,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "label": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 3,
+              "x-maxWordsEvidence": "measured 2 words"
+            },
+            "appName": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 4,
+              "x-maxWordsEvidence": "measured 3 words"
+            },
+            "description": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 14,
+              "x-maxWordsEvidence": "measured paragraphWordsMax=11 for features.featured-apps at 1440px"
+            },
+            "icon": {
+              "$ref": "#/definitions/media",
+              "x-assetRoles": [
+                "icon.generated-app"
+              ]
+            },
+            "visual": {
+              "$ref": "#/definitions/media",
+              "x-assetRoles": [
+                "product.reference-mock",
+                "product.generated-visual"
+              ]
+            },
+            "href": {
+              "$ref": "#/definitions/url"
+            }
+          },
+          "required": [
+            "label",
+            "appName",
+            "description",
+            "icon",
+            "visual"
+          ]
+        },
+        "x-countEvidence": "5 chip tabs measured"
+      }
+    },
+    "required": [
+      "heading",
+      "tabs"
+    ]
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "featured-tab-enter",
+      "hover-micro"
+    ],
+    "reducedMotionFallback": "instant-state-change",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "scroll-row",
+        "detail": "chip tabs scroll horizontally."
+      }
+    ]
+  },
+  "assetSlots": [
+    {
+      "field": ".tabs[].icon",
+      "assetRoles": [
+        "icon.generated-app"
+      ]
+    },
+    {
+      "field": ".tabs[].visual",
+      "assetRoles": [
+        "product.reference-mock",
+        "product.generated-visual"
+      ]
+    }
+  ],
+  "generatedAssetRoles": [
+    "copy.original",
+    "icon.generated-app",
+    "product.generated-visual",
+    "url.placeholder"
+  ],
+  "composes": [],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/apps",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 1028.6
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/apps",
+      "variant": null
+    }
+  ]
+}

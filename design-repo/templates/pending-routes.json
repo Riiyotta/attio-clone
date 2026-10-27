@@ -1,0 +1,125 @@
+{
+  "$description": "Routes the source site has and the clone build plans, but which are NOT mounted in src/App.jsx at extraction time (the clone is mid-build). They have no template, section or example here; their structure must not be invented from this repo. The cited spec files describe future intent only.",
+  "snapshotNote": "Route table snapshot taken at the start of extraction and re-checked immediately before packaging; see CHANGELOG.",
+  "unmountedComponentFilesSeen": [
+    "src/components/blog/BlogArt.jsx",
+    "src/components/blog/Engineering.jsx",
+    "src/components/blog/Listing.jsx"
+  ],
+  "routes": [
+    {
+      "route": "/blog",
+      "intendedTemplate": "editorial listing (light)",
+      "futureIntentSource": "CLONE_SPEC_PAGES.md T6",
+      "status": "pending-not-mounted"
+    },
+    {
+      "route": "/engineering/blog",
+      "intendedTemplate": "editorial listing (dark variant)",
+      "futureIntentSource": "CLONE_SPEC_PAGES.md T6",
+      "status": "pending-not-mounted"
+    },
+    {
+      "route": "/changelog",
+      "intendedTemplate": "changelog year listing (redirects to /changelog/2026 on the source)",
+      "futureIntentSource": "CLONE_SPEC_PAGES.md T7",
+      "status": "pending-not-mounted"
+    },
+    {
+      "route": "/architecture",
+      "intendedTemplate": "architecture scrollytelling",
+      "futureIntentSource": "CLONE_SPEC_PAGES.md T8",
+      "status": "pending-not-mounted"
+    },
+    {
+      "route": "/help",
+      "intendedTemplate": "help docs shell",
+      "futureIntentSource": "CLONE_SPEC_PAGES.md T9",
+      "status": "pending-not-mounted"
+    },
+    {
+      "route": "/help/academy",
+      "intendedTemplate": "help docs shell",
+      "futureIntentSource": "CLONE_SPEC_PAGES.md T9",
+      "status": "pending-not-mounted"
+    },
+    {
+      "route": "/help/reference/:slug",
+      "intendedTemplate": "help docs shell",
+      "futureIntentSource": "CLONE_SPEC_PAGES.md T9",
+      "status": "pending-not-mounted"
+    },
+    {
+      "route": "/platform/ask",
+      "intendedTemplate": "platform template (v2 / v1-legacy / developer blueprint)",
+      "futureIntentSource": "CLONE_SPEC_PLATFORM.md",
+      "status": "pending-not-mounted"
+    },
+    {
+      "route": "/platform/call-intelligence",
+      "intendedTemplate": "platform template (v2 / v1-legacy / developer blueprint)",
+      "futureIntentSource": "CLONE_SPEC_PLATFORM.md",
+      "status": "pending-not-mounted"
+    },
+    {
+      "route": "/platform/custom-agents",
+      "intendedTemplate": "platform template (v2 / v1-legacy / developer blueprint)",
+      "futureIntentSource": "CLONE_SPEC_PLATFORM.md",
+      "status": "pending-not-mounted"
+    },
+    {
+      "route": "/platform/data",
+      "intendedTemplate": "platform template (v2 / v1-legacy / developer blueprint)",
+      "futureIntentSource": "CLONE_SPEC_PLATFORM.md",
+      "status": "pending-not-mounted"
+    },
+    {
+      "route": "/platform/developers",
+      "intendedTemplate": "platform template (v2 / v1-legacy / developer blueprint)",
+      "futureIntentSource": "CLONE_SPEC_PLATFORM.md",
+      "status": "pending-not-mounted"
+    },
+    {
+      "route": "/platform/enrichment",
+      "intendedTemplate": "platform template (v2 / v1-legacy / developer blueprint)",
+      "futureIntentSource": "CLONE_SPEC_PLATFORM.md",
+      "status": "pending-not-mounted"
+    },
+    {
+      "route": "/platform/mcp",
+      "intendedTemplate": "platform template (v2 / v1-legacy / developer blueprint)",
+      "futureIntentSource": "CLONE_SPEC_PLATFORM.md",
+      "status": "pending-not-mounted"
+    },
+    {
+      "route": "/platform/reporting",
+      "intendedTemplate": "platform template (v2 / v1-legacy / developer blueprint)",
+      "futureIntentSource": "CLONE_SPEC_PLATFORM.md",
+      "status": "pending-not-mounted"
+    },
+    {
+      "route": "/platform/sequences",
+      "intendedTemplate": "platform template (v2 / v1-legacy / developer blueprint)",
+      "futureIntentSource": "CLONE_SPEC_PLATFORM.md",
+      "status": "pending-not-mounted"
+    },
+    {
+      "route": "/platform/universal-context",
+      "intendedTemplate": "platform template (v2 / v1-legacy / developer blueprint)",
+      "futureIntentSource": "CLONE_SPEC_PLATFORM.md",
+      "status": "pending-not-mounted"
+    },
+    {
+      "route": "/platform/web-agent",
+      "intendedTemplate": "platform template (v2 / v1-legacy / developer blueprint)",
+      "futureIntentSource": "CLONE_SPEC_PLATFORM.md",
+      "status": "pending-not-mounted"
+    },
+    {
+      "route": "/platform/workflows",
+      "intendedTemplate": "platform template (v2 / v1-legacy / developer blueprint)",
+      "futureIntentSource": "CLONE_SPEC_PLATFORM.md",
+      "status": "pending-not-mounted"
+    }
+  ]
+}

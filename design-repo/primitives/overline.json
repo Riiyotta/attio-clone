@@ -1,0 +1,19 @@
+{
+  "id": "primitive.overline",
+  "kind": "primitive",
+  "title": "Overline",
+  "purpose": "12/14 600 uppercase meta label (dates, categories, counters).",
+  "source": {
+    "file": "tailwind.config.cjs",
+    "tag": "'overline': t(",
+    "lines": "170-170",
+    "citation": "tailwind.config.cjs:170-170"
+  },
+  "props": {
+    "label": "text <= 4 words"
+  },
+  "tokens": [
+    "type.overline"
+  ],
+  "states": []
+}

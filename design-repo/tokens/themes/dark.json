@@ -1,0 +1,81 @@
+{
+  "theme": "dark",
+  "$description": "Every semantic token resolved to a foundation value for the dark theme. Roles without a measured dark value inherit the light value (marked inherited).",
+  "tokens": {
+    "color.semantic.primary-background": {
+      "ref": "color.black.50",
+      "value": "#101010",
+      "inherited": false
+    },
+    "color.semantic.secondary-background": {
+      "ref": "color.black.50",
+      "value": "#101010",
+      "inherited": false
+    },
+    "color.semantic.surface-subtle": {
+      "ref": "color.black.300",
+      "value": "#232529",
+      "inherited": false
+    },
+    "color.semantic.subtle-stroke": {
+      "ref": "color.black.400",
+      "value": "#2e3238",
+      "inherited": false
+    },
+    "color.semantic.default-stroke": {
+      "ref": "color.black.700",
+      "value": "#6f7988",
+      "inherited": false
+    },
+    "color.semantic.strong-stroke": {
+      "ref": "color.black.400",
+      "value": "#2e3238",
+      "inherited": false
+    },
+    "color.semantic.accent-stroke": {
+      "ref": "color.blue.400",
+      "value": "#709ff5",
+      "inherited": true
+    },
+    "color.semantic.primary-foreground": {
+      "ref": "color.white.200",
+      "value": "#fafafb",
+      "inherited": false
+    },
+    "color.semantic.secondary-foreground": {
+      "ref": "color.white.400",
+      "value": "#edeff3",
+      "inherited": false
+    },
+    "color.semantic.tertiary-foreground": {
+      "ref": "color.white.900",
+      "value": "#b5bdc9",
+      "inherited": false
+    },
+    "color.semantic.accent-foreground": {
+      "ref": "color.black.800",
+      "value": "#8f99a8",
+      "inherited": false
+    },
+    "color.semantic.caption-foreground": {
+      "ref": "color.black.600",
+      "value": "#505967",
+      "inherited": false
+    },
+    "color.semantic.disabled-foreground": {
+      "ref": "color.white.700",
+      "value": "#d3d8df",
+      "inherited": true
+    },
+    "color.semantic.eyebrow-foreground": {
+      "ref": "color.blue.200",
+      "value": "#c8dcff",
+      "inherited": false
+    },
+    "color.semantic.eyebrow-background": {
+      "ref": "color.blue.800",
+      "value": "#1a2233",
+      "inherited": false
+    }
+  }
+}

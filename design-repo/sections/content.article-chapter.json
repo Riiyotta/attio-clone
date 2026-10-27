@@ -1,0 +1,234 @@
+{
+  "id": "content.article-chapter",
+  "title": "Article chapter",
+  "status": "measured",
+  "source": {
+    "id": "src:AppDetail#d-sections-map-s-si",
+    "file": "src/pages/AppDetail.jsx",
+    "tag": "{d.sections.map((s, si) => (",
+    "lines": "122-122",
+    "citation": "src/pages/AppDetail.jsx:122-122"
+  },
+  "semantic": {
+    "id": "content.article-chapter",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
+  "purpose": "One heading-bounded chapter of an app's overview article (Overview / Key features / Use cases): H2 plus paragraphs, bold lines and bullet lists.",
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "title": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 3,
+        "x-maxWordsEvidence": "measured headingWordsMax=2 for content.article-chapter at 1440px"
+      },
+      "blocks": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 12,
+        "items": {
+          "oneOf": [
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "kind": {
+                  "type": "string",
+                  "enum": [
+                    "paragraph"
+                  ]
+                },
+                "text": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxWords": 84,
+                  "x-maxWordsEvidence": "measured paragraphWordsMax=67 for content.article-chapter at 1440px"
+                }
+              },
+              "required": [
+                "kind",
+                "text"
+              ]
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "kind": {
+                  "type": "string",
+                  "enum": [
+                    "bold-line"
+                  ]
+                },
+                "text": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxWords": 7,
+                  "x-maxWordsEvidence": "measured 5 words"
+                }
+              },
+              "required": [
+                "kind",
+                "text"
+              ]
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "kind": {
+                  "type": "string",
+                  "enum": [
+                    "list"
+                  ]
+                },
+                "items": {
+                  "type": "array",
+                  "minItems": 1,
+                  "maxItems": 10,
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "lead": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxWords": 8,
+                        "x-maxWordsEvidence": "measured 6 words"
+                      },
+                      "text": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxWords": 38,
+                        "x-maxWordsEvidence": "list items c<=146"
+                      }
+                    },
+                    "required": [
+                      "text"
+                    ]
+                  }
+                }
+              },
+              "required": [
+                "kind",
+                "items"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "required": [
+      "title",
+      "blocks"
+    ]
+  },
+  "constraints": {
+    "repeatable": true,
+    "maxPerPage": 6
+  },
+  "motion": {
+    "allowedPatterns": [
+      "static"
+    ],
+    "reducedMotionFallback": "none-needed",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "reflow",
+        "detail": "full-width column; max 41em measure kept."
+      }
+    ]
+  },
+  "assetSlots": [],
+  "generatedAssetRoles": [
+    "copy.original",
+    "url.placeholder"
+  ],
+  "composes": [],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/apps/chatgpt",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 336
+      },
+      {
+        "route": "/apps/chatgpt",
+        "variant": null,
+        "instance": 1,
+        "heightPx": 462
+      },
+      {
+        "route": "/apps/chatgpt",
+        "variant": null,
+        "instance": 2,
+        "heightPx": 547
+      },
+      {
+        "route": "/apps/claude",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 336
+      },
+      {
+        "route": "/apps/claude",
+        "variant": null,
+        "instance": 1,
+        "heightPx": 462
+      },
+      {
+        "route": "/apps/claude",
+        "variant": null,
+        "instance": 2,
+        "heightPx": 308
+      },
+      {
+        "route": "/apps/slack",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 180
+      },
+      {
+        "route": "/apps/slack",
+        "variant": null,
+        "instance": 1,
+        "heightPx": 399
+      },
+      {
+        "route": "/apps/slack",
+        "variant": null,
+        "instance": 2,
+        "heightPx": 258
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/apps/chatgpt",
+      "variant": null
+    },
+    {
+      "route": "/apps/claude",
+      "variant": null
+    },
+    {
+      "route": "/apps/slack",
+      "variant": null
+    }
+  ],
+  "notes": "Decomposes the app overview article by real content boundaries (one H2 per chapter) instead of one whole-article section."
+}

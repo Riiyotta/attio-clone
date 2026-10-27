@@ -1,0 +1,118 @@
+{
+  "id": "hero.pricing-intro",
+  "title": "Pricing intro",
+  "status": "measured",
+  "source": {
+    "id": "src:PricingHero#HERO-title-h1",
+    "file": "src/components/pricing/PricingHero.jsx",
+    "tag": "{HERO.title}</h1>",
+    "lines": "108-108",
+    "citation": "src/components/pricing/PricingHero.jsx:108-108"
+  },
+  "semantic": {
+    "id": "hero.pricing-intro",
+    "category": "HERO"
+  },
+  "retrievalEligible": true,
+  "purpose": "Pricing page opener: centered title, one-line lead and the monthly/annual billing toggle.",
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "title": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 5,
+        "x-maxWordsEvidence": "measured headingWordsMax=4 for hero.pricing-intro at 1440px"
+      },
+      "lead": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 20,
+        "x-maxWordsEvidence": "measured paragraphWordsMax=16 for hero.pricing-intro at 1440px"
+      },
+      "billingToggle": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "monthlyLabel": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 3,
+            "x-maxWordsEvidence": "measured 2 words"
+          },
+          "annualLabel": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 3,
+            "x-maxWordsEvidence": "measured 2 words"
+          },
+          "defaultPeriod": {
+            "type": "string",
+            "enum": [
+              "monthly",
+              "annual"
+            ]
+          }
+        },
+        "required": [
+          "monthlyLabel",
+          "annualLabel",
+          "defaultPeriod"
+        ]
+      }
+    },
+    "required": [
+      "title",
+      "lead",
+      "billingToggle"
+    ]
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "static"
+    ],
+    "reducedMotionFallback": "none-needed",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "resize-type",
+        "detail": "page-hero 56/60 -> 40/44."
+      }
+    ]
+  },
+  "assetSlots": [],
+  "generatedAssetRoles": [
+    "copy.original",
+    "url.placeholder"
+  ],
+  "composes": [],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/pricing",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 316
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/pricing",
+      "variant": null
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "primitive.brand-mark",
+  "kind": "primitive",
+  "title": "Brand mark slot",
+  "purpose": "Header/footer brand mark slot (103x24 header, 116x26 footer).",
+  "source": {
+    "file": "src/components/ui.jsx",
+    "tag": "export function BrandMark(",
+    "lines": "126-169",
+    "citation": "src/components/ui.jsx:126-169"
+  },
+  "props": {
+    "assetRole": "brand.*"
+  },
+  "tokens": [],
+  "states": [
+    "light",
+    "dark"
+  ]
+}

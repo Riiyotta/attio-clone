@@ -1,0 +1,61 @@
+{
+  "id": "overlay.mobile-nav-drawer",
+  "title": "Mobile navigation drawer",
+  "status": "measured",
+  "source": {
+    "id": "src:SiteHeader#function-MobileDrawer",
+    "file": "src/components/SiteHeader.jsx",
+    "tag": "function MobileDrawer(",
+    "lines": "345-428",
+    "citation": "src/components/SiteHeader.jsx:345-428"
+  },
+  "semantic": {
+    "id": "overlay.mobile-nav-drawer",
+    "category": "UTILITY"
+  },
+  "retrievalEligible": false,
+  "retrievalIneligibleReason": "Runtime drawer overlay of the site header (opened by the menu button); utility UI, not a retrievable page section.",
+  "purpose": "Below-lg navigation drawer that slides from the top when the menu button is pressed.",
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "menuLabel": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 3,
+        "x-maxWordsEvidence": "measured 2 words"
+      }
+    },
+    "required": [
+      "menuLabel"
+    ]
+  },
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "drawer-slide"
+    ],
+    "reducedMotionFallback": "instant-state-change",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": []
+  },
+  "assetSlots": [],
+  "generatedAssetRoles": [
+    "copy.original",
+    "url.placeholder"
+  ],
+  "composes": [],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": []
+}

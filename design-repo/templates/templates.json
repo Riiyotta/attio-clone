@@ -1,0 +1,498 @@
+{
+  "$description": "One template per distinct page purpose. nodes are ordered; each is either a section node {section, required, repeatable, variants?} or a region {region, allowedSections, minItems, maxItems} whose members may appear in any order. schema/semantic_validate.py matches every PageSpec's nodes against its declared template's real node list (TEMPLATE_* rules).",
+  "version": "1.0.0",
+  "templates": {
+    "home": {
+      "id": "home",
+      "title": "Home",
+      "purpose": "Product homepage: product-window hero, capability tour, dark brand moment with curtain quote, proof, release notes and a dark closing CTA.",
+      "evidence": "src/pages/Home.jsx:16-52",
+      "nodes": [
+        {
+          "section": "shell.site-header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.product-window",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "social-proof.logo-wall",
+          "required": true,
+          "repeatable": false,
+          "variants": [
+            "band"
+          ]
+        },
+        {
+          "section": "features.platform-showcase",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "features.customizable-workspace",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "features.context-horizon",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "features.developer-platform",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "testimonial.quote",
+          "required": false,
+          "repeatable": false,
+          "variants": [
+            "scroll-curtain"
+          ]
+        },
+        {
+          "section": "social-proof.scale-stats",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "social-proof.customer-stories",
+          "required": false,
+          "repeatable": false,
+          "variants": [
+            "carousel"
+          ]
+        },
+        {
+          "section": "editorial.changelog-preview",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "conversion.final-cta",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.site-footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeOverlays": [
+        "overlay.mobile-nav-drawer"
+      ],
+      "layoutNotes": "Full-width 1px dividers between most sections and two 128px spacer rows (component.section-divider, component.spacer-row) are template chrome, not nodes.",
+      "routes": [
+        "/"
+      ]
+    },
+    "pricing": {
+      "id": "pricing",
+      "title": "Pricing",
+      "purpose": "Plans and comparison: pricing intro with billing toggle, plan cards, logo grid, sticky comparison table split by feature group, FAQ.",
+      "evidence": "src/pages/Pricing.jsx:10-22",
+      "nodes": [
+        {
+          "section": "shell.site-header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.pricing-intro",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "pricing.plan-cards",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "social-proof.logo-wall",
+          "required": false,
+          "repeatable": false,
+          "variants": [
+            "grid"
+          ]
+        },
+        {
+          "section": "pricing.comparison-header",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "pricing.comparison-group",
+          "required": false,
+          "repeatable": true
+        },
+        {
+          "section": "faq.accordion",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "shell.site-footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeOverlays": [
+        "overlay.mobile-nav-drawer"
+      ],
+      "routes": [
+        "/pricing"
+      ]
+    },
+    "customer-hub": {
+      "id": "customer-hub",
+      "title": "Customer hub",
+      "purpose": "Proof page: centered hero, logo grid, customer story grid, portrait quote, avatar-wall CTA.",
+      "evidence": "src/pages/Customers.jsx:9-40",
+      "nodes": [
+        {
+          "section": "shell.site-header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.page-centered",
+          "required": true,
+          "repeatable": false,
+          "variants": [
+            "plain"
+          ]
+        },
+        {
+          "section": "social-proof.logo-wall",
+          "required": false,
+          "repeatable": false,
+          "variants": [
+            "grid"
+          ]
+        },
+        {
+          "section": "social-proof.customer-stories",
+          "required": true,
+          "repeatable": false,
+          "variants": [
+            "grid"
+          ]
+        },
+        {
+          "section": "testimonial.quote",
+          "required": false,
+          "repeatable": false,
+          "variants": [
+            "portrait"
+          ]
+        },
+        {
+          "section": "conversion.avatar-wall-cta",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.site-footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeOverlays": [
+        "overlay.mobile-nav-drawer"
+      ],
+      "routes": [
+        "/customers"
+      ]
+    },
+    "program-landing": {
+      "id": "program-landing",
+      "title": "Program landing",
+      "purpose": "A program/partnership pitch (founders program, app/creator/expert partners): hero, a body of program blocks in any order, FAQ, optional cross-links to sibling programs.",
+      "evidence": "src/pages/AppPartners.jsx:30-73",
+      "nodes": [
+        {
+          "section": "shell.site-header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.page-centered",
+          "required": true,
+          "repeatable": false,
+          "variants": [
+            "logo-strip",
+            "app-tiles",
+            "creator-carousel",
+            "expert-quotes"
+          ]
+        },
+        {
+          "region": "program-body",
+          "required": true,
+          "minItems": 3,
+          "maxItems": 8,
+          "allowedSections": [
+            "conversion.application-form",
+            "conversion.application-notice",
+            "features.cell-grid",
+            "features.step-list",
+            "features.perks",
+            "features.partner-tiers",
+            "features.app-store-preview",
+            "content.audience-profiles",
+            "content.resource-cards",
+            "social-proof.logo-wall",
+            "testimonial.quote"
+          ],
+          "allowedVariants": {
+            "social-proof.logo-wall": [
+              "headed"
+            ],
+            "testimonial.quote": [
+              "portrait-features"
+            ]
+          }
+        },
+        {
+          "section": "faq.accordion",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "navigation.partner-cross-links",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "shell.site-footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeOverlays": [
+        "overlay.mobile-nav-drawer"
+      ],
+      "layoutNotes": "Sections are separated by full-width hairlines (template chrome).",
+      "routes": [
+        "/startups",
+        "/partners/app-partners",
+        "/partners/creator-partners",
+        "/partners/expert-partners"
+      ]
+    },
+    "careers": {
+      "id": "careers",
+      "title": "Careers",
+      "purpose": "Recruiting page: contribution-grid hero, interview video, team intro and photos, values, open positions, newsletter, resource cards.",
+      "evidence": "src/pages/Careers.jsx:9-28",
+      "nodes": [
+        {
+          "section": "shell.site-header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.page-centered",
+          "required": true,
+          "repeatable": false,
+          "variants": [
+            "contribution-grid"
+          ]
+        },
+        {
+          "section": "media.interview-video",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "content.team-intro",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "media.team-photos",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "content.values",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "listing.open-positions",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "conversion.newsletter-signup",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "content.resource-cards",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "shell.site-footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeOverlays": [
+        "overlay.mobile-nav-drawer"
+      ],
+      "routes": [
+        "/careers"
+      ]
+    },
+    "contact-split": {
+      "id": "contact-split",
+      "title": "Contact split",
+      "purpose": "Hero-less demo request page: the split copy + form block opens the page.",
+      "evidence": "src/pages/ContactSales.jsx:84-113",
+      "nodes": [
+        {
+          "section": "shell.site-header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "conversion.demo-request-split",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.site-footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "heroless": true,
+      "runtimeOverlays": [
+        "overlay.mobile-nav-drawer"
+      ],
+      "routes": [
+        "/contact/sales"
+      ]
+    },
+    "app-directory": {
+      "id": "app-directory",
+      "title": "App directory",
+      "purpose": "Integration catalog: icon-band hero, featured apps, directory header with search, one block per category.",
+      "evidence": "src/pages/Apps.jsx:6-18",
+      "nodes": [
+        {
+          "section": "shell.site-header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.page-centered",
+          "required": true,
+          "repeatable": false,
+          "variants": [
+            "icon-band"
+          ]
+        },
+        {
+          "section": "features.featured-apps",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "listing.directory-header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "listing.directory-category",
+          "required": true,
+          "repeatable": true
+        },
+        {
+          "section": "conversion.build-with-us",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "shell.site-footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeOverlays": [
+        "overlay.mobile-nav-drawer",
+        "overlay.search-dialog"
+      ],
+      "routes": [
+        "/apps"
+      ]
+    },
+    "app-detail": {
+      "id": "app-detail",
+      "title": "App detail",
+      "purpose": "One integration's page: breadcrumb, app header, sticky meta sidebar beside gallery and overview chapters, related apps.",
+      "evidence": "src/pages/AppDetail.jsx:27-170",
+      "nodes": [
+        {
+          "section": "shell.site-header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "navigation.breadcrumb-bar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.app-header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.app-meta-sidebar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "media.screenshot-gallery",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "content.article-chapter",
+          "required": true,
+          "repeatable": true
+        },
+        {
+          "section": "listing.related-apps",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "shell.site-footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "heroAfter": [
+        "navigation.breadcrumb-bar"
+      ],
+      "runtimeOverlays": [
+        "overlay.mobile-nav-drawer",
+        "overlay.gallery-lightbox"
+      ],
+      "layoutNotes": "content.app-meta-sidebar is a sticky left column (cols 1-3) beside the gallery and chapters (cols 4-12) at >= lg; stacked below lg.",
+      "routes": [
+        "/apps/:slug"
+      ]
+    }
+  }
+}

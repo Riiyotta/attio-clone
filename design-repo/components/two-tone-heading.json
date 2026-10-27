@@ -1,0 +1,16 @@
+{
+  "id": "component.two-tone-heading",
+  "kind": "component",
+  "title": "Two-tone heading",
+  "purpose": "Inline lead + continuation heading used inside cards and showcase articles.",
+  "source": {
+    "file": "src/components/marketing/primitives.jsx",
+    "tag": "export function TwoTone(",
+    "lines": "120-127",
+    "citation": "src/components/marketing/primitives.jsx:120-127"
+  },
+  "composes": [],
+  "tokens": [
+    "color.semantic.accent-foreground"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": "primitive.hairline",
+  "kind": "primitive",
+  "title": "Hairline",
+  "purpose": "Full-width 1px divider between sections.",
+  "source": {
+    "file": "src/components/marketing/primitives.jsx",
+    "tag": "export function Hairline(",
+    "lines": "15-21",
+    "citation": "src/components/marketing/primitives.jsx:15-21"
+  },
+  "props": {},
+  "tokens": [
+    "hairline.color"
+  ],
+  "states": []
+}

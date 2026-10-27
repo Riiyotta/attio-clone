@@ -1,0 +1,189 @@
+{
+  "id": "conversion.application-form",
+  "title": "Application form",
+  "status": "measured",
+  "source": {
+    "id": "src:Sections#export-function-ApplyBlock",
+    "file": "src/components/startups/Sections.jsx",
+    "tag": "export function ApplyBlock(",
+    "lines": "56-91",
+    "citation": "src/components/startups/Sections.jsx:56-91",
+    "alsoImplementedBy": [
+      {
+        "file": "src/components/partners/Sections.jsx",
+        "tag": "export function ExpertApply(",
+        "lines": "601-629",
+        "citation": "src/components/partners/Sections.jsx:601-629"
+      }
+    ]
+  },
+  "semantic": {
+    "id": "conversion.application-form",
+    "category": "CONVERSION"
+  },
+  "retrievalEligible": true,
+  "purpose": "Program application: heading, lead and a validated lead form (names, email, select, details) with submit.",
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "heading": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 8,
+        "x-maxWordsEvidence": "measured headingWordsMax=6 for conversion.application-form at 1440px"
+      },
+      "lead": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 13,
+        "x-maxWordsEvidence": "measured paragraphWordsMax=10 for conversion.application-form at 1440px"
+      },
+      "fields": {
+        "type": "array",
+        "minItems": 3,
+        "maxItems": 8,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "type": "string",
+              "enum": [
+                "firstName",
+                "lastName",
+                "email",
+                "company",
+                "region",
+                "size",
+                "role",
+                "website",
+                "details"
+              ]
+            },
+            "label": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 4,
+              "x-maxWordsEvidence": "form labels c4-c19"
+            },
+            "kind": {
+              "type": "string",
+              "enum": [
+                "text",
+                "email",
+                "select",
+                "textarea"
+              ]
+            },
+            "placeholder": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 9,
+              "x-maxWordsEvidence": "placeholders c4-c38"
+            },
+            "options": {
+              "type": "array",
+              "minItems": 2,
+              "maxItems": 6,
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxWords": 5,
+                "x-maxWordsEvidence": "option labels"
+              },
+              "x-countEvidence": "select option counts 4-5 (contact/sales), 3-5 (pages spec C9)"
+            },
+            "errorMessage": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 8,
+              "x-maxWordsEvidence": "error c27-c31"
+            }
+          },
+          "required": [
+            "name",
+            "label",
+            "kind"
+          ]
+        }
+      },
+      "submitLabel": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 3,
+        "x-maxWordsEvidence": "measured 2 words"
+      },
+      "smallPrint": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 38,
+        "x-maxWordsEvidence": "measured 30 words"
+      }
+    },
+    "required": [
+      "heading",
+      "fields",
+      "submitLabel"
+    ]
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "form-feedback"
+    ],
+    "reducedMotionFallback": "instant-state-change",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-md",
+        "change": "stack",
+        "detail": "two-column field rows become one column."
+      }
+    ]
+  },
+  "assetSlots": [],
+  "generatedAssetRoles": [
+    "copy.original",
+    "url.placeholder"
+  ],
+  "composes": [
+    "component.lead-form"
+  ],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/startups",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 754
+      },
+      {
+        "route": "/partners/expert-partners",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 754
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/startups",
+      "variant": null
+    },
+    {
+      "route": "/partners/expert-partners",
+      "variant": null
+    }
+  ]
+}

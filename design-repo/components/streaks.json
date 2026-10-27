@@ -1,0 +1,17 @@
+{
+  "id": "component.streaks",
+  "kind": "component",
+  "title": "Streaks",
+  "purpose": "Falling gradient streak layer for dark CTA/stat sections.",
+  "source": {
+    "file": "src/components/ui.jsx",
+    "tag": "export function Streaks(",
+    "lines": "308-327",
+    "citation": "src/components/ui.jsx:308-327"
+  },
+  "composes": [],
+  "tokens": [
+    "gradient.streak-cta",
+    "gradient.streak-scale"
+  ]
+}

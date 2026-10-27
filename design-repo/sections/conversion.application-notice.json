@@ -1,0 +1,77 @@
+{
+  "id": "conversion.application-notice",
+  "title": "Application notice",
+  "status": "measured",
+  "source": {
+    "id": "src:Sections#export-function-ApplyNotice",
+    "file": "src/components/partners/Sections.jsx",
+    "tag": "export function ApplyNotice(",
+    "lines": "366-385",
+    "citation": "src/components/partners/Sections.jsx:366-385"
+  },
+  "semantic": {
+    "id": "conversion.application-notice",
+    "category": "CONVERSION"
+  },
+  "retrievalEligible": true,
+  "purpose": "Closed-application state of the program conversion block: a single centered notice line.",
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "message": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 10,
+        "x-maxWordsEvidence": "measured headingWordsMax=8 for conversion.application-notice at 1440px"
+      },
+      "link": {
+        "$ref": "#/definitions/link"
+      }
+    },
+    "required": [
+      "message"
+    ]
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "static"
+    ],
+    "reducedMotionFallback": "none-needed",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": []
+  },
+  "assetSlots": [],
+  "generatedAssetRoles": [
+    "copy.original",
+    "url.placeholder"
+  ],
+  "composes": [],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/partners/creator-partners",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 394
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/partners/creator-partners",
+      "variant": null
+    }
+  ]
+}

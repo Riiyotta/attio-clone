@@ -1,0 +1,127 @@
+{
+  "id": "content.values",
+  "title": "Values",
+  "status": "measured",
+  "source": {
+    "id": "src:Sections#export-function-Values",
+    "file": "src/components/careers/Sections.jsx",
+    "tag": "export function Values(",
+    "lines": "252-288",
+    "citation": "src/components/careers/Sections.jsx:252-288"
+  },
+  "semantic": {
+    "id": "content.values",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
+  "purpose": "Company values: heading and 3-4 value rows with pixel art, title and body.",
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "heading": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 5,
+        "x-maxWordsEvidence": "measured headingWordsMax=4 for content.values at 1440px"
+      },
+      "values": {
+        "type": "array",
+        "minItems": 3,
+        "maxItems": 4,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "title": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 5,
+              "x-maxWordsEvidence": "measured headingWordsMax=4 for content.values at 1440px"
+            },
+            "body": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 34,
+              "x-maxWordsEvidence": "measured paragraphWordsMax=27 for content.values at 1440px"
+            },
+            "art": {
+              "$ref": "#/definitions/media",
+              "x-assetRoles": [
+                "illustration.reference-art",
+                "illustration.generated-abstract",
+                "illustration.decorative-pattern"
+              ]
+            }
+          },
+          "required": [
+            "title",
+            "body"
+          ]
+        }
+      }
+    },
+    "required": [
+      "heading",
+      "values"
+    ]
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "static"
+    ],
+    "reducedMotionFallback": "none-needed",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "stack",
+        "detail": "rows stack."
+      }
+    ]
+  },
+  "assetSlots": [
+    {
+      "field": ".values[].art",
+      "assetRoles": [
+        "illustration.reference-art",
+        "illustration.generated-abstract",
+        "illustration.decorative-pattern"
+      ]
+    }
+  ],
+  "generatedAssetRoles": [
+    "copy.original",
+    "illustration.decorative-pattern",
+    "illustration.generated-abstract",
+    "url.placeholder"
+  ],
+  "composes": [],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/careers",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 982
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/careers",
+      "variant": null
+    }
+  ]
+}

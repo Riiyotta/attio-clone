@@ -1,0 +1,120 @@
+{
+  "id": "media.team-photos",
+  "title": "Team photos",
+  "status": "measured",
+  "source": {
+    "id": "src:Sections#export-function-TeamPhotos",
+    "file": "src/components/careers/Sections.jsx",
+    "tag": "export function TeamPhotos(",
+    "lines": "182-221",
+    "citation": "src/components/careers/Sections.jsx:182-221"
+  },
+  "semantic": {
+    "id": "media.team-photos",
+    "category": "MEDIA"
+  },
+  "retrievalEligible": true,
+  "purpose": "Life-at-the-company band: heading, line and a mosaic of team photo boxes in a dot matrix.",
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "heading": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 5,
+        "x-maxWordsEvidence": "measured headingWordsMax=4 for media.team-photos at 1440px"
+      },
+      "body": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 15,
+        "x-maxWordsEvidence": "measured paragraphWordsMax=12 for media.team-photos at 1440px"
+      },
+      "photos": {
+        "type": "array",
+        "minItems": 3,
+        "maxItems": 12,
+        "items": {
+          "$ref": "#/definitions/media",
+          "x-assetRoles": [
+            "person.reference-portrait",
+            "person.fictional-portrait",
+            "avatar.abstract",
+            "illustration.reference-art",
+            "illustration.generated-abstract",
+            "illustration.decorative-pattern"
+          ]
+        }
+      }
+    },
+    "required": [
+      "heading",
+      "body",
+      "photos"
+    ]
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "static"
+    ],
+    "reducedMotionFallback": "none-needed",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "collapse-grid",
+        "detail": "mosaic crops to fewer tiles."
+      }
+    ]
+  },
+  "assetSlots": [
+    {
+      "field": ".photos[]",
+      "assetRoles": [
+        "person.reference-portrait",
+        "person.fictional-portrait",
+        "avatar.abstract",
+        "illustration.reference-art",
+        "illustration.generated-abstract",
+        "illustration.decorative-pattern"
+      ]
+    }
+  ],
+  "generatedAssetRoles": [
+    "avatar.abstract",
+    "copy.original",
+    "illustration.decorative-pattern",
+    "illustration.generated-abstract",
+    "person.fictional-portrait",
+    "url.placeholder"
+  ],
+  "composes": [],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/careers",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 1291
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/careers",
+      "variant": null
+    }
+  ]
+}
