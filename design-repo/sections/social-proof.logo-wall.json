@@ -12,8 +12,8 @@
       "band": {
         "file": "src/components/CustomerLogos.jsx",
         "tag": "export default function CustomerLogos(",
-        "lines": "38-82",
-        "citation": "src/components/CustomerLogos.jsx:38-82"
+        "lines": "38-85",
+        "citation": "src/components/CustomerLogos.jsx:38-85"
       },
       "grid": {
         "file": "src/components/marketing/Blocks.jsx",
@@ -32,6 +32,12 @@
         "tag": "export function CodeBand(",
         "lines": "224-242",
         "citation": "src/components/architecture/Sections.jsx:224-242"
+      },
+      "platform-band": {
+        "file": "src/components/CustomerLogos.jsx",
+        "tag": "export default function CustomerLogos(",
+        "lines": "40-85",
+        "citation": "src/components/CustomerLogos.jsx:40-85"
       }
     }
   },
@@ -49,7 +55,8 @@
     "band",
     "grid",
     "headed",
-    "dark-statement"
+    "dark-statement",
+    "platform-band"
   ],
   "variantRequirements": {
     "headed": [
@@ -133,6 +140,11 @@
         "at": "below-lg",
         "change": "collapse-grid",
         "detail": "6 cols -> 4 cols at 768 -> 3 cols at 390."
+      },
+      {
+        "at": "below-md",
+        "change": "collapse-grid",
+        "detail": "platform band: 5x2 cells -> a separate 2-column, 3-row grid (290 tall at 390)."
       }
     ]
   },
@@ -186,6 +198,42 @@
         "variant": "dark-statement",
         "instance": 0,
         "heightPx": 680
+      },
+      {
+        "route": "/platform/custom-agents",
+        "variant": "platform-band",
+        "instance": 0,
+        "heightPx": 193
+      },
+      {
+        "route": "/platform/mcp",
+        "variant": "platform-band",
+        "instance": 0,
+        "heightPx": 193
+      },
+      {
+        "route": "/platform/reporting",
+        "variant": "platform-band",
+        "instance": 0,
+        "heightPx": 193
+      },
+      {
+        "route": "/platform/universal-context",
+        "variant": "platform-band",
+        "instance": 0,
+        "heightPx": 193
+      },
+      {
+        "route": "/platform/web-agent",
+        "variant": "platform-band",
+        "instance": 0,
+        "heightPx": 193
+      },
+      {
+        "route": "/platform/workflows",
+        "variant": "platform-band",
+        "instance": 0,
+        "heightPx": 193
       }
     ],
     "evidence": "extraction/measured-values.json#/sectionHeights"
@@ -210,6 +258,30 @@
     {
       "route": "/architecture",
       "variant": "dark-statement"
+    },
+    {
+      "route": "/platform/custom-agents",
+      "variant": "platform-band"
+    },
+    {
+      "route": "/platform/mcp",
+      "variant": "platform-band"
+    },
+    {
+      "route": "/platform/reporting",
+      "variant": "platform-band"
+    },
+    {
+      "route": "/platform/universal-context",
+      "variant": "platform-band"
+    },
+    {
+      "route": "/platform/web-agent",
+      "variant": "platform-band"
+    },
+    {
+      "route": "/platform/workflows",
+      "variant": "platform-band"
     }
   ]
 }

@@ -184,7 +184,7 @@
       "description": "M4 header colours/background/border transition 250ms when it crosses dark sections.",
       "reducedMotionFallback": "instant-state-change",
       "evidence": [
-        "src/components/SiteHeader.jsx:222-222"
+        "src/components/SiteHeader.jsx:236-236"
       ]
     },
     {
@@ -257,6 +257,14 @@
       "reducedMotionFallback": "instant-state-change",
       "evidence": [
         "src/index.css:1082-1082"
+      ]
+    },
+    {
+      "id": "scroll-parallax-rows",
+      "description": "Two rows of cards translate in opposite directions in proportion to scroll (about 0.0985px per px scrolled once the band is 870px below the viewport top), smoothed by a spring; no time-based loop (CLONE_SPEC_PLATFORM M-S3).",
+      "reducedMotionFallback": "static-final-state",
+      "evidence": [
+        "src/components/platform/Sections.jsx:222-315"
       ]
     }
   ]

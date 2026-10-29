@@ -139,6 +139,11 @@ module.exports = {
         architecture: '#e4ebe4',
         launch: '#e3d6c8',
       },
+      // CLONE_SPEC_PLATFORM section 4 (developers, dark blueprint): card diagram stroke + well fill
+      dev: {
+        dash: '#23252a', // dashed connector stroke in card diagrams
+        well: '#131416', // inner node fill in card diagrams
+      },
       // CLONE_SPEC_PLATFORM 0.2 one-offs (platform v2 / legacy library)
       platform: {
         'status-bg': '#ddf9e4', // "Completed" pill

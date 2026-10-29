@@ -8,7 +8,7 @@
         "sans-serif"
       ],
       "sourceKey": "fontFamily.sans",
-      "evidence": "tailwind.config.cjs:164-164"
+      "evidence": "tailwind.config.cjs:169-169"
     },
     "font.display": {
       "value": [
@@ -17,7 +17,7 @@
         "sans-serif"
       ],
       "sourceKey": "fontFamily.display",
-      "evidence": "tailwind.config.cjs:165-165"
+      "evidence": "tailwind.config.cjs:170-170"
     },
     "font.mono": {
       "value": [
@@ -26,7 +26,7 @@
         "monospace"
       ],
       "sourceKey": "fontFamily.mono",
-      "evidence": "tailwind.config.cjs:166-166"
+      "evidence": "tailwind.config.cjs:171-171"
     },
     "font.serif": {
       "value": [
@@ -35,7 +35,7 @@
         "serif"
       ],
       "sourceKey": "fontFamily.serif",
-      "evidence": "tailwind.config.cjs:167-167"
+      "evidence": "tailwind.config.cjs:172-172"
     },
     "font.quote-serif": {
       "value": [
@@ -54,7 +54,7 @@
       "letterSpacing": "0px",
       "fontWeight": "500",
       "sourceKey": "fontSize.xs",
-      "evidence": "tailwind.config.cjs:171-171"
+      "evidence": "tailwind.config.cjs:176-176"
     },
     "type.sm": {
       "fontSize": "14px",
@@ -62,7 +62,7 @@
       "letterSpacing": "-0.07px",
       "fontWeight": "500",
       "sourceKey": "fontSize.sm",
-      "evidence": "tailwind.config.cjs:172-172"
+      "evidence": "tailwind.config.cjs:177-177"
     },
     "type.base": {
       "fontSize": "16px",
@@ -70,7 +70,7 @@
       "letterSpacing": "-0.16px",
       "fontWeight": "500",
       "sourceKey": "fontSize.base",
-      "evidence": "tailwind.config.cjs:173-173"
+      "evidence": "tailwind.config.cjs:178-178"
     },
     "type.lg": {
       "fontSize": "18px",
@@ -78,7 +78,7 @@
       "letterSpacing": "-0.18px",
       "fontWeight": "500",
       "sourceKey": "fontSize.lg",
-      "evidence": "tailwind.config.cjs:174-174"
+      "evidence": "tailwind.config.cjs:179-179"
     },
     "type.xl": {
       "fontSize": "20px",
@@ -86,7 +86,7 @@
       "letterSpacing": "-0.2px",
       "fontWeight": "500",
       "sourceKey": "fontSize.xl",
-      "evidence": "tailwind.config.cjs:175-175"
+      "evidence": "tailwind.config.cjs:180-180"
     },
     "type.2xl": {
       "fontSize": "24px",
@@ -94,7 +94,7 @@
       "letterSpacing": "-0.24px",
       "fontWeight": "500",
       "sourceKey": "fontSize.2xl",
-      "evidence": "tailwind.config.cjs:176-176"
+      "evidence": "tailwind.config.cjs:181-181"
     },
     "type.hero": {
       "fontSize": "64px",
@@ -102,7 +102,7 @@
       "letterSpacing": "-1.28px",
       "fontWeight": "600",
       "sourceKey": "fontSize.hero",
-      "evidence": "tailwind.config.cjs:178-178"
+      "evidence": "tailwind.config.cjs:183-183"
     },
     "type.hero-md": {
       "fontSize": "70.61px",
@@ -110,7 +110,7 @@
       "letterSpacing": "-1.743px",
       "fontWeight": "600",
       "sourceKey": "fontSize.hero-md",
-      "evidence": "tailwind.config.cjs:179-179"
+      "evidence": "tailwind.config.cjs:184-184"
     },
     "type.hero-sm": {
       "fontSize": "40px",
@@ -118,7 +118,7 @@
       "letterSpacing": "-0.4px",
       "fontWeight": "600",
       "sourceKey": "fontSize.hero-sm",
-      "evidence": "tailwind.config.cjs:180-180"
+      "evidence": "tailwind.config.cjs:185-185"
     },
     "type.mega": {
       "fontSize": "96px",
@@ -126,7 +126,7 @@
       "letterSpacing": "-2.304px",
       "fontWeight": "600",
       "sourceKey": "fontSize.mega",
-      "evidence": "tailwind.config.cjs:181-181"
+      "evidence": "tailwind.config.cjs:186-186"
     },
     "type.section": {
       "fontSize": "40px",
@@ -134,7 +134,7 @@
       "letterSpacing": "-0.4px",
       "fontWeight": "500",
       "sourceKey": "fontSize.section",
-      "evidence": "tailwind.config.cjs:182-182"
+      "evidence": "tailwind.config.cjs:187-187"
     },
     "type.section-sm": {
       "fontSize": "32px",
@@ -142,7 +142,7 @@
       "letterSpacing": "-0.32px",
       "fontWeight": "500",
       "sourceKey": "fontSize.section-sm",
-      "evidence": "tailwind.config.cjs:183-183"
+      "evidence": "tailwind.config.cjs:188-188"
     },
     "type.final-cta": {
       "fontSize": "56px",
@@ -150,7 +150,7 @@
       "letterSpacing": "-0.84px",
       "fontWeight": "500",
       "sourceKey": "fontSize.final-cta",
-      "evidence": "tailwind.config.cjs:184-184"
+      "evidence": "tailwind.config.cjs:189-189"
     },
     "type.showcase-h3": {
       "fontSize": "24px",
@@ -158,7 +158,7 @@
       "letterSpacing": "-0.24px",
       "fontWeight": "500",
       "sourceKey": "fontSize.showcase-h3",
-      "evidence": "tailwind.config.cjs:185-185"
+      "evidence": "tailwind.config.cjs:190-190"
     },
     "type.story": {
       "fontSize": "32px",
@@ -166,7 +166,7 @@
       "letterSpacing": "-0.8px",
       "fontWeight": "500",
       "sourceKey": "fontSize.story",
-      "evidence": "tailwind.config.cjs:186-186"
+      "evidence": "tailwind.config.cjs:191-191"
     },
     "type.stat": {
       "fontSize": "32px",
@@ -174,7 +174,7 @@
       "letterSpacing": "-0.32px",
       "fontWeight": "500",
       "sourceKey": "fontSize.stat",
-      "evidence": "tailwind.config.cjs:187-187"
+      "evidence": "tailwind.config.cjs:192-192"
     },
     "type.newsletter": {
       "fontSize": "24px",
@@ -182,7 +182,7 @@
       "letterSpacing": "-0.24px",
       "fontWeight": "500",
       "sourceKey": "fontSize.newsletter",
-      "evidence": "tailwind.config.cjs:188-188"
+      "evidence": "tailwind.config.cjs:193-193"
     },
     "type.overline": {
       "fontSize": "12px",
@@ -190,7 +190,7 @@
       "letterSpacing": "0.72px",
       "fontWeight": "600",
       "sourceKey": "fontSize.overline",
-      "evidence": "tailwind.config.cjs:189-189"
+      "evidence": "tailwind.config.cjs:194-194"
     },
     "type.subhead": {
       "fontSize": "18px",
@@ -198,7 +198,7 @@
       "letterSpacing": "-0.18px",
       "fontWeight": "500",
       "sourceKey": "fontSize.subhead",
-      "evidence": "tailwind.config.cjs:190-190"
+      "evidence": "tailwind.config.cjs:195-195"
     },
     "type.subhead-sm": {
       "fontSize": "15px",
@@ -206,7 +206,7 @@
       "letterSpacing": "-0.17px",
       "fontWeight": "500",
       "sourceKey": "fontSize.subhead-sm",
-      "evidence": "tailwind.config.cjs:191-191"
+      "evidence": "tailwind.config.cjs:196-196"
     },
     "type.card-title": {
       "fontSize": "18px",
@@ -214,7 +214,7 @@
       "letterSpacing": "-0.18px",
       "fontWeight": "500",
       "sourceKey": "fontSize.card-title",
-      "evidence": "tailwind.config.cjs:192-192"
+      "evidence": "tailwind.config.cjs:197-197"
     },
     "type.changelog-title": {
       "fontSize": "18px",
@@ -222,7 +222,7 @@
       "letterSpacing": "-0.18px",
       "fontWeight": "500",
       "sourceKey": "fontSize.changelog-title",
-      "evidence": "tailwind.config.cjs:193-193"
+      "evidence": "tailwind.config.cjs:198-198"
     },
     "type.body": {
       "fontSize": "16px",
@@ -230,7 +230,7 @@
       "letterSpacing": "-0.16px",
       "fontWeight": "500",
       "sourceKey": "fontSize.body",
-      "evidence": "tailwind.config.cjs:194-194"
+      "evidence": "tailwind.config.cjs:199-199"
     },
     "type.stat-label": {
       "fontSize": "16px",
@@ -238,7 +238,7 @@
       "letterSpacing": "-0.16px",
       "fontWeight": "500",
       "sourceKey": "fontSize.stat-label",
-      "evidence": "tailwind.config.cjs:195-195"
+      "evidence": "tailwind.config.cjs:200-200"
     },
     "type.showcase-nav": {
       "fontSize": "18px",
@@ -246,7 +246,7 @@
       "letterSpacing": "-0.16px",
       "fontWeight": "500",
       "sourceKey": "fontSize.showcase-nav",
-      "evidence": "tailwind.config.cjs:196-196"
+      "evidence": "tailwind.config.cjs:201-201"
     },
     "type.nav": {
       "fontSize": "15px",
@@ -254,7 +254,7 @@
       "letterSpacing": "-0.16px",
       "fontWeight": "500",
       "sourceKey": "fontSize.nav",
-      "evidence": "tailwind.config.cjs:197-197"
+      "evidence": "tailwind.config.cjs:202-202"
     },
     "type.button": {
       "fontSize": "14px",
@@ -262,7 +262,7 @@
       "letterSpacing": "-0.07px",
       "fontWeight": "500",
       "sourceKey": "fontSize.button",
-      "evidence": "tailwind.config.cjs:198-198"
+      "evidence": "tailwind.config.cjs:203-203"
     },
     "type.eyebrow": {
       "fontSize": "14px",
@@ -270,7 +270,7 @@
       "letterSpacing": "-0.14px",
       "fontWeight": "500",
       "sourceKey": "fontSize.eyebrow",
-      "evidence": "tailwind.config.cjs:199-199"
+      "evidence": "tailwind.config.cjs:204-204"
     },
     "type.small-button": {
       "fontSize": "12px",
@@ -278,7 +278,7 @@
       "letterSpacing": "0px",
       "fontWeight": "500",
       "sourceKey": "fontSize.small-button",
-      "evidence": "tailwind.config.cjs:200-200"
+      "evidence": "tailwind.config.cjs:205-205"
     },
     "type.banner": {
       "fontSize": "13px",
@@ -286,7 +286,7 @@
       "letterSpacing": "-0.16px",
       "fontWeight": "500",
       "sourceKey": "fontSize.banner",
-      "evidence": "tailwind.config.cjs:201-201"
+      "evidence": "tailwind.config.cjs:206-206"
     },
     "type.badge": {
       "fontSize": "13px",
@@ -294,7 +294,7 @@
       "letterSpacing": "-0.16px",
       "fontWeight": "500",
       "sourceKey": "fontSize.badge",
-      "evidence": "tailwind.config.cjs:202-202"
+      "evidence": "tailwind.config.cjs:207-207"
     },
     "type.dropdown": {
       "fontSize": "14px",
@@ -302,7 +302,7 @@
       "letterSpacing": "-0.07px",
       "fontWeight": "500",
       "sourceKey": "fontSize.dropdown",
-      "evidence": "tailwind.config.cjs:203-203"
+      "evidence": "tailwind.config.cjs:208-208"
     },
     "type.dropdown-label": {
       "fontSize": "12px",
@@ -310,7 +310,7 @@
       "letterSpacing": "0px",
       "fontWeight": "500",
       "sourceKey": "fontSize.dropdown-label",
-      "evidence": "tailwind.config.cjs:204-204"
+      "evidence": "tailwind.config.cjs:209-209"
     },
     "type.time": {
       "fontSize": "12px",
@@ -318,7 +318,7 @@
       "letterSpacing": "0px",
       "fontWeight": "500",
       "sourceKey": "fontSize.time",
-      "evidence": "tailwind.config.cjs:205-205"
+      "evidence": "tailwind.config.cjs:210-210"
     },
     "type.quote": {
       "fontSize": "48px",
@@ -326,7 +326,7 @@
       "letterSpacing": "-0.72px",
       "fontWeight": "400",
       "sourceKey": "fontSize.quote",
-      "evidence": "tailwind.config.cjs:206-206"
+      "evidence": "tailwind.config.cjs:211-211"
     },
     "type.quote-sm": {
       "fontSize": "32px",
@@ -334,7 +334,7 @@
       "letterSpacing": "-0.48px",
       "fontWeight": "400",
       "sourceKey": "fontSize.quote-sm",
-      "evidence": "tailwind.config.cjs:207-207"
+      "evidence": "tailwind.config.cjs:212-212"
     },
     "type.mega-md": {
       "fontSize": "56px",
@@ -342,7 +342,7 @@
       "letterSpacing": "-1.344px",
       "fontWeight": "600",
       "sourceKey": "fontSize.mega-md",
-      "evidence": "tailwind.config.cjs:208-208"
+      "evidence": "tailwind.config.cjs:213-213"
     },
     "type.mega-sm": {
       "fontSize": "40px",
@@ -350,7 +350,7 @@
       "letterSpacing": "-0.96px",
       "fontWeight": "600",
       "sourceKey": "fontSize.mega-sm",
-      "evidence": "tailwind.config.cjs:209-209"
+      "evidence": "tailwind.config.cjs:214-214"
     },
     "type.final-cta-md": {
       "fontSize": "45.2px",
@@ -358,7 +358,7 @@
       "letterSpacing": "-0.5808px",
       "fontWeight": "500",
       "sourceKey": "fontSize.final-cta-md",
-      "evidence": "tailwind.config.cjs:210-210"
+      "evidence": "tailwind.config.cjs:215-215"
     },
     "type.final-cta-sm": {
       "fontSize": "36px",
@@ -366,7 +366,7 @@
       "letterSpacing": "-0.36px",
       "fontWeight": "500",
       "sourceKey": "fontSize.final-cta-sm",
-      "evidence": "tailwind.config.cjs:211-211"
+      "evidence": "tailwind.config.cjs:216-216"
     },
     "type.story-sm": {
       "fontSize": "28px",
@@ -374,7 +374,7 @@
       "letterSpacing": "-0.7px",
       "fontWeight": "500",
       "sourceKey": "fontSize.story-sm",
-      "evidence": "tailwind.config.cjs:212-212"
+      "evidence": "tailwind.config.cjs:217-217"
     },
     "type.stat-sm": {
       "fontSize": "28px",
@@ -382,7 +382,7 @@
       "letterSpacing": "-0.32px",
       "fontWeight": "500",
       "sourceKey": "fontSize.stat-sm",
-      "evidence": "tailwind.config.cjs:213-213"
+      "evidence": "tailwind.config.cjs:218-218"
     },
     "type.uc-tab": {
       "fontSize": "18px",
@@ -390,7 +390,7 @@
       "letterSpacing": "-0.18px",
       "fontWeight": "500",
       "sourceKey": "fontSize.uc-tab",
-      "evidence": "tailwind.config.cjs:214-214"
+      "evidence": "tailwind.config.cjs:219-219"
     },
     "type.uc-body": {
       "fontSize": "16px",
@@ -398,7 +398,7 @@
       "letterSpacing": "-0.16px",
       "fontWeight": "500",
       "sourceKey": "fontSize.uc-body",
-      "evidence": "tailwind.config.cjs:215-215"
+      "evidence": "tailwind.config.cjs:220-220"
     },
     "type.uc-feature": {
       "fontSize": "16px",
@@ -406,7 +406,7 @@
       "letterSpacing": "-0.16px",
       "fontWeight": "500",
       "sourceKey": "fontSize.uc-feature",
-      "evidence": "tailwind.config.cjs:216-216"
+      "evidence": "tailwind.config.cjs:221-221"
     },
     "type.uc-feature-desc": {
       "fontSize": "14px",
@@ -414,7 +414,7 @@
       "letterSpacing": "-0.14px",
       "fontWeight": "500",
       "sourceKey": "fontSize.uc-feature-desc",
-      "evidence": "tailwind.config.cjs:217-217"
+      "evidence": "tailwind.config.cjs:222-222"
     },
     "type.connect-body": {
       "fontSize": "16px",
@@ -422,7 +422,7 @@
       "letterSpacing": "-0.16px",
       "fontWeight": "500",
       "sourceKey": "fontSize.connect-body",
-      "evidence": "tailwind.config.cjs:218-218"
+      "evidence": "tailwind.config.cjs:223-223"
     },
     "type.footer-link": {
       "fontSize": "14px",
@@ -430,7 +430,7 @@
       "letterSpacing": "-0.07px",
       "fontWeight": "400",
       "sourceKey": "fontSize.footer-link",
-      "evidence": "tailwind.config.cjs:219-219"
+      "evidence": "tailwind.config.cjs:224-224"
     },
     "type.legal": {
       "fontSize": "12px",
@@ -438,7 +438,7 @@
       "letterSpacing": "0px",
       "fontWeight": "400",
       "sourceKey": "fontSize.legal",
-      "evidence": "tailwind.config.cjs:220-220"
+      "evidence": "tailwind.config.cjs:225-225"
     },
     "type.badge-new": {
       "fontSize": "10px",
@@ -446,7 +446,7 @@
       "letterSpacing": "0px",
       "fontWeight": "400",
       "sourceKey": "fontSize.badge-new",
-      "evidence": "tailwind.config.cjs:221-221"
+      "evidence": "tailwind.config.cjs:226-226"
     },
     "type.page-hero": {
       "fontSize": "56px",
@@ -454,7 +454,7 @@
       "letterSpacing": "-0.84px",
       "fontWeight": "600",
       "sourceKey": "fontSize.page-hero",
-      "evidence": "tailwind.config.cjs:223-223"
+      "evidence": "tailwind.config.cjs:228-228"
     },
     "type.page-hero-sm": {
       "fontSize": "40px",
@@ -462,7 +462,7 @@
       "letterSpacing": "-0.4px",
       "fontWeight": "600",
       "sourceKey": "fontSize.page-hero-sm",
-      "evidence": "tailwind.config.cjs:224-224"
+      "evidence": "tailwind.config.cjs:229-229"
     },
     "type.hero-badge": {
       "fontSize": "13px",
@@ -470,7 +470,7 @@
       "letterSpacing": "-0.16px",
       "fontWeight": "500",
       "sourceKey": "fontSize.hero-badge",
-      "evidence": "tailwind.config.cjs:225-225"
+      "evidence": "tailwind.config.cjs:230-230"
     },
     "type.heading-md": {
       "fontSize": "40px",
@@ -478,7 +478,7 @@
       "letterSpacing": "-0.4px",
       "fontWeight": "600",
       "sourceKey": "fontSize.heading-md",
-      "evidence": "tailwind.config.cjs:226-226"
+      "evidence": "tailwind.config.cjs:231-231"
     },
     "type.heading-md-sm": {
       "fontSize": "32px",
@@ -486,7 +486,7 @@
       "letterSpacing": "-0.32px",
       "fontWeight": "600",
       "sourceKey": "fontSize.heading-md-sm",
-      "evidence": "tailwind.config.cjs:227-227"
+      "evidence": "tailwind.config.cjs:232-232"
     },
     "type.head-sm": {
       "fontSize": "32px",
@@ -494,7 +494,7 @@
       "letterSpacing": "-0.32px",
       "fontWeight": "600",
       "sourceKey": "fontSize.head-sm",
-      "evidence": "tailwind.config.cjs:228-228"
+      "evidence": "tailwind.config.cjs:233-233"
     },
     "type.head-sm-md": {
       "fontSize": "28px",
@@ -502,7 +502,7 @@
       "letterSpacing": "-0.28px",
       "fontWeight": "600",
       "sourceKey": "fontSize.head-sm-md",
-      "evidence": "tailwind.config.cjs:229-229"
+      "evidence": "tailwind.config.cjs:234-234"
     },
     "type.card-h3": {
       "fontSize": "28px",
@@ -510,7 +510,7 @@
       "letterSpacing": "-0.28px",
       "fontWeight": "600",
       "sourceKey": "fontSize.card-h3",
-      "evidence": "tailwind.config.cjs:230-230"
+      "evidence": "tailwind.config.cjs:235-235"
     },
     "type.serif-quote": {
       "fontSize": "28px",
@@ -518,7 +518,7 @@
       "letterSpacing": "-0.42px",
       "fontWeight": "500",
       "sourceKey": "fontSize.serif-quote",
-      "evidence": "tailwind.config.cjs:231-231"
+      "evidence": "tailwind.config.cjs:236-236"
     },
     "type.serif-quote-sm": {
       "fontSize": "24px",
@@ -526,7 +526,7 @@
       "letterSpacing": "-0.36px",
       "fontWeight": "500",
       "sourceKey": "fontSize.serif-quote-sm",
-      "evidence": "tailwind.config.cjs:232-232"
+      "evidence": "tailwind.config.cjs:237-237"
     },
     "type.serif-cta": {
       "fontSize": "40px",
@@ -534,7 +534,7 @@
       "letterSpacing": "-0.6px",
       "fontWeight": "400",
       "sourceKey": "fontSize.serif-cta",
-      "evidence": "tailwind.config.cjs:233-233"
+      "evidence": "tailwind.config.cjs:238-238"
     },
     "type.serif-sm": {
       "fontSize": "16px",
@@ -542,7 +542,7 @@
       "letterSpacing": "-0.16px",
       "fontWeight": "500",
       "sourceKey": "fontSize.serif-sm",
-      "evidence": "tailwind.config.cjs:234-234"
+      "evidence": "tailwind.config.cjs:239-239"
     },
     "type.input": {
       "fontSize": "16px",
@@ -550,7 +550,7 @@
       "letterSpacing": "-0.16px",
       "fontWeight": "500",
       "sourceKey": "fontSize.input",
-      "evidence": "tailwind.config.cjs:235-235"
+      "evidence": "tailwind.config.cjs:240-240"
     },
     "type.body-400": {
       "fontSize": "16px",
@@ -558,7 +558,7 @@
       "letterSpacing": "-0.16px",
       "fontWeight": "400",
       "sourceKey": "fontSize.body-400",
-      "evidence": "tailwind.config.cjs:236-236"
+      "evidence": "tailwind.config.cjs:241-241"
     },
     "type.error": {
       "fontSize": "12px",
@@ -566,7 +566,7 @@
       "letterSpacing": "0px",
       "fontWeight": "400",
       "sourceKey": "fontSize.error",
-      "evidence": "tailwind.config.cjs:237-237"
+      "evidence": "tailwind.config.cjs:242-242"
     },
     "type.terminal": {
       "fontSize": "10px",
@@ -574,7 +574,7 @@
       "letterSpacing": "-0.16px",
       "fontWeight": "500",
       "sourceKey": "fontSize.terminal",
-      "evidence": "tailwind.config.cjs:239-239"
+      "evidence": "tailwind.config.cjs:244-244"
     },
     "type.mock-2xs": {
       "fontSize": "9px",
@@ -582,7 +582,7 @@
       "letterSpacing": "0px",
       "fontWeight": "500",
       "sourceKey": "fontSize.mock-2xs",
-      "evidence": "tailwind.config.cjs:241-241"
+      "evidence": "tailwind.config.cjs:246-246"
     },
     "type.mock-xs": {
       "fontSize": "10px",
@@ -590,7 +590,7 @@
       "letterSpacing": "0px",
       "fontWeight": "500",
       "sourceKey": "fontSize.mock-xs",
-      "evidence": "tailwind.config.cjs:242-242"
+      "evidence": "tailwind.config.cjs:247-247"
     },
     "type.mock-sm": {
       "fontSize": "11px",
@@ -598,7 +598,7 @@
       "letterSpacing": "-0.04px",
       "fontWeight": "500",
       "sourceKey": "fontSize.mock-sm",
-      "evidence": "tailwind.config.cjs:243-243"
+      "evidence": "tailwind.config.cjs:248-248"
     },
     "type.mock-base": {
       "fontSize": "12px",
@@ -606,7 +606,7 @@
       "letterSpacing": "-0.06px",
       "fontWeight": "500",
       "sourceKey": "fontSize.mock-base",
-      "evidence": "tailwind.config.cjs:244-244"
+      "evidence": "tailwind.config.cjs:249-249"
     },
     "type.mock-md": {
       "fontSize": "13px",
@@ -614,7 +614,7 @@
       "letterSpacing": "-0.08px",
       "fontWeight": "500",
       "sourceKey": "fontSize.mock-md",
-      "evidence": "tailwind.config.cjs:245-245"
+      "evidence": "tailwind.config.cjs:250-250"
     },
     "type.mock-lg": {
       "fontSize": "15px",
@@ -622,7 +622,7 @@
       "letterSpacing": "-0.15px",
       "fontWeight": "500",
       "sourceKey": "fontSize.mock-lg",
-      "evidence": "tailwind.config.cjs:246-246"
+      "evidence": "tailwind.config.cjs:251-251"
     },
     "type.mock-xl": {
       "fontSize": "20px",
@@ -630,7 +630,7 @@
       "letterSpacing": "-0.3px",
       "fontWeight": "600",
       "sourceKey": "fontSize.mock-xl",
-      "evidence": "tailwind.config.cjs:247-247"
+      "evidence": "tailwind.config.cjs:252-252"
     },
     "type.mock-2xl": {
       "fontSize": "28px",
@@ -638,7 +638,7 @@
       "letterSpacing": "-0.56px",
       "fontWeight": "600",
       "sourceKey": "fontSize.mock-2xl",
-      "evidence": "tailwind.config.cjs:248-248"
+      "evidence": "tailwind.config.cjs:253-253"
     },
     "type.article": {
       "fontSize": "16px",
@@ -646,7 +646,7 @@
       "letterSpacing": "-0.16px",
       "fontWeight": "400",
       "sourceKey": "fontSize.article",
-      "evidence": "tailwind.config.cjs:250-250"
+      "evidence": "tailwind.config.cjs:255-255"
     },
     "type.list-400": {
       "fontSize": "16px",
@@ -654,7 +654,7 @@
       "letterSpacing": "-0.16px",
       "fontWeight": "400",
       "sourceKey": "fontSize.list-400",
-      "evidence": "tailwind.config.cjs:251-251"
+      "evidence": "tailwind.config.cjs:256-256"
     },
     "type.mono-label": {
       "fontSize": "12px",
@@ -662,7 +662,7 @@
       "letterSpacing": "0.6px",
       "fontWeight": "500",
       "sourceKey": "fontSize.mono-label",
-      "evidence": "tailwind.config.cjs:252-252"
+      "evidence": "tailwind.config.cjs:257-257"
     },
     "type.mono-chip": {
       "fontSize": "15px",
@@ -670,7 +670,7 @@
       "letterSpacing": "-0.16px",
       "fontWeight": "500",
       "sourceKey": "fontSize.mono-chip",
-      "evidence": "tailwind.config.cjs:253-253"
+      "evidence": "tailwind.config.cjs:258-258"
     },
     "type.mono-tag": {
       "fontSize": "11px",
@@ -678,7 +678,7 @@
       "letterSpacing": "1px",
       "fontWeight": "500",
       "sourceKey": "fontSize.mono-tag",
-      "evidence": "tailwind.config.cjs:254-254"
+      "evidence": "tailwind.config.cjs:259-259"
     },
     "type.code-glyph": {
       "fontSize": "16px",
@@ -686,7 +686,7 @@
       "letterSpacing": "-0.16px",
       "fontWeight": "400",
       "sourceKey": "fontSize.code-glyph",
-      "evidence": "tailwind.config.cjs:255-255"
+      "evidence": "tailwind.config.cjs:260-260"
     },
     "type.arch-body": {
       "fontSize": "16px",
@@ -694,7 +694,7 @@
       "letterSpacing": "0px",
       "fontWeight": "400",
       "sourceKey": "fontSize.arch-body",
-      "evidence": "tailwind.config.cjs:256-256"
+      "evidence": "tailwind.config.cjs:261-261"
     },
     "type.statement": {
       "fontSize": "28px",
@@ -702,7 +702,7 @@
       "letterSpacing": "-0.56px",
       "fontWeight": "600",
       "sourceKey": "fontSize.statement",
-      "evidence": "tailwind.config.cjs:257-257"
+      "evidence": "tailwind.config.cjs:262-262"
     },
     "type.serif-chapter": {
       "fontSize": "58px",
@@ -710,7 +710,7 @@
       "letterSpacing": "-1.16px",
       "fontWeight": "400",
       "sourceKey": "fontSize.serif-chapter",
-      "evidence": "tailwind.config.cjs:258-258"
+      "evidence": "tailwind.config.cjs:263-263"
     },
     "type.serif-chapter-sm": {
       "fontSize": "28px",
@@ -718,7 +718,7 @@
       "letterSpacing": "-0.56px",
       "fontWeight": "400",
       "sourceKey": "fontSize.serif-chapter-sm",
-      "evidence": "tailwind.config.cjs:259-259"
+      "evidence": "tailwind.config.cjs:264-264"
     },
     "type.serif-pull": {
       "fontSize": "38px",
@@ -726,7 +726,7 @@
       "letterSpacing": "-0.76px",
       "fontWeight": "400",
       "sourceKey": "fontSize.serif-pull",
-      "evidence": "tailwind.config.cjs:260-260"
+      "evidence": "tailwind.config.cjs:265-265"
     },
     "type.serif-pull-sm": {
       "fontSize": "20px",
@@ -734,7 +734,7 @@
       "letterSpacing": "-0.4px",
       "fontWeight": "400",
       "sourceKey": "fontSize.serif-pull-sm",
-      "evidence": "tailwind.config.cjs:261-261"
+      "evidence": "tailwind.config.cjs:266-266"
     },
     "type.serif-h3": {
       "fontSize": "48px",
@@ -742,7 +742,7 @@
       "letterSpacing": "-0.96px",
       "fontWeight": "400",
       "sourceKey": "fontSize.serif-h3",
-      "evidence": "tailwind.config.cjs:262-262"
+      "evidence": "tailwind.config.cjs:267-267"
     },
     "type.serif-h3-sm": {
       "fontSize": "24px",
@@ -750,7 +750,7 @@
       "letterSpacing": "-0.48px",
       "fontWeight": "400",
       "sourceKey": "fontSize.serif-h3-sm",
-      "evidence": "tailwind.config.cjs:263-263"
+      "evidence": "tailwind.config.cjs:268-268"
     },
     "type.serif-problem": {
       "fontSize": "80px",
@@ -758,7 +758,7 @@
       "letterSpacing": "-2.4px",
       "fontWeight": "400",
       "sourceKey": "fontSize.serif-problem",
-      "evidence": "tailwind.config.cjs:264-264"
+      "evidence": "tailwind.config.cjs:269-269"
     },
     "type.serif-problem-sm": {
       "fontSize": "40px",
@@ -766,7 +766,7 @@
       "letterSpacing": "-1.2px",
       "fontWeight": "400",
       "sourceKey": "fontSize.serif-problem-sm",
-      "evidence": "tailwind.config.cjs:265-265"
+      "evidence": "tailwind.config.cjs:270-270"
     },
     "type.serif-statement": {
       "fontSize": "49.76px",
@@ -774,7 +774,7 @@
       "letterSpacing": "-0.995px",
       "fontWeight": "400",
       "sourceKey": "fontSize.serif-statement",
-      "evidence": "tailwind.config.cjs:266-266"
+      "evidence": "tailwind.config.cjs:271-271"
     },
     "type.serif-pillar": {
       "fontSize": "96.09px",
@@ -782,7 +782,7 @@
       "letterSpacing": "-2.883px",
       "fontWeight": "400",
       "sourceKey": "fontSize.serif-pillar",
-      "evidence": "tailwind.config.cjs:267-267"
+      "evidence": "tailwind.config.cjs:272-272"
     },
     "type.ascii": {
       "fontSize": "18.18px",
@@ -790,7 +790,7 @@
       "letterSpacing": "-1px",
       "fontWeight": "500",
       "sourceKey": "fontSize.ascii",
-      "evidence": "tailwind.config.cjs:268-268"
+      "evidence": "tailwind.config.cjs:273-273"
     },
     "type.help-pill": {
       "fontSize": "13px",
@@ -798,7 +798,7 @@
       "letterSpacing": "-0.16px",
       "fontWeight": "500",
       "sourceKey": "fontSize.help-pill",
-      "evidence": "tailwind.config.cjs:269-269"
+      "evidence": "tailwind.config.cjs:274-274"
     },
     "type.search-hint": {
       "fontSize": "12px",
@@ -806,7 +806,7 @@
       "letterSpacing": "0.6px",
       "fontWeight": "500",
       "sourceKey": "fontSize.search-hint",
-      "evidence": "tailwind.config.cjs:270-270"
+      "evidence": "tailwind.config.cjs:275-275"
     },
     "type.v2-head": {
       "fontSize": "40px",
@@ -814,7 +814,7 @@
       "letterSpacing": "-0.4px",
       "fontWeight": "500",
       "sourceKey": "fontSize.v2-head",
-      "evidence": "tailwind.config.cjs:272-272"
+      "evidence": "tailwind.config.cjs:277-277"
     },
     "type.v2-head-sm": {
       "fontSize": "32px",
@@ -822,7 +822,7 @@
       "letterSpacing": "-0.32px",
       "fontWeight": "500",
       "sourceKey": "fontSize.v2-head-sm",
-      "evidence": "tailwind.config.cjs:273-273"
+      "evidence": "tailwind.config.cjs:278-278"
     },
     "type.panel-title": {
       "fontSize": "24px",
@@ -830,7 +830,7 @@
       "letterSpacing": "-0.24px",
       "fontWeight": "600",
       "sourceKey": "fontSize.panel-title",
-      "evidence": "tailwind.config.cjs:274-274"
+      "evidence": "tailwind.config.cjs:279-279"
     },
     "type.mono-chip-sm": {
       "fontSize": "11px",
@@ -838,7 +838,7 @@
       "letterSpacing": "-0.16px",
       "fontWeight": "500",
       "sourceKey": "fontSize.mono-chip-sm",
-      "evidence": "tailwind.config.cjs:275-275"
+      "evidence": "tailwind.config.cjs:280-280"
     },
     "type.marquee-title": {
       "fontSize": "14px",
@@ -846,7 +846,7 @@
       "letterSpacing": "-0.14px",
       "fontWeight": "500",
       "sourceKey": "fontSize.marquee-title",
-      "evidence": "tailwind.config.cjs:276-276"
+      "evidence": "tailwind.config.cjs:281-281"
     },
     "type.marquee-desc": {
       "fontSize": "12px",
@@ -854,7 +854,7 @@
       "letterSpacing": "0px",
       "fontWeight": "500",
       "sourceKey": "fontSize.marquee-desc",
-      "evidence": "tailwind.config.cjs:277-277"
+      "evidence": "tailwind.config.cjs:282-282"
     },
     "type.agent-title": {
       "fontSize": "14px",
@@ -862,7 +862,7 @@
       "letterSpacing": "-0.07px",
       "fontWeight": "500",
       "sourceKey": "fontSize.agent-title",
-      "evidence": "tailwind.config.cjs:278-278"
+      "evidence": "tailwind.config.cjs:283-283"
     },
     "type.agent-desc": {
       "fontSize": "13px",
@@ -870,7 +870,7 @@
       "letterSpacing": "-0.07px",
       "fontWeight": "500",
       "sourceKey": "fontSize.agent-desc",
-      "evidence": "tailwind.config.cjs:279-279"
+      "evidence": "tailwind.config.cjs:284-284"
     },
     "type.kanban-label": {
       "fontSize": "13px",
@@ -878,7 +878,7 @@
       "letterSpacing": "-0.26px",
       "fontWeight": "600",
       "sourceKey": "fontSize.kanban-label",
-      "evidence": "tailwind.config.cjs:280-280"
+      "evidence": "tailwind.config.cjs:285-285"
     },
     "type.kanban-count": {
       "fontSize": "11px",
@@ -886,7 +886,7 @@
       "letterSpacing": "0px",
       "fontWeight": "500",
       "sourceKey": "fontSize.kanban-count",
-      "evidence": "tailwind.config.cjs:281-281"
+      "evidence": "tailwind.config.cjs:286-286"
     },
     "type.prompt": {
       "fontSize": "20.96px",
@@ -894,7 +894,7 @@
       "letterSpacing": "-0.21px",
       "fontWeight": "500",
       "sourceKey": "fontSize.prompt",
-      "evidence": "tailwind.config.cjs:282-282"
+      "evidence": "tailwind.config.cjs:287-287"
     },
     "type.uc-band-sm": {
       "fontSize": "14px",
@@ -902,7 +902,7 @@
       "letterSpacing": "-0.07px",
       "fontWeight": "500",
       "sourceKey": "fontSize.uc-band-sm",
-      "evidence": "tailwind.config.cjs:283-283"
+      "evidence": "tailwind.config.cjs:288-288"
     }
   },
   "bodyDefaults": {

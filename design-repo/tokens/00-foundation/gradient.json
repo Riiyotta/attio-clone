@@ -4,137 +4,137 @@
     "gradient.hero-glow": {
       "value": "radial-gradient(90% 80% at 50% 100%, #e6ecff 0%, #bccbff 45%, #86a0ee 100%)",
       "sourceKey": "backgroundImage.hero-glow",
-      "evidence": "tailwind.config.cjs:371-371"
+      "evidence": "tailwind.config.cjs:376-376"
     },
     "gradient.hero-pinstripe": {
       "value": "repeating-linear-gradient(90deg, rgba(255,255,255,0.78) 0 1px, transparent 1px 8px)",
       "sourceKey": "backgroundImage.hero-pinstripe",
-      "evidence": "tailwind.config.cjs:372-372"
+      "evidence": "tailwind.config.cjs:377-377"
     },
     "gradient.hero-white-fade": {
       "value": "radial-gradient(70% 106.667% at 50% 0%, #ffffff 32%, transparent 64%)",
       "sourceKey": "backgroundImage.hero-white-fade",
-      "evidence": "tailwind.config.cjs:374-374"
+      "evidence": "tailwind.config.cjs:379-379"
     },
     "gradient.dark-stripes": {
       "value": "repeating-linear-gradient(to right, rgba(255,255,255,0.035) 0 1px, transparent 1px 8px)",
       "sourceKey": "backgroundImage.dark-stripes",
-      "evidence": "tailwind.config.cjs:376-376"
+      "evidence": "tailwind.config.cjs:381-381"
     },
     "gradient.planet-rim": {
       "value": "conic-gradient(from 0deg at 50% 50%, #eef1ea 0deg, #6cbdb0 10deg, #161e69 60deg, #161e69 180deg, #bb2a1e 180deg, #bb2a1e 300deg, #ccc427 350deg, #eef1ea 360deg)",
       "sourceKey": "backgroundImage.planet-rim",
-      "evidence": "tailwind.config.cjs:379-379"
+      "evidence": "tailwind.config.cjs:384-384"
     },
     "gradient.planet-rim-mask": {
       "value": "conic-gradient(rgba(0,0,0,0.4) 0deg, #000 35deg, #000 325deg, rgba(0,0,0,0.4) 360deg)",
       "sourceKey": "backgroundImage.planet-rim-mask",
-      "evidence": "tailwind.config.cjs:381-381"
+      "evidence": "tailwind.config.cjs:386-386"
     },
     "gradient.horizon-glow": {
       "value": "radial-gradient(circle closest-side, transparent 64%, rgba(255,255,255,0.04) 71%, rgba(255,255,255,0.12) 74.5%, rgba(255,255,255,0.16) 75.5%, rgba(255,255,255,0.125) 77.5%, rgba(255,255,255,0.07) 80.5%, rgba(255,255,255,0.035) 85%, rgba(255,255,255,0.016) 91%, transparent 98%)",
       "sourceKey": "backgroundImage.horizon-glow",
-      "evidence": "tailwind.config.cjs:383-383"
+      "evidence": "tailwind.config.cjs:388-388"
     },
     "gradient.integration-tile": {
       "value": "linear-gradient(-30.12deg, #1c1d1f 25.6%, #2e3238 163%)",
       "sourceKey": "backgroundImage.integration-tile",
-      "evidence": "tailwind.config.cjs:315-315"
+      "evidence": "tailwind.config.cjs:320-320"
     },
     "gradient.center-hairline": {
       "value": "linear-gradient(to right, transparent calc(50% - 0.5px), #e4e7ec calc(50% - 0.5px), #e4e7ec calc(50% + 0.5px), transparent calc(50% + 0.5px))",
       "sourceKey": "backgroundImage.center-hairline",
-      "evidence": "tailwind.config.cjs:388-388"
+      "evidence": "tailwind.config.cjs:393-393"
     },
     "gradient.scale-wash": {
       "value": "linear-gradient(rgba(150,183,255,0.18), transparent 85%)",
       "sourceKey": "backgroundImage.scale-wash",
-      "evidence": "tailwind.config.cjs:390-390"
+      "evidence": "tailwind.config.cjs:395-395"
     },
     "gradient.streak-uc": {
       "value": "linear-gradient(transparent, rgba(255,255,255,0.5) 50%, transparent)",
       "sourceKey": "backgroundImage.streak-uc",
-      "evidence": "tailwind.config.cjs:392-392"
+      "evidence": "tailwind.config.cjs:397-397"
     },
     "gradient.streak-scale": {
       "value": "linear-gradient(transparent, #a4adba 50%, transparent)",
       "sourceKey": "backgroundImage.streak-scale",
-      "evidence": "tailwind.config.cjs:393-393"
+      "evidence": "tailwind.config.cjs:398-398"
     },
     "gradient.streak-cta": {
       "value": "linear-gradient(transparent, #8a93a1 50%, transparent)",
       "sourceKey": "backgroundImage.streak-cta",
-      "evidence": "tailwind.config.cjs:394-394"
+      "evidence": "tailwind.config.cjs:399-399"
     },
     "gradient.fade-right": {
       "value": "linear-gradient(to right, #ffffff 0%, transparent 100%)",
       "sourceKey": "backgroundImage.fade-right",
-      "evidence": "tailwind.config.cjs:396-396"
+      "evidence": "tailwind.config.cjs:401-401"
     },
     "gradient.fade-left": {
       "value": "linear-gradient(to left, #ffffff 0%, transparent 100%)",
       "sourceKey": "backgroundImage.fade-left",
-      "evidence": "tailwind.config.cjs:397-397"
+      "evidence": "tailwind.config.cjs:402-402"
     },
     "gradient.hatch": {
       "value": "repeating-linear-gradient(125deg, transparent, transparent 6px, #f3f4f6 6px, #f3f4f6 7px)",
       "sourceKey": "backgroundImage.hatch",
-      "evidence": "tailwind.config.cjs:399-399"
+      "evidence": "tailwind.config.cjs:404-404"
     },
     "gradient.hatch-dark": {
       "value": "repeating-linear-gradient(125deg, transparent, transparent 6px, #2e3238 6px, #2e3238 7px)",
       "sourceKey": "backgroundImage.hatch-dark",
-      "evidence": "tailwind.config.cjs:400-400"
+      "evidence": "tailwind.config.cjs:405-405"
     },
     "gradient.avatar-tile": {
       "value": "linear-gradient(to left top, #a4adba, #e4e7ec)",
       "sourceKey": "backgroundImage.avatar-tile",
-      "evidence": "tailwind.config.cjs:401-401"
+      "evidence": "tailwind.config.cjs:406-406"
     },
     "gradient.wall-fade": {
       "value": "linear-gradient(90deg, #fff, transparent 20%, transparent 80%, #fff)",
       "sourceKey": "backgroundImage.wall-fade",
-      "evidence": "tailwind.config.cjs:402-402"
+      "evidence": "tailwind.config.cjs:407-407"
     },
     "gradient.pricing-line-h": {
       "value": "linear-gradient(to left, rgba(237,239,243,0) 0%, #cad0d9 6.52%, #cad0d9 93.22%, rgba(237,239,243,0) 100%)",
       "sourceKey": "backgroundImage.pricing-line-h",
-      "evidence": "tailwind.config.cjs:404-404"
+      "evidence": "tailwind.config.cjs:409-409"
     },
     "gradient.pricing-line-v": {
       "value": "linear-gradient(to bottom, rgba(237,239,243,0) 0%, #cad0d9 10.87%, #cad0d9 89.55%, rgba(237,239,243,0) 100%)",
       "sourceKey": "backgroundImage.pricing-line-v",
-      "evidence": "tailwind.config.cjs:405-405"
+      "evidence": "tailwind.config.cjs:410-410"
     },
     "gradient.app-tile-ring": {
       "value": "linear-gradient(#709ff5, #a3ece9)",
       "sourceKey": "backgroundImage.app-tile-ring",
-      "evidence": "tailwind.config.cjs:406-406"
+      "evidence": "tailwind.config.cjs:411-411"
     },
     "gradient.cta-pattern-mask": {
       "value": "radial-gradient(ellipse 70% 50% at 50% 50%, transparent 35%, #000 75%)",
       "sourceKey": "backgroundImage.cta-pattern-mask",
-      "evidence": "tailwind.config.cjs:408-408"
+      "evidence": "tailwind.config.cjs:413-413"
     },
     "gradient.stripe-field": {
       "value": "linear-gradient(to right, transparent calc(50% - 0.5px), #edeff3 calc(50% - 0.5px), #edeff3 calc(50% + 0.5px), transparent calc(50% + 0.5px))",
       "sourceKey": "backgroundImage.stripe-field",
-      "evidence": "tailwind.config.cjs:410-410"
+      "evidence": "tailwind.config.cjs:415-415"
     },
     "gradient.stripe-field-uc": {
       "value": "linear-gradient(to right, transparent calc(50% - 0.5px), rgba(228,231,235,0.45) calc(50% - 0.5px), rgba(228,231,235,0.45) calc(50% + 0.5px), transparent calc(50% + 0.5px))",
       "sourceKey": "backgroundImage.stripe-field-uc",
-      "evidence": "tailwind.config.cjs:411-411"
+      "evidence": "tailwind.config.cjs:416-416"
     },
     "gradient.platform-cta-mask": {
       "value": "radial-gradient(50% 57.63% at 50% 0%, transparent 55%, #000 100%)",
       "sourceKey": "backgroundImage.platform-cta-mask",
-      "evidence": "tailwind.config.cjs:412-412"
+      "evidence": "tailwind.config.cjs:417-417"
     },
     "gradient.agent-dots": {
       "value": "radial-gradient(circle, #d3d8df 0.8px, transparent 0.8px)",
       "sourceKey": "backgroundImage.agent-dots",
-      "evidence": "tailwind.config.cjs:413-413"
+      "evidence": "tailwind.config.cjs:418-418"
     }
   }
 }

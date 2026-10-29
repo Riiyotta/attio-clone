@@ -6,8 +6,8 @@
     "id": "src:SiteHeader#export-default-function-SiteHeader",
     "file": "src/components/SiteHeader.jsx",
     "tag": "export default function SiteHeader(",
-    "lines": "122-333",
-    "citation": "src/components/SiteHeader.jsx:122-333"
+    "lines": "136-347",
+    "citation": "src/components/SiteHeader.jsx:136-347"
   },
   "semantic": {
     "id": "shell.site-header",

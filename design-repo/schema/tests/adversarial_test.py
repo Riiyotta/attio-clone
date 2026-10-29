@@ -104,7 +104,7 @@ def synth_page(tid):
                 v = (tn.get("allowedVariants", {}).get(sid) or CONTRACTS[sid].get("variants") or [None])[0]
                 nodes.append(make_node(sid, v, len(nodes))); picked += 1
     mark = {"assetRole": "brand.placeholder-mark", "assetRef": "generate:neutral glyph", "alt": "Sample brand"}
-    return {"pageSpecVersion": "1.1.0", "mode": "generated", "template": tid, "route": "/" if tid == "home" else f"/sample-{tid}",
+    return {"pageSpecVersion": "1.2.0", "mode": "generated", "template": tid, "route": "/" if tid == "home" else f"/sample-{tid}",
             "brand": {"name": "Sample brand", "mark": mark, "fictional": True}, "meta": {"title": "Sample page", "description": "Synthesized control page."}, "nodes": nodes}
 
 # ---- controls ----------------------------------------------------------------------------------
@@ -220,6 +220,31 @@ expect_reject("story closing stage removed", m(GA, lambda s: s["nodes"].remove(n
 expect_reject("story lit statement used three times", m(GA, lambda s: [s["nodes"].insert(5, dict(copy.deepcopy(node(s, "content.lit-statement")), id=f"extra-lit-{i}")) for i in range(2)]), ["ONE_PER_PAGE", "TEMPLATE_REGION_COUNT", "NO_CONSECUTIVE_SAME_SECTION"])
 expect_reject("reference route not served by the changelog template", m(RH, lambda s: s.update(template="changelog-year", route="/changelog/2026")), ["TEMPLATE_MISSING_REQUIRED", "TEMPLATE_UNEXPECTED_NODE", "TEMPLATE_ORDER"])
 expect_reject("editorial index above its row maximum", m(GE, lambda s: node(s, "editorial.article-index")["content"]["rows"].extend([dict(node(s, "editorial.article-index")["content"]["rows"][0]) for _ in range(40)])), ["SCHEMA"])
+
+print("== platform families (platform-feature, developer-platform): leakage + structure")
+GPF, GDV, RPF = EX["generated-platform-feature"], EX["generated-developer-platform"], EX["reference-platform-feature"]
+expect_reject("platform hero reuses a live platform headline", m(GPF, lambda s: node(s, "hero.platform-feature")["content"].update(headline="Never take notes again.")), ["GENERATED_MODE_COPY"])
+expect_reject("platform links heading reuses the live 'plugs in' line", m(GPF, lambda s: node(s, "navigation.platform-links")["content"]["heading"].update(lead="Tarnwick plugs in. You take off.")), ["GENERATED_MODE_COPY"])
+expect_reject("platform quote names a real customer", m(GPF, lambda s: node(s, "testimonial.quote")["content"]["person"].update(name="Margaret Shen")), ["GENERATED_MODE_PERSON"])
+expect_reject("platform quote names a reference clone person", m(GPF, lambda s: node(s, "testimonial.quote")["content"]["person"].update(name="Nadia Brooks")), ["GENERATED_MODE_PERSON"])
+expect_reject("platform hero art uses the clone's reference mock", m(GPF, lambda s: node(s, "hero.platform-feature")["content"].update(artwork={"assetRole": "product.reference-mock", "assetRef": "ref:src/components/platform/legacy.jsx#HeroData", "alt": "Board"})), ["GENERATED_MODE_ASSET"])
+expect_reject("platform hero art claims a source screenshot", m(GPF, lambda s: node(s, "hero.platform-feature")["content"]["artwork"].update(assetRole="product.source-screenshot")), ["SCHEMA", "ASSET_ROLE_NOT_ALLOWED_FOR_FIELD", "GENERATED_MODE_ASSET"])
+expect_reject("platform page names the clone's product term", m(GPF, lambda s: node(s, "features.split-accordion")["content"]["heading"].update(lead="Powered by Unified Knowledge.")), ["GENERATED_MODE_COPY"])
+expect_reject("platform links point at the source domain", m(GPF, lambda s: node(s, "navigation.platform-links")["content"]["links"][0].update(href="https://attio.com/platform/ask")), ["GENERATED_MODE_URL"])
+expect_reject("platform final CTA without its dome variant", m(GPF, lambda s: node(s, "conversion.final-cta").update(variant="streak-band")), ["TEMPLATE_VARIANT_NOT_ALLOWED"])
+expect_reject("platform hero missing its variant-required cards", m(GPF, lambda s: node(s, "hero.platform-feature")["content"].pop("cards")), ["VARIANT_FIELDS"])
+expect_reject("platform body below its 4-block minimum", m(GPF, lambda s: [s["nodes"].remove(node(s, t)) for t in ("features.media-card-grid", "testimonial.quote", "social-proof.stat-highlight", "features.text-columns")]), ["TEMPLATE_REGION_COUNT"])
+expect_reject("platform final CTA removed", m(GPF, lambda s: s["nodes"].remove(node(s, "conversion.final-cta"))), ["TEMPLATE_MISSING_REQUIRED"])
+expect_reject("platform links placed before the body", m(GPF, lambda s: s["nodes"].insert(2, s["nodes"].pop(next(i for i, n in enumerate(s["nodes"]) if n["type"] == "navigation.platform-links")))), ["TEMPLATE_ORDER", "TEMPLATE_UNEXPECTED_NODE", "TEMPLATE_REGION_COUNT", "TEMPLATE_MISSING_REQUIRED"])
+expect_reject("second platform hero", m(GPF, lambda s: s["nodes"].insert(3, dict(copy.deepcopy(node(s, "hero.platform-feature")), id="hero-2"))), ["ONE_HERO", "ONE_PER_PAGE", "TEMPLATE_UNEXPECTED_NODE", "TEMPLATE_ORDER"])
+expect_reject("card grid used four times", m(GPF, lambda s: [s["nodes"].insert(4, dict(copy.deepcopy(node(s, "features.media-card-grid")), id=f"grid-x{i}", variant=v)) for i, v in enumerate(("legacy-media", "legacy-icon", "v2-six"))]), ["ONE_PER_PAGE", "TEMPLATE_REGION_COUNT"])
+expect_reject("developer body uses a platform-only section", m(GDV, lambda s: s["nodes"].insert(3, dict(copy.deepcopy(node(GPF, "features.split-accordion")), id="split-x"))), ["TEMPLATE_UNEXPECTED_NODE", "TEMPLATE_ORDER"])
+expect_reject("developer page without its own closing CTA", m(GDV, lambda s: s["nodes"].remove(node(s, "conversion.developer-cta"))), ["TEMPLATE_MISSING_REQUIRED"])
+expect_reject("developer quote uses the light scroll-lit variant", m(GDV, lambda s: node(s, "testimonial.quote").update(variant="scroll-lit")), ["TEMPLATE_VARIANT_NOT_ALLOWED"])
+expect_reject("developer quote strip names a reference person", m(GDV, lambda s: next(n for n in s["nodes"] if n.get("variant") == "cards-with-quote")["content"]["quote"]["person"].update(name="Priya Nandan")), ["GENERATED_MODE_PERSON"])
+expect_reject("developer card section with quote variant but no quote", m(GDV, lambda s: next(n for n in s["nodes"] if n.get("variant") == "cards-with-quote")["content"].pop("quote")), ["VARIANT_FIELDS"])
+expect_reject("reference platform page on a route its template does not serve", m(RPF, lambda s: s.update(route="/platform/developers")), ["ROUTE_TEMPLATE_MISMATCH"])
+expect_reject("marquee motion swapped for a time loop", m(GPF, lambda s: s["nodes"].insert(4, dict(make_node("features.card-marquee", "v2", 96), id="mq", motion={"patterns": ["marquee-loop"], "reducedMotionFallback": "static-final-state"}))), ["SCHEMA", "MOTION_PATTERN_NOT_ALLOWED"])
 
 print("== token policy (R10)")
 def sty(t, **kw):

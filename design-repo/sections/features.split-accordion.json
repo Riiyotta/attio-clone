@@ -1,0 +1,259 @@
+{
+  "id": "features.split-accordion",
+  "title": "Split accordion",
+  "status": "measured",
+  "source": {
+    "id": "src:SplitAccordion#export-function-SplitAccordion",
+    "file": "src/components/platform/SplitAccordion.jsx",
+    "tag": "export function SplitAccordion(",
+    "lines": "14-133",
+    "citation": "src/components/platform/SplitAccordion.jsx:14-133",
+    "variantSources": {
+      "v2": {
+        "file": "src/components/platform/SplitAccordion.jsx",
+        "tag": "export function SplitAccordion(",
+        "lines": "14-133",
+        "citation": "src/components/platform/SplitAccordion.jsx:14-133"
+      },
+      "legacy": {
+        "file": "src/components/platform/SplitAccordion.jsx",
+        "tag": "export function SplitAccordionLegacy(",
+        "lines": "143-256",
+        "citation": "src/components/platform/SplitAccordion.jsx:143-256"
+      }
+    }
+  },
+  "semantic": {
+    "id": "features.split-accordion",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "purpose": "Two-tone heading and three capability items on one side, a media panel on the other; the active item shows its description and a progress bar that advances to the next item while the block is in view.",
+  "themes": [
+    "light"
+  ],
+  "variants": [
+    "v2",
+    "legacy"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "heading": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "lead": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 9,
+            "x-maxWordsEvidence": "two-tone lead: S-SPLIT/S-SPLIT-L lead c16-c50, continuation c25-c92"
+          },
+          "continuation": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 16,
+            "x-maxWordsEvidence": "two-tone continuation: S-SPLIT/S-SPLIT-L lead c16-c50, continuation c25-c92"
+          }
+        },
+        "required": [
+          "lead",
+          "continuation"
+        ]
+      },
+      "items": {
+        "type": "array",
+        "minItems": 3,
+        "maxItems": 3,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "title": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 8,
+              "x-maxWordsEvidence": "item title c10-c31"
+            },
+            "description": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 22,
+              "x-maxWordsEvidence": "item desc c43-c106"
+            },
+            "media": {
+              "$ref": "#/definitions/media",
+              "x-assetRoles": [
+                "product.reference-mock",
+                "product.generated-visual",
+                "illustration.reference-art",
+                "illustration.generated-abstract",
+                "illustration.decorative-pattern"
+              ]
+            }
+          },
+          "required": [
+            "title",
+            "description",
+            "media"
+          ]
+        },
+        "x-countEvidence": "3 items on every instance"
+      }
+    },
+    "required": [
+      "heading",
+      "items"
+    ]
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "auto-cycle-tabs",
+      "accordion-height",
+      "hover-micro"
+    ],
+    "reducedMotionFallback": "manual-advance-only",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "stack",
+        "detail": "v2 shell goes full-bleed (no side borders), spacers 128 -> 64, inset 32px; H2 40/46 -> 32/36.8; grids collapse to one column."
+      },
+      {
+        "at": "below-lg",
+        "change": "stack",
+        "detail": "heading moves above the grid; the media panel becomes a square under the item list (v2) or above a 192px item stack with segmented progress (legacy)."
+      }
+    ]
+  },
+  "assetSlots": [
+    {
+      "field": ".items[].media",
+      "assetRoles": [
+        "product.reference-mock",
+        "product.generated-visual",
+        "illustration.reference-art",
+        "illustration.generated-abstract",
+        "illustration.decorative-pattern"
+      ]
+    }
+  ],
+  "generatedAssetRoles": [
+    "copy.original",
+    "illustration.generated-abstract",
+    "product.generated-visual"
+  ],
+  "composes": [
+    "component.two-tone-heading",
+    "component.dot-pattern",
+    "primitive.hairline",
+    "primitive.asset-slot"
+  ],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/platform/call-intelligence",
+        "variant": "legacy",
+        "instance": 0,
+        "heightPx": 750
+      },
+      {
+        "route": "/platform/custom-agents",
+        "variant": "v2",
+        "instance": 0,
+        "heightPx": 769
+      },
+      {
+        "route": "/platform/data",
+        "variant": "legacy",
+        "instance": 0,
+        "heightPx": 750
+      },
+      {
+        "route": "/platform/enrichment",
+        "variant": "v2",
+        "instance": 0,
+        "heightPx": 769
+      },
+      {
+        "route": "/platform/reporting",
+        "variant": "v2",
+        "instance": 0,
+        "heightPx": 769
+      },
+      {
+        "route": "/platform/sequences",
+        "variant": "legacy",
+        "instance": 0,
+        "heightPx": 750
+      },
+      {
+        "route": "/platform/universal-context",
+        "variant": "v2",
+        "instance": 0,
+        "heightPx": 769
+      },
+      {
+        "route": "/platform/web-agent",
+        "variant": "v2",
+        "instance": 0,
+        "heightPx": 769
+      },
+      {
+        "route": "/platform/workflows",
+        "variant": "legacy",
+        "instance": 0,
+        "heightPx": 750
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/platform/call-intelligence",
+      "variant": "legacy"
+    },
+    {
+      "route": "/platform/custom-agents",
+      "variant": "v2"
+    },
+    {
+      "route": "/platform/data",
+      "variant": "legacy"
+    },
+    {
+      "route": "/platform/enrichment",
+      "variant": "v2"
+    },
+    {
+      "route": "/platform/reporting",
+      "variant": "v2"
+    },
+    {
+      "route": "/platform/sequences",
+      "variant": "legacy"
+    },
+    {
+      "route": "/platform/universal-context",
+      "variant": "v2"
+    },
+    {
+      "route": "/platform/web-agent",
+      "variant": "v2"
+    },
+    {
+      "route": "/platform/workflows",
+      "variant": "legacy"
+    }
+  ],
+  "notes": "v2: 640 grid, auto-advance only while in view and being scrolled (M-S1). legacy: 540 grid, timed 5.5s per item while in view, pauses out of view (M-S2, re-sampled 2026-10-29)."
+}

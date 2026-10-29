@@ -1,0 +1,126 @@
+{
+  "id": "social-proof.stat-highlight",
+  "title": "Stat highlight",
+  "status": "measured",
+  "source": {
+    "id": "src:Sections#export-function-Stat",
+    "file": "src/components/platform/Sections.jsx",
+    "tag": "export function Stat(",
+    "lines": "96-112",
+    "citation": "src/components/platform/Sections.jsx:96-112"
+  },
+  "semantic": {
+    "id": "social-proof.stat-highlight",
+    "category": "SOCIAL_PROOF"
+  },
+  "retrievalEligible": true,
+  "purpose": "Two-tone heading beside one large usage figure and its label (container-query sized number).",
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "heading": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "lead": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 6,
+            "x-maxWordsEvidence": "two-tone lead: S-STAT lead c23-c28, continuation c33-c57"
+          },
+          "continuation": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 12,
+            "x-maxWordsEvidence": "two-tone continuation: S-STAT lead c23-c28, continuation c33-c57"
+          }
+        },
+        "required": [
+          "lead",
+          "continuation"
+        ]
+      },
+      "value": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 1,
+        "x-maxWordsEvidence": "stat c4-c5"
+      },
+      "label": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 10,
+        "x-maxWordsEvidence": "label c23-c46"
+      }
+    },
+    "required": [
+      "heading",
+      "value",
+      "label"
+    ]
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "static"
+    ],
+    "reducedMotionFallback": "none-needed",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "stack",
+        "detail": "v2 shell goes full-bleed (no side borders), spacers 128 -> 64, inset 32px; H2 40/46 -> 32/36.8; grids collapse to one column."
+      },
+      {
+        "at": "below-lg",
+        "change": "stack",
+        "detail": "stat cell moves under the heading (border-t); number 100px at 768, 74px at 390."
+      }
+    ]
+  },
+  "assetSlots": [],
+  "generatedAssetRoles": [
+    "copy.original"
+  ],
+  "composes": [
+    "component.two-tone-heading",
+    "component.stat-block"
+  ],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/platform/custom-agents",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 593
+      },
+      {
+        "route": "/platform/mcp",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 593
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/platform/custom-agents"
+    },
+    {
+      "route": "/platform/mcp"
+    }
+  ],
+  "notes": "Figures in the clone are invented; generated pages must use placeholder figures, never the source's usage claims."
+}

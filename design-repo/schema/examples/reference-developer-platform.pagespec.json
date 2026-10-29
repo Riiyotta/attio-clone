@@ -1,0 +1,431 @@
+{
+  "pageSpecVersion": "1.2.0",
+  "mode": "reference",
+  "template": "developer-platform",
+  "route": "/platform/developers",
+  "brand": {
+    "name": "Corvale",
+    "mark": {
+      "assetRole": "brand.reference-wordmark",
+      "assetRef": "ref:src/components/ui.jsx#BrandMark",
+      "alt": "Corvale"
+    },
+    "fictional": true
+  },
+  "meta": {
+    "title": "Developers",
+    "description": "Reference reconstruction of the clone's developer platform page (dark blueprint) with invented copy and original line art."
+  },
+  "nodes": [
+    {
+      "id": "header",
+      "type": "shell.site-header",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.reference-wordmark",
+          "assetRef": "ref:src/components/ui.jsx#BrandMark",
+          "alt": "Corvale"
+        },
+        "banner": {
+          "text": "Explore the latest release notes from our spring",
+          "href": "#"
+        },
+        "menus": [
+          {
+            "label": "Products",
+            "groups": [
+              {
+                "label": "Core UI",
+                "items": [
+                  {
+                    "title": "Custom data model",
+                    "description": "Store details safely",
+                    "href": "#"
+                  },
+                  {
+                    "title": "List views",
+                    "description": "Organize work into pipelines",
+                    "href": "#"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "Solutions",
+            "groups": [
+              {
+                "label": "By team",
+                "items": [
+                  {
+                    "title": "Sales teams",
+                    "description": "Close more of the pipeline",
+                    "href": "#"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "Support",
+            "groups": [
+              {
+                "label": "Learn",
+                "items": [
+                  {
+                    "title": "Academy",
+                    "description": "Short lessons for new users",
+                    "href": "#"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "signIn": {
+          "label": "Sign in",
+          "href": "#"
+        },
+        "primaryCta": {
+          "label": "Start it today",
+          "href": "#",
+          "variant": "primary"
+        }
+      },
+      "motion": {
+        "patterns": [
+          "header-theme-swap",
+          "dropdown-panel",
+          "hover-micro"
+        ],
+        "reducedMotionFallback": "instant-state-change"
+      }
+    },
+    {
+      "id": "hero",
+      "type": "hero.developer-blueprint",
+      "content": {
+        "overline": "[ CORVALE DEVELOPERS ]",
+        "headline": "Draft. Test. Ship.",
+        "subhead": "Connect your sales tools through the HTTP API, the app kit or the hub.",
+        "primaryCta": {
+          "label": "Read docs",
+          "href": "#",
+          "variant": "primary"
+        },
+        "secondaryCta": {
+          "label": "App gallery",
+          "href": "#",
+          "variant": "outline"
+        },
+        "illustration": {
+          "assetRole": "illustration.reference-art",
+          "assetRef": "ref:src/components/platform/developers/Illustrations.jsx#HeroArt",
+          "alt": "Line-art wireframe"
+        }
+      },
+      "motion": {
+        "patterns": [
+          "static"
+        ],
+        "reducedMotionFallback": "none-needed"
+      }
+    },
+    {
+      "id": "api",
+      "type": "features.blueprint-cards",
+      "variant": "cards",
+      "content": {
+        "heading": {
+          "lead": "Wire Corvale into any toolset.",
+          "continuation": "Start with a straightforward REST API that is secure and made to scale."
+        },
+        "button": {
+          "label": "Read docs",
+          "href": "#"
+        },
+        "cards": [
+          {
+            "index": "01",
+            "body": "Ship custom integrations that can both read and edit any record.",
+            "illustration": {
+              "assetRole": "illustration.reference-art",
+              "assetRef": "ref:src/components/platform/developers/Illustrations.jsx#RestArt",
+              "alt": "Request diagram"
+            }
+          },
+          {
+            "index": "02",
+            "body": "Subscribe to webhooks and react to events in code.",
+            "illustration": {
+              "assetRole": "illustration.reference-art",
+              "assetRef": "ref:src/components/platform/developers/Illustrations.jsx#WebhookArt",
+              "alt": "Webhook diagram"
+            }
+          },
+          {
+            "index": "03",
+            "body": "Grant scoped access to apps through OAuth 2.0 flows.",
+            "illustration": {
+              "assetRole": "illustration.reference-art",
+              "assetRef": "ref:src/components/platform/developers/Illustrations.jsx#OAuthArt",
+              "alt": "OAuth diagram"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "patterns": [
+          "static"
+        ],
+        "reducedMotionFallback": "none-needed"
+      }
+    },
+    {
+      "id": "t1",
+      "type": "testimonial.quote",
+      "variant": "blueprint-portrait",
+      "content": {
+        "quote": "I gravitate toward platforms that trust their builders — frameworks that hand you sturdy parts instead of a sealed box. The Corvale SDK hands the decisions and the control back to engineers.",
+        "person": {
+          "name": "Ruth Adeyo",
+          "role": "Platform lead",
+          "fictional": true
+        },
+        "portrait": {
+          "assetRole": "person.reference-portrait",
+          "assetRef": "ref:src/components/platform/developers/Testimonial.jsx#Portrait",
+          "alt": "Dithered portrait"
+        }
+      },
+      "motion": {
+        "patterns": [
+          "word-reveal-scroll"
+        ],
+        "reducedMotionFallback": "static-final-state"
+      }
+    },
+    {
+      "id": "sdk",
+      "type": "features.blueprint-cards",
+      "variant": "cards-with-quote",
+      "content": {
+        "heading": {
+          "lead": "Make Corvale fit your team.",
+          "continuation": "Extend it with TypeScript and React using the App SDK."
+        },
+        "button": {
+          "label": "Read docs",
+          "href": "#"
+        },
+        "cards": [
+          {
+            "index": "01",
+            "body": "Pick where your app appears: record actions, side panels, or highlighted text inside Corvale.",
+            "illustration": {
+              "assetRole": "illustration.reference-art",
+              "assetRef": "ref:src/components/platform/developers/Illustrations.jsx#EntryPointsArt",
+              "alt": "Entry points"
+            }
+          },
+          {
+            "index": "02",
+            "body": "Build forms, then declare the fields and validation rules your data needs.",
+            "illustration": {
+              "assetRole": "illustration.reference-art",
+              "assetRef": "ref:src/components/platform/developers/Illustrations.jsx#FormArt",
+              "alt": "Form"
+            }
+          },
+          {
+            "index": "03",
+            "body": "Call server functions to read, write, or clean up data held by third parties.",
+            "illustration": {
+              "assetRole": "illustration.reference-art",
+              "assetRef": "ref:src/components/platform/developers/Illustrations.jsx#FunctionsArt",
+              "alt": "Functions"
+            }
+          }
+        ],
+        "quote": {
+          "text": "Typed end to end, fast to deploy, and easy to reason about — what our team needed.",
+          "person": {
+            "name": "Priya Nandan",
+            "role": "Foldline",
+            "fictional": true
+          }
+        }
+      },
+      "motion": {
+        "patterns": [
+          "static"
+        ],
+        "reducedMotionFallback": "none-needed"
+      }
+    },
+    {
+      "id": "heat",
+      "type": "content.contribution-heatmap",
+      "content": {
+        "heading": {
+          "lead": "By engineers, for engineers.",
+          "continuation": "We run on what we ship and push code daily."
+        },
+        "button": {
+          "label": "How we work",
+          "href": "#"
+        },
+        "caption": "9,417 changes shipped this year"
+      },
+      "motion": {
+        "patterns": [
+          "hover-micro"
+        ],
+        "reducedMotionFallback": "instant-state-change"
+      }
+    },
+    {
+      "id": "apps",
+      "type": "features.developer-apps",
+      "content": {
+        "heading": {
+          "lead": "Polished apps, shipped on the SDK.",
+          "continuation": "Teams already build on the App SDK. Keep apps inside your workspace or publish them to the gallery."
+        },
+        "button": {
+          "label": "App gallery",
+          "href": "#"
+        },
+        "apps": [
+          {
+            "icon": {
+              "assetRole": "icon.generated-app",
+              "assetRef": "ref:src/components/platform/developers/AppsRow.jsx#AppTile",
+              "alt": "Halcyon"
+            },
+            "label": "Halcyon"
+          },
+          {
+            "icon": {
+              "assetRole": "icon.generated-app",
+              "assetRef": "ref:src/components/platform/developers/AppsRow.jsx#AppTile",
+              "alt": "Dovetel"
+            },
+            "label": "Dovetel"
+          },
+          {
+            "icon": {
+              "assetRole": "icon.generated-app",
+              "assetRef": "ref:src/components/platform/developers/AppsRow.jsx#AppTile",
+              "alt": "Ferrum"
+            },
+            "label": "Ferrum"
+          },
+          {
+            "icon": {
+              "assetRole": "icon.generated-app",
+              "assetRef": "ref:src/components/platform/developers/AppsRow.jsx#AppTile",
+              "alt": "Tidewell"
+            },
+            "label": "Tidewell"
+          },
+          {
+            "icon": {
+              "assetRole": "icon.generated-app",
+              "assetRef": "ref:src/components/platform/developers/AppsRow.jsx#AppTile",
+              "alt": "Brackett"
+            },
+            "label": "Brackett"
+          }
+        ],
+        "repoLink": {
+          "label": "Explore the Ferrum app repo",
+          "href": "#"
+        }
+      },
+      "motion": {
+        "patterns": [
+          "hover-micro"
+        ],
+        "reducedMotionFallback": "instant-state-change"
+      }
+    },
+    {
+      "id": "cta",
+      "type": "conversion.developer-cta",
+      "content": {
+        "heading": "Ready to build?",
+        "command": "npx corvale init"
+      },
+      "motion": {
+        "patterns": [
+          "hover-micro"
+        ],
+        "reducedMotionFallback": "instant-state-change"
+      }
+    },
+    {
+      "id": "footer",
+      "type": "shell.site-footer",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.reference-wordmark",
+          "assetRef": "ref:src/components/ui.jsx#BrandMark",
+          "alt": "Corvale"
+        },
+        "columns": [
+          {
+            "heading": "Products",
+            "links": [
+              {
+                "label": "Invite peers",
+                "href": "#"
+              },
+              {
+                "label": "Overviews",
+                "href": "#"
+              },
+              {
+                "label": "Browser plug-in",
+                "href": "#"
+              }
+            ]
+          },
+          {
+            "heading": "Company",
+            "links": [
+              {
+                "label": "Our story",
+                "href": "#"
+              },
+              {
+                "label": "Careers",
+                "href": "/careers"
+              }
+            ]
+          },
+          {
+            "heading": "Help desk",
+            "links": [
+              {
+                "label": "Guide index",
+                "href": "#"
+              },
+              {
+                "label": "Book an expert",
+                "href": "#"
+              }
+            ]
+          }
+        ],
+        "legal": "© 2026 Sample Co. All rights reserved."
+      },
+      "motion": {
+        "patterns": [
+          "hover-micro"
+        ],
+        "reducedMotionFallback": "instant-state-change"
+      }
+    }
+  ]
+}

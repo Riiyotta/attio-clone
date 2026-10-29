@@ -1,72 +1,72 @@
 {
   "$description": "Every route mounted in the clone's route table (src/App.jsx ROUTES) at extraction time, mapped exactly once to a template. verify_all.py re-reads the route table when the sibling source is present and fails on any unmapped or extra route.",
-  "routeTableEvidence": "src/App.jsx:32-52",
+  "routeTableEvidence": "src/App.jsx:44-76",
   "routes": [
     {
       "route": "/",
       "template": "home",
       "status": "mounted",
-      "evidence": "src/App.jsx:33-33"
+      "evidence": "src/App.jsx:45-45"
     },
     {
       "route": "/pricing",
       "template": "pricing",
       "status": "mounted",
-      "evidence": "src/App.jsx:34-34"
+      "evidence": "src/App.jsx:46-46"
     },
     {
       "route": "/customers",
       "template": "customer-hub",
       "status": "mounted",
-      "evidence": "src/App.jsx:35-35"
+      "evidence": "src/App.jsx:47-47"
     },
     {
       "route": "/startups",
       "template": "program-landing",
       "status": "mounted",
-      "evidence": "src/App.jsx:36-36"
+      "evidence": "src/App.jsx:48-48"
     },
     {
       "route": "/careers",
       "template": "careers",
       "status": "mounted",
-      "evidence": "src/App.jsx:37-37"
+      "evidence": "src/App.jsx:49-49"
     },
     {
       "route": "/partners/app-partners",
       "template": "program-landing",
       "status": "mounted",
-      "evidence": "src/App.jsx:38-38"
+      "evidence": "src/App.jsx:50-50"
     },
     {
       "route": "/partners/creator-partners",
       "template": "program-landing",
       "status": "mounted",
-      "evidence": "src/App.jsx:39-39"
+      "evidence": "src/App.jsx:51-51"
     },
     {
       "route": "/partners/expert-partners",
       "template": "program-landing",
       "status": "mounted",
-      "evidence": "src/App.jsx:40-40"
+      "evidence": "src/App.jsx:52-52"
     },
     {
       "route": "/contact/sales",
       "template": "contact-split",
       "status": "mounted",
-      "evidence": "src/App.jsx:41-41"
+      "evidence": "src/App.jsx:53-53"
     },
     {
       "route": "/apps",
       "template": "app-directory",
       "status": "mounted",
-      "evidence": "src/App.jsx:42-42"
+      "evidence": "src/App.jsx:54-54"
     },
     {
       "route": "/apps/:slug",
       "template": "app-detail",
       "status": "mounted",
-      "evidence": "src/App.jsx:43-43",
+      "evidence": "src/App.jsx:55-55",
       "measuredInstances": [
         "/apps/chatgpt",
         "/apps/claude",
@@ -78,21 +78,21 @@
       "route": "/blog",
       "template": "editorial-listing",
       "status": "mounted",
-      "evidence": "src/App.jsx:44-44",
+      "evidence": "src/App.jsx:56-56",
       "addedMidExtraction": "mounted by a concurrent build after the start-of-extraction snapshot (11 routes); caught by verify_all route-drift check and extracted"
     },
     {
       "route": "/engineering/blog",
       "template": "editorial-listing",
       "status": "mounted",
-      "evidence": "src/App.jsx:45-45",
+      "evidence": "src/App.jsx:57-57",
       "addedMidExtraction": "mounted by a concurrent build after the start-of-extraction snapshot (11 routes); caught by verify_all route-drift check and extracted"
     },
     {
       "route": "/changelog",
       "template": "changelog-year",
       "status": "mounted",
-      "evidence": "src/App.jsx:46-46",
+      "evidence": "src/App.jsx:58-58",
       "addedMidExtraction": "mounted by a concurrent build after the start-of-extraction snapshot (11 routes); caught by verify_all route-drift check and extracted",
       "measuredInstances": [
         "/changelog/2026"
@@ -103,7 +103,7 @@
       "route": "/changelog/:year",
       "template": "changelog-year",
       "status": "mounted",
-      "evidence": "src/App.jsx:47-47",
+      "evidence": "src/App.jsx:59-59",
       "addedMidExtraction": "mounted by a concurrent build after the start-of-extraction snapshot (11 routes); caught by verify_all route-drift check and extracted",
       "measuredInstances": [
         "/changelog/2026"
@@ -113,21 +113,21 @@
       "route": "/help",
       "template": "help-docs",
       "status": "mounted",
-      "evidence": "src/App.jsx:48-48",
+      "evidence": "src/App.jsx:60-60",
       "addedMidExtraction": "mounted by a concurrent build after the start-of-extraction snapshot (11 routes); caught by verify_all route-drift check and extracted"
     },
     {
       "route": "/help/academy",
       "template": "help-docs",
       "status": "mounted",
-      "evidence": "src/App.jsx:49-49",
+      "evidence": "src/App.jsx:61-61",
       "addedMidExtraction": "mounted by a concurrent build after the start-of-extraction snapshot (11 routes); caught by verify_all route-drift check and extracted"
     },
     {
       "route": "/help/reference/attio-101",
       "template": "help-docs",
       "status": "mounted",
-      "evidence": "src/App.jsx:50-50",
+      "evidence": "src/App.jsx:62-62",
       "addedMidExtraction": "mounted by a concurrent build after the start-of-extraction snapshot (11 routes); caught by verify_all route-drift check and extracted",
       "note": "The clone keeps the source's slug, which contains the original brand name; generated pages may never reuse it (GENERATED_MODE_URL)."
     },
@@ -135,8 +135,80 @@
       "route": "/architecture",
       "template": "architecture",
       "status": "mounted",
-      "evidence": "src/App.jsx:51-51",
+      "evidence": "src/App.jsx:63-63",
       "addedMidExtraction": "mounted by a concurrent build after the start-of-extraction snapshot (11 routes); caught by verify_all route-drift check and extracted"
+    },
+    {
+      "route": "/platform/ask",
+      "template": "platform-feature",
+      "status": "mounted",
+      "evidence": "src/App.jsx:64-64"
+    },
+    {
+      "route": "/platform/call-intelligence",
+      "template": "platform-feature",
+      "status": "mounted",
+      "evidence": "src/App.jsx:65-65"
+    },
+    {
+      "route": "/platform/custom-agents",
+      "template": "platform-feature",
+      "status": "mounted",
+      "evidence": "src/App.jsx:66-66"
+    },
+    {
+      "route": "/platform/data",
+      "template": "platform-feature",
+      "status": "mounted",
+      "evidence": "src/App.jsx:67-67"
+    },
+    {
+      "route": "/platform/developers",
+      "template": "developer-platform",
+      "status": "mounted",
+      "evidence": "src/App.jsx:68-68"
+    },
+    {
+      "route": "/platform/enrichment",
+      "template": "platform-feature",
+      "status": "mounted",
+      "evidence": "src/App.jsx:69-69"
+    },
+    {
+      "route": "/platform/mcp",
+      "template": "platform-feature",
+      "status": "mounted",
+      "evidence": "src/App.jsx:70-70"
+    },
+    {
+      "route": "/platform/reporting",
+      "template": "platform-feature",
+      "status": "mounted",
+      "evidence": "src/App.jsx:71-71"
+    },
+    {
+      "route": "/platform/sequences",
+      "template": "platform-feature",
+      "status": "mounted",
+      "evidence": "src/App.jsx:72-72"
+    },
+    {
+      "route": "/platform/universal-context",
+      "template": "platform-feature",
+      "status": "mounted",
+      "evidence": "src/App.jsx:73-73"
+    },
+    {
+      "route": "/platform/web-agent",
+      "template": "platform-feature",
+      "status": "mounted",
+      "evidence": "src/App.jsx:74-74"
+    },
+    {
+      "route": "/platform/workflows",
+      "template": "platform-feature",
+      "status": "mounted",
+      "evidence": "src/App.jsx:75-75"
     }
   ]
 }

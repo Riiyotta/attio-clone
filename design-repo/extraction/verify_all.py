@@ -24,7 +24,8 @@ Checks (each prints PASS/FAIL/WARN with evidence):
   routes             templates/routes.json == the sibling route table (src/App.jsx ROUTES) when present; every
                      route mapped exactly once; template node sections exist
   graph-parity       compatibility/graph.json rule ids == semantic_validate.GRAPH_RULE_IDS
-  counts             registry.manifest.json counts and README counts block recomputed from disk
+  counts             registry.manifest.json counts and README counts block recomputed from disk; sourceProject.midBuild
+                     must be true exactly when templates/pending-routes.json is non-empty
   wrapper-gate       extraction/wrapper_gate.py (R9) has zero errors
   generated-examples every template family has a generation-safe (mode=generated) example PageSpec, all listed in the manifest
   adversarial        runs schema/tests/adversarial_test.py (every mutation rejected, every control passes) and requires exit 0
@@ -466,7 +467,10 @@ def recount(contracts):
 def check_counts(man, contracts):
     real = recount(contracts)
     diff = {k: (man["counts"].get(k), v) for k, v in real.items() if man["counts"].get(k) != v}
-    rec("manifest-counts", not diff, f"manifest counts == disk {real}" if not diff else f"stale (manifest, disk): {diff}")
+    mid = man.get("sourceProject", {}).get("midBuild", False)
+    if bool(mid) != (real["pendingRoutes"] > 0):
+        diff["sourceProject.midBuild"] = (mid, f"{real['pendingRoutes']} pending routes")
+    rec("manifest-counts", not diff, f"manifest counts == disk {real}; midBuild={bool(mid)} agrees with {real['pendingRoutes']} pending routes" if not diff else f"stale (manifest, disk): {diff}")
     readme = open(os.path.join(REPO, "README.md")).read()
     m = re.search(r"<!-- counts:start -->(.*?)<!-- counts:end -->", readme, re.S)
     bad = []

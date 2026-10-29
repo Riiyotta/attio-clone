@@ -4,72 +4,72 @@
     "elevation.layer-1": {
       "value": "0 1px 3px 0 rgba(0,0,0,0.01)",
       "sourceKey": "boxShadow.attio-1",
-      "evidence": "tailwind.config.cjs:302-302"
+      "evidence": "tailwind.config.cjs:307-307"
     },
     "elevation.layer-2": {
       "value": "0 1px 3px 0 rgba(0,0,0,0.01), 0 2px 4px -1px rgba(0,0,0,0.02)",
       "sourceKey": "boxShadow.attio-2",
-      "evidence": "tailwind.config.cjs:303-303"
+      "evidence": "tailwind.config.cjs:308-308"
     },
     "elevation.layer-3": {
       "value": "0 1px 3px 0 rgba(0,0,0,0.01), 0 2px 4px -1px rgba(0,0,0,0.02), 0 4px 8px -2px rgba(0,0,0,0.03)",
       "sourceKey": "boxShadow.attio-3",
-      "evidence": "tailwind.config.cjs:304-304"
+      "evidence": "tailwind.config.cjs:309-309"
     },
     "elevation.layer-4": {
       "value": "0 1px 3px 0 rgba(0,0,0,0.01), 0 2px 4px -1px rgba(0,0,0,0.02), 0 4px 8px -2px rgba(0,0,0,0.03), 0 8px 16px -4px rgba(0,0,0,0.04)",
       "sourceKey": "boxShadow.attio-4",
-      "evidence": "tailwind.config.cjs:305-305"
+      "evidence": "tailwind.config.cjs:310-310"
     },
     "elevation.layer-5": {
       "value": "0 1px 3px 0 rgba(0,0,0,0.01), 0 2px 4px -1px rgba(0,0,0,0.02), 0 4px 8px -2px rgba(0,0,0,0.03), 0 8px 16px -4px rgba(0,0,0,0.04), 0 16px 32px -8px rgba(0,0,0,0.05)",
       "sourceKey": "boxShadow.attio-5",
-      "evidence": "tailwind.config.cjs:306-306"
+      "evidence": "tailwind.config.cjs:311-311"
     },
     "elevation.layer-6": {
       "value": "0 1px 3px 0 rgba(0,0,0,0.01), 0 2px 4px -1px rgba(0,0,0,0.02), 0 4px 8px -2px rgba(0,0,0,0.03), 0 8px 16px -4px rgba(0,0,0,0.04), 0 16px 32px -8px rgba(0,0,0,0.05), 0 32px 64px -16px rgba(0,0,0,0.06)",
       "sourceKey": "boxShadow.attio-6",
-      "evidence": "tailwind.config.cjs:307-307"
+      "evidence": "tailwind.config.cjs:312-312"
     },
     "elevation.layer-7": {
       "value": "0 1px 3px 0 rgba(0,0,0,0.01), 0 2px 4px -1px rgba(0,0,0,0.02), 0 4px 8px -2px rgba(0,0,0,0.03), 0 8px 16px -4px rgba(0,0,0,0.04), 0 16px 32px -8px rgba(0,0,0,0.05), 0 32px 64px -16px rgba(0,0,0,0.06), 0 64px 128px -32px rgba(0,0,0,0.07)",
       "sourceKey": "boxShadow.attio-7",
-      "evidence": "tailwind.config.cjs:308-308"
+      "evidence": "tailwind.config.cjs:313-313"
     },
     "elevation.dropdown": {
       "value": "0 0 0 1px rgba(26,26,26,0.08), 0 1px 3px 0 rgba(0,0,0,0.01), 0 2px 4px -1px rgba(0,0,0,0.02), 0 4px 8px -2px rgba(0,0,0,0.03), 0 8px 16px -4px rgba(0,0,0,0.04), 0 16px 32px -8px rgba(0,0,0,0.05)",
       "sourceKey": "boxShadow.dropdown",
-      "evidence": "tailwind.config.cjs:203-203"
+      "evidence": "tailwind.config.cjs:208-208"
     },
     "elevation.hero-window": {
       "value": "0 0 0 1px rgba(11,13,24,0.06), 0 1px 2px rgba(11,13,24,0.024), 0 3px 6px rgba(11,13,24,0.03), 0 8px 14px rgba(11,13,24,0.035), 0 16px 28px rgba(11,13,24,0.04)",
       "sourceKey": "boxShadow.hero-window",
-      "evidence": "tailwind.config.cjs:310-310"
+      "evidence": "tailwind.config.cjs:315-315"
     },
     "elevation.mock-card": {
       "value": "0 0 1px 1px rgba(0,0,85,0.01), 0 4px 12px -1px rgba(0,26,51,0.04), 0 1px 3px -1px rgba(0,22,61,0.18)",
       "sourceKey": "boxShadow.mock-card",
-      "evidence": "tailwind.config.cjs:312-312"
+      "evidence": "tailwind.config.cjs:317-317"
     },
     "elevation.mock-chip": {
       "value": "0 1px 3px 0 rgba(0,0,0,0.04), 0 0 2px 0 rgba(28,39,67,0.18)",
       "sourceKey": "boxShadow.mock-chip",
-      "evidence": "tailwind.config.cjs:314-314"
+      "evidence": "tailwind.config.cjs:319-319"
     },
     "elevation.integration-tile": {
       "value": "inset 0.2px 0.2px 2px 0 rgba(255,255,255,0.1), 0 1.5px 1.5px 0 rgba(0,0,0,0.25)",
       "sourceKey": "boxShadow.integration-tile",
-      "evidence": "tailwind.config.cjs:315-315"
+      "evidence": "tailwind.config.cjs:320-320"
     },
     "elevation.input-hover": {
       "value": "0 1px 4px rgba(56,62,71,0.1)",
       "sourceKey": "boxShadow.input-hover",
-      "evidence": "tailwind.config.cjs:318-318"
+      "evidence": "tailwind.config.cjs:323-323"
     },
     "elevation.focus-ring": {
       "value": "0 0 0 3px #94b9ff",
       "sourceKey": "boxShadow.focus-ring",
-      "evidence": "tailwind.config.cjs:319-319"
+      "evidence": "tailwind.config.cjs:324-324"
     },
     "elevation.select-ring": {
       "value": "0 0 0 3px rgba(36,109,238,0.3)",
@@ -84,37 +84,37 @@
     "elevation.select-popup": {
       "value": "0 4px 8px rgba(56,64,72,0.25)",
       "sourceKey": "boxShadow.select-popup",
-      "evidence": "tailwind.config.cjs:323-323"
+      "evidence": "tailwind.config.cjs:328-328"
     },
     "elevation.toggle-thumb": {
       "value": "0 4px 4px -2px rgba(17,34,68,0.06), 0 2px 4px -2px rgba(0,51,51,0.02), 0 0 2px #e0e0e0",
       "sourceKey": "boxShadow.toggle-thumb",
-      "evidence": "tailwind.config.cjs:324-324"
+      "evidence": "tailwind.config.cjs:329-329"
     },
     "elevation.tooltip": {
       "value": "0 4px 4px -2px rgba(17,34,68,0.06), 0 2px 4px -2px rgba(0,51,51,0.02), 0 0 2px #e0e0e0",
       "sourceKey": "boxShadow.tooltip",
-      "evidence": "tailwind.config.cjs:325-325"
+      "evidence": "tailwind.config.cjs:330-330"
     },
     "elevation.plan-card": {
       "value": "0 1px 2px -1px rgba(26,38,64,0.08), 0 2px 4px rgba(26,51,77,0.04)",
       "sourceKey": "boxShadow.plan-card",
-      "evidence": "tailwind.config.cjs:326-326"
+      "evidence": "tailwind.config.cjs:331-331"
     },
     "elevation.plan-card-featured": {
       "value": "0 0 0 4px rgba(78,137,245,0.1), 0 1px 2px -1px rgba(29,39,69,0.1), 0 2px 4px rgba(34,34,68,0.06)",
       "sourceKey": "boxShadow.plan-card-featured",
-      "evidence": "tailwind.config.cjs:327-327"
+      "evidence": "tailwind.config.cjs:332-332"
     },
     "elevation.story-frame": {
       "value": "0 6px 20px -2px rgba(26,38,64,0.08), 0 2px 6px rgba(34,34,68,0.06)",
       "sourceKey": "boxShadow.story-frame",
-      "evidence": "tailwind.config.cjs:328-328"
+      "evidence": "tailwind.config.cjs:333-333"
     },
     "elevation.segment-pill": {
       "value": "0 0 0 1px rgba(26,26,26,0.04), 0 1px 1px -0.5px rgba(26,26,26,0.04), 0 3px 3px -1.5px rgba(26,26,26,0.04)",
       "sourceKey": "boxShadow.segment-pill",
-      "evidence": "tailwind.config.cjs:329-329"
+      "evidence": "tailwind.config.cjs:334-334"
     },
     "elevation.media-ring": {
       "value": "inset 0 0 0 1px rgba(29,29,29,0.1)",
@@ -129,47 +129,47 @@
     "elevation.app-tile": {
       "value": "0 0 0 4px rgba(166,179,191,0.08), 0 6px 20px -2px rgba(26,38,64,0.08), 0 2px 6px rgba(34,34,68,0.06)",
       "sourceKey": "boxShadow.app-tile",
-      "evidence": "tailwind.config.cjs:332-332"
+      "evidence": "tailwind.config.cjs:337-337"
     },
     "elevation.creator-slide": {
       "value": "0 0 0 1px rgba(28,29,31,0.05), 0 1px 1px -0.5px rgba(28,29,31,0.05), 0 3px 3px -1.5px rgba(28,29,31,0.05), 0 6px 6px -3px rgba(28,29,31,0.05), 0 0 0 4px rgba(164,173,186,0.08), 0 0 0 8px #fff",
       "sourceKey": "boxShadow.creator-slide",
-      "evidence": "tailwind.config.cjs:333-333"
+      "evidence": "tailwind.config.cjs:338-338"
     },
     "elevation.tier-card": {
       "value": "0 1px 3px 0 rgba(0,0,0,0.01), 0 2px 4px -1px rgba(0,0,0,0.02), 0 4px 8px -2px rgba(0,0,0,0.03), 0 8px 16px -4px rgba(0,0,0,0.04), 0 16px 32px -8px rgba(0,0,0,0.05), 0 0 0 1px rgba(28,29,31,0.05)",
       "sourceKey": "boxShadow.tier-card",
-      "evidence": "tailwind.config.cjs:335-335"
+      "evidence": "tailwind.config.cjs:340-340"
     },
     "elevation.app-icon": {
       "value": "0 1px 1px -0.5px rgba(34,34,68,0.06), 0 2px 2px -1px rgba(26,38,64,0.08), 0 4px 4px -2px rgba(34,34,68,0.06), 0 8px 8px -4px rgba(34,34,68,0.06)",
       "sourceKey": "boxShadow.app-icon",
-      "evidence": "tailwind.config.cjs:337-337"
+      "evidence": "tailwind.config.cjs:342-342"
     },
     "elevation.gallery": {
       "value": "0 1px 1px -0.5px rgba(29,39,69,0.1), 0 4px 4px -1px rgba(26,38,64,0.08), 0 4px 8px -2px rgba(34,34,68,0.06), 0 16px 16px -8px rgba(26,38,64,0.08)",
       "sourceKey": "boxShadow.gallery",
-      "evidence": "tailwind.config.cjs:338-338"
+      "evidence": "tailwind.config.cjs:343-343"
     },
     "elevation.number-badge": {
       "value": "0 2px 4px rgba(26,51,77,0.04), 0 1px 2px -1px rgba(26,38,64,0.08)",
       "sourceKey": "boxShadow.number-badge",
-      "evidence": "tailwind.config.cjs:339-339"
+      "evidence": "tailwind.config.cjs:344-344"
     },
     "elevation.agent-card": {
       "value": "0 1px 2px rgba(0,0,0,0.05)",
       "sourceKey": "boxShadow.agent-card",
-      "evidence": "tailwind.config.cjs:341-341"
+      "evidence": "tailwind.config.cjs:346-346"
     },
     "elevation.well-card": {
       "value": "0 0 2px rgba(28,40,64,0.22), 0 1px 3px rgba(24,41,75,0.04), 0 2px 4px -2px rgba(24,39,75,0.02), 0 4px 4px -2px rgba(24,39,75,0.04)",
       "sourceKey": "boxShadow.well-card",
-      "evidence": "tailwind.config.cjs:342-342"
+      "evidence": "tailwind.config.cjs:347-347"
     },
     "elevation.prompt-box": {
       "value": "0 2px 8px rgba(0,0,0,0.05)",
       "sourceKey": "boxShadow.prompt-box",
-      "evidence": "tailwind.config.cjs:343-343"
+      "evidence": "tailwind.config.cjs:348-348"
     }
   }
 }

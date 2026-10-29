@@ -26,6 +26,18 @@
         "tag": "export function QuoteReveal(",
         "lines": "148-205",
         "citation": "src/components/marketing/Blocks.jsx:148-205"
+      },
+      "scroll-lit": {
+        "file": "src/components/platform/Sections.jsx",
+        "tag": "export function ScrollQuote(",
+        "lines": "325-387",
+        "citation": "src/components/platform/Sections.jsx:325-387"
+      },
+      "blueprint-portrait": {
+        "file": "src/components/platform/developers/Testimonial.jsx",
+        "tag": "export default function Testimonial(",
+        "lines": "157-191",
+        "citation": "src/components/platform/developers/Testimonial.jsx:157-191"
       }
     }
   },
@@ -34,14 +46,17 @@
     "category": "TESTIMONIAL"
   },
   "retrievalEligible": true,
-  "purpose": "A single customer/partner quote: scroll-linked serif word reveal under the dark curtain (home), or a portrait + in-view word reveal (customers, partners) with optional favourite-feature chips.",
+  "purpose": "A single customer/partner quote: scroll-linked serif word reveal under the dark curtain (home), a portrait + in-view word reveal (customers, partners) with optional favourite-feature chips, a scroll-lit serif quote on a dotted field (platform pages), or a dark blueprint quote beside a dithered portrait canvas (developer page, up to two per page).",
   "themes": [
-    "light"
+    "light",
+    "dark"
   ],
   "variants": [
     "scroll-curtain",
     "portrait",
-    "portrait-features"
+    "portrait-features",
+    "scroll-lit",
+    "blueprint-portrait"
   ],
   "variantRequirements": {
     "portrait": [
@@ -116,13 +131,14 @@
     ]
   },
   "constraints": {
-    "maxPerPage": 1
+    "maxPerPage": 2
   },
   "motion": {
     "allowedPatterns": [
       "word-reveal-scroll",
       "word-reveal-in-view",
-      "curtain-overlap"
+      "curtain-overlap",
+      "canvas-field"
     ],
     "reducedMotionFallback": "static-final-state",
     "evidence": "tokens/00-foundation/motion-patterns.json"
@@ -134,6 +150,11 @@
         "at": "below-lg",
         "change": "stack",
         "detail": "portrait above quote; serif 28/36.4 -> 24/31.2 (home 48/52 -> 32/36)."
+      },
+      {
+        "at": "below-lg",
+        "change": "resize-type",
+        "detail": "scroll-lit serif 40/44 -> 32/36; guide rows 160 -> 100."
       }
     ]
   },
@@ -183,6 +204,48 @@
         "variant": "portrait-features",
         "instance": 0,
         "heightPx": 452
+      },
+      {
+        "route": "/platform/ask",
+        "variant": "scroll-lit",
+        "instance": 0,
+        "heightPx": 630
+      },
+      {
+        "route": "/platform/call-intelligence",
+        "variant": "scroll-lit",
+        "instance": 0,
+        "heightPx": 558
+      },
+      {
+        "route": "/platform/developers",
+        "variant": "blueprint-portrait",
+        "instance": 0,
+        "heightPx": 579.2
+      },
+      {
+        "route": "/platform/developers",
+        "variant": "blueprint-portrait",
+        "instance": 1,
+        "heightPx": 579.2
+      },
+      {
+        "route": "/platform/enrichment",
+        "variant": "scroll-lit",
+        "instance": 0,
+        "heightPx": 800
+      },
+      {
+        "route": "/platform/sequences",
+        "variant": "scroll-lit",
+        "instance": 0,
+        "heightPx": 558
+      },
+      {
+        "route": "/platform/workflows",
+        "variant": "scroll-lit",
+        "instance": 0,
+        "heightPx": 586
       }
     ],
     "evidence": "extraction/measured-values.json#/sectionHeights"
@@ -203,6 +266,30 @@
     {
       "route": "/partners/creator-partners",
       "variant": "portrait-features"
+    },
+    {
+      "route": "/platform/ask",
+      "variant": "scroll-lit"
+    },
+    {
+      "route": "/platform/call-intelligence",
+      "variant": "scroll-lit"
+    },
+    {
+      "route": "/platform/developers",
+      "variant": "blueprint-portrait"
+    },
+    {
+      "route": "/platform/enrichment",
+      "variant": "scroll-lit"
+    },
+    {
+      "route": "/platform/sequences",
+      "variant": "scroll-lit"
+    },
+    {
+      "route": "/platform/workflows",
+      "variant": "scroll-lit"
     }
   ]
 }

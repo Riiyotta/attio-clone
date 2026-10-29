@@ -1,5 +1,58 @@
 # Changelog
 
+## 1.2.0
+
+Reconciliation after the twelve `/platform/*` routes were built and mounted in the clone (review finding: 1.1.0 reported
+`midBuild: true` with 12 pending routes).
+
+- **Clone (outside this folder, recorded here because the repo describes it).** All twelve platform routes now render:
+  seven pages and the shared platform section library were imported from an uncommitted working tree and five were built
+  new (ask, call-intelligence, data, sequences, workflows: new heroes, ask tabs, assistant block, product showcase, agent
+  columns), then every page was measured against the live site with a headless browser at 1440/768/390. Copy is invented
+  and was swept against the live pages: every heading, paragraph and card that matched live text exactly, or shared a run
+  of five words with it, was rewritten (57 hits on the first sweep, including some in the imported pages; the remainder
+  are generic UI labels such as "Start for free", "Sales pipeline", "Product demo"). Media boxes hold original JSX/SVG mock
+  UI laid out like the live screenshots; no live image was downloaded or hotlinked.
+- **Routes.** 31 mounted route patterns (was 19), each mapped exactly once; `templates/pending-routes.json` is empty and
+  `sourceProject.midBuild` is removed. `verify_all` now fails if `midBuild` is set while nothing is pending (or the
+  reverse); `prove_drift` proves it.
+- **Templates.** `platform-feature` (11 routes) and `developer-platform` (1 route). The live site renders platform pages in
+  two visual shells (v2, legacy); both serve one purpose with one section library, so they normalise to one template with a
+  `feature-body` region (4-9 blocks, any order) and the shell carried by section variants. The root IA keeps the spec's
+  three page-inventory shells and records the mapping (`ia.json` `meta.designRepoNote`).
+- **Sections.** 22 new contracts (89 total): `hero.platform-feature` (11 artwork variants), `hero.developer-blueprint`,
+  `features.split-accordion`, `features.media-card-grid`, `features.center-media`, `features.icon-columns`,
+  `features.tagged-quad`, `features.text-columns`, `features.card-marquee`, `features.orbit-columns`,
+  `features.integration-arc`, `features.tabbed-showcase`, `features.bento-grid`, `features.product-showcase`,
+  `features.context-band`, `features.assistant-intel`, `social-proof.stat-highlight`, `navigation.platform-links`,
+  `features.blueprint-cards` (repeatable), `content.contribution-heatmap`, `features.developer-apps`,
+  `conversion.developer-cta`. New variants on existing contracts: `testimonial.quote` scroll-lit + blueprint-portrait
+  (`maxPerPage` 2, the developer page has two), `social-proof.logo-wall` platform-band, `conversion.final-cta`
+  streak-band (home) + dome (platform), `conversion.newsletter-signup` band (careers) + inline (hub page). The two contracts
+  that gained their first variants made existing examples and the home/careers templates name their variant.
+- **Motion.** New pattern `scroll-parallax-rows` (scroll-linked marquee rows, not a time loop). The legacy split accordion
+  now pauses while out of view, re-sampled on the live site (item 2 still active after scrolling away and back), instead of
+  advancing forever once seen.
+- **Measured evidence.** Section heights re-measured on the rebuilt clone for every route at 1440 (32 pages) plus 768/390
+  document heights (64). The 20 pages measured in 1.1.0 kept their document heights (0px delta). `measure_sections.mjs`
+  gains `block:N` selectors (the N-th non-empty `<main>` block, the spec's B# numbering) and waits for `load` + 1.5s instead
+  of `networkidle` (in-page loops on the platform pages keep the network busy). Wrapper gate: 0 errors, 1 warning (the
+  architecture hero, unchanged).
+- **Tokens.** `color.dev.dash` / `color.dev.well` are back (353 tokens): 1.1.0 removed them because they existed only in
+  uncommitted sources; they are committed now. Every tailwind, SiteHeader, CustomerLogos and index.css citation was remapped
+  to its new line after the source edits (diff-based, then content-checked by `verify_all`).
+- **Generation safety.** `schema/source-brand.json` adds the live platform pages' headline phrases, the real customer names
+  quoted there, and the clone's new invented people, companies and product terms; the reference copy corpus is regenerated
+  from all 32 measured pages (superset of 1.1.0). Generated examples for both new templates (fictional brand, `.example`
+  URLs) and reference examples for `/platform/sequences` and `/platform/developers`.
+- **Proofs.** Adversarial suite: 22 new platform mutations (live headline reuse, real/reference people, reference mocks and
+  source screenshots, clone product terms, source URLs, wrong CTA variant, missing variant fields, region bounds, order,
+  second hero, quadruple card grid, cross-template sections, missing developer CTA, route/template mismatch, time-loop
+  motion on the marquee). `prove_drift` adds 4 cases (stale `midBuild`, platform route moved back to pending, platform
+  section never measured, platform template dropping a section its examples use).
+- **Clone parity (R12).** A per-section live-vs-clone harness is now part of the repo (`extraction/parity_capture.mjs`,
+  `extraction/parity_compare.py`); results and exceptions are in README and `measured-values.json -> cloneParity.platform`.
+
 ## 1.1.0
 
 Revision after an independent review found `verify_all` at 16 pass / 4 fail in a fresh clone of the committed repo.

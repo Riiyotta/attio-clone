@@ -1,0 +1,128 @@
+{
+  "id": "features.integration-arc",
+  "title": "Integration arc strip",
+  "status": "measured",
+  "source": {
+    "id": "src:Sections#export-function-IntegrationStrip",
+    "file": "src/components/platform/Sections.jsx",
+    "tag": "export function IntegrationStrip(",
+    "lines": "398-448",
+    "citation": "src/components/platform/Sections.jsx:398-448",
+    "variantSources": {
+      "v2": {
+        "file": "src/components/platform/Sections.jsx",
+        "tag": "export function IntegrationStrip(",
+        "lines": "398-448",
+        "citation": "src/components/platform/Sections.jsx:398-448"
+      },
+      "legacy": {
+        "file": "src/components/platform/Sections.jsx",
+        "tag": "export function IntegrationStrip(",
+        "lines": "398-448",
+        "citation": "src/components/platform/Sections.jsx:398-448"
+      }
+    }
+  },
+  "semantic": {
+    "id": "features.integration-arc",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "purpose": "Short centred heading and one-line subhead over a large dashed arc with round tool tiles placed along it (connected meeting / assistant tools).",
+  "themes": [
+    "light"
+  ],
+  "variants": [
+    "v2",
+    "legacy"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "title": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 7,
+        "x-maxWordsEvidence": "S-STRIP h2 c20-c34"
+      },
+      "subhead": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 12,
+        "x-maxWordsEvidence": "S-STRIP p c53-c61"
+      },
+      "tiles": {
+        "type": "array",
+        "minItems": 3,
+        "maxItems": 8,
+        "items": {
+          "$ref": "#/definitions/icon"
+        },
+        "x-countEvidence": "6 tiles in the clone"
+      }
+    },
+    "required": [
+      "title",
+      "subhead",
+      "tiles"
+    ]
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "static"
+    ],
+    "reducedMotionFallback": "none-needed",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "reflow",
+        "detail": "arc stays 1440 wide and is clipped; header pads 80/48 -> 100/60."
+      }
+    ]
+  },
+  "assetSlots": [],
+  "generatedAssetRoles": [
+    "copy.original",
+    "icon.stroke-ui"
+  ],
+  "composes": [
+    "primitive.stroke-icon",
+    "component.guide-row"
+  ],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/platform/call-intelligence",
+        "variant": "legacy",
+        "instance": 0,
+        "heightPx": 356
+      },
+      {
+        "route": "/platform/mcp",
+        "variant": "v2",
+        "instance": 0,
+        "heightPx": 356
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/platform/call-intelligence",
+      "variant": "legacy"
+    },
+    {
+      "route": "/platform/mcp",
+      "variant": "v2"
+    }
+  ]
+}

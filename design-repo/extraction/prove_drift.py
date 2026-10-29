@@ -163,6 +163,20 @@ def m_adversarial_gone(r):
 def m_malformed_cite(r):
     d = jl(r, "sections/faq.accordion.json"); d["source"]["lines"] = 54; jw(r, "sections/faq.accordion.json", d)
 
+def m_midbuild_stale(r):
+    d = jl(r, "registry.manifest.json"); d["sourceProject"]["midBuild"] = True; jw(r, "registry.manifest.json", d)
+def m_platform_pending(r):
+    d = jl(r, "templates/routes.json"); d["routes"] = [x for x in d["routes"] if x["route"] != "/platform/ask"]; jw(r, "templates/routes.json", d)
+    t = jl(r, "templates/templates.json"); t["templates"]["platform-feature"]["routes"].remove("/platform/ask"); jw(r, "templates/templates.json", t)
+    p = jl(r, "templates/pending-routes.json"); p["routes"] = [{"route": "/platform/ask", "status": "pending-not-mounted"}]; jw(r, "templates/pending-routes.json", p)
+def m_platform_unmeasured(r):
+    d = jl(r, "extraction/measured-values.json")
+    for pg in d["sectionHeights"]["pages"]:
+        pg["sections"] = [s for s in pg["sections"] if s["section"] != "features.assistant-intel"]
+    jw(r, "extraction/measured-values.json", d)
+def m_platform_template_drift(r):
+    t = jl(r, "templates/templates.json"); t["templates"]["platform-feature"]["nodes"][2]["allowedSections"].remove("features.split-accordion"); jw(r, "templates/templates.json", t)
+
 CASES = [  # (name, mutation, expected failing check, needs sibling source)
     ("phantom allowlist entry", m_phantom, "allowlist-parity", False),
     ("orphan contract (allowlist entry removed)", m_orphan, "allowlist-parity", False),
@@ -214,6 +228,10 @@ CASES = [  # (name, mutation, expected failing check, needs sibling source)
     ("motion pattern used by a new section removed", m_motion_new, "contracts", False),
     ("runtime-looking section not pinned ineligible", m_runtime_new, "contracts", False),
     ("citation object with a non-string lines field", m_malformed_cite, "citations", True),
+    ("manifest keeps midBuild=true with no pending routes", m_midbuild_stale, "manifest-counts", False),
+    ("mounted platform route moved back to pending", m_platform_pending, "routes", True),
+    ("platform section never measured", m_platform_unmeasured, "wrapper-gate", False),
+    ("platform template drops a section its examples use", m_platform_template_drift, "semantic-examples", False),
 ]
 
 def run(root):

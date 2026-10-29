@@ -1,0 +1,363 @@
+{
+  "id": "features.media-card-grid",
+  "title": "Media card grid",
+  "status": "measured",
+  "source": {
+    "id": "src:Grids#export-function-MediaGrid3",
+    "file": "src/components/platform/Grids.jsx",
+    "tag": "export function MediaGrid3(",
+    "lines": "7-31",
+    "citation": "src/components/platform/Grids.jsx:7-31",
+    "variantSources": {
+      "v2-three": {
+        "file": "src/components/platform/Grids.jsx",
+        "tag": "export function MediaGrid3(",
+        "lines": "7-31",
+        "citation": "src/components/platform/Grids.jsx:7-31"
+      },
+      "v2-six": {
+        "file": "src/components/platform/Grids.jsx",
+        "tag": "export function MediaGrid3(",
+        "lines": "7-31",
+        "citation": "src/components/platform/Grids.jsx:7-31"
+      },
+      "legacy-media": {
+        "file": "src/components/platform/Grids.jsx",
+        "tag": "export function LegacyGrid3(",
+        "lines": "52-82",
+        "citation": "src/components/platform/Grids.jsx:52-82"
+      },
+      "legacy-icon": {
+        "file": "src/components/platform/Grids.jsx",
+        "tag": "export function LegacyGrid3(",
+        "lines": "52-82",
+        "citation": "src/components/platform/Grids.jsx:52-82"
+      },
+      "legacy-indexed": {
+        "file": "src/components/platform/Grids.jsx",
+        "tag": "export function LegacyGrid2Q(",
+        "lines": "88-124",
+        "citation": "src/components/platform/Grids.jsx:88-124"
+      }
+    }
+  },
+  "semantic": {
+    "id": "features.media-card-grid",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "purpose": "Two-tone heading over a grid of capability cards (artwork or icon, title, one or two lines of body); legacy variants frame the grid with dashed guides and hatch gutters, the indexed 2x2 variant numbers its cards and can carry one inline serif quote row.",
+  "themes": [
+    "light"
+  ],
+  "variants": [
+    "v2-three",
+    "v2-six",
+    "legacy-media",
+    "legacy-icon",
+    "legacy-indexed"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "heading": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "lead": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 8,
+            "x-maxWordsEvidence": "two-tone lead: S-GRID3 / S-GRID-L3 / S-GRID-L2Q lead c17-c42, continuation c40-c109"
+          },
+          "continuation": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 20,
+            "x-maxWordsEvidence": "two-tone continuation: S-GRID3 / S-GRID-L3 / S-GRID-L2Q lead c17-c42, continuation c40-c109"
+          }
+        },
+        "required": [
+          "lead",
+          "continuation"
+        ]
+      },
+      "cards": {
+        "type": "array",
+        "minItems": 3,
+        "maxItems": 6,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "title": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 8,
+              "x-maxWordsEvidence": "card h3 c10-c35"
+            },
+            "body": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 20,
+              "x-maxWordsEvidence": "card p c35-c93"
+            },
+            "media": {
+              "$ref": "#/definitions/media",
+              "x-assetRoles": [
+                "product.reference-mock",
+                "product.generated-visual",
+                "illustration.reference-art",
+                "illustration.generated-abstract",
+                "illustration.decorative-pattern",
+                "chart.illustrative"
+              ]
+            },
+            "icon": {
+              "$ref": "#/definitions/icon"
+            }
+          },
+          "required": [
+            "title",
+            "body"
+          ]
+        },
+        "x-countEvidence": "3 (three-up), 4 (indexed 2x2), 6 (v2-six)"
+      },
+      "quote": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "text": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 24,
+            "x-maxWordsEvidence": "inline quote c95-c110 (~20 words)"
+          },
+          "person": {
+            "$ref": "#/definitions/person"
+          }
+        },
+        "required": [
+          "text",
+          "person"
+        ]
+      }
+    },
+    "required": [
+      "heading",
+      "cards"
+    ]
+  },
+  "constraints": {
+    "maxPerPage": 3
+  },
+  "motion": {
+    "allowedPatterns": [
+      "static",
+      "hover-micro"
+    ],
+    "reducedMotionFallback": "none-needed",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "stack",
+        "detail": "v2 shell goes full-bleed (no side borders), spacers 128 -> 64, inset 32px; H2 40/46 -> 32/36.8; grids collapse to one column."
+      },
+      {
+        "at": "below-lg",
+        "change": "resize-type",
+        "detail": "legacy shell keeps the bordered container (576 at 768 / 342 at 390); header pads 160/80 -> 100/60; H2 32/36 -> 28/34; guide rows 160 -> 100."
+      },
+      {
+        "at": "below-lg",
+        "change": "collapse-grid",
+        "detail": "cards stack one per row; the indexed variant moves its quote row to the end."
+      }
+    ]
+  },
+  "assetSlots": [
+    {
+      "field": ".cards[].media",
+      "assetRoles": [
+        "product.reference-mock",
+        "product.generated-visual",
+        "illustration.reference-art",
+        "illustration.generated-abstract",
+        "illustration.decorative-pattern",
+        "chart.illustrative"
+      ]
+    }
+  ],
+  "generatedAssetRoles": [
+    "chart.illustrative",
+    "copy.original",
+    "icon.stroke-ui",
+    "illustration.generated-abstract",
+    "person.fictional-portrait",
+    "product.generated-visual"
+  ],
+  "composes": [
+    "component.two-tone-heading",
+    "component.guide-row",
+    "component.hatch-gutter",
+    "component.dot-pattern",
+    "primitive.dashed-rule",
+    "primitive.overline",
+    "primitive.stroke-icon",
+    "primitive.asset-slot"
+  ],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/platform/call-intelligence",
+        "variant": "legacy-media",
+        "instance": 0,
+        "heightPx": 984.6
+      },
+      {
+        "route": "/platform/call-intelligence",
+        "variant": "legacy-indexed",
+        "instance": 1,
+        "heightPx": 1948.9
+      },
+      {
+        "route": "/platform/data",
+        "variant": "legacy-indexed",
+        "instance": 0,
+        "heightPx": 2006.9
+      },
+      {
+        "route": "/platform/data",
+        "variant": "legacy-icon",
+        "instance": 1,
+        "heightPx": 640
+      },
+      {
+        "route": "/platform/data",
+        "variant": "legacy-media",
+        "instance": 2,
+        "heightPx": 1020.6
+      },
+      {
+        "route": "/platform/enrichment",
+        "variant": "v2-three",
+        "instance": 0,
+        "heightPx": 911.5
+      },
+      {
+        "route": "/platform/mcp",
+        "variant": "v2-three",
+        "instance": 0,
+        "heightPx": 889.5
+      },
+      {
+        "route": "/platform/reporting",
+        "variant": "v2-six",
+        "instance": 0,
+        "heightPx": 1419.1
+      },
+      {
+        "route": "/platform/sequences",
+        "variant": "legacy-media",
+        "instance": 0,
+        "heightPx": 984.6
+      },
+      {
+        "route": "/platform/sequences",
+        "variant": "legacy-indexed",
+        "instance": 1,
+        "heightPx": 1512.7
+      },
+      {
+        "route": "/platform/universal-context",
+        "variant": "v2-three",
+        "instance": 0,
+        "heightPx": 889.5
+      },
+      {
+        "route": "/platform/web-agent",
+        "variant": "v2-three",
+        "instance": 0,
+        "heightPx": 911.5
+      },
+      {
+        "route": "/platform/workflows",
+        "variant": "legacy-media",
+        "instance": 0,
+        "heightPx": 948.6
+      },
+      {
+        "route": "/platform/workflows",
+        "variant": "legacy-icon",
+        "instance": 1,
+        "heightPx": 604
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/platform/call-intelligence",
+      "variant": "legacy-media"
+    },
+    {
+      "route": "/platform/call-intelligence",
+      "variant": "legacy-indexed"
+    },
+    {
+      "route": "/platform/data",
+      "variant": "legacy-indexed"
+    },
+    {
+      "route": "/platform/data",
+      "variant": "legacy-icon"
+    },
+    {
+      "route": "/platform/data",
+      "variant": "legacy-media"
+    },
+    {
+      "route": "/platform/enrichment",
+      "variant": "v2-three"
+    },
+    {
+      "route": "/platform/mcp",
+      "variant": "v2-three"
+    },
+    {
+      "route": "/platform/reporting",
+      "variant": "v2-six"
+    },
+    {
+      "route": "/platform/sequences",
+      "variant": "legacy-media"
+    },
+    {
+      "route": "/platform/sequences",
+      "variant": "legacy-indexed"
+    },
+    {
+      "route": "/platform/universal-context",
+      "variant": "v2-three"
+    },
+    {
+      "route": "/platform/web-agent",
+      "variant": "v2-three"
+    },
+    {
+      "route": "/platform/workflows",
+      "variant": "legacy-media"
+    },
+    {
+      "route": "/platform/workflows",
+      "variant": "legacy-icon"
+    }
+  ]
+}

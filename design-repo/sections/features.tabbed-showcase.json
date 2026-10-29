@@ -1,0 +1,204 @@
+{
+  "id": "features.tabbed-showcase",
+  "title": "Tabbed showcase",
+  "status": "measured",
+  "source": {
+    "id": "src:Sections#export-function-Tabs",
+    "file": "src/components/platform/Sections.jsx",
+    "tag": "export function Tabs(",
+    "lines": "522-590",
+    "citation": "src/components/platform/Sections.jsx:522-590",
+    "variantSources": {
+      "pill-tabs": {
+        "file": "src/components/platform/Sections.jsx",
+        "tag": "export function Tabs(",
+        "lines": "522-590",
+        "citation": "src/components/platform/Sections.jsx:522-590"
+      },
+      "audience-ruler": {
+        "file": "src/components/platform/legacy.jsx",
+        "tag": "export function AskTabs(",
+        "lines": "208-261",
+        "citation": "src/components/platform/legacy.jsx:208-261"
+      }
+    }
+  },
+  "semantic": {
+    "id": "features.tabbed-showcase",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "purpose": "Heading, a row of click-only tabs (outlined pills, or audience labels over a tick ruler), and one framed panel: a text column (title + description or section list) beside a dotted media well.",
+  "themes": [
+    "light"
+  ],
+  "variants": [
+    "pill-tabs",
+    "audience-ruler"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "heading": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "lead": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 8,
+            "x-maxWordsEvidence": "two-tone lead: S-TABS lead c25-c38, continuation c33-c76"
+          },
+          "continuation": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 12,
+            "x-maxWordsEvidence": "two-tone continuation: S-TABS lead c25-c38, continuation c33-c76"
+          }
+        },
+        "required": [
+          "lead",
+          "continuation"
+        ]
+      },
+      "tabs": {
+        "type": "array",
+        "minItems": 3,
+        "maxItems": 5,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "label": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 3,
+              "x-maxWordsEvidence": "tab label c5-c19"
+            },
+            "title": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 10,
+              "x-maxWordsEvidence": "panel h3 c6-c48"
+            },
+            "description": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 14,
+              "x-maxWordsEvidence": "panel p c56-c60"
+            },
+            "media": {
+              "$ref": "#/definitions/media",
+              "x-assetRoles": [
+                "product.reference-mock",
+                "product.generated-visual",
+                "chart.illustrative"
+              ]
+            }
+          },
+          "required": [
+            "label",
+            "title",
+            "media"
+          ]
+        },
+        "x-countEvidence": "3 pill tabs + More / 5 audience tabs"
+      },
+      "moreLink": {
+        "$ref": "#/definitions/link"
+      }
+    },
+    "required": [
+      "heading",
+      "tabs"
+    ]
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "featured-tab-enter",
+      "hover-micro"
+    ],
+    "reducedMotionFallback": "instant-state-change",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "resize-type",
+        "detail": "legacy shell keeps the bordered container (576 at 768 / 342 at 390); header pads 160/80 -> 100/60; H2 32/36 -> 28/34; guide rows 160 -> 100."
+      },
+      {
+        "at": "below-lg",
+        "change": "hide",
+        "detail": "the left text panel hides; the media well keeps its aspect; tab pills wrap (12/18)."
+      }
+    ]
+  },
+  "assetSlots": [
+    {
+      "field": ".tabs[].media",
+      "assetRoles": [
+        "product.reference-mock",
+        "product.generated-visual",
+        "chart.illustrative"
+      ]
+    }
+  ],
+  "generatedAssetRoles": [
+    "chart.illustrative",
+    "copy.original",
+    "product.generated-visual",
+    "url.placeholder"
+  ],
+  "composes": [
+    "component.segmented-tabs",
+    "component.dot-pattern",
+    "component.guide-row",
+    "primitive.hairline"
+  ],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/platform/ask",
+        "variant": "audience-ruler",
+        "instance": 0,
+        "heightPx": 1104
+      },
+      {
+        "route": "/platform/call-intelligence",
+        "variant": "pill-tabs",
+        "instance": 0,
+        "heightPx": 1046
+      },
+      {
+        "route": "/platform/data",
+        "variant": "pill-tabs",
+        "instance": 0,
+        "heightPx": 1082
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/platform/ask",
+      "variant": "audience-ruler"
+    },
+    {
+      "route": "/platform/call-intelligence",
+      "variant": "pill-tabs"
+    },
+    {
+      "route": "/platform/data",
+      "variant": "pill-tabs"
+    }
+  ],
+  "notes": "No auto-advance on any tab set (sampled 20s, CLONE_SPEC_PLATFORM 3.18)."
+}

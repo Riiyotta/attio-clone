@@ -1,6 +1,6 @@
 {
   "$description": "Closed allowlist of everything a generator may instantiate or set. verify_all.py checks parity with sections/, components/, primitives/, the PageSpec schema's node properties and the asset-role registry.",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "sections": [
     {
       "id": "content.app-meta-sidebar",
@@ -19,6 +19,11 @@
     },
     {
       "id": "content.chapter-header",
+      "category": "CONTENT",
+      "retrievalEligible": true
+    },
+    {
+      "id": "content.contribution-heatmap",
       "category": "CONTENT",
       "retrievalEligible": true
     },
@@ -88,14 +93,27 @@
       "retrievalEligible": true
     },
     {
-      "id": "conversion.final-cta",
+      "id": "conversion.developer-cta",
       "category": "CONVERSION",
       "retrievalEligible": true
     },
     {
+      "id": "conversion.final-cta",
+      "category": "CONVERSION",
+      "retrievalEligible": true,
+      "variants": [
+        "streak-band",
+        "dome"
+      ]
+    },
+    {
       "id": "conversion.newsletter-signup",
       "category": "CONVERSION",
-      "retrievalEligible": true
+      "retrievalEligible": true,
+      "variants": [
+        "band",
+        "inline"
+      ]
     },
     {
       "id": "editorial.article-index",
@@ -123,7 +141,49 @@
       "retrievalEligible": true
     },
     {
+      "id": "features.assistant-intel",
+      "category": "FEATURES",
+      "retrievalEligible": true
+    },
+    {
+      "id": "features.bento-grid",
+      "category": "FEATURES",
+      "retrievalEligible": true
+    },
+    {
+      "id": "features.blueprint-cards",
+      "category": "FEATURES",
+      "retrievalEligible": true,
+      "variants": [
+        "cards",
+        "cards-with-quote"
+      ]
+    },
+    {
+      "id": "features.card-marquee",
+      "category": "FEATURES",
+      "retrievalEligible": true,
+      "variants": [
+        "v2",
+        "legacy"
+      ]
+    },
+    {
       "id": "features.cell-grid",
+      "category": "FEATURES",
+      "retrievalEligible": true
+    },
+    {
+      "id": "features.center-media",
+      "category": "FEATURES",
+      "retrievalEligible": true,
+      "variants": [
+        "top",
+        "centered"
+      ]
+    },
+    {
+      "id": "features.context-band",
       "category": "FEATURES",
       "retrievalEligible": true
     },
@@ -138,6 +198,11 @@
       "retrievalEligible": true
     },
     {
+      "id": "features.developer-apps",
+      "category": "FEATURES",
+      "retrievalEligible": true
+    },
+    {
       "id": "features.developer-platform",
       "category": "FEATURES",
       "retrievalEligible": true
@@ -148,7 +213,42 @@
       "retrievalEligible": true
     },
     {
+      "id": "features.icon-columns",
+      "category": "FEATURES",
+      "retrievalEligible": true,
+      "variants": [
+        "row",
+        "split"
+      ]
+    },
+    {
+      "id": "features.integration-arc",
+      "category": "FEATURES",
+      "retrievalEligible": true,
+      "variants": [
+        "v2",
+        "legacy"
+      ]
+    },
+    {
       "id": "features.launch-showcase",
+      "category": "FEATURES",
+      "retrievalEligible": true
+    },
+    {
+      "id": "features.media-card-grid",
+      "category": "FEATURES",
+      "retrievalEligible": true,
+      "variants": [
+        "v2-three",
+        "v2-six",
+        "legacy-media",
+        "legacy-icon",
+        "legacy-indexed"
+      ]
+    },
+    {
+      "id": "features.orbit-columns",
       "category": "FEATURES",
       "retrievalEligible": true
     },
@@ -172,6 +272,20 @@
       "retrievalEligible": true
     },
     {
+      "id": "features.product-showcase",
+      "category": "FEATURES",
+      "retrievalEligible": true
+    },
+    {
+      "id": "features.split-accordion",
+      "category": "FEATURES",
+      "retrievalEligible": true,
+      "variants": [
+        "v2",
+        "legacy"
+      ]
+    },
+    {
       "id": "features.step-list",
       "category": "FEATURES",
       "retrievalEligible": true,
@@ -181,12 +295,41 @@
       ]
     },
     {
+      "id": "features.tabbed-showcase",
+      "category": "FEATURES",
+      "retrievalEligible": true,
+      "variants": [
+        "pill-tabs",
+        "audience-ruler"
+      ]
+    },
+    {
+      "id": "features.tagged-quad",
+      "category": "FEATURES",
+      "retrievalEligible": true
+    },
+    {
+      "id": "features.text-columns",
+      "category": "FEATURES",
+      "retrievalEligible": true,
+      "variants": [
+        "columns",
+        "steps",
+        "agent-ruler"
+      ]
+    },
+    {
       "id": "hero.app-header",
       "category": "HERO",
       "retrievalEligible": true
     },
     {
       "id": "hero.changelog-intro",
+      "category": "HERO",
+      "retrievalEligible": true
+    },
+    {
+      "id": "hero.developer-blueprint",
       "category": "HERO",
       "retrievalEligible": true
     },
@@ -221,6 +364,24 @@
         "expert-quotes",
         "icon-band",
         "contribution-grid"
+      ]
+    },
+    {
+      "id": "hero.platform-feature",
+      "category": "HERO",
+      "retrievalEligible": true,
+      "variants": [
+        "chip-field",
+        "agent-canvas",
+        "kanban-board",
+        "horizon",
+        "radar",
+        "tile-grid",
+        "table-call-card",
+        "flow-diagram",
+        "sequence-stack",
+        "schema-perspective",
+        "ask-stage"
       ]
     },
     {
@@ -303,6 +464,15 @@
       "retrievalEligible": true
     },
     {
+      "id": "navigation.platform-links",
+      "category": "NAVIGATION",
+      "retrievalEligible": true,
+      "variants": [
+        "v2",
+        "legacy"
+      ]
+    },
+    {
       "id": "overlay.gallery-lightbox",
       "category": "UTILITY",
       "retrievalEligible": false
@@ -359,11 +529,17 @@
         "band",
         "grid",
         "headed",
-        "dark-statement"
+        "dark-statement",
+        "platform-band"
       ]
     },
     {
       "id": "social-proof.scale-stats",
+      "category": "SOCIAL_PROOF",
+      "retrievalEligible": true
+    },
+    {
+      "id": "social-proof.stat-highlight",
       "category": "SOCIAL_PROOF",
       "retrievalEligible": true
     },
@@ -374,7 +550,9 @@
       "variants": [
         "scroll-curtain",
         "portrait",
-        "portrait-features"
+        "portrait-features",
+        "scroll-lit",
+        "blueprint-portrait"
       ]
     }
   ],
@@ -521,6 +699,7 @@
     "scroll-typewriter",
     "scroll-lit-words",
     "canvas-field",
-    "form-feedback"
+    "form-feedback",
+    "scroll-parallax-rows"
   ]
 }

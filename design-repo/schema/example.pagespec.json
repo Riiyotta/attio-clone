@@ -1,5 +1,5 @@
 {
-  "pageSpecVersion": "1.1.0",
+  "pageSpecVersion": "1.2.0",
   "mode": "reference",
   "template": "home",
   "route": "/",
@@ -697,7 +697,8 @@
       "style": {
         "theme": "dark",
         "surface": "color.black.50"
-      }
+      },
+      "variant": "streak-band"
     },
     {
       "id": "footer",

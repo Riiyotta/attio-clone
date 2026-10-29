@@ -6,7 +6,7 @@
 // WIDTHS=1440,768,390 (sectionHeights must be taken at 1440; other widths only add docHeight).
 // For every mounted route it measures the document height and each semantic section contract's
 // DOM region (SECTION_MAP below: contract id -> CSS selector, possibly matching several elements for
-// repeatable sections), plus simple text statistics used as maxWords evidence. Read-only against the
+// repeatable sections, or block:N = the N-th non-empty <main> block on the platform routes), plus simple text statistics used as maxWords evidence. Read-only against the
 // running site; writes JSON to stdout only.
 import { createRequire } from 'node:module'
 const require = createRequire(import.meta.url)
@@ -105,6 +105,25 @@ export const SECTION_MAP = {
     ['conversion.closing-stage', 'main > section:last-child', null],
   ] },
 }
+// Platform routes: B(n) = the n-th non-empty block of <main> (display:contents wrappers unwrapped,
+// zero-height divider wrappers skipped), the same block numbering CLONE_SPEC_PLATFORM.md uses.
+const B = (n) => `block:${n}`
+const PF = 'platform-feature'
+const plat = (template, rows) => ({ template, sections: rows.map(([id, n, v]) => [id, B(n), v || null]) })
+Object.assign(SECTION_MAP, {
+  '/platform/ask': plat(PF, [['hero.platform-feature', 1, 'ask-stage'], ['features.tabbed-showcase', 2, 'audience-ruler'], ['features.context-band', 3], ['features.assistant-intel', 4], ['features.card-marquee', 5, 'legacy'], ['testimonial.quote', 6, 'scroll-lit'], ['conversion.final-cta', 7, 'dome']]),
+  '/platform/call-intelligence': plat(PF, [['hero.platform-feature', 1, 'table-call-card'], ['features.media-card-grid', 2, 'legacy-media'], ['testimonial.quote', 3, 'scroll-lit'], ['features.split-accordion', 4, 'legacy'], ['features.integration-arc', 5, 'legacy'], ['features.tabbed-showcase', 6, 'pill-tabs'], ['features.media-card-grid', 7, 'legacy-indexed'], ['navigation.platform-links', 8, 'legacy'], ['conversion.final-cta', 9, 'dome']]),
+  '/platform/custom-agents': plat(PF, [['hero.platform-feature', 1, 'agent-canvas'], ['social-proof.logo-wall', 2, 'platform-band'], ['features.split-accordion', 3, 'v2'], ['features.card-marquee', 4, 'v2'], ['social-proof.stat-highlight', 5], ['features.center-media', 6, 'top'], ['features.icon-columns', 7, 'row'], ['conversion.final-cta', 8, 'dome']]),
+  '/platform/data': plat(PF, [['hero.platform-feature', 1, 'schema-perspective'], ['features.media-card-grid', 2, 'legacy-indexed'], ['features.media-card-grid', 3, 'legacy-icon'], ['features.media-card-grid', 4, 'legacy-media'], ['features.split-accordion', 5, 'legacy'], ['features.tabbed-showcase', 6, 'pill-tabs'], ['navigation.platform-links', 7, 'legacy'], ['conversion.final-cta', 8, 'dome']]),
+  '/platform/developers': plat('developer-platform', [['hero.developer-blueprint', 1], ['features.blueprint-cards', 2, 'cards'], ['testimonial.quote', 3, 'blueprint-portrait'], ['features.blueprint-cards', 4, 'cards-with-quote'], ['features.blueprint-cards', 5, 'cards-with-quote'], ['content.contribution-heatmap', 6], ['testimonial.quote', 7, 'blueprint-portrait'], ['features.developer-apps', 8], ['conversion.developer-cta', 9]]),
+  '/platform/enrichment': plat(PF, [['hero.platform-feature', 1, 'kanban-board'], ['features.media-card-grid', 2, 'v2-three'], ['features.split-accordion', 3, 'v2'], ['features.center-media', 4, 'centered'], ['testimonial.quote', 5, 'scroll-lit'], ['features.text-columns', 6, 'columns'], ['navigation.platform-links', 7, 'v2'], ['conversion.final-cta', 8, 'dome']]),
+  '/platform/mcp': plat(PF, [['hero.platform-feature', 1, 'tile-grid'], ['features.integration-arc', 2, 'v2'], ['features.icon-columns', 3, 'split'], ['features.center-media', 4, 'top'], ['features.media-card-grid', 5, 'v2-three'], ['social-proof.stat-highlight', 6], ['social-proof.logo-wall', 7, 'platform-band'], ['features.text-columns', 8, 'steps'], ['conversion.newsletter-signup', 9, 'inline'], ['conversion.final-cta', 10, 'dome']]),
+  '/platform/reporting': plat(PF, [['hero.platform-feature', 1, 'radar'], ['social-proof.logo-wall', 2, 'platform-band'], ['features.bento-grid', 3], ['features.split-accordion', 4, 'v2'], ['features.media-card-grid', 5, 'v2-six'], ['conversion.final-cta', 6, 'dome']]),
+  '/platform/sequences': plat(PF, [['hero.platform-feature', 1, 'sequence-stack'], ['features.product-showcase', 2], ['features.media-card-grid', 3, 'legacy-media'], ['testimonial.quote', 4, 'scroll-lit'], ['features.split-accordion', 5, 'legacy'], ['features.media-card-grid', 6, 'legacy-indexed'], ['navigation.platform-links', 7, 'legacy'], ['conversion.final-cta', 8, 'dome']]),
+  '/platform/universal-context': plat(PF, [['hero.platform-feature', 1, 'horizon'], ['social-proof.logo-wall', 2, 'platform-band'], ['features.split-accordion', 3, 'v2'], ['features.center-media', 4, 'top'], ['features.media-card-grid', 5, 'v2-three'], ['features.text-columns', 6, 'columns'], ['features.tagged-quad', 7], ['conversion.final-cta', 8, 'dome']]),
+  '/platform/web-agent': plat(PF, [['hero.platform-feature', 1, 'chip-field'], ['social-proof.logo-wall', 2, 'platform-band'], ['features.split-accordion', 3, 'v2'], ['features.media-card-grid', 4, 'v2-three'], ['features.orbit-columns', 5], ['features.tagged-quad', 6], ['conversion.final-cta', 7, 'dome']]),
+  '/platform/workflows': plat(PF, [['hero.platform-feature', 1, 'flow-diagram'], ['social-proof.logo-wall', 2, 'platform-band'], ['features.card-marquee', 3, 'legacy'], ['features.text-columns', 4, 'agent-ruler'], ['testimonial.quote', 5, 'scroll-lit'], ['features.split-accordion', 6, 'legacy'], ['features.context-band', 7], ['features.media-card-grid', 8, 'legacy-media'], ['features.media-card-grid', 9, 'legacy-icon'], ['conversion.final-cta', 10, 'dome']]),
+})
 const DETAIL = { template: 'app-detail', sections: [
   ['navigation.breadcrumb-bar', 'main > div > div > aside:first-child', null],
   ['hero.app-header', 'main > div > div > header', null],
@@ -123,8 +142,8 @@ for (const width of WIDTHS) {
   const ctx = await browser.newContext({ viewport: { width, height: 900 }, reducedMotion: 'no-preference' })
   const page = await ctx.newPage()
   for (const [route, spec] of Object.entries(SECTION_MAP)) {
-    await page.goto(BASE + route, { waitUntil: 'networkidle' })
-    await page.waitForTimeout(500)
+    await page.goto(BASE + route, { waitUntil: 'load' })
+    await page.waitForTimeout(1500)
     const data = await page.evaluate(({ spec, shell, width }) => {
       const words = (t) => (t.trim() ? t.trim().split(/\s+/).length : 0)
       const stats = (el) => {
@@ -132,6 +151,15 @@ for (const width of WIDTHS) {
         const ps = [...el.querySelectorAll('p')].map((p) => words(p.textContent))
         const btn = [...el.querySelectorAll('a,button')].map((b) => words(b.textContent)).filter(Boolean)
         return { headingWordsMax: Math.max(0, ...hs), headings: hs.length, paragraphWordsMax: Math.max(0, ...ps), paragraphs: ps.length, actionWordsMax: Math.max(0, ...btn), actions: btn.length }
+      }
+      const blocks = () => {
+        const out = []
+        const walk = (el) => [...el.children].forEach((c) => {
+          if (getComputedStyle(c).display === 'contents') return walk(c)
+          if (c.getBoundingClientRect().height > 2) out.push(c)
+        })
+        walk(document.querySelector('main'))
+        return out
       }
       const box = (el) => { const r = el.getBoundingClientRect(); return { top: Math.round(r.top + scrollY), heightPx: Math.round(r.height * 10) / 10 } }
       const rows = []
@@ -145,7 +173,7 @@ for (const width of WIDTHS) {
           rows.push({ section: id, variant, selector: sel, instance: 0, count: 1, inFlow: inFlow !== false, top: Math.round(a.top + scrollY), heightPx: Math.round((z.bottom - a.top) * 10) / 10, ...(width === 1440 ? agg : {}) })
           continue
         }
-        const els = [...document.querySelectorAll(sel)]
+        const els = sel.startsWith('block:') ? [blocks()[Number(sel.slice(6)) - 1]].filter(Boolean) : [...document.querySelectorAll(sel)]
         if (!els.length) { rows.push({ section: id, variant, selector: sel, count: 0 }); continue }
         els.forEach((el, i) => rows.push({ section: id, variant, selector: sel, instance: i, count: els.length, inFlow: inFlow !== false, ...box(el), ...(width === 1440 ? stats(el) : {}) }))
       }

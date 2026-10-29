@@ -1,0 +1,212 @@
+{
+  "id": "features.blueprint-cards",
+  "title": "Blueprint card section",
+  "status": "measured",
+  "source": {
+    "id": "src:CardSection#export-default-function-CardSection",
+    "file": "src/components/platform/developers/CardSection.jsx",
+    "tag": "export default function CardSection(",
+    "lines": "159-176",
+    "citation": "src/components/platform/developers/CardSection.jsx:159-176",
+    "variantSources": {
+      "cards": {
+        "file": "src/components/platform/developers/CardSection.jsx",
+        "tag": "export default function CardSection(",
+        "lines": "159-176",
+        "citation": "src/components/platform/developers/CardSection.jsx:159-176"
+      },
+      "cards-with-quote": {
+        "file": "src/components/platform/developers/CardSection.jsx",
+        "tag": "export default function CardSection(",
+        "lines": "159-176",
+        "citation": "src/components/platform/developers/CardSection.jsx:159-176"
+      }
+    }
+  },
+  "semantic": {
+    "id": "features.blueprint-cards",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "purpose": "Dark blueprint section: two-tone header with a docs button, then one or two rows of numbered diagram cards placed on the 24-column grid; the quote variant inserts a short attributed quote strip between rows.",
+  "themes": [
+    "dark"
+  ],
+  "variants": [
+    "cards",
+    "cards-with-quote"
+  ],
+  "variantRequirements": {
+    "cards-with-quote": [
+      "quote"
+    ]
+  },
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "heading": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "lead": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 7,
+            "x-maxWordsEvidence": "two-tone lead: D-SECTION lead c27-c30, continuation c54-c91"
+          },
+          "continuation": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 18,
+            "x-maxWordsEvidence": "two-tone continuation: D-SECTION lead c27-c30, continuation c54-c91"
+          }
+        },
+        "required": [
+          "lead",
+          "continuation"
+        ]
+      },
+      "button": {
+        "$ref": "#/definitions/link"
+      },
+      "cards": {
+        "type": "array",
+        "minItems": 3,
+        "maxItems": 6,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "index": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 2,
+              "x-maxWordsEvidence": "[ 01 ] overline"
+            },
+            "body": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 18,
+              "x-maxWordsEvidence": "card p c49-c97"
+            },
+            "illustration": {
+              "$ref": "#/definitions/media",
+              "x-assetRoles": [
+                "illustration.reference-art",
+                "illustration.generated-abstract",
+                "illustration.decorative-pattern"
+              ]
+            }
+          },
+          "required": [
+            "body",
+            "illustration"
+          ]
+        },
+        "x-countEvidence": "3 (B1) / 6 (B3) / 5 (B4)"
+      },
+      "quote": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "text": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 18,
+            "x-maxWordsEvidence": "strip quote c82-c88 w16"
+          },
+          "person": {
+            "$ref": "#/definitions/person"
+          }
+        },
+        "required": [
+          "text",
+          "person"
+        ]
+      }
+    },
+    "required": [
+      "heading",
+      "button",
+      "cards"
+    ]
+  },
+  "constraints": {
+    "maxPerPage": 3,
+    "repeatable": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "static",
+      "hover-micro"
+    ],
+    "reducedMotionFallback": "none-needed",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "show-alternate-tree",
+        "detail": "absolutely placed desktop cards hide; mobile twins stack every card full width."
+      }
+    ]
+  },
+  "assetSlots": [
+    {
+      "field": ".cards[].illustration",
+      "assetRoles": [
+        "illustration.reference-art",
+        "illustration.generated-abstract",
+        "illustration.decorative-pattern"
+      ]
+    }
+  ],
+  "generatedAssetRoles": [
+    "copy.original",
+    "illustration.generated-abstract",
+    "url.placeholder"
+  ],
+  "composes": [
+    "component.two-tone-heading",
+    "primitive.overline",
+    "primitive.button",
+    "primitive.asset-slot"
+  ],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/platform/developers",
+        "variant": "cards",
+        "instance": 0,
+        "heightPx": 991.2
+      },
+      {
+        "route": "/platform/developers",
+        "variant": "cards-with-quote",
+        "instance": 1,
+        "heightPx": 1592.2
+      },
+      {
+        "route": "/platform/developers",
+        "variant": "cards-with-quote",
+        "instance": 2,
+        "heightPx": 1662.5
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/platform/developers",
+      "variant": "cards"
+    },
+    {
+      "route": "/platform/developers",
+      "variant": "cards-with-quote"
+    }
+  ]
+}

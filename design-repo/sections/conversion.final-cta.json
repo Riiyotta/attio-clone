@@ -7,14 +7,28 @@
     "file": "src/components/FinalCta.jsx",
     "tag": "export default function FinalCta(",
     "lines": "18-54",
-    "citation": "src/components/FinalCta.jsx:18-54"
+    "citation": "src/components/FinalCta.jsx:18-54",
+    "variantSources": {
+      "streak-band": {
+        "file": "src/components/FinalCta.jsx",
+        "tag": "export default function FinalCta(",
+        "lines": "18-54",
+        "citation": "src/components/FinalCta.jsx:18-54"
+      },
+      "dome": {
+        "file": "src/components/platform/Sections.jsx",
+        "tag": "export function PlatformCta(",
+        "lines": "41-69",
+        "citation": "src/components/platform/Sections.jsx:41-69"
+      }
+    }
   },
   "semantic": {
     "id": "conversion.final-cta",
     "category": "CONVERSION"
   },
   "retrievalEligible": true,
-  "purpose": "Closing conversion band: large heading and two CTAs over dark stripes with falling streaks.",
+  "purpose": "Closing conversion band: large heading and two CTAs over dark stripes with falling streaks. Variants: streak-band (home, 417 tall, H2 56/56 w500) and dome (platform pages, 450 tall, H2 56/60 w600, stripe field masked to a dome, one or two lines).",
   "themes": [
     "dark"
   ],
@@ -78,14 +92,127 @@
         "variant": null,
         "instance": 0,
         "heightPx": 417
+      },
+      {
+        "route": "/platform/ask",
+        "variant": "dome",
+        "instance": 0,
+        "heightPx": 450
+      },
+      {
+        "route": "/platform/call-intelligence",
+        "variant": "dome",
+        "instance": 0,
+        "heightPx": 450
+      },
+      {
+        "route": "/platform/custom-agents",
+        "variant": "dome",
+        "instance": 0,
+        "heightPx": 450
+      },
+      {
+        "route": "/platform/data",
+        "variant": "dome",
+        "instance": 0,
+        "heightPx": 450
+      },
+      {
+        "route": "/platform/enrichment",
+        "variant": "dome",
+        "instance": 0,
+        "heightPx": 450
+      },
+      {
+        "route": "/platform/mcp",
+        "variant": "dome",
+        "instance": 0,
+        "heightPx": 450
+      },
+      {
+        "route": "/platform/reporting",
+        "variant": "dome",
+        "instance": 0,
+        "heightPx": 450
+      },
+      {
+        "route": "/platform/sequences",
+        "variant": "dome",
+        "instance": 0,
+        "heightPx": 450
+      },
+      {
+        "route": "/platform/universal-context",
+        "variant": "dome",
+        "instance": 0,
+        "heightPx": 450
+      },
+      {
+        "route": "/platform/web-agent",
+        "variant": "dome",
+        "instance": 0,
+        "heightPx": 450
+      },
+      {
+        "route": "/platform/workflows",
+        "variant": "dome",
+        "instance": 0,
+        "heightPx": 450
       }
     ],
     "evidence": "extraction/measured-values.json#/sectionHeights"
   },
   "referenceRoutes": [
     {
-      "route": "/",
-      "variant": null
+      "route": "/"
+    },
+    {
+      "route": "/platform/ask",
+      "variant": "dome"
+    },
+    {
+      "route": "/platform/call-intelligence",
+      "variant": "dome"
+    },
+    {
+      "route": "/platform/custom-agents",
+      "variant": "dome"
+    },
+    {
+      "route": "/platform/data",
+      "variant": "dome"
+    },
+    {
+      "route": "/platform/enrichment",
+      "variant": "dome"
+    },
+    {
+      "route": "/platform/mcp",
+      "variant": "dome"
+    },
+    {
+      "route": "/platform/reporting",
+      "variant": "dome"
+    },
+    {
+      "route": "/platform/sequences",
+      "variant": "dome"
+    },
+    {
+      "route": "/platform/universal-context",
+      "variant": "dome"
+    },
+    {
+      "route": "/platform/web-agent",
+      "variant": "dome"
+    },
+    {
+      "route": "/platform/workflows",
+      "variant": "dome"
     }
+  ],
+  "variants": [
+    "streak-band",
+    "dome"
   ]
 }

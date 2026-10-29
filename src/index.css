@@ -1604,3 +1604,496 @@ html:has(.architecture-hero) [data-banner] {
   animation: hm-navigation-exit-to-right 200ms var(--ease-in-out-cubic) forwards;
 }
 /* === end homepage motion fixes === */
+
+/* === platform library + v2 === */
+/* CLONE_SPEC_PLATFORM.md (T1 v2 + shared section library). Measured values unless marked approx. */
+
+/* P7 stripe field: 8px tile of the centred 1px line, masked transparent-top -> opaque-bottom */
+.pl-stripes {
+  background-image: theme('backgroundImage.stripe-field');
+  background-size: 8px 100%;
+  background-position: center;
+}
+.pl-stripes-uc {
+  background-image: theme('backgroundImage.stripe-field-uc');
+  background-size: 8px 100%;
+  background-position: center;
+}
+/* mask-t-from-0% mask-t-to-100% */
+.pl-mask-t {
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, #000 100%);
+}
+/* mask-t-from-20% mask-t-to-100% (custom-agents marquee field) */
+.pl-mask-t-20 {
+  -webkit-mask-image: linear-gradient(to bottom, transparent 20%, #000 100%);
+  mask-image: linear-gradient(to bottom, transparent 20%, #000 100%);
+}
+/* legacy marquee line field: mask-t-to-80% */
+.pl-mask-t-80 {
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 80%);
+  mask-image: linear-gradient(to bottom, transparent 0%, #000 80%);
+}
+/* S-STRIP lower area: black, black 50%, transparent */
+.pl-mask-strip {
+  -webkit-mask-image: linear-gradient(to bottom, #000, #000 50%, transparent);
+  mask-image: linear-gradient(to bottom, #000, #000 50%, transparent);
+}
+/* legacy media wells (some): transparent 0-10%, #000 55-70%, transparent 90% */
+.pl-mask-well {
+  -webkit-mask-image: linear-gradient(transparent 0 10%, #000 55% 70%, transparent 90%);
+  mask-image: linear-gradient(transparent 0 10%, #000 55% 70%, transparent 90%);
+}
+/* S-COLUMNS-L edge fades / ask tick ruler mask-x-from-96% */
+.pl-mask-x-96 {
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 4%, #000 96%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 4%, #000 96%, transparent);
+}
+/* S-CTA stripe field, masked to the dome */
+.pl-cta-mask {
+  -webkit-mask-image: theme('backgroundImage.platform-cta-mask');
+  mask-image: theme('backgroundImage.platform-cta-mask');
+}
+/* web-agent hero grid reveal mask (radial white 55% -> black 100%), approximated with alpha */
+.pl-radial-reveal {
+  -webkit-mask-image: radial-gradient(closest-side, transparent 55%, #000 100%);
+  mask-image: radial-gradient(closest-side, transparent 55%, #000 100%);
+}
+.pl-scrollbar-none {
+  scrollbar-width: none;
+}
+.pl-scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+/* M-P1 hero copy entrance: opacity 0 + translateY(4px) -> rest, cubic-bezier(.2,0,0,1).
+   Duration and delay come from the per-route table (inline --pl-dur / --pl-delay). */
+@media (prefers-reduced-motion: no-preference) {
+  .pl-enter {
+    --enter-opacity: 0;
+    --enter-y: 4px;
+    animation: enter var(--pl-dur, 1000ms) var(--ease-in-out) var(--pl-delay, 0ms) both;
+  }
+  .pl-enter-fade {
+    --enter-opacity: 0;
+    --enter-y: 0px;
+    animation: enter var(--pl-dur, 1000ms) var(--ease-in-out) var(--pl-delay, 0ms) both;
+  }
+}
+
+/* S-LINKS arrow: opacity 0 / translateX(-1px) -> 1 / 0; 400ms out, 150ms in, 50ms active */
+.pl-link-arrow {
+  opacity: 0;
+  transform: translateX(-1px);
+  transition: opacity 400ms var(--ease-in-out), transform 400ms var(--ease-in-out);
+}
+.group:hover .pl-link-arrow,
+.group:focus-visible .pl-link-arrow {
+  opacity: 1;
+  transform: none;
+  transition-duration: 150ms;
+}
+.group:active .pl-link-arrow {
+  transition-duration: 50ms;
+}
+
+/* S-TABS legacy pills: hover bg #fafafb, 50ms in / 300ms out */
+.pl-tab-pill {
+  transition: background-color 300ms var(--ease-in-out), border-color 300ms var(--ease-in-out), color 300ms var(--ease-in-out);
+}
+.pl-tab-pill:hover {
+  background-color: theme('colors.white.200');
+  transition-duration: 50ms;
+}
+
+/* M-S4 scroll-lit serif words: #a4adba -> #1c1d1f, 600ms cubic-bezier(.2,0,0,1) */
+.pl-word {
+  color: theme('colors.black.900');
+  transition: color 600ms var(--ease-in-out);
+}
+.pl-word[data-lit] {
+  color: theme('colors.black.100');
+}
+
+/* M-S2 legacy accordion collapse: height auto <-> 0, opacity, blur(1px), ~500ms (framer, approx curve) */
+.pl-collapse {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  filter: blur(1px);
+  transition: grid-template-rows 500ms var(--ease-in-out), opacity 500ms var(--ease-in-out), filter 500ms var(--ease-in-out);
+}
+.pl-collapse[data-open] {
+  grid-template-rows: 1fr;
+  opacity: 1;
+  filter: blur(0);
+}
+.pl-collapse > * {
+  min-height: 0;
+  overflow: hidden;
+}
+
+/* web-agent hero chips: hover border #94b9ff, text #245bc2, shadow attio-1, 200ms (.4,0,.2,1) */
+.pl-chip {
+  transition: border-color 200ms cubic-bezier(0.4, 0, 0.2, 1), color 200ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.pl-chip:hover {
+  border-color: theme('colors.blue.300');
+  color: theme('colors.blue.600');
+  box-shadow: theme('boxShadow.attio-1');
+}
+.pl-chip .pl-chip-icon {
+  filter: grayscale(1);
+  opacity: 0.7;
+  transition: filter 200ms cubic-bezier(0.4, 0, 0.2, 1), opacity 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.pl-chip:hover .pl-chip-icon {
+  filter: none;
+  opacity: 1;
+}
+
+/* M-H2 custom-agents cards (keyframes as captured) */
+@keyframes custom-agents-border-draw {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes custom-agents-port-complete {
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes custom-agents-status-start {
+  0% {
+    opacity: 0;
+    top: 0;
+  }
+  15%,
+  85% {
+    opacity: 1;
+    top: -28px;
+  }
+  100% {
+    opacity: 0;
+    top: 0;
+  }
+}
+@keyframes custom-agents-status-finish {
+  0%,
+  85% {
+    opacity: 0;
+    top: 0;
+  }
+  100% {
+    opacity: 1;
+    top: -28px;
+  }
+}
+@keyframes custom-agents-completed-exit {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+}
+.pl-agent-border {
+  stroke-dashoffset: var(--pl-dash, 1000);
+}
+.pl-agent-pill {
+  opacity: 0;
+  top: 0;
+}
+@media (prefers-reduced-motion: no-preference) {
+  [data-agent-state='running'] .pl-agent-border {
+    animation: custom-agents-border-draw 2.5s linear forwards;
+  }
+  [data-agent-state='done'] .pl-agent-border {
+    stroke-dashoffset: 0;
+  }
+  [data-agent-state='running'] .pl-agent-port {
+    animation: custom-agents-port-complete 2.5s ease-in-out forwards;
+  }
+  [data-agent-state='running'] .pl-agent-pill-run {
+    animation: custom-agents-status-start 2.5s ease-in-out forwards;
+  }
+  [data-agent-state='running'] .pl-agent-pill-done {
+    animation: custom-agents-status-finish 2.5s ease-in-out forwards;
+  }
+  [data-agent-state='done'] .pl-agent-pill-done {
+    opacity: 1;
+    top: -28px;
+    animation: custom-agents-completed-exit 300ms ease-in-out 3.5s forwards;
+  }
+}
+[data-agent-state='done'] .pl-agent-port {
+  opacity: 1;
+}
+
+/* M-H3 reporting radar */
+@property --reporting-arm {
+  syntax: '<angle>';
+  inherits: true;
+  initial-value: 0deg;
+}
+@keyframes reporting-radar-arm {
+  0% {
+    --reporting-arm: var(--reporting-start-angle, 0deg);
+  }
+  100% {
+    --reporting-arm: calc(var(--reporting-start-angle, 0deg) + 360deg);
+  }
+}
+@keyframes reporting-radar-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes reporting-radar-ring-pulse {
+  0% {
+    border-color: theme('colors.white.500');
+  }
+  7% {
+    border-color: color-mix(in oklab, theme('colors.blue.500') 32%, theme('colors.white.500'));
+  }
+  26%,
+  100% {
+    border-color: theme('colors.white.500');
+  }
+}
+@keyframes reporting-radar-dot {
+  0% {
+    opacity: 0;
+    scale: 0.4;
+  }
+  3% {
+    opacity: 1;
+    scale: 2.2;
+  }
+  9%,
+  92% {
+    opacity: 1;
+    scale: 1;
+  }
+  100% {
+    opacity: 0;
+    scale: 1;
+  }
+}
+.pl-radar-sweep {
+  transform: rotate(var(--reporting-arm));
+}
+@media (prefers-reduced-motion: no-preference) {
+  .pl-radar-ring {
+    animation: reporting-radar-fade-in 450ms ease-out var(--pl-fade-delay) both,
+      reporting-radar-ring-pulse 4s linear var(--pl-pulse-delay) infinite;
+  }
+  .pl-radar-sweep {
+    animation: reporting-radar-arm 8s linear 1.835s infinite, reporting-radar-fade-in 450ms ease-out 1.835s both;
+  }
+  .pl-radar-dot {
+    animation: reporting-radar-dot var(--pl-dot-dur, 8s) linear var(--pl-dot-delay, 0s) infinite both;
+  }
+}
+
+/* M-H4 UC horizon */
+@keyframes universal-context-horizon-reveal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes universal-context-horizon-define {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  65% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .pl-horizon-enter {
+    animation: universal-context-horizon-reveal 400ms ease-out both;
+  }
+  .pl-horizon-define {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: universal-context-horizon-define 600ms ease-in-out 400ms both;
+  }
+  .pl-horizon-group {
+    animation: universal-context-horizon-reveal 500ms ease-in-out 1s both;
+  }
+}
+
+/* M-H5 mcp hero */
+@keyframes lRYFwa_logo-in {
+  0% {
+    opacity: 0;
+    filter: blur(3px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+@keyframes pl-caret-blink {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .pl-logo-in {
+    animation: lRYFwa_logo-in 800ms ease-out var(--pl-delay, 0ms) both;
+  }
+  /* gridReveal / boxReveal are class-toggled live; timing not sampled (approx 800ms fade) */
+  .pl-grid-reveal {
+    animation: universal-context-horizon-reveal 800ms ease-out 1.2s both;
+  }
+  .pl-box-reveal {
+    animation: enter 800ms var(--ease-in-out) 1.4s both;
+    --enter-opacity: 0;
+    --enter-y: 8px;
+  }
+  .pl-caret {
+    animation: pl-caret-blink 1s steps(2, jump-none) infinite;
+  }
+}
+/* H-RADAR beam wake: trails the arm (arm points up at 0deg). Colour/alpha not measured (approx). */
+.pl-radar-wake {
+  background-image: conic-gradient(from 300deg, transparent 0deg, color-mix(in oklab, theme('colors.blue.500') 6%, transparent) 60deg, transparent 60deg);
+}
+
+/* M-S2 legacy accordion fill: translateX(-100% -> 0), linear */
+@keyframes pl-legacy-fill {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+/* === end platform library + v2 === */
+
+/* === platform developers === */
+/* CLONE_SPEC_PLATFORM section 4 (T3 dark blueprint). Unit grid: 24 cols >= lg, 12 below,
+   square rows. --u resolves against the .dev-cq container (the bordered block box). */
+.dev-cq {
+  container-type: inline-size;
+}
+.dev-u {
+  --u: calc(100cqw / 12);
+}
+@media (min-width: 992px) {
+  .dev-u {
+    --u: calc(100cqw / 24);
+  }
+}
+/* Blueprint dashed lines (measured period 10px: ~5 on / 5 off) */
+.dev-dash-v {
+  background-image: repeating-linear-gradient(to bottom, currentColor 0 5px, transparent 5px 10px);
+}
+.dev-dash-h {
+  background-image: repeating-linear-gradient(to right, currentColor 0 5px, transparent 5px 10px);
+}
+/* Quote strip / apps strip: 1px stripe every 6px in secondary-background (#1c1d1f on this page) */
+.dev-stripes {
+  background-image: repeating-linear-gradient(90deg, transparent 0 5px, currentColor 5px 6px);
+}
+/* mask-{x,y,l,r,t,b}-from/to equivalents. Set --l1/--r1/--t1/--b1 (opaque stops) and
+   --l0/--r0/--t0/--b0 (transparent stops) inline. */
+.dev-fade {
+  -webkit-mask-image: linear-gradient(to right, transparent var(--l0, 0%), #000 var(--l1, 0%), #000 var(--r1, 100%), transparent var(--r0, 100%)),
+    linear-gradient(to bottom, transparent var(--t0, 0%), #000 var(--t1, 0%), #000 var(--b1, 100%), transparent var(--b0, 100%));
+  mask-image: linear-gradient(to right, transparent var(--l0, 0%), #000 var(--l1, 0%), #000 var(--r1, 100%), transparent var(--r0, 100%)),
+    linear-gradient(to bottom, transparent var(--t0, 0%), #000 var(--t1, 0%), #000 var(--b1, 100%), transparent var(--b0, 100%));
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+}
+.dev-scroll-x {
+  scrollbar-width: none;
+}
+.dev-scroll-x::-webkit-scrollbar {
+  display: none;
+}
+/* D-TESTIMONIAL word reveal: #6f7988 -> #edeff3, 600ms (.2,0,0,1) per word (inferred, M-S4) */
+.dev-word {
+  color: theme('colors.black.700');
+  transition: color 600ms var(--ease-in-out);
+}
+.dev-word[data-on] {
+  color: theme('colors.white.400');
+}
+/* D-HEATMAP cells: inline opacity, transition opacity 150ms (.2,0,0,1) */
+.dev-heat-cell {
+  transition: opacity 150ms var(--ease-in-out);
+}
+/* D-CTA mock cells: plus-lighter overlay, 0 -> 1 on hover, 150ms */
+.dev-mock-glow {
+  mix-blend-mode: plus-lighter;
+  opacity: 0;
+  transition: opacity 150ms var(--ease-in-out);
+}
+.group:hover > .dev-mock-glow {
+  opacity: 1;
+}
+/* D-APPS icon well: bg secondary-background, 0 -> .8 hover, 1 active, 700ms (.2,0,0,1) */
+.dev-app-well {
+  opacity: 0;
+  transition: opacity 700ms var(--ease-in-out);
+}
+.group:hover .dev-app-well {
+  opacity: 0.8;
+}
+.group:active .dev-app-well {
+  opacity: 1;
+}
+@media (prefers-reduced-motion: reduce) {
+  .dev-word,
+  .dev-heat-cell,
+  .dev-mock-glow,
+  .dev-app-well {
+    transition: none;
+  }
+}
+/* === end platform developers === */
+
+/* === platform legacy (T2) heroes === */
+/* CLONE_SPEC_PLATFORM 5 M-S7 / M-P1 / H-SEQ / H-DATA, re-sampled live 2026-10-29. */
+@keyframes ask-hero-rise {
+  from { opacity: 0; filter: blur(6px); transform: translateY(16px); }
+}
+@keyframes ask-hero-fade {
+  from { opacity: 0; filter: blur(6px); }
+}
+/* H-SEQ: the step stack translates up on load (stack starts 360px lower); copy enters at 4.1s. */
+@keyframes seq-hero-stack {
+  from { transform: translateY(360px); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .ask-hero-rise { animation: ask-hero-rise 800ms var(--ease-in-out) 400ms both; }
+  .ask-hero-fade { animation: ask-hero-fade 800ms var(--ease-in-out) 900ms both; }
+  .seq-hero-stack { animation: seq-hero-stack 3600ms cubic-bezier(0.65, 0, 0.35, 1) 300ms both; }
+  /* H-DATA perspective block: fade-in -spin-in-x-6 slide-in-from-bottom-6, 1.25s cubic-bezier(0,0,0,1) */
+  .data-hero-enter {
+    animation: data-hero-enter 1250ms cubic-bezier(0, 0, 0, 1) both;
+  }
+}
+@keyframes data-hero-enter {
+  from { opacity: 0; transform: translateY(24px) rotateX(-6deg); }
+}
+/* === end platform legacy heroes === */

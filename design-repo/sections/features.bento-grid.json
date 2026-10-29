@@ -1,0 +1,146 @@
+{
+  "id": "features.bento-grid",
+  "title": "Bento chart grid",
+  "status": "measured",
+  "source": {
+    "id": "src:Grids#export-function-Bento",
+    "file": "src/components/platform/Grids.jsx",
+    "tag": "export function Bento(",
+    "lines": "211-237",
+    "citation": "src/components/platform/Grids.jsx:211-237"
+  },
+  "semantic": {
+    "id": "features.bento-grid",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "purpose": "Centred legacy heading over a 2x2 bento of wide and narrow chart cards (5/3 then 3/5 of an 8-column grid), each with a chart and a title + body.",
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "heading": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "lead": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 7,
+            "x-maxWordsEvidence": "two-tone lead: S-BENTO lead c31, continuation c40"
+          },
+          "continuation": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 10,
+            "x-maxWordsEvidence": "two-tone continuation: S-BENTO lead c31, continuation c40"
+          }
+        },
+        "required": [
+          "lead",
+          "continuation"
+        ]
+      },
+      "cards": {
+        "type": "array",
+        "minItems": 4,
+        "maxItems": 4,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "title": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 7,
+              "x-maxWordsEvidence": "h3 c26-c33"
+            },
+            "body": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 16,
+              "x-maxWordsEvidence": "p c54-c74"
+            },
+            "media": {
+              "$ref": "#/definitions/media",
+              "x-assetRoles": [
+                "chart.illustrative",
+                "product.reference-mock",
+                "product.generated-visual"
+              ]
+            }
+          },
+          "required": [
+            "title",
+            "body",
+            "media"
+          ]
+        },
+        "x-countEvidence": "4 cards"
+      }
+    },
+    "required": [
+      "heading",
+      "cards"
+    ]
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "static"
+    ],
+    "reducedMotionFallback": "none-needed",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "collapse-grid",
+        "detail": "cards stack; media switches to aspect 3/2."
+      }
+    ]
+  },
+  "assetSlots": [
+    {
+      "field": ".cards[].media",
+      "assetRoles": [
+        "chart.illustrative",
+        "product.reference-mock",
+        "product.generated-visual"
+      ]
+    }
+  ],
+  "generatedAssetRoles": [
+    "chart.illustrative",
+    "copy.original",
+    "product.generated-visual"
+  ],
+  "composes": [
+    "component.two-tone-heading",
+    "primitive.asset-slot"
+  ],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/platform/reporting",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 1264
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/platform/reporting"
+    }
+  ]
+}

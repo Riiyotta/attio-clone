@@ -6,7 +6,7 @@ assets. This repo tells a generator **what can be used, how it combines, and how
 tokens, primitives, components, semantic section contracts, page templates, a compatibility graph, a
 closed Draft-07 PageSpec schema, a semantic validator and adversarial/drift proofs.
 
-Status: `design-review-pending`, `productionApproved: false`. Version 1.1.0.
+Status: `design-review-pending`, `productionApproved: false`. Version 1.2.0. Every route the clone mounts (31 route patterns, 32 measured pages) is modelled; nothing is pending.
 
 **Review status, stated plainly:** nothing in this repo has been reviewed or signed off by a human. The wrapper-gate
 whitelist entries and the pinned patterns (asset availability, retrieval pins, generated-mode source-identity
@@ -18,17 +18,17 @@ sign-off*, and a human should review the pins before this is relied on.
 <!-- counts:start -->
 | item | count |
 |---|---|
-| tokens | 351 |
+| tokens | 353 |
 | primitives | 19 |
 | components | 30 |
-| sections | 67 |
-| retrievableSections | 64 |
-| templates | 12 |
-| mountedRoutes | 19 |
-| pendingRoutes | 12 |
+| sections | 89 |
+| retrievableSections | 86 |
+| templates | 14 |
+| mountedRoutes | 31 |
+| pendingRoutes | 0 |
 | assetRoles | 29 |
-| motionPatterns | 31 |
-| examplePageSpecs | 13 |
+| motionPatterns | 32 |
+| examplePageSpecs | 17 |
 <!-- counts:end -->
 
 ## Layout
@@ -43,13 +43,15 @@ tokens/themes/              light.json, dark.json (every semantic token resolved
 tokens/llm/                 token-catalog.json, token-policy.json, component-allowlist.json
 assets/asset-roles.json     closed asset-role vocabulary with pinned availability + licensing rules
 primitives/ components/     building blocks with source citations
-sections/                   67 semantic section contracts (source/semantic split, retrievalEligible)
+sections/                   89 semantic section contracts (source/semantic split, retrievalEligible)
 templates/                  templates.json, routes.json (mounted), pending-routes.json (not mounted)
 compatibility/graph.json    rhythm/position rules (ids mirrored in the validator)
 schema/                     pagespec.schema.json, section-contract.schema.json, example.pagespec.json (reference, home),
-                            examples/ (12 generation-safe PageSpecs, one per template), semantic_validate.py,
+                            examples/ (14 generation-safe PageSpecs, one per template, plus reference-platform-feature and
+                            reference-developer-platform), semantic_validate.py,
                             source-brand.json, reference-copy-corpus.json, tests/adversarial_test.py
-extraction/                 measured-values.json, verify_all.py, wrapper_gate.py, prove_drift.py, measure_sections.mjs
+extraction/                 measured-values.json, verify_all.py, wrapper_gate.py, prove_drift.py, measure_sections.mjs,
+                            parity_capture.mjs + parity_compare.py (R12 live-vs-clone per-section parity harness)
 ```
 
 ## Use
@@ -108,27 +110,44 @@ The clone's own replacements are `reference-only`. Availability is pinned in cod
 | `/help/academy` | help-docs |
 | `/help/reference/attio-101` | help-docs |
 | `/architecture` | architecture |
+| `/platform/ask` | platform-feature |
+| `/platform/call-intelligence` | platform-feature |
+| `/platform/custom-agents` | platform-feature |
+| `/platform/data` | platform-feature |
+| `/platform/developers` | developer-platform |
+| `/platform/enrichment` | platform-feature |
+| `/platform/mcp` | platform-feature |
+| `/platform/reporting` | platform-feature |
+| `/platform/sequences` | platform-feature |
+| `/platform/universal-context` | platform-feature |
+| `/platform/web-agent` | platform-feature |
+| `/platform/workflows` | platform-feature |
 
-Templates: `home`, `pricing`, `customer-hub`, `program-landing`, `careers`, `contact-split`, `app-directory`, `app-detail`, `editorial-listing`, `changelog-year`, `help-docs`, `architecture`. `program-landing` has a `program-body` region (3-8 program blocks in any
+Templates: `home`, `pricing`, `customer-hub`, `program-landing`, `careers`, `contact-split`, `app-directory`, `app-detail`, `editorial-listing`, `changelog-year`, `help-docs`, `architecture`, `platform-feature`, `developer-platform`. `program-landing` has a `program-body` region (3-8 program blocks in any
 order) because the four program pages order their blocks differently; `contact-split` is hero-less by design.
+`platform-feature` (11 routes) has a `feature-body` region (4-9 capability blocks in any order) between the feature
+hero and the optional sibling-links grid; the live site's two visual shells (v2 and legacy) share one purpose and one
+section library, so they are one template whose shell travels as section variants (`v2` / `legacy`, `v2-three` /
+`legacy-media`, ...). `developer-platform` is the dark blueprint page with its own closing CTA.
 
-**Pending (not mounted, not modelled):** `/platform/ask`, `/platform/call-intelligence`, `/platform/custom-agents`, `/platform/data`, `/platform/developers`, `/platform/enrichment`, `/platform/mcp`, `/platform/reporting`, `/platform/sequences`, `/platform/universal-context`, `/platform/web-agent`, `/platform/workflows`. See `templates/pending-routes.json`; the cited spec files are future intent only.
+**Pending:** none. `templates/pending-routes.json` is empty and `sourceProject.midBuild` is gone; `verify_all` fails if the
+two ever disagree.
 
 ## Sections by category
 
-- **CONTENT**: content.app-meta-sidebar, content.article-chapter, content.audience-profiles, content.chapter-header, content.lit-statement, content.prose-split, content.resource-cards, content.scroll-scene, content.team-intro, content.values
-- **CONVERSION**: conversion.application-form, conversion.application-notice, conversion.avatar-wall-cta, conversion.build-with-us, conversion.careers-heatmap, conversion.closing-stage, conversion.demo-request-split, conversion.final-cta, conversion.newsletter-signup
+- **CONTENT**: content.app-meta-sidebar, content.article-chapter, content.audience-profiles, content.chapter-header, content.contribution-heatmap, content.lit-statement, content.prose-split, content.resource-cards, content.scroll-scene, content.team-intro, content.values
+- **CONVERSION**: conversion.application-form, conversion.application-notice, conversion.avatar-wall-cta, conversion.build-with-us, conversion.careers-heatmap, conversion.closing-stage, conversion.demo-request-split, conversion.developer-cta, conversion.final-cta (streak-band, dome), conversion.newsletter-signup (band, inline)
 - **EDITORIAL**: editorial.article-index, editorial.changelog-entries, editorial.changelog-preview
 - **FAQ**: faq.accordion
-- **FEATURES**: features.app-store-preview, features.cell-grid, features.context-horizon, features.customizable-workspace, features.developer-platform, features.featured-apps, features.launch-showcase, features.partner-tiers, features.perks (band, grid), features.platform-showcase, features.step-list (tabbed, single)
-- **HERO**: hero.app-header, hero.changelog-intro, hero.docs-page-header, hero.editorial-featured (featured-post, ascii-field), hero.help-search, hero.page-centered (plain, logo-strip, app-tiles, creator-carousel, expert-quotes, icon-band, contribution-grid), hero.pricing-intro, hero.product-window, hero.scroll-typewriter
+- **FEATURES**: features.app-store-preview, features.assistant-intel, features.bento-grid, features.blueprint-cards (cards, cards-with-quote), features.card-marquee (v2, legacy), features.cell-grid, features.center-media (top, centered), features.context-band, features.context-horizon, features.customizable-workspace, features.developer-apps, features.developer-platform, features.featured-apps, features.icon-columns (row, split), features.integration-arc (v2, legacy), features.launch-showcase, features.media-card-grid (v2-three, v2-six, legacy-media, legacy-icon, legacy-indexed), features.orbit-columns, features.partner-tiers, features.perks (band, grid), features.platform-showcase, features.product-showcase, features.split-accordion (v2, legacy), features.step-list (tabbed, single), features.tabbed-showcase (pill-tabs, audience-ruler), features.tagged-quad, features.text-columns (columns, steps, agent-ruler)
+- **HERO**: hero.app-header, hero.changelog-intro, hero.developer-blueprint, hero.docs-page-header, hero.editorial-featured (featured-post, ascii-field), hero.help-search, hero.page-centered (plain, logo-strip, app-tiles, creator-carousel, expert-quotes, icon-band, contribution-grid), hero.platform-feature (chip-field, agent-canvas, kanban-board, horizon, radar, tile-grid, table-call-card, flow-diagram, sequence-stack, schema-perspective, ask-stage), hero.pricing-intro, hero.product-window, hero.scroll-typewriter
 - **LISTING**: listing.course-grid, listing.directory-category, listing.directory-header, listing.lesson-list (numbered-preview, timeline), listing.open-positions, listing.related-apps
 - **MEDIA**: media.interview-video, media.screenshot-gallery, media.team-photos
-- **NAVIGATION**: navigation.breadcrumb-bar, navigation.docs-sidebar, navigation.partner-cross-links
+- **NAVIGATION**: navigation.breadcrumb-bar, navigation.docs-sidebar, navigation.partner-cross-links, navigation.platform-links (v2, legacy)
 - **PRICING**: pricing.comparison-group, pricing.comparison-header, pricing.plan-cards
 - **SHELL**: shell.site-footer, shell.site-header
-- **SOCIAL_PROOF**: social-proof.customer-stories (carousel, grid), social-proof.logo-wall (band, grid, headed, dark-statement), social-proof.scale-stats
-- **TESTIMONIAL**: testimonial.quote (scroll-curtain, portrait, portrait-features)
+- **SOCIAL_PROOF**: social-proof.customer-stories (carousel, grid), social-proof.logo-wall (band, grid, headed, dark-statement, platform-band), social-proof.scale-stats, social-proof.stat-highlight
+- **TESTIMONIAL**: testimonial.quote (scroll-curtain, portrait, portrait-features, scroll-lit, blueprint-portrait)
 - **UTILITY**: overlay.gallery-lightbox, overlay.mobile-nav-drawer, overlay.search-dialog
 
 Long pages are decomposed by real content boundaries: the pricing comparison table into a header + one
@@ -139,9 +158,8 @@ article into one section per H2 chapter; the homepage's dark curtain group into 
 
 Section heights at 1440x900 (`extraction/measured-values.json -> sectionHeights`) were measured on the running clone
 with a headless browser (`extraction/measure_sections.mjs`, default motion preference); 768/390 document heights are
-recorded too. For version 1.1.0 the clone was rebuilt from the committed source (`npm ci`, `vite build`, `vite preview`)
-and every route re-measured at 1440, 768 and 390: all 20 section-height pages and all 40 responsive document heights
-matched the recorded values (maximum delta 0px).
+recorded too. For version 1.2.0 the clone was rebuilt and all 32 measured pages re-measured at 1440, 768 and 390 (the 20
+pages measured in 1.1.0 kept their document heights to the pixel; the 12 platform pages are new).
 
 Wrapper gate (R9): after decomposition the architecture page's scroll-typewriter hero is the only hit (4500px = a pinned
 one-viewport stage plus scroll runway) and it still warns. Five whitelist entries exist in total, all agent attestation.
@@ -150,7 +168,7 @@ Four are the dominant uniform lists of short pages (`/blog` article index 66%, `
 sections, so the share rule skips them, and the entries record that decision explicitly. Measuring with reduced motion
 changes the long-form page's layout (motion-safe scroll runways), so heights are taken with the default preference.
 
-Clone quality (R12): geometry parity of the homepage's section wrappers, live vs clone at the same viewport, from the
+Clone quality (R12), homepage: geometry parity of the section wrappers, live vs clone at the same viewport, from the
 pixel-audit dumps (box heights, not pixels):
 
 | viewport | wrappers | min agreement | average |
@@ -160,14 +178,80 @@ pixel-audit dumps (box heights, not pixels):
 | 768 | 11 | 97.0% | 99.73% |
 | 390 | 11 | 100.0% | 100.0% |
 
-**Pixel parity was not measured** (no live-site screenshots were captured for a pixel compare), so no pixel number is claimed.
-The geometry table above was taken from pixel-audit dumps that live under `.playwright-mcp/` (git-ignored, not part of
-this repo); it cannot be re-derived from a fresh clone, so treat it as recorded evidence, not a reproducible check.
+Homepage pixel parity was not measured, so no homepage pixel number is claimed; that table came from dumps under
+`.playwright-mcp/` (git-ignored) and is recorded evidence, not a reproducible check.
+
+Clone quality (R12), platform pages: **pixel** parity per section, live site vs clone, 1440x900, measured 2026-10-29 with
+`extraction/parity_capture.mjs` + `extraction/parity_compare.py` (method, calibration and every number in
+`measured-values.json -> cloneParity.platform`). Metric: ink block-map Dice (layout/ink agreement; glyphs are not compared
+because the clone's copy is invented by design); canvas/video regions and the site header are masked in both builds.
+Result: 61 of 98 sections reach 80%, mean 82.4%, minimum 49.9%.
+**The per-section 80% gate is not met**: the 37 sections below are exceptions *pending human
+approval* (none approved). Their common causes: original mock artwork stands in for the live raster screenshots, invented
+copy wraps and aligns differently from live text, and time-based hero motion is captured mid-cycle.
+
+| route | min % | avg % |
+|---|---|---|
+| `/platform/ask` | 72.6 | 85.1 |
+| `/platform/call-intelligence` | 60.6 | 80.1 |
+| `/platform/custom-agents` | 62.1 | 81.3 |
+| `/platform/data` | 49.9 | 74.0 |
+| `/platform/developers` | 80.3 | 88.8 |
+| `/platform/enrichment` | 58.0 | 80.1 |
+| `/platform/mcp` | 70.5 | 84.3 |
+| `/platform/reporting` | 58.5 | 76.4 |
+| `/platform/sequences` | 64.2 | 79.9 |
+| `/platform/universal-context` | 67.4 | 83.8 |
+| `/platform/web-agent` | 75.3 | 85.6 |
+| `/platform/workflows` | 72.1 | 86.7 |
+
+| route | block | section | parity % |
+|---|---|---|---|
+| `/platform/ask` | 2 | features.tabbed-showcase (audience-ruler) | 72.6 |
+| `/platform/ask` | 4 | features.assistant-intel (None) | 74.4 |
+| `/platform/call-intelligence` | 1 | hero.platform-feature (table-call-card) | 77.0 |
+| `/platform/call-intelligence` | 2 | features.media-card-grid (legacy-media) | 77.9 |
+| `/platform/call-intelligence` | 4 | features.split-accordion (legacy) | 72.1 |
+| `/platform/call-intelligence` | 6 | features.tabbed-showcase (pill-tabs) | 60.6 |
+| `/platform/call-intelligence` | 7 | features.media-card-grid (legacy-indexed) | 74.3 |
+| `/platform/custom-agents` | 1 | hero.platform-feature (agent-canvas) | 62.1 |
+| `/platform/custom-agents` | 3 | features.split-accordion (v2) | 74.9 |
+| `/platform/custom-agents` | 6 | features.center-media (top) | 73.7 |
+| `/platform/data` | 1 | hero.platform-feature (schema-perspective) | 49.9 |
+| `/platform/data` | 2 | features.media-card-grid (legacy-indexed) | 72.1 |
+| `/platform/data` | 4 | features.media-card-grid (legacy-media) | 68.1 |
+| `/platform/data` | 5 | features.split-accordion (legacy) | 68.3 |
+| `/platform/data` | 6 | features.tabbed-showcase (pill-tabs) | 58.5 |
+| `/platform/enrichment` | 1 | hero.platform-feature (kanban-board) | 58.0 |
+| `/platform/enrichment` | 3 | features.split-accordion (v2) | 68.8 |
+| `/platform/enrichment` | 4 | features.center-media (centered) | 68.5 |
+| `/platform/mcp` | 2 | features.integration-arc (v2) | 79.1 |
+| `/platform/mcp` | 4 | features.center-media (top) | 78.8 |
+| `/platform/mcp` | 5 | features.media-card-grid (v2-three) | 70.5 |
+| `/platform/reporting` | 1 | hero.platform-feature (radar) | 73.1 |
+| `/platform/reporting` | 3 | features.bento-grid (None) | 58.5 |
+| `/platform/reporting` | 4 | features.split-accordion (v2) | 73.1 |
+| `/platform/reporting` | 5 | features.media-card-grid (v2-six) | 69.1 |
+| `/platform/sequences` | 2 | features.product-showcase (None) | 68.1 |
+| `/platform/sequences` | 3 | features.media-card-grid (legacy-media) | 71.6 |
+| `/platform/sequences` | 5 | features.split-accordion (legacy) | 75.6 |
+| `/platform/sequences` | 6 | features.media-card-grid (legacy-indexed) | 64.2 |
+| `/platform/universal-context` | 3 | features.split-accordion (v2) | 79.2 |
+| `/platform/universal-context` | 4 | features.center-media (top) | 71.1 |
+| `/platform/universal-context` | 5 | features.media-card-grid (v2-three) | 67.4 |
+| `/platform/web-agent` | 1 | hero.platform-feature (chip-field) | 75.3 |
+| `/platform/web-agent` | 3 | features.split-accordion (v2) | 75.7 |
+| `/platform/workflows` | 1 | hero.platform-feature (flow-diagram) | 79.4 |
+| `/platform/workflows` | 6 | features.split-accordion (legacy) | 78.8 |
+| `/platform/workflows` | 8 | features.media-card-grid (legacy-media) | 72.1 |
+
+768/390: document heights within -5.3%..+2.6% of live on all 12 routes, no horizontal overflow (not pixel-gated).
 
 ## Token catalog notes
 
 `usageCount` fields were removed from the token files and catalog in 1.1.0: the numbers could not be reproduced from the
-committed source (they came from a working tree that also held unmounted platform pages), and nothing consumed them.
+committed source, and nothing consumed them. The two `color.dev.*` tokens removed then are back in 1.2.0 now that the
+developer page that uses them is committed.
 Token membership and values are machine-checked against `tailwind.config.cjs` (every colour, type role, radius, shadow
 and background-image key in the source has a token; each token's cited source line must hold its key and value).
 Spacing tokens are a usage histogram of the committed clone's spacing utilities (count >= 5 kept).

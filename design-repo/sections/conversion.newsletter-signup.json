@@ -7,14 +7,28 @@
     "file": "src/components/careers/Sections.jsx",
     "tag": "export function NewsletterBand(",
     "lines": "293-341",
-    "citation": "src/components/careers/Sections.jsx:293-341"
+    "citation": "src/components/careers/Sections.jsx:293-341",
+    "variantSources": {
+      "band": {
+        "file": "src/components/careers/Sections.jsx",
+        "tag": "export function NewsletterBand(",
+        "lines": "293-341",
+        "citation": "src/components/careers/Sections.jsx:293-341"
+      },
+      "inline": {
+        "file": "src/components/platform/Sections.jsx",
+        "tag": "export function Newsletter(",
+        "lines": "738-752",
+        "citation": "src/components/platform/Sections.jsx:738-752"
+      }
+    }
   },
   "semantic": {
     "id": "conversion.newsletter-signup",
     "category": "CONVERSION"
   },
   "retrievalEligible": true,
-  "purpose": "Email signup band: title, lead and inline subscribe form.",
+  "purpose": "Email signup band: title, lead and inline subscribe form. Variants: band (careers) and inline (platform hub page: heading pair left, 400px form right).",
   "themes": [
     "light"
   ],
@@ -90,14 +104,27 @@
         "variant": null,
         "instance": 0,
         "heightPx": 428
+      },
+      {
+        "route": "/platform/mcp",
+        "variant": "inline",
+        "instance": 0,
+        "heightPx": 305
       }
     ],
     "evidence": "extraction/measured-values.json#/sectionHeights"
   },
   "referenceRoutes": [
     {
-      "route": "/careers",
-      "variant": null
+      "route": "/careers"
+    },
+    {
+      "route": "/platform/mcp",
+      "variant": "inline"
     }
+  ],
+  "variants": [
+    "band",
+    "inline"
   ]
 }

@@ -4,10 +4,10 @@
   "sectionHeights": {
     "viewportWidth": 1440,
     "viewportHeight": 900,
-    "measuredAt": "2026-10-27T11:01:45.587Z",
+    "measuredAt": "2026-10-29T06:35:36.826Z",
     "reducedMotion": false,
     "motionPreferenceNote": "measured with the default (no-preference) motion setting: the architecture page uses motion-safe scroll runways (hero 4500px vs 3150px under reduced motion)",
-    "tool": "extraction/measure_sections.mjs (headless Chromium via Playwright)",
+    "tool": "extraction/measure_sections.mjs (headless Chromium via Playwright; load + 1.5s settle per route)",
     "pages": [
       {
         "route": "/",
@@ -1742,6 +1742,1484 @@
         ]
       },
       {
+        "route": "/platform/ask",
+        "template": "platform-feature",
+        "docHeightPx": 7832,
+        "shell": [
+          {
+            "section": "shell.site-header",
+            "heightPx": 116
+          },
+          {
+            "section": "shell.site-footer",
+            "heightPx": 685
+          }
+        ],
+        "sections": [
+          {
+            "section": "hero.platform-feature",
+            "variant": "ask-stage",
+            "instance": 0,
+            "heightPx": 983,
+            "inFlow": true,
+            "selector": "block:1",
+            "textStats": {
+              "headingWordsMax": 2,
+              "paragraphWordsMax": 12,
+              "actionWordsMax": 3
+            }
+          },
+          {
+            "section": "features.tabbed-showcase",
+            "variant": "audience-ruler",
+            "instance": 0,
+            "heightPx": 1104,
+            "inFlow": true,
+            "selector": "block:2",
+            "textStats": {
+              "headingWordsMax": 9,
+              "paragraphWordsMax": 11,
+              "actionWordsMax": 2
+            }
+          },
+          {
+            "section": "features.context-band",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 1016,
+            "inFlow": true,
+            "selector": "block:3",
+            "textStats": {
+              "headingWordsMax": 2,
+              "paragraphWordsMax": 10,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "features.assistant-intel",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 1876.5,
+            "inFlow": true,
+            "selector": "block:4",
+            "textStats": {
+              "headingWordsMax": 10,
+              "paragraphWordsMax": 15,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "features.card-marquee",
+            "variant": "legacy",
+            "instance": 0,
+            "heightPx": 968,
+            "inFlow": true,
+            "selector": "block:5",
+            "textStats": {
+              "headingWordsMax": 7,
+              "paragraphWordsMax": 13,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "testimonial.quote",
+            "variant": "scroll-lit",
+            "instance": 0,
+            "heightPx": 630,
+            "inFlow": true,
+            "selector": "block:6",
+            "textStats": {
+              "headingWordsMax": 0,
+              "paragraphWordsMax": 65,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "conversion.final-cta",
+            "variant": "dome",
+            "instance": 0,
+            "heightPx": 450,
+            "inFlow": true,
+            "selector": "block:7",
+            "textStats": {
+              "headingWordsMax": 6,
+              "paragraphWordsMax": 0,
+              "actionWordsMax": 3
+            }
+          }
+        ]
+      },
+      {
+        "route": "/platform/call-intelligence",
+        "template": "platform-feature",
+        "docHeightPx": 8412,
+        "shell": [
+          {
+            "section": "shell.site-header",
+            "heightPx": 116
+          },
+          {
+            "section": "shell.site-footer",
+            "heightPx": 685
+          }
+        ],
+        "sections": [
+          {
+            "section": "hero.platform-feature",
+            "variant": "table-call-card",
+            "instance": 0,
+            "heightPx": 821.2,
+            "inFlow": true,
+            "selector": "block:1",
+            "textStats": {
+              "headingWordsMax": 4,
+              "paragraphWordsMax": 25,
+              "actionWordsMax": 3
+            }
+          },
+          {
+            "section": "features.media-card-grid",
+            "variant": "legacy-media",
+            "instance": 0,
+            "heightPx": 984.6,
+            "inFlow": true,
+            "selector": "block:2",
+            "textStats": {
+              "headingWordsMax": 9,
+              "paragraphWordsMax": 11,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "testimonial.quote",
+            "variant": "scroll-lit",
+            "instance": 0,
+            "heightPx": 558,
+            "inFlow": true,
+            "selector": "block:3",
+            "textStats": {
+              "headingWordsMax": 0,
+              "paragraphWordsMax": 35,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "features.split-accordion",
+            "variant": "legacy",
+            "instance": 0,
+            "heightPx": 750,
+            "inFlow": true,
+            "selector": "block:4",
+            "textStats": {
+              "headingWordsMax": 6,
+              "paragraphWordsMax": 16,
+              "actionWordsMax": 6
+            }
+          },
+          {
+            "section": "features.integration-arc",
+            "variant": "legacy",
+            "instance": 0,
+            "heightPx": 356,
+            "inFlow": true,
+            "selector": "block:5",
+            "textStats": {
+              "headingWordsMax": 5,
+              "paragraphWordsMax": 10,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "features.tabbed-showcase",
+            "variant": "pill-tabs",
+            "instance": 0,
+            "heightPx": 1046,
+            "inFlow": true,
+            "selector": "block:6",
+            "textStats": {
+              "headingWordsMax": 4,
+              "paragraphWordsMax": 20,
+              "actionWordsMax": 2
+            }
+          },
+          {
+            "section": "features.media-card-grid",
+            "variant": "legacy-indexed",
+            "instance": 1,
+            "heightPx": 1948.9,
+            "inFlow": true,
+            "selector": "block:7",
+            "textStats": {
+              "headingWordsMax": 5,
+              "paragraphWordsMax": 15,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "navigation.platform-links",
+            "variant": "legacy",
+            "instance": 0,
+            "heightPx": 689,
+            "inFlow": true,
+            "selector": "block:8",
+            "textStats": {
+              "headingWordsMax": 6,
+              "paragraphWordsMax": 8,
+              "actionWordsMax": 3
+            }
+          },
+          {
+            "section": "conversion.final-cta",
+            "variant": "dome",
+            "instance": 0,
+            "heightPx": 450,
+            "inFlow": true,
+            "selector": "block:9",
+            "textStats": {
+              "headingWordsMax": 5,
+              "paragraphWordsMax": 0,
+              "actionWordsMax": 3
+            }
+          }
+        ]
+      },
+      {
+        "route": "/platform/custom-agents",
+        "template": "platform-feature",
+        "docHeightPx": 6416,
+        "shell": [
+          {
+            "section": "shell.site-header",
+            "heightPx": 116
+          },
+          {
+            "section": "shell.site-footer",
+            "heightPx": 685
+          }
+        ],
+        "sections": [
+          {
+            "section": "hero.platform-feature",
+            "variant": "agent-canvas",
+            "instance": 0,
+            "heightPx": 784,
+            "inFlow": true,
+            "selector": "block:1",
+            "textStats": {
+              "headingWordsMax": 7,
+              "paragraphWordsMax": 17,
+              "actionWordsMax": 3
+            }
+          },
+          {
+            "section": "social-proof.logo-wall",
+            "variant": "platform-band",
+            "instance": 0,
+            "heightPx": 193,
+            "inFlow": true,
+            "selector": "block:2",
+            "textStats": {
+              "headingWordsMax": 0,
+              "paragraphWordsMax": 0,
+              "actionWordsMax": 1
+            }
+          },
+          {
+            "section": "features.split-accordion",
+            "variant": "v2",
+            "instance": 0,
+            "heightPx": 769,
+            "inFlow": true,
+            "selector": "block:3",
+            "textStats": {
+              "headingWordsMax": 5,
+              "paragraphWordsMax": 5,
+              "actionWordsMax": 22
+            }
+          },
+          {
+            "section": "features.card-marquee",
+            "variant": "v2",
+            "instance": 0,
+            "heightPx": 838,
+            "inFlow": true,
+            "selector": "block:4",
+            "textStats": {
+              "headingWordsMax": 8,
+              "paragraphWordsMax": 12,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "social-proof.stat-highlight",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 593,
+            "inFlow": true,
+            "selector": "block:5",
+            "textStats": {
+              "headingWordsMax": 4,
+              "paragraphWordsMax": 10,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "features.center-media",
+            "variant": "top",
+            "instance": 0,
+            "heightPx": 1182.2,
+            "inFlow": true,
+            "selector": "block:6",
+            "textStats": {
+              "headingWordsMax": 5,
+              "paragraphWordsMax": 22,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "features.icon-columns",
+            "variant": "row",
+            "instance": 0,
+            "heightPx": 801,
+            "inFlow": true,
+            "selector": "block:7",
+            "textStats": {
+              "headingWordsMax": 6,
+              "paragraphWordsMax": 14,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "conversion.final-cta",
+            "variant": "dome",
+            "instance": 0,
+            "heightPx": 450,
+            "inFlow": true,
+            "selector": "block:8",
+            "textStats": {
+              "headingWordsMax": 7,
+              "paragraphWordsMax": 0,
+              "actionWordsMax": 3
+            }
+          }
+        ]
+      },
+      {
+        "route": "/platform/data",
+        "template": "platform-feature",
+        "docHeightPx": 8981,
+        "shell": [
+          {
+            "section": "shell.site-header",
+            "heightPx": 116
+          },
+          {
+            "section": "shell.site-footer",
+            "heightPx": 685
+          }
+        ],
+        "sections": [
+          {
+            "section": "hero.platform-feature",
+            "variant": "schema-perspective",
+            "instance": 0,
+            "heightPx": 1535.2,
+            "inFlow": true,
+            "selector": "block:1",
+            "textStats": {
+              "headingWordsMax": 4,
+              "paragraphWordsMax": 16,
+              "actionWordsMax": 3
+            }
+          },
+          {
+            "section": "features.media-card-grid",
+            "variant": "legacy-indexed",
+            "instance": 0,
+            "heightPx": 2006.9,
+            "inFlow": true,
+            "selector": "block:2",
+            "textStats": {
+              "headingWordsMax": 6,
+              "paragraphWordsMax": 20,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "features.media-card-grid",
+            "variant": "legacy-icon",
+            "instance": 1,
+            "heightPx": 640,
+            "inFlow": true,
+            "selector": "block:3",
+            "textStats": {
+              "headingWordsMax": 4,
+              "paragraphWordsMax": 12,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "features.media-card-grid",
+            "variant": "legacy-media",
+            "instance": 2,
+            "heightPx": 1020.6,
+            "inFlow": true,
+            "selector": "block:4",
+            "textStats": {
+              "headingWordsMax": 5,
+              "paragraphWordsMax": 16,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "features.split-accordion",
+            "variant": "legacy",
+            "instance": 0,
+            "heightPx": 750,
+            "inFlow": true,
+            "selector": "block:5",
+            "textStats": {
+              "headingWordsMax": 4,
+              "paragraphWordsMax": 19,
+              "actionWordsMax": 4
+            }
+          },
+          {
+            "section": "features.tabbed-showcase",
+            "variant": "pill-tabs",
+            "instance": 0,
+            "heightPx": 1082,
+            "inFlow": true,
+            "selector": "block:6",
+            "textStats": {
+              "headingWordsMax": 4,
+              "paragraphWordsMax": 14,
+              "actionWordsMax": 2
+            }
+          },
+          {
+            "section": "navigation.platform-links",
+            "variant": "legacy",
+            "instance": 0,
+            "heightPx": 689,
+            "inFlow": true,
+            "selector": "block:7",
+            "textStats": {
+              "headingWordsMax": 6,
+              "paragraphWordsMax": 8,
+              "actionWordsMax": 3
+            }
+          },
+          {
+            "section": "conversion.final-cta",
+            "variant": "dome",
+            "instance": 0,
+            "heightPx": 450,
+            "inFlow": true,
+            "selector": "block:8",
+            "textStats": {
+              "headingWordsMax": 5,
+              "paragraphWordsMax": 0,
+              "actionWordsMax": 3
+            }
+          }
+        ]
+      },
+      {
+        "route": "/platform/developers",
+        "template": "developer-platform",
+        "docHeightPx": 9470,
+        "shell": [
+          {
+            "section": "shell.site-header",
+            "heightPx": 116
+          },
+          {
+            "section": "shell.site-footer",
+            "heightPx": 685
+          }
+        ],
+        "sections": [
+          {
+            "section": "hero.developer-blueprint",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 695,
+            "inFlow": true,
+            "selector": "block:1",
+            "textStats": {
+              "headingWordsMax": 3,
+              "paragraphWordsMax": 14,
+              "actionWordsMax": 2
+            }
+          },
+          {
+            "section": "features.blueprint-cards",
+            "variant": "cards",
+            "instance": 0,
+            "heightPx": 991.2,
+            "inFlow": true,
+            "selector": "block:2",
+            "textStats": {
+              "headingWordsMax": 5,
+              "paragraphWordsMax": 13,
+              "actionWordsMax": 2
+            }
+          },
+          {
+            "section": "testimonial.quote",
+            "variant": "blueprint-portrait",
+            "instance": 0,
+            "heightPx": 579.2,
+            "inFlow": true,
+            "selector": "block:3",
+            "textStats": {
+              "headingWordsMax": 0,
+              "paragraphWordsMax": 32,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "features.blueprint-cards",
+            "variant": "cards-with-quote",
+            "instance": 1,
+            "heightPx": 1592.2,
+            "inFlow": true,
+            "selector": "block:4",
+            "textStats": {
+              "headingWordsMax": 5,
+              "paragraphWordsMax": 17,
+              "actionWordsMax": 2
+            }
+          },
+          {
+            "section": "features.blueprint-cards",
+            "variant": "cards-with-quote",
+            "instance": 2,
+            "heightPx": 1662.5,
+            "inFlow": true,
+            "selector": "block:5",
+            "textStats": {
+              "headingWordsMax": 5,
+              "paragraphWordsMax": 18,
+              "actionWordsMax": 2
+            }
+          },
+          {
+            "section": "content.contribution-heatmap",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 781.4,
+            "inFlow": true,
+            "selector": "block:6",
+            "textStats": {
+              "headingWordsMax": 4,
+              "paragraphWordsMax": 10,
+              "actionWordsMax": 3
+            }
+          },
+          {
+            "section": "testimonial.quote",
+            "variant": "blueprint-portrait",
+            "instance": 1,
+            "heightPx": 579.2,
+            "inFlow": true,
+            "selector": "block:7",
+            "textStats": {
+              "headingWordsMax": 0,
+              "paragraphWordsMax": 17,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "features.developer-apps",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 1027.1,
+            "inFlow": true,
+            "selector": "block:8",
+            "textStats": {
+              "headingWordsMax": 7,
+              "paragraphWordsMax": 18,
+              "actionWordsMax": 7
+            }
+          },
+          {
+            "section": "conversion.developer-cta",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 752.9,
+            "inFlow": true,
+            "selector": "block:9",
+            "textStats": {
+              "headingWordsMax": 2,
+              "paragraphWordsMax": 0,
+              "actionWordsMax": 1
+            }
+          }
+        ]
+      },
+      {
+        "route": "/platform/enrichment",
+        "template": "platform-feature",
+        "docHeightPx": 7187,
+        "shell": [
+          {
+            "section": "shell.site-header",
+            "heightPx": 116
+          },
+          {
+            "section": "shell.site-footer",
+            "heightPx": 685
+          }
+        ],
+        "sections": [
+          {
+            "section": "hero.platform-feature",
+            "variant": "kanban-board",
+            "instance": 0,
+            "heightPx": 784,
+            "inFlow": true,
+            "selector": "block:1",
+            "textStats": {
+              "headingWordsMax": 6,
+              "paragraphWordsMax": 13,
+              "actionWordsMax": 3
+            }
+          },
+          {
+            "section": "features.media-card-grid",
+            "variant": "v2-three",
+            "instance": 0,
+            "heightPx": 911.5,
+            "inFlow": true,
+            "selector": "block:2",
+            "textStats": {
+              "headingWordsMax": 4,
+              "paragraphWordsMax": 18,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "features.split-accordion",
+            "variant": "v2",
+            "instance": 0,
+            "heightPx": 769,
+            "inFlow": true,
+            "selector": "block:3",
+            "textStats": {
+              "headingWordsMax": 6,
+              "paragraphWordsMax": 10,
+              "actionWordsMax": 26
+            }
+          },
+          {
+            "section": "features.center-media",
+            "variant": "centered",
+            "instance": 0,
+            "heightPx": 1041,
+            "inFlow": true,
+            "selector": "block:4",
+            "textStats": {
+              "headingWordsMax": 6,
+              "paragraphWordsMax": 14,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "testimonial.quote",
+            "variant": "scroll-lit",
+            "instance": 0,
+            "heightPx": 800,
+            "inFlow": true,
+            "selector": "block:5",
+            "textStats": {
+              "headingWordsMax": 0,
+              "paragraphWordsMax": 45,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "features.text-columns",
+            "variant": "columns",
+            "instance": 0,
+            "heightPx": 821,
+            "inFlow": true,
+            "selector": "block:6",
+            "textStats": {
+              "headingWordsMax": 6,
+              "paragraphWordsMax": 17,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "navigation.platform-links",
+            "variant": "v2",
+            "instance": 0,
+            "heightPx": 805,
+            "inFlow": true,
+            "selector": "block:7",
+            "textStats": {
+              "headingWordsMax": 5,
+              "paragraphWordsMax": 8,
+              "actionWordsMax": 2
+            }
+          },
+          {
+            "section": "conversion.final-cta",
+            "variant": "dome",
+            "instance": 0,
+            "heightPx": 450,
+            "inFlow": true,
+            "selector": "block:8",
+            "textStats": {
+              "headingWordsMax": 6,
+              "paragraphWordsMax": 0,
+              "actionWordsMax": 3
+            }
+          }
+        ]
+      },
+      {
+        "route": "/platform/mcp",
+        "template": "platform-feature",
+        "docHeightPx": 7013,
+        "shell": [
+          {
+            "section": "shell.site-header",
+            "heightPx": 116
+          },
+          {
+            "section": "shell.site-footer",
+            "heightPx": 685
+          }
+        ],
+        "sections": [
+          {
+            "section": "hero.platform-feature",
+            "variant": "tile-grid",
+            "instance": 0,
+            "heightPx": 810.8,
+            "inFlow": true,
+            "selector": "block:1",
+            "textStats": {
+              "headingWordsMax": 6,
+              "paragraphWordsMax": 9,
+              "actionWordsMax": 3
+            }
+          },
+          {
+            "section": "features.integration-arc",
+            "variant": "v2",
+            "instance": 0,
+            "heightPx": 356,
+            "inFlow": true,
+            "selector": "block:2",
+            "textStats": {
+              "headingWordsMax": 4,
+              "paragraphWordsMax": 8,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "features.icon-columns",
+            "variant": "split",
+            "instance": 0,
+            "heightPx": 754,
+            "inFlow": true,
+            "selector": "block:3",
+            "textStats": {
+              "headingWordsMax": 5,
+              "paragraphWordsMax": 19,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "features.center-media",
+            "variant": "top",
+            "instance": 0,
+            "heightPx": 1205.2,
+            "inFlow": true,
+            "selector": "block:4",
+            "textStats": {
+              "headingWordsMax": 5,
+              "paragraphWordsMax": 13,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "features.media-card-grid",
+            "variant": "v2-three",
+            "instance": 0,
+            "heightPx": 889.5,
+            "inFlow": true,
+            "selector": "block:5",
+            "textStats": {
+              "headingWordsMax": 6,
+              "paragraphWordsMax": 12,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "social-proof.stat-highlight",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 593,
+            "inFlow": true,
+            "selector": "block:6",
+            "textStats": {
+              "headingWordsMax": 5,
+              "paragraphWordsMax": 7,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "social-proof.logo-wall",
+            "variant": "platform-band",
+            "instance": 0,
+            "heightPx": 193,
+            "inFlow": true,
+            "selector": "block:7",
+            "textStats": {
+              "headingWordsMax": 0,
+              "paragraphWordsMax": 0,
+              "actionWordsMax": 1
+            }
+          },
+          {
+            "section": "features.text-columns",
+            "variant": "steps",
+            "instance": 0,
+            "heightPx": 648,
+            "inFlow": true,
+            "selector": "block:8",
+            "textStats": {
+              "headingWordsMax": 4,
+              "paragraphWordsMax": 11,
+              "actionWordsMax": 3
+            }
+          },
+          {
+            "section": "conversion.newsletter-signup",
+            "variant": "inline",
+            "instance": 0,
+            "heightPx": 305,
+            "inFlow": true,
+            "selector": "block:9",
+            "textStats": {
+              "headingWordsMax": 4,
+              "paragraphWordsMax": 5,
+              "actionWordsMax": 1
+            }
+          },
+          {
+            "section": "conversion.final-cta",
+            "variant": "dome",
+            "instance": 0,
+            "heightPx": 450,
+            "inFlow": true,
+            "selector": "block:10",
+            "textStats": {
+              "headingWordsMax": 6,
+              "paragraphWordsMax": 0,
+              "actionWordsMax": 3
+            }
+          }
+        ]
+      },
+      {
+        "route": "/platform/reporting",
+        "template": "platform-feature",
+        "docHeightPx": 5621,
+        "shell": [
+          {
+            "section": "shell.site-header",
+            "heightPx": 116
+          },
+          {
+            "section": "shell.site-footer",
+            "heightPx": 685
+          }
+        ],
+        "sections": [
+          {
+            "section": "hero.platform-feature",
+            "variant": "radar",
+            "instance": 0,
+            "heightPx": 720.2,
+            "inFlow": true,
+            "selector": "block:1",
+            "textStats": {
+              "headingWordsMax": 6,
+              "paragraphWordsMax": 17,
+              "actionWordsMax": 3
+            }
+          },
+          {
+            "section": "social-proof.logo-wall",
+            "variant": "platform-band",
+            "instance": 0,
+            "heightPx": 193,
+            "inFlow": true,
+            "selector": "block:2",
+            "textStats": {
+              "headingWordsMax": 0,
+              "paragraphWordsMax": 0,
+              "actionWordsMax": 1
+            }
+          },
+          {
+            "section": "features.bento-grid",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 1264,
+            "inFlow": true,
+            "selector": "block:3",
+            "textStats": {
+              "headingWordsMax": 6,
+              "paragraphWordsMax": 14,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "features.split-accordion",
+            "variant": "v2",
+            "instance": 0,
+            "heightPx": 769,
+            "inFlow": true,
+            "selector": "block:4",
+            "textStats": {
+              "headingWordsMax": 3,
+              "paragraphWordsMax": 9,
+              "actionWordsMax": 17
+            }
+          },
+          {
+            "section": "features.media-card-grid",
+            "variant": "v2-six",
+            "instance": 0,
+            "heightPx": 1419.1,
+            "inFlow": true,
+            "selector": "block:5",
+            "textStats": {
+              "headingWordsMax": 4,
+              "paragraphWordsMax": 21,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "conversion.final-cta",
+            "variant": "dome",
+            "instance": 0,
+            "heightPx": 450,
+            "inFlow": true,
+            "selector": "block:6",
+            "textStats": {
+              "headingWordsMax": 5,
+              "paragraphWordsMax": 0,
+              "actionWordsMax": 3
+            }
+          }
+        ]
+      },
+      {
+        "route": "/platform/sequences",
+        "template": "platform-feature",
+        "docHeightPx": 7764,
+        "shell": [
+          {
+            "section": "shell.site-header",
+            "heightPx": 116
+          },
+          {
+            "section": "shell.site-footer",
+            "heightPx": 685
+          }
+        ],
+        "sections": [
+          {
+            "section": "hero.platform-feature",
+            "variant": "sequence-stack",
+            "instance": 0,
+            "heightPx": 820.2,
+            "inFlow": true,
+            "selector": "block:1",
+            "textStats": {
+              "headingWordsMax": 5,
+              "paragraphWordsMax": 19,
+              "actionWordsMax": 3
+            }
+          },
+          {
+            "section": "features.product-showcase",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 1192.2,
+            "inFlow": true,
+            "selector": "block:2",
+            "textStats": {
+              "headingWordsMax": 5,
+              "paragraphWordsMax": 17,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "features.media-card-grid",
+            "variant": "legacy-media",
+            "instance": 0,
+            "heightPx": 984.6,
+            "inFlow": true,
+            "selector": "block:3",
+            "textStats": {
+              "headingWordsMax": 5,
+              "paragraphWordsMax": 14,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "testimonial.quote",
+            "variant": "scroll-lit",
+            "instance": 0,
+            "heightPx": 558,
+            "inFlow": true,
+            "selector": "block:4",
+            "textStats": {
+              "headingWordsMax": 0,
+              "paragraphWordsMax": 25,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "features.split-accordion",
+            "variant": "legacy",
+            "instance": 0,
+            "heightPx": 750,
+            "inFlow": true,
+            "selector": "block:5",
+            "textStats": {
+              "headingWordsMax": 5,
+              "paragraphWordsMax": 17,
+              "actionWordsMax": 5
+            }
+          },
+          {
+            "section": "features.media-card-grid",
+            "variant": "legacy-indexed",
+            "instance": 1,
+            "heightPx": 1512.7,
+            "inFlow": true,
+            "selector": "block:6",
+            "textStats": {
+              "headingWordsMax": 6,
+              "paragraphWordsMax": 13,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "navigation.platform-links",
+            "variant": "legacy",
+            "instance": 0,
+            "heightPx": 689,
+            "inFlow": true,
+            "selector": "block:7",
+            "textStats": {
+              "headingWordsMax": 6,
+              "paragraphWordsMax": 8,
+              "actionWordsMax": 3
+            }
+          },
+          {
+            "section": "conversion.final-cta",
+            "variant": "dome",
+            "instance": 0,
+            "heightPx": 450,
+            "inFlow": true,
+            "selector": "block:8",
+            "textStats": {
+              "headingWordsMax": 5,
+              "paragraphWordsMax": 0,
+              "actionWordsMax": 3
+            }
+          }
+        ]
+      },
+      {
+        "route": "/platform/universal-context",
+        "template": "platform-feature",
+        "docHeightPx": 6750,
+        "shell": [
+          {
+            "section": "shell.site-header",
+            "heightPx": 116
+          },
+          {
+            "section": "shell.site-footer",
+            "heightPx": 685
+          }
+        ],
+        "sections": [
+          {
+            "section": "hero.platform-feature",
+            "variant": "horizon",
+            "instance": 0,
+            "heightPx": 831.3,
+            "inFlow": true,
+            "selector": "block:1",
+            "textStats": {
+              "headingWordsMax": 2,
+              "paragraphWordsMax": 14,
+              "actionWordsMax": 3
+            }
+          },
+          {
+            "section": "social-proof.logo-wall",
+            "variant": "platform-band",
+            "instance": 0,
+            "heightPx": 193,
+            "inFlow": true,
+            "selector": "block:2",
+            "textStats": {
+              "headingWordsMax": 0,
+              "paragraphWordsMax": 0,
+              "actionWordsMax": 1
+            }
+          },
+          {
+            "section": "features.split-accordion",
+            "variant": "v2",
+            "instance": 0,
+            "heightPx": 769,
+            "inFlow": true,
+            "selector": "block:3",
+            "textStats": {
+              "headingWordsMax": 6,
+              "paragraphWordsMax": 10,
+              "actionWordsMax": 14
+            }
+          },
+          {
+            "section": "features.center-media",
+            "variant": "top",
+            "instance": 0,
+            "heightPx": 1180.2,
+            "inFlow": true,
+            "selector": "block:4",
+            "textStats": {
+              "headingWordsMax": 6,
+              "paragraphWordsMax": 11,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "features.media-card-grid",
+            "variant": "v2-three",
+            "instance": 0,
+            "heightPx": 889.5,
+            "inFlow": true,
+            "selector": "block:5",
+            "textStats": {
+              "headingWordsMax": 7,
+              "paragraphWordsMax": 9,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "features.text-columns",
+            "variant": "columns",
+            "instance": 0,
+            "heightPx": 733,
+            "inFlow": true,
+            "selector": "block:6",
+            "textStats": {
+              "headingWordsMax": 4,
+              "paragraphWordsMax": 11,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "features.tagged-quad",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 896,
+            "inFlow": true,
+            "selector": "block:7",
+            "textStats": {
+              "headingWordsMax": 4,
+              "paragraphWordsMax": 14,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "conversion.final-cta",
+            "variant": "dome",
+            "instance": 0,
+            "heightPx": 450,
+            "inFlow": true,
+            "selector": "block:8",
+            "textStats": {
+              "headingWordsMax": 6,
+              "paragraphWordsMax": 0,
+              "actionWordsMax": 3
+            }
+          }
+        ]
+      },
+      {
+        "route": "/platform/web-agent",
+        "template": "platform-feature",
+        "docHeightPx": 5651,
+        "shell": [
+          {
+            "section": "shell.site-header",
+            "heightPx": 116
+          },
+          {
+            "section": "shell.site-footer",
+            "heightPx": 685
+          }
+        ],
+        "sections": [
+          {
+            "section": "hero.platform-feature",
+            "variant": "chip-field",
+            "instance": 0,
+            "heightPx": 784,
+            "inFlow": true,
+            "selector": "block:1",
+            "textStats": {
+              "headingWordsMax": 4,
+              "paragraphWordsMax": 17,
+              "actionWordsMax": 3
+            }
+          },
+          {
+            "section": "social-proof.logo-wall",
+            "variant": "platform-band",
+            "instance": 0,
+            "heightPx": 193,
+            "inFlow": true,
+            "selector": "block:2",
+            "textStats": {
+              "headingWordsMax": 0,
+              "paragraphWordsMax": 0,
+              "actionWordsMax": 1
+            }
+          },
+          {
+            "section": "features.split-accordion",
+            "variant": "v2",
+            "instance": 0,
+            "heightPx": 769,
+            "inFlow": true,
+            "selector": "block:3",
+            "textStats": {
+              "headingWordsMax": 5,
+              "paragraphWordsMax": 6,
+              "actionWordsMax": 16
+            }
+          },
+          {
+            "section": "features.media-card-grid",
+            "variant": "v2-three",
+            "instance": 0,
+            "heightPx": 911.5,
+            "inFlow": true,
+            "selector": "block:4",
+            "textStats": {
+              "headingWordsMax": 6,
+              "paragraphWordsMax": 20,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "features.orbit-columns",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 842,
+            "inFlow": true,
+            "selector": "block:5",
+            "textStats": {
+              "headingWordsMax": 9,
+              "paragraphWordsMax": 15,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "features.tagged-quad",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 896,
+            "inFlow": true,
+            "selector": "block:6",
+            "textStats": {
+              "headingWordsMax": 6,
+              "paragraphWordsMax": 12,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "conversion.final-cta",
+            "variant": "dome",
+            "instance": 0,
+            "heightPx": 450,
+            "inFlow": true,
+            "selector": "block:7",
+            "textStats": {
+              "headingWordsMax": 6,
+              "paragraphWordsMax": 0,
+              "actionWordsMax": 3
+            }
+          }
+        ]
+      },
+      {
+        "route": "/platform/workflows",
+        "template": "platform-feature",
+        "docHeightPx": 7833,
+        "shell": [
+          {
+            "section": "shell.site-header",
+            "heightPx": 116
+          },
+          {
+            "section": "shell.site-footer",
+            "heightPx": 685
+          }
+        ],
+        "sections": [
+          {
+            "section": "hero.platform-feature",
+            "variant": "flow-diagram",
+            "instance": 0,
+            "heightPx": 790,
+            "inFlow": true,
+            "selector": "block:1",
+            "textStats": {
+              "headingWordsMax": 7,
+              "paragraphWordsMax": 14,
+              "actionWordsMax": 3
+            }
+          },
+          {
+            "section": "social-proof.logo-wall",
+            "variant": "platform-band",
+            "instance": 0,
+            "heightPx": 193,
+            "inFlow": true,
+            "selector": "block:2",
+            "textStats": {
+              "headingWordsMax": 0,
+              "paragraphWordsMax": 0,
+              "actionWordsMax": 1
+            }
+          },
+          {
+            "section": "features.card-marquee",
+            "variant": "legacy",
+            "instance": 0,
+            "heightPx": 924,
+            "inFlow": true,
+            "selector": "block:3",
+            "textStats": {
+              "headingWordsMax": 3,
+              "paragraphWordsMax": 16,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "features.text-columns",
+            "variant": "agent-ruler",
+            "instance": 0,
+            "heightPx": 764,
+            "inFlow": true,
+            "selector": "block:4",
+            "textStats": {
+              "headingWordsMax": 7,
+              "paragraphWordsMax": 10,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "testimonial.quote",
+            "variant": "scroll-lit",
+            "instance": 0,
+            "heightPx": 586,
+            "inFlow": true,
+            "selector": "block:5",
+            "textStats": {
+              "headingWordsMax": 0,
+              "paragraphWordsMax": 53,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "features.split-accordion",
+            "variant": "legacy",
+            "instance": 0,
+            "heightPx": 750,
+            "inFlow": true,
+            "selector": "block:6",
+            "textStats": {
+              "headingWordsMax": 10,
+              "paragraphWordsMax": 14,
+              "actionWordsMax": 5
+            }
+          },
+          {
+            "section": "features.context-band",
+            "variant": null,
+            "instance": 0,
+            "heightPx": 1016,
+            "inFlow": true,
+            "selector": "block:7",
+            "textStats": {
+              "headingWordsMax": 2,
+              "paragraphWordsMax": 14,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "features.media-card-grid",
+            "variant": "legacy-media",
+            "instance": 0,
+            "heightPx": 948.6,
+            "inFlow": true,
+            "selector": "block:8",
+            "textStats": {
+              "headingWordsMax": 5,
+              "paragraphWordsMax": 14,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "features.media-card-grid",
+            "variant": "legacy-icon",
+            "instance": 1,
+            "heightPx": 604,
+            "inFlow": true,
+            "selector": "block:9",
+            "textStats": {
+              "headingWordsMax": 5,
+              "paragraphWordsMax": 14,
+              "actionWordsMax": 0
+            }
+          },
+          {
+            "section": "conversion.final-cta",
+            "variant": "dome",
+            "instance": 0,
+            "heightPx": 450,
+            "inFlow": true,
+            "selector": "block:10",
+            "textStats": {
+              "headingWordsMax": 6,
+              "paragraphWordsMax": 0,
+              "actionWordsMax": 3
+            }
+          }
+        ]
+      },
+      {
         "route": "/apps/chatgpt",
         "template": "app-detail",
         "docHeightPx": 3840,
@@ -2221,6 +3699,78 @@
       "desktopRegionsHiddenAtThisWidth": []
     },
     {
+      "route": "/platform/ask",
+      "viewportWidth": 768,
+      "docHeightPx": 8983,
+      "desktopRegionsHiddenAtThisWidth": []
+    },
+    {
+      "route": "/platform/call-intelligence",
+      "viewportWidth": 768,
+      "docHeightPx": 10521,
+      "desktopRegionsHiddenAtThisWidth": []
+    },
+    {
+      "route": "/platform/custom-agents",
+      "viewportWidth": 768,
+      "docHeightPx": 6888,
+      "desktopRegionsHiddenAtThisWidth": []
+    },
+    {
+      "route": "/platform/data",
+      "viewportWidth": 768,
+      "docHeightPx": 10256,
+      "desktopRegionsHiddenAtThisWidth": []
+    },
+    {
+      "route": "/platform/developers",
+      "viewportWidth": 768,
+      "docHeightPx": 14432,
+      "desktopRegionsHiddenAtThisWidth": []
+    },
+    {
+      "route": "/platform/enrichment",
+      "viewportWidth": 768,
+      "docHeightPx": 8102,
+      "desktopRegionsHiddenAtThisWidth": []
+    },
+    {
+      "route": "/platform/mcp",
+      "viewportWidth": 768,
+      "docHeightPx": 7620,
+      "desktopRegionsHiddenAtThisWidth": []
+    },
+    {
+      "route": "/platform/reporting",
+      "viewportWidth": 768,
+      "docHeightPx": 7810,
+      "desktopRegionsHiddenAtThisWidth": []
+    },
+    {
+      "route": "/platform/sequences",
+      "viewportWidth": 768,
+      "docHeightPx": 9323,
+      "desktopRegionsHiddenAtThisWidth": []
+    },
+    {
+      "route": "/platform/universal-context",
+      "viewportWidth": 768,
+      "docHeightPx": 7823,
+      "desktopRegionsHiddenAtThisWidth": []
+    },
+    {
+      "route": "/platform/web-agent",
+      "viewportWidth": 768,
+      "docHeightPx": 7160,
+      "desktopRegionsHiddenAtThisWidth": []
+    },
+    {
+      "route": "/platform/workflows",
+      "viewportWidth": 768,
+      "docHeightPx": 9248,
+      "desktopRegionsHiddenAtThisWidth": []
+    },
+    {
       "route": "/apps/chatgpt",
       "viewportWidth": 768,
       "docHeightPx": 4784,
@@ -2349,6 +3899,78 @@
       "route": "/architecture",
       "viewportWidth": 390,
       "docHeightPx": 24399,
+      "desktopRegionsHiddenAtThisWidth": []
+    },
+    {
+      "route": "/platform/ask",
+      "viewportWidth": 390,
+      "docHeightPx": 8645,
+      "desktopRegionsHiddenAtThisWidth": []
+    },
+    {
+      "route": "/platform/call-intelligence",
+      "viewportWidth": 390,
+      "docHeightPx": 10547,
+      "desktopRegionsHiddenAtThisWidth": []
+    },
+    {
+      "route": "/platform/custom-agents",
+      "viewportWidth": 390,
+      "docHeightPx": 6754,
+      "desktopRegionsHiddenAtThisWidth": []
+    },
+    {
+      "route": "/platform/data",
+      "viewportWidth": 390,
+      "docHeightPx": 10506,
+      "desktopRegionsHiddenAtThisWidth": []
+    },
+    {
+      "route": "/platform/developers",
+      "viewportWidth": 390,
+      "docHeightPx": 10566,
+      "desktopRegionsHiddenAtThisWidth": []
+    },
+    {
+      "route": "/platform/enrichment",
+      "viewportWidth": 390,
+      "docHeightPx": 8073,
+      "desktopRegionsHiddenAtThisWidth": []
+    },
+    {
+      "route": "/platform/mcp",
+      "viewportWidth": 390,
+      "docHeightPx": 7934,
+      "desktopRegionsHiddenAtThisWidth": []
+    },
+    {
+      "route": "/platform/reporting",
+      "viewportWidth": 390,
+      "docHeightPx": 8429,
+      "desktopRegionsHiddenAtThisWidth": []
+    },
+    {
+      "route": "/platform/sequences",
+      "viewportWidth": 390,
+      "docHeightPx": 9591,
+      "desktopRegionsHiddenAtThisWidth": []
+    },
+    {
+      "route": "/platform/universal-context",
+      "viewportWidth": 390,
+      "docHeightPx": 7797,
+      "desktopRegionsHiddenAtThisWidth": []
+    },
+    {
+      "route": "/platform/web-agent",
+      "viewportWidth": 390,
+      "docHeightPx": 7411,
+      "desktopRegionsHiddenAtThisWidth": []
+    },
+    {
+      "route": "/platform/workflows",
+      "viewportWidth": 390,
+      "docHeightPx": 9859,
       "desktopRegionsHiddenAtThisWidth": []
     },
     {
@@ -2881,7 +4503,1432 @@
         "minAgreementPct": 100.0,
         "avgAgreementPct": 100.0
       }
-    ]
+    ],
+    "platform": {
+      "kind": "per-section pixel parity, live (attio.com) vs clone, /platform/* routes",
+      "measuredAt": "2026-10-29",
+      "viewport": "1440x900, deviceScaleFactor 1",
+      "harness": [
+        "extraction/parity_capture.mjs",
+        "extraction/parity_compare.py"
+      ],
+      "method": "Each <main> block is reached by scrolling (scroll-through first, then scrollTo(block top)), fonts and images awaited, captured in 900px tiles at the same scroll offsets in both builds. Masked in both: the site header (shell), fixed overlays (cookie/chat), <canvas> and <video>. Primary metric: ink block-map Dice (|px-bg|>30 ink mask, 12px box blur, 4x downsample) over every tile of the live block height, so a shorter clone block is penalised. Secondary: raw pixel match (4x downsample, tol 25/255, background included).",
+      "calibration": "first tile per section on the five legacy routes: blank clone 0, clone shifted 150px down mean 9 / max 35, a different section mean 19 / max 66.",
+      "gatePerSectionPct": 80,
+      "summary": {
+        "sections": 98,
+        "atOrAbove80": 61,
+        "below80": 37,
+        "meanPct": 82.4,
+        "minPct": 49.9,
+        "perRoute": {
+          "/platform/ask": {
+            "min": 72.6,
+            "avg": 85.1
+          },
+          "/platform/call-intelligence": {
+            "min": 60.6,
+            "avg": 80.1
+          },
+          "/platform/custom-agents": {
+            "min": 62.1,
+            "avg": 81.3
+          },
+          "/platform/data": {
+            "min": 49.9,
+            "avg": 74.0
+          },
+          "/platform/developers": {
+            "min": 80.3,
+            "avg": 88.8
+          },
+          "/platform/enrichment": {
+            "min": 58.0,
+            "avg": 80.1
+          },
+          "/platform/mcp": {
+            "min": 70.5,
+            "avg": 84.3
+          },
+          "/platform/reporting": {
+            "min": 58.5,
+            "avg": 76.4
+          },
+          "/platform/sequences": {
+            "min": 64.2,
+            "avg": 79.9
+          },
+          "/platform/universal-context": {
+            "min": 67.4,
+            "avg": 83.8
+          },
+          "/platform/web-agent": {
+            "min": 75.3,
+            "avg": 85.6
+          },
+          "/platform/workflows": {
+            "min": 72.1,
+            "avg": 86.7
+          }
+        }
+      },
+      "gateResult": "NOT MET for every section: 37 of 98 sections are below 80%. Each is listed under exceptions as pending human approval; none has been approved.",
+      "responsiveDocHeights": "768 and 390 document heights within -5.3%..+2.6% of live on all 12 routes; no horizontal overflow on either build (recorded by the harness, not gated).",
+      "sections": [
+        {
+          "route": "/platform/ask",
+          "block": 1,
+          "section": "hero.platform-feature",
+          "variant": "ask-stage",
+          "parityPct": 88.9,
+          "rawPixelMatchPct": 98.2,
+          "liveHeightPx": 983,
+          "cloneHeightPx": 983
+        },
+        {
+          "route": "/platform/ask",
+          "block": 2,
+          "section": "features.tabbed-showcase",
+          "variant": "audience-ruler",
+          "parityPct": 72.6,
+          "rawPixelMatchPct": 97.3,
+          "liveHeightPx": 1104,
+          "cloneHeightPx": 1104
+        },
+        {
+          "route": "/platform/ask",
+          "block": 3,
+          "section": "features.context-band",
+          "variant": null,
+          "parityPct": 89.7,
+          "rawPixelMatchPct": 98.4,
+          "liveHeightPx": 1016,
+          "cloneHeightPx": 1016
+        },
+        {
+          "route": "/platform/ask",
+          "block": 4,
+          "section": "features.assistant-intel",
+          "variant": null,
+          "parityPct": 74.4,
+          "rawPixelMatchPct": 96.9,
+          "liveHeightPx": 1881,
+          "cloneHeightPx": 1877
+        },
+        {
+          "route": "/platform/ask",
+          "block": 5,
+          "section": "features.card-marquee",
+          "variant": "legacy",
+          "parityPct": 86.5,
+          "rawPixelMatchPct": 97.3,
+          "liveHeightPx": 968,
+          "cloneHeightPx": 968
+        },
+        {
+          "route": "/platform/ask",
+          "block": 6,
+          "section": "testimonial.quote",
+          "variant": "scroll-lit",
+          "parityPct": 88.6,
+          "rawPixelMatchPct": 92.6,
+          "liveHeightPx": 630,
+          "cloneHeightPx": 630
+        },
+        {
+          "route": "/platform/ask",
+          "block": 7,
+          "section": "conversion.final-cta",
+          "variant": "dome",
+          "parityPct": 94.9,
+          "rawPixelMatchPct": 96.7,
+          "liveHeightPx": 450,
+          "cloneHeightPx": 450
+        },
+        {
+          "route": "/platform/call-intelligence",
+          "block": 1,
+          "section": "hero.platform-feature",
+          "variant": "table-call-card",
+          "parityPct": 77.0,
+          "rawPixelMatchPct": 93.8,
+          "liveHeightPx": 821,
+          "cloneHeightPx": 821
+        },
+        {
+          "route": "/platform/call-intelligence",
+          "block": 2,
+          "section": "features.media-card-grid",
+          "variant": "legacy-media",
+          "parityPct": 77.9,
+          "rawPixelMatchPct": 96.2,
+          "liveHeightPx": 985,
+          "cloneHeightPx": 985
+        },
+        {
+          "route": "/platform/call-intelligence",
+          "block": 3,
+          "section": "testimonial.quote",
+          "variant": "scroll-lit",
+          "parityPct": 88.2,
+          "rawPixelMatchPct": 95.7,
+          "liveHeightPx": 558,
+          "cloneHeightPx": 558
+        },
+        {
+          "route": "/platform/call-intelligence",
+          "block": 4,
+          "section": "features.split-accordion",
+          "variant": "legacy",
+          "parityPct": 72.1,
+          "rawPixelMatchPct": 95.1,
+          "liveHeightPx": 750,
+          "cloneHeightPx": 750
+        },
+        {
+          "route": "/platform/call-intelligence",
+          "block": 5,
+          "section": "features.integration-arc",
+          "variant": "legacy",
+          "parityPct": 84.4,
+          "rawPixelMatchPct": 98.1,
+          "liveHeightPx": 356,
+          "cloneHeightPx": 356
+        },
+        {
+          "route": "/platform/call-intelligence",
+          "block": 6,
+          "section": "features.tabbed-showcase",
+          "variant": "pill-tabs",
+          "parityPct": 60.6,
+          "rawPixelMatchPct": 96.0,
+          "liveHeightPx": 1046,
+          "cloneHeightPx": 1046
+        },
+        {
+          "route": "/platform/call-intelligence",
+          "block": 7,
+          "section": "features.media-card-grid",
+          "variant": "legacy-indexed",
+          "parityPct": 74.3,
+          "rawPixelMatchPct": 96.9,
+          "liveHeightPx": 1949,
+          "cloneHeightPx": 1949
+        },
+        {
+          "route": "/platform/call-intelligence",
+          "block": 8,
+          "section": "navigation.platform-links",
+          "variant": "legacy",
+          "parityPct": 92.2,
+          "rawPixelMatchPct": 98.3,
+          "liveHeightPx": 689,
+          "cloneHeightPx": 689
+        },
+        {
+          "route": "/platform/call-intelligence",
+          "block": 9,
+          "section": "conversion.final-cta",
+          "variant": "dome",
+          "parityPct": 94.2,
+          "rawPixelMatchPct": 96.8,
+          "liveHeightPx": 450,
+          "cloneHeightPx": 450
+        },
+        {
+          "route": "/platform/custom-agents",
+          "block": 1,
+          "section": "hero.platform-feature",
+          "variant": "agent-canvas",
+          "parityPct": 62.1,
+          "rawPixelMatchPct": 93.7,
+          "liveHeightPx": 784,
+          "cloneHeightPx": 784
+        },
+        {
+          "route": "/platform/custom-agents",
+          "block": 2,
+          "section": "social-proof.logo-wall",
+          "variant": "platform-band",
+          "parityPct": 90.5,
+          "rawPixelMatchPct": 94.1,
+          "liveHeightPx": 193,
+          "cloneHeightPx": 193
+        },
+        {
+          "route": "/platform/custom-agents",
+          "block": 3,
+          "section": "features.split-accordion",
+          "variant": "v2",
+          "parityPct": 74.9,
+          "rawPixelMatchPct": 95.7,
+          "liveHeightPx": 769,
+          "cloneHeightPx": 769
+        },
+        {
+          "route": "/platform/custom-agents",
+          "block": 4,
+          "section": "features.card-marquee",
+          "variant": "v2",
+          "parityPct": 86.6,
+          "rawPixelMatchPct": 95.8,
+          "liveHeightPx": 838,
+          "cloneHeightPx": 838
+        },
+        {
+          "route": "/platform/custom-agents",
+          "block": 5,
+          "section": "social-proof.stat-highlight",
+          "variant": null,
+          "parityPct": 80.2,
+          "rawPixelMatchPct": 95.7,
+          "liveHeightPx": 593,
+          "cloneHeightPx": 593
+        },
+        {
+          "route": "/platform/custom-agents",
+          "block": 6,
+          "section": "features.center-media",
+          "variant": "top",
+          "parityPct": 73.7,
+          "rawPixelMatchPct": 93.9,
+          "liveHeightPx": 1182,
+          "cloneHeightPx": 1182
+        },
+        {
+          "route": "/platform/custom-agents",
+          "block": 7,
+          "section": "features.icon-columns",
+          "variant": "row",
+          "parityPct": 87.2,
+          "rawPixelMatchPct": 96.9,
+          "liveHeightPx": 801,
+          "cloneHeightPx": 801
+        },
+        {
+          "route": "/platform/custom-agents",
+          "block": 8,
+          "section": "conversion.final-cta",
+          "variant": "dome",
+          "parityPct": 94.9,
+          "rawPixelMatchPct": 96.6,
+          "liveHeightPx": 450,
+          "cloneHeightPx": 450
+        },
+        {
+          "route": "/platform/data",
+          "block": 1,
+          "section": "hero.platform-feature",
+          "variant": "schema-perspective",
+          "parityPct": 49.9,
+          "rawPixelMatchPct": 93.3,
+          "liveHeightPx": 1510,
+          "cloneHeightPx": 1535
+        },
+        {
+          "route": "/platform/data",
+          "block": 2,
+          "section": "features.media-card-grid",
+          "variant": "legacy-indexed",
+          "parityPct": 72.1,
+          "rawPixelMatchPct": 96.7,
+          "liveHeightPx": 2007,
+          "cloneHeightPx": 2007
+        },
+        {
+          "route": "/platform/data",
+          "block": 3,
+          "section": "features.media-card-grid",
+          "variant": "legacy-icon",
+          "parityPct": 88.5,
+          "rawPixelMatchPct": 96.8,
+          "liveHeightPx": 640,
+          "cloneHeightPx": 640
+        },
+        {
+          "route": "/platform/data",
+          "block": 4,
+          "section": "features.media-card-grid",
+          "variant": "legacy-media",
+          "parityPct": 68.1,
+          "rawPixelMatchPct": 94.7,
+          "liveHeightPx": 1043,
+          "cloneHeightPx": 1021
+        },
+        {
+          "route": "/platform/data",
+          "block": 5,
+          "section": "features.split-accordion",
+          "variant": "legacy",
+          "parityPct": 68.3,
+          "rawPixelMatchPct": 95.2,
+          "liveHeightPx": 750,
+          "cloneHeightPx": 750
+        },
+        {
+          "route": "/platform/data",
+          "block": 6,
+          "section": "features.tabbed-showcase",
+          "variant": "pill-tabs",
+          "parityPct": 58.5,
+          "rawPixelMatchPct": 88.4,
+          "liveHeightPx": 1082,
+          "cloneHeightPx": 1082
+        },
+        {
+          "route": "/platform/data",
+          "block": 7,
+          "section": "navigation.platform-links",
+          "variant": "legacy",
+          "parityPct": 92.1,
+          "rawPixelMatchPct": 98.3,
+          "liveHeightPx": 689,
+          "cloneHeightPx": 689
+        },
+        {
+          "route": "/platform/data",
+          "block": 8,
+          "section": "conversion.final-cta",
+          "variant": "dome",
+          "parityPct": 94.2,
+          "rawPixelMatchPct": 96.8,
+          "liveHeightPx": 450,
+          "cloneHeightPx": 450
+        },
+        {
+          "route": "/platform/developers",
+          "block": 1,
+          "section": "hero.developer-blueprint",
+          "variant": null,
+          "parityPct": 82.6,
+          "rawPixelMatchPct": 97.7,
+          "liveHeightPx": 695,
+          "cloneHeightPx": 695
+        },
+        {
+          "route": "/platform/developers",
+          "block": 2,
+          "section": "features.blueprint-cards",
+          "variant": "cards",
+          "parityPct": 89.9,
+          "rawPixelMatchPct": 97.8,
+          "liveHeightPx": 991,
+          "cloneHeightPx": 991
+        },
+        {
+          "route": "/platform/developers",
+          "block": 3,
+          "section": "testimonial.quote",
+          "variant": "blueprint-portrait",
+          "parityPct": 95.6,
+          "rawPixelMatchPct": 96.0,
+          "liveHeightPx": 579,
+          "cloneHeightPx": 579
+        },
+        {
+          "route": "/platform/developers",
+          "block": 4,
+          "section": "features.blueprint-cards",
+          "variant": "cards-with-quote",
+          "parityPct": 88.0,
+          "rawPixelMatchPct": 97.7,
+          "liveHeightPx": 1592,
+          "cloneHeightPx": 1592
+        },
+        {
+          "route": "/platform/developers",
+          "block": 5,
+          "section": "features.blueprint-cards",
+          "variant": "cards-with-quote",
+          "parityPct": 84.2,
+          "rawPixelMatchPct": 97.2,
+          "liveHeightPx": 1662,
+          "cloneHeightPx": 1663
+        },
+        {
+          "route": "/platform/developers",
+          "block": 6,
+          "section": "content.contribution-heatmap",
+          "variant": null,
+          "parityPct": 92.8,
+          "rawPixelMatchPct": 91.8,
+          "liveHeightPx": 781,
+          "cloneHeightPx": 781
+        },
+        {
+          "route": "/platform/developers",
+          "block": 7,
+          "section": "testimonial.quote",
+          "variant": "blueprint-portrait",
+          "parityPct": 92.5,
+          "rawPixelMatchPct": 98.1,
+          "liveHeightPx": 579,
+          "cloneHeightPx": 579
+        },
+        {
+          "route": "/platform/developers",
+          "block": 8,
+          "section": "features.developer-apps",
+          "variant": null,
+          "parityPct": 93.6,
+          "rawPixelMatchPct": 97.0,
+          "liveHeightPx": 1027,
+          "cloneHeightPx": 1027
+        },
+        {
+          "route": "/platform/developers",
+          "block": 9,
+          "section": "conversion.developer-cta",
+          "variant": null,
+          "parityPct": 80.3,
+          "rawPixelMatchPct": 98.5,
+          "liveHeightPx": 753,
+          "cloneHeightPx": 753
+        },
+        {
+          "route": "/platform/enrichment",
+          "block": 1,
+          "section": "hero.platform-feature",
+          "variant": "kanban-board",
+          "parityPct": 58.0,
+          "rawPixelMatchPct": 94.0,
+          "liveHeightPx": 784,
+          "cloneHeightPx": 784
+        },
+        {
+          "route": "/platform/enrichment",
+          "block": 2,
+          "section": "features.media-card-grid",
+          "variant": "v2-three",
+          "parityPct": 86.1,
+          "rawPixelMatchPct": 94.7,
+          "liveHeightPx": 911,
+          "cloneHeightPx": 911
+        },
+        {
+          "route": "/platform/enrichment",
+          "block": 3,
+          "section": "features.split-accordion",
+          "variant": "v2",
+          "parityPct": 68.8,
+          "rawPixelMatchPct": 93.6,
+          "liveHeightPx": 769,
+          "cloneHeightPx": 769
+        },
+        {
+          "route": "/platform/enrichment",
+          "block": 4,
+          "section": "features.center-media",
+          "variant": "centered",
+          "parityPct": 68.5,
+          "rawPixelMatchPct": 96.6,
+          "liveHeightPx": 1041,
+          "cloneHeightPx": 1041
+        },
+        {
+          "route": "/platform/enrichment",
+          "block": 5,
+          "section": "testimonial.quote",
+          "variant": "scroll-lit",
+          "parityPct": 87.9,
+          "rawPixelMatchPct": 95.5,
+          "liveHeightPx": 800,
+          "cloneHeightPx": 800
+        },
+        {
+          "route": "/platform/enrichment",
+          "block": 6,
+          "section": "features.text-columns",
+          "variant": "columns",
+          "parityPct": 88.7,
+          "rawPixelMatchPct": 96.3,
+          "liveHeightPx": 821,
+          "cloneHeightPx": 821
+        },
+        {
+          "route": "/platform/enrichment",
+          "block": 7,
+          "section": "navigation.platform-links",
+          "variant": "v2",
+          "parityPct": 88.3,
+          "rawPixelMatchPct": 98.2,
+          "liveHeightPx": 805,
+          "cloneHeightPx": 805
+        },
+        {
+          "route": "/platform/enrichment",
+          "block": 8,
+          "section": "conversion.final-cta",
+          "variant": "dome",
+          "parityPct": 94.9,
+          "rawPixelMatchPct": 96.7,
+          "liveHeightPx": 450,
+          "cloneHeightPx": 450
+        },
+        {
+          "route": "/platform/mcp",
+          "block": 1,
+          "section": "hero.platform-feature",
+          "variant": "tile-grid",
+          "parityPct": 80.3,
+          "rawPixelMatchPct": 97.0,
+          "liveHeightPx": 811,
+          "cloneHeightPx": 811
+        },
+        {
+          "route": "/platform/mcp",
+          "block": 2,
+          "section": "features.integration-arc",
+          "variant": "v2",
+          "parityPct": 79.1,
+          "rawPixelMatchPct": 98.2,
+          "liveHeightPx": 356,
+          "cloneHeightPx": 356
+        },
+        {
+          "route": "/platform/mcp",
+          "block": 3,
+          "section": "features.icon-columns",
+          "variant": "split",
+          "parityPct": 85.0,
+          "rawPixelMatchPct": 96.5,
+          "liveHeightPx": 754,
+          "cloneHeightPx": 754
+        },
+        {
+          "route": "/platform/mcp",
+          "block": 4,
+          "section": "features.center-media",
+          "variant": "top",
+          "parityPct": 78.8,
+          "rawPixelMatchPct": 93.8,
+          "liveHeightPx": 1205,
+          "cloneHeightPx": 1205
+        },
+        {
+          "route": "/platform/mcp",
+          "block": 5,
+          "section": "features.media-card-grid",
+          "variant": "v2-three",
+          "parityPct": 70.5,
+          "rawPixelMatchPct": 94.6,
+          "liveHeightPx": 889,
+          "cloneHeightPx": 889
+        },
+        {
+          "route": "/platform/mcp",
+          "block": 6,
+          "section": "social-proof.stat-highlight",
+          "variant": null,
+          "parityPct": 86.6,
+          "rawPixelMatchPct": 95.6,
+          "liveHeightPx": 593,
+          "cloneHeightPx": 593
+        },
+        {
+          "route": "/platform/mcp",
+          "block": 7,
+          "section": "social-proof.logo-wall",
+          "variant": "platform-band",
+          "parityPct": 90.5,
+          "rawPixelMatchPct": 94.1,
+          "liveHeightPx": 193,
+          "cloneHeightPx": 193
+        },
+        {
+          "route": "/platform/mcp",
+          "block": 8,
+          "section": "features.text-columns",
+          "variant": "steps",
+          "parityPct": 87.9,
+          "rawPixelMatchPct": 96.7,
+          "liveHeightPx": 648,
+          "cloneHeightPx": 648
+        },
+        {
+          "route": "/platform/mcp",
+          "block": 9,
+          "section": "conversion.newsletter-signup",
+          "variant": "inline",
+          "parityPct": 89.5,
+          "rawPixelMatchPct": 98.4,
+          "liveHeightPx": 305,
+          "cloneHeightPx": 305
+        },
+        {
+          "route": "/platform/mcp",
+          "block": 10,
+          "section": "conversion.final-cta",
+          "variant": "dome",
+          "parityPct": 94.9,
+          "rawPixelMatchPct": 96.7,
+          "liveHeightPx": 450,
+          "cloneHeightPx": 450
+        },
+        {
+          "route": "/platform/reporting",
+          "block": 1,
+          "section": "hero.platform-feature",
+          "variant": "radar",
+          "parityPct": 73.1,
+          "rawPixelMatchPct": 95.5,
+          "liveHeightPx": 720,
+          "cloneHeightPx": 720
+        },
+        {
+          "route": "/platform/reporting",
+          "block": 2,
+          "section": "social-proof.logo-wall",
+          "variant": "platform-band",
+          "parityPct": 90.5,
+          "rawPixelMatchPct": 94.1,
+          "liveHeightPx": 193,
+          "cloneHeightPx": 193
+        },
+        {
+          "route": "/platform/reporting",
+          "block": 3,
+          "section": "features.bento-grid",
+          "variant": null,
+          "parityPct": 58.5,
+          "rawPixelMatchPct": 85.3,
+          "liveHeightPx": 1264,
+          "cloneHeightPx": 1264
+        },
+        {
+          "route": "/platform/reporting",
+          "block": 4,
+          "section": "features.split-accordion",
+          "variant": "v2",
+          "parityPct": 73.1,
+          "rawPixelMatchPct": 92.5,
+          "liveHeightPx": 769,
+          "cloneHeightPx": 769
+        },
+        {
+          "route": "/platform/reporting",
+          "block": 5,
+          "section": "features.media-card-grid",
+          "variant": "v2-six",
+          "parityPct": 69.1,
+          "rawPixelMatchPct": 94.1,
+          "liveHeightPx": 1419,
+          "cloneHeightPx": 1419
+        },
+        {
+          "route": "/platform/reporting",
+          "block": 6,
+          "section": "conversion.final-cta",
+          "variant": "dome",
+          "parityPct": 94.2,
+          "rawPixelMatchPct": 96.8,
+          "liveHeightPx": 450,
+          "cloneHeightPx": 450
+        },
+        {
+          "route": "/platform/sequences",
+          "block": 1,
+          "section": "hero.platform-feature",
+          "variant": "sequence-stack",
+          "parityPct": 89.6,
+          "rawPixelMatchPct": 97.0,
+          "liveHeightPx": 820,
+          "cloneHeightPx": 820
+        },
+        {
+          "route": "/platform/sequences",
+          "block": 2,
+          "section": "features.product-showcase",
+          "variant": null,
+          "parityPct": 68.1,
+          "rawPixelMatchPct": 94.9,
+          "liveHeightPx": 1192,
+          "cloneHeightPx": 1192
+        },
+        {
+          "route": "/platform/sequences",
+          "block": 3,
+          "section": "features.media-card-grid",
+          "variant": "legacy-media",
+          "parityPct": 71.6,
+          "rawPixelMatchPct": 96.1,
+          "liveHeightPx": 985,
+          "cloneHeightPx": 985
+        },
+        {
+          "route": "/platform/sequences",
+          "block": 4,
+          "section": "testimonial.quote",
+          "variant": "scroll-lit",
+          "parityPct": 83.5,
+          "rawPixelMatchPct": 96.3,
+          "liveHeightPx": 558,
+          "cloneHeightPx": 558
+        },
+        {
+          "route": "/platform/sequences",
+          "block": 5,
+          "section": "features.split-accordion",
+          "variant": "legacy",
+          "parityPct": 75.6,
+          "rawPixelMatchPct": 96.3,
+          "liveHeightPx": 750,
+          "cloneHeightPx": 750
+        },
+        {
+          "route": "/platform/sequences",
+          "block": 6,
+          "section": "features.media-card-grid",
+          "variant": "legacy-indexed",
+          "parityPct": 64.2,
+          "rawPixelMatchPct": 97.0,
+          "liveHeightPx": 1513,
+          "cloneHeightPx": 1513
+        },
+        {
+          "route": "/platform/sequences",
+          "block": 7,
+          "section": "navigation.platform-links",
+          "variant": "legacy",
+          "parityPct": 92.1,
+          "rawPixelMatchPct": 98.3,
+          "liveHeightPx": 689,
+          "cloneHeightPx": 689
+        },
+        {
+          "route": "/platform/sequences",
+          "block": 8,
+          "section": "conversion.final-cta",
+          "variant": "dome",
+          "parityPct": 94.2,
+          "rawPixelMatchPct": 96.8,
+          "liveHeightPx": 450,
+          "cloneHeightPx": 450
+        },
+        {
+          "route": "/platform/universal-context",
+          "block": 1,
+          "section": "hero.platform-feature",
+          "variant": "horizon",
+          "parityPct": 90.1,
+          "rawPixelMatchPct": 98.2,
+          "liveHeightPx": 831,
+          "cloneHeightPx": 831
+        },
+        {
+          "route": "/platform/universal-context",
+          "block": 2,
+          "section": "social-proof.logo-wall",
+          "variant": "platform-band",
+          "parityPct": 90.5,
+          "rawPixelMatchPct": 94.1,
+          "liveHeightPx": 193,
+          "cloneHeightPx": 193
+        },
+        {
+          "route": "/platform/universal-context",
+          "block": 3,
+          "section": "features.split-accordion",
+          "variant": "v2",
+          "parityPct": 79.2,
+          "rawPixelMatchPct": 95.7,
+          "liveHeightPx": 769,
+          "cloneHeightPx": 769
+        },
+        {
+          "route": "/platform/universal-context",
+          "block": 4,
+          "section": "features.center-media",
+          "variant": "top",
+          "parityPct": 71.1,
+          "rawPixelMatchPct": 96.6,
+          "liveHeightPx": 1180,
+          "cloneHeightPx": 1180
+        },
+        {
+          "route": "/platform/universal-context",
+          "block": 5,
+          "section": "features.media-card-grid",
+          "variant": "v2-three",
+          "parityPct": 67.4,
+          "rawPixelMatchPct": 94.8,
+          "liveHeightPx": 889,
+          "cloneHeightPx": 889
+        },
+        {
+          "route": "/platform/universal-context",
+          "block": 6,
+          "section": "features.text-columns",
+          "variant": "columns",
+          "parityPct": 90.6,
+          "rawPixelMatchPct": 96.7,
+          "liveHeightPx": 733,
+          "cloneHeightPx": 733
+        },
+        {
+          "route": "/platform/universal-context",
+          "block": 7,
+          "section": "features.tagged-quad",
+          "variant": null,
+          "parityPct": 87.1,
+          "rawPixelMatchPct": 96.8,
+          "liveHeightPx": 896,
+          "cloneHeightPx": 896
+        },
+        {
+          "route": "/platform/universal-context",
+          "block": 8,
+          "section": "conversion.final-cta",
+          "variant": "dome",
+          "parityPct": 94.8,
+          "rawPixelMatchPct": 96.6,
+          "liveHeightPx": 450,
+          "cloneHeightPx": 450
+        },
+        {
+          "route": "/platform/web-agent",
+          "block": 1,
+          "section": "hero.platform-feature",
+          "variant": "chip-field",
+          "parityPct": 75.3,
+          "rawPixelMatchPct": 95.6,
+          "liveHeightPx": 784,
+          "cloneHeightPx": 784
+        },
+        {
+          "route": "/platform/web-agent",
+          "block": 2,
+          "section": "social-proof.logo-wall",
+          "variant": "platform-band",
+          "parityPct": 90.5,
+          "rawPixelMatchPct": 94.1,
+          "liveHeightPx": 193,
+          "cloneHeightPx": 193
+        },
+        {
+          "route": "/platform/web-agent",
+          "block": 3,
+          "section": "features.split-accordion",
+          "variant": "v2",
+          "parityPct": 75.7,
+          "rawPixelMatchPct": 96.5,
+          "liveHeightPx": 769,
+          "cloneHeightPx": 769
+        },
+        {
+          "route": "/platform/web-agent",
+          "block": 4,
+          "section": "features.media-card-grid",
+          "variant": "v2-three",
+          "parityPct": 80.1,
+          "rawPixelMatchPct": 94.3,
+          "liveHeightPx": 911,
+          "cloneHeightPx": 911
+        },
+        {
+          "route": "/platform/web-agent",
+          "block": 5,
+          "section": "features.orbit-columns",
+          "variant": null,
+          "parityPct": 91.9,
+          "rawPixelMatchPct": 97.2,
+          "liveHeightPx": 842,
+          "cloneHeightPx": 842
+        },
+        {
+          "route": "/platform/web-agent",
+          "block": 6,
+          "section": "features.tagged-quad",
+          "variant": null,
+          "parityPct": 90.6,
+          "rawPixelMatchPct": 97.4,
+          "liveHeightPx": 896,
+          "cloneHeightPx": 896
+        },
+        {
+          "route": "/platform/web-agent",
+          "block": 7,
+          "section": "conversion.final-cta",
+          "variant": "dome",
+          "parityPct": 94.9,
+          "rawPixelMatchPct": 96.7,
+          "liveHeightPx": 450,
+          "cloneHeightPx": 450
+        },
+        {
+          "route": "/platform/workflows",
+          "block": 1,
+          "section": "hero.platform-feature",
+          "variant": "flow-diagram",
+          "parityPct": 79.4,
+          "rawPixelMatchPct": 94.5,
+          "liveHeightPx": 790,
+          "cloneHeightPx": 790
+        },
+        {
+          "route": "/platform/workflows",
+          "block": 2,
+          "section": "social-proof.logo-wall",
+          "variant": "platform-band",
+          "parityPct": 90.5,
+          "rawPixelMatchPct": 94.1,
+          "liveHeightPx": 193,
+          "cloneHeightPx": 193
+        },
+        {
+          "route": "/platform/workflows",
+          "block": 3,
+          "section": "features.card-marquee",
+          "variant": "legacy",
+          "parityPct": 88.4,
+          "rawPixelMatchPct": 97.6,
+          "liveHeightPx": 924,
+          "cloneHeightPx": 924
+        },
+        {
+          "route": "/platform/workflows",
+          "block": 4,
+          "section": "features.text-columns",
+          "variant": "agent-ruler",
+          "parityPct": 89.2,
+          "rawPixelMatchPct": 97.3,
+          "liveHeightPx": 764,
+          "cloneHeightPx": 764
+        },
+        {
+          "route": "/platform/workflows",
+          "block": 5,
+          "section": "testimonial.quote",
+          "variant": "scroll-lit",
+          "parityPct": 90.1,
+          "rawPixelMatchPct": 93.7,
+          "liveHeightPx": 586,
+          "cloneHeightPx": 586
+        },
+        {
+          "route": "/platform/workflows",
+          "block": 6,
+          "section": "features.split-accordion",
+          "variant": "legacy",
+          "parityPct": 78.8,
+          "rawPixelMatchPct": 96.4,
+          "liveHeightPx": 750,
+          "cloneHeightPx": 750
+        },
+        {
+          "route": "/platform/workflows",
+          "block": 7,
+          "section": "features.context-band",
+          "variant": null,
+          "parityPct": 91.0,
+          "rawPixelMatchPct": 98.3,
+          "liveHeightPx": 1016,
+          "cloneHeightPx": 1016
+        },
+        {
+          "route": "/platform/workflows",
+          "block": 8,
+          "section": "features.media-card-grid",
+          "variant": "legacy-media",
+          "parityPct": 72.1,
+          "rawPixelMatchPct": 96.4,
+          "liveHeightPx": 949,
+          "cloneHeightPx": 949
+        },
+        {
+          "route": "/platform/workflows",
+          "block": 9,
+          "section": "features.media-card-grid",
+          "variant": "legacy-icon",
+          "parityPct": 92.5,
+          "rawPixelMatchPct": 97.4,
+          "liveHeightPx": 604,
+          "cloneHeightPx": 604
+        },
+        {
+          "route": "/platform/workflows",
+          "block": 10,
+          "section": "conversion.final-cta",
+          "variant": "dome",
+          "parityPct": 94.9,
+          "rawPixelMatchPct": 96.7,
+          "liveHeightPx": 450,
+          "cloneHeightPx": 450
+        }
+      ],
+      "exceptions": [
+        {
+          "route": "/platform/ask",
+          "block": 2,
+          "section": "features.tabbed-showcase",
+          "variant": "audience-ruler",
+          "parityPct": 72.6,
+          "cause": "panel media and list copy are original; text rows offset by 5-15px against the live panel",
+          "status": "pending human approval",
+          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
+        },
+        {
+          "route": "/platform/ask",
+          "block": 4,
+          "section": "features.assistant-intel",
+          "variant": null,
+          "parityPct": 74.4,
+          "cause": "assistant window and cell mocks are original; masked window text differs",
+          "status": "pending human approval",
+          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
+        },
+        {
+          "route": "/platform/call-intelligence",
+          "block": 1,
+          "section": "hero.platform-feature",
+          "variant": "table-call-card",
+          "parityPct": 77.0,
+          "cause": "hero artwork is original mock UI laid out like the live stage; time-based hero motion (agent run states, radar sweep, kanban/perspective entrance, typing) is captured mid-cycle in both builds",
+          "status": "pending human approval",
+          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
+        },
+        {
+          "route": "/platform/call-intelligence",
+          "block": 2,
+          "section": "features.media-card-grid",
+          "variant": "legacy-media",
+          "parityPct": 77.9,
+          "cause": "card artwork is original small UI mocks in place of live screenshots/DOM mocks; invented card copy wraps differently",
+          "status": "pending human approval",
+          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
+        },
+        {
+          "route": "/platform/call-intelligence",
+          "block": 4,
+          "section": "features.split-accordion",
+          "variant": "legacy",
+          "parityPct": 72.1,
+          "cause": "media panel is original mock art in place of the live raster screenshot; item copy is invented, so text rows sit a few px off the live rows",
+          "status": "pending human approval",
+          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
+        },
+        {
+          "route": "/platform/call-intelligence",
+          "block": 6,
+          "section": "features.tabbed-showcase",
+          "variant": "pill-tabs",
+          "parityPct": 60.6,
+          "cause": "panel media and list copy are original; text rows offset by 5-15px against the live panel",
+          "status": "pending human approval",
+          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
+        },
+        {
+          "route": "/platform/call-intelligence",
+          "block": 7,
+          "section": "features.media-card-grid",
+          "variant": "legacy-indexed",
+          "parityPct": 74.3,
+          "cause": "card artwork is original small UI mocks in place of live screenshots/DOM mocks; invented card copy wraps differently",
+          "status": "pending human approval",
+          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
+        },
+        {
+          "route": "/platform/custom-agents",
+          "block": 1,
+          "section": "hero.platform-feature",
+          "variant": "agent-canvas",
+          "parityPct": 62.1,
+          "cause": "hero artwork is original mock UI laid out like the live stage; time-based hero motion (agent run states, radar sweep, kanban/perspective entrance, typing) is captured mid-cycle in both builds",
+          "status": "pending human approval",
+          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
+        },
+        {
+          "route": "/platform/custom-agents",
+          "block": 3,
+          "section": "features.split-accordion",
+          "variant": "v2",
+          "parityPct": 74.9,
+          "cause": "media panel is original mock art in place of the live raster screenshot; item copy is invented, so text rows sit a few px off the live rows",
+          "status": "pending human approval",
+          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
+        },
+        {
+          "route": "/platform/custom-agents",
+          "block": 6,
+          "section": "features.center-media",
+          "variant": "top",
+          "parityPct": 73.7,
+          "cause": "product window is an original mock drawn to the live screenshot layout; dense window text never aligns glyph-for-glyph",
+          "status": "pending human approval",
+          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
+        },
+        {
+          "route": "/platform/data",
+          "block": 1,
+          "section": "hero.platform-feature",
+          "variant": "schema-perspective",
+          "parityPct": 49.9,
+          "cause": "hero artwork is original mock UI laid out like the live stage; time-based hero motion (agent run states, radar sweep, kanban/perspective entrance, typing) is captured mid-cycle in both builds",
+          "status": "pending human approval",
+          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
+        },
+        {
+          "route": "/platform/data",
+          "block": 2,
+          "section": "features.media-card-grid",
+          "variant": "legacy-indexed",
+          "parityPct": 72.1,
+          "cause": "card artwork is original small UI mocks in place of live screenshots/DOM mocks; invented card copy wraps differently",
+          "status": "pending human approval",
+          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
+        },
+        {
+          "route": "/platform/data",
+          "block": 4,
+          "section": "features.media-card-grid",
+          "variant": "legacy-media",
+          "parityPct": 68.1,
+          "cause": "card artwork is original small UI mocks in place of live screenshots/DOM mocks; invented card copy wraps differently",
+          "status": "pending human approval",
+          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
+        },
+        {
+          "route": "/platform/data",
+          "block": 5,
+          "section": "features.split-accordion",
+          "variant": "legacy",
+          "parityPct": 68.3,
+          "cause": "media panel is original mock art in place of the live raster screenshot; item copy is invented, so text rows sit a few px off the live rows",
+          "status": "pending human approval",
+          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
+        },
+        {
+          "route": "/platform/data",
+          "block": 6,
+          "section": "features.tabbed-showcase",
+          "variant": "pill-tabs",
+          "parityPct": 58.5,
+          "cause": "panel media and list copy are original; text rows offset by 5-15px against the live panel",
+          "status": "pending human approval",
+          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
+        },
+        {
+          "route": "/platform/enrichment",
+          "block": 1,
+          "section": "hero.platform-feature",
+          "variant": "kanban-board",
+          "parityPct": 58.0,
+          "cause": "hero artwork is original mock UI laid out like the live stage; time-based hero motion (agent run states, radar sweep, kanban/perspective entrance, typing) is captured mid-cycle in both builds",
+          "status": "pending human approval",
+          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
+        },
+        {
+          "route": "/platform/enrichment",
+          "block": 3,
+          "section": "features.split-accordion",
+          "variant": "v2",
+          "parityPct": 68.8,
+          "cause": "media panel is original mock art in place of the live raster screenshot; item copy is invented, so text rows sit a few px off the live rows",
+          "status": "pending human approval",
+          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
+        },
+        {
+          "route": "/platform/enrichment",
+          "block": 4,
+          "section": "features.center-media",
+          "variant": "centered",
+          "parityPct": 68.5,
+          "cause": "product window is an original mock drawn to the live screenshot layout; dense window text never aligns glyph-for-glyph",
+          "status": "pending human approval",
+          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
+        },
+        {
+          "route": "/platform/mcp",
+          "block": 2,
+          "section": "features.integration-arc",
+          "variant": "v2",
+          "parityPct": 79.1,
+          "cause": "tool tiles are original glyph tiles placed on the arc; live tiles orbit",
+          "status": "pending human approval",
+          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
+        },
+        {
+          "route": "/platform/mcp",
+          "block": 4,
+          "section": "features.center-media",
+          "variant": "top",
+          "parityPct": 78.8,
+          "cause": "product window is an original mock drawn to the live screenshot layout; dense window text never aligns glyph-for-glyph",
+          "status": "pending human approval",
+          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
+        },
+        {
+          "route": "/platform/mcp",
+          "block": 5,
+          "section": "features.media-card-grid",
+          "variant": "v2-three",
+          "parityPct": 70.5,
+          "cause": "card artwork is original small UI mocks in place of live screenshots/DOM mocks; invented card copy wraps differently",
+          "status": "pending human approval",
+          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
+        },
+        {
+          "route": "/platform/reporting",
+          "block": 1,
+          "section": "hero.platform-feature",
+          "variant": "radar",
+          "parityPct": 73.1,
+          "cause": "hero artwork is original mock UI laid out like the live stage; time-based hero motion (agent run states, radar sweep, kanban/perspective entrance, typing) is captured mid-cycle in both builds",
+          "status": "pending human approval",
+          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
+        },
+        {
+          "route": "/platform/reporting",
+          "block": 3,
+          "section": "features.bento-grid",
+          "variant": null,
+          "parityPct": 58.5,
+          "cause": "chart cards are original charts in place of live screenshots (map, donut, pipeline funnel)",
+          "status": "pending human approval",
+          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
+        },
+        {
+          "route": "/platform/reporting",
+          "block": 4,
+          "section": "features.split-accordion",
+          "variant": "v2",
+          "parityPct": 73.1,
+          "cause": "media panel is original mock art in place of the live raster screenshot; item copy is invented, so text rows sit a few px off the live rows",
+          "status": "pending human approval",
+          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
+        },
+        {
+          "route": "/platform/reporting",
+          "block": 5,
+          "section": "features.media-card-grid",
+          "variant": "v2-six",
+          "parityPct": 69.1,
+          "cause": "card artwork is original small UI mocks in place of live screenshots/DOM mocks; invented card copy wraps differently",
+          "status": "pending human approval",
+          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
+        },
+        {
+          "route": "/platform/sequences",
+          "block": 2,
+          "section": "features.product-showcase",
+          "variant": null,
+          "parityPct": 68.1,
+          "cause": "sequence editor is an original mock drawn to the live screenshot layout; dense list text",
+          "status": "pending human approval",
+          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
+        },
+        {
+          "route": "/platform/sequences",
+          "block": 3,
+          "section": "features.media-card-grid",
+          "variant": "legacy-media",
+          "parityPct": 71.6,
+          "cause": "card artwork is original small UI mocks in place of live screenshots/DOM mocks; invented card copy wraps differently",
+          "status": "pending human approval",
+          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
+        },
+        {
+          "route": "/platform/sequences",
+          "block": 5,
+          "section": "features.split-accordion",
+          "variant": "legacy",
+          "parityPct": 75.6,
+          "cause": "media panel is original mock art in place of the live raster screenshot; item copy is invented, so text rows sit a few px off the live rows",
+          "status": "pending human approval",
+          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
+        },
+        {
+          "route": "/platform/sequences",
+          "block": 6,
+          "section": "features.media-card-grid",
+          "variant": "legacy-indexed",
+          "parityPct": 64.2,
+          "cause": "card artwork is original small UI mocks in place of live screenshots/DOM mocks; invented card copy wraps differently",
+          "status": "pending human approval",
+          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
+        },
+        {
+          "route": "/platform/universal-context",
+          "block": 3,
+          "section": "features.split-accordion",
+          "variant": "v2",
+          "parityPct": 79.2,
+          "cause": "media panel is original mock art in place of the live raster screenshot; item copy is invented, so text rows sit a few px off the live rows",
+          "status": "pending human approval",
+          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
+        },
+        {
+          "route": "/platform/universal-context",
+          "block": 4,
+          "section": "features.center-media",
+          "variant": "top",
+          "parityPct": 71.1,
+          "cause": "product window is an original mock drawn to the live screenshot layout; dense window text never aligns glyph-for-glyph",
+          "status": "pending human approval",
+          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
+        },
+        {
+          "route": "/platform/universal-context",
+          "block": 5,
+          "section": "features.media-card-grid",
+          "variant": "v2-three",
+          "parityPct": 67.4,
+          "cause": "card artwork is original small UI mocks in place of live screenshots/DOM mocks; invented card copy wraps differently",
+          "status": "pending human approval",
+          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
+        },
+        {
+          "route": "/platform/web-agent",
+          "block": 1,
+          "section": "hero.platform-feature",
+          "variant": "chip-field",
+          "parityPct": 75.3,
+          "cause": "hero artwork is original mock UI laid out like the live stage; time-based hero motion (agent run states, radar sweep, kanban/perspective entrance, typing) is captured mid-cycle in both builds",
+          "status": "pending human approval",
+          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
+        },
+        {
+          "route": "/platform/web-agent",
+          "block": 3,
+          "section": "features.split-accordion",
+          "variant": "v2",
+          "parityPct": 75.7,
+          "cause": "media panel is original mock art in place of the live raster screenshot; item copy is invented, so text rows sit a few px off the live rows",
+          "status": "pending human approval",
+          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
+        },
+        {
+          "route": "/platform/workflows",
+          "block": 1,
+          "section": "hero.platform-feature",
+          "variant": "flow-diagram",
+          "parityPct": 79.4,
+          "cause": "hero artwork is original mock UI laid out like the live stage; time-based hero motion (agent run states, radar sweep, kanban/perspective entrance, typing) is captured mid-cycle in both builds",
+          "status": "pending human approval",
+          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
+        },
+        {
+          "route": "/platform/workflows",
+          "block": 6,
+          "section": "features.split-accordion",
+          "variant": "legacy",
+          "parityPct": 78.8,
+          "cause": "media panel is original mock art in place of the live raster screenshot; item copy is invented, so text rows sit a few px off the live rows",
+          "status": "pending human approval",
+          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
+        },
+        {
+          "route": "/platform/workflows",
+          "block": 8,
+          "section": "features.media-card-grid",
+          "variant": "legacy-media",
+          "parityPct": 72.1,
+          "cause": "card artwork is original small UI mocks in place of live screenshots/DOM mocks; invented card copy wraps differently",
+          "status": "pending human approval",
+          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
+        }
+      ]
+    }
   },
   "cloneBuild": {
     "command": "npm ci --prefer-offline && vite build (isolated temp copy of src/, public/, index.html, configs, package-lock.json; node_modules and dist/ excluded)",
@@ -2909,7 +5956,7 @@
     {
       "claim": "Plan card radius 20px (spec text said 24)",
       "verdict": "holds",
-      "evidence": "tailwind.config.cjs:295-295"
+      "evidence": "tailwind.config.cjs:300-300"
     },
     {
       "claim": "Platform showcase scroll-spy at 45% of the viewport (spec M6 only said 'while in view')",
@@ -2948,6 +5995,12 @@
       "claim": "Homepage section wrapper geometry (CLONE_SPEC section heights 1207/194/6479/1097/4517/760/937/930/417/685)",
       "verdict": "holds",
       "current": "re-measured on the running clone at 1440x900: hero 1206.6, logos 194, showcase 6479.4, self-building 1097, context group 2573.9+593.3+2250 (overlapping curtain), scale 760, stories 937, changelog 930, final CTA 417, footer 685"
+    },
+    {
+      "claim": "Seven platform pages and the platform section library from an uncommitted working tree (custom-agents, developers, enrichment, mcp, reporting, universal-context, web-agent) are a usable starting point",
+      "verdict": "partly holds",
+      "current": "imported unchanged in structure; geometry matched live (doc heights equal at 1440), but some of its copy reproduced live headlines or 5-word runs of live copy and was rewritten, and several media boxes were redrawn to the live layouts (windows.jsx, tiles.jsx)",
+      "evidence": "src/pages/platform/WebAgent.jsx:1-10"
     }
   ],
   "excludedEvidence": [

@@ -1,0 +1,159 @@
+{
+  "id": "navigation.platform-links",
+  "title": "Platform links grid",
+  "status": "measured",
+  "source": {
+    "id": "src:Sections#export-function-LinksGrid",
+    "file": "src/components/platform/Sections.jsx",
+    "tag": "export function LinksGrid(",
+    "lines": "479-516",
+    "citation": "src/components/platform/Sections.jsx:479-516",
+    "variantSources": {
+      "v2": {
+        "file": "src/components/platform/Sections.jsx",
+        "tag": "export function LinksGrid(",
+        "lines": "479-516",
+        "citation": "src/components/platform/Sections.jsx:479-516"
+      },
+      "legacy": {
+        "file": "src/components/platform/Sections.jsx",
+        "tag": "export function LinksGrid(",
+        "lines": "479-516",
+        "citation": "src/components/platform/Sections.jsx:479-516"
+      }
+    }
+  },
+  "semantic": {
+    "id": "navigation.platform-links",
+    "category": "NAVIGATION"
+  },
+  "retrievalEligible": true,
+  "purpose": "Heading plus a grid of eight numbered links to sibling platform pages (overline index, label, arrow that slides in on hover).",
+  "themes": [
+    "light"
+  ],
+  "variants": [
+    "v2",
+    "legacy"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "heading": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "lead": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 7,
+            "x-maxWordsEvidence": "two-tone lead: S-LINKS title c29, p c41"
+          },
+          "continuation": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 9,
+            "x-maxWordsEvidence": "two-tone continuation: S-LINKS title c29, p c41"
+          }
+        },
+        "required": [
+          "lead",
+          "continuation"
+        ]
+      },
+      "links": {
+        "type": "array",
+        "minItems": 8,
+        "maxItems": 8,
+        "items": {
+          "$ref": "#/definitions/link"
+        },
+        "x-countEvidence": "8 links"
+      }
+    },
+    "required": [
+      "heading",
+      "links"
+    ]
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "hover-micro"
+    ],
+    "reducedMotionFallback": "instant-state-change",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "collapse-grid",
+        "detail": "legacy 4 -> 2 -> 1 columns (xl / md); v2 stays 2 columns."
+      }
+    ]
+  },
+  "assetSlots": [],
+  "generatedAssetRoles": [
+    "copy.original",
+    "url.placeholder"
+  ],
+  "composes": [
+    "component.hover-wash",
+    "component.guide-row",
+    "primitive.overline",
+    "primitive.arrow-icon"
+  ],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/platform/call-intelligence",
+        "variant": "legacy",
+        "instance": 0,
+        "heightPx": 689
+      },
+      {
+        "route": "/platform/data",
+        "variant": "legacy",
+        "instance": 0,
+        "heightPx": 689
+      },
+      {
+        "route": "/platform/enrichment",
+        "variant": "v2",
+        "instance": 0,
+        "heightPx": 805
+      },
+      {
+        "route": "/platform/sequences",
+        "variant": "legacy",
+        "instance": 0,
+        "heightPx": 689
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/platform/call-intelligence",
+      "variant": "legacy"
+    },
+    {
+      "route": "/platform/data",
+      "variant": "legacy"
+    },
+    {
+      "route": "/platform/enrichment",
+      "variant": "v2"
+    },
+    {
+      "route": "/platform/sequences",
+      "variant": "legacy"
+    }
+  ]
+}

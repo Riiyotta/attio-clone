@@ -1,0 +1,110 @@
+{
+  "id": "content.contribution-heatmap",
+  "title": "Contribution heatmap",
+  "status": "measured",
+  "source": {
+    "id": "src:Heatmap#export-default-function-Heatmap",
+    "file": "src/components/platform/developers/Heatmap.jsx",
+    "tag": "export default function Heatmap(",
+    "lines": "69-105",
+    "citation": "src/components/platform/developers/Heatmap.jsx:69-105"
+  },
+  "semantic": {
+    "id": "content.contribution-heatmap",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
+  "purpose": "Dark section with a two-tone header and a 'how we build' button over a contribution-style grid of small square cells with a mono caption.",
+  "themes": [
+    "dark"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "heading": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "lead": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 6,
+            "x-maxWordsEvidence": "two-tone lead: D-HEATMAP lead c30, continuation c44"
+          },
+          "continuation": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 12,
+            "x-maxWordsEvidence": "two-tone continuation: D-HEATMAP lead c30, continuation c44"
+          }
+        },
+        "required": [
+          "lead",
+          "continuation"
+        ]
+      },
+      "button": {
+        "$ref": "#/definitions/link"
+      },
+      "caption": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 6,
+        "x-maxWordsEvidence": "mono caption"
+      }
+    },
+    "required": [
+      "heading",
+      "button"
+    ]
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "hover-micro",
+      "static"
+    ],
+    "reducedMotionFallback": "instant-state-change",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "show-alternate-tree",
+        "detail": "the lined desktop grid hides; a narrower mobile grid renders."
+      }
+    ]
+  },
+  "assetSlots": [],
+  "generatedAssetRoles": [
+    "copy.original",
+    "illustration.decorative-pattern",
+    "url.placeholder"
+  ],
+  "composes": [
+    "component.two-tone-heading",
+    "primitive.button"
+  ],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/platform/developers",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 781.4
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/platform/developers"
+    }
+  ]
+}

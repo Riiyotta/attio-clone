@@ -1,10 +1,10 @@
 {
   "repositoryId": "crm-marketing-clone.design-repo",
   "title": "Design-repo for a design-faithful clone of a CRM marketing site (fictional brand)",
-  "repositoryVersion": "1.1.0",
-  "pageSpecVersion": "1.1.0",
-  "allowlistVersion": "1.1.0",
-  "tokenCatalogVersion": "1.1.0",
+  "repositoryVersion": "1.2.0",
+  "pageSpecVersion": "1.2.0",
+  "allowlistVersion": "1.2.0",
+  "tokenCatalogVersion": "1.2.0",
   "versionFieldNote": "allowlistVersion and tokenCatalogVersion are machine-checked by extraction/verify_all.py (must equal tokens/llm/component-allowlist.json version and tokens/llm/token-catalog.json version). pageSpecVersion is machine-checked against the schema's const. repositoryVersion is documentation-only and hand-maintained.",
   "status": "design-review-pending",
   "productionApproved": false,
@@ -21,25 +21,24 @@
   "sourceProject": {
     "kind": "design-faithful clone of a live commercial marketing website",
     "realCompanySource": true,
-    "cloneIdentity": "fictional brand, invented copy, original SVG/CSS artwork; no raster assets",
-    "midBuild": true,
+    "cloneIdentity": "fictional brand, invented copy, original SVG/CSS artwork; no raster assets (platform pages included: their media boxes are filled with original JSX/SVG mock UI, never the live site's screenshots)",
     "excludedEvidence": [
       "saved HTML copy of the live homepage and its _files folder",
       "dist/"
     ]
   },
   "counts": {
-    "tokens": 351,
+    "tokens": 353,
     "primitives": 19,
     "components": 30,
-    "sections": 67,
-    "retrievableSections": 64,
-    "templates": 12,
-    "mountedRoutes": 19,
-    "pendingRoutes": 12,
+    "sections": 89,
+    "retrievableSections": 86,
+    "templates": 14,
+    "mountedRoutes": 31,
+    "pendingRoutes": 0,
     "assetRoles": 29,
-    "motionPatterns": 31,
-    "examplePageSpecs": 13
+    "motionPatterns": 32,
+    "examplePageSpecs": 17
   },
   "entryPoints": {
     "readme": "README.md",
@@ -82,9 +81,11 @@
       "schema/examples/generated-changelog-year.pagespec.json",
       "schema/examples/generated-contact-split.pagespec.json",
       "schema/examples/generated-customer-hub.pagespec.json",
+      "schema/examples/generated-developer-platform.pagespec.json",
       "schema/examples/generated-editorial-listing.pagespec.json",
       "schema/examples/generated-help-docs.pagespec.json",
       "schema/examples/generated-home.pagespec.json",
+      "schema/examples/generated-platform-feature.pagespec.json",
       "schema/examples/generated-pricing.pagespec.json",
       "schema/examples/generated-program-landing.pagespec.json"
     ],
@@ -99,6 +100,13 @@
     "measureTool": "extraction/measure_sections.mjs",
     "sectionsDir": "sections/",
     "componentsDir": "components/",
-    "primitivesDir": "primitives/"
+    "primitivesDir": "primitives/",
+    "referenceExamples": [
+      "schema/example.pagespec.json",
+      "schema/examples/reference-developer-platform.pagespec.json",
+      "schema/examples/reference-platform-feature.pagespec.json"
+    ],
+    "parityCapture": "extraction/parity_capture.mjs",
+    "parityCompare": "extraction/parity_compare.py"
   }
 }

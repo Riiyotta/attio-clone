@@ -1,5 +1,5 @@
 {
-  "pageSpecVersion": "1.1.0",
+  "pageSpecVersion": "1.2.0",
   "mode": "generated",
   "template": "customer-hub",
   "route": "/crews",

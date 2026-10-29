@@ -1,0 +1,120 @@
+{
+  "id": "features.product-showcase",
+  "title": "Product showcase window",
+  "status": "measured",
+  "source": {
+    "id": "src:legacy#export-function-Showcase",
+    "file": "src/components/platform/legacy.jsx",
+    "tag": "export function Showcase(",
+    "lines": "648-661",
+    "citation": "src/components/platform/legacy.jsx:648-661"
+  },
+  "semantic": {
+    "id": "features.product-showcase",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "purpose": "Legacy two-tone header, then one full-width product window (1158x719 at 1440) in a hatched well; scrolls horizontally on small screens.",
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "heading": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "lead": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 6,
+            "x-maxWordsEvidence": "two-tone lead: S-SHOWCASE-L lead c22, continuation c54"
+          },
+          "continuation": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 12,
+            "x-maxWordsEvidence": "two-tone continuation: S-SHOWCASE-L lead c22, continuation c54"
+          }
+        },
+        "required": [
+          "lead",
+          "continuation"
+        ]
+      },
+      "media": {
+        "$ref": "#/definitions/media",
+        "x-assetRoles": [
+          "product.reference-mock",
+          "product.generated-visual"
+        ]
+      }
+    },
+    "required": [
+      "heading",
+      "media"
+    ]
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "static"
+    ],
+    "reducedMotionFallback": "none-needed",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "resize-type",
+        "detail": "legacy shell keeps the bordered container (576 at 768 / 342 at 390); header pads 160/80 -> 100/60; H2 32/36 -> 28/34; guide rows 160 -> 100."
+      },
+      {
+        "at": "below-md",
+        "change": "scroll-row",
+        "detail": "the window keeps a 740px minimum width inside a horizontal scroller."
+      }
+    ]
+  },
+  "assetSlots": [
+    {
+      "field": ".media",
+      "assetRoles": [
+        "product.reference-mock",
+        "product.generated-visual"
+      ]
+    }
+  ],
+  "generatedAssetRoles": [
+    "copy.original",
+    "product.generated-visual"
+  ],
+  "composes": [
+    "component.two-tone-heading",
+    "component.hatch-gutter",
+    "primitive.asset-slot"
+  ],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/platform/sequences",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 1192.2
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/platform/sequences"
+    }
+  ]
+}

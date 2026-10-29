@@ -103,6 +103,20 @@ const ROUTE_FOR = {
   Academy: '/help/academy',
   'Developer portal': '/apps',
   Templates: '/apps',
+  // Platform routes (placeholder menu labels that describe those features); all 12 are reachable.
+  'Custom data model': '/platform/data',
+  'List views': '/platform/universal-context',
+  Dashboards: '/platform/reporting',
+  'Mail and calendar': '/platform/call-intelligence',
+  Importing: '/platform/mcp',
+  Exporting: '/platform/developers',
+  'Data cleaning': '/platform/enrichment',
+  Analytics: '/platform/reporting',
+  Workflows: '/platform/workflows',
+  Sequences: '/platform/sequences',
+  'Assistants and helpers': '/platform/custom-agents',
+  'Sales teams': '/platform/ask',
+  'Customer success': '/platform/web-agent',
 }
 /** <Link> for built routes, plain <a href="#"> otherwise (same markup/classes either way). */
 function NavAnchor({ label, children, ...rest }) {

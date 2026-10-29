@@ -1,7 +1,7 @@
 # Corvale (attio.com design clone): information architecture
 
 Source: Design-faithful clone of attio.com's nav-bar scope (React + Vite + Tailwind, react-router). Brand, copy and artwork are invented placeholders.
-Status: **mid-build: 20 of 32 routes (18 of 21 templates) mounted and rendering; the 12 /platform/* routes are not mounted** · production approved: **false**
+Status: **built: all 32 routes (21 templates) mounted in src/App.jsx and rendering** · production approved: **false**
 32 routes · 21 templates · 121 unique sections
 
 > Generated from `ia.json` by `build.mjs`. Edit the JSON, not this file.
@@ -54,40 +54,40 @@ component library or stays local to its page.
 | `shell.site-footer` | SHELL | 18 | 29 | `SiteFooter.jsx` | Every route except the three help routes. |
 | `shell.site-header` | SHELL | 15 | 26 | `SiteHeader.jsx` | Every full-chrome template: homepage, pricing, all marketing long-form pages, contact, apps, blog, changelog and the modern and legacy platform templates. Not on architecture, help, engineering blog or developers. |
 | `proof.logo-cell-grid` | PROOF | 3 | 12 | `CustomerLogos.jsx` | Homepage plus the platform pages that carry it: custom-agents, mcp, reporting, universal-context, web-agent (modern) and workflows (legacy). |
-| `proof.quote-scroll-lit` | PROOF | 2 | 11 | _not yet built_ | Platform pages: enrichment (modern) and ask, call-intelligence, sequences, workflows (legacy). |
-| `features.card-marquee` | FEATURES | 2 | 11 | _not yet built_ | Platform pages: custom-agents (modern) and workflows, ask (legacy). |
-| `features.integration-arc-strip` | FEATURES | 2 | 11 | _not yet built_ | Platform pages: mcp (modern) and call-intelligence (legacy). |
-| `conversion.platform-final-cta` | CONVERSION | 2 | 11 | _not yet built_ | Every modern and legacy platform page (not developers). |
-| `wayfinding.platform-link-grid` | WAYFINDING | 2 | 11 | _not yet built_ | Platform pages: enrichment (modern) and call-intelligence, data, sequences (legacy). |
+| `proof.quote-scroll-lit` | PROOF | 2 | 11 | `platform/Sections.jsx > ScrollQuote` | Platform pages: enrichment (modern) and ask, call-intelligence, sequences, workflows (legacy). |
+| `features.card-marquee` | FEATURES | 2 | 11 | `platform/Sections.jsx > CardMarquee` | Platform pages: custom-agents (modern) and workflows, ask (legacy). |
+| `features.integration-arc-strip` | FEATURES | 2 | 11 | `platform/Sections.jsx > IntegrationStrip` | Platform pages: mcp (modern) and call-intelligence (legacy). |
+| `conversion.platform-final-cta` | CONVERSION | 2 | 11 | `platform/Sections.jsx > PlatformCta` | Every modern and legacy platform page (not developers). |
+| `wayfinding.platform-link-grid` | WAYFINDING | 2 | 11 | `platform/Sections.jsx > LinksGrid` | Platform pages: enrichment (modern) and call-intelligence, data, sequences (legacy). |
 | `conversion.newsletter-inline` | CONVERSION | 2 | 7 | `Changelog.jsx (newsletter row)` | Homepage (under the changelog cards) and the mcp platform page. |
-| `hero.platform-centered` | HERO | 1 | 6 | _not yet built_ | Modern platform template: web-agent, custom-agents and enrichment. |
-| `hero.platform-horizon` | HERO | 1 | 6 | _not yet built_ | Modern platform template: universal-context only. |
-| `hero.platform-radar` | HERO | 1 | 6 | _not yet built_ | Modern platform template: reporting only. |
-| `hero.platform-mcp-grid` | HERO | 1 | 6 | _not yet built_ | Modern platform template: mcp only. |
-| `proof.stat-headline` | PROOF | 1 | 6 | _not yet built_ | Modern platform template: custom-agents and mcp. |
-| `features.split-accordion` | FEATURES | 1 | 6 | _not yet built_ | Modern platform template: web-agent, custom-agents, universal-context, enrichment and reporting (not mcp). |
-| `features.split-icons` | FEATURES | 1 | 6 | _not yet built_ | Modern platform template: mcp only. |
-| `features.media-grid-three` | FEATURES | 1 | 6 | _not yet built_ | Modern platform template: web-agent, universal-context, mcp, enrichment and reporting (not custom-agents). |
-| `features.center-media` | FEATURES | 1 | 6 | _not yet built_ | Modern platform template: custom-agents, universal-context, mcp and enrichment. |
-| `features.text-columns` | FEATURES | 1 | 6 | _not yet built_ | Modern platform template: universal-context, enrichment and mcp (steps variant). |
-| `features.orbit-illustration` | FEATURES | 1 | 6 | _not yet built_ | Modern platform template: web-agent only. |
-| `features.icon-row` | FEATURES | 1 | 6 | _not yet built_ | Modern platform template: custom-agents only. |
-| `features.tagged-quad` | FEATURES | 1 | 6 | _not yet built_ | Modern platform template: web-agent and universal-context. |
-| `features.bento-grid` | FEATURES | 1 | 6 | _not yet built_ | Modern platform template: reporting only. |
+| `hero.platform-centered` | HERO | 1 | 6 | `platform/heroes.jsx > HeroWebAgent, HeroCustomAgents, HeroEnrichment` | Modern platform template: web-agent, custom-agents and enrichment. |
+| `hero.platform-horizon` | HERO | 1 | 6 | `platform/heroes.jsx > HeroHorizon` | Modern platform template: universal-context only. |
+| `hero.platform-radar` | HERO | 1 | 6 | `platform/heroes.jsx > HeroRadar` | Modern platform template: reporting only. |
+| `hero.platform-mcp-grid` | HERO | 1 | 6 | `platform/heroes.jsx > HeroMcp` | Modern platform template: mcp only. |
+| `proof.stat-headline` | PROOF | 1 | 6 | `platform/Sections.jsx > Stat` | Modern platform template: custom-agents and mcp. |
+| `features.split-accordion` | FEATURES | 1 | 6 | `platform/SplitAccordion.jsx > SplitAccordion` | Modern platform template: web-agent, custom-agents, universal-context, enrichment and reporting (not mcp). |
+| `features.split-icons` | FEATURES | 1 | 6 | `platform/Grids.jsx > SplitIcons` | Modern platform template: mcp only. |
+| `features.media-grid-three` | FEATURES | 1 | 6 | `platform/Grids.jsx > MediaGrid3` | Modern platform template: web-agent, universal-context, mcp, enrichment and reporting (not custom-agents). |
+| `features.center-media` | FEATURES | 1 | 6 | `platform/Sections.jsx > CenterMedia` | Modern platform template: custom-agents, universal-context, mcp and enrichment. |
+| `features.text-columns` | FEATURES | 1 | 6 | `platform/Sections.jsx > TextColumns` | Modern platform template: universal-context, enrichment and mcp (steps variant). |
+| `features.orbit-illustration` | FEATURES | 1 | 6 | `platform/Sections.jsx > Orbit` | Modern platform template: web-agent only. |
+| `features.icon-row` | FEATURES | 1 | 6 | `platform/Grids.jsx > IconRow` | Modern platform template: custom-agents only. |
+| `features.tagged-quad` | FEATURES | 1 | 6 | `platform/Grids.jsx > TaggedQuad` | Modern platform template: web-agent and universal-context. |
+| `features.bento-grid` | FEATURES | 1 | 6 | `platform/Grids.jsx > Bento` | Modern platform template: reporting only. |
 | `conversion.faq-accordion` | CONVERSION | 5 | 5 | `marketing/Faq.jsx` | Pricing, startups, and the three partner pages. |
-| `hero.platform-ask-canvas` | HERO | 1 | 5 | _not yet built_ | Legacy platform template: ask only. |
-| `hero.platform-split-legacy` | HERO | 1 | 5 | _not yet built_ | Legacy platform template: call-intelligence and workflows. |
-| `hero.platform-data-perspective` | HERO | 1 | 5 | _not yet built_ | Legacy platform template: data only. |
-| `hero.platform-sequence-mock` | HERO | 1 | 5 | _not yet built_ | Legacy platform template: sequences only. |
-| `features.split-accordion-legacy` | FEATURES | 1 | 5 | _not yet built_ | Legacy platform template: call-intelligence, data, sequences and workflows (not ask). |
-| `features.legacy-card-grid-three` | FEATURES | 1 | 5 | _not yet built_ | Legacy platform template: call-intelligence, data, sequences and workflows (data and workflows also use the text + icon variant). |
-| `features.legacy-card-grid-quad` | FEATURES | 1 | 5 | _not yet built_ | Legacy platform template: call-intelligence, data and sequences (sequences without the quote). |
-| `features.product-showcase-legacy` | FEATURES | 1 | 5 | _not yet built_ | Legacy platform template: sequences only. |
-| `features.tabbed-showcase` | FEATURES | 1 | 5 | _not yet built_ | Legacy platform template: call-intelligence and data. |
-| `features.ask-tab-carousel` | FEATURES | 1 | 5 | _not yet built_ | Legacy platform template: ask only. |
-| `features.uc-band` | FEATURES | 1 | 5 | _not yet built_ | Legacy platform template: ask and workflows. |
-| `features.ask-intelligence` | FEATURES | 1 | 5 | _not yet built_ | Legacy platform template: ask only. |
-| `features.agent-columns` | FEATURES | 1 | 5 | _not yet built_ | Legacy platform template: workflows only. |
+| `hero.platform-ask-canvas` | HERO | 1 | 5 | `platform/legacy.jsx > HeroAsk` | Legacy platform template: ask only. |
+| `hero.platform-split-legacy` | HERO | 1 | 5 | `platform/legacy.jsx > HeroCallIntel, HeroWorkflows` | Legacy platform template: call-intelligence and workflows. |
+| `hero.platform-data-perspective` | HERO | 1 | 5 | `platform/legacy.jsx > HeroData` | Legacy platform template: data only. |
+| `hero.platform-sequence-mock` | HERO | 1 | 5 | `platform/legacy.jsx > HeroSequences` | Legacy platform template: sequences only. |
+| `features.split-accordion-legacy` | FEATURES | 1 | 5 | `platform/SplitAccordion.jsx > SplitAccordionLegacy` | Legacy platform template: call-intelligence, data, sequences and workflows (not ask). |
+| `features.legacy-card-grid-three` | FEATURES | 1 | 5 | `platform/Grids.jsx > LegacyGrid3` | Legacy platform template: call-intelligence, data, sequences and workflows (data and workflows also use the text + icon variant). |
+| `features.legacy-card-grid-quad` | FEATURES | 1 | 5 | `platform/Grids.jsx > LegacyGrid2Q` | Legacy platform template: call-intelligence, data and sequences (sequences without the quote). |
+| `features.product-showcase-legacy` | FEATURES | 1 | 5 | `platform/legacy.jsx > Showcase` | Legacy platform template: sequences only. |
+| `features.tabbed-showcase` | FEATURES | 1 | 5 | `platform/Sections.jsx > Tabs` | Legacy platform template: call-intelligence and data. |
+| `features.ask-tab-carousel` | FEATURES | 1 | 5 | `platform/legacy.jsx > AskTabs` | Legacy platform template: ask only. |
+| `features.uc-band` | FEATURES | 1 | 5 | `platform/Sections.jsx > UcBand` | Legacy platform template: ask and workflows. |
+| `features.ask-intelligence` | FEATURES | 1 | 5 | `platform/legacy.jsx > AskIntel` | Legacy platform template: ask only. |
+| `features.agent-columns` | FEATURES | 1 | 5 | `platform/legacy.jsx > AgentColumns` | Legacy platform template: workflows only. |
 | `shell.docs-header` | SHELL | 3 | 3 | `help/DocsShell.jsx (docs bar below lg)` | All three help routes. |
 | `shell.docs-sidebar` | SHELL | 3 | 3 | `help/DocsShell.jsx (aside + SidebarNav)` | All three help routes. |
 | `shell.site-footer-light` | SHELL | 3 | 3 | `SiteFooter.jsx (variant="light")` | All three help routes. |
@@ -118,13 +118,13 @@ component library or stays local to its page.
 | `hero.changelog-hero` | HERO | 1 | 1 | `pages/ChangelogYear.jsx (inline) + forms/Fields.jsx > SubscribeForm` | Changelog only. |
 | `hero.architecture-typewriter` | HERO | 1 | 1 | `architecture/Sections.jsx > ArchHero` | Architecture only. |
 | `hero.help-landing` | HERO | 1 | 1 | `pages/help/HelpHome.jsx` | Help landing only. |
-| `hero.developer-blueprint` | HERO | 1 | 1 | _not yet built_ | Developers only. |
+| `hero.developer-blueprint` | HERO | 1 | 1 | `platform/developers/Hero.jsx` | Developers only. |
 | `proof.program-partners` | PROOF | 1 | 1 | `startups/Sections.jsx > ProgramPartners` | Startups only. |
 | `proof.quote-curtain` | PROOF | 1 | 1 | `UniversalContext.jsx > QuoteReveal (internal)` | Homepage only. |
 | `proof.scale-stats` | PROOF | 1 | 1 | `ScaleStats.jsx` | Homepage only. |
 | `proof.customer-stories-tabs` | PROOF | 1 | 1 | `CustomerStories.jsx` | Homepage only. |
 | `proof.customer-stories-grid` | PROOF | 1 | 1 | `customers/StoriesGrid.jsx` | Customers only. |
-| `proof.developer-testimonial` | PROOF | 1 | 1 | _not yet built_ | Developers only (appears twice on the page). |
+| `proof.developer-testimonial` | PROOF | 1 | 1 | `platform/developers/Testimonial.jsx` | Developers only (appears twice on the page). |
 | `features.platform-showcase` | FEATURES | 1 | 1 | `PlatformShowcase.jsx` | Homepage only. |
 | `features.self-building` | FEATURES | 1 | 1 | `SelfBuilding.jsx` | Homepage only. |
 | `features.context-dark-stack` | FEATURES | 1 | 1 | `UniversalContext.jsx > BrandSection (internal)` | Homepage only. |
@@ -140,13 +140,13 @@ component library or stays local to its page.
 | `features.expert-criteria-columns` | FEATURES | 1 | 1 | `partners/Sections.jsx > WhoWereLookingFor` | Expert partners only. |
 | `features.expert-tiers` | FEATURES | 1 | 1 | `partners/Sections.jsx > Tiers` | Expert partners only. |
 | `features.featured-apps-tabs` | FEATURES | 1 | 1 | `apps/Sections.jsx > FeaturedApps` | App directory only. |
-| `features.developer-card-section` | FEATURES | 1 | 1 | _not yet built_ | Developers only (three instances on the page). |
+| `features.developer-card-section` | FEATURES | 1 | 1 | `platform/developers/CardSection.jsx` | Developers only (three instances on the page). |
 | `content.interview-video` | CONTENT | 1 | 1 | `careers/Sections.jsx > InterviewVideo` | Careers only. |
 | `content.team-intro` | CONTENT | 1 | 1 | `careers/Sections.jsx > TeamIntro` | Careers only. |
 | `content.team-photos` | CONTENT | 1 | 1 | `careers/Sections.jsx > TeamPhotos` | Careers only. |
 | `content.values-grid` | CONTENT | 1 | 1 | `careers/Sections.jsx > Values` | Careers only. |
 | `content.engineering-heatmap` | CONTENT | 1 | 1 | `blog/Engineering.jsx > Heatmap` | The engineering blog only. |
-| `content.developer-heatmap` | CONTENT | 1 | 1 | _not yet built_ | Developers only. |
+| `content.developer-heatmap` | CONTENT | 1 | 1 | `platform/developers/Heatmap.jsx` | Developers only. |
 | `content.architecture-chapter-band` | CONTENT | 1 | 1 | `architecture/Sections.jsx > Chapter` | Architecture only (three instances introduce the page's three chapters). |
 | `content.architecture-story-body` | CONTENT | 1 | 1 | `pages/Architecture.jsx (inline) + architecture/Diagrams.jsx > FlowFigure` | Architecture only. |
 | `content.five-reasons-index` | CONTENT | 1 | 1 | `architecture/FiveReasons.jsx` | Architecture only. |
@@ -168,18 +168,16 @@ component library or stays local to its page.
 | `conversion.expert-apply-embed` | CONVERSION | 1 | 1 | `partners/Sections.jsx > ExpertApply` | Expert partners only. |
 | `conversion.build-with-us` | CONVERSION | 1 | 1 | `apps/Sections.jsx > BuildWithUs` | App directory only. |
 | `conversion.home-final-cta` | CONVERSION | 1 | 1 | `FinalCta.jsx` | Homepage only. |
-| `conversion.developer-cta` | CONVERSION | 1 | 1 | _not yet built_ | Developers only. |
+| `conversion.developer-cta` | CONVERSION | 1 | 1 | `platform/developers/ReadyCta.jsx` | Developers only. |
 | `conversion.architecture-closing-nav` | CONVERSION | 1 | 1 | `architecture/Sections.jsx > Closing` | Architecture only. |
 | `wayfinding.year-timeline` | WAYFINDING | 1 | 1 | `pages/ChangelogYear.jsx > YearTimeline (page-local)` | Changelog only. |
-| `wayfinding.developer-apps` | WAYFINDING | 1 | 1 | _not yet built_ | Developers only. |
+| `wayfinding.developer-apps` | WAYFINDING | 1 | 1 | `platform/developers/AppsRow.jsx` | Developers only. |
 
 **20 shared sections** appear in more than one template and belong in a component library.
 
 **101 single-use sections** appear in exactly one template. Building these
 as "reusable" components up front would be speculative — keep them page-local
 until a second caller actually appears.
-
-**38 sections have no `implementedBy` yet** — not necessarily missing, just not linked to a component in this pass: `proof.quote-scroll-lit`, `features.card-marquee`, `features.integration-arc-strip`, `conversion.platform-final-cta`, `wayfinding.platform-link-grid`, `hero.platform-centered`, `hero.platform-horizon`, `hero.platform-radar`, `hero.platform-mcp-grid`, `proof.stat-headline`, `features.split-accordion`, `features.split-icons`, `features.media-grid-three`, `features.center-media`, `features.text-columns`, `features.orbit-illustration`, `features.icon-row`, `features.tagged-quad`, `features.bento-grid`, `hero.platform-ask-canvas`, `hero.platform-split-legacy`, `hero.platform-data-perspective`, `hero.platform-sequence-mock`, `features.split-accordion-legacy`, `features.legacy-card-grid-three`, `features.legacy-card-grid-quad`, `features.product-showcase-legacy`, `features.tabbed-showcase`, `features.ask-tab-carousel`, `features.uc-band`, `features.ask-intelligence`, `features.agent-columns`, `hero.developer-blueprint`, `proof.developer-testimonial`, `features.developer-card-section`, `content.developer-heatmap`, `conversion.developer-cta`, `wayfinding.developer-apps`.
 
 ## Templates
 
@@ -618,39 +616,39 @@ _The page-opening block: first thing under the header, carries the page's H1/dis
 
 **`hero.platform-centered`** — Viewport-height centered platform hero: eyebrow pill, display headline, subhead, two CTAs, over route-specific original artwork (line grid with chips, agent canvas, or kanban board).
 
-· Modern platform template: web-agent, custom-agents and enrichment. · appears on 6 routes
+· Modern platform template: web-agent, custom-agents and enrichment. · appears on 6 routes · implemented by `platform/heroes.jsx > HeroWebAgent, HeroCustomAgents, HeroEnrichment`
 
 **`hero.platform-horizon`** — Platform hero with centered copy above a wide 3:1 horizon box of concentric arcs and glow, over a top-masked stripe field.
 
-· Modern platform template: universal-context only. · appears on 6 routes
+· Modern platform template: universal-context only. · appears on 6 routes · implemented by `platform/heroes.jsx > HeroHorizon`
 
 **`hero.platform-radar`** — Platform hero with copy centered inside a radar of concentric rings, a rotating beam and pinging dots.
 
-· Modern platform template: reporting only. · appears on 6 routes
+· Modern platform template: reporting only. · appears on 6 routes · implemented by `platform/heroes.jsx > HeroRadar`
 
 **`hero.platform-mcp-grid`** — Platform hero laid on a square-cell grid with client-logo cells and a prompt box under the copy.
 
-· Modern platform template: mcp only. · appears on 6 routes
+· Modern platform template: mcp only. · appears on 6 routes · implemented by `platform/heroes.jsx > HeroMcp`
 
 **`hero.platform-ask-canvas`** — Viewport-height hero over an animated canvas field with a chat widget mock under the copy, closed by a hairline-separated strip.
 
-· Legacy platform template: ask only. · appears on 5 routes
+· Legacy platform template: ask only. · appears on 5 routes · implemented by `platform/legacy.jsx > HeroAsk`
 
 **`hero.platform-split-legacy`** — Left-aligned legacy platform hero with copy in the left columns and a product mock (table or flow diagram) beside or above it.
 
-· Legacy platform template: call-intelligence and workflows. · appears on 5 routes
+· Legacy platform template: call-intelligence and workflows. · appears on 5 routes · implemented by `platform/legacy.jsx > HeroCallIntel, HeroWorkflows`
 
 **`hero.platform-data-perspective`** — Full-bleed tall hero: copy above a perspective-tilted wireframe of schema diagrams and a product window, with a sticky tab bar.
 
-· Legacy platform template: data only. · appears on 5 routes
+· Legacy platform template: data only. · appears on 5 routes · implemented by `platform/legacy.jsx > HeroData`
 
 **`hero.platform-sequence-mock`** — Hero with a stacked email-step sequence mock between dashed rules above the copy.
 
-· Legacy platform template: sequences only. · appears on 5 routes
+· Legacy platform template: sequences only. · appears on 5 routes · implemented by `platform/legacy.jsx > HeroSequences`
 
 **`hero.developer-blueprint`** — Dark blueprint hero on a 24-column line grid: bracketed overline, display headline, docs + outline buttons, artwork on the right.
 
-· Developers only. · appears on 1 routes
+· Developers only. · appears on 1 routes · implemented by `platform/developers/Hero.jsx`
 
 ### PROOF
 
@@ -678,7 +676,7 @@ _Social proof: customer logos, testimonials and quotes, customer stories, stats.
 
 **`proof.quote-scroll-lit`** — Large centered serif testimonial on a dot field whose words change from grey to ink as the block scrolls through; attribution below; dashed guide rows above and below in the legacy shell.
 
-· Platform pages: enrichment (modern) and ask, call-intelligence, sequences, workflows (legacy). · appears on 11 routes
+· Platform pages: enrichment (modern) and ask, call-intelligence, sequences, workflows (legacy). · appears on 11 routes · implemented by `platform/Sections.jsx > ScrollQuote`
 
 **`proof.scale-stats`** — Stats section over an exponential-curve chart background: eyebrow, two-tone heading, two-by-two grid of numbers with blue left rules.
 
@@ -694,11 +692,11 @@ _Social proof: customer logos, testimonials and quotes, customer stories, stats.
 
 **`proof.stat-headline`** — Split block: two-tone heading on the left, one very large container-scaled number with label on the right.
 
-· Modern platform template: custom-agents and mcp. · appears on 6 routes
+· Modern platform template: custom-agents and mcp. · appears on 6 routes · implemented by `platform/Sections.jsx > Stat`
 
 **`proof.developer-testimonial`** — Dark blueprint testimonial: mono name label, halftone portrait canvas, quote box whose words brighten.
 
-· Developers only (appears twice on the page). · appears on 1 routes
+· Developers only (appears twice on the page). · appears on 1 routes · implemented by `platform/developers/Testimonial.jsx`
 
 ### FEATURES
 
@@ -766,87 +764,87 @@ _Product or program explanation modules: split accordions, card grids, media sho
 
 **`features.split-accordion`** — Modern split accordion: two-tone heading and three progress-tracked items on the left, cross-fading media panel on the right; full-bleed and stacked below lg.
 
-· Modern platform template: web-agent, custom-agents, universal-context, enrichment and reporting (not mcp). · appears on 6 routes
+· Modern platform template: web-agent, custom-agents, universal-context, enrichment and reporting (not mcp). · appears on 6 routes · implemented by `platform/SplitAccordion.jsx > SplitAccordion`
 
 **`features.split-accordion-legacy`** — Legacy split accordion: heading with expandable items pinned to the bottom-left, dotted media well on the right, seam ticks between.
 
-· Legacy platform template: call-intelligence, data, sequences and workflows (not ask). · appears on 5 routes
+· Legacy platform template: call-intelligence, data, sequences and workflows (not ask). · appears on 5 routes · implemented by `platform/SplitAccordion.jsx > SplitAccordionLegacy`
 
 **`features.split-icons`** — Two-column block: heading on the left, three stacked icon + text articles on the right.
 
-· Modern platform template: mcp only. · appears on 6 routes
+· Modern platform template: mcp only. · appears on 6 routes · implemented by `platform/Grids.jsx > SplitIcons`
 
 **`features.media-grid-three`** — Modern three-up media cards under a two-tone heading, artwork above title and body (one or two rows).
 
-· Modern platform template: web-agent, universal-context, mcp, enrichment and reporting (not custom-agents). · appears on 6 routes
+· Modern platform template: web-agent, universal-context, mcp, enrichment and reporting (not custom-agents). · appears on 6 routes · implemented by `platform/Grids.jsx > MediaGrid3`
 
 **`features.legacy-card-grid-three`** — Legacy three-up cards in a dashed, hatched frame with square dotted media wells; a text + icon variant drops the media.
 
-· Legacy platform template: call-intelligence, data, sequences and workflows (data and workflows also use the text + icon variant). · appears on 5 routes
+· Legacy platform template: call-intelligence, data, sequences and workflows (data and workflows also use the text + icon variant). · appears on 5 routes · implemented by `platform/Grids.jsx > LegacyGrid3`
 
 **`features.legacy-card-grid-quad`** — Legacy two-by-two indexed media cards in a hatched frame, optionally split by a full-width inline serif quote row.
 
-· Legacy platform template: call-intelligence, data and sequences (sequences without the quote). · appears on 5 routes
+· Legacy platform template: call-intelligence, data and sequences (sequences without the quote). · appears on 5 routes · implemented by `platform/Grids.jsx > LegacyGrid2Q`
 
 **`features.center-media`** — Centered two-tone heading above one large product image on a fading stripe field.
 
-· Modern platform template: custom-agents, universal-context, mcp and enrichment. · appears on 6 routes
+· Modern platform template: custom-agents, universal-context, mcp and enrichment. · appears on 6 routes · implemented by `platform/Sections.jsx > CenterMedia`
 
 **`features.card-marquee`** — Two rows of small task cards moving in opposite directions with scroll, over a line or stripe field; centered heading (modern or legacy stacked style).
 
-· Platform pages: custom-agents (modern) and workflows, ask (legacy). · appears on 11 routes
+· Platform pages: custom-agents (modern) and workflows, ask (legacy). · appears on 11 routes · implemented by `platform/Sections.jsx > CardMarquee`
 
 **`features.text-columns`** — Heading then a horizontally snapping row of left-bordered text columns with ruler feet; numbered-steps variant adds a docs button.
 
-· Modern platform template: universal-context, enrichment and mcp (steps variant). · appears on 6 routes
+· Modern platform template: universal-context, enrichment and mcp (steps variant). · appears on 6 routes · implemented by `platform/Sections.jsx > TextColumns`
 
 **`features.orbit-illustration`** — Centered illustration on a horizon hairline, centered heading, three text columns.
 
-· Modern platform template: web-agent only. · appears on 6 routes
+· Modern platform template: web-agent only. · appears on 6 routes · implemented by `platform/Sections.jsx > Orbit`
 
 **`features.icon-row`** — Heading then a three-up row of tall icon + text cells.
 
-· Modern platform template: custom-agents only. · appears on 6 routes
+· Modern platform template: custom-agents only. · appears on 6 routes · implemented by `platform/Grids.jsx > IconRow`
 
 **`features.tagged-quad`** — Heading on the left, two-by-two grid of bracket-tagged cards on the right.
 
-· Modern platform template: web-agent and universal-context. · appears on 6 routes
+· Modern platform template: web-agent and universal-context. · appears on 6 routes · implemented by `platform/Grids.jsx > TaggedQuad`
 
 **`features.bento-grid`** — Legacy-style centered header over an eight-column bento of four media cards in alternating wide/narrow rows.
 
-· Modern platform template: reporting only. · appears on 6 routes
+· Modern platform template: reporting only. · appears on 6 routes · implemented by `platform/Grids.jsx > Bento`
 
 **`features.integration-arc-strip`** — Short tinted strip with a centered two-part line and app tiles placed along a large arc, masked at the bottom.
 
-· Platform pages: mcp (modern) and call-intelligence (legacy). · appears on 11 routes
+· Platform pages: mcp (modern) and call-intelligence (legacy). · appears on 11 routes · implemented by `platform/Sections.jsx > IntegrationStrip`
 
 **`features.product-showcase-legacy`** — Legacy header then a full-width product screenshot in a tinted, horizontally scrollable box.
 
-· Legacy platform template: sequences only. · appears on 5 routes
+· Legacy platform template: sequences only. · appears on 5 routes · implemented by `platform/legacy.jsx > Showcase`
 
 **`features.tabbed-showcase`** — Legacy tabbed showcase: block heading, outline pill tabs (click only), panel with title, body and media.
 
-· Legacy platform template: call-intelligence and data. · appears on 5 routes
+· Legacy platform template: call-intelligence and data. · appears on 5 routes · implemented by `platform/Sections.jsx > Tabs`
 
 **`features.ask-tab-carousel`** — Centered heading, five text tabs over a draggable tick ruler, and the selected panel.
 
-· Legacy platform template: ask only. · appears on 5 routes
+· Legacy platform template: ask only. · appears on 5 routes · implemented by `platform/legacy.jsx > AskTabs`
 
 **`features.uc-band`** — Viewport-height dark band: terrain canvas, small kicker above a large white headline, dashed guides, and a five-up row of dark corner-marked cells.
 
-· Legacy platform template: ask and workflows. · appears on 5 routes
+· Legacy platform template: ask and workflows. · appears on 5 routes · implemented by `platform/Sections.jsx > UcBand`
 
 **`features.ask-intelligence`** — Centered header, a bottom-masked product window mock, then a three-up cell row of icon + text + floating mini-UI media.
 
-· Legacy platform template: ask only. · appears on 5 routes
+· Legacy platform template: ask only. · appears on 5 routes · implemented by `platform/legacy.jsx > AskIntel`
 
 **`features.agent-columns`** — Legacy five-column snapping row of bordered text columns with a dark title marker, ruler below and edge fades.
 
-· Legacy platform template: workflows only. · appears on 5 routes
+· Legacy platform template: workflows only. · appears on 5 routes · implemented by `platform/legacy.jsx > AgentColumns`
 
 **`features.developer-card-section`** — Dark blueprint section: header with docs button, then grid-placed illustrated cards, sometimes with an inline quote strip between rows.
 
-· Developers only (three instances on the page). · appears on 1 routes
+· Developers only (three instances on the page). · appears on 1 routes · implemented by `platform/developers/CardSection.jsx`
 
 ### CONTENT
 
@@ -878,7 +876,7 @@ _Substantive editorial or company body content that is not a product pitch (deta
 
 **`content.developer-heatmap`** — Dark blueprint header with outline button over a lined box holding a contribution-style grid and a mono caption.
 
-· Developers only. · appears on 1 routes
+· Developers only. · appears on 1 routes · implemented by `platform/developers/Heatmap.jsx`
 
 **`content.architecture-chapter-band`** — Chapter divider band: tinted base with drifting radial-gradient blobs and a noise overlay, centered mono label and per-word serif title.
 
@@ -990,11 +988,11 @@ _Blocks whose job is to get the visitor to act: pricing tables, forms, CTA bands
 
 **`conversion.platform-final-cta`** — Platform dark closing CTA: shorter than the homepage CTA, stripe field masked to a dome at top center, bold one- or two-line headline, tighter gap and padding, same streaks.
 
-· Every modern and legacy platform page (not developers). · appears on 11 routes
+· Every modern and legacy platform page (not developers). · appears on 11 routes · implemented by `platform/Sections.jsx > PlatformCta`
 
 **`conversion.developer-cta`** — Dark blueprint closing block: centered heading with a mono command chip, surrounded by floating dark mock windows.
 
-· Developers only. · appears on 1 routes
+· Developers only. · appears on 1 routes · implemented by `platform/developers/ReadyCta.jsx`
 
 **`conversion.architecture-closing-nav`** — Sticky canvas closing stage with a serif line and a two-card mono nav linking to the sales contact page, with corner marks.
 
@@ -1022,8 +1020,8 @@ _Navigation within the page body: breadcrumbs, cross-links to sibling pages, lin
 
 **`wayfinding.platform-link-grid`** — Grid of eight numbered link cells to other platform pages with hover wash and arrow; legacy stacked-header frame or modern split layout.
 
-· Platform pages: enrichment (modern) and call-intelligence, data, sequences (legacy). · appears on 11 routes
+· Platform pages: enrichment (modern) and call-intelligence, data, sequences (legacy). · appears on 11 routes · implemented by `platform/Sections.jsx > LinksGrid`
 
 **`wayfinding.developer-apps`** — Dark header with browse button, a row of app icons with labels, and a repository link row.
 
-· Developers only. · appears on 1 routes
+· Developers only. · appears on 1 routes · implemented by `platform/developers/AppsRow.jsx`

@@ -1,6 +1,6 @@
 {
   "$description": "Rhythm/position rules JSON Schema cannot express. Each rule id is implemented with the same id in schema/semantic_validate.py; verify_all.py checks the two lists are identical.",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "categories": [
     "SHELL",
     "HERO",
@@ -47,14 +47,14 @@
     {
       "id": "ONE_PER_PAGE",
       "severity": "error",
-      "rule": "constraints.onePerPage / maxPerPage from each section contract."
+      "rule": "constraints.onePerPage / maxPerPage from each section contract (e.g. features.media-card-grid up to 3, testimonial.quote up to 2 on the developer page)."
     },
     {
       "id": "NO_CONSECUTIVE_SAME_SECTION",
       "severity": "error",
       "rule": "The same (section, variant) never appears twice in a row unless the template node is repeatable.",
       "exceptions": [
-        "pricing.comparison-group, listing.directory-category, content.article-chapter are repeatable."
+        "pricing.comparison-group, listing.directory-category, content.article-chapter and features.blueprint-cards are repeatable (the developer page places two quote-strip card sections back to back)."
       ]
     },
     {
@@ -63,7 +63,7 @@
       "rule": "Two adjacent non-shell nodes should not share a category.",
       "exceptions": [
         "CONTENT runs are normal inside long-form bodies (app overview chapters, story chapters/prose/statements).",
-        "FEATURES runs are normal on this site (home, app-partners, expert-partners place 2-4 capability sections in a row, separated by hairlines).",
+        "FEATURES runs are normal on this site (home, app-partners, expert-partners and every platform-feature page place 2-4 capability sections in a row, separated by hairlines).",
         "PRICING: comparison-header -> comparison-group and repeated groups.",
         "LISTING: directory-header -> directory-category and repeated categories.",
         "CONTENT: repeated article chapters; app-meta-sidebar -> article-chapter.",
@@ -97,6 +97,10 @@
         [
           "content.article-chapter",
           "content.article-chapter"
+        ],
+        [
+          "social-proof.logo-wall",
+          "social-proof.stat-highlight"
         ]
       ],
       "allowedCategories": [
@@ -107,7 +111,7 @@
     {
       "id": "MUST_PRECEDE_FOOTER",
       "severity": "warn",
-      "rule": "Sections with constraints.mustPrecedeFooter (conversion.final-cta, conversion.avatar-wall-cta, navigation.partner-cross-links) sit directly before the footer."
+      "rule": "Sections with constraints.mustPrecedeFooter (conversion.final-cta, conversion.avatar-wall-cta, conversion.developer-cta, navigation.partner-cross-links) sit directly before the footer."
     },
     {
       "id": "DARK_STACK_ORDER",
@@ -142,17 +146,20 @@
   ],
   "recommendedAfter": {
     "social-proof.logo-wall": [
-      "hero.product-window",
       "hero.page-centered",
+      "hero.platform-feature",
+      "hero.product-window",
       "pricing.plan-cards"
     ],
     "features.developer-platform": [
       "features.context-horizon"
     ],
     "testimonial.quote": [
-      "features.developer-platform",
-      "features.app-store-preview",
       "conversion.application-notice",
+      "features.app-store-preview",
+      "features.blueprint-cards",
+      "features.developer-platform",
+      "features.media-card-grid",
       "social-proof.customer-stories"
     ],
     "faq.accordion": [
@@ -164,6 +171,11 @@
     ],
     "navigation.partner-cross-links": [
       "faq.accordion"
+    ],
+    "navigation.platform-links": [
+      "features.media-card-grid",
+      "features.tabbed-showcase",
+      "features.text-columns"
     ]
   },
   "notRecommendedWith": [
@@ -174,6 +186,14 @@
     [
       "conversion.final-cta",
       "conversion.avatar-wall-cta"
+    ],
+    [
+      "conversion.final-cta",
+      "conversion.developer-cta"
+    ],
+    [
+      "hero.platform-feature",
+      "hero.developer-blueprint"
     ]
   ]
 }

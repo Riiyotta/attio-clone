@@ -1,0 +1,146 @@
+{
+  "id": "features.orbit-columns",
+  "title": "Orbit illustration with three columns",
+  "status": "measured",
+  "source": {
+    "id": "src:Sections#export-function-Orbit",
+    "file": "src/components/platform/Sections.jsx",
+    "tag": "export function Orbit(",
+    "lines": "709-733",
+    "citation": "src/components/platform/Sections.jsx:709-733"
+  },
+  "semantic": {
+    "id": "features.orbit-columns",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "purpose": "Centred ring illustration on a horizon hairline, a block two-tone heading, then three short text columns.",
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "illustration": {
+        "$ref": "#/definitions/media",
+        "x-assetRoles": [
+          "illustration.reference-art",
+          "illustration.generated-abstract",
+          "illustration.decorative-pattern"
+        ]
+      },
+      "heading": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "lead": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 9,
+            "x-maxWordsEvidence": "two-tone lead: S-ORBIT lead c40 w9, continuation c37 w7"
+          },
+          "continuation": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 8,
+            "x-maxWordsEvidence": "two-tone continuation: S-ORBIT lead c40 w9, continuation c37 w7"
+          }
+        },
+        "required": [
+          "lead",
+          "continuation"
+        ]
+      },
+      "items": {
+        "type": "array",
+        "minItems": 3,
+        "maxItems": 3,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "title": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 6,
+              "x-maxWordsEvidence": "h3 c22-c24"
+            },
+            "body": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 16,
+              "x-maxWordsEvidence": "p c49-c77"
+            }
+          },
+          "required": [
+            "title",
+            "body"
+          ]
+        },
+        "x-countEvidence": "3 columns"
+      }
+    },
+    "required": [
+      "illustration",
+      "heading",
+      "items"
+    ]
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "static"
+    ],
+    "reducedMotionFallback": "none-needed",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "stack",
+        "detail": "v2 shell goes full-bleed (no side borders), spacers 128 -> 64, inset 32px; H2 40/46 -> 32/36.8; grids collapse to one column."
+      }
+    ]
+  },
+  "assetSlots": [
+    {
+      "field": ".illustration",
+      "assetRoles": [
+        "illustration.reference-art",
+        "illustration.generated-abstract",
+        "illustration.decorative-pattern"
+      ]
+    }
+  ],
+  "generatedAssetRoles": [
+    "copy.original",
+    "illustration.generated-abstract"
+  ],
+  "composes": [
+    "component.two-tone-heading",
+    "primitive.hairline",
+    "primitive.asset-slot"
+  ],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/platform/web-agent",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 842
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/platform/web-agent"
+    }
+  ]
+}

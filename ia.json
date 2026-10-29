@@ -3,13 +3,14 @@
   "meta": {
     "title": "Corvale (attio.com design clone): information architecture",
     "source": "Design-faithful clone of attio.com's nav-bar scope (React + Vite + Tailwind, react-router). Brand, copy and artwork are invented placeholders.",
-    "status": "mid-build: 20 of 32 routes (18 of 21 templates) mounted and rendering; the 12 /platform/* routes are not mounted",
+    "status": "built: all 32 routes (21 templates) mounted in src/App.jsx and rendering",
     "productionApproved": false,
     "totalRoutes": 32,
     "totalTemplates": 21,
     "generatedBy": "ia-builder skill (hand-written ia.json, generated IA.md + matrix.csv)",
     "statusField": "Each template carries status: built (route mounted in src/App.jsx ROUTES and rendering) | in-progress (components exist but route not mounted) | planned (spec only).",
-    "routeSectionsField": "Platform templates are section libraries shared by several routes with different subsets/orders; their `sections` array is the union in typical order, and `routeSections` gives each route's exact top-to-bottom order (ids may repeat there). Per-section route counts in IA.md/matrix.csv for platform-only sections are therefore template-level upper bounds; the scope prose names the exact routes."
+    "routeSectionsField": "Platform templates are section libraries shared by several routes with different subsets/orders; their `sections` array is the union in typical order, and `routeSections` gives each route's exact top-to-bottom order (ids may repeat there). Per-section route counts in IA.md/matrix.csv for platform-only sections are therefore template-level upper bounds; the scope prose names the exact routes.",
+    "designRepoNote": "design-repo/ (1.2.0) models the two platform shells as ONE template family (platform-feature) because v2 and legacy pages share one purpose and one section library, plus developer-platform; this IA keeps the spec's three shells as separate page-inventory templates. Mapping: template.platform-v2 + template.platform-legacy -> platform-feature, template.platform-developers -> developer-platform."
   },
   "categories": {
     "SHELL": "Page chrome outside <main>: site header variants, help docs bar/sidebar, footer variants.",
@@ -169,47 +170,56 @@
     "hero.platform-centered": {
       "category": "HERO",
       "description": "Viewport-height centered platform hero: eyebrow pill, display headline, subhead, two CTAs, over route-specific original artwork (line grid with chips, agent canvas, or kanban board).",
-      "scope": "Modern platform template: web-agent, custom-agents and enrichment."
+      "scope": "Modern platform template: web-agent, custom-agents and enrichment.",
+      "implementedBy": "platform/heroes.jsx > HeroWebAgent, HeroCustomAgents, HeroEnrichment"
     },
     "hero.platform-horizon": {
       "category": "HERO",
       "description": "Platform hero with centered copy above a wide 3:1 horizon box of concentric arcs and glow, over a top-masked stripe field.",
-      "scope": "Modern platform template: universal-context only."
+      "scope": "Modern platform template: universal-context only.",
+      "implementedBy": "platform/heroes.jsx > HeroHorizon"
     },
     "hero.platform-radar": {
       "category": "HERO",
       "description": "Platform hero with copy centered inside a radar of concentric rings, a rotating beam and pinging dots.",
-      "scope": "Modern platform template: reporting only."
+      "scope": "Modern platform template: reporting only.",
+      "implementedBy": "platform/heroes.jsx > HeroRadar"
     },
     "hero.platform-mcp-grid": {
       "category": "HERO",
       "description": "Platform hero laid on a square-cell grid with client-logo cells and a prompt box under the copy.",
-      "scope": "Modern platform template: mcp only."
+      "scope": "Modern platform template: mcp only.",
+      "implementedBy": "platform/heroes.jsx > HeroMcp"
     },
     "hero.platform-ask-canvas": {
       "category": "HERO",
       "description": "Viewport-height hero over an animated canvas field with a chat widget mock under the copy, closed by a hairline-separated strip.",
-      "scope": "Legacy platform template: ask only."
+      "scope": "Legacy platform template: ask only.",
+      "implementedBy": "platform/legacy.jsx > HeroAsk"
     },
     "hero.platform-split-legacy": {
       "category": "HERO",
       "description": "Left-aligned legacy platform hero with copy in the left columns and a product mock (table or flow diagram) beside or above it.",
-      "scope": "Legacy platform template: call-intelligence and workflows."
+      "scope": "Legacy platform template: call-intelligence and workflows.",
+      "implementedBy": "platform/legacy.jsx > HeroCallIntel, HeroWorkflows"
     },
     "hero.platform-data-perspective": {
       "category": "HERO",
       "description": "Full-bleed tall hero: copy above a perspective-tilted wireframe of schema diagrams and a product window, with a sticky tab bar.",
-      "scope": "Legacy platform template: data only."
+      "scope": "Legacy platform template: data only.",
+      "implementedBy": "platform/legacy.jsx > HeroData"
     },
     "hero.platform-sequence-mock": {
       "category": "HERO",
       "description": "Hero with a stacked email-step sequence mock between dashed rules above the copy.",
-      "scope": "Legacy platform template: sequences only."
+      "scope": "Legacy platform template: sequences only.",
+      "implementedBy": "platform/legacy.jsx > HeroSequences"
     },
     "hero.developer-blueprint": {
       "category": "HERO",
       "description": "Dark blueprint hero on a 24-column line grid: bracketed overline, display headline, docs + outline buttons, artwork on the right.",
-      "scope": "Developers only."
+      "scope": "Developers only.",
+      "implementedBy": "platform/developers/Hero.jsx"
     },
     "proof.logo-cell-grid": {
       "category": "PROOF",
@@ -244,7 +254,8 @@
     "proof.quote-scroll-lit": {
       "category": "PROOF",
       "description": "Large centered serif testimonial on a dot field whose words change from grey to ink as the block scrolls through; attribution below; dashed guide rows above and below in the legacy shell.",
-      "scope": "Platform pages: enrichment (modern) and ask, call-intelligence, sequences, workflows (legacy)."
+      "scope": "Platform pages: enrichment (modern) and ask, call-intelligence, sequences, workflows (legacy).",
+      "implementedBy": "platform/Sections.jsx > ScrollQuote"
     },
     "proof.scale-stats": {
       "category": "PROOF",
@@ -267,12 +278,14 @@
     "proof.stat-headline": {
       "category": "PROOF",
       "description": "Split block: two-tone heading on the left, one very large container-scaled number with label on the right.",
-      "scope": "Modern platform template: custom-agents and mcp."
+      "scope": "Modern platform template: custom-agents and mcp.",
+      "implementedBy": "platform/Sections.jsx > Stat"
     },
     "proof.developer-testimonial": {
       "category": "PROOF",
       "description": "Dark blueprint testimonial: mono name label, halftone portrait canvas, quote box whose words brighten.",
-      "scope": "Developers only (appears twice on the page)."
+      "scope": "Developers only (appears twice on the page).",
+      "implementedBy": "platform/developers/Testimonial.jsx"
     },
     "features.platform-showcase": {
       "category": "FEATURES",
@@ -367,107 +380,128 @@
     "features.split-accordion": {
       "category": "FEATURES",
       "description": "Modern split accordion: two-tone heading and three progress-tracked items on the left, cross-fading media panel on the right; full-bleed and stacked below lg.",
-      "scope": "Modern platform template: web-agent, custom-agents, universal-context, enrichment and reporting (not mcp)."
+      "scope": "Modern platform template: web-agent, custom-agents, universal-context, enrichment and reporting (not mcp).",
+      "implementedBy": "platform/SplitAccordion.jsx > SplitAccordion"
     },
     "features.split-accordion-legacy": {
       "category": "FEATURES",
       "description": "Legacy split accordion: heading with expandable items pinned to the bottom-left, dotted media well on the right, seam ticks between.",
-      "scope": "Legacy platform template: call-intelligence, data, sequences and workflows (not ask)."
+      "scope": "Legacy platform template: call-intelligence, data, sequences and workflows (not ask).",
+      "implementedBy": "platform/SplitAccordion.jsx > SplitAccordionLegacy"
     },
     "features.split-icons": {
       "category": "FEATURES",
       "description": "Two-column block: heading on the left, three stacked icon + text articles on the right.",
-      "scope": "Modern platform template: mcp only."
+      "scope": "Modern platform template: mcp only.",
+      "implementedBy": "platform/Grids.jsx > SplitIcons"
     },
     "features.media-grid-three": {
       "category": "FEATURES",
       "description": "Modern three-up media cards under a two-tone heading, artwork above title and body (one or two rows).",
-      "scope": "Modern platform template: web-agent, universal-context, mcp, enrichment and reporting (not custom-agents)."
+      "scope": "Modern platform template: web-agent, universal-context, mcp, enrichment and reporting (not custom-agents).",
+      "implementedBy": "platform/Grids.jsx > MediaGrid3"
     },
     "features.legacy-card-grid-three": {
       "category": "FEATURES",
       "description": "Legacy three-up cards in a dashed, hatched frame with square dotted media wells; a text + icon variant drops the media.",
-      "scope": "Legacy platform template: call-intelligence, data, sequences and workflows (data and workflows also use the text + icon variant)."
+      "scope": "Legacy platform template: call-intelligence, data, sequences and workflows (data and workflows also use the text + icon variant).",
+      "implementedBy": "platform/Grids.jsx > LegacyGrid3"
     },
     "features.legacy-card-grid-quad": {
       "category": "FEATURES",
       "description": "Legacy two-by-two indexed media cards in a hatched frame, optionally split by a full-width inline serif quote row.",
-      "scope": "Legacy platform template: call-intelligence, data and sequences (sequences without the quote)."
+      "scope": "Legacy platform template: call-intelligence, data and sequences (sequences without the quote).",
+      "implementedBy": "platform/Grids.jsx > LegacyGrid2Q"
     },
     "features.center-media": {
       "category": "FEATURES",
       "description": "Centered two-tone heading above one large product image on a fading stripe field.",
-      "scope": "Modern platform template: custom-agents, universal-context, mcp and enrichment."
+      "scope": "Modern platform template: custom-agents, universal-context, mcp and enrichment.",
+      "implementedBy": "platform/Sections.jsx > CenterMedia"
     },
     "features.card-marquee": {
       "category": "FEATURES",
       "description": "Two rows of small task cards moving in opposite directions with scroll, over a line or stripe field; centered heading (modern or legacy stacked style).",
-      "scope": "Platform pages: custom-agents (modern) and workflows, ask (legacy)."
+      "scope": "Platform pages: custom-agents (modern) and workflows, ask (legacy).",
+      "implementedBy": "platform/Sections.jsx > CardMarquee"
     },
     "features.text-columns": {
       "category": "FEATURES",
       "description": "Heading then a horizontally snapping row of left-bordered text columns with ruler feet; numbered-steps variant adds a docs button.",
-      "scope": "Modern platform template: universal-context, enrichment and mcp (steps variant)."
+      "scope": "Modern platform template: universal-context, enrichment and mcp (steps variant).",
+      "implementedBy": "platform/Sections.jsx > TextColumns"
     },
     "features.orbit-illustration": {
       "category": "FEATURES",
       "description": "Centered illustration on a horizon hairline, centered heading, three text columns.",
-      "scope": "Modern platform template: web-agent only."
+      "scope": "Modern platform template: web-agent only.",
+      "implementedBy": "platform/Sections.jsx > Orbit"
     },
     "features.icon-row": {
       "category": "FEATURES",
       "description": "Heading then a three-up row of tall icon + text cells.",
-      "scope": "Modern platform template: custom-agents only."
+      "scope": "Modern platform template: custom-agents only.",
+      "implementedBy": "platform/Grids.jsx > IconRow"
     },
     "features.tagged-quad": {
       "category": "FEATURES",
       "description": "Heading on the left, two-by-two grid of bracket-tagged cards on the right.",
-      "scope": "Modern platform template: web-agent and universal-context."
+      "scope": "Modern platform template: web-agent and universal-context.",
+      "implementedBy": "platform/Grids.jsx > TaggedQuad"
     },
     "features.bento-grid": {
       "category": "FEATURES",
       "description": "Legacy-style centered header over an eight-column bento of four media cards in alternating wide/narrow rows.",
-      "scope": "Modern platform template: reporting only."
+      "scope": "Modern platform template: reporting only.",
+      "implementedBy": "platform/Grids.jsx > Bento"
     },
     "features.integration-arc-strip": {
       "category": "FEATURES",
       "description": "Short tinted strip with a centered two-part line and app tiles placed along a large arc, masked at the bottom.",
-      "scope": "Platform pages: mcp (modern) and call-intelligence (legacy)."
+      "scope": "Platform pages: mcp (modern) and call-intelligence (legacy).",
+      "implementedBy": "platform/Sections.jsx > IntegrationStrip"
     },
     "features.product-showcase-legacy": {
       "category": "FEATURES",
       "description": "Legacy header then a full-width product screenshot in a tinted, horizontally scrollable box.",
-      "scope": "Legacy platform template: sequences only."
+      "scope": "Legacy platform template: sequences only.",
+      "implementedBy": "platform/legacy.jsx > Showcase"
     },
     "features.tabbed-showcase": {
       "category": "FEATURES",
       "description": "Legacy tabbed showcase: block heading, outline pill tabs (click only), panel with title, body and media.",
-      "scope": "Legacy platform template: call-intelligence and data."
+      "scope": "Legacy platform template: call-intelligence and data.",
+      "implementedBy": "platform/Sections.jsx > Tabs"
     },
     "features.ask-tab-carousel": {
       "category": "FEATURES",
       "description": "Centered heading, five text tabs over a draggable tick ruler, and the selected panel.",
-      "scope": "Legacy platform template: ask only."
+      "scope": "Legacy platform template: ask only.",
+      "implementedBy": "platform/legacy.jsx > AskTabs"
     },
     "features.uc-band": {
       "category": "FEATURES",
       "description": "Viewport-height dark band: terrain canvas, small kicker above a large white headline, dashed guides, and a five-up row of dark corner-marked cells.",
-      "scope": "Legacy platform template: ask and workflows."
+      "scope": "Legacy platform template: ask and workflows.",
+      "implementedBy": "platform/Sections.jsx > UcBand"
     },
     "features.ask-intelligence": {
       "category": "FEATURES",
       "description": "Centered header, a bottom-masked product window mock, then a three-up cell row of icon + text + floating mini-UI media.",
-      "scope": "Legacy platform template: ask only."
+      "scope": "Legacy platform template: ask only.",
+      "implementedBy": "platform/legacy.jsx > AskIntel"
     },
     "features.agent-columns": {
       "category": "FEATURES",
       "description": "Legacy five-column snapping row of bordered text columns with a dark title marker, ruler below and edge fades.",
-      "scope": "Legacy platform template: workflows only."
+      "scope": "Legacy platform template: workflows only.",
+      "implementedBy": "platform/legacy.jsx > AgentColumns"
     },
     "features.developer-card-section": {
       "category": "FEATURES",
       "description": "Dark blueprint section: header with docs button, then grid-placed illustrated cards, sometimes with an inline quote strip between rows.",
-      "scope": "Developers only (three instances on the page)."
+      "scope": "Developers only (three instances on the page).",
+      "implementedBy": "platform/developers/CardSection.jsx"
     },
     "content.interview-video": {
       "category": "CONTENT",
@@ -508,7 +542,8 @@
     "content.developer-heatmap": {
       "category": "CONTENT",
       "description": "Dark blueprint header with outline button over a lined box holding a contribution-style grid and a mono caption.",
-      "scope": "Developers only."
+      "scope": "Developers only.",
+      "implementedBy": "platform/developers/Heatmap.jsx"
     },
     "content.architecture-chapter-band": {
       "category": "CONTENT",
@@ -663,12 +698,14 @@
     "conversion.platform-final-cta": {
       "category": "CONVERSION",
       "description": "Platform dark closing CTA: shorter than the homepage CTA, stripe field masked to a dome at top center, bold one- or two-line headline, tighter gap and padding, same streaks.",
-      "scope": "Every modern and legacy platform page (not developers)."
+      "scope": "Every modern and legacy platform page (not developers).",
+      "implementedBy": "platform/Sections.jsx > PlatformCta"
     },
     "conversion.developer-cta": {
       "category": "CONVERSION",
       "description": "Dark blueprint closing block: centered heading with a mono command chip, surrounded by floating dark mock windows.",
-      "scope": "Developers only."
+      "scope": "Developers only.",
+      "implementedBy": "platform/developers/ReadyCta.jsx"
     },
     "conversion.architecture-closing-nav": {
       "category": "CONVERSION",
@@ -703,12 +740,14 @@
     "wayfinding.platform-link-grid": {
       "category": "WAYFINDING",
       "description": "Grid of eight numbered link cells to other platform pages with hover wash and arrow; legacy stacked-header frame or modern split layout.",
-      "scope": "Platform pages: enrichment (modern) and call-intelligence, data, sequences (legacy)."
+      "scope": "Platform pages: enrichment (modern) and call-intelligence, data, sequences (legacy).",
+      "implementedBy": "platform/Sections.jsx > LinksGrid"
     },
     "wayfinding.developer-apps": {
       "category": "WAYFINDING",
       "description": "Dark header with browse button, a row of app icons with labels, and a repository link row.",
-      "scope": "Developers only."
+      "scope": "Developers only.",
+      "implementedBy": "platform/developers/AppsRow.jsx"
     }
   },
   "templates": [
@@ -1107,7 +1146,7 @@
         "/platform/reporting"
       ],
       "chrome": "full",
-      "status": "planned",
+      "status": "built",
       "spec": "CLONE_SPEC_PLATFORM.md T1",
       "sectionNote": "Union of the section library this template draws from, in typical order. Each route uses a subset; see routeSections for exact order.",
       "sections": [
@@ -1207,7 +1246,8 @@
           "conversion.platform-final-cta",
           "shell.site-footer"
         ]
-      }
+      },
+      "page": "src/pages/platform/{WebAgent,CustomAgents,UniversalContext,Mcp,Enrichment,Reporting}.jsx"
     },
     {
       "id": "template.platform-legacy",
@@ -1221,7 +1261,7 @@
         "/platform/workflows"
       ],
       "chrome": "full",
-      "status": "planned",
+      "status": "built",
       "spec": "CLONE_SPEC_PLATFORM.md T2",
       "sectionNote": "Union of the section library this template draws from, in typical order. Each route uses a subset; see routeSections for exact order (ids repeat where a route uses a section type twice).",
       "sections": [
@@ -1310,7 +1350,8 @@
           "conversion.platform-final-cta",
           "shell.site-footer"
         ]
-      }
+      },
+      "page": "src/pages/platform/{Ask,CallIntelligence,Data,Sequences,Workflows}.jsx"
     },
     {
       "id": "template.platform-developers",
@@ -1320,7 +1361,7 @@
         "/platform/developers"
       ],
       "chrome": "full-dark",
-      "status": "planned",
+      "status": "built",
       "spec": "CLONE_SPEC_PLATFORM.md T3 / §4",
       "sections": [
         "shell.site-header-dark",
@@ -1346,7 +1387,8 @@
           "conversion.developer-cta",
           "shell.site-footer"
         ]
-      }
+      },
+      "page": "src/pages/platform/Developers.jsx"
     }
   ]
 }

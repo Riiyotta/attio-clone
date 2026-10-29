@@ -6,8 +6,8 @@
   "source": {
     "file": "tailwind.config.cjs",
     "tag": "'overline': t(",
-    "lines": "189-189",
-    "citation": "tailwind.config.cjs:189-189"
+    "lines": "194-194",
+    "citation": "tailwind.config.cjs:194-194"
   },
   "props": {
     "label": "text <= 4 words"

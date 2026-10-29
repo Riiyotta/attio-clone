@@ -6,8 +6,8 @@
     "id": "src:SiteHeader#function-MobileDrawer",
     "file": "src/components/SiteHeader.jsx",
     "tag": "function MobileDrawer(",
-    "lines": "345-428",
-    "citation": "src/components/SiteHeader.jsx:345-428"
+    "lines": "359-442",
+    "citation": "src/components/SiteHeader.jsx:359-442"
   },
   "semantic": {
     "id": "overlay.mobile-nav-drawer",

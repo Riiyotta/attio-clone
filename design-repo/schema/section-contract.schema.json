@@ -232,7 +232,8 @@
               "scroll-typewriter",
               "scroll-lit-words",
               "canvas-field",
-              "form-feedback"
+              "form-feedback",
+              "scroll-parallax-rows"
             ]
           }
         },

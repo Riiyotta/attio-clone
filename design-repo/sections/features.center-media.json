@@ -1,0 +1,169 @@
+{
+  "id": "features.center-media",
+  "title": "Centred heading with product window",
+  "status": "measured",
+  "source": {
+    "id": "src:Sections#export-function-CenterMedia",
+    "file": "src/components/platform/Sections.jsx",
+    "tag": "export function CenterMedia(",
+    "lines": "75-91",
+    "citation": "src/components/platform/Sections.jsx:75-91",
+    "variantSources": {
+      "top": {
+        "file": "src/components/platform/Sections.jsx",
+        "tag": "export function CenterMedia(",
+        "lines": "75-91",
+        "citation": "src/components/platform/Sections.jsx:75-91"
+      },
+      "centered": {
+        "file": "src/components/platform/Sections.jsx",
+        "tag": "export function CenterMedia(",
+        "lines": "75-91",
+        "citation": "src/components/platform/Sections.jsx:75-91"
+      }
+    }
+  },
+  "semantic": {
+    "id": "features.center-media",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "purpose": "Centred two-tone heading over one large product-window artwork (1158 wide at 1440) on a vertical stripe field that fades in from the top.",
+  "themes": [
+    "light"
+  ],
+  "variants": [
+    "top",
+    "centered"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "heading": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "lead": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 7,
+            "x-maxWordsEvidence": "two-tone lead: S-CENTER-MEDIA lead c22-c30, continuation c56-c69"
+          },
+          "continuation": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 16,
+            "x-maxWordsEvidence": "two-tone continuation: S-CENTER-MEDIA lead c22-c30, continuation c56-c69"
+          }
+        },
+        "required": [
+          "lead",
+          "continuation"
+        ]
+      },
+      "media": {
+        "$ref": "#/definitions/media",
+        "x-assetRoles": [
+          "product.reference-mock",
+          "product.generated-visual"
+        ]
+      }
+    },
+    "required": [
+      "heading",
+      "media"
+    ]
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "static"
+    ],
+    "reducedMotionFallback": "none-needed",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "stack",
+        "detail": "v2 shell goes full-bleed (no side borders), spacers 128 -> 64, inset 32px; H2 40/46 -> 32/36.8; grids collapse to one column."
+      },
+      {
+        "at": "below-lg",
+        "change": "reflow",
+        "detail": "media keeps its aspect ratio and scales to the container width."
+      }
+    ]
+  },
+  "assetSlots": [
+    {
+      "field": ".media",
+      "assetRoles": [
+        "product.reference-mock",
+        "product.generated-visual"
+      ]
+    }
+  ],
+  "generatedAssetRoles": [
+    "copy.original",
+    "product.generated-visual"
+  ],
+  "composes": [
+    "component.two-tone-heading",
+    "component.section-shell",
+    "primitive.asset-slot"
+  ],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/platform/custom-agents",
+        "variant": "top",
+        "instance": 0,
+        "heightPx": 1182.2
+      },
+      {
+        "route": "/platform/enrichment",
+        "variant": "centered",
+        "instance": 0,
+        "heightPx": 1041
+      },
+      {
+        "route": "/platform/mcp",
+        "variant": "top",
+        "instance": 0,
+        "heightPx": 1205.2
+      },
+      {
+        "route": "/platform/universal-context",
+        "variant": "top",
+        "instance": 0,
+        "heightPx": 1180.2
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/platform/custom-agents",
+      "variant": "top"
+    },
+    {
+      "route": "/platform/enrichment",
+      "variant": "centered"
+    },
+    {
+      "route": "/platform/mcp",
+      "variant": "top"
+    },
+    {
+      "route": "/platform/universal-context",
+      "variant": "top"
+    }
+  ]
+}

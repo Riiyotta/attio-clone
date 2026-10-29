@@ -1,0 +1,390 @@
+{
+  "id": "hero.platform-feature",
+  "title": "Platform feature hero",
+  "status": "measured",
+  "source": {
+    "id": "src:shell#export-function-HeroCopy",
+    "file": "src/components/platform/shell.jsx",
+    "tag": "export function HeroCopy(",
+    "lines": "160-191",
+    "citation": "src/components/platform/shell.jsx:160-191",
+    "variantSources": {
+      "chip-field": {
+        "file": "src/components/platform/heroes.jsx",
+        "tag": "export function HeroWebAgent(",
+        "lines": "31-68",
+        "citation": "src/components/platform/heroes.jsx:31-68"
+      },
+      "agent-canvas": {
+        "file": "src/components/platform/heroes.jsx",
+        "tag": "export function HeroCustomAgents(",
+        "lines": "124-177",
+        "citation": "src/components/platform/heroes.jsx:124-177"
+      },
+      "kanban-board": {
+        "file": "src/components/platform/heroes.jsx",
+        "tag": "export function HeroEnrichment(",
+        "lines": "184-230",
+        "citation": "src/components/platform/heroes.jsx:184-230"
+      },
+      "horizon": {
+        "file": "src/components/platform/heroes.jsx",
+        "tag": "export function HeroHorizon(",
+        "lines": "235-277",
+        "citation": "src/components/platform/heroes.jsx:235-277"
+      },
+      "radar": {
+        "file": "src/components/platform/heroes.jsx",
+        "tag": "export function HeroRadar(",
+        "lines": "292-333",
+        "citation": "src/components/platform/heroes.jsx:292-333"
+      },
+      "tile-grid": {
+        "file": "src/components/platform/heroes.jsx",
+        "tag": "export function HeroMcp(",
+        "lines": "355-435",
+        "citation": "src/components/platform/heroes.jsx:355-435"
+      },
+      "table-call-card": {
+        "file": "src/components/platform/legacy.jsx",
+        "tag": "export function HeroCallIntel(",
+        "lines": "407-447",
+        "citation": "src/components/platform/legacy.jsx:407-447"
+      },
+      "flow-diagram": {
+        "file": "src/components/platform/legacy.jsx",
+        "tag": "export function HeroWorkflows(",
+        "lines": "462-512",
+        "citation": "src/components/platform/legacy.jsx:462-512"
+      },
+      "sequence-stack": {
+        "file": "src/components/platform/legacy.jsx",
+        "tag": "export function HeroSequences(",
+        "lines": "517-566",
+        "citation": "src/components/platform/legacy.jsx:517-566"
+      },
+      "schema-perspective": {
+        "file": "src/components/platform/legacy.jsx",
+        "tag": "export function HeroData(",
+        "lines": "604-643",
+        "citation": "src/components/platform/legacy.jsx:604-643"
+      },
+      "ask-stage": {
+        "file": "src/components/platform/legacy.jsx",
+        "tag": "export function HeroAsk(",
+        "lines": "95-136",
+        "citation": "src/components/platform/legacy.jsx:95-136"
+      }
+    }
+  },
+  "semantic": {
+    "id": "hero.platform-feature",
+    "category": "HERO"
+  },
+  "retrievalEligible": true,
+  "purpose": "Page-opening composition of a platform feature page: eyebrow pill naming the feature, display headline, subhead and a primary + outline CTA pair (HeroCopy), set against one route-specific artwork stage (chip field, agent canvas, kanban board, horizon arcs, radar, tile grid, CRM table + call card, flow diagram, email-step stack, schema perspective, or the assistant stage with its strip).",
+  "themes": [
+    "light"
+  ],
+  "variants": [
+    "chip-field",
+    "agent-canvas",
+    "kanban-board",
+    "horizon",
+    "radar",
+    "tile-grid",
+    "table-call-card",
+    "flow-diagram",
+    "sequence-stack",
+    "schema-perspective",
+    "ask-stage"
+  ],
+  "variantRequirements": {
+    "chip-field": [
+      "chips"
+    ],
+    "agent-canvas": [
+      "cards"
+    ],
+    "flow-diagram": [
+      "cards"
+    ],
+    "ask-stage": [
+      "strip"
+    ]
+  },
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "pill": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 4,
+        "x-maxWordsEvidence": "Appendix A hero pill c3-c18 (1-2 words)"
+      },
+      "headline": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 9,
+        "x-maxWordsEvidence": "Appendix A hero h1/h2 c18-c38, w2-w6"
+      },
+      "subhead": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 22,
+        "x-maxWordsEvidence": "Appendix A hero p c58-c120, w9-w17"
+      },
+      "primaryCta": {
+        "$ref": "#/definitions/cta"
+      },
+      "secondaryCta": {
+        "$ref": "#/definitions/cta"
+      },
+      "artwork": {
+        "$ref": "#/definitions/media",
+        "x-assetRoles": [
+          "product.reference-mock",
+          "product.generated-visual",
+          "illustration.reference-art",
+          "illustration.generated-abstract",
+          "illustration.decorative-pattern"
+        ]
+      },
+      "chips": {
+        "type": "array",
+        "minItems": 4,
+        "maxItems": 12,
+        "items": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 2,
+          "x-maxWordsEvidence": "web-agent domain chips c6-c15, 1 word"
+        },
+        "x-countEvidence": "10 chips measured (web-agent)"
+      },
+      "cards": {
+        "type": "array",
+        "minItems": 3,
+        "maxItems": 6,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "icon": {
+              "$ref": "#/definitions/icon"
+            },
+            "title": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 6,
+              "x-maxWordsEvidence": "agent/flow card title c9-c26"
+            },
+            "description": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 9,
+              "x-maxWordsEvidence": "card desc c29-c36"
+            }
+          },
+          "required": [
+            "icon",
+            "title",
+            "description"
+          ]
+        },
+        "x-countEvidence": "4 agent cards (custom-agents), 5 flow nodes (workflows)"
+      },
+      "strip": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 16,
+        "x-maxWordsEvidence": "ask strip p c76 w10 (2L)"
+      }
+    },
+    "required": [
+      "headline",
+      "subhead",
+      "primaryCta",
+      "artwork"
+    ]
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "page-hero-enter",
+      "decorative-loop",
+      "canvas-field",
+      "hover-micro"
+    ],
+    "reducedMotionFallback": "static-final-state",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "resize-type",
+        "detail": "display 56/60 -> 40/44 (-0.4), subhead 20/26 -> 18/24; CTA buttons h46 radius 12."
+      },
+      {
+        "at": "below-lg",
+        "change": "show-alternate-tree",
+        "detail": "split heroes (table + call card, flow diagram) lead with centred copy, then stack the artwork under it; agent canvas cards move to the corners."
+      },
+      {
+        "at": "below-md",
+        "change": "stack",
+        "detail": "CTA row stacks; ask strip centres and hides its outline button."
+      }
+    ]
+  },
+  "assetSlots": [
+    {
+      "field": ".artwork",
+      "assetRoles": [
+        "product.reference-mock",
+        "product.generated-visual",
+        "illustration.reference-art",
+        "illustration.generated-abstract",
+        "illustration.decorative-pattern"
+      ]
+    }
+  ],
+  "generatedAssetRoles": [
+    "copy.original",
+    "icon.stroke-ui",
+    "illustration.decorative-pattern",
+    "illustration.generated-abstract",
+    "product.generated-visual",
+    "url.placeholder"
+  ],
+  "composes": [
+    "primitive.eyebrow-pill",
+    "primitive.button",
+    "primitive.asset-slot",
+    "component.mini-mock"
+  ],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/platform/ask",
+        "variant": "ask-stage",
+        "instance": 0,
+        "heightPx": 983
+      },
+      {
+        "route": "/platform/call-intelligence",
+        "variant": "table-call-card",
+        "instance": 0,
+        "heightPx": 821.2
+      },
+      {
+        "route": "/platform/custom-agents",
+        "variant": "agent-canvas",
+        "instance": 0,
+        "heightPx": 784
+      },
+      {
+        "route": "/platform/data",
+        "variant": "schema-perspective",
+        "instance": 0,
+        "heightPx": 1535.2
+      },
+      {
+        "route": "/platform/enrichment",
+        "variant": "kanban-board",
+        "instance": 0,
+        "heightPx": 784
+      },
+      {
+        "route": "/platform/mcp",
+        "variant": "tile-grid",
+        "instance": 0,
+        "heightPx": 810.8
+      },
+      {
+        "route": "/platform/reporting",
+        "variant": "radar",
+        "instance": 0,
+        "heightPx": 720.2
+      },
+      {
+        "route": "/platform/sequences",
+        "variant": "sequence-stack",
+        "instance": 0,
+        "heightPx": 820.2
+      },
+      {
+        "route": "/platform/universal-context",
+        "variant": "horizon",
+        "instance": 0,
+        "heightPx": 831.3
+      },
+      {
+        "route": "/platform/web-agent",
+        "variant": "chip-field",
+        "instance": 0,
+        "heightPx": 784
+      },
+      {
+        "route": "/platform/workflows",
+        "variant": "flow-diagram",
+        "instance": 0,
+        "heightPx": 790
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/platform/ask",
+      "variant": "ask-stage"
+    },
+    {
+      "route": "/platform/call-intelligence",
+      "variant": "table-call-card"
+    },
+    {
+      "route": "/platform/custom-agents",
+      "variant": "agent-canvas"
+    },
+    {
+      "route": "/platform/data",
+      "variant": "schema-perspective"
+    },
+    {
+      "route": "/platform/enrichment",
+      "variant": "kanban-board"
+    },
+    {
+      "route": "/platform/mcp",
+      "variant": "tile-grid"
+    },
+    {
+      "route": "/platform/reporting",
+      "variant": "radar"
+    },
+    {
+      "route": "/platform/sequences",
+      "variant": "sequence-stack"
+    },
+    {
+      "route": "/platform/universal-context",
+      "variant": "horizon"
+    },
+    {
+      "route": "/platform/web-agent",
+      "variant": "chip-field"
+    },
+    {
+      "route": "/platform/workflows",
+      "variant": "flow-diagram"
+    }
+  ],
+  "notes": "One HERO per page. Heights at 1440: 720-1535 (svh-based stages 784 at 900 tall). Artwork is original in the clone (fictional CRM); live imagery is never reused."
+}

@@ -1,0 +1,468 @@
+{
+  "pageSpecVersion": "1.2.0",
+  "mode": "generated",
+  "template": "platform-feature",
+  "route": "/platform/route-planner",
+  "brand": {
+    "name": "Tarnwick",
+    "mark": {
+      "assetRole": "brand.placeholder-mark",
+      "assetRef": "generate:neutral rounded glyph plus the Tarnwick wordmark",
+      "alt": "Tarnwick"
+    },
+    "fictional": true
+  },
+  "meta": {
+    "title": "Route planner",
+    "description": "Generated sample feature page for the route planning tool of a fictional field-service scheduling product."
+  },
+  "nodes": [
+    {
+      "id": "header",
+      "type": "shell.site-header",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.placeholder-mark",
+          "assetRef": "generate:neutral rounded glyph plus the Tarnwick wordmark",
+          "alt": "Tarnwick"
+        },
+        "banner": {
+          "text": "Read what changed in the autumn update",
+          "href": "https://tarnwick.example/updates"
+        },
+        "menus": [
+          {
+            "label": "Product",
+            "groups": [
+              {
+                "label": "Plan",
+                "items": [
+                  {
+                    "title": "Crew calendar",
+                    "description": "Book jobs onto open crew time",
+                    "href": "https://tarnwick.example/calendar"
+                  },
+                  {
+                    "title": "Parts tracker",
+                    "description": "Know which van carries which spare",
+                    "href": "https://tarnwick.example/parts"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "Company",
+            "groups": [
+              {
+                "label": "About",
+                "items": [
+                  {
+                    "title": "Our crews",
+                    "description": "Who builds the scheduling board",
+                    "href": "https://tarnwick.example/about"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "signIn": {
+          "label": "Log in",
+          "href": "https://app.tarnwick.example/login"
+        },
+        "primaryCta": {
+          "label": "Book a walkthrough",
+          "href": "https://tarnwick.example/demo",
+          "variant": "primary"
+        }
+      },
+      "motion": {
+        "patterns": [
+          "header-theme-swap",
+          "dropdown-panel"
+        ],
+        "reducedMotionFallback": "instant-state-change"
+      }
+    },
+    {
+      "id": "hero",
+      "type": "hero.platform-feature",
+      "variant": "agent-canvas",
+      "content": {
+        "pill": "Route planner",
+        "headline": "Every van on the shortest road",
+        "subhead": "Tarnwick lines up the day's visits so each crew drives less and arrives inside the promised window.",
+        "primaryCta": {
+          "label": "Plan a week free",
+          "href": "https://tarnwick.example/start",
+          "variant": "primary"
+        },
+        "secondaryCta": {
+          "label": "Ask our team",
+          "href": "https://tarnwick.example/contact",
+          "variant": "outline"
+        },
+        "artwork": {
+          "assetRole": "product.generated-visual",
+          "assetRef": "generate:map board with three coloured van routes and stop pins",
+          "alt": "Map board with three coloured van routes and stop pins"
+        },
+        "cards": [
+          {
+            "icon": "pin",
+            "title": "Morning stops",
+            "description": "Six visits north of the depot"
+          },
+          {
+            "icon": "clock",
+            "title": "Lunch window",
+            "description": "Two short jobs near the yard"
+          },
+          {
+            "icon": "flow",
+            "title": "Afternoon loop",
+            "description": "Four boiler checks in a ring"
+          },
+          {
+            "icon": "check",
+            "title": "Back by five",
+            "description": "Van returns with spare parts"
+          }
+        ]
+      },
+      "motion": {
+        "patterns": [
+          "page-hero-enter",
+          "decorative-loop"
+        ],
+        "reducedMotionFallback": "static-final-state"
+      }
+    },
+    {
+      "id": "logos",
+      "type": "social-proof.logo-wall",
+      "variant": "platform-band",
+      "content": {
+        "logos": [
+          {
+            "assetRole": "logo.fictional-company",
+            "assetRef": "generate:wordmark Copperfield Heating",
+            "alt": "Copperfield Heating logo"
+          },
+          {
+            "assetRole": "logo.fictional-company",
+            "assetRef": "generate:wordmark Brookside Plumbing",
+            "alt": "Brookside Plumbing logo"
+          },
+          {
+            "assetRole": "logo.fictional-company",
+            "assetRef": "generate:wordmark Westmere Electric",
+            "alt": "Westmere Electric logo"
+          },
+          {
+            "assetRole": "logo.fictional-company",
+            "assetRef": "generate:wordmark Ashgrove Roofing",
+            "alt": "Ashgrove Roofing logo"
+          },
+          {
+            "assetRole": "logo.fictional-company",
+            "assetRef": "generate:wordmark Linden Lifts",
+            "alt": "Linden Lifts logo"
+          }
+        ]
+      },
+      "motion": {
+        "patterns": [
+          "static"
+        ],
+        "reducedMotionFallback": "instant-state-change"
+      }
+    },
+    {
+      "id": "split",
+      "type": "features.split-accordion",
+      "variant": "v2",
+      "content": {
+        "heading": {
+          "lead": "Routes that adjust themselves.",
+          "continuation": "When a job runs long, the rest of the day moves with it."
+        },
+        "items": [
+          {
+            "title": "Re-plans in minutes",
+            "description": "Late jobs push the next stops without breaking promised arrival windows.",
+            "media": {
+              "assetRole": "product.generated-visual",
+              "assetRef": "generate:timeline of stops sliding later",
+              "alt": "Timeline of stops sliding later"
+            }
+          },
+          {
+            "title": "Keeps skills matched",
+            "description": "Only crews certified for gas work get gas jobs on their route.",
+            "media": {
+              "assetRole": "product.generated-visual",
+              "assetRef": "generate:crew cards with skill badges",
+              "alt": "Crew cards with skill badges"
+            }
+          },
+          {
+            "title": "Warns before overtime",
+            "description": "Flags routes that would end after hours, before anyone sets off.",
+            "media": {
+              "assetRole": "product.generated-visual",
+              "assetRef": "generate:route card with a warning chip",
+              "alt": "Route card with a warning chip"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "patterns": [
+          "auto-cycle-tabs"
+        ],
+        "reducedMotionFallback": "manual-advance-only"
+      }
+    },
+    {
+      "id": "grid",
+      "type": "features.media-card-grid",
+      "variant": "v2-three",
+      "content": {
+        "heading": {
+          "lead": "Planning you can check.",
+          "continuation": "Every suggestion shows the drive time, the reason and the crew it chose."
+        },
+        "cards": [
+          {
+            "title": "Drive time up front",
+            "body": "Each leg shows minutes on the road before you accept it.",
+            "media": {
+              "assetRole": "product.generated-visual",
+              "assetRef": "generate:leg list with minutes",
+              "alt": "Leg list with minutes"
+            }
+          },
+          {
+            "title": "Why this crew",
+            "body": "A short note explains the match: skills, distance and load.",
+            "media": {
+              "assetRole": "product.generated-visual",
+              "assetRef": "generate:explanation card",
+              "alt": "Explanation card"
+            }
+          },
+          {
+            "title": "Undo in one click",
+            "body": "Roll back any change and the board returns to how it was.",
+            "media": {
+              "assetRole": "product.generated-visual",
+              "assetRef": "generate:board with an undo toast",
+              "alt": "Board with an undo toast"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "patterns": [
+          "static"
+        ],
+        "reducedMotionFallback": "none-needed"
+      }
+    },
+    {
+      "id": "quote",
+      "type": "testimonial.quote",
+      "variant": "scroll-lit",
+      "content": {
+        "quote": "We cut an hour of driving from every van, every single day, and the customers noticed first.",
+        "person": {
+          "name": "Orla Penhaligon",
+          "role": "Operations lead, Copperfield Heating",
+          "fictional": true
+        }
+      },
+      "motion": {
+        "patterns": [
+          "word-reveal-scroll"
+        ],
+        "reducedMotionFallback": "static-final-state"
+      }
+    },
+    {
+      "id": "stat",
+      "type": "social-proof.stat-highlight",
+      "content": {
+        "heading": {
+          "lead": "Less road, more work.",
+          "continuation": "Crews planned with Tarnwick spend the day working, not driving."
+        },
+        "value": "38%",
+        "label": "less driving per van in the pilot"
+      },
+      "motion": {
+        "patterns": [
+          "static"
+        ],
+        "reducedMotionFallback": "none-needed"
+      }
+    },
+    {
+      "id": "cols",
+      "type": "features.text-columns",
+      "variant": "columns",
+      "content": {
+        "heading": {
+          "lead": "Works the way dispatch does.",
+          "continuation": "Plan the night before, adjust at dawn, let crews confirm on the road."
+        },
+        "items": [
+          {
+            "title": "Plan",
+            "body": "Drag jobs onto days and let the planner sort the order."
+          },
+          {
+            "title": "Adjust",
+            "body": "Move a visit and every route around it updates."
+          },
+          {
+            "title": "Confirm",
+            "body": "Crews accept their route from the phone in the van."
+          },
+          {
+            "title": "Review",
+            "body": "See planned versus driven miles at the end of the week."
+          }
+        ]
+      },
+      "motion": {
+        "patterns": [
+          "static"
+        ],
+        "reducedMotionFallback": "none-needed"
+      }
+    },
+    {
+      "id": "links",
+      "type": "navigation.platform-links",
+      "variant": "v2",
+      "content": {
+        "heading": {
+          "lead": "More of Tarnwick.",
+          "continuation": "Every tool in the toolkit."
+        },
+        "links": [
+          {
+            "label": "Crew calendar",
+            "href": "https://tarnwick.example/calendar"
+          },
+          {
+            "label": "Parts tracker",
+            "href": "https://tarnwick.example/parts"
+          },
+          {
+            "label": "Job sheets",
+            "href": "https://tarnwick.example/jobs"
+          },
+          {
+            "label": "Invoices",
+            "href": "https://tarnwick.example/invoices"
+          },
+          {
+            "label": "Customer portal",
+            "href": "https://tarnwick.example/portal"
+          },
+          {
+            "label": "Reports",
+            "href": "https://tarnwick.example/reports"
+          },
+          {
+            "label": "Mobile app",
+            "href": "https://tarnwick.example/mobile"
+          },
+          {
+            "label": "Integrations",
+            "href": "https://tarnwick.example/integrations"
+          }
+        ]
+      },
+      "motion": {
+        "patterns": [
+          "hover-micro"
+        ],
+        "reducedMotionFallback": "instant-state-change"
+      }
+    },
+    {
+      "id": "cta",
+      "type": "conversion.final-cta",
+      "variant": "dome",
+      "content": {
+        "heading": "Fewer miles from next week.",
+        "primaryCta": {
+          "label": "Plan a week free",
+          "href": "https://tarnwick.example/start",
+          "variant": "primary"
+        },
+        "secondaryCta": {
+          "label": "Ask our team",
+          "href": "https://tarnwick.example/contact",
+          "variant": "outline"
+        }
+      },
+      "motion": {
+        "patterns": [
+          "ambient-streaks"
+        ],
+        "reducedMotionFallback": "hidden"
+      }
+    },
+    {
+      "id": "footer",
+      "type": "shell.site-footer",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.placeholder-mark",
+          "assetRef": "generate:neutral rounded glyph plus the Tarnwick wordmark",
+          "alt": "Tarnwick"
+        },
+        "columns": [
+          {
+            "heading": "Product",
+            "links": [
+              {
+                "label": "Crew calendar",
+                "href": "https://tarnwick.example/calendar"
+              },
+              {
+                "label": "Parts tracker",
+                "href": "https://tarnwick.example/parts"
+              }
+            ]
+          },
+          {
+            "heading": "Company",
+            "links": [
+              {
+                "label": "About us",
+                "href": "https://tarnwick.example/about"
+              },
+              {
+                "label": "Jobs board",
+                "href": "https://tarnwick.example/jobs"
+              }
+            ]
+          }
+        ],
+        "legal": "© 2026 Tarnwick, a fictional company. Placeholder legal line for a generated page."
+      },
+      "motion": {
+        "patterns": [
+          "hover-micro"
+        ],
+        "reducedMotionFallback": "instant-state-change"
+      }
+    }
+  ]
+}

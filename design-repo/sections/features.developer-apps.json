@@ -1,0 +1,144 @@
+{
+  "id": "features.developer-apps",
+  "title": "Developer apps row",
+  "status": "measured",
+  "source": {
+    "id": "src:AppsRow#export-default-function-AppsRow",
+    "file": "src/components/platform/developers/AppsRow.jsx",
+    "tag": "export default function AppsRow(",
+    "lines": "41-108",
+    "citation": "src/components/platform/developers/AppsRow.jsx:41-108"
+  },
+  "semantic": {
+    "id": "features.developer-apps",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "purpose": "Dark two-tone header with a browse button, a row of five app tiles with labels, and one inline repository link row.",
+  "themes": [
+    "dark"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "heading": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "lead": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 8,
+            "x-maxWordsEvidence": "two-tone lead: D-APPS lead c35, continuation c103"
+          },
+          "continuation": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 20,
+            "x-maxWordsEvidence": "two-tone continuation: D-APPS lead c35, continuation c103"
+          }
+        },
+        "required": [
+          "lead",
+          "continuation"
+        ]
+      },
+      "button": {
+        "$ref": "#/definitions/link"
+      },
+      "apps": {
+        "type": "array",
+        "minItems": 5,
+        "maxItems": 5,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "icon": {
+              "$ref": "#/definitions/media",
+              "x-assetRoles": [
+                "icon.generated-app"
+              ]
+            },
+            "label": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 2,
+              "x-maxWordsEvidence": "app label c6-c8"
+            }
+          },
+          "required": [
+            "icon",
+            "label"
+          ]
+        },
+        "x-countEvidence": "5 tiles"
+      },
+      "repoLink": {
+        "$ref": "#/definitions/link"
+      }
+    },
+    "required": [
+      "heading",
+      "button",
+      "apps"
+    ]
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "hover-micro"
+    ],
+    "reducedMotionFallback": "instant-state-change",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "show-alternate-tree",
+        "detail": "mobile twin stacks the tiles 2-up."
+      }
+    ]
+  },
+  "assetSlots": [
+    {
+      "field": ".apps[].icon",
+      "assetRoles": [
+        "icon.generated-app"
+      ]
+    }
+  ],
+  "generatedAssetRoles": [
+    "copy.original",
+    "icon.generated-app",
+    "url.placeholder"
+  ],
+  "composes": [
+    "component.two-tone-heading",
+    "primitive.app-icon",
+    "primitive.button",
+    "primitive.arrow-icon"
+  ],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/platform/developers",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 1027.1
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/platform/developers"
+    }
+  ]
+}

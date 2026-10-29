@@ -1,6 +1,6 @@
 {
   "$description": "One template per distinct page purpose. nodes are ordered; each is either a section node {section, required, repeatable, variants?} or a region {region, allowedSections, minItems, maxItems} whose members may appear in any order. schema/semantic_validate.py matches every PageSpec's nodes against its declared template's real node list (TEMPLATE_* rules).",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "templates": {
     "home": {
       "id": "home",
@@ -75,7 +75,10 @@
         {
           "section": "conversion.final-cta",
           "required": true,
-          "repeatable": false
+          "repeatable": false,
+          "variants": [
+            "streak-band"
+          ]
         },
         {
           "section": "shell.site-footer",
@@ -332,7 +335,10 @@
         {
           "section": "conversion.newsletter-signup",
           "required": false,
-          "repeatable": false
+          "repeatable": false,
+          "variants": [
+            "band"
+          ]
         },
         {
           "section": "content.resource-cards",
@@ -683,6 +689,148 @@
       "layoutNotes": "Header renders without the announcement banner; the hero is pulled up under it. Chapters are grouped in wrapper sections (story / architecture / launch) that are template chrome.",
       "routes": [
         "/architecture"
+      ]
+    },
+    "platform-feature": {
+      "id": "platform-feature",
+      "title": "Platform feature page",
+      "purpose": "One product capability explained end to end: a feature hero, a body of capability blocks in any order (split accordions, card grids, product windows, columns, marquees, tabs, a dark context band, a scroll-lit quote, proof stats), optional links to sibling platform pages, and the dark closing CTA. The live site renders these pages in two visual shells (v2 and legacy, CLONE_SPEC_PLATFORM T1/T2) that share one purpose and one section library, so they normalise to one template; the shell is carried by section variants.",
+      "evidence": "src/pages/platform/Sequences.jsx:54-73",
+      "nodes": [
+        {
+          "section": "shell.site-header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.platform-feature",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "region": "feature-body",
+          "required": true,
+          "minItems": 4,
+          "maxItems": 9,
+          "allowedSections": [
+            "social-proof.logo-wall",
+            "features.split-accordion",
+            "features.media-card-grid",
+            "features.center-media",
+            "features.icon-columns",
+            "features.tagged-quad",
+            "features.text-columns",
+            "features.card-marquee",
+            "features.orbit-columns",
+            "features.integration-arc",
+            "features.tabbed-showcase",
+            "features.bento-grid",
+            "features.product-showcase",
+            "features.context-band",
+            "features.assistant-intel",
+            "social-proof.stat-highlight",
+            "testimonial.quote",
+            "conversion.newsletter-signup"
+          ],
+          "allowedVariants": {
+            "social-proof.logo-wall": [
+              "platform-band"
+            ],
+            "testimonial.quote": [
+              "scroll-lit"
+            ],
+            "conversion.newsletter-signup": [
+              "inline"
+            ]
+          }
+        },
+        {
+          "section": "navigation.platform-links",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "conversion.final-cta",
+          "required": true,
+          "repeatable": false,
+          "variants": [
+            "dome"
+          ]
+        },
+        {
+          "section": "shell.site-footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeOverlays": [
+        "overlay.mobile-nav-drawer"
+      ],
+      "layoutNotes": "Blocks are separated by full-width section dividers or container hairlines (template chrome, not nodes). The dark context band and the closing CTA swap the header to its dark state while under it.",
+      "routes": [
+        "/platform/ask",
+        "/platform/call-intelligence",
+        "/platform/custom-agents",
+        "/platform/data",
+        "/platform/enrichment",
+        "/platform/mcp",
+        "/platform/reporting",
+        "/platform/sequences",
+        "/platform/universal-context",
+        "/platform/web-agent",
+        "/platform/workflows"
+      ]
+    },
+    "developer-platform": {
+      "id": "developer-platform",
+      "title": "Developer platform page",
+      "purpose": "Developer-facing platform page on a dark blueprint grid: blueprint hero, card sections (API, SDK, agent hub) with optional attributed quote strips, portrait testimonials, a contribution heatmap, an apps row and its own closing CTA (no shared final CTA). The whole page is dark from first paint, header included.",
+      "evidence": "src/pages/platform/Developers.jsx:12-26",
+      "nodes": [
+        {
+          "section": "shell.site-header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.developer-blueprint",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "region": "developer-body",
+          "required": true,
+          "minItems": 3,
+          "maxItems": 8,
+          "allowedSections": [
+            "features.blueprint-cards",
+            "testimonial.quote",
+            "content.contribution-heatmap",
+            "features.developer-apps"
+          ],
+          "allowedVariants": {
+            "testimonial.quote": [
+              "blueprint-portrait"
+            ]
+          }
+        },
+        {
+          "section": "conversion.developer-cta",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.site-footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "runtimeOverlays": [
+        "overlay.mobile-nav-drawer"
+      ],
+      "layoutNotes": "Every block is a container on a 24-column blueprint grid (57.9px squares at 1440) drawn with 1px lines and 4px corner squares; below lg most blocks swap to simpler mobile twins.",
+      "routes": [
+        "/platform/developers"
       ]
     }
   }

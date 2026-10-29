@@ -1,0 +1,198 @@
+{
+  "id": "features.text-columns",
+  "title": "Text columns with ruler",
+  "status": "measured",
+  "source": {
+    "id": "src:Sections#export-function-TextColumns",
+    "file": "src/components/platform/Sections.jsx",
+    "tag": "export function TextColumns(",
+    "lines": "128-183",
+    "citation": "src/components/platform/Sections.jsx:128-183",
+    "variantSources": {
+      "columns": {
+        "file": "src/components/platform/Sections.jsx",
+        "tag": "export function TextColumns(",
+        "lines": "128-183",
+        "citation": "src/components/platform/Sections.jsx:128-183"
+      },
+      "steps": {
+        "file": "src/components/platform/Sections.jsx",
+        "tag": "export function TextColumns(",
+        "lines": "128-183",
+        "citation": "src/components/platform/Sections.jsx:128-183"
+      },
+      "agent-ruler": {
+        "file": "src/components/platform/legacy.jsx",
+        "tag": "export function AgentColumns(",
+        "lines": "666-694",
+        "citation": "src/components/platform/legacy.jsx:666-694"
+      }
+    }
+  },
+  "semantic": {
+    "id": "features.text-columns",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "purpose": "Heading over a horizontally scrollable row of 3-5 short text columns separated by hairlines, each ending in a ruler of vertical ticks; the steps variant numbers its columns and adds a docs button.",
+  "themes": [
+    "light"
+  ],
+  "variants": [
+    "columns",
+    "steps",
+    "agent-ruler"
+  ],
+  "variantRequirements": {
+    "steps": [
+      "button"
+    ]
+  },
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "heading": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "lead": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 9,
+            "x-maxWordsEvidence": "two-tone lead: S-COLUMNS / S-STEPS / S-COLUMNS-L lead c21-c43, continuation c45-c100 (w16 enrichment)"
+          },
+          "continuation": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 18,
+            "x-maxWordsEvidence": "two-tone continuation: S-COLUMNS / S-STEPS / S-COLUMNS-L lead c21-c43, continuation c45-c100 (w16 enrichment)"
+          }
+        },
+        "required": [
+          "lead",
+          "continuation"
+        ]
+      },
+      "items": {
+        "type": "array",
+        "minItems": 3,
+        "maxItems": 5,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "title": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 5,
+              "x-maxWordsEvidence": "h3 c8-c27"
+            },
+            "body": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 14,
+              "x-maxWordsEvidence": "p c35-c75"
+            }
+          },
+          "required": [
+            "title",
+            "body"
+          ]
+        },
+        "x-countEvidence": "5 (UC, workflows) / 4 (enrichment) / 3 (steps)"
+      },
+      "button": {
+        "$ref": "#/definitions/link"
+      }
+    },
+    "required": [
+      "heading",
+      "items"
+    ]
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "static"
+    ],
+    "reducedMotionFallback": "none-needed",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "stack",
+        "detail": "v2 shell goes full-bleed (no side borders), spacers 128 -> 64, inset 32px; H2 40/46 -> 32/36.8; grids collapse to one column."
+      },
+      {
+        "at": "below-lg",
+        "change": "scroll-row",
+        "detail": "columns stay 280px wide in a snap-x scroll row."
+      }
+    ]
+  },
+  "assetSlots": [],
+  "generatedAssetRoles": [
+    "copy.original",
+    "url.placeholder"
+  ],
+  "composes": [
+    "component.two-tone-heading",
+    "primitive.overline",
+    "primitive.button",
+    "primitive.hairline"
+  ],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/platform/enrichment",
+        "variant": "columns",
+        "instance": 0,
+        "heightPx": 821
+      },
+      {
+        "route": "/platform/mcp",
+        "variant": "steps",
+        "instance": 0,
+        "heightPx": 648
+      },
+      {
+        "route": "/platform/universal-context",
+        "variant": "columns",
+        "instance": 0,
+        "heightPx": 733
+      },
+      {
+        "route": "/platform/workflows",
+        "variant": "agent-ruler",
+        "instance": 0,
+        "heightPx": 764
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/platform/enrichment",
+      "variant": "columns"
+    },
+    {
+      "route": "/platform/mcp",
+      "variant": "steps"
+    },
+    {
+      "route": "/platform/universal-context",
+      "variant": "columns"
+    },
+    {
+      "route": "/platform/workflows",
+      "variant": "agent-ruler"
+    }
+  ]
+}

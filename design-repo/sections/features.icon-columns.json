@@ -1,0 +1,161 @@
+{
+  "id": "features.icon-columns",
+  "title": "Icon columns",
+  "status": "measured",
+  "source": {
+    "id": "src:Grids#export-function-IconRow",
+    "file": "src/components/platform/Grids.jsx",
+    "tag": "export function IconRow(",
+    "lines": "160-182",
+    "citation": "src/components/platform/Grids.jsx:160-182",
+    "variantSources": {
+      "row": {
+        "file": "src/components/platform/Grids.jsx",
+        "tag": "export function IconRow(",
+        "lines": "160-182",
+        "citation": "src/components/platform/Grids.jsx:160-182"
+      },
+      "split": {
+        "file": "src/components/platform/Grids.jsx",
+        "tag": "export function SplitIcons(",
+        "lines": "184-206",
+        "citation": "src/components/platform/Grids.jsx:184-206"
+      }
+    }
+  },
+  "semantic": {
+    "id": "features.icon-columns",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "purpose": "Two-tone heading with three icon + title + body cells, either as a bordered row under the heading or stacked beside it.",
+  "themes": [
+    "light"
+  ],
+  "variants": [
+    "row",
+    "split"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "heading": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "lead": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 7,
+            "x-maxWordsEvidence": "two-tone lead: S-ICON-ROW / S-SPLIT-ICONS lead c29-c33, continuation c38-c47"
+          },
+          "continuation": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 12,
+            "x-maxWordsEvidence": "two-tone continuation: S-ICON-ROW / S-SPLIT-ICONS lead c29-c33, continuation c38-c47"
+          }
+        },
+        "required": [
+          "lead",
+          "continuation"
+        ]
+      },
+      "items": {
+        "type": "array",
+        "minItems": 3,
+        "maxItems": 3,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "icon": {
+              "$ref": "#/definitions/icon"
+            },
+            "title": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 6,
+              "x-maxWordsEvidence": "h3 c15-c25"
+            },
+            "body": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 18,
+              "x-maxWordsEvidence": "p c49-c83"
+            }
+          },
+          "required": [
+            "icon",
+            "title",
+            "body"
+          ]
+        },
+        "x-countEvidence": "3 cells measured"
+      }
+    },
+    "required": [
+      "heading",
+      "items"
+    ]
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "static"
+    ],
+    "reducedMotionFallback": "none-needed",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "stack",
+        "detail": "v2 shell goes full-bleed (no side borders), spacers 128 -> 64, inset 32px; H2 40/46 -> 32/36.8; grids collapse to one column."
+      }
+    ]
+  },
+  "assetSlots": [],
+  "generatedAssetRoles": [
+    "copy.original",
+    "icon.stroke-ui"
+  ],
+  "composes": [
+    "component.two-tone-heading",
+    "primitive.stroke-icon",
+    "primitive.hairline"
+  ],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/platform/custom-agents",
+        "variant": "row",
+        "instance": 0,
+        "heightPx": 801
+      },
+      {
+        "route": "/platform/mcp",
+        "variant": "split",
+        "instance": 0,
+        "heightPx": 754
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/platform/custom-agents",
+      "variant": "row"
+    },
+    {
+      "route": "/platform/mcp",
+      "variant": "split"
+    }
+  ]
+}

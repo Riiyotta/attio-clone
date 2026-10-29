@@ -389,82 +389,92 @@
     "color.platform.status-bg": {
       "value": "#ddf9e4",
       "sourceKey": "colors.platform.status-bg",
-      "evidence": "tailwind.config.cjs:144-144"
+      "evidence": "tailwind.config.cjs:149-149"
     },
     "color.platform.status-border": {
       "value": "#c7f4d3",
       "sourceKey": "colors.platform.status-border",
-      "evidence": "tailwind.config.cjs:145-145"
+      "evidence": "tailwind.config.cjs:150-150"
     },
     "color.platform.status-text": {
       "value": "#0b935d",
       "sourceKey": "colors.platform.status-text",
-      "evidence": "tailwind.config.cjs:146-146"
+      "evidence": "tailwind.config.cjs:151-151"
     },
     "color.platform.tile-blue": {
       "value": "#e5eeff",
       "sourceKey": "colors.platform.tile-blue",
-      "evidence": "tailwind.config.cjs:147-147"
+      "evidence": "tailwind.config.cjs:152-152"
     },
     "color.platform.tile-blue-border": {
       "value": "#d6e5ff",
       "sourceKey": "colors.platform.tile-blue-border",
-      "evidence": "tailwind.config.cjs:148-148"
+      "evidence": "tailwind.config.cjs:153-153"
     },
     "color.platform.tile-cyan": {
       "value": "#ddf7ff",
       "sourceKey": "colors.platform.tile-cyan",
-      "evidence": "tailwind.config.cjs:149-149"
+      "evidence": "tailwind.config.cjs:154-154"
     },
     "color.platform.tile-cyan-border": {
       "value": "#d0eff7",
       "sourceKey": "colors.platform.tile-cyan-border",
-      "evidence": "tailwind.config.cjs:150-150"
+      "evidence": "tailwind.config.cjs:155-155"
     },
     "color.platform.tile-yellow": {
       "value": "#fff3cc",
       "sourceKey": "colors.platform.tile-yellow",
-      "evidence": "tailwind.config.cjs:151-151"
+      "evidence": "tailwind.config.cjs:156-156"
     },
     "color.platform.tile-yellow-border": {
       "value": "#ffe59e",
       "sourceKey": "colors.platform.tile-yellow-border",
-      "evidence": "tailwind.config.cjs:152-152"
+      "evidence": "tailwind.config.cjs:157-157"
     },
     "color.platform.card-title": {
       "value": "#242629",
       "sourceKey": "colors.platform.card-title",
-      "evidence": "tailwind.config.cjs:153-153"
+      "evidence": "tailwind.config.cjs:158-158"
     },
     "color.platform.card-desc": {
       "value": "rgba(0,0,0,0.4)",
       "sourceKey": "colors.platform.card-desc",
-      "evidence": "tailwind.config.cjs:154-154"
+      "evidence": "tailwind.config.cjs:159-159"
     },
     "color.platform.card-label": {
       "value": "#505155",
       "sourceKey": "colors.platform.card-label",
-      "evidence": "tailwind.config.cjs:155-155"
+      "evidence": "tailwind.config.cjs:160-160"
     },
     "color.platform.card-border": {
       "value": "rgba(28,29,31,0.05)",
       "sourceKey": "colors.platform.card-border",
-      "evidence": "tailwind.config.cjs:156-156"
+      "evidence": "tailwind.config.cjs:161-161"
     },
     "color.platform.chip-text": {
       "value": "rgba(80,89,104,0.55)",
       "sourceKey": "colors.platform.chip-text",
-      "evidence": "tailwind.config.cjs:157-157"
+      "evidence": "tailwind.config.cjs:162-162"
     },
     "color.platform.chip-border": {
       "value": "rgba(227,231,235,0.5)",
       "sourceKey": "colors.platform.chip-border",
-      "evidence": "tailwind.config.cjs:158-158"
+      "evidence": "tailwind.config.cjs:163-163"
     },
     "color.platform.uc-stripe": {
       "value": "rgba(228,231,235,0.45)",
       "sourceKey": "colors.platform.uc-stripe",
-      "evidence": "tailwind.config.cjs:159-159"
+      "evidence": "tailwind.config.cjs:164-164"
+    },
+    "color.dev.dash": {
+      "value": "#23252a",
+      "sourceKey": "colors.dev.dash",
+      "evidence": "tailwind.config.cjs:144-144"
+    },
+    "color.dev.well": {
+      "value": "#131416",
+      "sourceKey": "colors.dev.well",
+      "evidence": "tailwind.config.cjs:145-145"
     }
   }
 }

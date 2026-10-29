@@ -1,0 +1,132 @@
+{
+  "id": "features.context-band",
+  "title": "Dark context band",
+  "status": "measured",
+  "source": {
+    "id": "src:Sections#export-function-UcBand",
+    "file": "src/components/platform/Sections.jsx",
+    "tag": "export function UcBand(",
+    "lines": "659-704",
+    "citation": "src/components/platform/Sections.jsx:659-704"
+  },
+  "semantic": {
+    "id": "features.context-band",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "purpose": "Dark full-height band: an ambient canvas field, a small kicker over a display product-layer name, then five square cells (icon + two-tone sentence) with corner markers between dashed guide rows.",
+  "themes": [
+    "dark"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "kicker": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 3,
+        "x-maxWordsEvidence": "'Powered by' c10"
+      },
+      "title": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 4,
+        "x-maxWordsEvidence": "display c20 w3 incl. trademark"
+      },
+      "cells": {
+        "type": "array",
+        "minItems": 5,
+        "maxItems": 5,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "icon": {
+              "$ref": "#/definitions/icon"
+            },
+            "text": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 6,
+              "x-maxWordsEvidence": "cell lead"
+            },
+            "continuation": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 12,
+              "x-maxWordsEvidence": "cell continuation (cell total c~60)"
+            }
+          },
+          "required": [
+            "icon",
+            "text",
+            "continuation"
+          ]
+        },
+        "x-countEvidence": "5 cells"
+      }
+    },
+    "required": [
+      "kicker",
+      "title",
+      "cells"
+    ]
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "canvas-field"
+    ],
+    "reducedMotionFallback": "paused-first-frame",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "collapse-grid",
+        "detail": "cells go 2 columns (768) then stack (390); band 1228 / 1372 tall."
+      }
+    ]
+  },
+  "assetSlots": [],
+  "generatedAssetRoles": [
+    "copy.original",
+    "icon.stroke-ui",
+    "illustration.decorative-pattern"
+  ],
+  "composes": [
+    "component.guide-row",
+    "primitive.stroke-icon"
+  ],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/platform/ask",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 1016
+      },
+      {
+        "route": "/platform/workflows",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 1016
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/platform/ask"
+    },
+    {
+      "route": "/platform/workflows"
+    }
+  ]
+}

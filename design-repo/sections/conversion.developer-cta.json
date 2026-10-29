@@ -1,0 +1,118 @@
+{
+  "id": "conversion.developer-cta",
+  "title": "Developer closing CTA",
+  "status": "measured",
+  "source": {
+    "id": "src:ReadyCta#export-default-function-ReadyCta",
+    "file": "src/components/platform/developers/ReadyCta.jsx",
+    "tag": "export default function ReadyCta(",
+    "lines": "67-90",
+    "citation": "src/components/platform/developers/ReadyCta.jsx:67-90"
+  },
+  "semantic": {
+    "id": "conversion.developer-cta",
+    "category": "CONVERSION"
+  },
+  "retrievalEligible": true,
+  "purpose": "Closing conversion block of the developer page: centred short headline and a mono install-command chip, surrounded by small dark mock windows placed on the blueprint grid.",
+  "themes": [
+    "dark"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "heading": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 5,
+        "x-maxWordsEvidence": "D-CTA h2 c15 w3"
+      },
+      "command": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 8,
+        "x-maxWordsEvidence": "mono command chip"
+      },
+      "mocks": {
+        "type": "array",
+        "minItems": 0,
+        "maxItems": 10,
+        "items": {
+          "$ref": "#/definitions/media",
+          "x-assetRoles": [
+            "product.reference-mock",
+            "product.generated-visual",
+            "illustration.reference-art",
+            "illustration.generated-abstract",
+            "illustration.decorative-pattern"
+          ]
+        },
+        "x-countEvidence": "8 floating mocks"
+      }
+    },
+    "required": [
+      "heading",
+      "command"
+    ]
+  },
+  "constraints": {
+    "onePerPage": true,
+    "mustPrecedeFooter": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "hover-micro",
+      "static"
+    ],
+    "reducedMotionFallback": "instant-state-change",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "hide",
+        "detail": "floating mock windows hide; heading and chip remain."
+      }
+    ]
+  },
+  "assetSlots": [
+    {
+      "field": ".mocks[]",
+      "assetRoles": [
+        "product.reference-mock",
+        "product.generated-visual",
+        "illustration.reference-art",
+        "illustration.generated-abstract",
+        "illustration.decorative-pattern"
+      ]
+    }
+  ],
+  "generatedAssetRoles": [
+    "copy.original",
+    "illustration.generated-abstract",
+    "product.generated-visual"
+  ],
+  "composes": [
+    "primitive.asset-slot"
+  ],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/platform/developers",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 752.9
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/platform/developers"
+    }
+  ]
+}

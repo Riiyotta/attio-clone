@@ -1,6 +1,6 @@
 {
   "$description": "Closed asset-role vocabulary used by every media field (PageSpec definitions.media.assetRole). availability is pinned in code (PINNED_AVAILABILITY in schema/semantic_validate.py and extraction/verify_all.py); editing this file alone cannot loosen it.",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "availabilityEnum": [
     "reference-only",
     "generation-safe",
@@ -15,7 +15,7 @@
   "licensing": {
     "sourceIsRealCompany": true,
     "rule": "The source design is a live commercial website. Its logos, wordmarks, product screenshots, customer logos, people's photos and names, videos and marketing copy are proprietary. They must never be reproduced, traced, imitated or paraphrased in generated output; the clone itself already replaced all of them with original artwork and invented copy, and those replacements are themselves reference-only (they identify the reference build).",
-    "noRasterAssetsInClone": "The clone ships no raster images: every media box is original SVG/CSS artwork (ui.jsx BrandMark/AssetSlot, mock.jsx, logos.jsx, StoryArt.jsx, marketing/art.jsx, apps/AppIcon.jsx).",
+    "noRasterAssetsInClone": "The clone ships no raster images: every media box is original SVG/CSS/JSX artwork (ui.jsx BrandMark/AssetSlot, mock.jsx, logos.jsx, StoryArt.jsx, marketing/art.jsx, apps/AppIcon.jsx, and for the /platform/* pages platform/art.jsx, tiles.jsx, windows.jsx, legacy.jsx and developers/Illustrations.jsx). The live platform pages' Storyblok screenshots, customer logos, product videos and dithered portraits were measured for geometry only and never downloaded, hotlinked or traced.",
     "fonts": "Inter, Inter Display, JetBrains Mono and Source Serif 4 are SIL OFL. The source's commercial serif must not be self-hosted.",
     "generatedPages": "Use only availability=generation-safe roles; URLs only on reserved .example/.invalid domains; people only fictional (person.fictional = true); no ratings except rating.placeholder; no store marks."
   },

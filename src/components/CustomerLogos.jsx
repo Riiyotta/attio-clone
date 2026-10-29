@@ -35,9 +35,12 @@ function CornerArrow() {
   )
 }
 
-export default function CustomerLogos() {
+// `platform`: the /platform/* instance (CLONE_SPEC_PLATFORM 0.1) uses primary-background cells and no
+// trailing hairline (193 tall). Default output is the homepage section, unchanged.
+export default function CustomerLogos({ platform = false }) {
+  const cellBg = platform ? 'bg-white-100' : 'bg-white-200'
   return (
-    <section className="border-b border-solid border-white-500 bg-white-200" data-section="customer-logos">
+    <section className={platform ? 'bg-white-100' : 'border-b border-solid border-white-500 bg-white-200'} data-section="customer-logos">
       <div className="lg-container flex flex-col">
         <div className="grid grid-cols-2 gap-px bg-white-500 md:grid-cols-5 lg:border-x lg:border-solid lg:border-white-500">
           {CELLS.map(({ key, link }, i) => {
@@ -49,7 +52,7 @@ export default function CustomerLogos() {
               <Tag
                 key={key}
                 {...(link ? { href: '#' } : {})}
-                className={`group relative flex h-24 items-center justify-center bg-white-200 px-6 transition-colors duration-200 ease-out ${
+                className={`group relative flex h-24 items-center justify-center ${cellBg} px-6 transition-colors duration-200 ease-out ${
                   link ? 'hover:bg-white-300' : ''
                 } ${hideSmall}`}
               >

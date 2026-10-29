@@ -1,0 +1,147 @@
+{
+  "id": "features.tagged-quad",
+  "title": "Tagged 2x2 audience cards",
+  "status": "measured",
+  "source": {
+    "id": "src:Grids#export-function-TaggedQuad",
+    "file": "src/components/platform/Grids.jsx",
+    "tag": "export function TaggedQuad(",
+    "lines": "130-155",
+    "citation": "src/components/platform/Grids.jsx:130-155"
+  },
+  "semantic": {
+    "id": "features.tagged-quad",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "purpose": "Two-tone heading beside a 2x2 grid of cards, each with a bracketed audience tag at the top and a title + body at the bottom.",
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "heading": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "lead": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 7,
+            "x-maxWordsEvidence": "two-tone lead: S-QUAD lead c20-c29, continuation c38-c62"
+          },
+          "continuation": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 12,
+            "x-maxWordsEvidence": "two-tone continuation: S-QUAD lead c20-c29, continuation c38-c62"
+          }
+        },
+        "required": [
+          "lead",
+          "continuation"
+        ]
+      },
+      "cards": {
+        "type": "array",
+        "minItems": 4,
+        "maxItems": 4,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "tag": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 3,
+              "x-maxWordsEvidence": "overline [ SALES ] c9-c20"
+            },
+            "title": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 5,
+              "x-maxWordsEvidence": "h3 c14-c22"
+            },
+            "body": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 14,
+              "x-maxWordsEvidence": "p c43-c56"
+            }
+          },
+          "required": [
+            "tag",
+            "title",
+            "body"
+          ]
+        },
+        "x-countEvidence": "4 cards measured"
+      }
+    },
+    "required": [
+      "heading",
+      "cards"
+    ]
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "static"
+    ],
+    "reducedMotionFallback": "none-needed",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "stack",
+        "detail": "v2 shell goes full-bleed (no side borders), spacers 128 -> 64, inset 32px; H2 40/46 -> 32/36.8; grids collapse to one column."
+      },
+      {
+        "at": "below-md",
+        "change": "collapse-grid",
+        "detail": "768: heading full width above a 2x2 grid (384x256 cells); 390: cards stack."
+      }
+    ]
+  },
+  "assetSlots": [],
+  "generatedAssetRoles": [
+    "copy.original"
+  ],
+  "composes": [
+    "component.two-tone-heading",
+    "primitive.overline"
+  ],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/platform/universal-context",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 896
+      },
+      {
+        "route": "/platform/web-agent",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 896
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/platform/universal-context"
+    },
+    {
+      "route": "/platform/web-agent"
+    }
+  ]
+}

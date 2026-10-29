@@ -1,0 +1,191 @@
+{
+  "id": "features.card-marquee",
+  "title": "Two-row card marquee",
+  "status": "measured",
+  "source": {
+    "id": "src:Sections#export-function-CardMarquee",
+    "file": "src/components/platform/Sections.jsx",
+    "tag": "export function CardMarquee(",
+    "lines": "222-315",
+    "citation": "src/components/platform/Sections.jsx:222-315",
+    "variantSources": {
+      "v2": {
+        "file": "src/components/platform/Sections.jsx",
+        "tag": "export function CardMarquee(",
+        "lines": "222-315",
+        "citation": "src/components/platform/Sections.jsx:222-315"
+      },
+      "legacy": {
+        "file": "src/components/platform/Sections.jsx",
+        "tag": "export function CardMarquee(",
+        "lines": "222-315",
+        "citation": "src/components/platform/Sections.jsx:222-315"
+      }
+    }
+  },
+  "semantic": {
+    "id": "features.card-marquee",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "purpose": "Centred heading over two rows of small agent/prompt cards (icon, title, two-line description, owner label) that slide in opposite directions as the page scrolls.",
+  "themes": [
+    "light"
+  ],
+  "variants": [
+    "v2",
+    "legacy"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "heading": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "lead": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 9,
+            "x-maxWordsEvidence": "two-tone lead: S-MARQUEE v2 lead c52 / legacy title c15-c28 + p c64-c83"
+          },
+          "continuation": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 16,
+            "x-maxWordsEvidence": "two-tone continuation: S-MARQUEE v2 lead c52 / legacy title c15-c28 + p c64-c83"
+          }
+        },
+        "required": [
+          "lead",
+          "continuation"
+        ]
+      },
+      "rows": {
+        "type": "array",
+        "minItems": 2,
+        "maxItems": 2,
+        "items": {
+          "type": "array",
+          "minItems": 6,
+          "maxItems": 16,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "icon": {
+                "$ref": "#/definitions/icon"
+              },
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "maxWords": 4,
+                "x-maxWordsEvidence": "card title c8-c20"
+              },
+              "description": {
+                "type": "string",
+                "minLength": 1,
+                "maxWords": 12,
+                "x-maxWordsEvidence": "card desc c40-c60"
+              },
+              "label": {
+                "type": "string",
+                "minLength": 1,
+                "maxWords": 2,
+                "x-maxWordsEvidence": "owner label"
+              }
+            },
+            "required": [
+              "icon",
+              "title",
+              "description",
+              "label"
+            ]
+          },
+          "x-countEvidence": "10 (v2) / 16 (legacy) per row"
+        },
+        "x-countEvidence": "two rows"
+      }
+    },
+    "required": [
+      "heading",
+      "rows"
+    ]
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "scroll-parallax-rows",
+      "hover-micro"
+    ],
+    "reducedMotionFallback": "static-final-state",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "stack",
+        "detail": "v2 shell goes full-bleed (no side borders), spacers 128 -> 64, inset 32px; H2 40/46 -> 32/36.8; grids collapse to one column."
+      },
+      {
+        "at": "below-lg",
+        "change": "resize-type",
+        "detail": "the band scales to 0.8."
+      }
+    ]
+  },
+  "assetSlots": [],
+  "generatedAssetRoles": [
+    "avatar.abstract",
+    "copy.original",
+    "icon.stroke-ui"
+  ],
+  "composes": [
+    "component.two-tone-heading",
+    "primitive.avatar-abstract",
+    "primitive.stroke-icon"
+  ],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/platform/ask",
+        "variant": "legacy",
+        "instance": 0,
+        "heightPx": 968
+      },
+      {
+        "route": "/platform/custom-agents",
+        "variant": "v2",
+        "instance": 0,
+        "heightPx": 838
+      },
+      {
+        "route": "/platform/workflows",
+        "variant": "legacy",
+        "instance": 0,
+        "heightPx": 924
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/platform/ask",
+      "variant": "legacy"
+    },
+    {
+      "route": "/platform/custom-agents",
+      "variant": "v2"
+    },
+    {
+      "route": "/platform/workflows",
+      "variant": "legacy"
+    }
+  ]
+}

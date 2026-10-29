@@ -1,0 +1,123 @@
+{
+  "id": "hero.developer-blueprint",
+  "title": "Developer blueprint hero",
+  "status": "measured",
+  "source": {
+    "id": "src:Hero#export-default-function-Hero",
+    "file": "src/components/platform/developers/Hero.jsx",
+    "tag": "export default function Hero(",
+    "lines": "26-54",
+    "citation": "src/components/platform/developers/Hero.jsx:26-54"
+  },
+  "semantic": {
+    "id": "hero.developer-blueprint",
+    "category": "HERO"
+  },
+  "retrievalEligible": true,
+  "purpose": "Dark blueprint opener of the developer platform page: bracketed overline, display headline, two-line subhead and a docs + gallery button pair on the 24-column blueprint grid, beside a line-art wireframe illustration.",
+  "themes": [
+    "dark"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "overline": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 4,
+        "x-maxWordsEvidence": "D-HERO overline c22 (3 words)"
+      },
+      "headline": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 6,
+        "x-maxWordsEvidence": "D-HERO h2 c18 w3"
+      },
+      "subhead": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 16,
+        "x-maxWordsEvidence": "D-HERO p c64 w13"
+      },
+      "primaryCta": {
+        "$ref": "#/definitions/cta"
+      },
+      "secondaryCta": {
+        "$ref": "#/definitions/cta"
+      },
+      "illustration": {
+        "$ref": "#/definitions/media",
+        "x-assetRoles": [
+          "illustration.reference-art",
+          "illustration.generated-abstract",
+          "illustration.decorative-pattern"
+        ]
+      }
+    },
+    "required": [
+      "headline",
+      "subhead",
+      "primaryCta",
+      "illustration"
+    ]
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "static",
+      "hover-micro"
+    ],
+    "reducedMotionFallback": "none-needed",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "show-alternate-tree",
+        "detail": "desktop blueprint block hides (max-lg:hidden); a simpler stacked mobile twin renders the same copy."
+      }
+    ]
+  },
+  "assetSlots": [
+    {
+      "field": ".illustration",
+      "assetRoles": [
+        "illustration.reference-art",
+        "illustration.generated-abstract",
+        "illustration.decorative-pattern"
+      ]
+    }
+  ],
+  "generatedAssetRoles": [
+    "copy.original",
+    "illustration.generated-abstract",
+    "url.placeholder"
+  ],
+  "composes": [
+    "primitive.overline",
+    "primitive.button",
+    "primitive.asset-slot"
+  ],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/platform/developers",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 695
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/platform/developers"
+    }
+  ]
+}

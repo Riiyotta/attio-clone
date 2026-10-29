@@ -1,0 +1,161 @@
+{
+  "id": "features.assistant-intel",
+  "title": "Assistant capability block",
+  "status": "measured",
+  "source": {
+    "id": "src:legacy#export-function-AskIntel",
+    "file": "src/components/platform/legacy.jsx",
+    "tag": "export function AskIntel(",
+    "lines": "266-297",
+    "citation": "src/components/platform/legacy.jsx:266-297"
+  },
+  "semantic": {
+    "id": "features.assistant-intel",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "purpose": "Centred heading over a bottom-masked assistant home window, then three capability cells (icon, title, body, small floating UI composition).",
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "heading": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 12,
+        "x-maxWordsEvidence": "S-ASK-INTEL h2 c52 w10"
+      },
+      "window": {
+        "$ref": "#/definitions/media",
+        "x-assetRoles": [
+          "product.reference-mock",
+          "product.generated-visual"
+        ]
+      },
+      "cells": {
+        "type": "array",
+        "minItems": 3,
+        "maxItems": 3,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "icon": {
+              "$ref": "#/definitions/icon"
+            },
+            "title": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 7,
+              "x-maxWordsEvidence": "h3 c27-c41"
+            },
+            "body": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 16,
+              "x-maxWordsEvidence": "p c76-c92"
+            },
+            "media": {
+              "$ref": "#/definitions/media",
+              "x-assetRoles": [
+                "product.reference-mock",
+                "product.generated-visual",
+                "illustration.reference-art",
+                "illustration.generated-abstract",
+                "illustration.decorative-pattern"
+              ]
+            }
+          },
+          "required": [
+            "icon",
+            "title",
+            "body",
+            "media"
+          ]
+        },
+        "x-countEvidence": "3 cells"
+      }
+    },
+    "required": [
+      "heading",
+      "window",
+      "cells"
+    ]
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "static"
+    ],
+    "reducedMotionFallback": "none-needed",
+    "evidence": "tokens/00-foundation/motion-patterns.json"
+  },
+  "responsive": {
+    "primaryBreakpoint": "breakpoint.lg",
+    "changes": [
+      {
+        "at": "below-lg",
+        "change": "resize-type",
+        "detail": "legacy shell keeps the bordered container (576 at 768 / 342 at 390); header pads 160/80 -> 100/60; H2 32/36 -> 28/34; guide rows 160 -> 100."
+      },
+      {
+        "at": "below-lg",
+        "change": "collapse-grid",
+        "detail": "cells stack; the window box shrinks to 520 / 360 tall."
+      }
+    ]
+  },
+  "assetSlots": [
+    {
+      "field": ".window",
+      "assetRoles": [
+        "product.reference-mock",
+        "product.generated-visual"
+      ]
+    },
+    {
+      "field": ".cells[].media",
+      "assetRoles": [
+        "product.reference-mock",
+        "product.generated-visual",
+        "illustration.reference-art",
+        "illustration.generated-abstract",
+        "illustration.decorative-pattern"
+      ]
+    }
+  ],
+  "generatedAssetRoles": [
+    "copy.original",
+    "icon.stroke-ui",
+    "illustration.generated-abstract",
+    "product.generated-visual"
+  ],
+  "composes": [
+    "component.guide-row",
+    "primitive.hairline",
+    "primitive.stroke-icon",
+    "primitive.asset-slot"
+  ],
+  "measured": {
+    "viewportWidth": 1440,
+    "heightsPx": [
+      {
+        "route": "/platform/ask",
+        "variant": null,
+        "instance": 0,
+        "heightPx": 1876.5
+      }
+    ],
+    "evidence": "extraction/measured-values.json#/sectionHeights"
+  },
+  "referenceRoutes": [
+    {
+      "route": "/platform/ask"
+    }
+  ]
+}
