@@ -1,5 +1,35 @@
 # Changelog
 
+## 1.3.0
+
+Reduce the 37 `/platform/*` clone-parity exceptions (1.2.0: 61/98 sections >= 80%, mean 82.4, min 49.9).
+Result, re-measured on all 12 routes against a fresh live capture: **94/98 >= 80%, mean 87.5, min 73.5**. 33 of the 37
+exceptions cleared; 4 remain pending human approval (custom-agents center-media 73.5, reporting bento 75.0, enrichment
+center-media 78.6, data hero 78.9), each with its updated score and cause in `measured-values.json`.
+
+- **Harness, motion phase (`extraction/parity_capture.mjs`).** Both builds now run under a Playwright fake clock installed
+  before navigation: the 2.5s load phase is stepped frame by frame, later advances are `fastForward` + a 600ms stepped
+  settle, then finite CSS/WAAPI animations finish and infinite loops pause on frame 0. Applied identically to live and
+  clone; nothing is hidden. Live vs live repeat: mean 99.9 / min 98.8 (clone vs clone mean 99.9). The 1.2.0 build scores the
+  same under the new harness (61/98, mean 82.4), so the gains below come from the clone, not the capture. `runFor`-only
+  stepping was tried and rejected (2-20s real time per step on the live site). `PARITY_FREEZE=0` restores 1.2.0 capture.
+- **Copy line-fit.** Invented headings, subs and card copy in the failing sections were reworded to the live block's
+  line count and approximate line widths at 1440 (live line boxes measured, candidates measured in the clone fonts).
+  New `extraction/copy_overlap.mjs`: no 5-word run of any clone string (including mock-UI text, `--mock-text`) matches the
+  live page on any of the 12 routes; it also regenerates `schema/reference-copy-corpus.json` (method reproduces the 1.2.0
+  corpus exactly on unchanged copy; 1879 strings).
+- **Mock layout.** New `src/components/platform/layoutArt.jsx` places original mock UI (fictional companies/people,
+  invented numbers) on block layouts measured from the live captures' ink positions; used for 30+ media boxes. Also: data
+  hero records window and schema-card rows, data funnel chart, enrichment kanban (2 cards per column, 288px columns,
+  stripe field), call-card player, template cards, ask panel spacing, assistant home window meeting card, MCP hero marks,
+  integration arc stroke, workflow sidebar, web-agent/custom-agents hero copy offsets. The legacy split-accordion progress
+  fill is now driven by the page clock (rAF) like the live one, instead of a 5.5s CSS keyframe.
+- **Measured evidence.** Section heights and 768/390 document heights re-measured for all 32 pages (data hero 1535 -> 1511,
+  data legacy-media grid 1021 -> 1043, text stats of 19 platform sections; 8 responsive doc heights). Citations into
+  edited sources remapped (24). `schema/source-brand.json` adds the new invented names. Repository version 1.3.0.
+- **Not done.** The 4 exceptions above are not fixed. 768/390 heights were not re-compared against live. Non-platform
+  routes were spot-checked (see report), not fully re-measured.
+
 ## 1.2.0
 
 Reconciliation after the twelve `/platform/*` routes were built and mounted in the clone (review finding: 1.1.0 reported

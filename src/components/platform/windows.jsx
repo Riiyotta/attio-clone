@@ -46,7 +46,7 @@ const NAV = [
   ['flow', 'Automations'],
 ]
 const SUB = ['Sequences', 'Workflows']
-const FAV = ['Renewal plays', 'Pilot pipeline', 'Inbound outreach', 'Lead triage']
+const FAV = ['Renewal plays', 'Pilot pipeline', 'Inbound outreach', 'Lead triage', 'Churn watch', 'Upsell review']
 const RECORDS = [
   ['users', 'People', 'bg-blue-500'],
   ['building', 'Companies', 'bg-blue-450'],
@@ -72,7 +72,7 @@ export function WorkflowWindowArt() {
     <FitBox w={1158} h={693}>
       <div role="img" aria-label="Workflow run illustration" className={frame}>
         {/* sidebar */}
-        <div className="absolute inset-y-0 left-0 w-[210px] border-r border-solid border-mock-stroke bg-mock-surface px-3 pt-2.5 text-[13px] text-black-300">
+        <div className="absolute inset-y-0 left-0 w-[210px] border-r border-solid border-mock-stroke bg-mock-surface px-3 pt-2.5 text-[12px] text-black-300">
           <div className="flex h-7 items-center gap-2 font-semibold text-black-100">
             <span className="flex size-6 items-center justify-center rounded-6 bg-black-100 text-white-100">
               <Icon name="sparkle" size={13} />
@@ -84,13 +84,13 @@ export function WorkflowWindowArt() {
           </div>
           <div className="mt-2 flex flex-col">
             {NAV.map(([i, l]) => (
-              <span key={l} className="flex h-[22px] items-center gap-2">
+              <span key={l} className="flex h-[19px] items-center gap-2">
                 <Icon name={i} size={13} className="text-black-700" />
                 {l}
               </span>
             ))}
             {SUB.map((l, k) => (
-              <span key={l} className={`ml-4 flex h-[22px] items-center gap-2 rounded-6 px-1 ${k === 1 ? 'bg-white-400' : ''}`}>
+              <span key={l} className={`ml-4 flex h-[19px] items-center gap-2 rounded-6 px-1 ${k === 1 ? 'bg-white-400' : ''}`}>
                 <Icon name="flow" size={13} className="text-black-700" />
                 {l}
               </span>
@@ -98,15 +98,22 @@ export function WorkflowWindowArt() {
           </div>
           <p className="mt-3 text-[11px] text-black-800">Favorites</p>
           {FAV.map((l) => (
-            <span key={l} className="flex h-[22px] items-center gap-2">
+            <span key={l} className="flex h-[19px] items-center gap-2">
               <Icon name="flow" size={13} className="text-black-700" />
               {l}
             </span>
           ))}
           <p className="mt-3 text-[11px] text-black-800">Records</p>
           {RECORDS.map(([i, l, c]) => (
-            <span key={l} className="flex h-[22px] items-center gap-2">
+            <span key={l} className="flex h-[19px] items-center gap-2">
               <span className={`size-3 rounded-4 ${c}`} />
+              {l}
+            </span>
+          ))}
+          <p className="mt-3 text-[11px] text-black-800">Lists</p>
+          {['Expansion targets', 'Q3 renewals', 'Partner leads', 'Board prep'].map((l) => (
+            <span key={l} className="flex h-[19px] items-center gap-2">
+              <Icon name="list" size={13} className="text-black-700" />
               {l}
             </span>
           ))}
@@ -239,7 +246,7 @@ export function ChatWindowArt() {
               <b>Deal value</b> → set to <i>$140,000</i> after the budget was confirmed
             </li>
             <li>
-              <b>Notes added</b> → The team agreed to widen the rollout to include data import and custom dashboards. Their leads liked the plan but asked for a new proposal that covers the wider scope. The decision is due at the end of the month.
+              <b>Notes added</b> → The team agreed to widen the rollout to include data import and custom dashboards. Their leads liked the plan but asked for a new proposal that covers the wider scope. Their finance lead wants the numbers split by region before sign-off, and the decision is due at the end of the month.
             </li>
             <li>
               <b>Next steps</b> → Send the new proposal by Friday and book a follow-up call early next week with their buying team.
@@ -275,7 +282,7 @@ export function QuestionBuilderArt() {
       <div role="img" aria-label="Research question builder illustration" className="absolute inset-0">
         <div className="absolute left-[12px] top-[80px] h-[182px] w-[1134px] rounded-12 border border-solid border-white-500 bg-white-100 shadow-mock-card">
           <p className="absolute left-[22px] top-[20px] text-[15px] text-black-700">Question 1</p>
-          <div className="absolute left-[17px] right-[17px] top-[46px] flex h-[52px] items-center justify-between rounded-12 border border-solid border-blue-450 px-4 text-[18px] text-black-100">
+          <div className="absolute left-[17px] right-[17px] top-[46px] flex h-[52px] items-center justify-between rounded-12 border-2 border-solid border-blue-450 px-4 text-[18px] text-black-100">
             <span>What does the company sell?</span>
             <span>Heat pumps for homes</span>
           </div>
@@ -285,11 +292,11 @@ export function QuestionBuilderArt() {
           </span>
         </div>
         <div className="absolute left-[227px] top-[2px] flex h-10 items-center gap-2 rounded-t-12 bg-platform-tile-blue px-3 text-[20px] text-blue-500">
-          <Icon name="sparkle" size={18} /> AI working...
+          <Icon name="sparkle" size={18} /> AI researching...
         </div>
-        <div className="absolute left-[227px] top-[42px] h-[255px] w-[706px] rounded-16 border border-solid border-blue-450 bg-white-100 shadow-hero-window">
+        <div className="absolute left-[227px] top-[42px] h-[255px] w-[706px] rounded-16 border-2 border-solid border-blue-450 bg-white-100 shadow-hero-window">
           <p className="absolute left-[33px] top-[30px] text-[22px] text-black-700">Question 2</p>
-          <div className="absolute left-[25px] right-[25px] top-[68px] flex h-[72px] items-center rounded-16 border border-solid border-blue-450 px-6 text-[28px] text-black-100">
+          <div className="absolute left-[25px] right-[25px] top-[68px] flex h-[72px] items-center rounded-16 border-2 border-solid border-blue-450 px-6 text-[28px] text-black-100">
             List the latest changes to the leadership team
             <span className="ml-0.5 h-8 w-px bg-blue-500" />
           </div>
@@ -344,7 +351,6 @@ export function HomeWindowArt({ h = 640 }) {
         {[
           ['Halcyon renewal check-in', '10:00 - 10:20', 'bg-traffic-yellow'],
           ['Kettle and Pinecrest', '10:20 - 10:40', 'bg-white-800'],
-          ['Quarry pricing review', '13:00 - 13:30', 'bg-white-800'],
         ].map(([t, time, c], i) => (
           <div key={t} className="absolute left-[247px] flex w-[658px] items-center justify-between text-[13px]" style={{ top: 346 + i * 34 }}>
             <span className="flex items-center gap-2 text-black-700 line-through">
@@ -353,15 +359,23 @@ export function HomeWindowArt({ h = 640 }) {
             <span className="text-black-600">{time}</span>
           </div>
         ))}
-        <div className="absolute left-[239px] top-[460px] h-[150px] w-[674px] rounded-12 border border-solid border-white-500 bg-white-100 p-4 shadow-mock-card">
-          <span className="flex items-center gap-2 text-[13px] text-black-100">
-            <Company id="halcyon" size={16} textClass="text-[13px] text-black-100" />
+        <div className="absolute left-[239px] top-[408px] h-[280px] w-[674px] rounded-12 border border-solid border-white-500 bg-white-100 px-2 py-1 text-[12px] shadow-mock-card">
+          <span className="flex items-center justify-between text-[13px] text-black-100">
+            <span className="flex items-center gap-2"><span className="size-1.5 rounded-full bg-traffic-green" /><Company id="quarry" size={16} textClass="text-[13px] font-semibold text-black-100" /></span>
+            <span className="text-black-600">13:00 - 13:30</span>
           </span>
-          <div className="mt-3 flex flex-col gap-2">
-            {['92%', '76%', '84%'].map((w) => (
-              <span key={w} className="block h-2 rounded-4 bg-white-400" style={{ width: w }} />
-            ))}
-          </div>
+          <p className="mt-2 text-black-600">Notes</p>
+          <p className="mt-0.5 flex items-center gap-1.5 text-black-300"><Icon name="note" size={12} /> Walk the Halcyon ops leads through the new routing rules before rollout.</p>
+          <p className="mt-0.5 flex items-center gap-1.5 text-black-300"><Icon name="link" size={12} /> meet.northwind.example/halcyon-ops</p>
+          <p className="mt-2 text-black-600">People · 4</p>
+          {[['Nadia Brooks', 'Head of IT · Halcyon'], ['Robin Hale', 'Account lead · Northwind'], ['Theo Laurent', 'Ops manager · Halcyon'], ['Ines Varga', 'Finance · Halcyon']].map(([n, r], i) => (
+            <span key={n} className="mt-0.5 flex items-center justify-between">
+              <span className="flex items-center gap-1.5 text-black-100">
+                <Initials name={n} size={16} tone={['teal', 'iris', 'blue', 'amber'][i]} /> {n} <span className="text-black-600">{r}</span>
+              </span>
+              <span className="size-1.5 rounded-full bg-traffic-green" />
+            </span>
+          ))}
         </div>
       </div>
     </FitBox>
@@ -384,12 +398,12 @@ const RECIPIENTS = [
   ['Arlo Chen', 'Unsubscribed', 'Yesterday', 'blue'],
 ]
 const TIMELINE = [
-  { y: 160, kind: 'note', text: 'Enrolled by Robin Hale', when: '6 days ago', done: true },
-  { y: 190, kind: 'mail', title: 'Automated email', when: '6 days ago', subject: 'Welcome aboard, and a quick tip for week one', body: 'Hi Ines, hope the first days went smoothly. Here is one thing most teams set up early...', done: true },
-  { y: 303, kind: 'wait', text: 'Wait 5 business days', sub: 'Auto-reply detected, holding until Nov 9' },
-  { y: 370, kind: 'mail', title: 'Automated email', when: 'Tomorrow', subject: 'Re: Welcome aboard, and a quick tip for week one', body: 'Hi Ines, great to see the team growing so quickly over the past few weeks...', n: 3 },
-  { y: 470, kind: 'wait', text: 'Wait 2 business days' },
-  { y: 512, kind: 'mail', title: 'Automated email', when: 'Nov 11', subject: 'Re: Welcome aboard, and a quick tip for week one', body: 'Hi Ines, what would help most next? Happy to walk your team through reports...', n: 4 },
+  { y: 146, kind: 'note', text: 'Enrolled by Robin Hale', when: '6 days ago', done: true },
+  { y: 184, kind: 'mail', title: 'Automated email', when: '6 days ago', subject: 'Welcome aboard, and a quick tip for week one', body: 'Hi Ines, hope the first days went smoothly. Here is one thing most teams set up early...', done: true },
+  { y: 292, kind: 'wait', text: 'Wait 5 business days', sub: 'Auto-reply detected, holding until Nov 9' },
+  { y: 350, kind: 'mail', title: 'Automated email', when: 'Tomorrow', subject: 'Re: Welcome aboard, and a quick tip for week one', body: 'Hi Ines, great to see the team growing so quickly over the past few weeks...', n: 3 },
+  { y: 456, kind: 'wait', text: 'Wait 2 business days' },
+  { y: 498, kind: 'mail', title: 'Automated email', when: 'Nov 11', subject: 'Re: Welcome aboard, and a quick tip for week one', body: 'Hi Ines, what would help most next? Happy to walk your team through reports...', n: 4 },
 ]
 
 export function SequenceEditorArt() {
@@ -454,8 +468,8 @@ export function SequenceEditorArt() {
               <span className="rounded-8 border border-solid border-white-500 bg-white-100 px-2 py-1">Exit</span>
             </span>
           </div>
-          <span className="absolute left-[159px] top-[80px] h-[290px] w-px bg-traffic-green/60" />
-          <span className="absolute left-[159px] top-[370px] h-[160px] w-px border-l border-dashed border-white-700" />
+          <span className="absolute left-[159px] top-[66px] h-[284px] w-px bg-traffic-green/60" />
+          <span className="absolute left-[159px] top-[350px] h-[160px] w-px border-l border-dashed border-white-700" />
           {TIMELINE.map((t) => (
             <div key={t.y} className="absolute left-[150px] right-[148px]" style={{ top: t.y - 80 }}>
               <span className={`absolute left-0 top-1 flex size-[18px] items-center justify-center rounded-full text-[10px] ${t.done ? 'bg-traffic-green text-white-100' : 'border border-solid border-white-700 bg-white-100 text-black-700'}`}>

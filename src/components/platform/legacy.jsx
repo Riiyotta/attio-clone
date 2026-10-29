@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { reducedMotion } from '../../motion/index.js'
 import { Button } from '../ui.jsx'
-import { Chip, Company, Icon, Initials, Tag } from '../mock.jsx'
+import { Chip, Company, CompanyGlyph, Icon, Initials, Tag } from '../mock.jsx'
 import { AgentCard } from './heroes.jsx'
 import { WindowArt } from './art.jsx'
 import { HomeWindowArt, SequenceEditorArt } from './windows.jsx'
@@ -145,14 +145,14 @@ const ASK_GROUPS = [
 ]
 function AskPanelMock({ variant = 0 }) {
   return (
-    <div role="img" aria-label="Suggested updates illustration" className="flex w-[346px] max-w-[86%] flex-col gap-2 max-2xl:scale-90">
+    <div role="img" aria-label="Suggested updates illustration" className="flex w-[346px] max-w-[86%] flex-col gap-3">
       <div className="mb-1 flex h-9 items-center justify-end">
         <span className="rounded-8 bg-white-400 px-2.5 py-1.5 text-mock-base text-black-300">
           {['Update all three', 'Draft the recap', 'Update this deal', 'Summarise week', 'Compare funds'][variant % 5]}
         </span>
       </div>
       {ASK_GROUPS.map(([co, rows]) => (
-        <div key={co} className="flex flex-col gap-2">
+        <div key={co} className="flex flex-col gap-2.5">
           {co === 'person' ? (
             <span className="flex items-center gap-1.5 text-mock-base text-black-100">
               <Initials name="Nadia Brooks" size={16} tone="teal" />
@@ -162,7 +162,7 @@ function AskPanelMock({ variant = 0 }) {
             <Company id={co} size={16} />
           )}
           {rows.map(([label, value]) => (
-            <MockCard key={label} className="flex items-start justify-between px-2.5 py-2">
+            <MockCard key={label} className="flex items-start justify-between px-2.5 py-[11px]">
               <span className="flex min-w-0 flex-col gap-1">
                 <span className="text-mock-sm text-black-800">{label}</span>
                 <span className="truncate text-mock-base text-black-100">{value}</span>
@@ -182,10 +182,10 @@ function AskPanelMock({ variant = 0 }) {
 /** Call-template document (S-TABS right panel on call notes): stacked field cards. */
 export function TemplateArt({ fields }) {
   return (
-    <div role="img" aria-label="Call template illustration" className="absolute inset-0 flex justify-center overflow-hidden px-[8%] pt-[44px]">
-      <div className="flex w-full max-w-[555px] flex-col gap-4">
+    <div role="img" aria-label="Call template illustration" className="absolute inset-0 flex justify-center overflow-hidden px-[8%] pt-[56px]">
+      <div className="flex w-full max-w-[555px] flex-col gap-[10px]">
         {fields.slice(0, 3).map(([title, body, format], i) => (
-          <MockCard key={title} className="flex min-h-[152px] flex-col gap-3 p-4">
+          <MockCard key={title} className="flex min-h-[160px] flex-col gap-3 p-4">
             <div className="flex items-center justify-between text-[13px] font-semibold text-black-100">
               {title}
               <Icon name="dots" size={12} className="text-black-800" />
@@ -243,7 +243,7 @@ export function AskTabs({ title, tabs, className = '' }) {
             <h3 key={`t${active}`} className="max-w-[480px] animate-[pages-fade-in_300ms_ease-out] text-balance font-display text-panel-title text-black-100">
               {t.title}
             </h3>
-            <p key={`d${active}`} className="max-w-[384px] animate-[pages-fade-in_300ms_ease-out] text-sm text-black-700">
+            <p key={`d${active}`} className="max-w-[200px] animate-[pages-fade-in_300ms_ease-out] text-sm text-black-700">
               {t.desc}
             </p>
           </div>
@@ -283,7 +283,7 @@ export function AskIntel({ title, cards, className = '' }) {
           <div key={c.title} className="flex flex-col bg-white-100 p-6">
             <Icon name={c.icon} size={24} className="mb-4 text-black-300" strokeWidth={1.4} />
             <h3 className="text-lg text-black-300">{c.title}</h3>
-            <p className="mt-1 max-w-[384px] text-black-700">{c.body}</p>
+            <p className="mt-1 max-w-[384px] text-balance text-black-700">{c.body}</p>
             <div className="flex flex-1 items-end">
               <div className="relative mt-8 flex aspect-[6/5] w-full items-center justify-center overflow-hidden bg-white-200 p-6">{c.media}</div>
             </div>
@@ -370,15 +370,22 @@ function CallCard({ title, summary }) {
         </div>
         <div className="p-1.5 pb-2">
           <div className="relative flex h-[227px] items-end overflow-hidden rounded-8 bg-white-300">
-            <div className="absolute inset-0 flex items-center justify-center gap-6">
+            {/* recording still: light frame darkening towards the player bar (block layout of the live player) */}
+            <div className="absolute inset-x-0 bottom-0 h-[34%] bg-gradient-to-b from-transparent via-black-700/60 to-black-200" />
+            <div className="absolute inset-x-0 top-[22%] flex items-center justify-center gap-6">
               <Initials name="Nadia Brooks" size={56} tone="teal" />
               <Initials name="Robin Hale" size={56} tone="iris" />
             </div>
-            <div className="relative flex h-12 w-full items-center gap-3 bg-gradient-to-t from-white-500/60 to-transparent px-3">
-              <span className="h-1 flex-1 rounded-full bg-white-100">
-                <span className="block h-1 w-1/3 rounded-full bg-black-600" />
+            <div className="relative flex h-12 w-full flex-col justify-center gap-1.5 px-2">
+              <span className="flex justify-between text-[10px] text-white-100">
+                <span>12:40</span>
+                <span>31:05</span>
               </span>
-              <span className="text-mock-sm text-black-600">12:40</span>
+              <span className="flex h-1 gap-1">
+                <span className="block h-1 w-[38%] rounded-full bg-white-100" />
+                <span className="block h-1 flex-1 rounded-full bg-white-100/40" />
+                <span className="block h-1 w-[22%] rounded-full bg-white-100/40" />
+              </span>
             </div>
           </div>
         </div>
@@ -583,19 +590,111 @@ function SchemaCard({ box, entity }) {
     <div className="absolute flex flex-col overflow-hidden rounded-10 border border-solid border-white-500 bg-white-100 shadow-mock-chip" style={{ left: `${(l / 1392) * 100}%`, top: t, width: `${(w / 1392) * 100}%`, height: h }}>
       <div className="flex items-center justify-between border-b border-solid border-mock-stroke px-2.5 py-2">
         <span className="flex items-center gap-1.5 text-[14px] font-semibold leading-[15.5px] text-black-100">
-          <Icon name={entity.icon} size={14} className="text-blue-500" />
+          <CompanyGlyph shape={entity.glyph || 'grid'} tone={entity.tone || 'blue'} size={18} radius="rounded-4" />
           {entity.name}
         </span>
         <span className={`rounded-4 px-1.5 py-0.5 text-xs ${entity.custom ? 'bg-platform-tile-blue text-blue-600' : 'bg-white-300 text-black-600'}`}>{entity.custom ? 'Custom' : 'Standard'}</span>
       </div>
-      <div className="flex flex-col gap-1.5 px-2.5 py-2">
+      <div className="flex flex-col px-2.5 py-1">
         {entity.fields.map((f) => (
-          <span key={f} className="flex items-center gap-1.5 text-mock-base text-black-600">
-            <Icon name="hash" size={11} className="text-black-800" />
+          <span key={f} className="flex h-[30px] items-center gap-1.5 text-mock-base text-black-600">
+            <Icon name={['note', 'tag', 'pin', 'users'][entity.fields.indexOf(f) % 4]} size={13} className="text-black-600" />
             {f}
           </span>
         ))}
-        <span className="text-mock-sm text-black-800">{entity.more}</span>
+        <span className="flex h-[30px] items-center gap-1.5 text-mock-sm text-black-800"><Icon name="plus" size={11} />{entity.more}</span>
+      </div>
+    </div>
+  )
+}
+
+
+/** Records-table product window for H-DATA (original content; block geometry follows the live
+ * 1132x562 window: 236px sidebar, 48px title bar, two toolbar rows, 36px rows, footer row). */
+const DW_NAV = [['bell', 'Alerts'], ['task', 'Tasks'], ['note', 'Notes'], ['mail', 'Emails'], ['chart', 'Reports'], ['flow', 'Workflows']]
+const DW_REC = [['users', 'People', 'blue'], ['building', 'Companies', 'blue'], ['board', 'Deals', 'ember'], ['link', 'Partners', 'green'], ['coin', 'Invoices', 'amber']]
+const DW_ROWS = [
+  ['halcyon', 'Annual', 'blue', '$4,800', 'Nadia Brooks', 'Webinar', 'grey'],
+  ['brightwater', 'Monthly', 'green', '$71,250', 'Theo Laurent', 'Partner', 'iris'],
+  ['kettle', 'Pilot', 'grey', '$6,100', 'Ines Varga', 'Partner', 'iris'],
+  ['pinecrest', 'Monthly', 'green', '$102,400', 'Sam Okafor', 'Meetup', 'teal'],
+  ['lumenaut', 'Annual', 'blue', '$3,600', 'Mara Quist', 'Organic', 'amber'],
+  ['orchard', 'Annual', 'blue', '$6,900', 'Jun Ishida', 'Webinar', 'grey'],
+  ['tidewell', 'Bespoke', 'red', '$4,250', 'Rhea Dalton', 'Webinar', 'grey'],
+  ['marigold', 'Monthly', 'green', '$88,300', 'Owen Pike', 'Meetup', 'teal'],
+  ['quarry', 'Annual', 'blue', '$3,450', 'Lena Ford', 'Partner', 'iris'],
+  ['vesper', 'Bespoke', 'red', '$7,700', 'Arlo Chen', 'Organic', 'amber'],
+]
+const DW_COLS = 'grid-cols-[24.3%_17.9%_19.9%_17.5%_minmax(0,1fr)]'
+function DataWindowArt() {
+  return (
+    <div role="img" aria-label="Records table illustration" className="relative flex w-full overflow-hidden rounded-12 border border-solid border-white-500 bg-white-100 text-[15px] shadow-hero-window" style={{ aspectRatio: 1132 / 562 }}>
+      <div className="hidden w-[20.9%] shrink-0 flex-col border-r border-solid border-mock-stroke bg-mock-surface px-2.5 md:flex">
+        <span className="flex h-12 items-center gap-2 pl-1 font-semibold text-black-100">
+          <span className="flex size-6 items-center justify-center rounded-6 bg-black-100 text-white-100"><Icon name="board" size={14} /></span>
+          Northwind
+          <Icon name="chevronDown" size={12} className="text-black-600" />
+        </span>
+        <span className="mt-1 flex h-[30px] items-center gap-2">
+          <span className="flex h-full flex-1 items-center gap-1.5 rounded-8 border border-solid border-white-500 bg-white-100 px-2 text-[14px] text-black-100"><Icon name="bolt" size={13} />Shortcuts</span>
+          <span className="flex h-full w-12 items-center justify-center rounded-8 border border-solid border-white-500 bg-white-100 text-black-600"><Icon name="search" size={13} /></span>
+        </span>
+        <span className="mt-[9px] flex flex-col">
+          {DW_NAV.map(([i, l]) => (
+            <span key={l} className="flex h-8 items-center gap-2 px-1.5 text-black-300"><Icon name={i} size={15} />{l}</span>
+          ))}
+        </span>
+        <span className="mt-[10px] flex h-[28px] items-center gap-2 px-1.5 text-[13px] text-black-600"><Icon name="chevronRight" size={11} />Starred</span>
+        <span className="mt-[10px] flex h-[28px] items-center gap-2 px-1.5 text-[13px] text-black-600"><Icon name="chevronDown" size={11} />Objects</span>
+        <span className="flex flex-col">
+          {DW_REC.map(([i, l, t], k) => (
+            <span key={l} className={`flex h-[33px] items-center gap-2 rounded-8 px-1.5 text-black-300 ${k === 2 ? 'bg-white-400' : ''}`}>
+              <CompanyGlyph shape="grid" tone={t} size={16} radius="rounded-4" />{l}
+            </span>
+          ))}
+        </span>
+      </div>
+      <div className="flex min-w-0 flex-1 flex-col">
+        <div className="flex h-12 shrink-0 items-center justify-between border-b border-solid border-mock-stroke px-4">
+          <span className="text-[16px] font-semibold text-black-100">Deals</span>
+          <span className="flex">
+            {['Nadia Brooks', 'Robin Hale', 'Theo Laurent'].map((n, k) => <Initials key={n} name={n} size={24} tone={['teal', 'iris', 'amber'][k]} ring className="-ml-1.5" />)}
+          </span>
+        </div>
+        <div className="flex h-[47px] shrink-0 items-center justify-between border-b border-solid border-mock-stroke px-2.5">
+          <span className="flex h-[30px] items-center gap-1.5 rounded-8 border border-solid border-white-500 px-2 text-black-100"><CompanyGlyph shape="grid" tone="green" size={16} radius="rounded-4" />Open deals<Icon name="chevronDown" size={11} /></span>
+          <span className="flex gap-2">
+            <span className="flex h-[30px] items-center gap-1.5 rounded-8 border border-solid border-white-500 px-2.5 text-black-100"><Icon name="settings" size={13} />Table options</span>
+            <span className="flex h-[30px] items-center gap-1.5 rounded-8 border border-solid border-white-500 px-2.5 text-black-100"><Icon name="arrowUp" size={13} />Share and sync<Icon name="chevronDown" size={11} /></span>
+          </span>
+        </div>
+        <div className="flex h-[45px] shrink-0 items-center border-b border-solid border-mock-stroke px-2.5">
+          <span className="flex size-[30px] items-center justify-center rounded-8 border border-dashed border-white-600 text-black-600"><Icon name="sort" size={13} /></span>
+        </div>
+        <div className={`grid ${DW_COLS} h-9 shrink-0 border-b border-solid border-mock-stroke text-black-300`}>
+          {[['', 'Deal'], ['tag', 'Plan'], ['coin', 'Contract value'], ['users', 'Owner'], ['link', 'Channel']].map(([i, l], k) => (
+            <span key={l} className={`flex items-center gap-2 border-r border-solid border-mock-stroke px-2.5 ${k === 0 ? 'pl-2' : ''}`}>
+              {k === 0 ? <span className="size-4 rounded-4 border border-solid border-white-600" /> : <Icon name={i} size={13} />}
+              {l}
+            </span>
+          ))}
+        </div>
+        {DW_ROWS.map(([co, plan, pt, val, owner, ch, ct]) => (
+          <div key={co} className={`grid ${DW_COLS} h-9 shrink-0 border-b border-solid border-mock-stroke`}>
+            <span className="flex min-w-0 items-center gap-2 border-r border-solid border-mock-stroke pl-2"><span className="size-4 shrink-0 rounded-4 border border-solid border-white-600" /><Company id={co} size={16} textClass="text-[15px] text-black-100" /></span>
+            <span className="flex items-center border-r border-solid border-mock-stroke px-2"><Chip tone={pt} dot={false} className="h-6 rounded-6 px-1.5 !text-[15px] !font-normal">{plan}</Chip></span>
+            <span className="flex items-center justify-end border-r border-solid border-mock-stroke px-2.5 tabular-nums text-black-100">{val}</span>
+            <span className="flex min-w-0 items-center border-r border-solid border-mock-stroke px-2"><span className="flex items-center gap-1.5 rounded-8 border border-solid border-white-500 px-1.5 py-0.5 text-black-600"><Initials name={owner} size={14} tone="teal" /><span className="truncate">{owner}</span></span></span>
+            <span className="flex items-center px-2"><Chip tone={ct} dot={false} className="h-6 rounded-6 px-1.5 !text-[15px] !font-normal">{ch}</Chip></span>
+          </div>
+        ))}
+        <div className={`grid ${DW_COLS} h-[26px] shrink-0 text-[14px] text-black-600`}>
+          <span className="flex items-center justify-end gap-1 px-2.5"><span className="text-black-100">2,740</span> rows</span>
+          <span className="flex items-center justify-end px-2.5">+ Add total</span>
+          <span className="flex items-center justify-end gap-1 px-2.5"><span className="text-black-100">$81,904,300</span> total</span>
+          <span className="flex items-center justify-end px-2.5">+ Add total</span>
+          <span className="flex items-center justify-end px-2.5">+ Add total</span>
+        </div>
       </div>
     </div>
   )
@@ -619,7 +718,7 @@ export function HeroData({ copy, timing, entities, tabs }) {
             ))}
           </div>
           <div className="mx-auto mt-20 max-w-6xl rounded-16 border border-solid border-white-500 bg-white-300 p-2.5">
-            <WindowArt variant={0} aspect={1132 / 562} />
+            <DataWindowArt />
           </div>
         </div>
         <ul className="sticky bottom-5 z-10 mx-auto mt-9 flex w-fit max-w-full gap-2 overflow-x-auto rounded-[15px] bg-white-100 p-2.5 shadow-xl lg:mt-[37px]">
@@ -637,7 +736,7 @@ export function HeroData({ copy, timing, entities, tabs }) {
           ))}
         </ul>
       </div>
-      <GuideRow heightClass="h-[100px]" className="mt-6 container" />
+      <GuideRow heightClass="h-[100px]" className="container" />
     </div>
   )
 }

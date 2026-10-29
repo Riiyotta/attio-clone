@@ -695,7 +695,7 @@
       "id": "platform-feature",
       "title": "Platform feature page",
       "purpose": "One product capability explained end to end: a feature hero, a body of capability blocks in any order (split accordions, card grids, product windows, columns, marquees, tabs, a dark context band, a scroll-lit quote, proof stats), optional links to sibling platform pages, and the dark closing CTA. The live site renders these pages in two visual shells (v2 and legacy, CLONE_SPEC_PLATFORM T1/T2) that share one purpose and one section library, so they normalise to one template; the shell is carried by section variants.",
-      "evidence": "src/pages/platform/Sequences.jsx:54-73",
+      "evidence": "src/pages/platform/Sequences.jsx:56-75",
       "nodes": [
         {
           "section": "shell.site-header",

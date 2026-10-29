@@ -1,6 +1,6 @@
 {
   "$description": "Single registry of source identity patterns used by the GENERATED_MODE_* rules. Two layers: (1) the ORIGINAL live site the clone reproduces (brand, domains, product terms and taglines named in the clone specs), (2) the REFERENCE clone's own invented identity (fictional brand, people, companies, copy) which also must not leak into a page generated for someone else. Patterns are case-insensitive regular expressions.",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "patterns": {
     "brand": [
       "\\battio\\b",
@@ -151,6 +151,7 @@
       "Sam Okafor",
       "Sam Tierney",
       "San Francisco",
+      "Tess Moreau",
       "Theo Laurent",
       "Tom Becker",
       "Youmna Sirgi",
@@ -159,11 +160,13 @@
     "company": [
       "Arkwoven",
       "Basepoint",
+      "Brackenfield",
       "Brackett",
       "Bramble Labs",
       "Brightwater Labs",
       "Brindlecove",
       "Dovetel",
+      "Fernhollow",
       "Ferrum",
       "Foldline",
       "Greenleaf",
@@ -172,6 +175,7 @@
       "Halverstone",
       "Hubbo",
       "Kettle & Kiln",
+      "Larkspur",
       "Lattice Works",
       "Lightdash",
       "Listen Labs",
@@ -180,9 +184,12 @@
       "Lumiqa Robotics",
       "Mailbridge",
       "Marigold Studio",
+      "Meridel",
       "Mosaic Bit",
       "Northgate Advisory",
+      "Northwind",
       "Northwind Apps",
+      "Oakhaven",
       "Orchardly",
       "Ostra",
       "Ostra Kitchens",
@@ -196,12 +203,15 @@
       "Quarrystone",
       "Quilla",
       "Quillfold",
+      "Quillstone",
       "Ridgeline Ops",
+      "Saltmarsh",
       "Tallwater",
       "Tesselio",
       "Tidewell Bank",
       "Varnstead",
-      "Vesper Mobility"
+      "Vesper Mobility",
+      "Wrenford"
     ],
     "rating": [
       "\\b[0-5](\\.\\d)?\\s*(/\\s*5|out of 5|stars?)\\b",

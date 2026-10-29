@@ -1765,7 +1765,7 @@
             "selector": "block:1",
             "textStats": {
               "headingWordsMax": 2,
-              "paragraphWordsMax": 12,
+              "paragraphWordsMax": 15,
               "actionWordsMax": 3
             }
           },
@@ -1778,7 +1778,7 @@
             "selector": "block:2",
             "textStats": {
               "headingWordsMax": 9,
-              "paragraphWordsMax": 11,
+              "paragraphWordsMax": 10,
               "actionWordsMax": 2
             }
           },
@@ -1803,8 +1803,8 @@
             "inFlow": true,
             "selector": "block:4",
             "textStats": {
-              "headingWordsMax": 10,
-              "paragraphWordsMax": 15,
+              "headingWordsMax": 9,
+              "paragraphWordsMax": 17,
               "actionWordsMax": 0
             }
           },
@@ -1817,7 +1817,7 @@
             "selector": "block:5",
             "textStats": {
               "headingWordsMax": 7,
-              "paragraphWordsMax": 13,
+              "paragraphWordsMax": 15,
               "actionWordsMax": 0
             }
           },
@@ -2006,7 +2006,7 @@
             "inFlow": true,
             "selector": "block:1",
             "textStats": {
-              "headingWordsMax": 7,
+              "headingWordsMax": 6,
               "paragraphWordsMax": 17,
               "actionWordsMax": 3
             }
@@ -2033,7 +2033,7 @@
             "selector": "block:3",
             "textStats": {
               "headingWordsMax": 5,
-              "paragraphWordsMax": 5,
+              "paragraphWordsMax": 6,
               "actionWordsMax": 22
             }
           },
@@ -2107,7 +2107,7 @@
       {
         "route": "/platform/data",
         "template": "platform-feature",
-        "docHeightPx": 8981,
+        "docHeightPx": 8979,
         "shell": [
           {
             "section": "shell.site-header",
@@ -2123,7 +2123,7 @@
             "section": "hero.platform-feature",
             "variant": "schema-perspective",
             "instance": 0,
-            "heightPx": 1535.2,
+            "heightPx": 1511.2,
             "inFlow": true,
             "selector": "block:1",
             "textStats": {
@@ -2162,7 +2162,7 @@
             "section": "features.media-card-grid",
             "variant": "legacy-media",
             "instance": 2,
-            "heightPx": 1020.6,
+            "heightPx": 1042.6,
             "inFlow": true,
             "selector": "block:4",
             "textStats": {
@@ -2179,7 +2179,7 @@
             "inFlow": true,
             "selector": "block:5",
             "textStats": {
-              "headingWordsMax": 4,
+              "headingWordsMax": 5,
               "paragraphWordsMax": 19,
               "actionWordsMax": 4
             }
@@ -2192,8 +2192,8 @@
             "inFlow": true,
             "selector": "block:6",
             "textStats": {
-              "headingWordsMax": 4,
-              "paragraphWordsMax": 14,
+              "headingWordsMax": 5,
+              "paragraphWordsMax": 12,
               "actionWordsMax": 2
             }
           },
@@ -2503,7 +2503,7 @@
             "inFlow": true,
             "selector": "block:1",
             "textStats": {
-              "headingWordsMax": 6,
+              "headingWordsMax": 7,
               "paragraphWordsMax": 9,
               "actionWordsMax": 3
             }
@@ -2516,8 +2516,8 @@
             "inFlow": true,
             "selector": "block:2",
             "textStats": {
-              "headingWordsMax": 4,
-              "paragraphWordsMax": 8,
+              "headingWordsMax": 5,
+              "paragraphWordsMax": 9,
               "actionWordsMax": 0
             }
           },
@@ -2556,7 +2556,7 @@
             "selector": "block:5",
             "textStats": {
               "headingWordsMax": 6,
-              "paragraphWordsMax": 12,
+              "paragraphWordsMax": 13,
               "actionWordsMax": 0
             }
           },
@@ -2758,7 +2758,7 @@
             "inFlow": true,
             "selector": "block:2",
             "textStats": {
-              "headingWordsMax": 5,
+              "headingWordsMax": 4,
               "paragraphWordsMax": 17,
               "actionWordsMax": 0
             }
@@ -2810,8 +2810,8 @@
             "inFlow": true,
             "selector": "block:6",
             "textStats": {
-              "headingWordsMax": 6,
-              "paragraphWordsMax": 13,
+              "headingWordsMax": 5,
+              "paragraphWordsMax": 12,
               "actionWordsMax": 0
             }
           },
@@ -2905,8 +2905,8 @@
             "inFlow": true,
             "selector": "block:4",
             "textStats": {
-              "headingWordsMax": 6,
-              "paragraphWordsMax": 11,
+              "headingWordsMax": 5,
+              "paragraphWordsMax": 12,
               "actionWordsMax": 0
             }
           },
@@ -2919,7 +2919,7 @@
             "selector": "block:5",
             "textStats": {
               "headingWordsMax": 7,
-              "paragraphWordsMax": 9,
+              "paragraphWordsMax": 10,
               "actionWordsMax": 0
             }
           },
@@ -2987,7 +2987,7 @@
             "inFlow": true,
             "selector": "block:1",
             "textStats": {
-              "headingWordsMax": 4,
+              "headingWordsMax": 5,
               "paragraphWordsMax": 17,
               "actionWordsMax": 3
             }
@@ -3014,7 +3014,7 @@
             "selector": "block:3",
             "textStats": {
               "headingWordsMax": 5,
-              "paragraphWordsMax": 6,
+              "paragraphWordsMax": 7,
               "actionWordsMax": 16
             }
           },
@@ -3095,8 +3095,8 @@
             "inFlow": true,
             "selector": "block:1",
             "textStats": {
-              "headingWordsMax": 7,
-              "paragraphWordsMax": 14,
+              "headingWordsMax": 8,
+              "paragraphWordsMax": 13,
               "actionWordsMax": 3
             }
           },
@@ -3186,7 +3186,7 @@
             "inFlow": true,
             "selector": "block:8",
             "textStats": {
-              "headingWordsMax": 5,
+              "headingWordsMax": 4,
               "paragraphWordsMax": 14,
               "actionWordsMax": 0
             }
@@ -3719,7 +3719,7 @@
     {
       "route": "/platform/data",
       "viewportWidth": 768,
-      "docHeightPx": 10256,
+      "docHeightPx": 10232,
       "desktopRegionsHiddenAtThisWidth": []
     },
     {
@@ -3767,7 +3767,7 @@
     {
       "route": "/platform/workflows",
       "viewportWidth": 768,
-      "docHeightPx": 9248,
+      "docHeightPx": 9214,
       "desktopRegionsHiddenAtThisWidth": []
     },
     {
@@ -3904,7 +3904,7 @@
     {
       "route": "/platform/ask",
       "viewportWidth": 390,
-      "docHeightPx": 8645,
+      "docHeightPx": 8695,
       "desktopRegionsHiddenAtThisWidth": []
     },
     {
@@ -3922,7 +3922,7 @@
     {
       "route": "/platform/data",
       "viewportWidth": 390,
-      "docHeightPx": 10506,
+      "docHeightPx": 10414,
       "desktopRegionsHiddenAtThisWidth": []
     },
     {
@@ -3940,7 +3940,7 @@
     {
       "route": "/platform/mcp",
       "viewportWidth": 390,
-      "docHeightPx": 7934,
+      "docHeightPx": 7960,
       "desktopRegionsHiddenAtThisWidth": []
     },
     {
@@ -3952,25 +3952,25 @@
     {
       "route": "/platform/sequences",
       "viewportWidth": 390,
-      "docHeightPx": 9591,
+      "docHeightPx": 9557,
       "desktopRegionsHiddenAtThisWidth": []
     },
     {
       "route": "/platform/universal-context",
       "viewportWidth": 390,
-      "docHeightPx": 7797,
+      "docHeightPx": 7853,
       "desktopRegionsHiddenAtThisWidth": []
     },
     {
       "route": "/platform/web-agent",
       "viewportWidth": 390,
-      "docHeightPx": 7411,
+      "docHeightPx": 7448,
       "desktopRegionsHiddenAtThisWidth": []
     },
     {
       "route": "/platform/workflows",
       "viewportWidth": 390,
-      "docHeightPx": 9859,
+      "docHeightPx": 9903,
       "desktopRegionsHiddenAtThisWidth": []
     },
     {
@@ -4512,88 +4512,97 @@
         "extraction/parity_capture.mjs",
         "extraction/parity_compare.py"
       ],
-      "method": "Each <main> block is reached by scrolling (scroll-through first, then scrollTo(block top)), fonts and images awaited, captured in 900px tiles at the same scroll offsets in both builds. Masked in both: the site header (shell), fixed overlays (cookie/chat), <canvas> and <video>. Primary metric: ink block-map Dice (|px-bg|>30 ink mask, 12px box blur, 4x downsample) over every tile of the live block height, so a shorter clone block is penalised. Secondary: raw pixel match (4x downsample, tol 25/255, background included).",
+      "method": "Each <main> block is reached by scrolling (scroll-through first, then scrollTo(block top)), fonts and images awaited, captured in 900px tiles under a frozen clock (see motionPhase) at the same scroll offsets in both builds. Masked in both: the site header (shell), fixed overlays (cookie/chat), <canvas> and <video>. Primary metric: ink block-map Dice (|px-bg|>30 ink mask, 12px box blur, 4x downsample) over every tile of the live block height, so a shorter clone block is penalised. Secondary: raw pixel match (4x downsample, tol 25/255, background included).",
       "calibration": "first tile per section on the five legacy routes: blank clone 0, clone shifted 150px down mean 9 / max 35, a different section mean 19 / max 66.",
       "gatePerSectionPct": 80,
       "summary": {
         "sections": 98,
-        "atOrAbove80": 61,
-        "below80": 37,
-        "meanPct": 82.4,
-        "minPct": 49.9,
+        "atOrAbove80": 94,
+        "below80": 4,
+        "meanPct": 87.5,
+        "minPct": 73.5,
         "perRoute": {
           "/platform/ask": {
-            "min": 72.6,
-            "avg": 85.1
+            "min": 82.0,
+            "avg": 86.8
           },
           "/platform/call-intelligence": {
-            "min": 60.6,
-            "avg": 80.1
+            "min": 80.9,
+            "avg": 87.3
           },
           "/platform/custom-agents": {
-            "min": 62.1,
-            "avg": 81.3
+            "min": 73.5,
+            "avg": 86.0
           },
           "/platform/data": {
-            "min": 49.9,
-            "avg": 74.0
+            "min": 78.9,
+            "avg": 87.6
           },
           "/platform/developers": {
-            "min": 80.3,
-            "avg": 88.8
+            "min": 80.8,
+            "avg": 88.9
           },
           "/platform/enrichment": {
-            "min": 58.0,
-            "avg": 80.1
-          },
-          "/platform/mcp": {
-            "min": 70.5,
-            "avg": 84.3
-          },
-          "/platform/reporting": {
-            "min": 58.5,
-            "avg": 76.4
-          },
-          "/platform/sequences": {
-            "min": 64.2,
-            "avg": 79.9
-          },
-          "/platform/universal-context": {
-            "min": 67.4,
-            "avg": 83.8
-          },
-          "/platform/web-agent": {
-            "min": 75.3,
+            "min": 78.6,
             "avg": 85.6
           },
+          "/platform/mcp": {
+            "min": 80.9,
+            "avg": 86.2
+          },
+          "/platform/reporting": {
+            "min": 75.0,
+            "avg": 85.9
+          },
+          "/platform/sequences": {
+            "min": 81.8,
+            "avg": 87.2
+          },
+          "/platform/universal-context": {
+            "min": 80.9,
+            "avg": 87.9
+          },
+          "/platform/web-agent": {
+            "min": 80.1,
+            "avg": 89.4
+          },
           "/platform/workflows": {
-            "min": 72.1,
-            "avg": 86.7
+            "min": 86.7,
+            "avg": 90.4
           }
+        },
+        "before1_2_0": {
+          "atOrAbove80": 61,
+          "below80": 37,
+          "meanPct": 82.4,
+          "minPct": 49.9,
+          "note": "1.2.0 build re-captured with the 1.3.0 frozen harness against the same live capture: 61/98, mean 82.4, min 49.9 (identical to the 1.2.0 real-time figures)"
         }
       },
-      "gateResult": "NOT MET for every section: 37 of 98 sections are below 80%. Each is listed under exceptions as pending human approval; none has been approved.",
-      "responsiveDocHeights": "768 and 390 document heights within -5.3%..+2.6% of live on all 12 routes; no horizontal overflow on either build (recorded by the harness, not gated).",
+      "gateResult": "NOT MET for every section: 4 of 98 sections are below 80%. Each is listed under exceptions as pending human approval; none has been approved.",
+      "responsiveDocHeights": "768 and 390 clone document heights re-measured in 1.3.0 (sectionHeights/responsiveDocHeights updated; changes of -92..+56px on 8 platform routes); not re-compared against live at those widths in 1.3.0.",
       "sections": [
         {
           "route": "/platform/ask",
           "block": 1,
           "section": "hero.platform-feature",
           "variant": "ask-stage",
-          "parityPct": 88.9,
+          "parityPct": 82.3,
           "rawPixelMatchPct": 98.2,
           "liveHeightPx": 983,
-          "cloneHeightPx": 983
+          "cloneHeightPx": 983,
+          "parityPct1_2_0": 88.9
         },
         {
           "route": "/platform/ask",
           "block": 2,
           "section": "features.tabbed-showcase",
           "variant": "audience-ruler",
-          "parityPct": 72.6,
-          "rawPixelMatchPct": 97.3,
+          "parityPct": 83.9,
+          "rawPixelMatchPct": 97.8,
           "liveHeightPx": 1104,
-          "cloneHeightPx": 1104
+          "cloneHeightPx": 1104,
+          "parityPct1_2_0": 72.6
         },
         {
           "route": "/platform/ask",
@@ -4603,27 +4612,30 @@
           "parityPct": 89.7,
           "rawPixelMatchPct": 98.4,
           "liveHeightPx": 1016,
-          "cloneHeightPx": 1016
+          "cloneHeightPx": 1016,
+          "parityPct1_2_0": 89.7
         },
         {
           "route": "/platform/ask",
           "block": 4,
           "section": "features.assistant-intel",
           "variant": null,
-          "parityPct": 74.4,
-          "rawPixelMatchPct": 96.9,
+          "parityPct": 82.0,
+          "rawPixelMatchPct": 96.7,
           "liveHeightPx": 1881,
-          "cloneHeightPx": 1877
+          "cloneHeightPx": 1877,
+          "parityPct1_2_0": 74.4
         },
         {
           "route": "/platform/ask",
           "block": 5,
           "section": "features.card-marquee",
           "variant": "legacy",
-          "parityPct": 86.5,
-          "rawPixelMatchPct": 97.3,
+          "parityPct": 85.9,
+          "rawPixelMatchPct": 97.2,
           "liveHeightPx": 968,
-          "cloneHeightPx": 968
+          "cloneHeightPx": 968,
+          "parityPct1_2_0": 86.5
         },
         {
           "route": "/platform/ask",
@@ -4633,7 +4645,8 @@
           "parityPct": 88.6,
           "rawPixelMatchPct": 92.6,
           "liveHeightPx": 630,
-          "cloneHeightPx": 630
+          "cloneHeightPx": 630,
+          "parityPct1_2_0": 88.6
         },
         {
           "route": "/platform/ask",
@@ -4643,27 +4656,30 @@
           "parityPct": 94.9,
           "rawPixelMatchPct": 96.7,
           "liveHeightPx": 450,
-          "cloneHeightPx": 450
+          "cloneHeightPx": 450,
+          "parityPct1_2_0": 94.9
         },
         {
           "route": "/platform/call-intelligence",
           "block": 1,
           "section": "hero.platform-feature",
           "variant": "table-call-card",
-          "parityPct": 77.0,
-          "rawPixelMatchPct": 93.8,
+          "parityPct": 83.4,
+          "rawPixelMatchPct": 93.9,
           "liveHeightPx": 821,
-          "cloneHeightPx": 821
+          "cloneHeightPx": 821,
+          "parityPct1_2_0": 77.0
         },
         {
           "route": "/platform/call-intelligence",
           "block": 2,
           "section": "features.media-card-grid",
           "variant": "legacy-media",
-          "parityPct": 77.9,
-          "rawPixelMatchPct": 96.2,
+          "parityPct": 90.0,
+          "rawPixelMatchPct": 96.9,
           "liveHeightPx": 985,
-          "cloneHeightPx": 985
+          "cloneHeightPx": 985,
+          "parityPct1_2_0": 77.9
         },
         {
           "route": "/platform/call-intelligence",
@@ -4673,47 +4689,52 @@
           "parityPct": 88.2,
           "rawPixelMatchPct": 95.7,
           "liveHeightPx": 558,
-          "cloneHeightPx": 558
+          "cloneHeightPx": 558,
+          "parityPct1_2_0": 88.2
         },
         {
           "route": "/platform/call-intelligence",
           "block": 4,
           "section": "features.split-accordion",
           "variant": "legacy",
-          "parityPct": 72.1,
-          "rawPixelMatchPct": 95.1,
+          "parityPct": 82.7,
+          "rawPixelMatchPct": 97.0,
           "liveHeightPx": 750,
-          "cloneHeightPx": 750
+          "cloneHeightPx": 750,
+          "parityPct1_2_0": 72.1
         },
         {
           "route": "/platform/call-intelligence",
           "block": 5,
           "section": "features.integration-arc",
           "variant": "legacy",
-          "parityPct": 84.4,
+          "parityPct": 84.1,
           "rawPixelMatchPct": 98.1,
           "liveHeightPx": 356,
-          "cloneHeightPx": 356
+          "cloneHeightPx": 356,
+          "parityPct1_2_0": 84.4
         },
         {
           "route": "/platform/call-intelligence",
           "block": 6,
           "section": "features.tabbed-showcase",
           "variant": "pill-tabs",
-          "parityPct": 60.6,
-          "rawPixelMatchPct": 96.0,
+          "parityPct": 80.9,
+          "rawPixelMatchPct": 97.2,
           "liveHeightPx": 1046,
-          "cloneHeightPx": 1046
+          "cloneHeightPx": 1046,
+          "parityPct1_2_0": 60.6
         },
         {
           "route": "/platform/call-intelligence",
           "block": 7,
           "section": "features.media-card-grid",
           "variant": "legacy-indexed",
-          "parityPct": 74.3,
-          "rawPixelMatchPct": 96.9,
+          "parityPct": 90.1,
+          "rawPixelMatchPct": 97.5,
           "liveHeightPx": 1949,
-          "cloneHeightPx": 1949
+          "cloneHeightPx": 1949,
+          "parityPct1_2_0": 74.3
         },
         {
           "route": "/platform/call-intelligence",
@@ -4723,7 +4744,8 @@
           "parityPct": 92.2,
           "rawPixelMatchPct": 98.3,
           "liveHeightPx": 689,
-          "cloneHeightPx": 689
+          "cloneHeightPx": 689,
+          "parityPct1_2_0": 92.2
         },
         {
           "route": "/platform/call-intelligence",
@@ -4733,17 +4755,19 @@
           "parityPct": 94.2,
           "rawPixelMatchPct": 96.8,
           "liveHeightPx": 450,
-          "cloneHeightPx": 450
+          "cloneHeightPx": 450,
+          "parityPct1_2_0": 94.2
         },
         {
           "route": "/platform/custom-agents",
           "block": 1,
           "section": "hero.platform-feature",
           "variant": "agent-canvas",
-          "parityPct": 62.1,
-          "rawPixelMatchPct": 93.7,
+          "parityPct": 91.6,
+          "rawPixelMatchPct": 97.5,
           "liveHeightPx": 784,
-          "cloneHeightPx": 784
+          "cloneHeightPx": 784,
+          "parityPct1_2_0": 62.1
         },
         {
           "route": "/platform/custom-agents",
@@ -4753,27 +4777,30 @@
           "parityPct": 90.5,
           "rawPixelMatchPct": 94.1,
           "liveHeightPx": 193,
-          "cloneHeightPx": 193
+          "cloneHeightPx": 193,
+          "parityPct1_2_0": 90.5
         },
         {
           "route": "/platform/custom-agents",
           "block": 3,
           "section": "features.split-accordion",
           "variant": "v2",
-          "parityPct": 74.9,
-          "rawPixelMatchPct": 95.7,
+          "parityPct": 87.5,
+          "rawPixelMatchPct": 96.4,
           "liveHeightPx": 769,
-          "cloneHeightPx": 769
+          "cloneHeightPx": 769,
+          "parityPct1_2_0": 74.9
         },
         {
           "route": "/platform/custom-agents",
           "block": 4,
           "section": "features.card-marquee",
           "variant": "v2",
-          "parityPct": 86.6,
-          "rawPixelMatchPct": 95.8,
+          "parityPct": 82.9,
+          "rawPixelMatchPct": 95.3,
           "liveHeightPx": 838,
-          "cloneHeightPx": 838
+          "cloneHeightPx": 838,
+          "parityPct1_2_0": 86.6
         },
         {
           "route": "/platform/custom-agents",
@@ -4783,17 +4810,19 @@
           "parityPct": 80.2,
           "rawPixelMatchPct": 95.7,
           "liveHeightPx": 593,
-          "cloneHeightPx": 593
+          "cloneHeightPx": 593,
+          "parityPct1_2_0": 80.2
         },
         {
           "route": "/platform/custom-agents",
           "block": 6,
           "section": "features.center-media",
           "variant": "top",
-          "parityPct": 73.7,
-          "rawPixelMatchPct": 93.9,
+          "parityPct": 73.5,
+          "rawPixelMatchPct": 94.1,
           "liveHeightPx": 1182,
-          "cloneHeightPx": 1182
+          "cloneHeightPx": 1182,
+          "parityPct1_2_0": 73.7
         },
         {
           "route": "/platform/custom-agents",
@@ -4803,7 +4832,8 @@
           "parityPct": 87.2,
           "rawPixelMatchPct": 96.9,
           "liveHeightPx": 801,
-          "cloneHeightPx": 801
+          "cloneHeightPx": 801,
+          "parityPct1_2_0": 87.2
         },
         {
           "route": "/platform/custom-agents",
@@ -4813,27 +4843,30 @@
           "parityPct": 94.9,
           "rawPixelMatchPct": 96.6,
           "liveHeightPx": 450,
-          "cloneHeightPx": 450
+          "cloneHeightPx": 450,
+          "parityPct1_2_0": 94.9
         },
         {
           "route": "/platform/data",
           "block": 1,
           "section": "hero.platform-feature",
           "variant": "schema-perspective",
-          "parityPct": 49.9,
-          "rawPixelMatchPct": 93.3,
+          "parityPct": 78.9,
+          "rawPixelMatchPct": 95.2,
           "liveHeightPx": 1510,
-          "cloneHeightPx": 1535
+          "cloneHeightPx": 1511,
+          "parityPct1_2_0": 49.9
         },
         {
           "route": "/platform/data",
           "block": 2,
           "section": "features.media-card-grid",
           "variant": "legacy-indexed",
-          "parityPct": 72.1,
+          "parityPct": 82.3,
           "rawPixelMatchPct": 96.7,
           "liveHeightPx": 2007,
-          "cloneHeightPx": 2007
+          "cloneHeightPx": 2007,
+          "parityPct1_2_0": 72.1
         },
         {
           "route": "/platform/data",
@@ -4843,37 +4876,41 @@
           "parityPct": 88.5,
           "rawPixelMatchPct": 96.8,
           "liveHeightPx": 640,
-          "cloneHeightPx": 640
+          "cloneHeightPx": 640,
+          "parityPct1_2_0": 88.5
         },
         {
           "route": "/platform/data",
           "block": 4,
           "section": "features.media-card-grid",
           "variant": "legacy-media",
-          "parityPct": 68.1,
-          "rawPixelMatchPct": 94.7,
+          "parityPct": 88.8,
+          "rawPixelMatchPct": 95.9,
           "liveHeightPx": 1043,
-          "cloneHeightPx": 1021
+          "cloneHeightPx": 1043,
+          "parityPct1_2_0": 68.1
         },
         {
           "route": "/platform/data",
           "block": 5,
           "section": "features.split-accordion",
           "variant": "legacy",
-          "parityPct": 68.3,
-          "rawPixelMatchPct": 95.2,
+          "parityPct": 83.1,
+          "rawPixelMatchPct": 96.0,
           "liveHeightPx": 750,
-          "cloneHeightPx": 750
+          "cloneHeightPx": 750,
+          "parityPct1_2_0": 68.3
         },
         {
           "route": "/platform/data",
           "block": 6,
           "section": "features.tabbed-showcase",
           "variant": "pill-tabs",
-          "parityPct": 58.5,
-          "rawPixelMatchPct": 88.4,
+          "parityPct": 93.1,
+          "rawPixelMatchPct": 97.2,
           "liveHeightPx": 1082,
-          "cloneHeightPx": 1082
+          "cloneHeightPx": 1082,
+          "parityPct1_2_0": 58.5
         },
         {
           "route": "/platform/data",
@@ -4883,7 +4920,8 @@
           "parityPct": 92.1,
           "rawPixelMatchPct": 98.3,
           "liveHeightPx": 689,
-          "cloneHeightPx": 689
+          "cloneHeightPx": 689,
+          "parityPct1_2_0": 92.1
         },
         {
           "route": "/platform/data",
@@ -4893,7 +4931,8 @@
           "parityPct": 94.2,
           "rawPixelMatchPct": 96.8,
           "liveHeightPx": 450,
-          "cloneHeightPx": 450
+          "cloneHeightPx": 450,
+          "parityPct1_2_0": 94.2
         },
         {
           "route": "/platform/developers",
@@ -4903,17 +4942,19 @@
           "parityPct": 82.6,
           "rawPixelMatchPct": 97.7,
           "liveHeightPx": 695,
-          "cloneHeightPx": 695
+          "cloneHeightPx": 695,
+          "parityPct1_2_0": 82.6
         },
         {
           "route": "/platform/developers",
           "block": 2,
           "section": "features.blueprint-cards",
           "variant": "cards",
-          "parityPct": 89.9,
-          "rawPixelMatchPct": 97.8,
+          "parityPct": 90.1,
+          "rawPixelMatchPct": 97.9,
           "liveHeightPx": 991,
-          "cloneHeightPx": 991
+          "cloneHeightPx": 991,
+          "parityPct1_2_0": 89.9
         },
         {
           "route": "/platform/developers",
@@ -4923,27 +4964,30 @@
           "parityPct": 95.6,
           "rawPixelMatchPct": 96.0,
           "liveHeightPx": 579,
-          "cloneHeightPx": 579
+          "cloneHeightPx": 579,
+          "parityPct1_2_0": 95.6
         },
         {
           "route": "/platform/developers",
           "block": 4,
           "section": "features.blueprint-cards",
           "variant": "cards-with-quote",
-          "parityPct": 88.0,
+          "parityPct": 87.7,
           "rawPixelMatchPct": 97.7,
           "liveHeightPx": 1592,
-          "cloneHeightPx": 1592
+          "cloneHeightPx": 1592,
+          "parityPct1_2_0": 88.0
         },
         {
           "route": "/platform/developers",
           "block": 5,
           "section": "features.blueprint-cards",
           "variant": "cards-with-quote",
-          "parityPct": 84.2,
+          "parityPct": 84.1,
           "rawPixelMatchPct": 97.2,
           "liveHeightPx": 1662,
-          "cloneHeightPx": 1663
+          "cloneHeightPx": 1663,
+          "parityPct1_2_0": 84.2
         },
         {
           "route": "/platform/developers",
@@ -4953,7 +4997,8 @@
           "parityPct": 92.8,
           "rawPixelMatchPct": 91.8,
           "liveHeightPx": 781,
-          "cloneHeightPx": 781
+          "cloneHeightPx": 781,
+          "parityPct1_2_0": 92.8
         },
         {
           "route": "/platform/developers",
@@ -4963,7 +5008,8 @@
           "parityPct": 92.5,
           "rawPixelMatchPct": 98.1,
           "liveHeightPx": 579,
-          "cloneHeightPx": 579
+          "cloneHeightPx": 579,
+          "parityPct1_2_0": 92.5
         },
         {
           "route": "/platform/developers",
@@ -4973,27 +5019,30 @@
           "parityPct": 93.6,
           "rawPixelMatchPct": 97.0,
           "liveHeightPx": 1027,
-          "cloneHeightPx": 1027
+          "cloneHeightPx": 1027,
+          "parityPct1_2_0": 93.6
         },
         {
           "route": "/platform/developers",
           "block": 9,
           "section": "conversion.developer-cta",
           "variant": null,
-          "parityPct": 80.3,
+          "parityPct": 80.8,
           "rawPixelMatchPct": 98.5,
           "liveHeightPx": 753,
-          "cloneHeightPx": 753
+          "cloneHeightPx": 753,
+          "parityPct1_2_0": 80.3
         },
         {
           "route": "/platform/enrichment",
           "block": 1,
           "section": "hero.platform-feature",
           "variant": "kanban-board",
-          "parityPct": 58.0,
-          "rawPixelMatchPct": 94.0,
+          "parityPct": 80.2,
+          "rawPixelMatchPct": 94.8,
           "liveHeightPx": 784,
-          "cloneHeightPx": 784
+          "cloneHeightPx": 784,
+          "parityPct1_2_0": 58.0
         },
         {
           "route": "/platform/enrichment",
@@ -5003,27 +5052,30 @@
           "parityPct": 86.1,
           "rawPixelMatchPct": 94.7,
           "liveHeightPx": 911,
-          "cloneHeightPx": 911
+          "cloneHeightPx": 911,
+          "parityPct1_2_0": 86.1
         },
         {
           "route": "/platform/enrichment",
           "block": 3,
           "section": "features.split-accordion",
           "variant": "v2",
-          "parityPct": 68.8,
-          "rawPixelMatchPct": 93.6,
+          "parityPct": 80.5,
+          "rawPixelMatchPct": 94.5,
           "liveHeightPx": 769,
-          "cloneHeightPx": 769
+          "cloneHeightPx": 769,
+          "parityPct1_2_0": 68.8
         },
         {
           "route": "/platform/enrichment",
           "block": 4,
           "section": "features.center-media",
           "variant": "centered",
-          "parityPct": 68.5,
-          "rawPixelMatchPct": 96.6,
+          "parityPct": 78.6,
+          "rawPixelMatchPct": 96.3,
           "liveHeightPx": 1041,
-          "cloneHeightPx": 1041
+          "cloneHeightPx": 1041,
+          "parityPct1_2_0": 68.5
         },
         {
           "route": "/platform/enrichment",
@@ -5033,7 +5085,8 @@
           "parityPct": 87.9,
           "rawPixelMatchPct": 95.5,
           "liveHeightPx": 800,
-          "cloneHeightPx": 800
+          "cloneHeightPx": 800,
+          "parityPct1_2_0": 87.9
         },
         {
           "route": "/platform/enrichment",
@@ -5043,7 +5096,8 @@
           "parityPct": 88.7,
           "rawPixelMatchPct": 96.3,
           "liveHeightPx": 821,
-          "cloneHeightPx": 821
+          "cloneHeightPx": 821,
+          "parityPct1_2_0": 88.7
         },
         {
           "route": "/platform/enrichment",
@@ -5053,7 +5107,8 @@
           "parityPct": 88.3,
           "rawPixelMatchPct": 98.2,
           "liveHeightPx": 805,
-          "cloneHeightPx": 805
+          "cloneHeightPx": 805,
+          "parityPct1_2_0": 88.3
         },
         {
           "route": "/platform/enrichment",
@@ -5063,27 +5118,30 @@
           "parityPct": 94.9,
           "rawPixelMatchPct": 96.7,
           "liveHeightPx": 450,
-          "cloneHeightPx": 450
+          "cloneHeightPx": 450,
+          "parityPct1_2_0": 94.9
         },
         {
           "route": "/platform/mcp",
           "block": 1,
           "section": "hero.platform-feature",
           "variant": "tile-grid",
-          "parityPct": 80.3,
-          "rawPixelMatchPct": 97.0,
+          "parityPct": 83.1,
+          "rawPixelMatchPct": 96.9,
           "liveHeightPx": 811,
-          "cloneHeightPx": 811
+          "cloneHeightPx": 811,
+          "parityPct1_2_0": 80.3
         },
         {
           "route": "/platform/mcp",
           "block": 2,
           "section": "features.integration-arc",
           "variant": "v2",
-          "parityPct": 79.1,
-          "rawPixelMatchPct": 98.2,
+          "parityPct": 81.9,
+          "rawPixelMatchPct": 98.3,
           "liveHeightPx": 356,
-          "cloneHeightPx": 356
+          "cloneHeightPx": 356,
+          "parityPct1_2_0": 79.1
         },
         {
           "route": "/platform/mcp",
@@ -5093,27 +5151,30 @@
           "parityPct": 85.0,
           "rawPixelMatchPct": 96.5,
           "liveHeightPx": 754,
-          "cloneHeightPx": 754
+          "cloneHeightPx": 754,
+          "parityPct1_2_0": 85.0
         },
         {
           "route": "/platform/mcp",
           "block": 4,
           "section": "features.center-media",
           "variant": "top",
-          "parityPct": 78.8,
-          "rawPixelMatchPct": 93.8,
+          "parityPct": 81.5,
+          "rawPixelMatchPct": 93.3,
           "liveHeightPx": 1205,
-          "cloneHeightPx": 1205
+          "cloneHeightPx": 1205,
+          "parityPct1_2_0": 78.8
         },
         {
           "route": "/platform/mcp",
           "block": 5,
           "section": "features.media-card-grid",
           "variant": "v2-three",
-          "parityPct": 70.5,
-          "rawPixelMatchPct": 94.6,
+          "parityPct": 80.9,
+          "rawPixelMatchPct": 95.0,
           "liveHeightPx": 889,
-          "cloneHeightPx": 889
+          "cloneHeightPx": 889,
+          "parityPct1_2_0": 70.5
         },
         {
           "route": "/platform/mcp",
@@ -5123,7 +5184,8 @@
           "parityPct": 86.6,
           "rawPixelMatchPct": 95.6,
           "liveHeightPx": 593,
-          "cloneHeightPx": 593
+          "cloneHeightPx": 593,
+          "parityPct1_2_0": 86.6
         },
         {
           "route": "/platform/mcp",
@@ -5133,7 +5195,8 @@
           "parityPct": 90.5,
           "rawPixelMatchPct": 94.1,
           "liveHeightPx": 193,
-          "cloneHeightPx": 193
+          "cloneHeightPx": 193,
+          "parityPct1_2_0": 90.5
         },
         {
           "route": "/platform/mcp",
@@ -5143,7 +5206,8 @@
           "parityPct": 87.9,
           "rawPixelMatchPct": 96.7,
           "liveHeightPx": 648,
-          "cloneHeightPx": 648
+          "cloneHeightPx": 648,
+          "parityPct1_2_0": 87.9
         },
         {
           "route": "/platform/mcp",
@@ -5153,7 +5217,8 @@
           "parityPct": 89.5,
           "rawPixelMatchPct": 98.4,
           "liveHeightPx": 305,
-          "cloneHeightPx": 305
+          "cloneHeightPx": 305,
+          "parityPct1_2_0": 89.5
         },
         {
           "route": "/platform/mcp",
@@ -5163,17 +5228,19 @@
           "parityPct": 94.9,
           "rawPixelMatchPct": 96.7,
           "liveHeightPx": 450,
-          "cloneHeightPx": 450
+          "cloneHeightPx": 450,
+          "parityPct1_2_0": 94.9
         },
         {
           "route": "/platform/reporting",
           "block": 1,
           "section": "hero.platform-feature",
           "variant": "radar",
-          "parityPct": 73.1,
-          "rawPixelMatchPct": 95.5,
+          "parityPct": 84.3,
+          "rawPixelMatchPct": 96.6,
           "liveHeightPx": 720,
-          "cloneHeightPx": 720
+          "cloneHeightPx": 720,
+          "parityPct1_2_0": 73.1
         },
         {
           "route": "/platform/reporting",
@@ -5183,37 +5250,41 @@
           "parityPct": 90.5,
           "rawPixelMatchPct": 94.1,
           "liveHeightPx": 193,
-          "cloneHeightPx": 193
+          "cloneHeightPx": 193,
+          "parityPct1_2_0": 90.5
         },
         {
           "route": "/platform/reporting",
           "block": 3,
           "section": "features.bento-grid",
           "variant": null,
-          "parityPct": 58.5,
-          "rawPixelMatchPct": 85.3,
+          "parityPct": 75.0,
+          "rawPixelMatchPct": 90.6,
           "liveHeightPx": 1264,
-          "cloneHeightPx": 1264
+          "cloneHeightPx": 1264,
+          "parityPct1_2_0": 58.5
         },
         {
           "route": "/platform/reporting",
           "block": 4,
           "section": "features.split-accordion",
           "variant": "v2",
-          "parityPct": 73.1,
-          "rawPixelMatchPct": 92.5,
+          "parityPct": 88.8,
+          "rawPixelMatchPct": 94.7,
           "liveHeightPx": 769,
-          "cloneHeightPx": 769
+          "cloneHeightPx": 769,
+          "parityPct1_2_0": 73.1
         },
         {
           "route": "/platform/reporting",
           "block": 5,
           "section": "features.media-card-grid",
           "variant": "v2-six",
-          "parityPct": 69.1,
-          "rawPixelMatchPct": 94.1,
+          "parityPct": 82.6,
+          "rawPixelMatchPct": 94.3,
           "liveHeightPx": 1419,
-          "cloneHeightPx": 1419
+          "cloneHeightPx": 1419,
+          "parityPct1_2_0": 69.1
         },
         {
           "route": "/platform/reporting",
@@ -5223,37 +5294,41 @@
           "parityPct": 94.2,
           "rawPixelMatchPct": 96.8,
           "liveHeightPx": 450,
-          "cloneHeightPx": 450
+          "cloneHeightPx": 450,
+          "parityPct1_2_0": 94.2
         },
         {
           "route": "/platform/sequences",
           "block": 1,
           "section": "hero.platform-feature",
           "variant": "sequence-stack",
-          "parityPct": 89.6,
+          "parityPct": 89.4,
           "rawPixelMatchPct": 97.0,
           "liveHeightPx": 820,
-          "cloneHeightPx": 820
+          "cloneHeightPx": 820,
+          "parityPct1_2_0": 89.6
         },
         {
           "route": "/platform/sequences",
           "block": 2,
           "section": "features.product-showcase",
           "variant": null,
-          "parityPct": 68.1,
-          "rawPixelMatchPct": 94.9,
+          "parityPct": 82.0,
+          "rawPixelMatchPct": 95.9,
           "liveHeightPx": 1192,
-          "cloneHeightPx": 1192
+          "cloneHeightPx": 1192,
+          "parityPct1_2_0": 68.1
         },
         {
           "route": "/platform/sequences",
           "block": 3,
           "section": "features.media-card-grid",
           "variant": "legacy-media",
-          "parityPct": 71.6,
-          "rawPixelMatchPct": 96.1,
+          "parityPct": 84.5,
+          "rawPixelMatchPct": 96.3,
           "liveHeightPx": 985,
-          "cloneHeightPx": 985
+          "cloneHeightPx": 985,
+          "parityPct1_2_0": 71.6
         },
         {
           "route": "/platform/sequences",
@@ -5263,27 +5338,30 @@
           "parityPct": 83.5,
           "rawPixelMatchPct": 96.3,
           "liveHeightPx": 558,
-          "cloneHeightPx": 558
+          "cloneHeightPx": 558,
+          "parityPct1_2_0": 83.5
         },
         {
           "route": "/platform/sequences",
           "block": 5,
           "section": "features.split-accordion",
           "variant": "legacy",
-          "parityPct": 75.6,
-          "rawPixelMatchPct": 96.3,
+          "parityPct": 90.1,
+          "rawPixelMatchPct": 96.8,
           "liveHeightPx": 750,
-          "cloneHeightPx": 750
+          "cloneHeightPx": 750,
+          "parityPct1_2_0": 75.6
         },
         {
           "route": "/platform/sequences",
           "block": 6,
           "section": "features.media-card-grid",
           "variant": "legacy-indexed",
-          "parityPct": 64.2,
-          "rawPixelMatchPct": 97.0,
+          "parityPct": 81.8,
+          "rawPixelMatchPct": 97.6,
           "liveHeightPx": 1513,
-          "cloneHeightPx": 1513
+          "cloneHeightPx": 1513,
+          "parityPct1_2_0": 64.2
         },
         {
           "route": "/platform/sequences",
@@ -5293,7 +5371,8 @@
           "parityPct": 92.1,
           "rawPixelMatchPct": 98.3,
           "liveHeightPx": 689,
-          "cloneHeightPx": 689
+          "cloneHeightPx": 689,
+          "parityPct1_2_0": 92.1
         },
         {
           "route": "/platform/sequences",
@@ -5303,7 +5382,8 @@
           "parityPct": 94.2,
           "rawPixelMatchPct": 96.8,
           "liveHeightPx": 450,
-          "cloneHeightPx": 450
+          "cloneHeightPx": 450,
+          "parityPct1_2_0": 94.2
         },
         {
           "route": "/platform/universal-context",
@@ -5313,7 +5393,8 @@
           "parityPct": 90.1,
           "rawPixelMatchPct": 98.2,
           "liveHeightPx": 831,
-          "cloneHeightPx": 831
+          "cloneHeightPx": 831,
+          "parityPct1_2_0": 90.1
         },
         {
           "route": "/platform/universal-context",
@@ -5323,37 +5404,41 @@
           "parityPct": 90.5,
           "rawPixelMatchPct": 94.1,
           "liveHeightPx": 193,
-          "cloneHeightPx": 193
+          "cloneHeightPx": 193,
+          "parityPct1_2_0": 90.5
         },
         {
           "route": "/platform/universal-context",
           "block": 3,
           "section": "features.split-accordion",
           "variant": "v2",
-          "parityPct": 79.2,
-          "rawPixelMatchPct": 95.7,
+          "parityPct": 85.3,
+          "rawPixelMatchPct": 96.0,
           "liveHeightPx": 769,
-          "cloneHeightPx": 769
+          "cloneHeightPx": 769,
+          "parityPct1_2_0": 79.2
         },
         {
           "route": "/platform/universal-context",
           "block": 4,
           "section": "features.center-media",
           "variant": "top",
-          "parityPct": 71.1,
-          "rawPixelMatchPct": 96.6,
+          "parityPct": 80.9,
+          "rawPixelMatchPct": 95.9,
           "liveHeightPx": 1180,
-          "cloneHeightPx": 1180
+          "cloneHeightPx": 1180,
+          "parityPct1_2_0": 71.1
         },
         {
           "route": "/platform/universal-context",
           "block": 5,
           "section": "features.media-card-grid",
           "variant": "v2-three",
-          "parityPct": 67.4,
-          "rawPixelMatchPct": 94.8,
+          "parityPct": 84.2,
+          "rawPixelMatchPct": 95.3,
           "liveHeightPx": 889,
-          "cloneHeightPx": 889
+          "cloneHeightPx": 889,
+          "parityPct1_2_0": 67.4
         },
         {
           "route": "/platform/universal-context",
@@ -5363,7 +5448,8 @@
           "parityPct": 90.6,
           "rawPixelMatchPct": 96.7,
           "liveHeightPx": 733,
-          "cloneHeightPx": 733
+          "cloneHeightPx": 733,
+          "parityPct1_2_0": 90.6
         },
         {
           "route": "/platform/universal-context",
@@ -5373,7 +5459,8 @@
           "parityPct": 87.1,
           "rawPixelMatchPct": 96.8,
           "liveHeightPx": 896,
-          "cloneHeightPx": 896
+          "cloneHeightPx": 896,
+          "parityPct1_2_0": 87.1
         },
         {
           "route": "/platform/universal-context",
@@ -5383,17 +5470,19 @@
           "parityPct": 94.8,
           "rawPixelMatchPct": 96.6,
           "liveHeightPx": 450,
-          "cloneHeightPx": 450
+          "cloneHeightPx": 450,
+          "parityPct1_2_0": 94.8
         },
         {
           "route": "/platform/web-agent",
           "block": 1,
           "section": "hero.platform-feature",
           "variant": "chip-field",
-          "parityPct": 75.3,
-          "rawPixelMatchPct": 95.6,
+          "parityPct": 90.0,
+          "rawPixelMatchPct": 97.2,
           "liveHeightPx": 784,
-          "cloneHeightPx": 784
+          "cloneHeightPx": 784,
+          "parityPct1_2_0": 75.3
         },
         {
           "route": "/platform/web-agent",
@@ -5403,17 +5492,19 @@
           "parityPct": 90.5,
           "rawPixelMatchPct": 94.1,
           "liveHeightPx": 193,
-          "cloneHeightPx": 193
+          "cloneHeightPx": 193,
+          "parityPct1_2_0": 90.5
         },
         {
           "route": "/platform/web-agent",
           "block": 3,
           "section": "features.split-accordion",
           "variant": "v2",
-          "parityPct": 75.7,
-          "rawPixelMatchPct": 96.5,
+          "parityPct": 88.1,
+          "rawPixelMatchPct": 97.0,
           "liveHeightPx": 769,
-          "cloneHeightPx": 769
+          "cloneHeightPx": 769,
+          "parityPct1_2_0": 75.7
         },
         {
           "route": "/platform/web-agent",
@@ -5423,7 +5514,8 @@
           "parityPct": 80.1,
           "rawPixelMatchPct": 94.3,
           "liveHeightPx": 911,
-          "cloneHeightPx": 911
+          "cloneHeightPx": 911,
+          "parityPct1_2_0": 80.1
         },
         {
           "route": "/platform/web-agent",
@@ -5433,7 +5525,8 @@
           "parityPct": 91.9,
           "rawPixelMatchPct": 97.2,
           "liveHeightPx": 842,
-          "cloneHeightPx": 842
+          "cloneHeightPx": 842,
+          "parityPct1_2_0": 91.9
         },
         {
           "route": "/platform/web-agent",
@@ -5443,7 +5536,8 @@
           "parityPct": 90.6,
           "rawPixelMatchPct": 97.4,
           "liveHeightPx": 896,
-          "cloneHeightPx": 896
+          "cloneHeightPx": 896,
+          "parityPct1_2_0": 90.6
         },
         {
           "route": "/platform/web-agent",
@@ -5453,17 +5547,19 @@
           "parityPct": 94.9,
           "rawPixelMatchPct": 96.7,
           "liveHeightPx": 450,
-          "cloneHeightPx": 450
+          "cloneHeightPx": 450,
+          "parityPct1_2_0": 94.9
         },
         {
           "route": "/platform/workflows",
           "block": 1,
           "section": "hero.platform-feature",
           "variant": "flow-diagram",
-          "parityPct": 79.4,
-          "rawPixelMatchPct": 94.5,
+          "parityPct": 87.4,
+          "rawPixelMatchPct": 95.8,
           "liveHeightPx": 790,
-          "cloneHeightPx": 790
+          "cloneHeightPx": 790,
+          "parityPct1_2_0": 79.4
         },
         {
           "route": "/platform/workflows",
@@ -5473,17 +5569,19 @@
           "parityPct": 90.5,
           "rawPixelMatchPct": 94.1,
           "liveHeightPx": 193,
-          "cloneHeightPx": 193
+          "cloneHeightPx": 193,
+          "parityPct1_2_0": 90.5
         },
         {
           "route": "/platform/workflows",
           "block": 3,
           "section": "features.card-marquee",
           "variant": "legacy",
-          "parityPct": 88.4,
-          "rawPixelMatchPct": 97.6,
+          "parityPct": 86.7,
+          "rawPixelMatchPct": 97.4,
           "liveHeightPx": 924,
-          "cloneHeightPx": 924
+          "cloneHeightPx": 924,
+          "parityPct1_2_0": 88.4
         },
         {
           "route": "/platform/workflows",
@@ -5493,7 +5591,8 @@
           "parityPct": 89.2,
           "rawPixelMatchPct": 97.3,
           "liveHeightPx": 764,
-          "cloneHeightPx": 764
+          "cloneHeightPx": 764,
+          "parityPct1_2_0": 89.2
         },
         {
           "route": "/platform/workflows",
@@ -5503,17 +5602,19 @@
           "parityPct": 90.1,
           "rawPixelMatchPct": 93.7,
           "liveHeightPx": 586,
-          "cloneHeightPx": 586
+          "cloneHeightPx": 586,
+          "parityPct1_2_0": 90.1
         },
         {
           "route": "/platform/workflows",
           "block": 6,
           "section": "features.split-accordion",
           "variant": "legacy",
-          "parityPct": 78.8,
-          "rawPixelMatchPct": 96.4,
+          "parityPct": 92.8,
+          "rawPixelMatchPct": 97.1,
           "liveHeightPx": 750,
-          "cloneHeightPx": 750
+          "cloneHeightPx": 750,
+          "parityPct1_2_0": 78.8
         },
         {
           "route": "/platform/workflows",
@@ -5523,17 +5624,19 @@
           "parityPct": 91.0,
           "rawPixelMatchPct": 98.3,
           "liveHeightPx": 1016,
-          "cloneHeightPx": 1016
+          "cloneHeightPx": 1016,
+          "parityPct1_2_0": 91.0
         },
         {
           "route": "/platform/workflows",
           "block": 8,
           "section": "features.media-card-grid",
           "variant": "legacy-media",
-          "parityPct": 72.1,
-          "rawPixelMatchPct": 96.4,
+          "parityPct": 89.4,
+          "rawPixelMatchPct": 97.3,
           "liveHeightPx": 949,
-          "cloneHeightPx": 949
+          "cloneHeightPx": 949,
+          "parityPct1_2_0": 72.1
         },
         {
           "route": "/platform/workflows",
@@ -5543,7 +5646,8 @@
           "parityPct": 92.5,
           "rawPixelMatchPct": 97.4,
           "liveHeightPx": 604,
-          "cloneHeightPx": 604
+          "cloneHeightPx": 604,
+          "parityPct1_2_0": 92.5
         },
         {
           "route": "/platform/workflows",
@@ -5553,107 +5657,18 @@
           "parityPct": 94.9,
           "rawPixelMatchPct": 96.7,
           "liveHeightPx": 450,
-          "cloneHeightPx": 450
+          "cloneHeightPx": 450,
+          "parityPct1_2_0": 94.9
         }
       ],
       "exceptions": [
-        {
-          "route": "/platform/ask",
-          "block": 2,
-          "section": "features.tabbed-showcase",
-          "variant": "audience-ruler",
-          "parityPct": 72.6,
-          "cause": "panel media and list copy are original; text rows offset by 5-15px against the live panel",
-          "status": "pending human approval",
-          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
-        },
-        {
-          "route": "/platform/ask",
-          "block": 4,
-          "section": "features.assistant-intel",
-          "variant": null,
-          "parityPct": 74.4,
-          "cause": "assistant window and cell mocks are original; masked window text differs",
-          "status": "pending human approval",
-          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
-        },
-        {
-          "route": "/platform/call-intelligence",
-          "block": 1,
-          "section": "hero.platform-feature",
-          "variant": "table-call-card",
-          "parityPct": 77.0,
-          "cause": "hero artwork is original mock UI laid out like the live stage; time-based hero motion (agent run states, radar sweep, kanban/perspective entrance, typing) is captured mid-cycle in both builds",
-          "status": "pending human approval",
-          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
-        },
-        {
-          "route": "/platform/call-intelligence",
-          "block": 2,
-          "section": "features.media-card-grid",
-          "variant": "legacy-media",
-          "parityPct": 77.9,
-          "cause": "card artwork is original small UI mocks in place of live screenshots/DOM mocks; invented card copy wraps differently",
-          "status": "pending human approval",
-          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
-        },
-        {
-          "route": "/platform/call-intelligence",
-          "block": 4,
-          "section": "features.split-accordion",
-          "variant": "legacy",
-          "parityPct": 72.1,
-          "cause": "media panel is original mock art in place of the live raster screenshot; item copy is invented, so text rows sit a few px off the live rows",
-          "status": "pending human approval",
-          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
-        },
-        {
-          "route": "/platform/call-intelligence",
-          "block": 6,
-          "section": "features.tabbed-showcase",
-          "variant": "pill-tabs",
-          "parityPct": 60.6,
-          "cause": "panel media and list copy are original; text rows offset by 5-15px against the live panel",
-          "status": "pending human approval",
-          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
-        },
-        {
-          "route": "/platform/call-intelligence",
-          "block": 7,
-          "section": "features.media-card-grid",
-          "variant": "legacy-indexed",
-          "parityPct": 74.3,
-          "cause": "card artwork is original small UI mocks in place of live screenshots/DOM mocks; invented card copy wraps differently",
-          "status": "pending human approval",
-          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
-        },
-        {
-          "route": "/platform/custom-agents",
-          "block": 1,
-          "section": "hero.platform-feature",
-          "variant": "agent-canvas",
-          "parityPct": 62.1,
-          "cause": "hero artwork is original mock UI laid out like the live stage; time-based hero motion (agent run states, radar sweep, kanban/perspective entrance, typing) is captured mid-cycle in both builds",
-          "status": "pending human approval",
-          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
-        },
-        {
-          "route": "/platform/custom-agents",
-          "block": 3,
-          "section": "features.split-accordion",
-          "variant": "v2",
-          "parityPct": 74.9,
-          "cause": "media panel is original mock art in place of the live raster screenshot; item copy is invented, so text rows sit a few px off the live rows",
-          "status": "pending human approval",
-          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
-        },
         {
           "route": "/platform/custom-agents",
           "block": 6,
           "section": "features.center-media",
           "variant": "top",
-          "parityPct": 73.7,
-          "cause": "product window is an original mock drawn to the live screenshot layout; dense window text never aligns glyph-for-glyph",
+          "parityPct": 73.5,
+          "cause": "workflow-run window is original mock UI; its sidebar and run-log rows are denser/smaller in the live screenshot than in the clone window at the same frame size (row pitch differs), so text rows drift apart down the window",
           "status": "pending human approval",
           "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
         },
@@ -5662,68 +5677,8 @@
           "block": 1,
           "section": "hero.platform-feature",
           "variant": "schema-perspective",
-          "parityPct": 49.9,
-          "cause": "hero artwork is original mock UI laid out like the live stage; time-based hero motion (agent run states, radar sweep, kanban/perspective entrance, typing) is captured mid-cycle in both builds",
-          "status": "pending human approval",
-          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
-        },
-        {
-          "route": "/platform/data",
-          "block": 2,
-          "section": "features.media-card-grid",
-          "variant": "legacy-indexed",
-          "parityPct": 72.1,
-          "cause": "card artwork is original small UI mocks in place of live screenshots/DOM mocks; invented card copy wraps differently",
-          "status": "pending human approval",
-          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
-        },
-        {
-          "route": "/platform/data",
-          "block": 4,
-          "section": "features.media-card-grid",
-          "variant": "legacy-media",
-          "parityPct": 68.1,
-          "cause": "card artwork is original small UI mocks in place of live screenshots/DOM mocks; invented card copy wraps differently",
-          "status": "pending human approval",
-          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
-        },
-        {
-          "route": "/platform/data",
-          "block": 5,
-          "section": "features.split-accordion",
-          "variant": "legacy",
-          "parityPct": 68.3,
-          "cause": "media panel is original mock art in place of the live raster screenshot; item copy is invented, so text rows sit a few px off the live rows",
-          "status": "pending human approval",
-          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
-        },
-        {
-          "route": "/platform/data",
-          "block": 6,
-          "section": "features.tabbed-showcase",
-          "variant": "pill-tabs",
-          "parityPct": 58.5,
-          "cause": "panel media and list copy are original; text rows offset by 5-15px against the live panel",
-          "status": "pending human approval",
-          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
-        },
-        {
-          "route": "/platform/enrichment",
-          "block": 1,
-          "section": "hero.platform-feature",
-          "variant": "kanban-board",
-          "parityPct": 58.0,
-          "cause": "hero artwork is original mock UI laid out like the live stage; time-based hero motion (agent run states, radar sweep, kanban/perspective entrance, typing) is captured mid-cycle in both builds",
-          "status": "pending human approval",
-          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
-        },
-        {
-          "route": "/platform/enrichment",
-          "block": 3,
-          "section": "features.split-accordion",
-          "variant": "v2",
-          "parityPct": 68.8,
-          "cause": "media panel is original mock art in place of the live raster screenshot; item copy is invented, so text rows sit a few px off the live rows",
+          "parityPct": 78.9,
+          "cause": "schema diagram and records window now follow the live block layout; the remaining gap is the live diagram's solid curved connectors and the in-window tab pill styling (darker borders/shadow), plus glyph-level differences in the mock copy",
           "status": "pending human approval",
           "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
         },
@@ -5732,48 +5687,8 @@
           "block": 4,
           "section": "features.center-media",
           "variant": "centered",
-          "parityPct": 68.5,
-          "cause": "product window is an original mock drawn to the live screenshot layout; dense window text never aligns glyph-for-glyph",
-          "status": "pending human approval",
-          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
-        },
-        {
-          "route": "/platform/mcp",
-          "block": 2,
-          "section": "features.integration-arc",
-          "variant": "v2",
-          "parityPct": 79.1,
-          "cause": "tool tiles are original glyph tiles placed on the arc; live tiles orbit",
-          "status": "pending human approval",
-          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
-        },
-        {
-          "route": "/platform/mcp",
-          "block": 4,
-          "section": "features.center-media",
-          "variant": "top",
-          "parityPct": 78.8,
-          "cause": "product window is an original mock drawn to the live screenshot layout; dense window text never aligns glyph-for-glyph",
-          "status": "pending human approval",
-          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
-        },
-        {
-          "route": "/platform/mcp",
-          "block": 5,
-          "section": "features.media-card-grid",
-          "variant": "v2-three",
-          "parityPct": 70.5,
-          "cause": "card artwork is original small UI mocks in place of live screenshots/DOM mocks; invented card copy wraps differently",
-          "status": "pending human approval",
-          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
-        },
-        {
-          "route": "/platform/reporting",
-          "block": 1,
-          "section": "hero.platform-feature",
-          "variant": "radar",
-          "parityPct": 73.1,
-          "cause": "hero artwork is original mock UI laid out like the live stage; time-based hero motion (agent run states, radar sweep, kanban/perspective entrance, typing) is captured mid-cycle in both builds",
+          "parityPct": 78.6,
+          "cause": "question-builder mock follows the live layout; the live popup and its input render at a slightly larger scale with crisper borders, so the lower popup edge and button row sit a few px apart",
           "status": "pending human approval",
           "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
         },
@@ -5782,152 +5697,14 @@
           "block": 3,
           "section": "features.bento-grid",
           "variant": null,
-          "parityPct": 58.5,
-          "cause": "chart cards are original charts in place of live screenshots (map, donut, pipeline funnel)",
-          "status": "pending human approval",
-          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
-        },
-        {
-          "route": "/platform/reporting",
-          "block": 4,
-          "section": "features.split-accordion",
-          "variant": "v2",
-          "parityPct": 73.1,
-          "cause": "media panel is original mock art in place of the live raster screenshot; item copy is invented, so text rows sit a few px off the live rows",
-          "status": "pending human approval",
-          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
-        },
-        {
-          "route": "/platform/reporting",
-          "block": 5,
-          "section": "features.media-card-grid",
-          "variant": "v2-six",
-          "parityPct": 69.1,
-          "cause": "card artwork is original small UI mocks in place of live screenshots/DOM mocks; invented card copy wraps differently",
-          "status": "pending human approval",
-          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
-        },
-        {
-          "route": "/platform/sequences",
-          "block": 2,
-          "section": "features.product-showcase",
-          "variant": null,
-          "parityPct": 68.1,
-          "cause": "sequence editor is an original mock drawn to the live screenshot layout; dense list text",
-          "status": "pending human approval",
-          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
-        },
-        {
-          "route": "/platform/sequences",
-          "block": 3,
-          "section": "features.media-card-grid",
-          "variant": "legacy-media",
-          "parityPct": 71.6,
-          "cause": "card artwork is original small UI mocks in place of live screenshots/DOM mocks; invented card copy wraps differently",
-          "status": "pending human approval",
-          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
-        },
-        {
-          "route": "/platform/sequences",
-          "block": 5,
-          "section": "features.split-accordion",
-          "variant": "legacy",
-          "parityPct": 75.6,
-          "cause": "media panel is original mock art in place of the live raster screenshot; item copy is invented, so text rows sit a few px off the live rows",
-          "status": "pending human approval",
-          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
-        },
-        {
-          "route": "/platform/sequences",
-          "block": 6,
-          "section": "features.media-card-grid",
-          "variant": "legacy-indexed",
-          "parityPct": 64.2,
-          "cause": "card artwork is original small UI mocks in place of live screenshots/DOM mocks; invented card copy wraps differently",
-          "status": "pending human approval",
-          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
-        },
-        {
-          "route": "/platform/universal-context",
-          "block": 3,
-          "section": "features.split-accordion",
-          "variant": "v2",
-          "parityPct": 79.2,
-          "cause": "media panel is original mock art in place of the live raster screenshot; item copy is invented, so text rows sit a few px off the live rows",
-          "status": "pending human approval",
-          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
-        },
-        {
-          "route": "/platform/universal-context",
-          "block": 4,
-          "section": "features.center-media",
-          "variant": "top",
-          "parityPct": 71.1,
-          "cause": "product window is an original mock drawn to the live screenshot layout; dense window text never aligns glyph-for-glyph",
-          "status": "pending human approval",
-          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
-        },
-        {
-          "route": "/platform/universal-context",
-          "block": 5,
-          "section": "features.media-card-grid",
-          "variant": "v2-three",
-          "parityPct": 67.4,
-          "cause": "card artwork is original small UI mocks in place of live screenshots/DOM mocks; invented card copy wraps differently",
-          "status": "pending human approval",
-          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
-        },
-        {
-          "route": "/platform/web-agent",
-          "block": 1,
-          "section": "hero.platform-feature",
-          "variant": "chip-field",
-          "parityPct": 75.3,
-          "cause": "hero artwork is original mock UI laid out like the live stage; time-based hero motion (agent run states, radar sweep, kanban/perspective entrance, typing) is captured mid-cycle in both builds",
-          "status": "pending human approval",
-          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
-        },
-        {
-          "route": "/platform/web-agent",
-          "block": 3,
-          "section": "features.split-accordion",
-          "variant": "v2",
-          "parityPct": 75.7,
-          "cause": "media panel is original mock art in place of the live raster screenshot; item copy is invented, so text rows sit a few px off the live rows",
-          "status": "pending human approval",
-          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
-        },
-        {
-          "route": "/platform/workflows",
-          "block": 1,
-          "section": "hero.platform-feature",
-          "variant": "flow-diagram",
-          "parityPct": 79.4,
-          "cause": "hero artwork is original mock UI laid out like the live stage; time-based hero motion (agent run states, radar sweep, kanban/perspective entrance, typing) is captured mid-cycle in both builds",
-          "status": "pending human approval",
-          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
-        },
-        {
-          "route": "/platform/workflows",
-          "block": 6,
-          "section": "features.split-accordion",
-          "variant": "legacy",
-          "parityPct": 78.8,
-          "cause": "media panel is original mock art in place of the live raster screenshot; item copy is invented, so text rows sit a few px off the live rows",
-          "status": "pending human approval",
-          "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
-        },
-        {
-          "route": "/platform/workflows",
-          "block": 8,
-          "section": "features.media-card-grid",
-          "variant": "legacy-media",
-          "parityPct": 72.1,
-          "cause": "card artwork is original small UI mocks in place of live screenshots/DOM mocks; invented card copy wraps differently",
+          "parityPct": 75.0,
+          "cause": "bento media are original charts placed on the live block layout; the live map tile is a real choropleth whose light/dark regions an invented cell map only approximates, and the live dashboard window packs a denser sidebar and differently shaped pie/bar charts",
           "status": "pending human approval",
           "evidence": "extraction/measured-values.json#/cloneParity/platform/sections (same route+block); side-by-side sheets regenerate with extraction/parity_compare.py --sheets"
         }
-      ]
+      ],
+      "motionPhase": "1.3.0, identical in both builds: Playwright fake clock installed before navigation and paused; the 2.5s load phase is stepped frame by frame (runFor), every later advance (80ms per scroll-through step, 800ms back at the top, 1300ms per tile) is fastForward(ms-600) + runFor(600) so springs and rAF tweens settle; then finite CSS/WAAPI animations finish() and infinite loops pause at currentTime 0. Nothing is hidden. Repeatability: live vs live (two captures) mean 99.9, min 98.8; clone vs clone mean 99.9. PARITY_FREEZE=0 restores the 1.2.0 real-time capture. runFor-only was tried first and rejected (2-20s real time per 1300ms step on the live site).",
+      "copyLineFit": "1.3.0: invented headings/paragraphs in the failing sections reworded to the live block's line count and approximate line widths at 1440 (measured live line boxes; candidates measured in the clone's fonts). extraction/copy_overlap.mjs --live --mock-text: no 5-word run of any clone string (including mock-UI text) matches the live page on all 12 routes; 3-4 word identical labels (Start for free, Talk to sales, metric names, '[03]Data model') listed as info."
     }
   },
   "cloneBuild": {
@@ -6000,7 +5777,7 @@
       "claim": "Seven platform pages and the platform section library from an uncommitted working tree (custom-agents, developers, enrichment, mcp, reporting, universal-context, web-agent) are a usable starting point",
       "verdict": "partly holds",
       "current": "imported unchanged in structure; geometry matched live (doc heights equal at 1440), but some of its copy reproduced live headlines or 5-word runs of live copy and was rewritten, and several media boxes were redrawn to the live layouts (windows.jsx, tiles.jsx)",
-      "evidence": "src/pages/platform/WebAgent.jsx:1-10"
+      "evidence": "src/pages/platform/WebAgent.jsx:1-11"
     }
   ],
   "excludedEvidence": [

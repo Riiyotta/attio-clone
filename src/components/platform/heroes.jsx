@@ -34,7 +34,7 @@ export function HeroWebAgent({ copy, chips, timing }) {
       <div className="flex w-full flex-1 flex-col border-x border-solid border-white-500 max-lg:border-none">
         <div className={`relative overflow-hidden ${HERO_H}`}>
           <div className="pointer-events-none absolute inset-0 z-20 flex flex-col items-center justify-center pb-[8svh]">
-            <div className="pointer-events-auto w-full px-6">
+            <div className="pointer-events-auto w-full px-6 lg:translate-y-[11px]">
               <HeroCopy {...copy} timing={timing} />
             </div>
           </div>
@@ -145,7 +145,7 @@ export function HeroCustomAgents({ copy, agents, timing }) {
         <div className={`relative overflow-hidden bg-white-100 ${HERO_H}`}>
           <div aria-hidden="true" className="absolute inset-0 bg-agent-dots [background-position:8px_8px] [background-size:16px_16px]" />
           <div className="absolute inset-0 z-10 flex items-center justify-center px-5 md:px-6">
-            <div className="relative w-full max-w-[520px] lg:max-w-[600px]">
+            <div className="relative w-full max-w-[520px] lg:max-w-[600px] lg:-translate-y-9">
               <HeroCopy {...copy} timing={timing} />
             </div>
           </div>
@@ -186,21 +186,21 @@ export function HeroEnrichment({ copy, columns, timing }) {
     <div className="relative" data-section="hero">
       <section className="relative flex flex-col overflow-hidden md:h-[calc(100svh-var(--site-header-height))]">
         <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
-          <div className="pl-stripes pl-mask-t absolute inset-0" />
+          <div className="pl-stripes-top absolute inset-0" />
         </div>
         <div className="relative z-10 px-6">
           <HeroCopy {...copy} timing={timing} className="pb-16 pt-[120px]" />
         </div>
         <div className="relative h-[356px] md:min-h-0 md:flex-1">
-          <div className="flex h-full w-full justify-center gap-4 overflow-hidden px-8">
+          <div className="flex h-full w-full justify-center gap-5 overflow-hidden px-8">
             {columns.map((col, ci) => (
-              <div key={col.label} className={`flex w-full max-w-[300px] shrink-0 flex-col rounded-t-12 bg-white-200 px-6 pt-1.5 ${ci > 1 ? 'max-md:hidden' : ''} ${ci > 2 ? 'max-lg:hidden' : ''}`}>
-                <div className="flex h-9 items-center gap-2">
+              <div key={col.label} className={`flex w-full max-w-[288px] shrink-0 flex-col rounded-t-12 bg-white-200 px-1.5 pt-4 ${ci > 1 ? 'max-md:hidden' : ''} ${ci > 2 ? 'max-lg:hidden' : ''}`}>
+                <div className="flex h-9 items-center gap-2 px-1.5">
                   <span className={`size-2.5 rounded-full ${DOT_TONES[ci % 4]}`} />
                   <span className="text-kanban-label text-black-100">{col.label}</span>
                   <span className="flex h-4 min-w-4 items-center justify-center rounded-[5px] bg-white-400 px-1 text-kanban-count text-black-600">{col.cards.length}</span>
                 </div>
-                <div className="mt-2 flex flex-col gap-2">
+                <div className="mt-3 flex flex-col gap-2">
                   {col.cards.map((card, k) => (
                     <div key={card.name} className="rounded-12 border border-solid border-white-500 bg-white-100 p-3 shadow-agent-card">
                       <span className="flex items-center gap-2 text-mock-md text-black-100">
@@ -215,7 +215,14 @@ export function HeroEnrichment({ copy, columns, timing }) {
                           </span>
                         ))}
                       </div>
-                      <div className="mt-2 text-right text-kanban-count text-black-700">{card.age}</div>
+                      <div className="mt-3.5 flex items-center justify-between text-kanban-count text-black-700">
+                        <span className="flex gap-3 text-black-800">
+                          <Icon name="note" size={12} />
+                          <Icon name="task" size={12} />
+                          <Icon name="mail" size={12} />
+                        </span>
+                        <span className="flex items-center gap-1"><Icon name="clock" size={11} />{card.age}</span>
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -342,6 +349,9 @@ const MCP_CELLS = {
   sm: [[1, 6], [2, 6], [4, 6], [3, 1], [4, 1]],
 }
 const MCP_GLYPHS = ['spark', 'ring', 'orbit', 'grid', 'wave']
+// 1.3.0: the client marks are drawn as plain grey outline glyphs (the live cells hold grey outline marks at
+// this size; pastel tiles left those cells empty in the ink comparison). Generic icons, no client logos.
+const MCP_MARKS = ['globe', 'flow', 'sparkle', 'settings', 'star']
 // Invented client skins (off-white surfaces). The live cycle period and typing speed were not
 // sampled: 45ms per character and a 3.2s hold are approximations.
 const SKINS = ['bg-white-100 border-white-500', 'bg-white-200 border-white-700', 'bg-art-mist border-white-700', 'bg-white-100 border-white-600', 'bg-blue-100 border-blue-200']
@@ -392,7 +402,7 @@ export function HeroMcp({ copy, prompts, timing }) {
   const logos = (key) =>
     MCP_CELLS[key].map((cell, i) => (
       <div key={`${key}${i}`} className="pl-logo-in flex items-center justify-center" style={{ ...cellStyle(cell), '--pl-delay': `${1600 + 80 * i}ms` }}>
-        <GlyphTile icon={MCP_GLYPHS[i]} tone={i} size={36} radius="rounded-10" />
+        <Icon name={MCP_MARKS[i % MCP_MARKS.length]} size={34} strokeWidth={1.1} className="text-black-700" />
       </div>
     ))
   return (

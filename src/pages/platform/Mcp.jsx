@@ -1,6 +1,7 @@
 import { GroupListArt, RecordCardArt, RingChipsArt } from '../../components/platform/tiles.jsx'
 import { ChatWindowArt } from '../../components/platform/windows.jsx'
 import PageShell from '../../components/marketing/PageShell.jsx'
+import { LayoutArt } from '../../components/platform/layoutArt.jsx'
 import CustomerLogos from '../../components/CustomerLogos.jsx'
 import {
   BlockDivider,
@@ -23,14 +24,14 @@ const TIMING = { dur: 1000, pill: 100, title: 200, sub: 300, cta: 400 } // M-P1
 
 const HERO = {
   pill: 'Hub', // c3
-  title: 'Ask from anywhere. Do it all.', // c29 w4 target
+  title: 'Ask from anywhere. Act on it all.', // line-fit 1.3.0 (782px, live 772px)
   sub: 'Corvale connects to the assistants your team opens daily.', // c58
 }
 const PROMPTS = ['Find my notes on the Pinecrest deal', 'List renewals due in the next month', 'Add a task to follow up on Friday']
 
 const STRIP = {
-  title: 'Ready wherever you work.', // c20 target
-  sub: 'Every assistant that speaks the open protocol works.', // c53 target
+  title: 'In the tools you use.', // line-fit 1.3.0 (live 205px / 525px)
+  sub: 'Every assistant and agent that speaks the open protocol.',
   tiles: ['sparkle', 'at', 'globe', 'terminal', 'bolt', 'send'],
 }
 
@@ -50,12 +51,12 @@ const CENTER = {
 }
 
 const GRID = {
-  lead: 'More possible than you would think.', // c37 w5 target
-  cont: 'Assistants can look up records and edit them once you say yes.', // c57
+  lead: 'More possible than you would think.', // line-fit 1.3.0 (live 3 lines: lead+79 / 732 / 74)
+  cont: 'Your assistant can look up records and edit them when you say yes.',
   cards: [
     { title: 'Edit a deal.', body: '“Move the Halcyon deal to the proposal stage.”', media: <RecordCardArt /> },
-    { title: 'Find a call.', body: '“Find calls where pricing came up last month.”', media: <GroupListArt /> },
-    { title: 'Add tasks.', body: '“Remind me to send the contract on Friday.”', media: <RingChipsArt /> },
+    { title: 'Find a call.', body: '“Find calls where pricing came up last month.”', media: <LayoutArt box={[416, 329]} blocks={[{ k: 'row', x: 82, y: 70, w: 100, h: 20, text: 'This week', text_cls: 'text-[12px] !text-black-600' }, { k: 'pill', x: 149, y: 71, w: 18, h: 17, text: '1', round: 'rounded-4 !px-1' }, { k: 'row', x: 85, y: 108, w: 260, h: 24, icon: 'video', text: 'Halcyon // Northwind: renewal sync', text_cls: 'text-[15px]' }, { k: 'row', x: 82, y: 157, w: 100, h: 20, text: 'This month', text_cls: 'text-[12px] !text-black-600' }, { k: 'pill', x: 156, y: 158, w: 18, h: 17, text: '2', round: 'rounded-4 !px-1' }, { k: 'row', x: 85, y: 195, w: 260, h: 24, icon: 'video', text: 'Ines Varga and Theo Laurent intro', text_cls: 'text-[15px]' }, { k: 'row', x: 85, y: 235, w: 260, h: 24, icon: 'video', text: 'Kettle pricing feedback session', text_cls: 'text-[15px]' }]} /> },
+    { title: 'Add tasks.', body: '“Remind me to send the contract on Friday.”', media: <LayoutArt box={[416, 329]} blocks={[{ k: 'frame', x: 58, y: 23, w: 270, h: 270, cls: 'rounded-full border-white-600 bg-transparent' }, { k: 'frame', x: 123, y: 88, w: 140, h: 140, cls: 'rounded-full border-dashed border-white-700 bg-transparent' }, { k: 'frame', x: 168, y: 133, w: 50, h: 50, cls: 'rounded-full border-white-600 bg-white-200' }, { k: 'pill', x: 193, y: 43, w: 140, h: 22, text: 'Add Nadia to the demo', round: 'rounded-6 !bg-traffic-yellow/20 !border-traffic-yellow/40' }, { k: 'pill', x: 33, y: 90, w: 75, h: 22, text: 'Move deal', round: 'rounded-6 !bg-traffic-green/10 !border-traffic-green/40 !text-traffic-green' }, { k: 'pill', x: 28, y: 213, w: 145, h: 22, text: 'Send the pricing note', round: 'rounded-6 !bg-blue-100 !border-blue-200 !text-blue-600' }, { k: 'pill', x: 240, y: 240, w: 98, h: 22, text: 'Book review', round: 'rounded-6 !bg-art-haze !border-art-haze !text-art-navy' }]} /> },
   ],
 }
 

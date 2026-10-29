@@ -1,4 +1,5 @@
 import PageShell from '../../components/marketing/PageShell.jsx'
+import { IntelApprovalArt, IntelListArt, IntelRingsArt } from '../../components/platform/intelArt.jsx'
 import { CardMarquee, PlatformCta, ScrollQuote, SectionDivider, UcBand } from '../../components/platform/index.js'
 import { AskIntel, AskIntelArt, AskTabs, HeroAsk } from '../../components/platform/legacy.jsx'
 import { MARQUEE_ROWS } from './_links.js'
@@ -18,7 +19,7 @@ const TABS = {
   tabs: [
     { label: 'Marketing', title: 'Know which campaigns turn into pipeline.', desc: 'Compare sources, segments and spend in one answer.' },
     { label: 'Success', title: 'Walk into every renewal ready.', desc: 'Usage, open tickets and sentiment for each account.' },
-    { label: 'Sales', title: 'Win sooner when every single call is fully prepared.', desc: 'Get briefed before meetings, edit deals and check the entire funnel.' },
+    { label: 'Sales', title: 'Win sooner when every single call is fully prepared.', desc: 'Get ready for calls, edit deals and check the funnel.' },
     { label: 'Founders', title: 'See the whole business in one question.', desc: 'Revenue, pipeline and hiring at a glance.' },
     { label: 'Venture capital', title: 'Track every fund and founder you meet.', desc: 'Notes, intros and follow-ups kept together.' },
   ],
@@ -41,11 +42,11 @@ const BAND = {
 }
 
 const INTEL = {
-  title: 'Answers that fit the way your team sells and serves.', // c51
+  title: 'Answers built around how your team sells and serves.', // line-fit 1.3.0: 438/312 (live 405/318)
   cards: [
-    { icon: 'checkCircle', title: 'Real records, not guesses.', body: 'Replies cite the records, calls and notes they were drawn from, nothing more.', media: <AskIntelArt variant={0} /> },
-    { icon: 'settings', title: 'Your permissions apply.', body: 'The assistant follows the access you already set, so people only see what they should.', media: <AskIntelArt variant={1} /> },
-    { icon: 'sparkle', title: 'Smart suggestions. Human calls.', body: 'You stay in charge, free to approve, change or reject any suggestion.', media: <AskIntelArt variant={2} /> },
+    { icon: 'checkCircle', title: 'Real records, not invented answers.', body: 'Each reply cites the records, calls and notes it was drawn from, and nothing more.', media: <IntelListArt /> },
+    { icon: 'settings', title: 'Your access rules, applied.', body: 'The assistant follows the access you already set, so each person sees only what they should.', media: <IntelRingsArt /> },
+    { icon: 'sparkle', title: 'Smart suggestions. You make the call.', body: 'You stay in charge, free to approve, edit or turn down any change it suggests to you.', media: <IntelApprovalArt /> },
   ],
 }
 

@@ -410,7 +410,7 @@ export function IntegrationStrip({ title, sub, tiles, shell = 'v2', className = 
       </header>
       <div className="pl-mask-strip relative pt-3">
         <div className="absolute left-1/2 top-3 h-[1360px] w-[1440px] -translate-x-1/2">
-          <svg aria-hidden="true" width="1440" height="1360" viewBox="0 0 1440 1360" fill="none" className="text-white-500">
+          <svg aria-hidden="true" width="1440" height="1360" viewBox="0 0 1440 1360" fill="none" className="text-white-900">
             <circle cx="720" cy="680" r={ARC_R - 0.5} stroke="currentColor" strokeDasharray="4 6" strokeLinecap="round" />
           </svg>
           <div className="absolute inset-0">
@@ -519,12 +519,12 @@ export function LinksGrid({ variant = 'v2', lead, cont, title, sub, links, class
 /* S-TABS (3.18) legacy tabbed showcase (click only, no auto-advance)    */
 /* ------------------------------------------------------------------ */
 /** tabs: [{ label, title, desc, media }]; more: label for the trailing ghost link. */
-export function Tabs({ lead, cont, tabs, more = 'More', className = '' }) {
+export function Tabs({ lead, cont, tabs, more = 'More', block = true, className = '' }) {
   const [active, setActive] = useState(0)
   const t = tabs[active]
   return (
     <LegacyBlock className={className} data-section="tabbed-showcase">
-      <LegacyHeader lead={lead} cont={cont} block />
+      <LegacyHeader lead={lead} cont={cont} block={block} />
       <div className="grid grid-cols-12">
         <div className="col-[2/-2] pb-5 max-lg:items-center">
           <div role="tablist" className="flex gap-2 max-lg:flex-wrap max-lg:gap-1.5">

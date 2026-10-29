@@ -24,50 +24,50 @@
       "kanban-board": {
         "file": "src/components/platform/heroes.jsx",
         "tag": "export function HeroEnrichment(",
-        "lines": "184-230",
-        "citation": "src/components/platform/heroes.jsx:184-230"
+        "lines": "184-237",
+        "citation": "src/components/platform/heroes.jsx:184-237"
       },
       "horizon": {
         "file": "src/components/platform/heroes.jsx",
         "tag": "export function HeroHorizon(",
-        "lines": "235-277",
-        "citation": "src/components/platform/heroes.jsx:235-277"
+        "lines": "242-284",
+        "citation": "src/components/platform/heroes.jsx:242-284"
       },
       "radar": {
         "file": "src/components/platform/heroes.jsx",
         "tag": "export function HeroRadar(",
-        "lines": "292-333",
-        "citation": "src/components/platform/heroes.jsx:292-333"
+        "lines": "299-340",
+        "citation": "src/components/platform/heroes.jsx:299-340"
       },
       "tile-grid": {
         "file": "src/components/platform/heroes.jsx",
         "tag": "export function HeroMcp(",
-        "lines": "355-435",
-        "citation": "src/components/platform/heroes.jsx:355-435"
+        "lines": "365-445",
+        "citation": "src/components/platform/heroes.jsx:365-445"
       },
       "table-call-card": {
         "file": "src/components/platform/legacy.jsx",
         "tag": "export function HeroCallIntel(",
-        "lines": "407-447",
-        "citation": "src/components/platform/legacy.jsx:407-447"
+        "lines": "414-454",
+        "citation": "src/components/platform/legacy.jsx:414-454"
       },
       "flow-diagram": {
         "file": "src/components/platform/legacy.jsx",
         "tag": "export function HeroWorkflows(",
-        "lines": "462-512",
-        "citation": "src/components/platform/legacy.jsx:462-512"
+        "lines": "469-519",
+        "citation": "src/components/platform/legacy.jsx:469-519"
       },
       "sequence-stack": {
         "file": "src/components/platform/legacy.jsx",
         "tag": "export function HeroSequences(",
-        "lines": "517-566",
-        "citation": "src/components/platform/legacy.jsx:517-566"
+        "lines": "524-573",
+        "citation": "src/components/platform/legacy.jsx:524-573"
       },
       "schema-perspective": {
         "file": "src/components/platform/legacy.jsx",
         "tag": "export function HeroData(",
-        "lines": "604-643",
-        "citation": "src/components/platform/legacy.jsx:604-643"
+        "lines": "703-742",
+        "citation": "src/components/platform/legacy.jsx:703-742"
       },
       "ask-stage": {
         "file": "src/components/platform/legacy.jsx",

@@ -191,6 +191,48 @@ export function TileArt({ variant = 0, className = '' }) {
   )
 }
 
+
+/** Stage chart for the tabbed showcase (810x502 panel; column blocks placed like the live panel's
+ * chart: four 105px columns on a 425px baseline, ghost bars behind, value badges, hover card).
+ * Original content and numbers. */
+const FUNNEL = [
+  ['Inbound', 121, 121, '100%', '148', 'bg-blue-300'],
+  ['Discovery', 121, 294, '44%', '65', 'bg-blue-500'],
+  ['Proposal', 294, 357, '21%', '31', 'bg-blue-300'],
+  ['Signed', 357, 388, '39%', '12', 'bg-blue-300'],
+]
+export function FunnelArt() {
+  const X = (v) => `${(v / 810) * 100}%`
+  const Y = (v) => `${(v / 502) * 100}%`
+  return (
+    <div role="img" aria-label="Stage chart illustration" className="absolute inset-0">
+      <span className="absolute flex items-center gap-2 text-[15px] font-semibold text-black-100" style={{ left: X(188), top: Y(52) }}>
+        Deal flow by stage
+        <span className="flex items-center gap-1 rounded-6 border border-solid border-white-500 bg-white-100 px-1.5 py-0.5 text-[12px] font-normal text-black-600"><span className="size-3 rounded-[3px] bg-blue-500" />Deals</span>
+      </span>
+      {FUNNEL.map(([label, ghost, top, pct, n, tone], i) => {
+        const left = 188 + i * 111
+        return (
+          <div key={label}>
+            <span className="absolute rounded-t-8 bg-gradient-to-b from-blue-100 to-blue-100/30" style={{ left: X(left), width: X(105), top: Y(ghost), height: Y(425 - ghost) }} />
+            <span className={`absolute rounded-t-8 ${tone}`} style={{ left: X(left), width: X(105), top: Y(top), height: Y(425 - top) }} />
+            <span className="absolute flex w-[52px] -translate-x-1/2 flex-col items-center gap-1 rounded-8 bg-white-100 py-1.5 shadow-mock-card" style={{ left: X(left + 52), top: Y(Math.min(Math.max(top, 250) - 4, 340)) }}>
+              <span className="rounded-4 bg-blue-100 px-1 text-[11px] text-blue-600">{pct}</span>
+              <span className="text-[14px] text-black-300">{n}</span>
+            </span>
+            <span className="absolute -translate-x-1/2 text-[14px] text-black-600" style={{ left: X(left + 52), top: Y(434) }}>{label}</span>
+          </div>
+        )
+      })}
+      <span className="absolute flex flex-col gap-2 rounded-8 bg-white-100 py-2.5 pl-7 pr-3 shadow-mock-card" style={{ left: X(375), top: Y(153), width: X(200) }}>
+        <span className="absolute bottom-3 left-3 top-3 w-[3px] rounded-full bg-blue-500" />
+        <span className="flex items-center gap-2 text-[14px] text-black-600">Stage<span className="rounded-6 bg-white-300 px-1.5 text-[12px]">Discovery</span></span>
+        <span className="flex items-center gap-2 text-[14px] text-black-600">Deals<span className="rounded-6 bg-white-300 px-1.5 text-[12px]">65</span></span>
+      </span>
+    </div>
+  )
+}
+
 /** Bento chart tiles (wide 804x316 / narrow 457x316). */
 export function ChartArt({ variant = 0 }) {
   const bars = [

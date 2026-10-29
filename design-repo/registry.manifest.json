@@ -1,7 +1,7 @@
 {
   "repositoryId": "crm-marketing-clone.design-repo",
   "title": "Design-repo for a design-faithful clone of a CRM marketing site (fictional brand)",
-  "repositoryVersion": "1.2.0",
+  "repositoryVersion": "1.3.0",
   "pageSpecVersion": "1.2.0",
   "allowlistVersion": "1.2.0",
   "tokenCatalogVersion": "1.2.0",
@@ -107,6 +107,7 @@
       "schema/examples/reference-platform-feature.pagespec.json"
     ],
     "parityCapture": "extraction/parity_capture.mjs",
-    "parityCompare": "extraction/parity_compare.py"
+    "parityCompare": "extraction/parity_compare.py",
+    "copyOverlap": "extraction/copy_overlap.mjs"
   }
 }

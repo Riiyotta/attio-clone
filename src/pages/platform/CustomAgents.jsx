@@ -1,5 +1,6 @@
 import { WorkflowWindowArt } from '../../components/platform/windows.jsx'
 import PageShell from '../../components/marketing/PageShell.jsx'
+import { LayoutArt } from '../../components/platform/layoutArt.jsx'
 import CustomerLogos from '../../components/CustomerLogos.jsx'
 import {
   BlockDivider,
@@ -20,7 +21,7 @@ const TIMING = { dur: 600, pill: 100, title: 200, sub: 300, cta: 400 } // M-P1
 
 const HERO = {
   pill: 'Agent Builder', // c13
-  title: 'Turn your best play into a teammate.', // c29 w6 target (2L)
+  title: 'Set your best play in motion.', // line-fit 1.3.0: 326/353px (live 326/388)
   sub: 'Describe the play once and an agent runs it on every record, at any hour, for you.', // c79 w14
 }
 const AGENTS = [
@@ -32,9 +33,9 @@ const AGENTS = [
 
 const SPLIT = {
   lead: 'Teach it in plain words.', // c25 w5
-  cont: 'Clear instructions become dependable work.', // c42 w6
+  cont: 'Ordinary words in. Dependable records out.', // line-fit 1.3.0: 314/426px (live 301/415)
   items: [
-    { title: 'Write the brief like a memo.', desc: 'Explain the goal, the steps and the tone, the way you would to a new hire.', media: <PanelArt variant={4} /> },
+    { title: 'Write the brief like a memo.', desc: 'Explain the goal, the steps and the tone, the way you would to a new hire.', media: <LayoutArt box={[695, 639]} blocks={[{ k: 'frame', x: 153, y: 240, w: 470, h: 162 }, { k: 'row', x: 170, y: 252, w: 420, h: 30, text: 'Write an agent that grades each new signup against', text_cls: 'text-[18px] !text-black-100' }, { k: 'pill', x: 165, y: 352, w: 170, h: 32, text: 'Halcyon // Northwind', icon: 'video' }, { k: 'pill', x: 446, y: 352, w: 54, h: 32, text: 'Auto' }, { k: 'row', x: 508, y: 358, w: 60, h: 20, icon: 'mic', text: ' ' }, { k: 'pill', x: 324, y: 422, w: 190, h: 30, text: 'Draft the next brief', icon: 'note', round: 'rounded-8 !border-0 !bg-transparent !shadow-none !text-[16px]' }, { k: 'row', x: 540, y: 426, w: 80, h: 22, icon: 'sparkle', text: 'Score', text_cls: 'text-[16px] opacity-50' }]} /> },
     { title: 'Give it the tools it should use.', desc: 'Pick which records, inboxes and actions the agent is allowed to touch.', media: <PanelArt variant={1} /> },
     { title: 'Check its work before it ships.', desc: 'Test on a handful of records, read each step, then switch it on for the whole team.', media: <PanelArt variant={2} /> },
   ],

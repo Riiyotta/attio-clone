@@ -6,7 +6,7 @@ assets. This repo tells a generator **what can be used, how it combines, and how
 tokens, primitives, components, semantic section contracts, page templates, a compatibility graph, a
 closed Draft-07 PageSpec schema, a semantic validator and adversarial/drift proofs.
 
-Status: `design-review-pending`, `productionApproved: false`. Version 1.2.0. Every route the clone mounts (31 route patterns, 32 measured pages) is modelled; nothing is pending.
+Status: `design-review-pending`, `productionApproved: false`. Version 1.3.0. Every route the clone mounts (31 route patterns, 32 measured pages) is modelled; nothing is pending.
 
 **Review status, stated plainly:** nothing in this repo has been reviewed or signed off by a human. The wrapper-gate
 whitelist entries and the pinned patterns (asset availability, retrieval pins, generated-mode source-identity
@@ -51,7 +51,8 @@ schema/                     pagespec.schema.json, section-contract.schema.json, 
                             reference-developer-platform), semantic_validate.py,
                             source-brand.json, reference-copy-corpus.json, tests/adversarial_test.py
 extraction/                 measured-values.json, verify_all.py, wrapper_gate.py, prove_drift.py, measure_sections.mjs,
-                            parity_capture.mjs + parity_compare.py (R12 live-vs-clone per-section parity harness)
+                            parity_capture.mjs + parity_compare.py (R12 live-vs-clone per-section parity harness),
+                            copy_overlap.mjs (5-word live-copy overlap check; regenerates the reference copy corpus)
 ```
 
 ## Use
@@ -181,71 +182,40 @@ pixel-audit dumps (box heights, not pixels):
 Homepage pixel parity was not measured, so no homepage pixel number is claimed; that table came from dumps under
 `.playwright-mcp/` (git-ignored) and is recorded evidence, not a reproducible check.
 
-Clone quality (R12), platform pages: **pixel** parity per section, live site vs clone, 1440x900, measured 2026-10-29 with
-`extraction/parity_capture.mjs` + `extraction/parity_compare.py` (method, calibration and every number in
-`measured-values.json -> cloneParity.platform`). Metric: ink block-map Dice (layout/ink agreement; glyphs are not compared
-because the clone's copy is invented by design); canvas/video regions and the site header are masked in both builds.
-Result: 61 of 98 sections reach 80%, mean 82.4%, minimum 49.9%.
-**The per-section 80% gate is not met**: the 37 sections below are exceptions *pending human
-approval* (none approved). Their common causes: original mock artwork stands in for the live raster screenshots, invented
-copy wraps and aligns differently from live text, and time-based hero motion is captured mid-cycle.
+Clone quality (R12), platform pages: **pixel** parity per section, live site vs clone, 1440x900, re-measured 2026-10-29 for
+version 1.3.0 with `extraction/parity_capture.mjs` + `extraction/parity_compare.py` (method, calibration, motion phase and
+every number in `measured-values.json -> cloneParity.platform`). Metric: ink block-map Dice (layout/ink agreement; glyphs are
+not compared because the clone's copy is invented by design); canvas/video regions and the site header are masked in both
+builds. Capture runs under a frozen, stepped page clock in both builds (`motionPhase`), so animated heroes, auto-advancing
+tabs/accordions and scroll springs are sampled at the same JS time; live vs live repeats at mean 99.9.
+Result: 94 of 98 sections reach 80%, mean 87.5%, minimum 73.5% (1.2.0: 61 of 98, mean 82.4, min 49.9).
+**The per-section 80% gate is not met**: the 4 sections below are exceptions *pending human approval* (none
+approved). Causes are recorded per exception; all are original mock art whose finer structure (connector lines, chart shapes,
+row density) still differs from the live screenshots after its block layout was aligned.
 
 | route | min % | avg % |
 |---|---|---|
-| `/platform/ask` | 72.6 | 85.1 |
-| `/platform/call-intelligence` | 60.6 | 80.1 |
-| `/platform/custom-agents` | 62.1 | 81.3 |
-| `/platform/data` | 49.9 | 74.0 |
-| `/platform/developers` | 80.3 | 88.8 |
-| `/platform/enrichment` | 58.0 | 80.1 |
-| `/platform/mcp` | 70.5 | 84.3 |
-| `/platform/reporting` | 58.5 | 76.4 |
-| `/platform/sequences` | 64.2 | 79.9 |
-| `/platform/universal-context` | 67.4 | 83.8 |
-| `/platform/web-agent` | 75.3 | 85.6 |
-| `/platform/workflows` | 72.1 | 86.7 |
+| `/platform/ask` | 82.0 | 86.8 |
+| `/platform/call-intelligence` | 80.9 | 87.3 |
+| `/platform/custom-agents` | 73.5 | 86.0 |
+| `/platform/data` | 78.9 | 87.6 |
+| `/platform/developers` | 80.8 | 88.9 |
+| `/platform/enrichment` | 78.6 | 85.6 |
+| `/platform/mcp` | 80.9 | 86.2 |
+| `/platform/reporting` | 75.0 | 85.9 |
+| `/platform/sequences` | 81.8 | 87.2 |
+| `/platform/universal-context` | 80.9 | 87.9 |
+| `/platform/web-agent` | 80.1 | 89.4 |
+| `/platform/workflows` | 86.7 | 90.4 |
 
 | route | block | section | parity % |
 |---|---|---|---|
-| `/platform/ask` | 2 | features.tabbed-showcase (audience-ruler) | 72.6 |
-| `/platform/ask` | 4 | features.assistant-intel (None) | 74.4 |
-| `/platform/call-intelligence` | 1 | hero.platform-feature (table-call-card) | 77.0 |
-| `/platform/call-intelligence` | 2 | features.media-card-grid (legacy-media) | 77.9 |
-| `/platform/call-intelligence` | 4 | features.split-accordion (legacy) | 72.1 |
-| `/platform/call-intelligence` | 6 | features.tabbed-showcase (pill-tabs) | 60.6 |
-| `/platform/call-intelligence` | 7 | features.media-card-grid (legacy-indexed) | 74.3 |
-| `/platform/custom-agents` | 1 | hero.platform-feature (agent-canvas) | 62.1 |
-| `/platform/custom-agents` | 3 | features.split-accordion (v2) | 74.9 |
-| `/platform/custom-agents` | 6 | features.center-media (top) | 73.7 |
-| `/platform/data` | 1 | hero.platform-feature (schema-perspective) | 49.9 |
-| `/platform/data` | 2 | features.media-card-grid (legacy-indexed) | 72.1 |
-| `/platform/data` | 4 | features.media-card-grid (legacy-media) | 68.1 |
-| `/platform/data` | 5 | features.split-accordion (legacy) | 68.3 |
-| `/platform/data` | 6 | features.tabbed-showcase (pill-tabs) | 58.5 |
-| `/platform/enrichment` | 1 | hero.platform-feature (kanban-board) | 58.0 |
-| `/platform/enrichment` | 3 | features.split-accordion (v2) | 68.8 |
-| `/platform/enrichment` | 4 | features.center-media (centered) | 68.5 |
-| `/platform/mcp` | 2 | features.integration-arc (v2) | 79.1 |
-| `/platform/mcp` | 4 | features.center-media (top) | 78.8 |
-| `/platform/mcp` | 5 | features.media-card-grid (v2-three) | 70.5 |
-| `/platform/reporting` | 1 | hero.platform-feature (radar) | 73.1 |
-| `/platform/reporting` | 3 | features.bento-grid (None) | 58.5 |
-| `/platform/reporting` | 4 | features.split-accordion (v2) | 73.1 |
-| `/platform/reporting` | 5 | features.media-card-grid (v2-six) | 69.1 |
-| `/platform/sequences` | 2 | features.product-showcase (None) | 68.1 |
-| `/platform/sequences` | 3 | features.media-card-grid (legacy-media) | 71.6 |
-| `/platform/sequences` | 5 | features.split-accordion (legacy) | 75.6 |
-| `/platform/sequences` | 6 | features.media-card-grid (legacy-indexed) | 64.2 |
-| `/platform/universal-context` | 3 | features.split-accordion (v2) | 79.2 |
-| `/platform/universal-context` | 4 | features.center-media (top) | 71.1 |
-| `/platform/universal-context` | 5 | features.media-card-grid (v2-three) | 67.4 |
-| `/platform/web-agent` | 1 | hero.platform-feature (chip-field) | 75.3 |
-| `/platform/web-agent` | 3 | features.split-accordion (v2) | 75.7 |
-| `/platform/workflows` | 1 | hero.platform-feature (flow-diagram) | 79.4 |
-| `/platform/workflows` | 6 | features.split-accordion (legacy) | 78.8 |
-| `/platform/workflows` | 8 | features.media-card-grid (legacy-media) | 72.1 |
+| `/platform/custom-agents` | 6 | features.center-media (top) | 73.5 |
+| `/platform/data` | 1 | hero.platform-feature (schema-perspective) | 78.9 |
+| `/platform/enrichment` | 4 | features.center-media (centered) | 78.6 |
+| `/platform/reporting` | 3 | features.bento-grid (None) | 75.0 |
 
-768/390: document heights within -5.3%..+2.6% of live on all 12 routes, no horizontal overflow (not pixel-gated).
+768/390: clone document heights re-measured in 1.3.0 (not re-compared against live at those widths).
 
 ## Token catalog notes
 

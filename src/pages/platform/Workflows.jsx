@@ -1,4 +1,5 @@
 import PageShell from '../../components/marketing/PageShell.jsx'
+import { LayoutArt } from '../../components/platform/layoutArt.jsx'
 import CustomerLogos from '../../components/CustomerLogos.jsx'
 import { CardMarquee, LegacyGrid3, PanelArt, PlatformCta, ScrollQuote, SectionDivider, SplitAccordionLegacy, TileArt, UcBand } from '../../components/platform/index.js'
 import { AgentColumns, HeroWorkflows } from '../../components/platform/legacy.jsx'
@@ -8,8 +9,8 @@ import { MARQUEE_ROWS } from './_links.js'
 // Hero copy is static at first paint (M-P1 table: not animated).
 const HERO = {
   pill: 'Workflows', // c9
-  title: 'Agents that run the plays you choose.', // c38
-  sub: 'Your strongest playbooks, executed on each account and grounded in everything the CRM knows.', // c92
+  title: 'Sales agents that run whatever play you pick.', // line-fit 1.3.0: 3 lines, sub 2 lines like live
+  sub: 'Your strongest playbooks, run on each account with the full context behind them.',
 }
 const NODES = [
   { icon: 'bolt', title: 'When a new deal appears', desc: 'Start when a deal record is created.', tab: 'Trigger' },
@@ -62,9 +63,9 @@ const QUOTE = {
 
 const SPLIT = {
   lead: 'An idea in the morning, a live agent by lunchtime.', // c49
-  cont: 'Explain the job, check each step, then switch it on.', // c49
+  cont: 'Explain it. Check it. Switch it on. Repeat.', // line-fit 1.3.0: 3 lines like live
   items: [
-    { title: 'Say it in one sentence.', desc: 'Write down the outcome and Corvale drafts every step for your review.', media: <PanelArt variant={1} /> },
+    { title: 'Say it in one sentence.', desc: 'Write down the outcome and Corvale drafts every step for your review.', media: <LayoutArt box={[647, 490]} blocks={[{ k: 'frame', x: 74, y: 180, w: 500, h: 122, cls: 'bg-white-100 !border-blue-300 shadow-mock-card' }, { k: 'row', x: 88, y: 190, w: 470, h: 22, text: 'Make an agent that reads each inbound form and routes good fits to the owner', text_cls: 'text-[13px] !text-black-100' }, { k: 'row', x: 446, y: 270, w: 40, h: 18, text: 'Auto', text_cls: 'text-[12px]' }, { k: 'row', x: 488, y: 270, w: 20, h: 18, icon: 'settings', text: ' ' }, { k: 'fill', x: 524, y: 266, w: 28, h: 26, cls: 'rounded-8 bg-blue-500' }]} /> },
     { title: 'Test each block in turn.', desc: 'Run a block on a sample record and read the result before going live.', media: <PanelArt variant={3} /> },
     { title: 'One run or many thousands.', desc: 'Start it by hand or let every new record trigger it.', media: <PanelArt variant={0} /> },
   ],
@@ -87,12 +88,12 @@ const BAND = {
 }
 
 const GRID3 = {
-  lead: 'Sturdy enough for real ops.', // c23
-  cont: 'Triggers for everything. Logic for anything. Full history.', // c56
+  lead: 'Built to keep running.', // line-fit 1.3.0: 607/432px (live 577/442)
+  cont: 'Start from any trigger. Encode any rule. Rerun any job.',
   cards: [
-    { title: 'Many kinds of trigger.', body: 'Field edits, timers, incoming hooks or a button press.', media: <TileArt variant={3} /> },
-    { title: 'Branching and retries.', body: 'Express the rules your business runs on, code included.', media: <TileArt variant={4} /> },
-    { title: 'Make custom steps.', body: 'Drop in a script, ship one with the app kit, or connect a hub.', media: <TileArt variant={6} /> },
+    { title: 'Many kinds of trigger.', body: 'Field edits, timers, incoming hooks or a button press.', media: <LayoutArt box={[321, 321]} contained blocks={[{ k: 'pill', x: 46, y: 72, w: 64, h: 20, text: 'Start', icon: 'bolt', round: 'rounded-6 !bg-blue-100 !text-blue-600 !border-blue-200' }, { k: 'frame', x: 46, y: 94, w: 230, h: 62 }, { k: 'row', x: 56, y: 102, w: 210, h: 20, icon: 'link', text: 'Form submitted', text_cls: 'text-[12px] !text-black-100' }, { k: 'row', x: 56, y: 126, w: 210, h: 16, text: 'Describe this step...', text_cls: 'text-[10px] !text-black-800' }, { k: 'fill', x: 120, y: 156, w: 1, h: 30, cls: 'bg-white-600' }, { k: 'frame', x: 46, y: 186, w: 230, h: 62 }, { k: 'row', x: 56, y: 194, w: 210, h: 20, icon: 'list', text: 'Add to list', text_cls: 'text-[12px] !text-black-100' }, { k: 'row', x: 56, y: 218, w: 210, h: 16, text: 'Describe this step...', text_cls: 'text-[10px] !text-black-800' }]} /> },
+    { title: 'Branching and retries.', body: 'Express the rules your business runs on, code included.', media: <LayoutArt box={[321, 321]} contained blocks={[{ k: 'frame', x: 47, y: 36, w: 225, h: 62 }, { k: 'row', x: 57, y: 44, w: 205, h: 20, icon: 'plus', text: 'Record joined list', text_cls: 'text-[12px] !text-black-100' }, { k: 'row', x: 57, y: 68, w: 205, h: 16, text: 'Describe this step...', text_cls: 'text-[10px] !text-black-800' }, { k: 'fill', x: 159, y: 98, w: 1, h: 31, cls: 'bg-white-600' }, { k: 'frame', x: 47, y: 129, w: 225, h: 62 }, { k: 'row', x: 57, y: 137, w: 205, h: 20, icon: 'flow', text: 'Branch', text_cls: 'text-[12px] !text-black-100' }, { k: 'row', x: 57, y: 161, w: 205, h: 16, text: 'Describe this step...', text_cls: 'text-[10px] !text-black-800' }, { k: 'fill', x: 159, y: 191, w: 1, h: 28, cls: 'bg-white-600' }, { k: 'frame', x: 47, y: 219, w: 225, h: 62 }, { k: 'row', x: 57, y: 227, w: 205, h: 20, icon: 'task', text: 'Open a task', text_cls: 'text-[12px] !text-black-100' }, { k: 'row', x: 57, y: 251, w: 205, h: 16, text: 'Describe this step...', text_cls: 'text-[10px] !text-black-800' }]} /> },
+    { title: 'Make custom steps.', body: 'Drop in a script, ship one with the app kit, or connect a hub.', media: <LayoutArt box={[321, 321]} contained blocks={[{ k: 'frame', x: 47, y: 84, w: 230, h: 62 }, { k: 'row', x: 57, y: 92, w: 210, h: 20, icon: 'note', text: 'Record added', text_cls: 'text-[12px] !text-black-100' }, { k: 'row', x: 57, y: 116, w: 210, h: 16, text: 'Describe this step...', text_cls: 'text-[10px] !text-black-800' }, { k: 'fill', x: 159, y: 146, w: 1, h: 28, cls: 'bg-white-600' }, { k: 'frame', x: 47, y: 174, w: 230, h: 62 }, { k: 'row', x: 57, y: 182, w: 210, h: 20, icon: 'bolt', text: 'Run a script', text_cls: 'text-[12px] !text-black-100' }, { k: 'row', x: 57, y: 206, w: 210, h: 16, text: 'Describe this step...', text_cls: 'text-[10px] !text-black-800' }]} /> },
   ],
 }
 

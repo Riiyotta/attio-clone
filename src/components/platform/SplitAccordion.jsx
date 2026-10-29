@@ -140,6 +140,30 @@ export function SplitAccordion({ lead, cont, items, className = '' }) {
 // item expands (height/opacity/blur ~500ms). Loops. Clicking an idle title selects it.
 const LEGACY_ITEM_MS = 5500
 
+/** Item progress bar driven by the page clock (rAF + performance.now), like the live fill, so a capture
+ * taken at a given JS time shows the same fill on both builds (1.3.0; was a 5.5s CSS keyframe). */
+function ClockFill({ ms, running, done = false, as: Tag = 'div', className }) {
+  const ref = useRef(null)
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return
+    if (!running) {
+      el.style.transform = done ? 'none' : 'translateX(-100%)'
+      return
+    }
+    const t0 = performance.now()
+    let raf = 0
+    const step = () => {
+      const p = Math.min(1, (performance.now() - t0) / ms)
+      el.style.transform = `translateX(${((p - 1) * 100).toFixed(2)}%)`
+      if (p < 1) raf = requestAnimationFrame(step)
+    }
+    raf = requestAnimationFrame(step)
+    return () => cancelAnimationFrame(raf)
+  }, [running, done, ms])
+  return <Tag ref={ref} className={className} style={{ transform: done ? 'none' : 'translateX(-100%)' }} />
+}
+
 export function SplitAccordionLegacy({ lead, cont, items, className = '' }) {
   const [active, setActive] = useState(0)
   const [run, setRun] = useState(0) // bumps to restart the fill animation
@@ -160,10 +184,7 @@ export function SplitAccordionLegacy({ lead, cont, items, className = '' }) {
     setActive(i)
     setRun((r) => r + 1)
   }
-  const fill = (i) =>
-    inView && i === active && !reducedMotion()
-      ? { animation: `pl-legacy-fill ${LEGACY_ITEM_MS}ms linear both` }
-      : { transform: 'translateX(-100%)' }
+  const running = (i) => inView && i === active && !reducedMotion()
 
   const media = (
     <>
@@ -211,7 +232,7 @@ export function SplitAccordionLegacy({ lead, cont, items, className = '' }) {
                         <div>
                           <p className="mt-2 text-balance text-black-700 lg:max-xl:text-sm">{it.desc}</p>
                           <div className="mt-5 h-0.5 w-full overflow-hidden rounded-full bg-white-500">
-                            <div key={`${active}-${run}`} className="h-full w-full rounded-full bg-black-700" style={fill(i)} />
+                            <ClockFill key={`${active}-${run}`} ms={LEGACY_ITEM_MS} running={running(i)} className="h-full w-full rounded-full bg-black-700" />
                           </div>
                         </div>
                       </div>
@@ -236,7 +257,7 @@ export function SplitAccordionLegacy({ lead, cont, items, className = '' }) {
                   <div className="flex gap-1.5">
                     {items.map((it, i) => (
                       <button key={it.title} type="button" aria-label={it.title} onClick={() => select(i)} className="relative h-0.5 flex-1 overflow-hidden rounded-full bg-white-500">
-                        <span key={`${active}-${run}`} className="absolute inset-0 rounded-full bg-black-700" style={i < active ? {} : fill(i)} />
+                        <ClockFill key={`${active}-${run}`} as="span" ms={LEGACY_ITEM_MS} running={running(i)} done={i < active} className="absolute inset-0 rounded-full bg-black-700" />
                       </button>
                     ))}
                   </div>

@@ -24,8 +24,8 @@
       "agent-ruler": {
         "file": "src/components/platform/legacy.jsx",
         "tag": "export function AgentColumns(",
-        "lines": "666-694",
-        "citation": "src/components/platform/legacy.jsx:666-694"
+        "lines": "765-793",
+        "citation": "src/components/platform/legacy.jsx:765-793"
       }
     }
   },

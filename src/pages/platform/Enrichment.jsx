@@ -1,6 +1,7 @@
 import { AttributeListArt, RecordCardArt } from '../../components/platform/tiles.jsx'
 import { QuestionBuilderArt } from '../../components/platform/windows.jsx'
 import PageShell from '../../components/marketing/PageShell.jsx'
+import { LayoutArt } from '../../components/platform/layoutArt.jsx'
 import {
   BlockDivider,
   CenterMedia,
@@ -21,8 +22,8 @@ import {
 const TIMING = { dur: 1000, pill: 100, title: 200, sub: 300, cta: 400 } // M-P1
 
 const HERO = {
-  pill: 'Autofiller', // c10
-  title: 'Each profile, filled in for you.', // c31 w6
+  pill: 'Auto-enrich', // line-fit 1.3.0 (live pill 69px, title 773px at 1440)
+  title: 'Every profile, filled in on arrival.',
   sub: 'Titles, firmographics, warm paths and recent news, gathered quietly before anyone opens it.', // c87
 }
 const f = (loc, rev, emp, round) => [
@@ -32,16 +33,34 @@ const f = (loc, rev, emp, round) => [
   ['trend', round],
 ]
 const COLUMNS = [
-  { label: 'New leads', cards: [{ name: 'Larkspur', fields: f('Denver, CO', '$6M revenue', '48 employees', '$9M Series A'), age: '2d' }] },
+  {
+    label: 'New leads',
+    cards: [
+      { name: 'Larkspur', fields: f('Denver, CO', '$6M revenue', '48 employees', '$9M Series A'), age: '2d' },
+      { name: 'Fernhollow', fields: f('Leeds, UK', '$3.1M revenue', '22 employees', '$4M Seed'), age: '6d' },
+    ],
+  },
   {
     label: 'Qualifying',
     cards: [
-      { name: 'Oakhaven', fields: f('Leeds, UK', '$3.1M revenue', '22 employees', '$4M Seed'), age: '1d' },
+      { name: 'Oakhaven', fields: f('Bristol, UK', '$2.6M revenue', '19 employees', '$5M Seed'), age: '1d' },
       { name: 'Meridel', fields: f('Lyon, FR', '$14M revenue', '90 employees', '$20M Series B'), age: '4d' },
     ],
   },
-  { label: 'Contacted', cards: [{ name: 'Quillstone', fields: f('Austin, TX', '$21M revenue', '140 employees', '$38M Series B'), age: '3h' }] },
-  { label: 'Won', cards: [{ name: 'Brackenfield', fields: f('Oslo, NO', '$9M revenue', '61 employees', '$12M Series A'), age: '5d' }] },
+  {
+    label: 'Contacted',
+    cards: [
+      { name: 'Quillstone', fields: f('Austin, TX', '$21M revenue', '140 employees', '$38M Series B'), age: '3h' },
+      { name: 'Saltmarsh', fields: f('Perth, AU', '$17M revenue', '75 employees', '$11M Series A'), age: '2h' },
+    ],
+  },
+  {
+    label: 'Won',
+    cards: [
+      { name: 'Brackenfield', fields: f('Oslo, NO', '$9M revenue', '61 employees', '$12M Series A'), age: '5d' },
+      { name: 'Wrenford', fields: f('Toronto, CA', '$26M revenue', '210 employees', '$40M Series C'), age: '9d' },
+    ],
+  },
 ]
 
 const GRID = {
@@ -58,7 +77,7 @@ const SPLIT = {
   lead: 'Data that stays true over time.', // c31 w5 target
   cont: 'Records refresh on their own, so every number stays current.', // c73 w10 target
   items: [
-    { title: 'Refreshed on a schedule.', desc: 'Every record is checked again on a regular cadence, with no one lifting a finger.', media: <PanelArt variant={0} /> },
+    { title: 'Refreshed on a schedule.', desc: 'Every record is checked again on a regular cadence, with no one lifting a finger.', media: <LayoutArt box={[695, 639]} blocks={[{ k: 'table', x: 128, y: 128, w: 456, h: 390, headH: 28, rowH: 27, rows: 12, cols: ['person', 'chip', 'chips'], widths: [166, 157, 133] }]} /> },
     { title: 'Changes flagged for you.', desc: 'When a key attribute moves, the owner gets a short note listing what changed, when it changed, and which source reported it first.', media: <PanelArt variant={3} /> },
     { title: 'Sources always visible.', desc: 'Every value links back to where it came from, so you can trust what you see.', media: <PanelArt variant={2} /> },
   ],
@@ -66,7 +85,7 @@ const SPLIT = {
 
 const CENTER = {
   lead: 'Add your own spin to it.', // c24 w6 target
-  cont: 'Write a question once and Web Scout fills in the reply on each row.', // c66
+  cont: 'Write a question once and Web Scout fills in a reply on every record.', // line-fit 1.3.0: 2nd line 786px (live 791)
 }
 
 const QUOTE = {

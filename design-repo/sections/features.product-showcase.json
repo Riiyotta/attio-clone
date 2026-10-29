@@ -6,8 +6,8 @@
     "id": "src:legacy#export-function-Showcase",
     "file": "src/components/platform/legacy.jsx",
     "tag": "export function Showcase(",
-    "lines": "648-661",
-    "citation": "src/components/platform/legacy.jsx:648-661"
+    "lines": "747-760",
+    "citation": "src/components/platform/legacy.jsx:747-760"
   },
   "semantic": {
     "id": "features.product-showcase",

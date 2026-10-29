@@ -68,4 +68,4 @@ export {
   Newsletter,
 } from './Sections.jsx'
 export { HeroWebAgent, HeroCustomAgents, HeroEnrichment, HeroHorizon, HeroRadar, HeroMcp } from './heroes.jsx'
-export { PanelArt, TileArt, ChartArt, WindowArt, OrbitArt, GlyphTile } from './art.jsx'
+export { PanelArt, TileArt, ChartArt, FunnelArt, WindowArt, OrbitArt, GlyphTile } from './art.jsx'

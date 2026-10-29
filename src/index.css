@@ -2097,3 +2097,13 @@ html:has(.architecture-hero) [data-banner] {
   from { opacity: 0; transform: translateY(24px) rotateX(-6deg); }
 }
 /* === end platform legacy heroes === */
+/* 1.3.0: enrichment hero stripe field, strongest at the top edge and fading out by ~24% of the stage
+   (re-measured on the live hero: 1px blue-tinted rules every 8px, opaque at the top) */
+.pl-stripes-top {
+  background-image: linear-gradient(to right, transparent calc(50% - 0.5px), theme('colors.blue.300') calc(50% - 0.5px), theme('colors.blue.300') calc(50% + 0.5px), transparent calc(50% + 0.5px));
+  background-size: 8px 100%;
+  background-position: center;
+  opacity: 0.7;
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, transparent 24%);
+  mask-image: linear-gradient(to bottom, #000 0%, transparent 24%);
+}

@@ -18,8 +18,8 @@
       "legacy": {
         "file": "src/components/platform/SplitAccordion.jsx",
         "tag": "export function SplitAccordionLegacy(",
-        "lines": "143-256",
-        "citation": "src/components/platform/SplitAccordion.jsx:143-256"
+        "lines": "167-277",
+        "citation": "src/components/platform/SplitAccordion.jsx:167-277"
       }
     }
   },
